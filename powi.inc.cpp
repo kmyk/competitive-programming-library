@@ -11,6 +11,7 @@ ll powi(ll x, ll y, ll p) {
     return z;
 }
 
+// http://yukicoder.me/submissions/97173
 ll inv(ll x, ll p) {
     assert ((x % p + p) % p != 0);
     return powi(x, p-2, p);

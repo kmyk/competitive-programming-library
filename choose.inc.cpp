@@ -1,4 +1,5 @@
-ll choose(ll n, ll r) { // O(n), O(1)
+// http://yukicoder.me/submissions/97173
+ll choose(ll n, ll r) { // O(n) at first time, otherwise O(1)
     static vector<ll> fact(1,1);
     static vector<ll> ifact(1,1);
     if (fact.size() <= n) {
