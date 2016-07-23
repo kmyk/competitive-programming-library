@@ -1,5 +1,6 @@
-// http://solorab.net/blog/2015/11/13/yuki-235/
-// http://solorab.net/blog/2016/05/18/arc-048-d/
+// https://kimiyuki.net/blog/2016/07/02/yuki-386/
+// https://kimiyuki.net/blog/2015/11/13/yuki-235/
+// https://kimiyuki.net/blog/2016/05/18/arc-048-d/
 struct lowest_common_ancestor_t {
     vector<vector<int> > a;
     vector<int> depth;
@@ -25,7 +26,8 @@ struct lowest_common_ancestor_t {
             dfs(w, v, current_depth + 1, g, parent, depth);
         }
     }
-    int operator () (int x, int y) const {
+    // find lca of x, y
+    int operator () (int x, int y) const { // O(log N)
         int l = a.size();
         if (depth[x] < depth[y]) swap(x,y);
         repeat_reverse (k,l) {
@@ -34,6 +36,7 @@ struct lowest_common_ancestor_t {
             }
         }
         assert (depth[x] == depth[y]);
+        assert (x != -1);
         if (x == y) return x;
         repeat_reverse (k,l) {
             if (a[k][x] != a[k][y]) {
@@ -44,5 +47,17 @@ struct lowest_common_ancestor_t {
         assert (x != y);
         assert (a[0][x] == a[0][y]);
         return a[0][x];
+    }
+    // find the descendant of x for y
+    int descendant (int x, int y) const {
+        assert (depth[x] < depth[y]);
+        int l = a.size();
+        repeat_reverse (k,l) {
+            if (a[k][y] != -1 and depth[a[k][y]] >= depth[x]+1) {
+                y = a[k][y];
+            }
+        }
+        assert (a[0][y] == x);
+        return y;
     }
 };

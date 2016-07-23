@@ -1,5 +1,6 @@
-// http://solorab.net/blog/2015/11/13/yuki-235/
-// http://solorab.net/blog/2016/05/18/arc-048-d/
+// https://kimiyuki.net/blog/2016/07/02/yuki-386/
+// https://kimiyuki.net/blog/2015/11/13/yuki-235/
+// https://kimiyuki.net/blog/2016/05/18/arc-048-d/
 struct heavy_light_decomposition_t {
     int n; // |V'|
     vector<int> a; // V ->> V' epic
@@ -42,7 +43,8 @@ struct heavy_light_decomposition_t {
     }
 };
 
-// http://solorab.net/blog/2016/05/18/arc-048-d/
+// https://kimiyuki.net/blog/2016/07/02/yuki-386/
+// https://kimiyuki.net/blog/2016/05/18/arc-048-d/
 template <typename T>
 T path_concat(heavy_light_decomposition_t & hl, vector<segment_tree<T> > & sts, int v, int w) {
     auto append = sts.front().append;
@@ -59,15 +61,15 @@ T path_concat(heavy_light_decomposition_t & hl, vector<segment_tree<T> > & sts, 
     return acc;
 }
 
-// CAUTION: BUGGY
+// https://kimiyuki.net/blog/2016/07/02/yuki-386/
 template <typename T>
 T path_concat(heavy_light_decomposition_t & hl, lowest_common_ancestor_t & lca, vector<segment_tree<T> > & sts, int x, int y) {
     auto append = sts.front().append;
     auto unit   = sts.front().unit;
-    int w = lca(x, y);
+    int z = lca(x, y);
     T acc = unit;
-    acc = append(acc, path_concat(hl, sts, x, w));
-    acc = append(acc, path_concat(hl, sts, y, w));
-    // acc = unappend(acc, path_concat(hl, sts, w, w)); // generally required, but in this time unnecessary
+    if (x != z) acc = append(acc, path_concat(hl, sts, x, lca.descendant(z, x)));
+    if (y != z) acc = append(acc, path_concat(hl, sts, y, lca.descendant(z, y)));
+    acc = append(acc, path_concat(hl, sts, z, z));
     return acc;
 }

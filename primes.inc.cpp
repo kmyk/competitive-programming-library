@@ -16,10 +16,10 @@ vector<int> sieve_of_eratosthenes(int n) { // enumerate primes in [2,n] with O(n
 }
 
 // http://yukicoder.me/submissions/96397
-vector<int> factors(int n, vector<int> const & primes) {
-    vector<int> result;
+vector<ll> factors(ll n, vector<int> const & primes) {
+    vector<ll> result;
     for (int p : primes) {
-        if (n < p * p) break;
+        if (n < p *(ll) p) break;
         while (n % p == 0) {
             result.push_back(p);
             n /= p;

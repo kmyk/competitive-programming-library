@@ -1,4 +1,5 @@
-// http://solorab.net/blog/2016/05/18/arc-048-d/
+// https://kimiyuki.net/blog/2016/07/02/yuki-386/
+// https://kimiyuki.net/blog/2016/05/18/arc-048-d/
 template <typename T>
 struct segment_tree { // on monoid
     int n;

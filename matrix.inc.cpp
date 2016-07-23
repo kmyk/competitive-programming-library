@@ -27,6 +27,10 @@ vector<vector<ll> > unit_matrix(int n) {
     repeat (i,n) e[i][i] = 1;
     return e;
 }
+vector<vector<ll> > zero_matrix(int n) {
+    vector<vector<ll> > o(n, vector<ll>(n));
+    return o;
+}
 
 template <typename T>
 T determinant(vector<vector<T> > a) {
