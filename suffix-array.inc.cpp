@@ -1,3 +1,8 @@
+// https://kimiyuki.net/blog/2016/04/23/s8pc-2-e/
+// https://kimiyuki.net/blog/2016/04/09/arc-050-d/
+// https://kimiyuki.net/blog/2016/01/31/hackerrank-worldcodesprint-print-string/
+// https://kimiyuki.net/blog/2016/01/30/discovery-2016-qual-c/
+// https://kimiyuki.net/blog/2016/01/30/aoj-2644/
 vector<int> suffix_array(string const & s) {
     int n = s.length();
     vector<int> sa(n+1);
