@@ -1,18 +1,18 @@
-// http://abc040.contest.atcoder.jp/submissions/774959
-// http://codeforces.com/contest/687/submission/18818699
 struct disjoint_sets {
-    vector<int> data;
-    explicit disjoint_sets(size_t n) : data(n, -1) {}
-    bool is_root(int a) { return data[a] < 0; }
-    int find_root(int a) { return is_root(a) ? a : (data[a] = find_root(data[a])); }
-    int set_size(int a) { return - data[find_root(a)]; }
-    void union_sets(int a, int b) {
-        a = find_root(a); b = find_root(b);
-        if (a != b) {
-            if (set_size(a) > set_size(b)) swap(a,b);
-            data[b] += data[a];
-            data[a] = b;
+    vector<int> xs;
+    disjoint_sets() = default;
+    explicit disjoint_sets(size_t n) : xs(n, -1) {}
+    bool is_root(int i) { return xs[i] < 0; }
+    int find_root(int i) { return is_root(i) ? i : (xs[i] = find_root(xs[i])); }
+    int set_size(int i) { return - xs[find_root(i)]; }
+    int union_sets(int i, int j) {
+        i = find_root(i); j = find_root(j);
+        if (i != j) {
+            if (set_size(i) < set_size(j)) swap(i,j);
+            xs[i] += xs[j];
+            xs[j] = i;
         }
+        return i;
     }
-    bool is_same(int a, int b) { return find_root(a) == find_root(b); }
+    bool is_same(int i, int j) { return find_root(i) == find_root(j); }
 };
