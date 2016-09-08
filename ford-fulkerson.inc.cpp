@@ -1,5 +1,5 @@
 struct edge_t { int to, cap, rev; };
-int maximum_flow_destructive(int s, int t, vector<vector<edge_t> > & g) {
+int maximum_flow_destructive(int s, int t, vector<vector<edge_t> > & g) { // ford fulkerson, O(EF)
     int n = g.size();
     vector<bool> used(n);
     function<int (int, int)> dfs = [&](int i, int f) {
@@ -25,7 +25,10 @@ int maximum_flow_destructive(int s, int t, vector<vector<edge_t> > & g) {
     }
     return result;
 }
-
+void add_edge(vector<vector<edge_t> > & g, int from, int to, int cap) {
+    g[from].push_back((edge_t) {   to, cap, int(g[  to].size()    ) });
+    g[  to].push_back((edge_t) { from,   0, int(g[from].size() - 1) });
+}
 int maximum_flow(int s, int t, vector<vector<edge_t> > g /* adjacency list */) { // ford fulkerson, O(FE)
     return maximum_flow_destructive(s, t, g);
 }

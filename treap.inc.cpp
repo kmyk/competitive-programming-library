@@ -17,18 +17,6 @@ struct treap {
             , r()
             , m_size(1) {
     }
-    static shared_ptr<treap> update(shared_ptr<treap> const & t) {
-        if (t) {
-            t->m_size = 1 + size(t->l) + size(t->r);
-        }
-        return t;
-    }
-    static key_type generate() {
-        static random_device device;
-        static default_random_engine engine(device());
-        static uniform_real_distribution<double> dist;
-        return dist(engine);
-    }
     static size_t size(shared_ptr<treap> const & t) {
         return t ? t->m_size : 0;
     }
@@ -58,10 +46,23 @@ struct treap {
         shared_ptr<treap> u = make_shared<treap>(v);
         return merge(merge(l, u), r);
     }
-    static pair<shared_ptr<treap>,shared_ptr<treap> > erase(shared_ptr<treap> const & t, size_t i) { // (t \ t_i, t_t), destructive
+    static pair<shared_ptr<treap>,shared_ptr<treap> > erase(shared_ptr<treap> const & t, size_t i) { // (t \ t_i, t_i), destructive
         shared_ptr<treap> l, u, r;
         tie(l, r) = split(t, i+1);
         tie(l, u) = split(l, i);
         return { merge(l, r), u };
+    }
+private:
+    static shared_ptr<treap> update(shared_ptr<treap> const & t) {
+        if (t) {
+            t->m_size = 1 + size(t->l) + size(t->r);
+        }
+        return t;
+    }
+    static key_type generate() {
+        static random_device device;
+        static default_random_engine engine(device());
+        static uniform_real_distribution<double> dist;
+        return dist(engine);
     }
 };
