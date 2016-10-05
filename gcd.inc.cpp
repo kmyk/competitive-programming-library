@@ -1,10 +1,8 @@
 template <typename T>
 T gcd(T a, T b) {
-    if (b < a) swap(a,b);
     while (a) {
-        T c = a;
-        a = b % c;
-        b = c;
+        b %= a;
+        swap(a, b);
     }
     return b;
 }

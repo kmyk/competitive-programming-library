@@ -29,9 +29,15 @@ template <class T> void setmax(T & a, T const & b) { if (a < b) a = b; }
 template <class T> void setmin(T & a, T const & b) { if (b < a) a = b; }
 template <typename T, typename X> auto vectors(T a, X x) { return vector<T>(x, a); }
 template <typename T, typename X, typename Y, typename... Zs> auto vectors(T a, X x, Y y, Zs... zs) { auto cont = vectors(a, y, zs...); return vector<decltype(cont)>(x, cont); }
+template <typename T> T input(istream & in) { T a; in >> a; return a; }
+const int dy[] = { -1, 1, 0, 0 };
+const int dx[] = { 0, 0, 1, -1 };
+bool is_on_field(int y, int x, int h, int w) { return 0 <= y and y < h and 0 <= x and x < w; }
 int main() {
     int n; scanf("%d", &n);
     vector<ll> a(n); repeat (i,n) scanf("%lld", &a[i]);
+    vector<vector<int> > f = vectors(int(), h, w);
+    repeat (y,h) repeat (x,w) scanf("%d", &f[y][x]);
     printf("%lld\n", ans);
     return 0;
 }

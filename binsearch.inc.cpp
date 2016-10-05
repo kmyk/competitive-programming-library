@@ -1,4 +1,3 @@
-// CAUTION: not verified yet
 ll binsearch(ll l, ll r, function<bool (ll)> p) { // [l, r), p is monotone
     assert (l < r);
     -- l; -- r; // (l, r]
