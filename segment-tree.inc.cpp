@@ -42,9 +42,9 @@ struct lazed_segment_tree { // on associative symmetric operation
     int n;
     vector<T> a;
     function<T (T,T)> append; // associative, symmetric
-    co_segment_tree() = default;
+    lazed_segment_tree() = default;
     template <typename F>
-    co_segment_tree(int a_n, T a_init, F a_append) {
+    lazed_segment_tree(int a_n, T a_init, F a_append) {
         n = pow(2,ceil(log2(a_n)));
         a.resize(2*n-1, a_init);
         append = a_append;
