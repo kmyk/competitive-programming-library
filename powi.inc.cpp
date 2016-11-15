@@ -1,6 +1,6 @@
 // http://yukicoder.me/problems/1048
 // http://arc012.contest.atcoder.jp/submissions/749180
-ll powi(ll x, ll y, ll p) {
+ll powi(ll x, ll y, ll p) { // O(log y)
     assert (y >= 0);
     x = (x % p + p) % p;
     ll z = 1;
@@ -12,7 +12,7 @@ ll powi(ll x, ll y, ll p) {
 }
 
 // http://yukicoder.me/submissions/97173
-ll inv(ll x, ll p) {
+ll inv(ll x, ll p) { // p must be a prime, O(log p)
     assert ((x % p + p) % p != 0);
     return powi(x, p-2, p);
 }

@@ -22,7 +22,7 @@ cat <<EOF
 #define repeat_from(i,m,n) for (int i = (m); (i) < (n); ++(i))
 #define repeat_reverse(i,n) for (int i = (n)-1; (i) >= 0; --(i))
 #define repeat_from_reverse(i,m,n) for (int i = (n)-1; (i) >= (m); --(i))
-#define whole(f,x,...) ([&](decltype((x)) y) { return (f)(begin(y), end(y), ## __VA_ARGS__); })(x)
+#define whole(f,x,...) ([&](decltype((x)) whole) { return (f)(begin(whole), end(whole), ## __VA_ARGS__); })(x)
 typedef long long ll;
 using namespace std;
 template <class T> void setmax(T & a, T const & b) { if (a < b) a = b; }

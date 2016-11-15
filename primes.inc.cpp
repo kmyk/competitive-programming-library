@@ -16,7 +16,7 @@ vector<int> sieve_of_eratosthenes(int n) { // enumerate primes in [2,n] with O(n
 }
 
 // http://yukicoder.me/submissions/96397
-vector<ll> factors(ll n, vector<int> const & primes) {
+vector<ll> factrorize(ll n, vector<int> const & primes) {
     vector<ll> result;
     for (int p : primes) {
         if (n < p *(ll) p) break;
@@ -31,7 +31,7 @@ vector<ll> factors(ll n, vector<int> const & primes) {
 
 // alternative interface
 // http://yukicoder.me/submissions/96172
-map<ll,int> factors(ll n, vector<int> const & primes) {
+map<ll,int> factrorize(ll n, vector<int> const & primes) {
     map<ll,int> result;
     for (int p : primes) {
         if (n < p *(ll) p) break;
