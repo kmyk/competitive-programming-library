@@ -36,11 +36,11 @@ vector<T> convolution(vector<T> const & a, vector<T> const & b) {
     vector<complex<R> > x(n), y(n);
     copy(a.begin(), a.end(), x.begin());
     copy(b.begin(), b.end(), y.begin());
-    x = fft(x);
-    y = fft(y);
+    fft_inplace(x, +1);
+    fft_inplace(y, +1);
     vector<complex<R> > z(n);
     repeat (i, n) z[i] = x[i] * y[i];
-    z = ifft(z);
+    fft_inplace(z, -1);
     vector<T> c(m);
     repeat (i, m) c[i] = round(z[i].real() / n);
     return c;
