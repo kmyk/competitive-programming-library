@@ -3,7 +3,7 @@
 // https://kimiyuki.net/blog/2016/01/31/hackerrank-worldcodesprint-print-string/
 // https://kimiyuki.net/blog/2016/01/30/discovery-2016-qual-c/
 // https://kimiyuki.net/blog/2016/01/30/aoj-2644/
-vector<int> suffix_array(string const & s) {
+vector<int> suffix_array(string const & s) { // O(N (\log N)^2), sa[i] is the index of i-th smallest substring of s
     int n = s.length();
     vector<int> sa(n+1);
     vector<int> rank(n+1);

@@ -15,23 +15,9 @@ vector<int> sieve_of_eratosthenes(int n) { // enumerate primes in [2,n] with O(n
     return primes;
 }
 
-// http://yukicoder.me/submissions/96397
-vector<ll> factrorize(ll n, vector<int> const & primes) {
-    vector<ll> result;
-    for (int p : primes) {
-        if (n < p *(ll) p) break;
-        while (n % p == 0) {
-            result.push_back(p);
-            n /= p;
-        }
-    }
-    if (n != 1) result.push_back(n);
-    return result;
-}
-
 // alternative interface
 // http://yukicoder.me/submissions/96172
-map<ll,int> factrorize(ll n, vector<int> const & primes) {
+map<ll,int> prime_factrorize(ll n, vector<int> const & primes) {
     map<ll,int> result;
     for (int p : primes) {
         if (n < p *(ll) p) break;
@@ -41,5 +27,19 @@ map<ll,int> factrorize(ll n, vector<int> const & primes) {
         }
     }
     if (n != 1) result[n] += 1;
+    return result;
+}
+
+// http://yukicoder.me/submissions/96397
+vector<ll> list_prime_factrors(ll n, vector<int> const & primes) {
+    vector<ll> result;
+    for (int p : primes) {
+        if (n < p *(ll) p) break;
+        while (n % p == 0) {
+            result.push_back(p);
+            n /= p;
+        }
+    }
+    if (n != 1) result.push_back(n);
     return result;
 }
