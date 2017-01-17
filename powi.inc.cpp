@@ -1,8 +1,8 @@
 // http://yukicoder.me/problems/1048
 // http://arc012.contest.atcoder.jp/submissions/749180
-ll powi(ll x, ll y, ll p) { // O(log y)
+ll powmod(ll x, ll y, ll p) { // O(log y)
     assert (y >= 0);
-    x = (x % p + p) % p;
+    x %= p; if (x < 0) x += p;
     ll z = 1;
     for (ll i = 1; i <= y; i <<= 1) {
         if (y & i) z = z * x % p;
@@ -14,7 +14,7 @@ ll powi(ll x, ll y, ll p) { // O(log y)
 // http://yukicoder.me/submissions/97173
 ll inv(ll x, ll p) { // p must be a prime, O(log p)
     assert ((x % p + p) % p != 0);
-    return powi(x, p-2, p);
+    return powmod(x, p-2, p);
 }
 
 template <typename T, typename F>

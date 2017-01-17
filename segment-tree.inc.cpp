@@ -7,8 +7,7 @@ struct segment_tree { // on monoid
     function<T (T,T)> append; // associative
     T unit; // unit
     segment_tree() = default;
-    template <typename F>
-    segment_tree(int a_n, T a_unit, F a_append) {
+    segment_tree(int a_n, T a_unit, function<T (T,T)> a_append) {
         n = pow(2,ceil(log2(a_n)));
         a.resize(2*n-1, a_unit);
         unit = a_unit;
@@ -36,37 +35,60 @@ struct segment_tree { // on monoid
     }
 };
 
-// http://yukicoder.me/submissions/114337
-template <typename T>
-struct lazed_segment_tree { // on associative symmetric operation
+// http://dwacon2017-honsen.contest.atcoder.jp/tasks/dwango2017final_d
+template <typename M, typename Q>
+struct lazy_propagation_segment_tree { // on monoids
     int n;
-    vector<T> a;
-    function<T (T,T)> append; // associative, symmetric
-    lazed_segment_tree() = default;
-    template <typename F>
-    lazed_segment_tree(int a_n, T a_init, F a_append) {
+    vector<M> a;
+    vector<Q> q;
+    function<M (M,M)> append_m; // associative
+    function<Q (Q,Q)> append_q; // associative, not necessarily commutative
+    function<M (Q,M)> apply; // distributive, associative
+    M unit_m; // unit
+    Q unit_q; // unit
+    lazy_propagation_segment_tree() = default;
+    lazy_propagation_segment_tree(int a_n, M a_unit_m, Q a_unit_q, function<M (M,M)> a_append_m, function<Q (Q,Q)> a_append_q, function<M (Q,M)> a_apply) {
         n = pow(2,ceil(log2(a_n)));
-        a.resize(2*n-1, a_init);
-        append = a_append;
+        a.resize(2*n-1,     a_unit_m);
+        // q.resize(2*(n-1)-1, a_unit_q);
+        q.resize(2*n-1, a_unit_q);
+        unit_m = a_unit_m;
+        unit_q = a_unit_q;
+        append_m = a_append_m;
+        append_q = a_append_q;
+        apply = a_apply;
     }
-    void range_update(int l, int r, T z) {
-        range_update(0, 0, n, l, r, z);
+    void range_apply(int l, int r, Q z) {
+        range_apply(0, 0, n, l, r, z);
     }
-    void range_update(int i, int il, int ir, int l, int r, T z) {
+    void range_apply(int i, int il, int ir, int l, int r, Q z) {
         if (l <= il and ir <= r) {
-            a[i] = append(a[i], z);
+            a[i] = apply(z, a[i]);
+            // if (i < q.size()) q[i] = append_q(z, q[i]);
+            q[i] = append_q(z, q[i]);
         } else if (ir <= l or r <= il) {
             // nop
         } else {
-            range_update(2*i+1, il, (il+ir)/2, l, r, z);
-            range_update(2*i+2, (il+ir)/2, ir, l, r, z);
+            range_apply(2*i+1, il, (il+ir)/2, 0, n, q[i]);
+            range_apply(2*i+1, il, (il+ir)/2, l, r, z);
+            range_apply(2*i+2, (il+ir)/2, ir, 0, n, q[i]);
+            range_apply(2*i+2, (il+ir)/2, ir, l, r, z);
+            a[i] = append_m(a[2*i+1], a[2*i+2]);
+            q[i] = unit_q;
         }
     }
-    T point_concat(int i) {
-        T z = a[i+n-1];
-        for (i = (i+n)/2; i > 0; i /= 2) {
-            z = append(z, a[i-1]);
+    M range_concat(int l, int r) {
+        return range_concat(0, 0, n, l, r);
+    }
+    M range_concat(int i, int il, int ir, int l, int r) {
+        if (l <= il and ir <= r) {
+            return a[i];
+        } else if (ir <= l or r <= il) {
+            return unit_m;
+        } else {
+            return apply(q[i], append_m(
+                    range_concat(2*i+1, il, (il+ir)/2, l, r),
+                    range_concat(2*i+2, (il+ir)/2, ir, l, r)));
         }
-        return z;
     }
 };

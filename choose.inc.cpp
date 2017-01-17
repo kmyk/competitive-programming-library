@@ -26,3 +26,9 @@ ll choose(ll n, int r, ll p) { // O(r) for a prime p
     repeat (i,r) acc = acc * (n-i) % p * inv(i+1, p) % p;
     return acc;
 }
+
+ll choose(int n, int r) { // O(r) for small n
+    ll acc = 1;
+    repeat (i,r) acc = acc * (n-i) / (i+1);
+    return acc;
+}

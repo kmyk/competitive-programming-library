@@ -8,3 +8,12 @@ int mex(C const & xs) {
     }
     return y;
 }
+
+// https://kimiyuki.net/blog/2015/12/02/cf-603-c/
+int mex(int a, int b) {
+    for (int i = 0; ; ++ i) {
+        if (i != a and i != b) {
+            return i;
+        }
+    }
+}
