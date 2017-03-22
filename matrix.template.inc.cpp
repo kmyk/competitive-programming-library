@@ -1,29 +1,53 @@
 template <typename T, size_t H, size_t W>
 using matrix = array<array<T,W>,H>;
+
 template <typename T, size_t A, size_t B, size_t C>
-matrix<T,A,C> operator * (matrix<T,A,B> const & p, matrix<T,B,C> const & q) {
-    matrix<T,A,C> r = {};
+matrix<T,A,C> operator * (matrix<T,A,B> const & a, matrix<T,B,C> const & b) {
+    matrix<T,A,C> c = {};
     repeat (y,A) {
         repeat (z,B) {
             repeat (x,C) {
-                r[y][x] += p[y][z] * q[z][x];
-                r[y][x] %= mod;
+                c[y][x] += a[y][z] * b[z][x];
+                c[y][x] %= mod;
             }
         }
     }
-    return r;
+    return c;
 }
-template <typename T, size_t A, size_t B>
-array<T,A> operator * (matrix<T,A,B> const & p, array<T,B> const & q) {
-    array<T,A> r = {};
-    repeat (y,A) {
-        repeat (z,B) {
-            r[y] += p[y][z] * q[z];
-            r[y] %= mod;
+template <typename T, size_t H, size_t W>
+array<T,H> operator * (matrix<T,H,W> const & a, array<T,W> const & b) {
+    array<T,H> c = {};
+    repeat (y,H) {
+        repeat (z,W) {
+            c[y] += a[y][z] * b[z];
+            c[y] %= mod;
         }
     }
-    return r;
+    return c;
 }
+
+template <typename T, size_t H, size_t W>
+matrix<T,H,W> operator + (matrix<T,H,W> const & a, matrix<T,H,W> const & b) {
+    matrix<T,H,W> c;
+    repeat (y,H) {
+        repeat (x,W) {
+            c[y][x] = a[y][x] + b[y][x];
+            c[y][x] %= mod;
+        }
+    }
+    return c;
+}
+
+template <typename T, size_t N>
+array<T,N> operator + (array<T,N> const & a, array<T,N> const & b) {
+    array<T,N> c;
+    repeat (i,N) {
+        c[i] = a[i] + b[i];
+        c[i] %= mod;
+    }
+    return c;
+}
+
 template <typename T, size_t H, size_t W>
 matrix<T,H,W> matrix_zero() { return {}; }
 template <typename T, size_t N>

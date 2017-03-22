@@ -26,8 +26,8 @@ cat <<EOF
 #define debug(x) #x << " = " << (x) << " "
 using ll = long long;
 using namespace std;
-template <class T> void setmax(T & a, T const & b) { if (a < b) a = b; }
-template <class T> void setmin(T & a, T const & b) { if (b < a) a = b; }
+template <class T> inline void setmax(T & a, T const & b) { a = max(a, b); }
+template <class T> inline void setmin(T & a, T const & b) { a = min(a, b); }
 template <typename X, typename T> auto vectors(X x, T a) { return vector<T>(x, a); }
 template <typename X, typename Y, typename Z, typename... Zs> auto vectors(X x, Y y, Z z, Zs... zs) { auto cont = vectors(y, z, zs...); return vector<decltype(cont)>(x, cont); }
 ll bit(int i) { return 1ll << i; }
