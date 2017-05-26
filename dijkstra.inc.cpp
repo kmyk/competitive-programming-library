@@ -1,13 +1,18 @@
-vector<int> dijkstra_simple_distance_from(int root, vector<vector<int> > const & g) {
-    vector<int> dist(n, -1);
-    queue<int> que;
+// https://kimiyuki.net/blog/2017/03/24/cf-786-b/
+vector<ll> dijkstra(vector<vector<pair<int, ll> > > const & g, int root) {
+    vector<ll> dist(n, inf);
+    priority_queue<pair<ll, int> > que;
     dist[root] = 0;
-    que.push(root);
+    que.emplace(- dist[root], root);
     while (not que.empty()) {
-        int i = que.front(); que.pop();
-        for (int j : g[i]) if (dist[j] == -1) {
-            dist[j] = dist[i] + 1;
-            que.push(j);
+        ll cost; int i; tie(cost, i) = que.top(); que.pop();
+        if (dist[i] < - cost) continue;
+        for (auto it : g[i]) {
+            int j; ll delta; tie(j, delta) = it;
+            if (- cost + delta < dist[j]) {
+                dist[j] = - cost + delta;
+                que.emplace(cost - delta, j);
+            }
         }
     }
     return dist;

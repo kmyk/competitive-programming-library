@@ -1,13 +1,18 @@
 // http://yukicoder.me/problems/1048
 // http://arc012.contest.atcoder.jp/submissions/749180
 ll powmod(ll x, ll y, ll p) { // O(log y)
-    assert (y >= 0);
-    x %= p; if (x < 0) x += p;
+    assert (0 <= x and x < p);
+    assert (0 <= y);
     ll z = 1;
     for (ll i = 1; i <= y; i <<= 1) {
         if (y & i) z = z * x % p;
         x = x * x % p;
     }
+    return z;
+}
+ll powmod(ll x, int y, ll p) { // O(y)
+    ll z = 1;
+    while (y --) z = z * x % p;
     return z;
 }
 
