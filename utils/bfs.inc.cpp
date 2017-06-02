@@ -1,4 +1,10 @@
-vector<int> bfs(vector<vector<int> > const & g) {
+/**
+ * @brief breadth first search
+ * @param src
+ * @param g an adjacent list of a digraph
+ * @return distances to vertices from the src
+ */
+vector<int> bfs(int src, vector<vector<int> > const & g) {
     vector<int> dist(g.size(), inf);
     queue<int> que;
     dist[src] = 0;

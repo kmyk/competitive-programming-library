@@ -8,6 +8,9 @@ int fact(int n) {
     }
     return memo[n];
 }
+/**
+ * @note O(1) if memoize inv_fact
+ */
 template <int mod>
 int choose(int n, int r) { // O(n) at first time, otherwise O(\log n)
     if (n < r) return 0;

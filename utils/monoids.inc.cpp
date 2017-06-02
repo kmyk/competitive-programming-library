@@ -1,15 +1,23 @@
+/**
+ * @brief an abelian group
+ */
 struct plus_t {
     typedef int type;
     int unit() const { return 0; }
     int append(int a, int b) const { return a + b; }
+    int invert(int a) const { return - a; }
 };
 template <int mod>
 struct modplus_t {
     typedef int type;
     int unit() const { return 0; }
     int append(int a, int b) const { int c = a + b; return c < mod ? c : c - mod; }
+    int invert(int a) const { return a ? mod - a : 0; }
 };
 
+/**
+ * @brief an commutative monoid
+ */
 struct max_t {
     typedef int type;
     int unit() const { return 0; }
