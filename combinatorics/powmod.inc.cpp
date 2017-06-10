@@ -10,16 +10,16 @@ ll powmod(ll x, ll y, ll p) { // O(log y)
     }
     return z;
 }
-ll powmod(ll x, int y, ll p) { // O(y)
-    ll z = 1;
-    while (y --) z = z * x % p;
-    return z;
-}
-
 // http://yukicoder.me/submissions/97173
 ll inv(ll x, ll p) { // p must be a prime, O(log p)
     assert ((x % p + p) % p != 0);
     return powmod(x, p-2, p);
+}
+
+ll powmod(ll x, int y, ll p) { // O(y)
+    ll z = 1;
+    while (y --) z = z * x % p;
+    return z;
 }
 
 template <typename T, typename F>
