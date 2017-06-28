@@ -32,11 +32,13 @@ T powt(T x, ll y, T unit, F f) {
     return z;
 }
 
-pair<int,int> extgcd(int a, int b) {
+pair<int, int> extgcd(int a, int b) {
     if (b == 0) return { 1, 0 };
     int na, nb; tie(na, nb) = extgcd(b, a % b);
     return { nb, na - a/b * nb };
 }
-int modinv(int a, int n) { // a and n must be relatively prime, O(log n)
-    return (extgcd(a, n).first % n + n) % n;
+int modinv(int x, int n) { // a and n must be relatively prime, O(log n)
+    assert (1 <= x and x < n);
+    int y = extgcd(a, n).first % n;
+    return y >= 0 ? y : y + n;
 }

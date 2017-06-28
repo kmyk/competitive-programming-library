@@ -49,7 +49,7 @@ T determinant(vector<vector<T> > a) {
 template <typename T>
 vector<T> gaussian_elimination(vector<vector<T> > f, vector<T> x) {
     int n = x.size();
-    repeat (y,n) {
+    repeat (y, n) {
         int pivot = y;
         while (pivot < n and abs(f[pivot][y]) < eps) ++ pivot;
         assert (pivot < n);
@@ -57,7 +57,7 @@ vector<T> gaussian_elimination(vector<vector<T> > f, vector<T> x) {
         x[y] /= f[y][y];
         repeat_from (x,y+1,n) f[y][x] /= f[y][y];
         f[y][y] = 1;
-        repeat (ny,n) if (ny != y) {
+        repeat (ny, n) if (ny != y) {
             x[ny] -= f[ny][y] * x[y];
             repeat_from (x,y+1,n) f[ny][x] -= f[ny][y] * f[y][x];
             f[ny][y] = 0;

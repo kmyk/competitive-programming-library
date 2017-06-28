@@ -8,5 +8,5 @@ T gcd(T a, T b) {
 }
 template <typename T>
 T lcm(T a, T b) {
-    return (a * b) / gcd(a,b);
+    return a / gcd(a, b) * b;
 }

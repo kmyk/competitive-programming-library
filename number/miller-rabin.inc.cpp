@@ -5,13 +5,13 @@ bool is_prime(ll n, int iteration, Generator & gen) { // miller-rabin primality 
     if (n == 2) return true;
     if (n == 1 or n % 2 == 0) return false;
     const ll d = (n-1) >> __builtin_ctzll(n-1); // remove trailing zeros
-    uniform_int_distribution<ll> dist(1,n-2); // [l,r]
-    repeat (dummy,iteration) {
+    uniform_int_distribution<ll> dist(1, n-2); // [l, r]
+    repeat (dummy, iteration) {
         ll a = dist(gen);
         ll t = d;
-        ll y = powi(a,t,n);
+        ll y = powmod(a, t, n);
         while (t != n-1 and y != 1 and y != n-1) {
-            y = muli(y, y, n);
+            y = y * y % n;
             t *= 2;
         }
         if (y != n-1 and t % 2 == 0) return false;
