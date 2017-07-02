@@ -1,5 +1,5 @@
 typedef complex<double> point;
-struct circle { point c; double r; };
+struct circle { point p; double r; };
 struct line { point s, t; };
 struct segment { point s, t; };
 struct ray { point s, t; };
@@ -8,12 +8,29 @@ struct ray { point s, t; };
  * @note あまり小さくすると誤差で死ぬ
  */
 const double eps = 1e-6;
+double sq(double x) { return pow(x, 2); }
 
-double   dot(point p, point q) { return real(p * conj(q)); }
-double cross(point p, point q) { return imag(conj(p) * q); }
+struct point { double y, x; };
+point operator + (point a, point b) { return (point) { a.y + b.y, a.x + b.x }; }
+point operator - (point a, point b) { return (point) { a.y - b.y, a.x - b.x }; }
+point operator * (point a, double b) { return (point) { a.y * b, a.x * b }; }
+point operator / (point a, double b) { return (point) { a.y / b, a.x / b }; }
+point operator < (point a, point b) { return make_pair(a.y, a.x) < make_pair(b.y, b.x); }
+double distance(point a, point b) { return sqrt(sq(a.y - b.y) + sq(a.x - b.x)); }
+double   dot(point a, point b) { return a.x * b.x + a.y * b.y; }
+double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
 int ccw(point a, point b, point c) { double z = cross(b - a, c - a); return z > eps ? 1 : z < - eps ? -1 : 0; }
-auto x = [](complex<double> const & p) { return real(p); };
-auto y = [](complex<double> const & p) { return imag(p); };
+
+
+
+
+/**
+ * @brief segment - segment, inclusive
+ */
+bool does_intersect(segment const & a, segment const & b){
+    return ccw(a.s, a.t, b.s) * ccw(a.s, a.t, b.t) <= 0 and
+           ccw(b.s, b.t, a.s) * ccw(b.s, b.t, a.t) <= 0;
+}
 
 /**
  * @brief point and line

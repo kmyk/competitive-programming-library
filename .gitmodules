@@ -1,0 +1,3 @@
+[submodule "Togasat"]
+	path = Togasat
+	url = https://github.com/togatoga/Togasat

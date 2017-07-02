@@ -24,3 +24,4 @@ dice_t rotate_up(   dice_t dice) { return (dice_t) { dice.a, 7 - dice.c() }; }
 dice_t rotate_right(dice_t dice) { return (dice_t) { 7 - dice.c(), dice.b }; }
 dice_t rotate_down( dice_t dice) { return (dice_t) { dice.a, dice.c() }; }
 dice_t rotate_left( dice_t dice) { return (dice_t) { dice.c(), dice.b }; }
+bool operator == (dice_t x, dice_t y) { return x.a == y.a and x.b == y.b; }
