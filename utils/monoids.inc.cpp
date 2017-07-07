@@ -19,9 +19,14 @@ struct modplus_t {
  * @brief an commutative monoid
  */
 struct max_t {
-    typedef int type;
+    typedef int underlying_type;
     int unit() const { return 0; }
     int append(int a, int b) const { return max(a, b); }
+};
+struct min_t {
+    typedef int underlying_type;
+    int unit() const { return INT_MAX; }
+    int append(int a, int b) const { return min(a, b); }
 };
 
 struct linear_endomorphism_t { // f(x) = ax + b

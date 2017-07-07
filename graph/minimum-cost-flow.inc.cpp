@@ -34,29 +34,34 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge_t<T> > 
         vector<int> prev_v(graph.size()); // constitute a single-linked-list represents the flow-path
         vector<int> prev_e(graph.size());
         { // initialize distance and prev_{v,e}
-            reversed_priority_queue<pair<T, int> > q; // distance * vertex
+            reversed_priority_queue<pair<T, int> > que; // distance * vertex
             distance[src] = 0;
-            q.emplace(0, src);
-            while (not q.empty()) { // Dijkstra's algorithm
-                T d; int v; tie(d, v) = q.top(); q.pop();
+            que.emplace(0, src);
+            while (not que.empty()) { // Dijkstra's algorithm
+                T d; int v; tie(d, v) = que.top(); que.pop();
+                if (potential[v] == numeric_limits<T>::max()) continue; // for unreachable nodes
                 if (distance[v] < d) continue;
                 // look round the vertex
                 repeat (e_index, graph[v].size()) {
                     // consider updating
                     edge_t<T> e = graph[v][e_index];
                     int w = e.to;
+                    if (potential[w] == numeric_limits<T>::max()) continue;
                     T d1 = distance[v] + e.cost + potential[v] - potential[w]; // updated distance
                     if (0 < e.cap and d1 < distance[e.to]) {
                         distance[w] = d1;
                         prev_v[w] = v;
                         prev_e[w] = e_index;
-                        q.emplace(d1, w);
+                        que.emplace(d1, w);
                     }
                 }
             }
         }
         if (distance[dst] == numeric_limits<T>::max()) return -1; // no such flow
-        repeat (v, graph.size()) potential[v] += distance[v];
+        repeat (v, graph.size()) {
+            if (potential[v] == numeric_limits<T>::max()) continue;
+            potential[v] += distance[v];
+        }
         // finish updating the potential
         // let flow on the src->dst minimum path
         T delta = flow; // capacity of the path

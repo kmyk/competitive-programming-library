@@ -1,10 +1,10 @@
 template <int mod>
 int fact(int n) {
-    static vector<int> memo(1,1);
+    static vector<int> memo(1, 1);
     if (memo.size() <= n) {
         int l = memo.size();
         memo.resize(n+1);
-        repeat_from (i,l,n+1) memo[i] = memo[i-1] *(ll) i % mod;
+        repeat_from (i, l, n+1) memo[i] = memo[i-1] *(ll) i % mod;
     }
     return memo[n];
 }

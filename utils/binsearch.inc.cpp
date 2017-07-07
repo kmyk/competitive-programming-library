@@ -1,7 +1,7 @@
 /**
  * @brie a flexible binary search
  * @param[in] p  a monotone predicate defined on [l, r)
- * @return  \min \{ x \in [l, r) \mid p(x) \}
+ * @return  \min \{ x \in [l, r) \mid p(x) \}, or r if it doesn't exist
  */
 template <typename UnaryPredicate>
 ll binsearch(ll l, ll r, UnaryPredicate p) { // [l, r), p is monotone
@@ -11,7 +11,7 @@ ll binsearch(ll l, ll r, UnaryPredicate p) { // [l, r), p is monotone
         ll m = (l + r) / 2;
         (p(m) ? r : l) = m;
     }
-    return r; // = min { x | p(x) }
+    return r; // = min { x in [l, r) | p(x) }, or r
 }
 
 unittest {
