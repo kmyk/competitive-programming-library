@@ -39,3 +39,16 @@ ll choose(int n, int r) { // O(r) for small n
     repeat (i,r) acc = acc * (n-i) / (i+1);
     return acc;
 }
+
+vector<vector<ll> > calc_choose(int n) { // O(n^2)
+    vector<vector<ll> > dp(n + 1);
+    dp[0].assign(1, 1);
+    repeat (i, n) {
+        dp[i + 1].resize(i + 2);
+        repeat (j, i + 2) {
+            if (j - 1 >= 0) dp[i + 1][j] += dp[i][j - 1];
+            if (j != i + 1) dp[i + 1][j] += dp[i][j];
+        }
+    }
+    return dp;
+}
