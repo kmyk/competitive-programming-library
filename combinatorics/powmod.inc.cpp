@@ -11,9 +11,9 @@ ll powmod(ll x, ll y, ll p) { // O(log y)
     return z;
 }
 // http://yukicoder.me/submissions/97173
-ll inv(ll x, ll p) { // p must be a prime, O(log p)
-    assert ((x % p + p) % p != 0);
-    return powmod(x, p-2, p);
+ll modinv(ll x, ll p) { // p must be a prime, O(log p)
+    assert (x % p != 0);
+    return powmod(x, p - 2, p);
 }
 
 ll powmod(ll x, int y, ll p) { // O(y)
@@ -41,4 +41,13 @@ int modinv(int x, int n) { // a and n must be relatively prime, O(log n)
     assert (1 <= x and x < n);
     int y = extgcd(a, n).first % n;
     return y >= 0 ? y : y + n;
+}
+
+ll powint(ll x, int y) {
+    ll z = 0;
+    for (ll i = 1; i <= y; i <<= 1) {
+        if (y & i) z *= x;
+        x *= x;
+    }
+    return z;
 }

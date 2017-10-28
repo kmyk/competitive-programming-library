@@ -15,12 +15,12 @@ template <int mod>
 int choose(int n, int r) { // O(n) at first time, otherwise O(\log n)
     if (n < r) return 0;
     r = min(r, n - r);
-    return fact<mod>(n) *(ll) inv(fact<mod>(n-r), mod) % mod *(ll) inv(fact<mod>(r), mod) % mod;
+    return fact<mod>(n) *(ll) modinv(fact<mod>(n-r), mod) % mod *(ll) modinv(fact<mod>(r), mod) % mod;
 }
 template <int mod>
 int permute(int n, int r) {
     if (n < r) return 0;
-    return fact<mod>(n) *(ll) inv(fact<mod>(n-r), mod) % mod;
+    return fact<mod>(n) *(ll) modinv(fact<mod>(n-r), mod) % mod;
 }
 template <int mod>
 int multichoose(int n, int r) {
@@ -30,7 +30,7 @@ int multichoose(int n, int r) {
 
 ll choose(ll n, int r, ll p) { // O(r) for a prime p
     ll acc = 1;
-    repeat (i,r) acc = acc * (n-i) % p * inv(i+1, p) % p;
+    repeat (i,r) acc = acc * (n-i) % p * modinv(i+1, p) % p;
     return acc;
 }
 

@@ -22,7 +22,7 @@ cat <<EOF
 #define repeat_from(i, m, n) for (int i = (m); (i) < int(n); ++(i))
 #define repeat_reverse(i, n) for (int i = (n)-1; (i) >= 0; --(i))
 #define repeat_from_reverse(i, m, n) for (int i = (n)-1; (i) >= int(m); --(i))
-#define whole(f, x, ...) ([&](decltype((x)) whole) { return (f)(begin(whole), end(whole), ## __VA_ARGS__); })(x)
+#define whole(x) begin(x), end(x)
 #define unittest_name_helper(counter) unittest_ ## counter
 #define unittest_name(counter) unittest_name_helper(counter)
 #define unittest __attribute__((constructor)) void unittest_name(__COUNTER__) ()

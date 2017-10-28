@@ -1,16 +1,16 @@
 template <class T>
-struct edge_t { int to; T cap, cost; int rev; };
+struct edge { int to; T cap, cost; int rev; };
 template <class T>
-void add_edge(vector<vector<edge_t<T> > > & graph, int from, int to, T cap, T cost) {
-    graph[from].push_back((edge_t<T>) {   to, cap,  cost, int(graph[  to].size())     });
-    graph[  to].push_back((edge_t<T>) { from,  0, - cost, int(graph[from].size()) - 1 });
+void add_edge(vector<vector<edge<T> > > & graph, int from, int to, T cap, T cost) {
+    graph[from].push_back((edge<T>) {   to, cap,  cost, int(graph[  to].size())     });
+    graph[  to].push_back((edge<T>) { from,  0, - cost, int(graph[from].size()) - 1 });
 }
 /**
  * @brief minimum-cost flow with primal-dual method
  * @note mainly O(V^2UC) for U is the sum of capacities and C is the sum of costs. and additional O(VE) if negative edges exist
  */
 template <class T>
-T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge_t<T> > > & graph) {
+T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge<T> > > & graph) {
     T result = 0;
     vector<T> potential(graph.size());
     if (0 < flow) { // initialize potential when negative edges exist (slow). you can remove this if unnecessary
@@ -44,7 +44,7 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge_t<T> > 
                 // look round the vertex
                 repeat (e_index, graph[v].size()) {
                     // consider updating
-                    edge_t<T> e = graph[v][e_index];
+                    edge<T> e = graph[v][e_index];
                     int w = e.to;
                     if (potential[w] == numeric_limits<T>::max()) continue;
                     T d1 = distance[v] + e.cost + potential[v] - potential[w]; // updated distance
@@ -71,7 +71,7 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge_t<T> > 
         flow -= delta;
         result += delta * potential[dst];
         for (int v = dst; v != src; v = prev_v[v]) {
-            edge_t<T> & e = graph[prev_v[v]][prev_e[v]]; // reference
+            edge<T> & e = graph[prev_v[v]][prev_e[v]]; // reference
             e.cap -= delta;
             graph[v][e.rev].cap += delta;
         }

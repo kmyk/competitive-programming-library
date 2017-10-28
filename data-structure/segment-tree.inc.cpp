@@ -1,7 +1,7 @@
 template <class Monoid>
 struct segment_tree {
     typedef Monoid monoid_type;
-    typedef typename Monoid::type underlying_type;
+    typedef typename Monoid::underlying_type underlying_type;
     int n;
     vector<underlying_type> a;
     Monoid mon;
@@ -26,6 +26,17 @@ struct segment_tree {
         }
         return mon.append(lacc, racc);
     }
+};
+struct plus_t {
+    typedef int underlying_type;
+    int unit() const { return 0; }
+    int append(int a, int b) const { return a + b; }
+};
+template <int mod>
+struct modplus_t {
+    typedef int underlying_type;
+    int unit() const { return 0; }
+    int append(int a, int b) const { int c = a + b; return c < mod ? c : c - mod; }
 };
 
 template <class OperatorMonoid>
@@ -98,6 +109,13 @@ unittest {
     assert (segtree.point_get(10) ==  80);
     assert (segtree.point_get(11) == 100);
 }
+struct plus_operator_t {
+    typedef int underlying_type;
+    typedef int target_type;
+    int unit() const { return 0; }
+    int append(int a, int b) const { return a + b; }
+    int apply(int a, int b) const { return a + b; }
+};
 
 template <class Monoid, class MagmaEndomorphism>
 struct lazy_propagation_segment_tree { // on monoids

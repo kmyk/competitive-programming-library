@@ -2,14 +2,14 @@
  * @brief an abelian group
  */
 struct plus_t {
-    typedef int type;
+    typedef int underlying_type;
     int unit() const { return 0; }
     int append(int a, int b) const { return a + b; }
     int invert(int a) const { return - a; }
 };
 template <int mod>
 struct modplus_t {
-    typedef int type;
+    typedef int underlying_type;
     int unit() const { return 0; }
     int append(int a, int b) const { int c = a + b; return c < mod ? c : c - mod; }
     int invert(int a) const { return a ? mod - a : 0; }
@@ -27,6 +27,18 @@ struct min_t {
     typedef int underlying_type;
     int unit() const { return INT_MAX; }
     int append(int a, int b) const { return min(a, b); }
+};
+struct minmax_t {
+    typedef pair<int, int> underlying_type;
+    underlying_type unit() const { return make_pair(INT_MAX, INT_MIN); }
+    underlying_type append(underlying_type a, underlying_type b) const { return make_pair(min(a.min, b.min), max(a.max, b.max)); }
+};
+
+template <typename T>
+struct min_indexed_t {
+    typedef pair<T, int> underlying_type;
+    underlying_type unit() const { return make_pair(numeric_limits<T>::max(), -1); }
+    underlying_type append(underlying_type a, underlying_type b) const { return min(a, b); }
 };
 
 struct linear_endomorphism_t { // f(x) = ax + b

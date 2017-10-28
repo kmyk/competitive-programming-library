@@ -1,5 +1,6 @@
 // https://kimiyuki.net/blog/2017/03/24/cf-786-b/
 vector<ll> dijkstra(vector<vector<pair<int, ll> > > const & g, int root) {
+    int n = g.size();
     vector<ll> dist(n, inf);
     priority_queue<pair<ll, int> > que;
     dist[root] = 0;
