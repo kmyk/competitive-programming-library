@@ -46,9 +46,9 @@ struct treap {
         shared_ptr<treap> u = make_shared<treap>(v);
         return merge(merge(l, u), r);
     }
-    static pair<shared_ptr<treap>,shared_ptr<treap> > erase(shared_ptr<treap> const & t, size_t i) { // (t \ t_i, t_i), destructive
+    static pair<shared_ptr<treap>, shared_ptr<treap> > erase(shared_ptr<treap> const & t, size_t i) { // (t \ t_i, t_i), destructive
         shared_ptr<treap> l, u, r;
-        tie(l, r) = split(t, i+1);
+        tie(l, r) = split(t, i + 1);
         tie(l, u) = split(l, i);
         return { merge(l, r), u };
     }

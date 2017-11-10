@@ -6,23 +6,28 @@ cat <<EOF
  * @author `git config user.name`
  * @date `date +'%a. %d, %Y'`
  */
-#include <cstdio>
-#include <vector>
 #include <algorithm>
 #include <array>
-#include <set>
-#include <map>
-#include <queue>
-#include <tuple>
-#include <unordered_set>
-#include <unordered_map>
-#include <functional>
 #include <cassert>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <functional>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <tuple>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 #define repeat(i, n) for (int i = 0; (i) < int(n); ++(i))
 #define repeat_from(i, m, n) for (int i = (m); (i) < int(n); ++(i))
 #define repeat_reverse(i, n) for (int i = (n)-1; (i) >= 0; --(i))
 #define repeat_from_reverse(i, m, n) for (int i = (n)-1; (i) >= int(m); --(i))
 #define whole(x) begin(x), end(x)
+#define dump(x) cerr << #x " = " << x << endl
 #define unittest_name_helper(counter) unittest_ ## counter
 #define unittest_name(counter) unittest_name_helper(counter)
 #define unittest __attribute__((constructor)) void unittest_name(__COUNTER__) ()
