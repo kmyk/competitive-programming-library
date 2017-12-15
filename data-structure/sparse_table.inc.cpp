@@ -12,7 +12,7 @@ struct sparse_table {
     sparse_table(vector<underlying_type> const & data, Monoid const & a_mon = Monoid())
             : mon(a_mon) {
         int n = data.size();
-        int log_n = log2(n) + 1;
+        int log_n = 32 - __builtin_clz(n);
         table.resize(log_n, vector<underlying_type>(n, mon.unit()));
         table[0] = data;
         for (int k = 0; k < log_n-1; ++ k) {
@@ -24,7 +24,12 @@ struct sparse_table {
     underlying_type range_concat(int l, int r) const {
         assert (0 <= l and l <= r and r <= table[0].size());
         if (l == r) return mon.unit();
-        int k = log2(r - l);
+        int k = 31 - __builtin_clz(r - l);  // log2
         return mon.append(table[k][l], table[k][r - (1ll<<k)]);
     }
+};
+struct max_monoid {
+    typedef int underlying_type;
+    int unit() const { return 0; }
+    int append(int a, int b) const { return max(a, b); }
 };

@@ -4,7 +4,7 @@
 vector<bool> sieve_of_eratosthenes(int n) { // enumerate primes in [2,n] with O(n log log n)
     vector<bool> is_prime(n + 1, true);
     is_prime[0] = is_prime[1] = false;
-    for (int i = 2; i * i <= n; ++i)
+    for (int i = 2; i * i <= n; ++ i)
         if (is_prime[i])
             for (int k = 2 * i; k <= n; k += i)
                 is_prime[k] = false;
@@ -13,7 +13,7 @@ vector<bool> sieve_of_eratosthenes(int n) { // enumerate primes in [2,n] with O(
 vector<int> list_primes(int n) {
     auto is_prime = sieve_of_eratosthenes(n);
     vector<int> primes;
-    for (int i = 2; i <= n; ++i)
+    for (int i = 2; i <= n; ++ i)
         if (is_prime[i])
             primes.push_back(i);
     return primes;
@@ -21,8 +21,8 @@ vector<int> list_primes(int n) {
 
 // alternative interface
 // http://yukicoder.me/submissions/96172
-map<ll,int> prime_factrorize(ll n, vector<int> const & primes) {
-    map<ll,int> result;
+map<ll, int> prime_factorize(ll n, vector<int> const & primes) {
+    map<ll, int> result;
     for (int p : primes) {
         if (n < p *(ll) p) break;
         while (n % p == 0) {

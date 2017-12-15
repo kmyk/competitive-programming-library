@@ -118,3 +118,4 @@ vector<vector<T> > concat_matrix_vector(vector<vector<T> > const & f, vector<T> 
         fx[y][w] = x[y];
     }
     return fx;
+}
