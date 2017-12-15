@@ -1,6 +1,3 @@
-// http://yukicoder.me/problems/1048
-// http://arc012.contest.atcoder.jp/submissions/749180
-// http://yukicoder.me/submissions/96172
 vector<bool> sieve_of_eratosthenes(int n) { // enumerate primes in [2,n] with O(n log log n)
     vector<bool> is_prime(n + 1, true);
     is_prime[0] = is_prime[1] = false;
@@ -18,9 +15,6 @@ vector<int> list_primes(int n) {
             primes.push_back(i);
     return primes;
 }
-
-// alternative interface
-// http://yukicoder.me/submissions/96172
 map<ll, int> prime_factorize(ll n, vector<int> const & primes) {
     map<ll, int> result;
     for (int p : primes) {
@@ -33,8 +27,6 @@ map<ll, int> prime_factorize(ll n, vector<int> const & primes) {
     if (n != 1) result[n] += 1;
     return result;
 }
-
-// http://yukicoder.me/submissions/96397
 vector<ll> list_prime_factrors(ll n, vector<int> const & primes) {
     vector<ll> result;
     for (int p : primes) {

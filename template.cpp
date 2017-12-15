@@ -34,6 +34,7 @@ cat <<EOF
 #define unittest __attribute__((constructor)) void unittest_name(__COUNTER__) ()
 using ll = long long;
 using namespace std;
+template <class T> using reversed_priority_queue = priority_queue<T, vector<T>, greater<T> >;
 template <class T> inline void chmax(T & a, T const & b) { a = max(a, b); }
 template <class T> inline void chmin(T & a, T const & b) { a = min(a, b); }
 template <typename X, typename T> auto vectors(X x, T a) { return vector<T>(x, a); }

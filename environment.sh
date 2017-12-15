@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# How to print for ICPC
-# $ for f in environment.sh template.cpp ; do echo $f ; cat -n $f ; echo ; done | paps --font=6 --{bottom,top,left,right}-margin=10 | ps2pdf - > library.pdf
-
 cat <<EOF > ~/.vimrc
 syntax on
 set smartindent

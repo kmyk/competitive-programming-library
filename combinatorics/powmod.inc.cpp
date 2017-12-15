@@ -1,6 +1,8 @@
-// http://yukicoder.me/problems/1048
-// http://arc012.contest.atcoder.jp/submissions/749180
-ll powmod(ll x, ll y, ll p) { // O(log y)
+/**
+ * @param p must be a prime
+ * @note O(log y)
+ */
+ll powmod(ll x, ll y, ll p) {
     assert (0 <= x and x < p);
     assert (0 <= y);
     ll z = 1;
@@ -10,44 +12,11 @@ ll powmod(ll x, ll y, ll p) { // O(log y)
     }
     return z;
 }
-// http://yukicoder.me/submissions/97173
-ll modinv(ll x, ll p) { // p must be a prime, O(log p)
+/**
+ * @param p must be a prime
+ * @note O(log p)
+ */
+ll modinv(ll x, ll p) {
     assert (x % p != 0);
     return powmod(x, p - 2, p);
-}
-
-ll powmod(ll x, int y, ll p) { // O(y)
-    ll z = 1;
-    while (y --) z = z * x % p;
-    return z;
-}
-
-template <typename T, typename F>
-T powt(T x, ll y, T unit, F f) {
-    T z = unit;
-    for (ll i = 1; i <= y; i <<= 1) {
-        if (y & i) z = f(z, x);
-        x = f(x, x);
-    }
-    return z;
-}
-
-pair<int, int> extgcd(int a, int b) {
-    if (b == 0) return { 1, 0 };
-    int na, nb; tie(na, nb) = extgcd(b, a % b);
-    return { nb, na - a/b * nb };
-}
-int modinv(int x, int n) { // a and n must be relatively prime, O(log n)
-    assert (1 <= x and x < n);
-    int y = extgcd(a, n).first % n;
-    return y >= 0 ? y : y + n;
-}
-
-ll powint(ll x, int y) {
-    ll z = 0;
-    for (ll i = 1; i <= y; i <<= 1) {
-        if (y & i) z *= x;
-        x *= x;
-    }
-    return z;
 }
