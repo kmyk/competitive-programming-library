@@ -9,8 +9,8 @@
 \title{my library for ICPC}
 EOF
     echo "\\author{$(git config user.name)}"
+    echo "\\date{\\today \\\\ repo: $(git config remote.origin.url) \\\\ commit: $(git rev-parse HEAD)}"
     cat <<'EOF'
-\date{\today}
 
 \lstset{
     language=C++,
