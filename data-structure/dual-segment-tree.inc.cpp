@@ -1,6 +1,5 @@
 template <class OperatorMonoid>
 struct dual_segment_tree {
-    typedef OperatorMonoid monoid_type;
     typedef typename OperatorMonoid::underlying_type operator_type;
     typedef typename OperatorMonoid::target_type underlying_type;
     int n;

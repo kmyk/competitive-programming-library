@@ -2,8 +2,8 @@ template <typename T>
 map<T, int> coordinate_compression_map(vector<T> const & xs) {
     int n = xs.size();
     vector<int> ys(n);
-    iota(whole(ys), 0);
-    sort(whole(ys), [&](int i, int j) { return xs[i] < xs[j]; });
+    iota(ALL(ys), 0);
+    sort(ALL(ys), [&](int i, int j) { return xs[i] < xs[j]; });
     map<T,int> f;
     for (int i : ys) {
         if (not f.count(xs[i])) { // make unique
@@ -15,10 +15,10 @@ map<T, int> coordinate_compression_map(vector<T> const & xs) {
 }
 
 template <typename T>
-vector<int> apply_compression(map<T,int> const & f, vector<T> const & xs) {
+vector<int> apply_compression(map<T, int> const & f, vector<T> const & xs) {
     int n = xs.size();
     vector<int> ys(n);
-    repeat (i,n) ys[i] = f.at(xs[i]);
+    repeat (i, n) ys[i] = f.at(xs[i]);
     return ys;
 }
 

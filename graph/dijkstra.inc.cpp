@@ -1,18 +1,19 @@
-// https://kimiyuki.net/blog/2017/03/24/cf-786-b/
+/**
+ * @note O((E + V) log V)
+ */
 vector<ll> dijkstra(vector<vector<pair<int, ll> > > const & g, int root) {
-    int n = g.size();
-    vector<ll> dist(n, inf);
+    vector<ll> dist(g.size(), LLONG_MAX);
     priority_queue<pair<ll, int> > que;
     dist[root] = 0;
     que.emplace(- dist[root], root);
     while (not que.empty()) {
-        ll cost; int i; tie(cost, i) = que.top(); que.pop();
-        if (dist[i] < - cost) continue;
+        ll dist_i; int i; tie(dist_i, i) = que.top(); que.pop();
+        if (dist[i] < - dist_i) continue;
         for (auto it : g[i]) {
-            int j; ll delta; tie(j, delta) = it;
-            if (- cost + delta < dist[j]) {
-                dist[j] = - cost + delta;
-                que.emplace(cost - delta, j);
+            int j; ll cost; tie(j, cost) = it;
+            if (- dist_i + cost < dist[j]) {
+                dist[j] = - dist_i + cost;
+                que.emplace(dist_i - cost, j);
             }
         }
     }

@@ -14,11 +14,11 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge<T> > > 
     T result = 0;
     vector<T> potential(graph.size());
     if (0 < flow) { // initialize potential when negative edges exist (slow). you can remove this if unnecessary
-        whole(fill, potential, numeric_limits<T>::max());
+        fill(ALL(potential), numeric_limits<T>::max());
         potential[src] = 0;
         while (true) { // Bellman-Ford algorithm
             bool updated = false;
-            repeat (e_from, graph.size()) for (auto & e : graph[e_from]) if (e.cap) {
+            REP (e_from, graph.size()) for (auto & e : graph[e_from]) if (e.cap) {
                 if (potential[e_from] == numeric_limits<T>::max()) continue;
                 if (potential[e.to] > potential[e_from] + e.cost) {
                     potential[e.to] = potential[e_from] + e.cost; // min
@@ -42,7 +42,7 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge<T> > > 
                 if (potential[v] == numeric_limits<T>::max()) continue; // for unreachable nodes
                 if (distance[v] < d) continue;
                 // look round the vertex
-                repeat (e_index, graph[v].size()) {
+                REP (e_index, graph[v].size()) {
                     // consider updating
                     edge<T> e = graph[v][e_index];
                     int w = e.to;
@@ -58,7 +58,7 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge<T> > > 
             }
         }
         if (distance[dst] == numeric_limits<T>::max()) return -1; // no such flow
-        repeat (v, graph.size()) {
+        REP (v, graph.size()) {
             if (potential[v] == numeric_limits<T>::max()) continue;
             potential[v] += distance[v];
         }
@@ -66,7 +66,7 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge<T> > > 
         // let flow on the src->dst minimum path
         T delta = flow; // capacity of the path
         for (int v = dst; v != src; v = prev_v[v]) {
-            setmin(delta, graph[prev_v[v]][prev_e[v]].cap);
+            chmin(delta, graph[prev_v[v]][prev_e[v]].cap);
         }
         flow -= delta;
         result += delta * potential[dst];

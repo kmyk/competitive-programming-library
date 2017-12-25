@@ -9,8 +9,8 @@ struct lowest_common_ancestor {
     vector<int> depth;
     lowest_common_ancestor() = default;
     /**
-     * @note O(N \log N)
-     * @param g an adjacent list of the tree
+     * @note O(N log N)
+     * @param g an adjacent list of a tree
      */
     lowest_common_ancestor(int root, vector<vector<int> > const & g) {
         int n = g.size();
@@ -32,10 +32,10 @@ struct lowest_common_ancestor {
                 }
             }
         }
-        repeat (k, log_n-1) {
-            repeat (i, n) {
+        REP (k, log_n - 1) {
+            REP (i, n) {
                 if (a[k][i] != -1) {
-                    a[k+1][i] = a[k][a[k][i]];
+                    a[k + 1][i] = a[k][a[k][i]];
                 }
             }
         }
@@ -46,8 +46,8 @@ struct lowest_common_ancestor {
      */
     int operator () (int x, int y) const {
         int log_n = a.size();
-        if (depth[x] < depth[y]) swap(x,y);
-        repeat_reverse (k, log_n) {
+        if (depth[x] < depth[y]) swap(x, y);
+        REP_R (k, log_n) {
             if (a[k][x] != -1 and depth[a[k][x]] >= depth[y]) {
                 x = a[k][x];
             }
@@ -55,7 +55,7 @@ struct lowest_common_ancestor {
         assert (depth[x] == depth[y]);
         assert (x != -1);
         if (x == y) return x;
-        repeat_reverse (k, log_n) {
+        REP_R (k, log_n) {
             if (a[k][x] != a[k][y]) {
                 x = a[k][x];
                 y = a[k][y];
@@ -68,11 +68,11 @@ struct lowest_common_ancestor {
     /**
      * @brief find the descendant of x for y
      */
-    int descendant (int x, int y) const {
+    int descendant(int x, int y) const {
         assert (depth[x] < depth[y]);
         int log_n = a.size();
-        repeat_reverse (k, log_n) {
-            if (a[k][y] != -1 and depth[a[k][y]] >= depth[x]+1) {
+        REP_R (k, log_n) {
+            if (a[k][y] != -1 and depth[a[k][y]] >= depth[x] + 1) {
                 y = a[k][y];
             }
         }
