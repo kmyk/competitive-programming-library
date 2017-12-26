@@ -6,6 +6,7 @@ struct indexed_min_monoid {
 /**
  * @brief lowest common ancestor with \pm 1 RMQ and sparse table
  * @see https://www.slideshare.net/yumainoue965/lca-and-rmq
+ * @note verified http://www.utpc.jp/2011/problems/travel.html
  */
 struct lowest_common_ancestor {
     sparse_table<indexed_min_monoid> table;
