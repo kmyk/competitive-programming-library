@@ -1,54 +1,39 @@
-template <int mod>
+template <int MOD>
 int fact(int n) {
     static vector<int> memo(1, 1);
-    if (memo.size() <= n) {
-        int l = memo.size();
-        memo.resize(n+1);
-        repeat_from (i, l, n+1) memo[i] = memo[i-1] *(ll) i % mod;
+    while (n >= memo.size()) {
+        memo.push_back(memo.back() *(ll) memo.size() % MOD);
     }
     return memo[n];
 }
 /**
- * @note O(1) if memoize inv_fact
+ * @tparam MOD must be a prime
  */
-template <int mod>
-int choose(int n, int r) { // O(n) at first time, otherwise O(\log n)
-    if (n < r) return 0;
-    r = min(r, n - r);
-    return fact<mod>(n) *(ll) modinv(fact<mod>(n-r), mod) % mod *(ll) modinv(fact<mod>(r), mod) % mod;
+template <int MOD>
+int inv_fact(int n) {
+    static vector<int> memo(1, 1);
+    while (n >= memo.size()) {
+        memo.push_back(memo.back() *(ll) modinv(memo.size(), MOD) % MOD);
+    }
+    return memo[n];
 }
-template <int mod>
+
+/**
+ * @tparam MOD must be a prime
+ * @note O(n log n) at first time, otherwise O(1)
+ */
+template <int MOD>
+int choose(int n, int r) {
+    if (n < r) return 0;
+    return fact<MOD>(n) *(ll) inv_fact<MOD>(n - r) % MOD *(ll) inv_fact<MOD>(r) % MOD;
+}
+template <int MOD>
 int permute(int n, int r) {
     if (n < r) return 0;
-    return fact<mod>(n) *(ll) modinv(fact<mod>(n-r), mod) % mod;
+    return fact<MOD>(n) *(ll) modinv(fact<MOD>(n - r), MOD) % MOD;
 }
-template <int mod>
+template <int MOD>
 int multichoose(int n, int r) {
     if (n == 0 and r == 0) return 1;
-    return choose<mod>(n+r-1, r);
-}
-
-ll choose(ll n, int r, ll p) { // O(r) for a prime p
-    ll acc = 1;
-    repeat (i,r) acc = acc * (n-i) % p * modinv(i+1, p) % p;
-    return acc;
-}
-
-ll choose(int n, int r) { // O(r) for small n
-    ll acc = 1;
-    repeat (i,r) acc = acc * (n-i) / (i+1);
-    return acc;
-}
-
-vector<vector<ll> > calc_choose(int n) { // O(n^2)
-    vector<vector<ll> > dp(n + 1);
-    dp[0].assign(1, 1);
-    repeat (i, n) {
-        dp[i + 1].resize(i + 2);
-        repeat (j, i + 2) {
-            if (j - 1 >= 0) dp[i + 1][j] += dp[i][j - 1];
-            if (j != i + 1) dp[i + 1][j] += dp[i][j];
-        }
-    }
-    return dp;
+    return choose<MOD>(n+r-1, r);
 }

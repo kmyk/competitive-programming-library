@@ -4,14 +4,27 @@
  * @see http://mathworld.wolfram.com/BellNumber.html
  * @see https://oeis.org/A110
  * @see https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0
+ * @tparam MOD must be a prime
  * @note O(n^2)
  */
-template <int MOD = mod>
+template <int MOD>
 int bell_number(int n) {
-    int acc = 0;
-    REP (k, n + 1) {
-        acc += stirling_number_of_the_second_kind<MOD>(n, k);
-        if (acc >= MOD) acc -= MOD;
+    vector<int> dp(n + 1);
+    dp[0] = 1;
+    REP (i, n) {
+        ll acc = 0;
+        REP (j, i + 1) {
+            acc += dp[j] * choose<MOD>(i, j);
+        }
+        dp[i + 1] = acc % MOD;
     }
-    return acc;
+    return dp[n];
+}
+
+unittest {
+    constexpr int mod = 1e9 + 7;
+    const ll table[] = { 1, 1, 2, 5, 15, 52, 203, 877, 4140, 21147, 115975, 678570, 4213597, 27644437, 190899322, 1382958545, 10480142147, 82864869804, 682076806159, 5832742205057, 51724158235372, 474869816156751, 4506715738447323, 44152005855084346, 445958869294805289 };
+    REP (i, sizeof(table) / sizeof(ll)) {
+        assert (bell_number<mod>(i) == table[i] % mod);
+    }
 }

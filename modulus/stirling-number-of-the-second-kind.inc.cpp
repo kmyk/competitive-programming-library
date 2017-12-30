@@ -6,7 +6,7 @@
  * @see https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0
  * @note O(nk), memoized
  */
-template <int MOD = mod>
+template <int MOD>
 int stirling_number_of_the_second_kind(int n, int k) {
     assert (0 <= n and 0 <= k);
     if (n  < k) return 0;
@@ -20,8 +20,8 @@ int stirling_number_of_the_second_kind(int n, int k) {
     }
     if (memo[n][k]) return memo[n][k];
     int acc = 0;
-    acc += stirling_number_of_the_second_kind(n - 1, k - 1);
-    acc += k *(ll) stirling_number_of_the_second_kind(n - 1, k) % MOD;
+    acc += stirling_number_of_the_second_kind<MOD>(n - 1, k - 1);
+    acc += k *(ll) stirling_number_of_the_second_kind<MOD>(n - 1, k) % MOD;
     if (acc >= MOD) acc -= MOD;
     return acc;
 }
