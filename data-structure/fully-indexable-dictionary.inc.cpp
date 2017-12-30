@@ -6,8 +6,8 @@ class fully_indexable_dictionary {
     static constexpr size_t block_size = 64;
     vector<uint64_t> block;
     vector<int32_t> rank_block;  // a blocked cumulative sum
-    size_t size;
 public:
+    size_t size;
     fully_indexable_dictionary() = default;
     template <typename T>
     fully_indexable_dictionary(vector<T> const & bits) {
@@ -28,11 +28,13 @@ public:
      * @note O(1)
      */
     int rank(bool value, int r) const {
+        assert (0 <= r and r <= size);
         uint64_t mask = (1ull << (r % block_size)) - 1;
         int rank_1 = rank_block[r / block_size] + __builtin_popcountll(block[r /block_size] & mask);
         return value ? rank_1 : r - rank_1;
     }
     int rank(bool value, int l, int r) const {
+        assert (0 <= l and l <= r and r <= size);
         return rank(value, r) - rank(value, l);
     }
     /**
@@ -63,12 +65,14 @@ public:
      * @brief select(value, k) in [l, size)
      */
     int select(bool value, int k, int l) const {
+        assert (0 <= l and l <= size);
         return select(value, k + rank(value, l));
     }
     /**
      * @note O(1)
      */
     bool access(int i) const {
+        assert (0 <= i and i <= size);
         return block[i / block_size] & (1ull << (i % block_size));
     }
 };
@@ -101,7 +105,7 @@ void unittest_fully_indexable_dictionary(int n) {
         assert (fid.access(l) == data[l]);
     }
 }
-unittest() {
+unittest {
     unittest_fully_indexable_dictionary(1);
     unittest_fully_indexable_dictionary(126);
     unittest_fully_indexable_dictionary(127);

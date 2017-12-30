@@ -80,6 +80,7 @@ struct wavelet_matrix {
      * @note O(BITS)
      */
     uint64_t access(int i) const {
+        assert (0 <= i and i < size);
         uint64_t acc = 0;
         REP_R (k, BITS) {
             bool p = fid[k].access(i);
@@ -93,7 +94,8 @@ struct wavelet_matrix {
      * @note O(BITS)
      */
     uint64_t quantile(int k, int l, int r) {
-        if (k < 0) return -1;
+        assert (0 <= k);
+        assert (0 <= l and l <= r and r <= fid[0].size);
         if (r - l <= k) return 1ull << BITS;
         uint64_t acc = 0;
         REP_R (d, BITS) {
@@ -112,6 +114,28 @@ struct wavelet_matrix {
             }
         }
         return acc;
+    }
+    /**
+     * @brief count the number of values in [value_l, value_r) in range [l, r)
+     * @note O(BITS)
+     */
+    int range_frequency(int l, int r, uint64_t value_l, uint64_t value_r) const {
+        assert (0 <= l and l <= r and r <= fid[0].size);
+        assert (0 <= value_l and value_l <= value_r and value_r <= (1ull << BITS));
+        return range_frequency(BITS - 1, l, r, 0, value_l, value_r);
+    }
+    int range_frequency(int k, int l, int r, uint64_t v, uint64_t a, uint64_t b) const {
+        if (l == r) return 0;
+        if (k == 0) return (a <= v and v < b) ? r - l : 0;
+        uint64_t nv  =  v |  (1ull << k);
+        uint64_t nnv = nv | ((1ull << k) - 1);
+        if (nnv < a or b <= v) return 0;
+        if (a <= v and nnv < b) return r - l;
+        int lc = fid[k].rank(1, l);
+        int rc = fid[k].rank(1, r);
+        return
+            range_frequency(k - 1,             l - lc,             r - rc,  v, a, b) +
+            range_frequency(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b);
     }
 };
 
@@ -139,9 +163,15 @@ void unittest_wavelet_matrix(int n) {
         sort(ALL(range));
         return range[k];
     };
+    auto range_frequency = [&](int l, int r, uint64_t value_l, uint64_t value_r) {
+        int cnt = 0;
+        REP3 (i, l, r) cnt += value_l <= data[i] and data[i] < value_r;
+        return cnt;
+    };
     wavelet_matrix<BITS> wm(data);
     for (int iteration = 1000; iteration --; ) {
         uint64_t value = uniform_int_distribution<uint64_t>(0, (1ull << BITS) - 1)(gen);
+        uint64_t another_value = uniform_int_distribution<uint64_t>(value, (1ull << BITS) - 1)(gen);
         int l = uniform_int_distribution<int>(0, n - 1)(gen);
         int r = uniform_int_distribution<int>(l + 1, n)(gen);
         int k = uniform_int_distribution<int>(0, (r - l) * 2 / 3)(gen);
@@ -149,6 +179,7 @@ void unittest_wavelet_matrix(int n) {
         assert (wm.select(value, k, l) == select(value, k, l));
         assert (wm.access(l) == data[l]);
         assert (wm.quantile(k, l, r) == quantile(k, l, r));
+        assert (wm.range_frequency(l, r, value, another_value + 1) == range_frequency(l, r, value, another_value + 1));
     }
 }
 unittest {

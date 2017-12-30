@@ -34,9 +34,11 @@ struct lowest_common_ancestor {
      * @note O(1)
      */
     int operator () (int x, int y) const {
+        assert (0 <= x and x < index.size());
+        assert (0 <= y and y < index.size());
         x = index[x];
         y = index[y];
         if (x > y) swap(x, y);
-        return table.range_concat(x, y + 1);
+        return table.range_concat(x, y + 1).second;
     }
 };

@@ -4,14 +4,14 @@
  * @return  \min \{ x \in [l, r) \mid p(x) \}, or r if it doesn't exist
  */
 template <typename UnaryPredicate>
-ll binsearch(ll l, ll r, UnaryPredicate p) { // [l, r), p is monotone
-    assert (l < r);
+ll binsearch(ll l, ll r, UnaryPredicate p) {
+    assert (l <= r);
     -- l;
     while (r - l > 1) {
         ll m = (l + r) / 2;
         (p(m) ? r : l) = m;
     }
-    return r; // = min { x in [l, r) | p(x) }, or r
+    return r;
 }
 
 unittest {
