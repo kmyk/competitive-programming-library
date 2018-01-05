@@ -8,8 +8,8 @@ struct lazy_propagation_segment_tree { // on monoids
     static_assert (is_same<typename Monoid::underlying_type, typename OperatorMonoid::target_type>::value, "");
     typedef typename Monoid::underlying_type underlying_type;
     typedef typename OperatorMonoid::underlying_type operator_type;
-    Monoid mon;
-    OperatorMonoid op;
+    const Monoid mon;
+    const OperatorMonoid op;
     int n;
     vector<underlying_type> a;
     vector<operator_type> f;
@@ -78,8 +78,8 @@ struct lazy_propagation_segment_tree { // on monoids
 
 struct max_monoid {
     typedef int underlying_type;
-    int unit() const { return 0; }
-    int append(int a, int b) const { return min(a, b); }
+    int unit() const { return INT_MIN; }
+    int append(int a, int b) const { return max(a, b); }
 };
 struct plus_operator_monoid {
     typedef int underlying_type;

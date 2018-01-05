@@ -72,7 +72,7 @@ public:
      * @note O(1)
      */
     bool access(int i) const {
-        assert (0 <= i and i <= size);
+        assert (0 <= i and i < fid[0].size);
         return block[i / block_size] & (1ull << (i % block_size));
     }
 };

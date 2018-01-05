@@ -7,7 +7,7 @@ struct segment_tree {
     typedef typename Monoid::underlying_type underlying_type;
     int n;
     vector<underlying_type> a;
-    Monoid mon;
+    const Monoid mon;
     segment_tree() = default;
     segment_tree(int a_n, underlying_type initial_value = Monoid().unit(), Monoid const & a_mon = Monoid()) : mon(a_mon) {
         n = 1; while (n < a_n) n *= 2;

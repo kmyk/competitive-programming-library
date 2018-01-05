@@ -1,23 +1,3 @@
-template <int MOD>
-int fact(int n) {
-    static vector<int> memo(1, 1);
-    while (n >= memo.size()) {
-        memo.push_back(memo.back() *(ll) memo.size() % MOD);
-    }
-    return memo[n];
-}
-/**
- * @tparam MOD must be a prime
- */
-template <int MOD>
-int inv_fact(int n) {
-    static vector<int> memo(1, 1);
-    while (n >= memo.size()) {
-        memo.push_back(memo.back() *(ll) modinv(memo.size(), MOD) % MOD);
-    }
-    return memo[n];
-}
-
 /**
  * @tparam MOD must be a prime
  * @note O(n log n) at first time, otherwise O(1)

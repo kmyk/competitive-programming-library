@@ -126,7 +126,7 @@ struct wavelet_matrix {
     }
     int range_frequency(int k, int l, int r, uint64_t v, uint64_t a, uint64_t b) const {
         if (l == r) return 0;
-        if (k == 0) return (a <= v and v < b) ? r - l : 0;
+        if (k == -1) return (a <= v and v < b) ? r - l : 0;
         uint64_t nv  =  v |  (1ull << k);
         uint64_t nnv = nv | ((1ull << k) - 1);
         if (nnv < a or b <= v) return 0;
@@ -183,6 +183,7 @@ void unittest_wavelet_matrix(int n) {
     }
 }
 unittest {
+    unittest_wavelet_matrix<3>(10);
     unittest_wavelet_matrix<10>(100);
     unittest_wavelet_matrix<10>(126);
     unittest_wavelet_matrix<10>(127);

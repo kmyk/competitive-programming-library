@@ -21,3 +21,10 @@ vector<int> apply_compression(map<T, int> const & f, vector<T> const & xs) {
     REP (i, n) ys[i] = f.at(xs[i]);
     return ys;
 }
+
+unittest {
+    vector<int> xs { 5, 3, 1, 8, 1, -2, 8 };
+    auto compress = coordinate_compression_map(xs);
+    vector<int> ys { 3, 2, 1, 4, 1,  0, 4 };
+    assert (ys == apply_compression(compress, xs));
+}

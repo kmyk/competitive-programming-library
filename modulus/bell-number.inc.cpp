@@ -14,7 +14,7 @@ int bell_number(int n) {
     REP (i, n) {
         ll acc = 0;
         REP (j, i + 1) {
-            acc += dp[j] * choose<MOD>(i, j);
+            acc += dp[j] *(ll) choose<MOD>(i, j) % MOD;
         }
         dp[i + 1] = acc % MOD;
     }
@@ -27,4 +27,5 @@ unittest {
     REP (i, sizeof(table) / sizeof(ll)) {
         assert (bell_number<mod>(i) == table[i] % mod);
     }
+    assert (bell_number<mod>(1000) == 465231251);  // https://www.wolframalpha.com/input/?i=1000-th+bell+number+modulo+10%5E9+%2B+7
 }

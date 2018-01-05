@@ -1,5 +1,5 @@
 struct rational { int num, den; };
-rational make_rational(ll num, ll den = 1) { return (rational) { int(num % mod), int(den % mod) }; }
+rational make_rational(int num, int den = 1) { return (rational) { num, den }; }
 rational operator + (rational a, rational b) { return make_rational(a.num *(ll) b.den + b.num *(ll) a.den, a.den *(ll) b.den); }
 rational operator - (rational a, rational b) { return make_rational(a.num *(ll) b.den - b.num *(ll) a.den, a.den *(ll) b.den); }
 rational operator * (rational a, rational b) { return make_rational(a.num *(ll) b.num, a.den *(ll) b.den); }

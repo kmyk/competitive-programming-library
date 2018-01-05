@@ -5,7 +5,7 @@ struct dual_segment_tree {
     int n;
     vector<operator_type> f;
     vector<underlying_type> a;
-    OperatorMonoid op;
+    const OperatorMonoid op;
     dual_segment_tree() = default;
     dual_segment_tree(int a_n, underlying_type initial_value, OperatorMonoid const & a_op = OperatorMonoid()) : op(a_op) {
         n = 1; while (n < a_n) n *= 2;
@@ -47,6 +47,13 @@ struct plus_operator_monoid {
     int unit() const { return 0; }
     int append(int a, int b) const { return a + b; }
     int apply(int a, int b) const { return a + b; }
+};
+struct max_operator_monoid {
+    typedef int underlying_type;
+    typedef int target_type;
+    int unit() const { return INT_MIN; }
+    int append(int a, int b) const { return max(a, b); }
+    int apply(int a, int b) const { return max(a, b); }
 };
 struct min_operator_monoid {
     typedef int underlying_type;
