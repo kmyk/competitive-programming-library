@@ -137,6 +137,33 @@ struct wavelet_matrix {
             range_frequency(k - 1,             l - lc,             r - rc,  v, a, b) +
             range_frequency(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b);
     }
+    /**
+     * @brief flexible version of range_frequency, buf a little bit slow
+     * @note O(K BITS), K is the number of kinds of values in the range
+     * @arg void callback(uint64_t value, int count)
+     */
+    template <typename Func>
+    void range_frequency_callback(int l, int r, uint64_t value_l, uint64_t value_r, Func callback) const {
+        assert (0 <= l and l <= r and r <= fid[0].size);
+        assert (0 <= value_l and value_l <= value_r and value_r <= (1ull << BITS));
+        range_frequency_callback(BITS - 1, l, r, 0, value_l, value_r, callback);
+    }
+    template <typename Func>
+    void range_frequency_callback(int k, int l, int r, uint64_t v, uint64_t a, uint64_t b, Func callback) const {
+        if (l == r) return;
+        if (b <= v) return;
+        if (k == -1) {
+            if (a <= v) callback(v, r - l);
+            return;
+        }
+        uint64_t nv  = v  | (1ull << k);
+        uint64_t nnv = nv | (((1ull << k) - 1));
+        if (nnv < a) return;
+        int lc = fid[k].rank(1, l);
+        int rc = fid[k].rank(1, r);
+        range_frequency_callback(k - 1,             l - lc,             r - rc,  v, a, b, callback);
+        range_frequency_callback(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b, callback);
+    }
 };
 
 template <int BITS>
@@ -180,6 +207,13 @@ void unittest_wavelet_matrix(int n) {
         assert (wm.access(l) == data[l]);
         assert (wm.quantile(k, l, r) == quantile(k, l, r));
         assert (wm.range_frequency(l, r, value, another_value + 1) == range_frequency(l, r, value, another_value + 1));
+        {
+            int acc = 0;
+            wm.range_frequency_callback(l, r, value, another_value + 1, [&](uint64_t value, int count) {
+                acc += count;
+            });
+            assert (acc == range_frequency(l, r, value, another_value + 1));
+        }
     }
 }
 unittest {

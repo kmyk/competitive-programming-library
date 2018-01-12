@@ -3,7 +3,7 @@
  * @note 4 primes for modulo and and random bases
  * @see http://hos.ac/blog/#blog0003
  */
-class rolling_hash {
+struct rolling_hash {
     static constexpr int size = 4;
     static const int32_t prime[size];
     static int32_t base[size];
@@ -37,14 +37,31 @@ public:
     rolling_hash operator + (rolling_hash const & other) const {
         return rolling_hash(*this) += other;
     }
+    rolling_hash & operator -= (rolling_hash const & other) {
+        REP (i, size) {
+            data[i] -= other.data[i];
+            if (data[i] < 0) data[i] += prime[i];
+        }
+        return *this;
+    }
+    /**
+     * @note O(size)
+     */
+    rolling_hash & operator <<= (array<int32_t, size> const & pow_base) {
+        REP (i, size) {
+            data[i] = data[i] *(int64_t) pow_base[i] % prime[i];
+        }
+        return *this;
+    }
     /**
      * @note O(size log width)
      */
     rolling_hash & operator <<= (int width) {
+        array<int32_t, size> pow_base;
         REP (i, size) {
-            data[i] = data[i] *(int64_t) powmod(base[i], width, prime[i]) % prime[i];
+            pow_base[i] = powmod(base[i], width, prime[i]);
         }
-        return *this;
+        return *this << pow_base;
     }
     rolling_hash operator << (int width) const {
         return rolling_hash(*this) <<= width;
@@ -66,6 +83,40 @@ public:
 const int32_t rolling_hash::prime[size] = { 1000000027, 1000000033, 1000000087, 1000000093 };
 int32_t rolling_hash::base[size];
 rolling_hash::base_initializer_t rolling_hash::base_initializer;
+
+struct rolling_hash_cumulative_sum {
+    rolling_hash_cumulative_sum() = default;
+    int size;
+    vector<rolling_hash> data;
+    vector<array<int32_t, rolling_hash::size> > pow_base;
+    rolling_hash_cumulative_sum(string const & s) {
+        size = s.length();
+        data.resize(size + 1);
+        data[0] = rolling_hash();
+        REP (i, size) {
+            data[i + 1] = data[i];
+            data[i + 1].push_back(s[i]);
+        }
+        pow_base.resize(size + 1);
+        fill(ALL(pow_base[0]), 1);
+        REP (i, size) {
+            REP (j, rolling_hash::size) {
+                pow_base[i + 1][j] = pow_base[i][j] *(int64_t) rolling_hash::base[j] % rolling_hash::prime[j];
+            }
+        }
+    }
+    rolling_hash get_initial_segment(int r) {
+        assert (0 <= r and r <= size);
+        return data[r];
+    }
+    /**
+     * @note O(rolling_hash::size)
+     */
+    rolling_hash get_range(int l, int r) {
+        assert (0 <= l and l <= r and r <= size);
+        return rolling_hash(data[r]) -= (rolling_hash(data[l]) <<= pow_base[r - l]);
+    }
+};
 
 /**
  * @brief an adaptor to a segment tree
