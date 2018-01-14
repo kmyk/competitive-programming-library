@@ -88,6 +88,7 @@ struct plus_operator_monoid {
     int apply(underlying_type a, target_type b) const { return a + b; }
     int compose(underlying_type a, underlying_type b) const { return a + b; }
 };
+typedef lazy_propagation_segment_tree<max_monoid, plus_operator_monoid> starry_sky_tree;
 
 struct min_monoid {
     typedef int underlying_type;
@@ -101,7 +102,6 @@ struct plus_with_int_max_operator_monoid {
     int apply(underlying_type a, target_type b) const { return b == INT_MAX ? INT_MAX : a + b; }
     int compose(underlying_type a, underlying_type b) const { return a + b; }
 };
-typedef lazy_propagation_segment_tree<max_monoid, plus_operator_monoid> starry_sky_tree;
 
 unittest {
     lazy_propagation_segment_tree<min_monoid, plus_with_int_max_operator_monoid> segtree(9);
