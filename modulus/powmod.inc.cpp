@@ -1,14 +1,14 @@
 /**
- * @param p must be a prime
+ * @param m must be a positive integer
  * @note O(log y)
  */
-ll powmod(ll x, ll y, ll p) {
-    assert (0 <= x and x < p);
+ll powmod(ll x, ll y, ll m) {
+    assert (0 <= x and x < m);
     assert (0 <= y);
     ll z = 1;
     for (ll i = 1; i <= y; i <<= 1) {
-        if (y & i) z = z * x % p;
-        x = x * x % p;
+        if (y & i) z = z * x % m;
+        x = x * x % m;
     }
     return z;
 }

@@ -1,4 +1,5 @@
 /**
+ * @arg g must be a tree
  * @note O(n) time
  * @note O(n) space on heap
  */

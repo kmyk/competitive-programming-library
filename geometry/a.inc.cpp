@@ -1,4 +1,23 @@
 typedef complex<double> point;
+double cross(point a, point b) { return a.real() * b.imag() - a.imag() * b.real(); }
+int ccw(point a, point b, point c) { double z = cross(b - a, c - a); return z > eps ? 1 : z < - eps ? -1 : 0; }
+
+/**
+ * @brief Andrew's Monotone Chain
+ */
+vector<point> convex_hull(vector<point> ps) {
+    int n = ps.size();
+    sort(ALL(ps), [&](point a, point b) { return make_pair(a.real(), a.imag()) < make_pair(b.real(), b.imag()); });
+    vector<point> ch(2 * n);
+    int k = 0;
+    for (int i = 0; i < n; ch[k ++] = ps[i ++]) // lower-hull
+        while (k >= 2 and ccw(ch[k - 2], ch[k - 1], ps[i]) <= 0) -- k;
+    for (int i = n - 2, t = k + 1; i >= 0; ch[k ++] = ps[i --]) // upper-hull
+        while (k >= t and ccw(ch[k - 2], ch[k - 1], ps[i]) <= 0) -- k;
+    ch.resize(k - 1);
+    return ch;
+}
+
 struct circle { point p; double r; };
 struct line { point s, t; };
 struct segment { point s, t; };

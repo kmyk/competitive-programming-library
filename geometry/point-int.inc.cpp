@@ -1,8 +1,8 @@
 struct point_t { ll y, x; };
-point_t operator + (point_t a, point_t b) { return { a.y+b.y, a.x+b.x }; }
-point_t operator - (point_t a, point_t b) { return { a.y-b.y, a.x-b.x }; }
-point_t operator - (point_t a) { return { -a.y, -a.x }; }
-point_t operator * (ll a, point_t b) { return { a*b.y, a*b.x }; }
+point_t operator + (point_t a, point_t b) { return { a.y + b.y, a.x + b.x }; }
+point_t operator - (point_t a, point_t b) { return { a.y - b.y, a.x - b.x }; }
+point_t operator - (point_t a) { return { - a.y, - a.x }; }
+point_t operator * (ll a, point_t b) { return { a * b.y, a * b.x }; }
 std::pair<ll,ll> to_pair(point_t a) { return { a.y, a.x }; }
 bool operator == (point_t a, point_t b) { return to_pair(a) == to_pair(b); }
 bool operator != (point_t a, point_t b) { return to_pair(a) != to_pair(b); }
