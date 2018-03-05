@@ -1,18 +1,18 @@
 vector<vector<ll> > operator * (vector<vector<ll> > const & a, vector<vector<ll> > const & b) {
     int n = a.size();
     vector<vector<ll> > c = vectors(n, n, ll());
-    repeat (y, n) repeat (z, n) repeat (x, n) c[y][x] = (c[y][x] + a[y][z] * b[z][x] % mod) % mod;
+    REP (y, n) REP (z, n) REP (x, n) c[y][x] = (c[y][x] + a[y][z] * b[z][x] % mod) % mod;
     return c;
 }
 vector<ll> operator * (vector<vector<ll> > const & a, vector<ll> const & b) {
     int n = a.size();
     vector<ll> c(n);
-    repeat (y, n) repeat (z, n) c[y] = (c[y] + a[y][z] * b[z] % mod) % mod;
+    REP (y, n) REP (z, n) c[y] = (c[y] + a[y][z] * b[z] % mod) % mod;
     return c;
 }
 vector<vector<ll> > unit_matrix(int n) {
     vector<vector<ll> > e = vectors(n, n, ll());
-    repeat (i, n) e[i][i] = 1;
+    REP (i, n) e[i][i] = 1;
     return e;
 }
 vector<vector<ll> > zero_matrix(int n) {
@@ -23,7 +23,7 @@ vector<vector<ll> > zero_matrix(int n) {
 template <typename T>
 T determinant(vector<vector<T> > a) {
     int n = a.size();
-    repeat (z,n) { // make A upper trianglar
+    REP (z,n) { // make A upper trianglar
         if (a[z][z] == 0) { // swap rows to avoid zero-division
             int x;
             for (x = z + 1; x < n; ++ x) {
@@ -34,32 +34,32 @@ T determinant(vector<vector<T> > a) {
             }
             if (x == n) return 0; // A is singular
         }
-        repeat_from (y, z + 1, n) {
-            repeat_from (x, z + 1, n) {
+        REP3 (y, z + 1, n) {
+            REP3 (x, z + 1, n) {
                 a[y][x] -= a[y][z] * a[z][x] / a[z][z]; // elim
             }
             a[y][z] = 0;
         }
     }
     T acc = 1;
-    repeat (z, n) acc = acc * a[z][z]; // product of the diagonal elems
+    REP (z, n) acc = acc * a[z][z]; // product of the diagonal elems
     return acc;
 }
 
 template <typename T>
 vector<T> gaussian_elimination(vector<vector<T> > f, vector<T> x) {
     int n = x.size();
-    repeat (y, n) {
+    REP (y, n) {
         int pivot = y;
         while (pivot < n and abs(f[pivot][y]) < eps) ++ pivot;
         assert (pivot < n);
         swap(f[y], f[pivot]);
         x[y] /= f[y][y];
-        repeat_from (x, y + 1, n) f[y][x] /= f[y][y];
+        REP3 (x, y + 1, n) f[y][x] /= f[y][y];
         f[y][y] = 1;
-        repeat (ny, n) if (ny != y) {
+        REP (ny, n) if (ny != y) {
             x[ny] -= f[ny][y] * x[y];
-            repeat_from (x, y + 1, n) f[ny][x] -= f[ny][y] * f[y][x];
+            REP3 (x, y + 1, n) f[ny][x] -= f[ny][y] * f[y][x];
             f[ny][y] = 0;
         }
     }
@@ -71,17 +71,17 @@ template <typename T>
 vector<vector<T> > inverse_matrix(vector<vector<T> > f) {
     int n = f.size();
     vector<vector<T> > g = unit_matrix<T>(n);
-    repeat (y, n) {
+    REP (y, n) {
         int pivot = y;
         while (pivot < n and abs(f[pivot][y]) < eps) ++ pivot;
         assert (pivot < n);
         swap(f[y], f[pivot]);
-        repeat (x, n) g[y][x] /= f[y][y];
-        repeat_from (x, y + 1, n) f[y][x] /= f[y][y];
+        REP (x, n) g[y][x] /= f[y][y];
+        REP3 (x, y + 1, n) f[y][x] /= f[y][y];
         f[y][y] = 1;
-        repeat (ny, n) if (ny != y) {
-            repeat (x, n) g[ny][x] -= f[ny][y] * g[y][x];
-            repeat_from (x, y + 1, n) f[ny][x] -= f[ny][y] * f[y][x];
+        REP (ny, n) if (ny != y) {
+            REP (x, n) g[ny][x] -= f[ny][y] * g[y][x];
+            REP3 (x, y + 1, n) f[ny][x] -= f[ny][y] * f[y][x];
             f[ny][y] = 0;
         }
     }
@@ -112,7 +112,7 @@ vector<vector<T> > concat_matrix_vector(vector<vector<T> > const & f, vector<T> 
     int h = f.size();
     int w = f.fornt().size();
     vector<vector<T> > fx(h);
-    repeat (y, h) {
+    REP (y, h) {
         fx[y].resize(w + 1);
         copy(whole(f[y]), fx[y].begin());
         fx[y][w] = x[y];
