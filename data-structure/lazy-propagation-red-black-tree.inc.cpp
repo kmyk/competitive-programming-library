@@ -2,7 +2,7 @@
  * @note almost all operations are O(log N)
  */
 template <class Monoid, class OperatorMonoid>
-class red_black_segment_tree {
+class lazy_propagation_red_black_tree {
     typedef typename Monoid::underlying_type underlying_type;
     typedef typename OperatorMonoid::underlying_type operator_type;
 
@@ -190,7 +190,7 @@ class red_black_segment_tree {
     }
 
     static underlying_type range_concat(node_t *a, int l, int r) {
-        if (l == r) return Monoid().unit();
+        assert (l < r);
         if (l == 0 and r == a->size) return a->data;
         assert (not a->is_leaf);
         propagate(a);
@@ -249,22 +249,22 @@ private:
     unique_ptr<node_t, node_deleter> root;
 
 public:
-    red_black_segment_tree() = default;
-    red_black_segment_tree(node_t *a_root)
+    lazy_propagation_red_black_tree() = default;
+    lazy_propagation_red_black_tree(node_t *a_root)
             : root(a_root) {
     }
 
-    static red_black_segment_tree merge(red_black_segment_tree & l, red_black_segment_tree & r) {
+    static lazy_propagation_red_black_tree merge(lazy_propagation_red_black_tree & l, lazy_propagation_red_black_tree & r) {
         node_t *a = l.root.release();
         node_t *b = r.root.release();
-        if (a == nullptr) return red_black_segment_tree(b);
-        if (b == nullptr) return red_black_segment_tree(a);
-        return red_black_segment_tree(merge(a, b));
+        if (a == nullptr) return lazy_propagation_red_black_tree(b);
+        if (b == nullptr) return lazy_propagation_red_black_tree(a);
+        return lazy_propagation_red_black_tree(merge(a, b));
     }
-    pair<red_black_segment_tree, red_black_segment_tree> split(int k) {
+    pair<lazy_propagation_red_black_tree, lazy_propagation_red_black_tree> split(int k) {
         assert (0 <= k and k <= size());
         node_t *l, *r; tie(l, r) = split(root.release(), k);
-        return make_pair( red_black_segment_tree(l), red_black_segment_tree(r) );
+        return make_pair( lazy_propagation_red_black_tree(l), lazy_propagation_red_black_tree(r) );
     }
 
     void insert(int i, underlying_type const & data) {
@@ -296,12 +296,12 @@ public:
 
     void range_apply(int l, int r, operator_type const & func) {
         assert (0 <= l and l <= r and r <= size());
-        if (not root) return;
+        if (l == r) return;
         range_apply(root.get(), l, r, func);
     }
     underlying_type const range_concat(int l, int r) const {
         assert (0 <= l and l <= r and r <= size());
-        if (not root) return Monoid().unit();
+        if (l == r) return Monoid().unit();
         return range_concat(const_cast<node_t *>(root.get()), l, r);
     }
     void reverse(int l, int r) {
@@ -350,7 +350,7 @@ struct plus_operator_monoid {
     int apply(underlying_type a, target_type b) const { return a + b; }
     int compose(underlying_type a, underlying_type b) const { return a + b; }
 };
-typedef red_black_segment_tree<max_monoid, plus_operator_monoid> red_black_starry_sky_tree;
+typedef lazy_propagation_red_black_tree<max_monoid, plus_operator_monoid> red_black_starry_sky_tree;
 
 unittest {
     default_random_engine gen;
