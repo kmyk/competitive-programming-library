@@ -103,6 +103,8 @@ class lazy_propagation_red_black_tree {
             propagate(a);
             return set_right(a, merge_relax(a->right, b));
         } else {
+            a->color = BLACK;
+            b->color = BLACK;
             return new node_t(a, b, RED);
         }
     }
