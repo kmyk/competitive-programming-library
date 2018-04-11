@@ -46,3 +46,8 @@ struct max_monoid {
     int unit() const { return 0; }
     int append(int a, int b) const { return max(a, b); }
 };
+struct min_monoid {
+    typedef int underlying_type;
+    int unit() const { return INT_MAX; }
+    int append(int a, int b) const { return min(a, b); }
+};

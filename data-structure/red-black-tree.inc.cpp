@@ -74,6 +74,8 @@ class red_black_tree {
             assert (not a->is_leaf);
             return set_right(a, merge_relax(a->right, b));
         } else {
+            a->m_color = BLACK;
+            b->m_color = BLACK;
             return new node_t(a, b, RED);
         }
     }

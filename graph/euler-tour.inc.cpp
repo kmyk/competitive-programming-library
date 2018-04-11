@@ -1,6 +1,6 @@
 /**
  * @brief euler tour
- * @arg g must be a tree
+ * @arg g must be a tree, directed or undirected
  * @note for constraints, see the unittest
  */
 void do_euler_tour(vector<vector<int> > const & g, int root, vector<int> & tour, vector<int> & left, vector<int> & right) {
@@ -38,7 +38,7 @@ unittest {
 
 /**
  * @brief euler tour, push vertices only visiting
- * @arg g must be a tree
+ * @arg g must be a tree, directed or undirected
  */
 void do_left_euler_tour(vector<vector<int> > const & g, int root, vector<int> & tour, vector<int> & left, vector<int> & right) {
     int n = g.size();

@@ -40,6 +40,16 @@ struct dual_segment_tree {
             range_apply(2*i+2, (il+ir)/2, ir, l, r, z);
         }
     }
+    // fast methods
+    inline underlying_type point_get(int i) {
+        return a[i + n - 1];
+    }
+    inline void point_set_primitive(int i, underlying_type z) {
+        a[i + n - 1] = z;
+    }
+    void point_set_commit() {
+        REP_R (i, n - 1) a[i] = mon.append(a[2 * i + 1], a[2 * i + 2]);
+    }
 };
 struct plus_operator_monoid {
     typedef int underlying_type;

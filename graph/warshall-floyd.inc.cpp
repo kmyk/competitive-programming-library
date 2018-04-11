@@ -1,5 +1,5 @@
 /**
- * @brief Warshall-Floyd Algorithm
+ * @brief Warshall-Floyd algorithm
  * @note O(n^3)
  * @param g is a digraph
  */
@@ -21,4 +21,24 @@ vector<vector<ll> > warshall_floyd(vector<vector<pair<int, ll> > > const & g) {
         }
     }
     return dist;
+}
+
+/**
+ * @brief Warshall-Floyd algorithm for connectivity
+ */
+vector<vector<bool> > warshall_floyd(vector<vector<int> > const & g) {
+    int n = g.size();
+    vector<vector<bool> > conn(n, vector<bool>(n));
+    REP (i, n) {
+        conn[i][i] = true;
+        for (int j : g[i]) {
+            conn[i][j] = true;
+        }
+    }
+    REP (k, n) REP (i, n) REP (j, n) {
+        if (conn[i][k] and conn[k][j]) {
+            conn[i][j] = true;
+        }
+    }
+    return conn;
 }

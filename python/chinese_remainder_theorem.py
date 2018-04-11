@@ -2,10 +2,14 @@
 import gmpy2
 
 def chinese_remainder_theorem(eqn):
+    '''
+        eqn = [ (y_0, n_0), ... ] where
+            x = y_i mod n_i
+    '''
     x = 0
     m = 1
     for y, n in eqn:
-        d = math.gcd(m, m)
+        d = gmpy2.gcd(m, n)
         x += (m // d) * (y - x) * gmpy2.invert(m // d, n // d)
         m = gmpy2.lcm(m, n)
     return x % m

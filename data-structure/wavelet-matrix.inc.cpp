@@ -80,7 +80,7 @@ struct wavelet_matrix {
      * @note O(BITS)
      */
     uint64_t access(int i) const {
-        assert (0 <= i and i < size);
+        assert (0 <= i and i < fid[0].size);
         uint64_t acc = 0;
         REP_R (k, BITS) {
             bool p = fid[k].access(i);

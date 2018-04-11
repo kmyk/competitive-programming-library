@@ -9,10 +9,18 @@ shared_ptr<trie_t<T> > trie_insert(shared_ptr<trie_t<T> > original_t, string con
     auto t = original_t;
     for (char c : s) {
         assert (isalpha(c));
-        c = toupper(c) - 'A';
-        if (not t->children[c]) t->children[c] = make_shared<trie_t<T> >();
-        t = t->children[c];
+        int i = toupper(c) - 'A';
+        if (not t->children[i]) t->children[i] = make_shared<trie_t<T> >();
+        t = t->children[i];
     }
     t->data = data;
     return original_t;
+}
+template <typename T>
+shared_ptr<trie_t<T> > trie_find(shared_ptr<trie_t<T> > const & t, string const & s, int i) {
+    if (t == nullptr) return t;
+    if (i == s.length()) return t;
+    char c = s[i];
+    int j = toupper(c) - 'A';
+    return trie_find(t->children[j], s, i + 1);
 }
