@@ -51,6 +51,7 @@ struct dual_segment_tree {
         REP_R (i, n - 1) a[i] = mon.append(a[2 * i + 1], a[2 * i + 2]);
     }
 };
+
 struct plus_operator_monoid {
     typedef int underlying_type;
     typedef int target_type;
@@ -91,3 +92,21 @@ unittest {
     assert (segtree.point_get(10) ==  80);
     assert (segtree.point_get(11) == 100);
 }
+
+template <int MOD>
+struct linear_operator_monoid {
+    typedef pair<int, int> underlying_type;
+    typedef int target_type;
+    linear_operator_monoid() = default;
+    underlying_type unit() const {
+        return make_pair(1, 0);
+    }
+    underlying_type append(underlying_type g, underlying_type f) const {
+        target_type fst = g.first *(ll) f.first % MOD;
+        target_type snd = (g.second + g.first *(ll) f.second) % MOD;
+        return make_pair(fst, snd);
+    }
+    target_type apply(underlying_type f, target_type x) const {
+        return (f.first *(ll) x + f.second) % MOD;
+    }
+};

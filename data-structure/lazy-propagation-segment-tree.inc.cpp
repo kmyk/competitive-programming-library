@@ -78,7 +78,7 @@ struct lazy_propagation_segment_tree { // on monoids
 
 struct max_monoid {
     typedef int underlying_type;
-    int unit() const { return INT_MIN; }
+    int unit() const { return 0; }
     int append(int a, int b) const { return max(a, b); }
 };
 struct plus_operator_monoid {

@@ -58,13 +58,14 @@ EOF
     list graph/minimum-cost-flow.inc.cpp
     list graph/two-edge-connected-components.inc.cpp
 
-    section combinatorics
-    list combinatorics/powmod.inc.cpp
-    list combinatorics/extgcd.inc.cpp
+    section modulus
+    list modulus/powmod.inc.cpp
+    list modulus/extgcd.inc.cpp
 
     section number
     list number/gcd.inc.cpp
     list number/primes.inc.cpp
+    list number/matrix.inc.cpp
 
     section string
     list string/palindrome.inc.cpp

@@ -1,7 +1,7 @@
 class xor_shift_128 {
 public:
     typedef uint32_t result_type;
-    xor_shift_128(uint32_t seed) {
+    xor_shift_128(uint32_t seed = 42) {
         set_seed(seed);
     }
     void set_seed(uint32_t seed) {

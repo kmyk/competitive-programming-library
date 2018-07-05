@@ -1,7 +1,7 @@
 vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
     int n = g.size();
     vector<vector<int> > h(n);
-    repeat (i, n) for (int j : g[i]) h[j].push_back(i);
+    REP (i, n) for (int j : g[i]) h[j].push_back(i);
     return h;
 }
 /**
@@ -18,8 +18,8 @@ pair<int, vector<int> > decompose_to_strongly_connected_components(vector<vector
             for (int j : g[i]) if (not used[j]) dfs(j);
             acc.push_back(i);
         };
-        repeat (i,n) if (not used[i]) dfs(i);
-        whole(reverse, acc);
+        REP (i,n) if (not used[i]) dfs(i);
+        reverse(ALL(acc));
     }
     int size = 0;
     vector<int> component_of(n); {
@@ -39,14 +39,14 @@ pair<int, vector<int> > decompose_to_strongly_connected_components(vector<vector
 vector<vector<int> > decomposed_graph(int size, vector<int> const & component_of, vector<vector<int> > const & g) {
     int n = g.size();
     vector<vector<int> > h(size);
-    repeat (i, n) for (int j : g[i]) {
+    REP (i, n) for (int j : g[i]) {
         if (component_of[i] != component_of[j]) {
             h[component_of[i]].push_back(component_of[j]);
         }
     }
-    repeat (k, size) {
-        whole(sort, h[k]);
-        h[k].erase(whole(unique, h[k]), h[k].end());
+    REP (k, size) {
+        sort(ALL(h[k]));
+        h[k].erase(unique(ALL(h[k])), h[k].end());
     }
     return h;
 }
@@ -61,7 +61,7 @@ pair<int, vector<int> > decompose_to_strongly_connected_components(vector<vector
         auto it = acc.rbegin();
         vector<bool> used(n);
         stack<pair<int, int> > stk;
-        repeat (k, n) if (not used[k]) {
+        REP (k, n) if (not used[k]) {
             stk.emplace(k, 0);
             used[k] = true;
             while (not stk.empty()) { // dfs

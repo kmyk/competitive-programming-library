@@ -1,32 +1,36 @@
-vector<vector<ll> > operator * (vector<vector<ll> > const & a, vector<vector<ll> > const & b) {
+template <typename T>
+vector<vector<T> > operator * (vector<vector<T> > const & a, vector<vector<T> > const & b) {
     int n = a.size();
-    vector<vector<ll> > c = vectors(n, n, ll());
-    REP (y, n) REP (z, n) REP (x, n) c[y][x] = (c[y][x] + a[y][z] * b[z][x] % mod) % mod;
+    vector<vector<T> > c = vectors(n, n, T());
+    REP (y, n) REP (z, n) REP (x, n) c[y][x] += a[y][z] * b[z][x];
     return c;
 }
-vector<ll> operator * (vector<vector<ll> > const & a, vector<ll> const & b) {
+template <typename T>
+vector<T> operator * (vector<vector<T> > const & a, vector<T> const & b) {
     int n = a.size();
-    vector<ll> c(n);
-    REP (y, n) REP (z, n) c[y] = (c[y] + a[y][z] * b[z] % mod) % mod;
+    vector<T> c(n);
+    REP (y, n) REP (z, n) c[y] += a[y][z] * b[z];
     return c;
 }
-vector<vector<ll> > unit_matrix(int n) {
-    vector<vector<ll> > e = vectors(n, n, ll());
+template <typename T>
+vector<vector<T> > unit_matrix(int n) {
+    vector<vector<T> > e = vectors(n, n, T());
     REP (i, n) e[i][i] = 1;
     return e;
 }
-vector<vector<ll> > zero_matrix(int n) {
-    vector<vector<ll> > o = vectors(n, n, ll());
+template <typename T>
+vector<vector<T> > zero_matrix(int n) {
+    vector<vector<T> > o = vectors(n, n, T());
     return o;
 }
 
 template <typename T>
 T determinant(vector<vector<T> > a) {
     int n = a.size();
-    REP (z,n) { // make A upper trianglar
+    REP (z, n) { // make A upper trianglar
         if (a[z][z] == 0) { // swap rows to avoid zero-division
-            int x;
-            for (x = z + 1; x < n; ++ x) {
+            int x = z + 1;
+            for (; x < n; ++ x) {
                 if (a[x][z] != 0) {
                     a[z].swap(a[x]);
                     break;
@@ -35,15 +39,28 @@ T determinant(vector<vector<T> > a) {
             if (x == n) return 0; // A is singular
         }
         REP3 (y, z + 1, n) {
+            T k = a[y][z] / a[z][z];
             REP3 (x, z + 1, n) {
-                a[y][x] -= a[y][z] * a[z][x] / a[z][z]; // elim
+                a[y][x] -= k * a[z][x]; // elim
             }
             a[y][z] = 0;
         }
     }
     T acc = 1;
-    REP (z, n) acc = acc * a[z][z]; // product of the diagonal elems
+    REP (z, n) acc *= a[z][z]; // product of the diagonal elems
     return acc;
+}
+
+template <class T>
+vector<vector<T> > small_matrix(vector<vector<T> > const & a) {
+    int n = a.size();
+    assert (n >= 1);
+    auto b = a;
+    b.resize(n - 1);
+    REP (y, n - 1) {
+        b[y].resize(n - 1);
+    }
+    return b;
 }
 
 template <typename T>
@@ -99,7 +116,7 @@ unittest {
 template <typename T>
 vector<vector<T> > powmat(vector<vector<T> > x, ll y) {
     int n = x.size();
-    auto z = unit_matrix(n);
+    auto z = unit_matrix<T>(n);
     for (ll i = 1; i <= y; i <<= 1) {
         if (y & i) z = z * x;
         x = x * x;

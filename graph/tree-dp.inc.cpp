@@ -43,6 +43,7 @@ vector<typename TreeOperation::type> fold_rooted_tree(vector<vector<int> > const
  *         type subtract(int i, type data_i, int j, type data_j);  // remove a subtree j from the root i
  *     };
  * @note if add & subtract are slow, you can merge them
+ * @see https://twitter.com/tmaehara/status/980787099472297985
  */
 template <typename TreeOperation>
 vector<typename TreeOperation::type> reroot_folded_rooted_tree(vector<typename TreeOperation::type> data, vector<vector<int> > const & g, int root, TreeOperation op = TreeOperation()) {

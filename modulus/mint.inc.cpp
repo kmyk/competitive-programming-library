@@ -1,11 +1,11 @@
 template <int32_t MOD>
 struct mint {
-    int32_t data;
+    int64_t data;  // faster than int32_t a little
     mint() = default;  // data is not initialized
-    mint(int32_t value) : data(value) {}  // assume value is in proper range
-    inline mint<MOD> operator + (mint<MOD> other) const { int32_t c = this->data + other.data; return mint<MOD>(c >= MOD ? c - MOD : c); }
-    inline mint<MOD> operator - (mint<MOD> other) const { int32_t c = this->data - other.data; return mint<MOD>(c <    0 ? c + MOD : c); }
-    inline mint<MOD> operator * (mint<MOD> other) const { int32_t c = this->data * int64_t(other.data) % MOD; return mint<MOD>(c < 0 ? c + MOD : c); }
+    mint(int64_t value) : data(value) {}  // assume value is in proper range
+    inline mint<MOD> operator + (mint<MOD> other) const { int64_t c = this->data + other.data; return mint<MOD>(c >= MOD ? c - MOD : c); }
+    inline mint<MOD> operator - (mint<MOD> other) const { int64_t c = this->data - other.data; return mint<MOD>(c <    0 ? c + MOD : c); }
+    inline mint<MOD> operator * (mint<MOD> other) const { int64_t c = this->data * int64_t(other.data) % MOD; return mint<MOD>(c < 0 ? c + MOD : c); }
     inline mint<MOD> & operator += (mint<MOD> other) { this->data += other.data; if (this->data >= MOD) this->data -= MOD; return *this; }
     inline mint<MOD> & operator -= (mint<MOD> other) { this->data -= other.data; if (this->data <    0) this->data += MOD; return *this; }
     inline mint<MOD> & operator *= (mint<MOD> other) { this->data = this->data * int64_t(other.data) % MOD; if (this->data < 0) this->data += MOD; return *this; }
@@ -25,4 +25,8 @@ struct mint {
     mint<MOD> inv() const {
         return pow(MOD - 2);
     }
+    inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
+    inline mint<MOD> operator /= (mint<MOD> other) const { return *this *= other.inv(); }
+    inline bool operator == (mint<MOD> other) const { return data == other.data; }
+    inline bool operator != (mint<MOD> other) const { return data != other.data; }
 };
