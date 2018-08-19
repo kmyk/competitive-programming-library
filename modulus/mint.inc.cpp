@@ -26,7 +26,7 @@ struct mint {
         return pow(MOD - 2);
     }
     inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
-    inline mint<MOD> operator /= (mint<MOD> other) const { return *this *= other.inv(); }
+    inline mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
     inline bool operator == (mint<MOD> other) const { return data == other.data; }
     inline bool operator != (mint<MOD> other) const { return data != other.data; }
 };

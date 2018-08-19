@@ -1,8 +1,6 @@
-// http://d.hatena.ne.jp/sune2/20140310/1394440369
-// http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html
-// http://satanic0258.hatenablog.com/entry/2016/08/16/181331
-// http://wcipeg.com/wiki/Convex_hull_trick
-// verified: http://codeforces.com/contest/631/submission/31828502
+/**
+ * @note y = ax + b
+ */
 struct line_t { ll a, b; };
 bool operator < (line_t lhs, line_t rhs) { return make_pair(- lhs.a, lhs.b) < make_pair(- rhs.a, rhs.b); }
 struct rational_t { ll num, den; };
@@ -15,12 +13,23 @@ bool operator < (rational_t lhs, rational_t rhs) {
     if (lhs.num == - LLONG_MAX or rhs.num ==   LLONG_MAX) return true;
     return lhs.num * rhs.den < rhs.num * lhs.den;
 }
+
+/*
+ * @sa http://d.hatena.ne.jp/sune2/20140310/1394440369
+ * @sa http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html
+ * @sa http://satanic0258.hatenablog.com/entry/2016/08/16/181331
+ * @sa http://wcipeg.com/wiki/Convex_hull_trick
+ * @note verified at http://codeforces.com/contest/631/submission/31828502
+ */
 struct convex_hull_trick {
     convex_hull_trick() {
         lines.insert({ + LLONG_MAX, 0 });  // sentinels
         lines.insert({ - LLONG_MAX, 0 });
         cross.emplace(make_rational(- LLONG_MAX), (line_t) { - LLONG_MAX, 0 });
     }
+    /**
+     * @note O(log n)
+     */
     void add_line(ll a, ll b) {
         auto it = lines.insert({ a, b }).first;
         if (not is_required(*prev(it), { a, b }, *next(it))) {
@@ -43,6 +52,9 @@ struct convex_hull_trick {
         cross.emplace(cross_point(*prev(it), *it), *it);
         cross.emplace(cross_point(*it, *next(it)), *next(it));
     }
+    /**
+     * @note O(log n)
+     */
     ll get_min(ll x) const {
         line_t f = prev(cross.lower_bound(make_rational(x)))->second;
         return f.a * x + f.b;
@@ -67,6 +79,7 @@ private:
         return (f2.a - f1.a) * (f3.b - f2.b) < (f2.b - f1.b) * (f3.a - f2.a);
     }
 };
+
 unittest {
     default_random_engine gen;
     repeat (iteration, 1000) {
@@ -89,6 +102,7 @@ unittest {
         }
     }
 }
+
 struct inverted_convex_hull_trick {
     convex_hull_trick data;
     void add_line(ll a, ll b) { data.add_line(- a, - b); }

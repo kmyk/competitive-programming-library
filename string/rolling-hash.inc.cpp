@@ -22,6 +22,9 @@ public:
     rolling_hash(char c) {
         REP (i, size) data[i] = c;
     }
+    rolling_hash(const string & s) : data({}) {
+        for (char c : s) push_back(c);
+    }
     void push_back(char c) {
         REP (i, size) {
             data[i] = (data[i] *(int64_t) base[i] + c) % prime[i];
@@ -67,7 +70,7 @@ public:
         return rolling_hash(*this) <<= width;
     }
     bool operator == (rolling_hash const & other) const {
-        return equal(ALL(data), other.data.begin());
+        return data == other.data;
     }
     bool operator != (rolling_hash const & other) const {
         return not (*this == other);
@@ -137,3 +140,16 @@ struct rolling_hash_monoid {
         return { a.length + b.length, (a.hash <<= b.length) += b.hash };
     }
 };
+
+constexpr uint64_t prime = 1000000000000037;
+constexpr uint64_t base = 10007;
+uint64_t rolling_hash_push(uint64_t hash, char c) {
+    return (hash * base + c) % prime;
+}
+uint64_t rolling_hash(const string & s) {
+    uint64_t hash = 0;
+    for (char c : s) {
+        hash = rolling_hash_push(hash, c);
+    }
+    return hash;
+}

@@ -1,17 +1,13 @@
 /**
  * @brief enumerate primes in [2, n) with O(n log log n)
  */
-vector<bool> sieve_of_eratosthenes(int n) {
+vector<int> list_primes(int n) {
     vector<bool> is_prime(n, true);
     is_prime[0] = is_prime[1] = false;
     for (int i = 2; i *(ll) i < n; ++ i)
         if (is_prime[i])
             for (int k = 2 * i; k < n; k += i)
                 is_prime[k] = false;
-    return is_prime;
-}
-vector<int> list_primes(int n) {
-    auto is_prime = sieve_of_eratosthenes(n);
     vector<int> primes;
     for (int i = 2; i < n; ++ i)
         if (is_prime[i])
@@ -79,4 +75,29 @@ vector<vector<int> > extended_sieve_of_eratosthenes(int n) {
         }
     }
     return prime_factors;
+}
+
+/**
+ * @note O(sqrt(n))
+ */
+map<ll, int> prime_factorize1(ll n) {
+    map<ll, int> factors;
+    for (int p : { 2, 3, 5 }) {
+        while (n % p == 0) {
+            n /= p;
+            ++ factors[p];
+        }
+    }
+    for (int p = 6; (ll)p * p <= n; p += 6) {
+        for (int q : { p + 1, p + 5 }) {
+            while (n % q == 0) {
+                n /= q;
+                ++ factors[q];
+            }
+        }
+    }
+    if (n) {
+        ++ factors[n];
+    }
+    return factors;
 }

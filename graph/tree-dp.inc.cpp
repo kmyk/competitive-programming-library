@@ -7,6 +7,7 @@
  *         typedef int type;
  *         type operator () (int i, vector<pair<int, type> > const & args);
  *     };
+ * @note interfaceちょっと微妙じゃない？ どうせ一緒にadd()実装する あと辺に重みがあると修正がつらい
  */
 template <typename TreeOperation>
 vector<typename TreeOperation::type> fold_rooted_tree(vector<vector<int> > const & g, int root, TreeOperation op = TreeOperation()) {
@@ -61,6 +62,30 @@ vector<typename TreeOperation::type> reroot_folded_rooted_tree(vector<typename T
     return data;
 }
 
+// 注意: まだverifyしてない
+struct height_tree_operation {
+    typedef pair<int, int> type;
+    type operator () (int i, vector<pair<int, type> > const & args) {
+        type acc = make_pair(INT_MIN, INT_MIN);
+        for (auto arg : args) {
+            acc = add(i, acc, arg.first, arg.second);
+        }
+        return acc;
+    }
+    type add(int i, type data_i, int j, type data_j) {  // add a subtree j to the root i
+        array<int, 3> height = {{ data_i.first, data_i.second, data_j.first + 1 }};  // NOTE: the length is corrent
+        sort(height.rbegin(), height.rend());
+        return make_pair(height[0], height[1]);
+    }
+    type subtract(int i, type data_i, int j, type data_j) {  // remove a subtree j from the root i
+        if (data_i.first == data_j.first + 1) {
+            return make_pair(data_i.second, INT_MIN);  // NOTE: this is correct
+        } else {
+            return data_i;
+        }
+    }
+};
+
 struct heights_tree_operation {
     typedef multiset<int> type;  // heights of subtrees
     type operator () (int i, vector<pair<int, type> > const & args) {
@@ -101,3 +126,63 @@ unittest {
     assert (dp1[3] == multiset<int>({ 1 }));
     assert (dp2[3] == multiset<int>({ 1, 4 }));
 }
+
+
+
+// 簡略化したやつ 未検証
+
+/**
+ * @brief fold a rooted tree (木DP)
+ * @note O(N op) time
+ * @note O(N) space on stack
+ * @note
+ *     struct tree_operation {
+ *         typedef int type;
+ *         type unit(int i);  // get an initial value of root i
+ *         type add(int i, type data_i, int j, type data_j);  // add a subtree j to the root i
+ *     };
+ * @note you can replace unit() + add() with a single function
+ */
+template <typename TreeOperation>
+vector<typename TreeOperation::type> fold_rooted_tree(vector<vector<int> > const & g, int root, TreeOperation op = TreeOperation()) {
+    int n = g.size();
+    vector<typename TreeOperation::type> data(n);
+    function<void (int, int)> go = [&](int i, int parent) {
+        data[i] = op.unit(i);
+        for (int j : g[i]) if (j != parent) {
+            go(j, i);
+            data[i] = op.add(i, data[i], j, data[j]);
+        }
+    };
+    go(root, -1);
+    return data;
+}
+
+/**
+ * @brief rerooting (全方位木DP)
+ * @note O(N op) time
+ * @note O(N) space on stack
+ * @note
+ *     struct tree_operation {
+ *         typedef int type;
+ *         type      add(int i, type data_i, int j, type data_j);  // add    a subtree j to   the root i
+ *         type subtract(int i, type data_i, int j, type data_j);  // remove a subtree j from the root i
+ *     };
+ * @note a commutative group is one of the structures for this
+ * @note you can replace add() + subtract() with a single function
+ * @see https://twitter.com/tmaehara/status/980787099472297985
+ */
+template <typename TreeOperation>
+vector<typename TreeOperation::type> reroot_folded_rooted_tree(vector<typename TreeOperation::type> data, vector<vector<int> > const & g, int root, TreeOperation op = TreeOperation()) {
+    function<void (int, int)> go = [&](int i, int parent) {
+        if (parent != -1) {
+            data[i] = op.add(i, data[i], op.subtract(parent, data[parent], i, data[i]));
+        }
+        for (int j : g[i]) if (j != parent) {
+            go(j, i);
+        }
+    };
+    go(root, -1);
+    return data;
+}
+

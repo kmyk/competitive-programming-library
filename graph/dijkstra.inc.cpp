@@ -40,3 +40,24 @@ vector<T> original_dijkstra(vector<vector<pair<int, T> > > const & g, int start,
     }
     return dist;
 }
+
+/**
+ * @note generic one
+ */
+template <class Weight, class Func>
+void generic_dijkstra(int root, vector<Weight> & dist, Func iterate_adjacent_vertices) {
+    dist.assign(dist.size(), numeric_limits<Weight>::max());
+    priority_queue<pair<Weight, int> > que;
+    dist[root] = 0;
+    que.emplace(- dist[root], root);
+    while (not que.empty()) {
+        Weight dist_i; int i; tie(dist_i, i) = que.top(); que.pop();
+        if (dist[i] < - dist_i) continue;
+        iterate_adjacent_vertices(i, [&](int j, Weight cost) {
+            if (- dist_i + cost < dist[j]) {
+                dist[j] = - dist_i + cost;
+                que.emplace(dist_i - cost, j);
+            }
+        });
+    }
+}

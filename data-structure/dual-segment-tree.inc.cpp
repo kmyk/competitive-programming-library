@@ -10,12 +10,12 @@ struct dual_segment_tree {
     dual_segment_tree(int a_n, underlying_type initial_value, OperatorMonoid const & a_op = OperatorMonoid()) : op(a_op) {
         n = 1; while (n < a_n) n *= 2;
         a.resize(n, initial_value);
-        f.resize(n-1, op.unit());
+        f.resize(n - 1, op.unit());
     }
     underlying_type point_get(int i) { // 0-based
         underlying_type acc = a[i];
-        for (i = (i+n)/2; i > 0; i /= 2) { // 1-based
-            acc = op.apply(f[i-1], acc);
+        for (i = (i + n) / 2; i > 0; i /= 2) { // 1-based
+            acc = op.apply(f[i - 1], acc);
         }
         return acc;
     }
@@ -28,18 +28,23 @@ struct dual_segment_tree {
             if (i < f.size()) {
                 f[i] = op.append(z, f[i]);
             } else {
-                a[i-n+1] = op.apply(z, a[i-n+1]);
+                a[i - n + 1] = op.apply(z, a[i - n + 1]);
             }
         } else if (ir <= l or r <= il) {
             // nop
         } else {
-            range_apply(2*i+1, il, (il+ir)/2, 0, n, f[i]);
-            range_apply(2*i+2, (il+ir)/2, ir, 0, n, f[i]);
+            range_apply(2 * i + 1, il, (il + ir) / 2, 0, n, f[i]);
+            range_apply(2 * i + 2, (il + ir) / 2, ir, 0, n, f[i]);
             f[i] = op.unit();
-            range_apply(2*i+1, il, (il+ir)/2, l, r, z);
-            range_apply(2*i+2, (il+ir)/2, ir, l, r, z);
+            range_apply(2 * i + 1, il, (il + ir) / 2, l, r, z);
+            range_apply(2 * i + 2, (il + ir) / 2, ir, l, r, z);
         }
     }
+    void point_set(int i, underlying_type z) {
+        range_apply(i, i + 1, op.unit());  // to flush lazed ops
+        a[i + n - 1] = z;
+    }
+/*
     // fast methods
     inline underlying_type point_get(int i) {
         return a[i + n - 1];
@@ -50,6 +55,7 @@ struct dual_segment_tree {
     void point_set_commit() {
         REP_R (i, n - 1) a[i] = mon.append(a[2 * i + 1], a[2 * i + 2]);
     }
+*/
 };
 
 struct plus_operator_monoid {

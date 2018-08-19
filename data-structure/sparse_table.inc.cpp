@@ -37,6 +37,11 @@ struct max_semilattice {
     int unit() const { return INT_MIN; }
     int append(int a, int b) const { return max(a, b); }
 };
+struct min_semilattice {
+    typedef int underlying_type;
+    int unit() const { return INT_MAX; }
+    int append(int a, int b) const { return min(a, b); }
+};
 struct gcd_semilattice {
     typedef int underlying_type;
     int unit() const { return 0; }

@@ -2,19 +2,19 @@
  * @tparam MOD must be a prime
  * @note O(n log n) at first time, otherwise O(1)
  */
-template <int MOD>
-int choose(int n, int r) {
+template <int32_t MOD>
+mint<MOD> choose(int n, int r) {
     assert (0 <= r and r <= n);
-    return fact<MOD>(n) *(ll) inv_fact<MOD>(n - r) % MOD *(ll) inv_fact<MOD>(r) % MOD;
+    return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
 }
-template <int MOD>
-int permute(int n, int r) {
+template <int32_t MOD>
+mint<MOD> permute(int n, int r) {
     assert (0 <= r and r <= n);
-    return fact<MOD>(n) *(ll) modinv(fact<MOD>(n - r), MOD) % MOD;
+    return fact<MOD>(n) * inv_fact<MOD>(n - r);
 }
-template <int MOD>
-int multichoose(int n, int r) {
-    assert (0 <= r and r <= n);
+template <int32_t MOD>
+mint<MOD> multichoose(int n, int r) {
+    assert (0 <= n and 0 <= r);
     if (n == 0 and r == 0) return 1;
-    return choose<MOD>(n+r-1, r);
+    return choose<MOD>(n + r - 1, r);
 }

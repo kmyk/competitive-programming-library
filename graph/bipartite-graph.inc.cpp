@@ -1,3 +1,7 @@
+/**
+ * @note g must be connected
+ * @return is the size of a part
+ */
 int check_bipartite_graph(vector<vector<int> > const & g) {
     int n = g.size();
     vector<char> used(n, -1);
