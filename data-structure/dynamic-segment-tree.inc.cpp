@@ -14,7 +14,7 @@ struct dynamic_segment_tree { // on monoid
     deque<node_t> pool;
     stack<int> bin;
     int root; // index
-    int width; // of the tree
+    ll width; // of the tree
     int size; // the number of leaves
     Monoid mon;
     dynamic_segment_tree(Monoid const & a_mon = Monoid()) : mon(a_mon) {
@@ -48,7 +48,7 @@ protected:
         return i == -1 ? mon.unit() : pool[i].value;
     }
 public:
-    void point_set(int i, underlying_type z) {
+    void point_set(ll i, underlying_type z) {
         assert (0 <= i);
         while (width <= i) {
             node_t node = { root, -1, pool[root].value };
@@ -58,7 +58,7 @@ public:
         }
         point_set(root, -1, false, 0, width, i, z);
     }
-    void point_set(int i, int parent, bool is_right, int il, int ir, int j, underlying_type z) {
+    void point_set(int i, int parent, bool is_right, ll il, ll ir, ll j, underlying_type z) {
         if (il == j and ir == j + 1) { // 0-based
             if (i == -1) {
                 i = create_node(parent, is_right);
@@ -74,12 +74,12 @@ public:
             pool[i].value = mon.append(get_value(pool[i].left), get_value(pool[i].right));
         }
     }
-    void point_delete(int i) {
+    void point_delete(ll i) {
         assert (0 <= i);
         if (width <= i) return;
         root = point_delete(root, -1, false, 0, width, i);
     }
-    int point_delete(int i, int parent, bool is_right, int il, int ir, int j) {
+    int point_delete(int i, int parent, bool is_right, ll il, ll ir, ll j) {
         if (i == -1) {
             return -1;
         } else if (il == j and ir == j + 1) { // 0-based
@@ -101,12 +101,12 @@ public:
             }
         }
     }
-    underlying_type range_concat(int l, int r) {
+    underlying_type range_concat(ll l, ll r) {
         assert (0 <= l and l <= r);
         if (width <= l) return mon.unit();
         return range_concat(root, 0, width, l, min(width, r));
     }
-    underlying_type range_concat(int i, int il, int ir, int l, int r) {
+    underlying_type range_concat(int i, ll il, ll ir, ll l, ll r) {
         if (i == -1) return mon.unit();
         if (l <= il and ir <= r) { // 0-based
             return pool[i].value;
@@ -123,7 +123,7 @@ public:
         return traverse_leaves(root, 0, width, func);
     }
     template <class Func>
-    void traverse_leaves(int i, int il, int ir, Func func) {
+    void traverse_leaves(ll i, ll il, ll ir, Func func) {
         if (i == -1) return;
         if (ir - il == 1) {
             func(il, pool[i].value);

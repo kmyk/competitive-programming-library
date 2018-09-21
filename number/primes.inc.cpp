@@ -16,6 +16,18 @@ vector<int> list_primes(int n) {
 }
 
 /**
+ * @note O(sqrt n)
+ */
+bool is_prime(ll n, vector<int> const & primes) {
+    if (n == 1) return false;
+    for (int p : primes) {
+        if (n < (ll)p * p) break;
+        if (n % p == 0) return true;
+    }
+    return false;
+}
+
+/**
  * @note the last number of primes must be >= sqrt n
  */
 map<ll, int> prime_factorize(ll n, vector<int> const & primes) {

@@ -2,7 +2,7 @@
  * @brief compare substrings of a string with O(1) using suffix arrays
  * @note O(1)
  */
-int string_view_strcmp(int l1, int r1, int l2, int r2, vector<int> const & rank, sparse_table<min_semilattice> const & rank) {
+int string_view_strcmp(int l1, int r1, int l2, int r2, vector<int> const & rank, sparse_table<min_semilattice> const & lcp) {
     int rank_l, rank_r; tie(rank_l, rank_r) = minmax({ rank[l1], rank[l2] });
     int k = lcp.range_concat(rank_l, rank_r);
     if (min(r1 - l1, r2 - l2) <= k) {

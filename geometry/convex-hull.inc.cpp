@@ -14,6 +14,7 @@ int ccw(complex<double> a, complex<double> b, complex<double> c) {
  */
 vector<complex<double> > convex_hull(vector<complex<double> > ps) {
     int n = ps.size();
+    if (n <= 2) return ps;
     int k = 0;
     sort(ps.begin(), ps.end(), [&](complex<double> const a, complex<double> const b) { return make_pair(a.real(), a.imag()) < make_pair(b.real(), b.imag()); });
     vector<complex<double> > ch(2 * n);
