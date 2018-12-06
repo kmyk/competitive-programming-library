@@ -16,25 +16,25 @@ int get_diameter(vector<vector<int> > const & tree) {
     return get_eccentricity(get_eccentricity(0, tree).second, tree).first;
 }
 
-int get_centroid(vector<vector<int> > const & tree) {
+vector<int> get_centers(vector<vector<int> > const & tree) {
     int n = tree.size();
-    int centroid = -1;
-    int centroid_weight = INT_MAX;
-    function<int (int, int)> dfs = [&](int i, int parent) {
-        int acc_weight = 0;
-        int max_weight = -1;
-        for (int j : tree[i]) if (j != parent) {
-            int weight = dfs(j, i);
-            acc_weight += weight;
-            setmax(max_weight, weight);
+    vector<bool> used(n);
+    vector<int> cur, prv;
+    REP (i, n) {
+        if (tree[i].size() <= 1) {
+            cur.push_back(i);
+            used[i] = true;
         }
-        setmax(max_weight, n - (1 + acc_weight));
-        if (max_weight < centroid_weight) {
-            centroid_weight = max_weight;
-            centroid = i;
+    }
+    while (not cur.empty()) {
+        cur.swap(prv);
+        cur.clear();
+        for (int i : prv) {
+            for (int j : tree[i]) if (not used[j]) {
+                cur.push_back(j);
+                used[j] = true;
+            }
         }
-        return 1 + acc_weight;
-    };
-    dfs(0, -1);
-    return centroid;
+    }
+    return prv;
 }

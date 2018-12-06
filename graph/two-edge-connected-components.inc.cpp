@@ -20,7 +20,7 @@ pair<int, vector<int> > decompose_to_two_edge_connected_components(vector<vector
             }
             used[i] = 2;
         };
-        repeat (i, n) if (used[i] == 0) {
+        REP (i, n) if (used[i] == 0) {
             go(i, -1);
         }
     }
@@ -32,7 +32,7 @@ pair<int, vector<int> > decompose_to_two_edge_connected_components(vector<vector
                 go(j);
             }
         };
-        repeat (i, n) if (component_of[i] == -1) {
+        REP (i, n) if (component_of[i] == -1) {
             component_of[i] = size ++;
             go(i);
         }

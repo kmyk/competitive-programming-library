@@ -19,7 +19,7 @@ ll knapsack_problem_branch_and_bound(int n, ll max_w, vector<ll> const & a_v, ve
         }
         ll lr_v = cur_v; // linear relaxation
         ll lr_w = cur_w;
-        int j = i;;
+        int j = i;
         for (; j < n and lr_w + w[j] <= max_w; ++ j) { // greedy
             lr_w += w[j];
             lr_v += v[j];

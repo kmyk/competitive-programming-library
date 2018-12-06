@@ -24,3 +24,4 @@ struct mint {
     inline bool operator == (mint<MOD> other) const { return value == other.value; }
     inline bool operator != (mint<MOD> other) const { return value != other.value; }
 };
+template <int32_t MOD> ostream & operator << (ostream & out, mint<MOD> n) { return out << n.value; }

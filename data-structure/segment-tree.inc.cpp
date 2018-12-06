@@ -45,7 +45,7 @@ struct modplus_monoid {
 };
 struct max_monoid {
     typedef int underlying_type;
-    int unit() const { return 0; }
+    int unit() const { return INT_MIN; }
     int append(int a, int b) const { return max(a, b); }
 };
 struct min_monoid {

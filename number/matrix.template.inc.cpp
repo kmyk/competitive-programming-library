@@ -29,22 +29,22 @@ array<T, N> operator + (array<T, N> const & a, array<T, N> const & b) {
 }
 
 template <typename T, size_t H, size_t W>
-matrix<T, H, W> matrix_zero() {
+matrix<T, H, W> zero_matrix() {
     return {};
 }
 
 template <typename T, size_t N>
-matrix<T, N, N> matrix_unit() {
+matrix<T, N, N> unit_matrix() {
     matrix<T, N, N> a = {};
     REP (i, N) a[i][i] = 1;
     return a;
 }
 
 template <typename T, size_t N>
-matrix<T, N, N> matrix_pow(matrix<T, N, N> x, ll k) {
-    matrix<T, N, N> y = matrix_unit<T, N>();
-    for (ll i = 1; i <= k; i <<= 1) {
-        if (k & i) y = y * x;
+matrix<T, N, N> powmat(matrix<T, N, N> x, ll k) {
+    matrix<T, N, N> y = unit_matrix<T, N>();
+    for (; k; k >>= 1) {
+        if (k & 1) y = y * x;
         x = x * x;
     }
     return y;

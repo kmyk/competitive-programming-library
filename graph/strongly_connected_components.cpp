@@ -36,6 +36,10 @@ pair<int, vector<int> > decompose_to_strongly_connected_components(vector<vector
     }
     return { size, move(component_of) };
 }
+
+/**
+ * @return a tree in many cases
+ */
 vector<vector<int> > decomposed_graph(int size, vector<int> const & component_of, vector<vector<int> > const & g) {
     int n = g.size();
     vector<vector<int> > h(size);

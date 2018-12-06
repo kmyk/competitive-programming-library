@@ -46,7 +46,7 @@ map<ll, int> prime_factorize(ll n, vector<int> const & primes) {
 /**
  * @note if n < 10^9, d(n) < 1200 + a
  */
-vector<ll> list_factors(ll n, vector<int> const & primes) {
+vector<ll> list_divisors(ll n, vector<int> const & primes) {
     vector<ll> result;
     result.push_back(1);
     for (auto it : prime_factorize(n, primes)) {
@@ -112,4 +112,18 @@ map<ll, int> prime_factorize1(ll n) {
         ++ factors[n];
     }
     return factors;
+}
+
+vector<vector<int> > sieve_prime_factors(int n) {
+    vector<vector<int> > ps(n);
+    REP3 (a, 2, n) {
+        if (ps[a].empty()) {
+            for (int b = 2 * a; b < n; b += a) {
+                for (int b1 = b; b1 % a == 0; b1 /= a) {
+                    ps[b1].push_back(a);
+                }
+            }
+        }
+    }
+    return ps;
 }

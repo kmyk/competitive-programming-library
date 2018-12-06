@@ -2,6 +2,7 @@
  * @note lazy_propagation_segment_tree<max_monoid, plus_operator_monoid> is the starry sky tree
  * @note verified https://www.hackerrank.com/contests/world-codesprint-12/challenges/factorial-array/submissions/code/1304452669
  * @note verified https://www.hackerrank.com/contests/world-codesprint-12/challenges/animal-transport/submissions/code/1304454860
+ * @note intersting discussion about range-extension and partial-function-extension: https://github.com/kmyk/competitive-programming-library/issues/3
  */
 template <class Monoid, class OperatorMonoid>
 struct lazy_propagation_segment_tree { // on monoids
@@ -53,7 +54,7 @@ struct lazy_propagation_segment_tree { // on monoids
         } else {
             range_apply(2 * i + 1, il, (il + ir) / 2, 0, n, f[i]);
             range_apply(2 * i + 2, (il + ir) / 2, ir, 0, n, f[i]);
-            f[i] = op.identity();
+            f[i] = op.identity();  // unnecessary if the oprator monoid is commutative
             range_apply(2 * i + 1, il, (il + ir) / 2, l, r, z);
             range_apply(2 * i + 2, (il + ir) / 2, ir, l, r, z);
             a[i] = mon.append(a[2 * i + 1], a[2 * i + 2]);
@@ -138,4 +139,28 @@ struct increment_operator_monoid {
         return c;
     }
     underlying_type compose(underlying_type a, underlying_type b) const { return a + b; }
+};
+
+template <int32_t MOD>
+struct plus_monoid {
+    typedef mint<MOD> underlying_type;
+    underlying_type unit() const { return 0; }
+    underlying_type append(underlying_type a, underlying_type b) const { return a + b; }
+};
+template <int32_t MOD>
+struct linear_operator_monoid {
+    typedef pair<mint<MOD>, mint<MOD> > underlying_type;
+    typedef mint<MOD> target_type;
+    static underlying_type make(mint<MOD> a, mint<MOD> b) {
+        return make_pair(a, b);
+    }
+    underlying_type identity() const {
+        return make(1, 0);
+    }
+    target_type apply(underlying_type a, target_type b) const {
+        return a.first * b + a.second;
+    }
+    underlying_type compose(underlying_type a, underlying_type b) const {
+        return make(a.first * b.first, a.second + a.first * b.second);
+    }
 };
