@@ -51,28 +51,38 @@ EOF
     list data-structure/treap.inc.cpp
     list data-structure/sparse_table.inc.cpp
     list data-structure/sliding-window.inc.cpp
+    list data-structure/convex-hull-trick.inc.cpp
 
     section graph
     list graph/ford-fulkerson.inc.cpp
     list graph/dinic.inc.cpp
     list graph/minimum-cost-flow.inc.cpp
+    list graph/lowest-common-ancestor.inc.cpp
+    list graph/strongly_connected_components.cpp
     list graph/two-edge-connected-components.inc.cpp
+    list graph/centroid-decomposition.inc.cpp
+    list graph/topological-sort.inc.cpp
 
     section modulus
-    list modulus/powmod.inc.cpp
-    list modulus/extgcd.inc.cpp
+    list modulus/factorial.inc.cpp
+    list modulus/choose.inc.cpp
 
     section number
     list number/gcd.inc.cpp
     list number/primes.inc.cpp
     list number/matrix.inc.cpp
+    list number/extgcd.inc.cpp
 
     section string
     list string/palindrome.inc.cpp
+    list string/suffix-array.inc.cpp
+    list string/aho-corasick.inc.cpp
+
+    section geometry
+    list geometry/convex-hull.inc.cpp
 
     section utils
     list utils/binsearch.inc.cpp
-    list utils/convex-hull-trick.inc.cpp
     list utils/longest-increasing-subsequence.inc.cpp
     list utils/dice.inc.cpp
     list utils/subset.inc.cpp
