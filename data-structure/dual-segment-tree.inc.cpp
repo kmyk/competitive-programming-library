@@ -58,6 +58,16 @@ struct dual_segment_tree {
 */
 };
 
+template <typename T> 
+struct const_operator_monoid {
+    // typedef optional<T> underlying_type;
+    typedef pair<bool, T> underlying_type;
+    typedef T target_type;
+    underlying_type unit() const { return make_pair(false, target_type()); }
+    underlying_type append(underlying_type a, underlying_type b) const { return a.first ? a : b; }
+    target_type apply(underlying_type a, target_type b) const { return a.first ? a.second : b; }
+};
+
 struct plus_operator_monoid {
     typedef int underlying_type;
     typedef int target_type;
