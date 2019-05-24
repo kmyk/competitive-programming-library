@@ -40,10 +40,10 @@ struct dual_segment_tree {
             range_apply(2 * i + 2, (il + ir) / 2, ir, l, r, z);
         }
     }
-    void point_set(int i, underlying_type z) {
-        range_apply(i, i + 1, op.unit());  // to flush lazed ops
-        a[i + n - 1] = z;
-    }
+    // void point_set(int i, underlying_type z) {
+    //     range_apply(i, i + 1, op.unit());  // to flush lazed ops
+    //     a[i + n - 1] = z;  // bug??
+    // }
 /*
     // fast methods
     inline underlying_type point_get(int i) {

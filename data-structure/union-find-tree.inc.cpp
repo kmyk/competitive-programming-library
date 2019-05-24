@@ -8,7 +8,7 @@ struct union_find_tree {
     int unite_trees(int i, int j) {
         i = find_root(i); j = find_root(j);
         if (i != j) {
-            if (tree_size(i) < tree_size(j)) swap(i,j);
+            if (tree_size(i) < tree_size(j)) swap(i, j);
             data[i] += data[j];
             data[j] = i;
         }

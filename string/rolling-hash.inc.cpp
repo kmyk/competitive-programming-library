@@ -144,10 +144,10 @@ struct rolling_hash_monoid {
 constexpr uint64_t prime = 1000000000000037;  // if you didn't shift
 constexpr uint64_t prime = 1000000007;
 constexpr uint64_t base = 10007;
-uint64_t rolling_hash_push(uint64_t hash, char c) {
+uint64_t rolling_hash_push(uint64_t hash, int c) {
     return (hash * base + c) % prime;
 }
-uint64_t rolling_hash_shift(uint64_t hash, uint64_t k) {
+uint64_t rolling_hash_shift(uint64_t hash, int k) {
     uint64_t e = base;
     for (; k; k >>= 1) {
         if (k & 1) hash = hash * e % prime;
@@ -155,20 +155,20 @@ uint64_t rolling_hash_shift(uint64_t hash, uint64_t k) {
     }
     return hash;
 }
-uint64_t rolling_hash(const string & s) {
-    uint64_t hash = 0;
-    for (char c : s) {
-        hash = rolling_hash_push(hash, c);
-    }
-    return hash;
-}
-vector<uint64_t> rolling_hash_prepare(const string & s) {
-    vector<uint64_t> hash(s.length() + 1);
-    REP (i, s.length()) {
+vector<uint64_t> rolling_hash_prepare(const vector<int> & s) {
+    vector<uint64_t> hash(s.size() + 1);
+    REP (i, s.size()) {
         hash[i + 1] = rolling_hash_push(hash[i], s[i]);
     }
     return hash;
 }
-uint64_t rolling_hash_range(vector<uint64_t> const & hash, int l, int r) {
-    return hash[r] - rolling_hash_shift(hash[l], r - l);
+uint64_t rolling_hash_range(const vector<uint64_t> & hash, int l, int r) {
+    return (hash[r] - rolling_hash_shift(hash[l], r - l) + prime) % prime;
+}
+uint64_t rolling_hash(const vector<int> & s) {
+    uint64_t hash = 0;
+    for (int c : s) {
+        hash = rolling_hash_push(hash, c);
+    }
+    return hash;
 }

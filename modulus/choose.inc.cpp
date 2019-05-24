@@ -18,3 +18,18 @@ mint<MOD> multichoose(int n, int r) {
     if (n == 0 and r == 0) return 1;
     return choose<MOD>(n + r - 1, r);
 }
+
+/**
+ * @note O(r)
+ */
+template <int32_t MOD>
+mint<MOD> choose(int n, int r) {
+    assert (0 <= r and r <= n);
+    mint<MOD> num = 1;
+    mint<MOD> den = 1;
+    REP (i, r) {
+        num *= n - i;
+        den *= i + 1;
+    }
+    return num / den;
+}

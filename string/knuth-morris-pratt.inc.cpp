@@ -1,3 +1,25 @@
+/**
+ * @brief Morris-Pratt algorithm
+ * @description compute the list of the lengthes of the longest borders
+ * @note O(N)
+ */
+template <class Iterator>
+vector<int> morris_pratt(Iterator first, Iterator last) {
+    int length = distance(first, last);
+    vector<int> border(length + 1);
+    border[0] = -1;
+    int j = -1;
+    REP (i, length) {
+        while (j >= 0 and pattern[i] != pattern[j]) {
+            j = border[j];
+        }
+        ++ j;
+        border[i + 1] = j;
+    }
+    return border;
+}
+
+/*
 vector<int> kmp_build_fail(string const & pattern) { // O(m)
     int m = pattern.size();
     vector<int> fali(m+1);
@@ -25,3 +47,4 @@ int kmp_match(string const & target, string const & pattern, vector<int> const &
 int kmp_match(string const & target, string const & pattern) {
     return kmp_match(target, pattern, kmp_build_fail(pattern));
 }
+*/

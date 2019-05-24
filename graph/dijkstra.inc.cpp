@@ -44,20 +44,46 @@ vector<T> original_dijkstra(vector<vector<pair<int, T> > > const & g, int start,
 /**
  * @note generic one
  */
-template <class Weight, class Func>
-void generic_dijkstra(int root, vector<Weight> & dist, Func iterate_adjacent_vertices) {
-    dist.assign(dist.size(), numeric_limits<Weight>::max());
-    priority_queue<pair<Weight, int> > que;
-    dist[root] = 0;
-    que.emplace(- dist[root], root);
+template <class T, class Func>
+vector<T> run_dijkstra(int n, int src, Func iterate) {
+    vector<T> dist(n, numeric_limits<T>::max());
+    priority_queue<pair<T, int> > que;
+    dist[src] = 0;
+    que.emplace(- dist[src], src);
     while (not que.empty()) {
-        Weight dist_i; int i; tie(dist_i, i) = que.top(); que.pop();
+        T dist_i; int i; tie(dist_i, i) = que.top(); que.pop();
         if (dist[i] < - dist_i) continue;
-        iterate_adjacent_vertices(i, [&](int j, Weight cost) {
+        iterate(i, [&](int j, T cost) {
             if (- dist_i + cost < dist[j]) {
                 dist[j] = - dist_i + cost;
                 que.emplace(dist_i - cost, j);
             }
         });
     }
+    return dist;
+}
+
+template <class T, class Func>
+vector<int> reconstruct_dijkstra(int n, int src, int dst, vector<T> const & dist, Func iterate) {
+}
+
+template <class T, class Func>
+vector<int> reconstruct_edges_dijkstra(int n, int src, int dst, vector<T> const & dist, Func iterate) {
+    vector<int> edges;
+    int i = dst;
+    while (i != src) {
+        int next = -1;
+        int next_edge = -1;
+        iterate(i, [&](int j, int edge, T cost) {
+            if (dist[i] == dist[j] + cost) {
+                next = j;
+                next_edge = edge;
+            }
+        });
+        assert (next != -1);
+        i = next;
+        edges.push_back(next_edge);
+    }
+    reverse(ALL(edges));
+    return edges;
 }

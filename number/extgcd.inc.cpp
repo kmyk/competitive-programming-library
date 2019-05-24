@@ -36,15 +36,15 @@ pair<int, int> extgcd_recursive(int a, int b) {
 }
 
 /**
- * @note x and n must be relatively prime
- * @note O(log n)
+ * @note x and m must be relatively prime
+ * @note O(log m)
  */
-ll modinv(ll x, ll n) {
-    assert (1 <= x and x < n);
-    ll y, d; tie(y, ignore, d) = extgcd(x, n);
+ll modinv(ll x, int m) {
+    assert (1 <= x and x < m);
+    ll y, d; tie(y, ignore, d) = extgcd(x, m);
     if (d != 1) return 0;  // no inverse
-    assert (x * y % n == 1);
-    return (y % n + n) % n;
+    assert (x * y % m == 1);
+    return (y % m + m) % m;
 }
 
 /**

@@ -46,10 +46,10 @@ map<ll, int> prime_factorize(ll n, vector<int> const & primes) {
 /**
  * @note if n < 10^9, d(n) < 1200 + a
  */
-vector<ll> list_divisors(ll n, vector<int> const & primes) {
+vector<ll> list_divisors_from_prime_factors(ll n, vector<ll> const & prime_factors) {
     vector<ll> result;
     result.push_back(1);
-    for (auto it : prime_factorize(n, primes)) {
+    for (auto it : prime_factors) {
         ll p; int k; tie(p, k) = it;
         int size = result.size();
         REP (y, k) {
@@ -58,19 +58,6 @@ vector<ll> list_divisors(ll n, vector<int> const & primes) {
             }
         }
     }
-    return result;
-}
-
-vector<ll> list_prime_factors(ll n, vector<int> const & primes) {
-    vector<ll> result;
-    for (int p : primes) {
-        if (n < p *(ll) p) break;
-        while (n % p == 0) {
-            result.push_back(p);
-            n /= p;
-        }
-    }
-    if (n != 1) result.push_back(n);
     return result;
 }
 
@@ -114,16 +101,79 @@ map<ll, int> prime_factorize1(ll n) {
     return factors;
 }
 
-vector<vector<int> > sieve_prime_factors(int n) {
-    vector<vector<int> > ps(n);
-    REP3 (a, 2, n) {
-        if (ps[a].empty()) {
-            for (int b = 2 * a; b < n; b += a) {
-                for (int b1 = b; b1 % a == 0; b1 /= a) {
-                    ps[b1].push_back(a);
+/**
+ * @note O(\sqrt{n})
+ * @note about 1.0 sec for 10^5 queries with n < 10^10
+ */
+struct prepared_primes {
+    int size;
+    vector<int> sieve;
+    vector<int> primes;
+
+    prepared_primes(int size_)
+        : size(size_) {
+
+        sieve.resize(size);
+        REP3 (p, 2, size) if (sieve[p] == 0) {
+            primes.push_back(p);
+            for (int k = p; k < size; k += p) {
+                if (sieve[k] == 0) {
+                    sieve[k] = p;
                 }
             }
         }
     }
-    return ps;
-}
+
+    vector<ll> prime_factorize(ll n) {
+        assert (1 <= n and n < (ll)size * size);
+        vector<ll> result;
+
+        // trial division for large part
+        for (int p : primes) {
+            if (n < size or n < (ll)p * p) {
+                break;
+            }
+            while (n % p == 0) {
+                n /= p;
+                result.push_back(p);
+            }
+        }
+
+        // small part
+        if (n == 1) {
+            // nop
+        } else if (n < size) {
+            while (n != 1) {
+                result.push_back(sieve[n]);
+                n /= sieve[n];
+            }
+        } else {
+            result.push_back(n);
+        }
+
+        assert (is_sorted(ALL(result)));
+        return result;
+    }
+
+    bool is_prime(ll n) {
+        return prime_factorize(n).size() == 1;
+    }
+
+    vector<ll> all_factorize(ll n) {
+        auto p = prime_factorize(n);
+        vector<ll> d;
+        d.push_back(1);
+        for (int l = 0; l < p.size(); ) {
+            int r = l + 1;
+            while (r < p.size() and p[r] == p[l]) ++ r;
+            int n = d.size();
+            REP (k1, r - l) {
+                REP (k2, n) {
+                    d.push_back(d[d.size() - n] * p[l]);
+                }
+            }
+            l = r;
+        }
+        return d;
+    }
+};

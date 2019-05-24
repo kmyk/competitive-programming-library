@@ -1,4 +1,10 @@
-vector<int> topological_sort(int n, vector<vector<int> > const & g_rev) {
+/**
+ * @return a list of vertices which sorted topologically
+ * @note the empty list is returned if cycles exist
+ * @note O(V + E)
+ */
+vector<int> topological_sort(const vector<vector<int> > & g_rev) {
+    int n = g_rev.size();
     vector<int> order;
     vector<char> used(n);
     function<bool (int)> go = [&](int i) {
@@ -17,4 +23,17 @@ vector<int> topological_sort(int n, vector<vector<int> > const & g_rev) {
         if (go(i)) return vector<int>();
     }
     return order;
+}
+
+/**
+ * @note you can use std::reverse instead of this
+ */
+vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
+    vector<vector<int> > g_rev(g.size());
+    REP (i, g.size()) {
+        for (int j : g[i]) {
+            g_rev[j].push_back(i);
+        }
+    }
+    return g_rev;
 }
