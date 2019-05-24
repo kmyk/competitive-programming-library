@@ -1,5 +1,5 @@
 /**
- * @brief a segment tree, or a fenwick tree
+ * @brief a segment tree
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>
