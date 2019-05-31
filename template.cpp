@@ -15,7 +15,7 @@ template <class T, class U> inline void chmax(T & a, U const & b) { a = max<T>(a
 template <class T, class U> inline void chmin(T & a, U const & b) { a = min<T>(a, b); }
 template <typename X, typename T> auto make_vectors(X x, T a) { return vector<T>(x, a); }
 template <typename X, typename Y, typename Z, typename... Zs> auto make_vectors(X x, Y y, Z z, Zs... zs) { auto cont = make_vectors(y, z, zs...); return vector<decltype(cont)>(x, cont); }
-template <typename T> ostream & operator << (ostream & out, vector<T> const & xs) { REP (i, int(xs.size()) - 1) out << xs[i] << ' '; if (not xs.empty()) out << xs.back(); return out; }
+template <typename T> ostream & operator << (ostream & out, vector<T> const & xs) { REP (i, (int)xs.size() - 1) out << xs[i] << ' '; if (not xs.empty()) out << xs.back(); return out; }
 
 int main() {
     ios::sync_with_stdio(false);

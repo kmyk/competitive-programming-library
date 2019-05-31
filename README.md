@@ -8,7 +8,7 @@
 -   [template.cpp](https://github.com/kmyk/competitive-programming-library/tree/master/template.cpp)
 -   `data-structure/`
     -   [union find tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/union-find-tree.inc.cpp)
-    -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/segment-tree.inc.cpp)
+    -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/segment_tree.hpp)
     -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/dual-segment-tree.inc.cpp)
     -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/lazy-propagation-segment-tree.inc.cpp)
     -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/convex-hull-trick.inc.cpp)
