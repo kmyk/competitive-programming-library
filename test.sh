@@ -5,25 +5,21 @@ which oj > /dev/null
 CXX=${CXX:-g++}
 CXXFLAGS="${CXXFLANGS:--std=c++14 -O2 -Wall -g}"
 
-atexit() {
-    [[ -n ${temp} ]] && rm -rf ${temp}
-    temp=
-}
-trap atexit EXIT
-
 run() {
     file="$1"
     url="$(grep -o '^# *define \+PROBLEM \(https\?://.*\)' < "$file" | sed 's/.* http/http/')"
-    temp=$(mktemp -d)
-    $CXX $CXXFLAGS -I . -o ${temp}/a.out "$file"
+    dir=test/$(echo -n "$url" | md5sum | sed 's/ .*//')
+    mkdir -p ${dir}
+    $CXX $CXXFLAGS -I . -o ${dir}/a.out "$file"
     if [[ -n ${url} ]] ; then
-        sleep 2
-        oj download --system "$url" -d ${temp}/test
-        oj test -c ${temp}/a.out -d ${temp}/test
+        if [[ ! -e ${dir}/test ]] ; then
+            sleep 2
+            oj download --system "$url" -d ${dir}/test
+        fi
+        oj test -c ${dir}/a.out -d ${dir}/test
     else
-        ${temp}/a.out
+        ${dir}/a.out
     fi
-    atexit
 }
 
 if [ $# -eq 0 ] ; then
