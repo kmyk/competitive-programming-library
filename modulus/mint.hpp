@@ -1,3 +1,5 @@
+#pragma once
+
 template <int32_t MOD>
 struct mint {
     int32_t value;
