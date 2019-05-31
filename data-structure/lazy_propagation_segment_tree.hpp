@@ -64,18 +64,16 @@ struct lazy_propagation_segment_tree { // on monoids
     }
     underlying_type range_concat(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
-        return range_concat(0, 0, n, l, r);
-    }
-    underlying_type range_concat(int i, int il, int ir, int l, int r) {
-        if (l <= il and ir <= r) { // 0-based
-            return a[i];
-        } else if (ir <= l or r <= il) {
-            return mon.unit();
-        } else {
-            return op.apply(f[i], mon.append(
-                    range_concat(2 * i + 1, il, (il + ir) / 2, l, r),
-                    range_concat(2 * i + 2, (il + ir) / 2, ir, l, r)));
+        underlying_type lacc = mon.unit(), racc = mon.unit();
+        for (int l1 = (l += n), r1 = (r += n) - 1; l1 > 1; l /= 2, r /= 2, l1 /= 2, r1 /= 2) { // 1-based loop, 2x faster than recursion
+            if (l < r) {
+                if (l % 2 == 1) lacc = mon.append(lacc, a[(l ++) - 1]);
+                if (r % 2 == 1) racc = mon.append(a[(-- r) - 1], racc);
+            }
+            lacc = op.apply(f[l1 / 2 - 1], lacc);
+            racc = op.apply(f[r1 / 2 - 1], racc);
         }
+        return mon.append(lacc, racc);
     }
 };
 
@@ -132,16 +130,15 @@ struct increment_operator_monoid {
 
 #include "modulus/mint.hpp"
 template <int32_t MOD>
-struct modplus_monoid {
-    typedef mint<MOD> underlying_type;
-    typedef mint<MOD> target_type;
-    mint<MOD> unit() const { return 0; }
-    mint<MOD> append(mint<MOD> a, mint<MOD> b) const { return a + b; }
+struct modplus_length_monoid {
+    typedef std::pair<mint<MOD>, int> underlying_type;
+    underlying_type unit() const { return std::make_pair(0, 0); }
+    underlying_type append(underlying_type a, underlying_type b) const { return std::make_pair(a.first + b.first, a.second + b.second); }
 };
 template <int32_t MOD>
-struct linear_operator_monoid {
+struct modular_linear_operator_monoid {
     typedef std::pair<mint<MOD>, mint<MOD> > underlying_type;
-    typedef mint<MOD> target_type;
+    typedef std::pair<mint<MOD>, int> target_type;
     static underlying_type make(mint<MOD> a, mint<MOD> b) {
         return std::make_pair(a, b);
     }
@@ -149,7 +146,7 @@ struct linear_operator_monoid {
         return make(1, 0);
     }
     target_type apply(underlying_type a, target_type b) const {
-        return a.first * b + a.second;
+        return std::make_pair(a.first * b.first + a.second * b.second, b.second);
     }
     underlying_type compose(underlying_type a, underlying_type b) const {
         return make(a.first * b.first, a.second + a.first * b.second);
