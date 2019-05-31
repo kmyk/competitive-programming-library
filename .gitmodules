@@ -1,3 +1,6 @@
 [submodule "Togasat"]
 	path = Togasat
 	url = https://github.com/togatoga/Togasat
+[submodule "tinydfa"]
+	path = tinydfa
+	url = git@github.com:kmyk/tinydfa.git
