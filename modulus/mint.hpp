@@ -26,4 +26,4 @@ struct mint {
 };
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> mint<MOD> operator * (int32_t value, mint<MOD> n) { return mint<MOD>(value % MOD) * n; }
-template <int32_t MOD> ostream & operator << (ostream & out, mint<MOD> n) { return out << n.value; }
+template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }

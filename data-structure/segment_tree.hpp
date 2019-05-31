@@ -40,12 +40,6 @@ struct plus_monoid {
     int unit() const { return 0; }
     int append(int a, int b) const { return a + b; }
 };
-template <int MOD>
-struct modplus_monoid {
-    typedef int underlying_type;
-    int unit() const { return 0; }
-    int append(int a, int b) const { int c = a + b; return c < MOD ? c : c - MOD; }
-};
 struct max_monoid {
     typedef int underlying_type;
     int unit() const { return INT_MIN; }

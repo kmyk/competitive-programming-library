@@ -1,3 +1,5 @@
+#pragma once
+
 /**
  * @note lazy_propagation_segment_tree<max_monoid, plus_operator_monoid> is the starry sky tree
  * @note verified https://www.hackerrank.com/contests/world-codesprint-12/challenges/factorial-array/submissions/code/1304452669
@@ -6,22 +8,22 @@
  */
 template <class Monoid, class OperatorMonoid>
 struct lazy_propagation_segment_tree { // on monoids
-    static_assert (is_same<typename Monoid::underlying_type, typename OperatorMonoid::target_type>::value, "");
+    static_assert (std::is_same<typename Monoid::underlying_type, typename OperatorMonoid::target_type>::value, "");
     typedef typename Monoid::underlying_type underlying_type;
     typedef typename OperatorMonoid::underlying_type operator_type;
     const Monoid mon;
     const OperatorMonoid op;
     int n;
-    vector<underlying_type> a;
-    vector<operator_type> f;
+    std::vector<underlying_type> a;
+    std::vector<operator_type> f;
     lazy_propagation_segment_tree() = default;
     lazy_propagation_segment_tree(int a_n, underlying_type initial_value = Monoid().unit(), Monoid const & a_mon = Monoid(), OperatorMonoid const & a_op = OperatorMonoid())
             : mon(a_mon), op(a_op) {
         n = 1; while (n <= a_n) n *= 2;
         a.resize(2 * n - 1, mon.unit());
-        fill(a.begin() + (n - 1), a.begin() + ((n - 1) + a_n), initial_value); // set initial values
+        std::fill(a.begin() + (n - 1), a.begin() + ((n - 1) + a_n), initial_value); // set initial values
         REP_R (i, n - 1) a[i] = mon.append(a[2 * i + 1], a[2 * i + 2]); // propagate initial values
-        f.resize(max(0, (2 * n - 1) - n), op.identity());
+        f.resize(std::max(0, (2 * n - 1) - n), op.identity());
     }
     void point_set(int i, underlying_type z) {
         assert (0 <= i and i < n);
@@ -80,7 +82,7 @@ struct lazy_propagation_segment_tree { // on monoids
 struct max_monoid {
     typedef int underlying_type;
     int unit() const { return 0; }
-    int append(int a, int b) const { return max(a, b); }
+    int append(int a, int b) const { return std::max(a, b); }
 };
 struct plus_operator_monoid {
     typedef int underlying_type;
@@ -94,7 +96,7 @@ typedef lazy_propagation_segment_tree<max_monoid, plus_operator_monoid> starry_s
 struct min_monoid {
     typedef int underlying_type;
     int unit() const { return INT_MAX; }
-    int append(int a, int b) const { return min(a, b); }
+    int append(int a, int b) const { return std::min(a, b); }
 };
 struct plus_with_int_max_operator_monoid {
     typedef int underlying_type;
@@ -104,22 +106,9 @@ struct plus_with_int_max_operator_monoid {
     int compose(underlying_type a, underlying_type b) const { return a + b; }
 };
 
-unittest {
-    lazy_propagation_segment_tree<min_monoid, plus_with_int_max_operator_monoid> segtree(9);
-    segtree.point_set(2, 2);
-    segtree.point_set(3, 3);
-    segtree.point_set(4, 4);
-    segtree.point_set(6, 6);
-    assert (segtree.range_concat(2, 3) == 2);
-    assert (segtree.range_concat(5, 8) == 6);
-    segtree.range_apply(1, 4, 9);
-    assert (segtree.range_concat(3, 6) == 4);
-    assert (segtree.range_concat(0, 3) == 11);
-}
-
 template <int N>
 struct count_monoid {
-    typedef array<int, N> underlying_type;
+    typedef std::array<int, N> underlying_type;
     underlying_type unit() const { return underlying_type(); }
     underlying_type append(underlying_type a, underlying_type b) const {
         underlying_type c = {};
@@ -130,7 +119,7 @@ struct count_monoid {
 template <int N>
 struct increment_operator_monoid {
     typedef int underlying_type;
-    typedef array<int, N> target_type;
+    typedef std::array<int, N> target_type;
     underlying_type identity() const { return 0; }
     target_type apply(underlying_type a, target_type b) const {
         if (a == 0) return b;
@@ -141,18 +130,20 @@ struct increment_operator_monoid {
     underlying_type compose(underlying_type a, underlying_type b) const { return a + b; }
 };
 
+#include "modulus/mint.hpp"
 template <int32_t MOD>
-struct plus_monoid {
+struct modplus_monoid {
     typedef mint<MOD> underlying_type;
-    underlying_type unit() const { return 0; }
-    underlying_type append(underlying_type a, underlying_type b) const { return a + b; }
+    typedef mint<MOD> target_type;
+    mint<MOD> unit() const { return 0; }
+    mint<MOD> append(mint<MOD> a, mint<MOD> b) const { return a + b; }
 };
 template <int32_t MOD>
 struct linear_operator_monoid {
-    typedef pair<mint<MOD>, mint<MOD> > underlying_type;
+    typedef std::pair<mint<MOD>, mint<MOD> > underlying_type;
     typedef mint<MOD> target_type;
     static underlying_type make(mint<MOD> a, mint<MOD> b) {
-        return make_pair(a, b);
+        return std::make_pair(a, b);
     }
     underlying_type identity() const {
         return make(1, 0);

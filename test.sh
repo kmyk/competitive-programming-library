@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-which oj
+which oj > /dev/null
 
 CXX=${CXX:-g++}
 CXXFLAGS="${CXXFLANGS:--std=c++14 -O2 -Wall -g}"
@@ -11,14 +11,27 @@ atexit() {
 }
 trap atexit EXIT
 
-for f in */*.test.cpp ; do
-    url="$(grep -o '^# *define \+PROBLEM \(https\?://.*\)' < $f | sed 's/.* http/http/')"
+run() {
+    file="$1"
+    url="$(grep -o '^# *define \+PROBLEM \(https\?://.*\)' < "$file" | sed 's/.* http/http/')"
+    temp=$(mktemp -d)
+    $CXX $CXXFLAGS -I . -o ${temp}/a.out "$file"
     if [[ -n ${url} ]] ; then
-        temp=$(mktemp -d)
-        $CXX $CXXFLAGS -I . -o ${temp}/a.out $f
+        sleep 2
         oj download --system "$url" -d ${temp}/test
         oj test -c ${temp}/a.out -d ${temp}/test
-        atexit
-        sleep 2
+    else
+        ${temp}/a.out
     fi
-done
+    atexit
+}
+
+if [ $# -eq 0 ] ; then
+    for f in $(find . -name \*.test.cpp) ; do
+        run $f
+    done
+else
+    for f in "$@" ; do
+        run "$f"
+    done
+fi

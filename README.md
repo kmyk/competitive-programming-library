@@ -9,11 +9,11 @@
 -   `data-structure/`
     -   [union find tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/union-find-tree.inc.cpp)
     -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/segment_tree.hpp)
-    -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/dual-segment-tree.inc.cpp)
-    -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/lazy-propagation-segment-tree.inc.cpp)
+    -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/dual_segment_tree.hpp)
+    -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/lazy_propagation_segment_tree.hpp)
     -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/convex-hull-trick.inc.cpp)
 -   `modulus/`
-    -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.inc.cpp)
+    -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
     -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.inc.cpp)
     -   [combination](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/choose.inc.cpp)
 -   `number/`
