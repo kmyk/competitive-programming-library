@@ -18,6 +18,9 @@ template <typename X, typename Y, typename Z, typename... Zs> auto make_vectors(
 template <typename T> ostream & operator << (ostream & out, vector<T> const & xs) { REP (i, int(xs.size()) - 1) out << xs[i] << ' '; if (not xs.empty()) out << xs.back(); return out; }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    constexpr char endl = '\n';
     return 0;
 }
 EOF

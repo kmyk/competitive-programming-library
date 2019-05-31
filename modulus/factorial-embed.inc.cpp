@@ -67,3 +67,16 @@ int generate_table() {  // int main() {
     return 0;
 }
 
+// CAUTION: not verified yet
+mint<1000000007> choose(int64_t n, int64_t r) {
+    constexpr int MOD = 1e9 + 7;
+    assert (0 <= r and r <= n);
+    auto f = [&](int64_t x) {
+        return x / MOD + x / MOD / MOD;
+    };
+    if (f(n) > f(n - r) + f(r)) {
+        return 0;
+    } else {
+        return mint<MOD>(fact(n % MOD)) * mint<MOD>(fact((n - r) % MOD)).inv() * mint<MOD>(fact(r % MOD)).inv();
+    }
+}
