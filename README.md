@@ -3,7 +3,7 @@
 [![Travis](https://img.shields.io/travis/kmyk/competitive-programming-library/master.svg)](https://travis-ci.org/kmyk/competitive-programming-library)
 ![License](https://img.shields.io/github/license/kmyk/competitive-programming-library.svg)
 
-## List of Frequently Used Files
+## List of Frequently Used Algorithms / Data-Structures
 
 -   [template.cpp](https://github.com/kmyk/competitive-programming-library/tree/master/template.cpp)
 -   `data-structure/`
@@ -21,10 +21,38 @@
     -   [extgcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/extgcd.inc.cpp)
     -   [prime numbers](https://github.com/kmyk/competitive-programming-library/blob/master/number/primes.inc.cpp)
     -   [matrix](https://github.com/kmyk/competitive-programming-library/blob/master/number/matrix.inc.cpp)
+-   `graph/`
+    -   [topological sort](https://github.com/kmyk/competitive-programming-library/blob/master/graph/topological-sort.inc.cpp)
+    -   [lowest common ancestor](https://github.com/kmyk/competitive-programming-library/blob/master/graph/lowest-common-ancestor.inc.cpp)
+    -   [Kruskal's algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/graph/minimum-spanning-tree.inc.cpp)
+    -   [Dinic's algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/graph/centroid-decomposition.inc.cp://github.com/kmyk/competitive-programming-library/blob/master/graph/dinic.inc.cpp)
+    -   [primal-dual](https://github.com/kmyk/competitive-programming-library/blob/master/graph/centroid-decomposition.inc.cp://github.com/kmyk/competitive-programming-library/blob/master/graph/dinic.inc.cp://github.com/kmyk/competitive-programming-library/blob/master/graph/minimum-cost-flow.inc.cpp)
 -   `string/`
     -   [rolling hash](https://github.com/kmyk/competitive-programming-library/blob/master/string/rolling-hash.inc.cpp)
 -   `utils/`
     -   [binary search](https://github.com/kmyk/competitive-programming-library/blob/master/utils/binsearch.inc.cpp)
+
+## List of Frequently Used Algorithms / Data-Structures (Advanced)
+
+-   `modulus/`
+    -   [baby-step giant-step algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/discrete-log.inc.cpp)
+    -   [factorial (embedding)](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial-embed.inc.cpp)
+-   `number/`
+    -   [Miller-Rabin](https://github.com/kmyk/competitive-programming-library/blob/master/number/miller-rabin.inc.cpp)
+-   `graph/`
+    -   [centroid decomposition](https://github.com/kmyk/competitive-programming-library/blob/master/graph/centroid-decomposition.inc.cpp)
+    -   [strongly connected components decomposition](https://github.com/kmyk/competitive-programming-library/blob/master/graph/strongly_connected_components.cpp)
+    -   [two-edge connected components decomposition](https://github.com/kmyk/competitive-programming-library/blob/master/graph/two-edge-connected-components.inc.cpp)
+    -   [heavy light decomposition](https://github.com/kmyk/competitive-programming-library/blob/master/graph/heavy_light_decomposition.inc.cpp)
+-   `string/`
+    -   [Manachar's algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/string/palindrome.inc.cpp)
+    -   [Morris-Pratt algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/string/knuth-morris-pratt.inc.cpp)
+    -   [suffix array](https://github.com/kmyk/competitive-programming-library/blob/master/string/suffix-array.inc.cpp)
+-   `data-structure/`
+    -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/sparse_table.inc.cpp)
+    -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/wavelet-matrix.inc.cpp)
+    -   [red black tree](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/red-black-tree.inc.cpp)
+    -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/persistent-array.inc.cpp)
 
 ## PDF version
 
