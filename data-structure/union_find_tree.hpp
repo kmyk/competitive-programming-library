@@ -1,5 +1,12 @@
+#pragma once
+#include <vector>
+
+/**
+ * @brief a disjoint set structure
+ * @note union-by-size + path-compression
+ */
 struct union_find_tree {
-    vector<int> data;
+    std::vector<int> data;
     union_find_tree() = default;
     explicit union_find_tree(size_t n) : data(n, -1) {}
     bool is_root(int i) { return data[i] < 0; }
@@ -8,7 +15,7 @@ struct union_find_tree {
     int unite_trees(int i, int j) {
         i = find_root(i); j = find_root(j);
         if (i != j) {
-            if (tree_size(i) < tree_size(j)) swap(i, j);
+            if (tree_size(i) < tree_size(j)) std::swap(i, j);
             data[i] += data[j];
             data[j] = i;
         }
