@@ -14,8 +14,8 @@
     -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/convex-hull-trick.inc.cpp)
 -   `modulus/`
     -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
-    -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.inc.cpp)
-    -   [combination](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/choose.inc.cpp)
+    -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.hpp)
+    -   [combination](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/choose.hpp)
 -   `number/`
     -   [gcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/gcd.inc.cpp)
     -   [extgcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/extgcd.inc.cpp)
