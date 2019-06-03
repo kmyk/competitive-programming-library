@@ -1,5 +1,5 @@
 #include "utils/common.hpp"
-#include "data-structure/lazy_propagation_segment_tree.hpp"
+#include "data_structure/lazy_propagation_segment_tree.hpp"
 using namespace std;
 
 int main() {

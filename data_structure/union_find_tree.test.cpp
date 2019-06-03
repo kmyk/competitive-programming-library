@@ -1,6 +1,6 @@
 #define PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A
 #include "utils/common.hpp"
-#include "data-structure/union_find_tree.hpp"
+#include "data_structure/union_find_tree.hpp"
 using namespace std;
 
 int main() {

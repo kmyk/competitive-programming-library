@@ -6,12 +6,12 @@
 ## List of Frequently Used Algorithms / Data-Structures
 
 -   [template.cpp](https://github.com/kmyk/competitive-programming-library/tree/master/template.cpp)
--   `data-structure/`
-    -   [union find tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/union_find_tree.hpp)
-    -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/segment_tree.hpp)
-    -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data-structure/dual_segment_tree.hpp)
-    -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/lazy_propagation_segment_tree.hpp)
-    -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/convex-hull-trick.inc.cpp)
+-   `data_structure/`
+    -   [union find tree](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/union_find_tree.hpp)
+    -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/segment_tree.hpp)
+    -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/dual_segment_tree.hpp)
+    -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/lazy_propagation_segment_tree.hpp)
+    -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/convex-hull-trick.inc.cpp)
 -   `modulus/`
     -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
     -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.hpp)
@@ -48,11 +48,11 @@
     -   [Manachar's algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/string/palindrome.inc.cpp)
     -   [Morris-Pratt algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/string/knuth-morris-pratt.inc.cpp)
     -   [suffix array](https://github.com/kmyk/competitive-programming-library/blob/master/string/suffix-array.inc.cpp)
--   `data-structure/`
-    -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/sparse_table.inc.cpp)
-    -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/wavelet-matrix.inc.cpp)
-    -   [red black tree](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/red-black-tree.inc.cpp)
-    -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data-structure/persistent-array.inc.cpp)
+-   `data_structure/`
+    -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sparse_table.inc.cpp)
+    -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet-matrix.inc.cpp)
+    -   [red black tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/red-black-tree.inc.cpp)
+    -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/persistent-array.inc.cpp)
 
 ## PDF version
 

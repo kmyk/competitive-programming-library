@@ -1,6 +1,6 @@
 #define PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
 #include "utils/common.hpp"
-#include "data-structure/segment_tree.hpp"
+#include "data_structure/segment_tree.hpp"
 using namespace std;
 
 int main() {

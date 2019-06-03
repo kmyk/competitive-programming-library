@@ -1,5 +1,5 @@
 #include "utils/common.hpp"
-#include "data-structure/dual_segment_tree.hpp"
+#include "data_structure/dual_segment_tree.hpp"
 using namespace std;
 
 int main() {
