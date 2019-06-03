@@ -1,5 +1,8 @@
-#include "utils/common.hpp"
 #include "data_structure/lazy_propagation_segment_tree.hpp"
+
+#include <cassert>
+#include <vector>
+#include "utils/macros.hpp"
 using namespace std;
 
 int main() {

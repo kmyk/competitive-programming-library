@@ -1,5 +1,9 @@
-#include "utils/common.hpp"
 #include "data_structure/fully_indexable_dictionary.hpp"
+
+#include <cassert>
+#include <random>
+#include <vector>
+#include "utils/macros.hpp"
 using namespace std;
 
 template <class RandomEngine>

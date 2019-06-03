@@ -1,5 +1,11 @@
 #pragma once
+#include <array>
+#include <cassert>
+#include <climits>
+#include <cstdint>
+#include <vector>
 #include "data_structure/fully_indexable_dictionary.hpp"
+#include "utils/macros.hpp"
 
 
 /**

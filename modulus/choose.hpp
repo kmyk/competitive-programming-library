@@ -1,7 +1,8 @@
 #pragma once
-#include "utils/common.hpp"
+#include <cassert>
 #include "modulus/mint.hpp"
 #include "modulus/factorial.hpp"
+#include "utils/macros.hpp"
 
 /**
  * @tparam MOD must be a prime

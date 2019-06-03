@@ -1,5 +1,6 @@
-#include "utils/common.hpp"
 #include "data_structure/dual_segment_tree.hpp"
+
+#include <cassert>
 using namespace std;
 
 int main() {

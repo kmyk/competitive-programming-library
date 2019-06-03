@@ -1,20 +1,26 @@
 #pragma once
+#include <algorithm>
+#include <cassert>
+#include <cstdint>
+#include <vector>
+#include "data_structure/fully_indexable_dictionary.hpp"
+#include "utils/macros.hpp"
 
 /**
  * @brief a fully indexable dictionary
  * @note space complexity o(N). 1.5N-bit consumed
  */
 class fully_indexable_dictionary {
-    static constexpr size_t block_size = 64;
+    static constexpr std::size_t block_size = 64;
     std::vector<uint64_t> block;
     std::vector<int32_t> rank_block;  // a blocked cumulative sum
 public:
-    size_t size;
+    std::size_t size;
     fully_indexable_dictionary() = default;
     template <typename T>
     fully_indexable_dictionary(std::vector<T> const & bits) {
         size = bits.size();
-        size_t block_count = size / block_size + 1;
+        std::size_t block_count = size / block_size + 1;
         block.resize(block_count);
         REP (i, size) if (bits[i]) {
             block[i / block_size] |= (1ull << (i % block_size));

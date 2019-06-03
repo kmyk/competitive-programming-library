@@ -1,5 +1,6 @@
-#include "utils/common.hpp"
 #include "modulus/factorial.hpp"
+
+#include <cassert>
 using namespace std;
 
 int main() {

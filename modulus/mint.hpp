@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 template <int32_t MOD>
 struct mint {

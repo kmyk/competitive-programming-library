@@ -1,4 +1,7 @@
 #pragma once
+#include <algorithm>
+#include <cassert>
+#include <vector>
 
 template <class OperatorMonoid>
 struct dual_segment_tree {
@@ -48,6 +51,10 @@ struct dual_segment_tree {
     }
 };
 
+
+#include <climits>
+#include <utility>
+
 template <typename T> 
 struct const_operator_monoid {
     // typedef std::optional<T> underlying_type;
@@ -90,7 +97,7 @@ struct linear_operator_monoid {
     }
     underlying_type append(underlying_type g, underlying_type f) const {
         target_type fst = g.first * f.first % MOD;
-        target_type snd = (g.second + g.first *(ll) f.second) % MOD;
+        target_type snd = (g.second + g.first * f.second) % MOD;
         return std::make_pair(fst, snd);
     }
     target_type apply(underlying_type f, target_type x) const {

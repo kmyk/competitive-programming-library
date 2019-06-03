@@ -1,5 +1,9 @@
-#include "utils/common.hpp"
 #include "data_structure/wavelet_matrix.hpp"
+
+#include <cassert>
+#include <random>
+#include <vector>
+#include "utils/macros.hpp"
 using namespace std;
 
 template <int BITS, class RandomEngine>

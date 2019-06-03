@@ -1,4 +1,8 @@
 #pragma once
+#include <algorithm>
+#include <cassert>
+#include <vector>
+#include "utils/macros.hpp"
 
 /**
  * @brief a segment tree
@@ -34,6 +38,9 @@ struct segment_tree {
         return mon.append(lacc, racc);
     }
 };
+
+
+#include <climits>
 
 struct plus_monoid {
     typedef int underlying_type;

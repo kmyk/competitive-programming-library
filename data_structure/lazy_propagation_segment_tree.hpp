@@ -1,4 +1,8 @@
 #pragma once
+#include <algorithm>
+#include <cassert>
+#include <vector>
+#include "utils/macros.hpp"
 
 /**
  * @note lazy_propagation_segment_tree<max_monoid, plus_operator_monoid> is the starry sky tree
@@ -77,6 +81,12 @@ struct lazy_propagation_segment_tree { // on monoids
     }
 };
 
+
+#include <array>
+#include <climits>
+#include <utility>
+#include "modulus/mint.hpp"
+
 struct max_monoid {
     typedef int underlying_type;
     int unit() const { return 0; }
@@ -128,7 +138,6 @@ struct increment_operator_monoid {
     underlying_type compose(underlying_type a, underlying_type b) const { return a + b; }
 };
 
-#include "modulus/mint.hpp"
 template <int32_t MOD>
 struct modplus_length_monoid {
     typedef std::pair<mint<MOD>, int> underlying_type;
