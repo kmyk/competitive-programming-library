@@ -50,7 +50,7 @@
     -   [suffix array](https://github.com/kmyk/competitive-programming-library/blob/master/string/suffix-array.inc.cpp)
 -   `data_structure/`
     -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sparse_table.inc.cpp)
-    -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet-matrix.inc.cpp)
+    -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet_matrix.hpp)
     -   [red black tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/red-black-tree.inc.cpp)
     -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/persistent-array.inc.cpp)
 

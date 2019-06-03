@@ -1,16 +1,18 @@
+#pragma once
+
 /**
  * @brief a fully indexable dictionary
  * @note space complexity o(N). 1.5N-bit consumed
  */
 class fully_indexable_dictionary {
     static constexpr size_t block_size = 64;
-    vector<uint64_t> block;
-    vector<int32_t> rank_block;  // a blocked cumulative sum
+    std::vector<uint64_t> block;
+    std::vector<int32_t> rank_block;  // a blocked cumulative sum
 public:
     size_t size;
     fully_indexable_dictionary() = default;
     template <typename T>
-    fully_indexable_dictionary(vector<T> const & bits) {
+    fully_indexable_dictionary(std::vector<T> const & bits) {
         size = bits.size();
         size_t block_count = size / block_size + 1;
         block.resize(block_count);
@@ -54,7 +56,7 @@ public:
         int block_index = l;
         // binary search: max { i | rank(i) <= k }
         l = block_index * block_size;
-        r = min<int>(size, (block_index + 1) * block_size); // [l, r)
+        r = std::min<int>(size, (block_index + 1) * block_size); // [l, r)
         while (r - l > 1) {
             int m = (l + r) / 2;
             (rank(value, m) <= k ? l : r) = m;
@@ -76,40 +78,3 @@ public:
         return block[i / block_size] & (1ull << (i % block_size));
     }
 };
-
-void unittest_fully_indexable_dictionary(int n) {
-    random_device device;
-    default_random_engine gen(device());
-    vector<bool> data(n);
-    REP (i, n) data[i] = bernoulli_distribution(0.5)(gen);
-    auto rank = [&](bool value, int l, int r) {
-        return count(data.begin() + l, data.begin() + r, value);
-    };
-    auto select = [&](bool value, int k, int l) {
-        int i = l;
-        while (i < data.size() and data[i] != value) ++ i;
-        while (i < data.size() and k --) {
-            ++ i;
-            while (i < data.size() and data[i] != value) ++ i;
-        }
-        return i;
-    };
-    fully_indexable_dictionary fid(data);
-    for (int iteration = 1000; iteration --; ) {
-        bool value = bernoulli_distribution(0.5)(gen);
-        int l = uniform_int_distribution<int>(0, n - 1)(gen);
-        int r = uniform_int_distribution<int>(l + 1, n)(gen);
-        int k = uniform_int_distribution<int>(0, (r - l) * 2 / 3)(gen);
-        assert (fid.rank(value, l, r) == rank(value, l, r));
-        assert (fid.select(value, k, l) == select(value, k, l));
-        assert (fid.access(l) == data[l]);
-    }
-}
-unittest {
-    unittest_fully_indexable_dictionary(1);
-    unittest_fully_indexable_dictionary(126);
-    unittest_fully_indexable_dictionary(127);
-    unittest_fully_indexable_dictionary(128);
-    unittest_fully_indexable_dictionary(129);
-    unittest_fully_indexable_dictionary(10000);
-}

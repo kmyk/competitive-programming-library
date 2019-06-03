@@ -1,3 +1,7 @@
+#pragma once
+#include "data_structure/fully_indexable_dictionary.hpp"
+
+
 /**
  * @brief a wavelet matrix
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
@@ -5,21 +9,21 @@
 template <int BITS>
 struct wavelet_matrix {
     static_assert (BITS < CHAR_BIT * sizeof(uint64_t), "");
-    array<fully_indexable_dictionary, BITS> fid;
-    array<int, BITS> zero_count;
+    std::array<fully_indexable_dictionary, BITS> fid;
+    std::array<int, BITS> zero_count;
     wavelet_matrix() = default;
     /**
      * @note O(N BITS)
      */
     template <typename T>
-    wavelet_matrix(vector<T> data) {
+    wavelet_matrix(std::vector<T> data) {
         int size = data.size();
         REP (i, size) {
             assert (0 <= data[i] and data[i] < (1ull << BITS));
         }
         // bit-inversed radix sort
-        vector<char> bits(size);
-        vector<T> next(size);
+        std::vector<char> bits(size);
+        std::vector<T> next(size);
         REP_R (k, BITS) {
             auto low  = next.begin();
             auto high = next.rbegin();
@@ -57,7 +61,7 @@ struct wavelet_matrix {
         assert (0 <= value and value < (1ull << BITS));
         assert (0 <= k);
         // do rank(value, 0, size) with logging
-        vector<int> l(BITS + 1), r(BITS + 1);
+        std::vector<int> l(BITS + 1), r(BITS + 1);
         l[BITS] = 0;
         r[BITS] = fid[0].size;
         REP_R (d, BITS) {
@@ -165,63 +169,3 @@ struct wavelet_matrix {
         range_frequency_callback(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b, callback);
     }
 };
-
-template <int BITS>
-void unittest_wavelet_matrix(int n) {
-    random_device device;
-    default_random_engine gen(device());
-    vector<uint64_t> data(n);
-    REP (i, n) data[i] = uniform_int_distribution<uint64_t>(0, (1ull << BITS) - 1)(gen);
-    auto rank = [&](uint64_t value, int l, int r) {
-        return count(data.begin() + l, data.begin() + r, value);
-    };
-    auto select = [&](uint64_t value, int k, int l) {
-        int i = l;
-        while (i < data.size() and data[i] != value) ++ i;
-        while (i < data.size() and k --) {
-            ++ i;
-            while (i < data.size() and data[i] != value) ++ i;
-        }
-        return i;
-    };
-    auto quantile = [&](int k, int l, int r) {
-        vector<uint64_t> range;
-        REP3 (i, l, r) range.push_back(data[i]);
-        sort(ALL(range));
-        return range[k];
-    };
-    auto range_frequency = [&](int l, int r, uint64_t value_l, uint64_t value_r) {
-        int cnt = 0;
-        REP3 (i, l, r) cnt += value_l <= data[i] and data[i] < value_r;
-        return cnt;
-    };
-    wavelet_matrix<BITS> wm(data);
-    for (int iteration = 1000; iteration --; ) {
-        uint64_t value = uniform_int_distribution<uint64_t>(0, (1ull << BITS) - 1)(gen);
-        uint64_t another_value = uniform_int_distribution<uint64_t>(value, (1ull << BITS) - 1)(gen);
-        int l = uniform_int_distribution<int>(0, n - 1)(gen);
-        int r = uniform_int_distribution<int>(l + 1, n)(gen);
-        int k = uniform_int_distribution<int>(0, (r - l) * 2 / 3)(gen);
-        assert (wm.rank(value, l, r) == rank(value, l, r));
-        assert (wm.select(value, k, l) == select(value, k, l));
-        assert (wm.access(l) == data[l]);
-        assert (wm.quantile(k, l, r) == quantile(k, l, r));
-        assert (wm.range_frequency(l, r, value, another_value + 1) == range_frequency(l, r, value, another_value + 1));
-        {
-            int acc = 0;
-            wm.range_frequency_callback(l, r, value, another_value + 1, [&](uint64_t value, int count) {
-                acc += count;
-            });
-            assert (acc == range_frequency(l, r, value, another_value + 1));
-        }
-    }
-}
-unittest {
-    unittest_wavelet_matrix<3>(10);
-    unittest_wavelet_matrix<10>(100);
-    unittest_wavelet_matrix<10>(126);
-    unittest_wavelet_matrix<10>(127);
-    unittest_wavelet_matrix<10>(128);
-    unittest_wavelet_matrix<10>(129);
-    unittest_wavelet_matrix<63>(10000);
-}
