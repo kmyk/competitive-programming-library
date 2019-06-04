@@ -38,7 +38,9 @@
 -   `string/`
     -   [rolling hash](https://github.com/kmyk/competitive-programming-library/blob/master/string/rolling-hash.inc.cpp)
 -   `utils/`
-    -   [binary search](https://github.com/kmyk/competitive-programming-library/blob/master/utils/binsearch.inc.cpp)
+    -   [binary search](https://github.com/kmyk/competitive-programming-library/blob/master/utils/binary_search.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/utils/binary_search.unit.test.cpp)
+        -   [test (AOJ ALDS1_4_B)](https://github.com/kmyk/competitive-programming-library/tree/master/utils/binary_search.aoj.test.cpp)
 
 ## List of Frequently Used Algorithms / Data-Structures (Advanced)
 
