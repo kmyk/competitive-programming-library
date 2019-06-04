@@ -1,4 +1,4 @@
-# Kimiyuki's Competitive Programming Library
+# Competitive Programming Library
 
 [![Travis](https://img.shields.io/travis/kmyk/competitive-programming-library/master.svg)](https://travis-ci.org/kmyk/competitive-programming-library)
 ![License](https://img.shields.io/github/license/kmyk/competitive-programming-library.svg)
@@ -8,13 +8,21 @@
 -   [template.cpp](https://github.com/kmyk/competitive-programming-library/tree/master/template.cpp)
 -   `data_structure/`
     -   [union find tree](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/union_find_tree.hpp)
+        -   [test (AOJ DSL_1_A)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/union_find_tree.test.cpp)
     -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/segment_tree.hpp)
+        -   [test (AOJ DSL_2_B)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/dual_segment_tree.range_sum_query.test.cpp)
     -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/dual_segment_tree.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/dual_segment_tree.unit.test.cpp)
+        -   [test (AOJ DSL_2_D)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/dual_segment_tree.range_update_query.test.cpp)
     -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/lazy_propagation_segment_tree.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/lazy_propagation_segment_tree.unit.test.cpp)
+        -   [test (DSL_2_H)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/lazy_propagation_segment_tree.range_max_range_add.test.cpp)
     -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/convex_hull_trick.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/convex_hull_trick.test.cpp)
 -   `modulus/`
     -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
     -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/modulus/factorial.unit.test.cpp)
     -   [combination](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/choose.hpp)
 -   `number/`
     -   [gcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/gcd.inc.cpp)
@@ -50,7 +58,10 @@
     -   [suffix array](https://github.com/kmyk/competitive-programming-library/blob/master/string/suffix-array.inc.cpp)
 -   `data_structure/`
     -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sparse_table.inc.cpp)
+    -   [fully indexable dictionary](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/fully_indexable_dictionary.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/fully_indexable_dictionary.test.cpp)
     -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet_matrix.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/wavelet_matrix.test.cpp)
     -   [red black tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/red-black-tree.inc.cpp)
     -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/persistent-array.inc.cpp)
 
