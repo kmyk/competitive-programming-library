@@ -25,7 +25,8 @@
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/modulus/factorial.unit.test.cpp)
     -   [combination](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/choose.hpp)
 -   `number/`
-    -   [gcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/gcd.inc.cpp)
+    -   [gcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/gcd.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/number/gcd.test.cpp)
     -   [extgcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/extgcd.inc.cpp)
     -   [prime numbers](https://github.com/kmyk/competitive-programming-library/blob/master/number/primes.inc.cpp)
     -   [matrix](https://github.com/kmyk/competitive-programming-library/blob/master/number/matrix.inc.cpp)
@@ -59,7 +60,8 @@
     -   [Morris-Pratt algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/string/knuth-morris-pratt.inc.cpp)
     -   [suffix array](https://github.com/kmyk/competitive-programming-library/blob/master/string/suffix-array.inc.cpp)
 -   `data_structure/`
-    -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sparse_table.inc.cpp)
+    -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sparse_table.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/sparse_table.unit.test.cpp)
     -   [fully indexable dictionary](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/fully_indexable_dictionary.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/fully_indexable_dictionary.test.cpp)
     -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet_matrix.hpp)
