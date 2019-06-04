@@ -1,18 +1,28 @@
-/**
- * @note y = ax + b
- */
-struct line_t { ll a, b; };
-bool operator < (line_t lhs, line_t rhs) { return make_pair(- lhs.a, lhs.b) < make_pair(- rhs.a, rhs.b); }
-struct rational_t { ll num, den; };
-rational_t make_rational(ll num, ll den = 1) {
-    if (den < 0) { num *= -1; den *= -1; }
-    return { num, den };
+#pragma once
+#include <climits>
+#include <cstdint>
+#include <map>
+#include <set>
+#include <utility>
+
+
+namespace convex_hull_trick_details {
+    /**
+     * @note y = ax + b
+     */
+    struct line_t { int64_t a, b; };
+    bool operator < (line_t lhs, line_t rhs) {
+        return std::make_pair(- lhs.a, lhs.b) < std::make_pair(- rhs.a, rhs.b);
+    }
+
+    struct rational_t { int64_t num, den; };
+    bool operator < (rational_t lhs, rational_t rhs) {
+        if (lhs.num ==   INT64_MAX or rhs.num == - INT64_MAX) return false;
+        if (lhs.num == - INT64_MAX or rhs.num ==   INT64_MAX) return true;
+        return lhs.num * rhs.den < rhs.num * lhs.den;  // TODO: check overflow
+    }
 }
-bool operator < (rational_t lhs, rational_t rhs) {
-    if (lhs.num ==   LLONG_MAX or rhs.num == - LLONG_MAX) return false;
-    if (lhs.num == - LLONG_MAX or rhs.num ==   LLONG_MAX) return true;
-    return lhs.num * rhs.den < rhs.num * lhs.den;
-}
+
 
 /*
  * @sa http://d.hatena.ne.jp/sune2/20140310/1394440369
@@ -21,16 +31,24 @@ bool operator < (rational_t lhs, rational_t rhs) {
  * @sa http://wcipeg.com/wiki/Convex_hull_trick
  * @note verified at http://codeforces.com/contest/631/submission/31828502
  */
-struct convex_hull_trick {
+class convex_hull_trick {
+    typedef convex_hull_trick_details::line_t line_t;
+    typedef convex_hull_trick_details::rational_t rational_t;
+    static rational_t make_rational(int64_t num, int64_t den = 1) {
+        if (den < 0) { num *= -1; den *= -1; }
+        return { num, den };  // NOTE: no reduction
+    }
+
+public:
     convex_hull_trick() {
-        lines.insert({ + LLONG_MAX, 0 });  // sentinels
-        lines.insert({ - LLONG_MAX, 0 });
-        cross.emplace(make_rational(- LLONG_MAX), (line_t) { - LLONG_MAX, 0 });
+        lines.insert({ + INT64_MAX, 0 });  // sentinels
+        lines.insert({ - INT64_MAX, 0 });
+        cross.emplace(make_rational(- INT64_MAX), (line_t) { - INT64_MAX, 0 });
     }
     /**
      * @note O(log n)
      */
-    void add_line(ll a, ll b) {
+    void add_line(int64_t a, int64_t b) {
         auto it = lines.insert({ a, b }).first;
         if (not is_required(*prev(it), { a, b }, *next(it))) {
             lines.erase(it);
@@ -55,13 +73,14 @@ struct convex_hull_trick {
     /**
      * @note O(log n)
      */
-    ll get_min(ll x) const {
+    int64_t get_min(int64_t x) const {
         line_t f = prev(cross.lower_bound(make_rational(x)))->second;
         return f.a * x + f.b;
     }
+
 private:
-    set<line_t> lines;
-    map<rational_t, line_t> cross;
+    std::set<line_t> lines;
+    std::map<rational_t, line_t> cross;
     template <typename Iterator>
     void cross_erase(Iterator first, Iterator last) {
         for (; first != last; ++ first) {
@@ -69,42 +88,19 @@ private:
         }
     }
     rational_t cross_point(line_t f1, line_t f2) const {
-        if (f1.a ==   LLONG_MAX) return make_rational(- LLONG_MAX);
-        if (f2.a == - LLONG_MAX) return make_rational(  LLONG_MAX);
+        if (f1.a ==   INT64_MAX) return make_rational(- INT64_MAX);
+        if (f2.a == - INT64_MAX) return make_rational(  INT64_MAX);
         return make_rational(f1.b - f2.b, f2.a - f1.a);
     }
     bool is_required(line_t f1, line_t f2, line_t f3) const {
         if (f1.a == f2.a and f1.b <= f2.b) return false;
-        if (f1.a == LLONG_MAX or f3.a == - LLONG_MAX) return true;
+        if (f1.a == INT64_MAX or f3.a == - INT64_MAX) return true;
         return (f2.a - f1.a) * (f3.b - f2.b) < (f2.b - f1.b) * (f3.a - f2.a);
     }
 };
 
-unittest {
-    default_random_engine gen;
-    repeat (iteration, 1000) {
-        vector<pair<int, int> > lines;
-        convex_hull_trick cht;
-        repeat (i, 100) {
-            int a = uniform_int_distribution<int>(- 30, 30)(gen);
-            int b = uniform_int_distribution<int>(- 30, 30)(gen);
-            lines.emplace_back(a, b);
-            cht.add_line(a, b);
-        }
-        repeat (i, 10) {
-            int x = uniform_int_distribution<int>(- 100, 100)(gen);
-            int y = INT_MAX;
-            for (auto line : lines) {
-                int a, b; tie(a, b) = line;
-                setmin(y, a * x + b);
-            }
-            assert (cht.get_min(x) == y);
-        }
-    }
-}
-
 struct inverted_convex_hull_trick {
     convex_hull_trick data;
-    void add_line(ll a, ll b) { data.add_line(- a, - b); }
-    ll get_max(ll x) { return - data.get_min(x); }
+    void add_line(int64_t a, int64_t b) { data.add_line(- a, - b); }
+    int64_t get_max(int64_t x) { return - data.get_min(x); }
 };

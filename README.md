@@ -11,7 +11,7 @@
     -   [segment tree](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/segment_tree.hpp)
     -   [segment tree (dual)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/dual_segment_tree.hpp)
     -   [segment tree (lazy propagation)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/lazy_propagation_segment_tree.hpp)
-    -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/convex-hull-trick.inc.cpp)
+    -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/convex_hull_trick.hpp)
 -   `modulus/`
     -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
     -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.hpp)
