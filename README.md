@@ -70,6 +70,7 @@
     -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/persistent-array.inc.cpp)
     -   [link-cut tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/link_cut_tree.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/link_cut_tree.spaceships.test.cpp)
+        -   [test (Marked Ancestor)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/link_cut_tree.marked_ancestor.test.cpp)
 
 ## PDF version
 

@@ -145,9 +145,16 @@ public:
         return c == a ? result : -1;
     }
 
+#if 0  // not verified yet
     bool is_same_tree(int a, int b) {
         return get_lowest_common_ancestor(a, b) != -1;
     }
+
+    int get_parent(int a) {
+        splay(a);
+        return parent[a];
+    }
+#endif
 
     int get_root(int a) {
         access(a);
