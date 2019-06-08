@@ -4,8 +4,8 @@
 template <int32_t MOD>
 struct mint {
     int32_t value;
-    mint() = default;
-    mint(int32_t value_) : value(value_) {}
+    mint() : value() {}
+    mint(int64_t value_) : value(value_ < 0 ? value_ % MOD + MOD : value_ >= MOD ? value_ % MOD : value_) {}
     inline mint<MOD> operator + (mint<MOD> other) const { int32_t c = this->value + other.value; return mint<MOD>(c >= MOD ? c - MOD : c); }
     inline mint<MOD> operator - (mint<MOD> other) const { int32_t c = this->value - other.value; return mint<MOD>(c <    0 ? c + MOD : c); }
     inline mint<MOD> operator * (mint<MOD> other) const { int32_t c = (int64_t)this->value * other.value % MOD; return mint<MOD>(c < 0 ? c + MOD : c); }
@@ -28,5 +28,4 @@ struct mint {
     inline bool operator != (mint<MOD> other) const { return value != other.value; }
 };
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
-template <int32_t MOD> mint<MOD> operator * (int32_t value, mint<MOD> n) { return mint<MOD>(value % MOD) * n; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
