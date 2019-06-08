@@ -127,14 +127,14 @@ struct rolling_hash_cumulative_sum {
  * @note you should use something like cumulative sum
  */
 struct rolling_hash_monoid {
-    typedef struct { int length; rolling_hash hash; } underlying_type;
-    static underlying_type from_char(char c) {
+    typedef struct { int length; rolling_hash hash; } value_type;
+    static value_type from_char(char c) {
         return { 1, rolling_hash(c) };
     }
-    underlying_type unit() const {
+    value_type unit() const {
         return { 0, rolling_hash() };
     }
-    underlying_type append(underlying_type a, underlying_type const & b) const {
+    value_type append(value_type a, value_type const & b) const {
         if (a.length == 0) return b;
         if (b.length == 0) return a;
         return { a.length + b.length, (a.hash <<= b.length) += b.hash };

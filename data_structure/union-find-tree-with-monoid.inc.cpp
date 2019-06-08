@@ -1,10 +1,10 @@
 // NOTE: not verified
 template <class Monoid>
 struct union_find_tree_with_data {
-    typedef typename Monoid::underlying_type underlying_type;
+    typedef typename Monoid::value_type value_type;
     const Monoid mon;
     vector<int> data;
-    vector<underlying_type> value;
+    vector<value_type> value;
 
     union_find_tree_with_data() = default;
     explicit union_find_tree(size_t n, Monoid const & mon_) : mon(mon_), data(n, -1), value(n, mon.unit()) {}
@@ -22,6 +22,6 @@ struct union_find_tree_with_data {
         return i;
     }
     bool is_same(int i, int j) { return find_root(i) == find_root(j); }
-    underlying_type get_value(int i) { return value[find_root(i)]; }
-    void set_value(int i, underlying_type z) { value[find_root(i)] = z; }
+    value_type get_value(int i) { return value[find_root(i)]; }
+    void set_value(int i, value_type z) { value[find_root(i)] = z; }
 };

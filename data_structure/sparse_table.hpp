@@ -11,18 +11,18 @@
  */
 template <class Semilattice>
 struct sparse_table {
-    typedef typename Semilattice::underlying_type underlying_type;
-    std::vector<std::vector<underlying_type> > table;
+    typedef typename Semilattice::value_type value_type;
+    std::vector<std::vector<value_type> > table;
     Semilattice lat;
     sparse_table() = default;
     /**
      * @note O(N \log N) time
      */
-    sparse_table(std::vector<underlying_type> const & data, Semilattice const & a_lat = Semilattice())
+    sparse_table(std::vector<value_type> const & data, Semilattice const & a_lat = Semilattice())
             : lat(a_lat) {
         int n = data.size();
         int log_n = 32 - __builtin_clz(n);
-        table.resize(log_n, std::vector<underlying_type>(n));
+        table.resize(log_n, std::vector<value_type>(n));
         table[0] = data;
         REP (k, log_n - 1) {
             REP (i, n) {
@@ -35,7 +35,7 @@ struct sparse_table {
     /**
      * @note O(1)
      */
-    underlying_type range_concat(int l, int r) const {
+    value_type range_concat(int l, int r) const {
         if (l == r) return lat.unit();  // if there is no unit, remove this line
         assert (0 <= l and l < r and r <= table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
@@ -49,17 +49,17 @@ struct sparse_table {
 #include "number/gcd.hpp"
 
 struct max_semilattice {
-    typedef int underlying_type;
+    typedef int value_type;
     int unit() const { return INT_MIN; }
     int append(int a, int b) const { return std::max(a, b); }
 };
 struct min_semilattice {
-    typedef int underlying_type;
+    typedef int value_type;
     int unit() const { return INT_MAX; }
     int append(int a, int b) const { return std::min(a, b); }
 };
 struct gcd_semilattice {
-    typedef int underlying_type;
+    typedef int value_type;
     int unit() const { return 0; }
     int append(int a, int b) const { return gcd(a, b); }
 };

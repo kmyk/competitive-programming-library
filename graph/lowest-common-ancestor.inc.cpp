@@ -1,7 +1,7 @@
 struct indexed_min_monoid {
-    typedef pair<int, int> underlying_type;
-    underlying_type unit() const { return { INT_MAX, INT_MAX }; }
-    underlying_type append(underlying_type a, underlying_type b) const { return min(a, b); }
+    typedef pair<int, int> value_type;
+    value_type unit() const { return { INT_MAX, INT_MAX }; }
+    value_type append(value_type a, value_type b) const { return min(a, b); }
 };
 /**
  * @brief lowest common ancestor with \pm 1 RMQ and sparse table

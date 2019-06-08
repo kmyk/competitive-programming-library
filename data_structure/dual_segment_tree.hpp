@@ -5,20 +5,20 @@
 
 template <class OperatorMonoid>
 struct dual_segment_tree {
-    typedef typename OperatorMonoid::underlying_type operator_type;
-    typedef typename OperatorMonoid::target_type underlying_type;
+    typedef typename OperatorMonoid::value_type operator_type;
+    typedef typename OperatorMonoid::target_type value_type;
     int n;
     std::vector<operator_type> f;
-    std::vector<underlying_type> a;
+    std::vector<value_type> a;
     const OperatorMonoid op;
     dual_segment_tree() = default;
-    dual_segment_tree(int a_n, underlying_type initial_value, OperatorMonoid const & a_op = OperatorMonoid()) : op(a_op) {
+    dual_segment_tree(int a_n, value_type initial_value, OperatorMonoid const & a_op = OperatorMonoid()) : op(a_op) {
         n = 1; while (n < a_n) n *= 2;
         a.resize(n, initial_value);
         f.resize(n - 1, op.unit());
     }
-    underlying_type point_get(int i) { // 0-based
-        underlying_type acc = a[i];
+    value_type point_get(int i) { // 0-based
+        value_type acc = a[i];
         for (i = (i + n) / 2; i > 0; i /= 2) { // 1-based
             acc = op.apply(f[i - 1], acc);
         }
@@ -45,7 +45,7 @@ struct dual_segment_tree {
             range_apply(2 * i + 2, (il + ir) / 2, ir, l, r, z);
         }
     }
-    void point_set(int i, underlying_type z) {
+    void point_set(int i, value_type z) {
         range_apply(i, i + 1, op.unit());  // to flush lazed ops
         a[i + n - 1] = z;  // bug??
     }
@@ -57,30 +57,30 @@ struct dual_segment_tree {
 
 template <typename T> 
 struct const_operator_monoid {
-    // typedef std::optional<T> underlying_type;
-    typedef std::pair<bool, T> underlying_type;
+    // typedef std::optional<T> value_type;
+    typedef std::pair<bool, T> value_type;
     typedef T target_type;
-    underlying_type unit() const { return std::make_pair(false, target_type()); }
-    underlying_type append(underlying_type a, underlying_type b) const { return a.first ? a : b; }
-    target_type apply(underlying_type a, target_type b) const { return a.first ? a.second : b; }
+    value_type unit() const { return std::make_pair(false, target_type()); }
+    value_type append(value_type a, value_type b) const { return a.first ? a : b; }
+    target_type apply(value_type a, target_type b) const { return a.first ? a.second : b; }
 };
 
 struct plus_operator_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     typedef int target_type;
     int unit() const { return 0; }
     int append(int a, int b) const { return a + b; }
     int apply(int a, int b) const { return a + b; }
 };
 struct max_operator_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     typedef int target_type;
     int unit() const { return INT_MIN; }
     int append(int a, int b) const { return std::max(a, b); }
     int apply(int a, int b) const { return std::max(a, b); }
 };
 struct min_operator_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     typedef int target_type;
     int unit() const { return INT_MAX; }
     int append(int a, int b) const { return std::min(a, b); }
@@ -89,18 +89,18 @@ struct min_operator_monoid {
 
 template <int MOD>
 struct linear_operator_monoid {
-    typedef std::pair<int64_t, int64_t> underlying_type;
+    typedef std::pair<int64_t, int64_t> value_type;
     typedef int64_t target_type;
     linear_operator_monoid() = default;
-    underlying_type unit() const {
+    value_type unit() const {
         return std::make_pair(1, 0);
     }
-    underlying_type append(underlying_type g, underlying_type f) const {
+    value_type append(value_type g, value_type f) const {
         target_type fst = g.first * f.first % MOD;
         target_type snd = (g.second + g.first * f.second) % MOD;
         return std::make_pair(fst, snd);
     }
-    target_type apply(underlying_type f, target_type x) const {
+    target_type apply(value_type f, target_type x) const {
         return (f.first * x + f.second) % MOD;
     }
 };

@@ -3,13 +3,13 @@
  */
 template <class Monoid, class OperatorMonoid>
 class lazy_propagation_red_black_tree {
-    typedef typename Monoid::underlying_type underlying_type;
-    typedef typename OperatorMonoid::underlying_type operator_type;
+    typedef typename Monoid::value_type value_type;
+    typedef typename OperatorMonoid::value_type operator_type;
 
     enum color_t { BLACK, RED };
     struct node_t {
         bool is_leaf;
-        underlying_type data;
+        value_type data;
         operator_type lazy;  // NOTE: this->lazy is already applied to this->data
         bool reversed;
         color_t color;
@@ -18,7 +18,7 @@ class lazy_propagation_red_black_tree {
         node_t *left;
         node_t *right;
         node_t() = default;
-        node_t(underlying_type const & a_data)
+        node_t(value_type const & a_data)
                 : is_leaf(true)
                 , data(a_data)
                 , color(BLACK)
@@ -191,7 +191,7 @@ class lazy_propagation_red_black_tree {
         a->data = op.apply(a->lazy, mon.append(a->left->data, a->right->data));
     }
 
-    static underlying_type range_concat(node_t *a, int l, int r) {
+    static value_type range_concat(node_t *a, int l, int r) {
         assert (l < r);
         if (l == 0 and r == a->size) return a->data;
         assert (not a->is_leaf);
@@ -217,7 +217,7 @@ class lazy_propagation_red_black_tree {
         return merge(merge(bl, bm), br);
     }
 
-    static void point_set(node_t *a, int i, underlying_type const & value) {
+    static void point_set(node_t *a, int i, value_type const & value) {
         if (a->is_leaf) {
             assert (i == 0);
             a->data = value;
@@ -233,7 +233,7 @@ class lazy_propagation_red_black_tree {
         }
     }
 
-    static underlying_type & point_get(node_t *a, int i) {
+    static value_type & point_get(node_t *a, int i) {
         if (a->is_leaf) {
             assert (i == 0);
             return a->data;
@@ -269,7 +269,7 @@ public:
         return make_pair( lazy_propagation_red_black_tree(l), lazy_propagation_red_black_tree(r) );
     }
 
-    void insert(int i, underlying_type const & data) {
+    void insert(int i, value_type const & data) {
         assert (0 <= i and i <= size());
         if (empty()) {
             root.reset(new node_t(data));
@@ -287,11 +287,11 @@ public:
         root.reset( merge(l, r) );
     }
 
-    void point_set(int i, underlying_type const & value) {
+    void point_set(int i, value_type const & value) {
         assert (0 <= i and i < size());
         point_set(root.get(), i, value);
     }
-    underlying_type const & point_get(int i) const {
+    value_type const & point_get(int i) const {
         assert (0 <= i and i < size());
         return point_get(const_cast<node_t *>(root.get()), i);
     }
@@ -301,7 +301,7 @@ public:
         if (l == r) return;
         range_apply(root.get(), l, r, func);
     }
-    underlying_type const range_concat(int l, int r) const {
+    value_type const range_concat(int l, int r) const {
         assert (0 <= l and l <= r and r <= size());
         if (l == r) return Monoid().unit();
         return range_concat(const_cast<node_t *>(root.get()), l, r);
@@ -312,10 +312,10 @@ public:
         root.reset( reverse(root.release(), l, r) );
     }
 
-    void push_back(underlying_type const & data) {
+    void push_back(value_type const & data) {
         root.reset( merge(root.release(), new node_t(data)) );
     }
-    void push_front(underlying_type const & data) {
+    void push_front(value_type const & data) {
         root.reset( merge(new node_t(data), root.release()) );
     }
     void pop_back() {
@@ -341,16 +341,16 @@ public:
 };
 
 struct max_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     int unit() const { return INT_MIN; }
     int append(int a, int b) const { return max(a, b); }
 };
 struct plus_operator_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     typedef int target_type;
     int identity() const { return 0; }
-    int apply(underlying_type a, target_type b) const { return a + b; }
-    int compose(underlying_type a, underlying_type b) const { return a + b; }
+    int apply(value_type a, target_type b) const { return a + b; }
+    int compose(value_type a, value_type b) const { return a + b; }
 };
 typedef lazy_propagation_red_black_tree<max_monoid, plus_operator_monoid> red_black_starry_sky_tree;
 

@@ -3,13 +3,13 @@
  */
 template <class CommutativeMonoid>
 struct segment_tree_2d {
-    typedef typename CommutativeMonoid::underlying_type underlying_type;
+    typedef typename CommutativeMonoid::value_type value_type;
     int h1, w1;
     int h, w;
-    vector<underlying_type> data;
+    vector<value_type> data;
     CommutativeMonoid mon;
     segment_tree_2d() = default;
-    segment_tree_2d(int h_, int w_, underlying_type initial_value = CommutativeMonoid().unit(), CommutativeMonoid const & mon_ = CommutativeMonoid())
+    segment_tree_2d(int h_, int w_, value_type initial_value = CommutativeMonoid().unit(), CommutativeMonoid const & mon_ = CommutativeMonoid())
             : h1(h_), w1(w_), mon(mon_) {
         h = pow(2, ceil(log2(h_)));
         w = pow(2, ceil(log2(w_)));
@@ -28,16 +28,16 @@ struct segment_tree_2d {
             }
         }
     }
-    inline underlying_type & at(int y, int x) {
+    inline value_type & at(int y, int x) {
         return data[y * (2 * w - 1) + x];
     }
-    inline underlying_type const & at(int y, int x) const {
+    inline value_type const & at(int y, int x) const {
         return data[y * (2 * w - 1) + x];
     }
     /**
      * @note O(log h * log w)
      */
-    void point_set(int y, int x, underlying_type value) {
+    void point_set(int y, int x, value_type value) {
         assert (0 <= y and y < h1 and 0 <= x and x < w1);
         for (int i = y + h; i > 0; i /= 2) {  // 1-based
             for (int j = x + w; j > 0; j /= 2) {  // 1-based
@@ -58,12 +58,12 @@ struct segment_tree_2d {
     /**
      * @note O(log h * log w)
      */
-    underlying_type area_concat(int ly, int lx, int ry, int rx) const {
+    value_type area_concat(int ly, int lx, int ry, int rx) const {
         assert (0 <= ly and ly <= ry and ry <= h1);
         assert (0 <= lx and lx <= rx and rx <= w1);
         return area_concat(0, 0, 0, 0, h, w, false, ly, lx, ry, rx);
     }
-    underlying_type area_concat(int i, int j, int ily, int jlx, int iry, int jrx, bool p, int ly, int lx, int ry, int rx) const {
+    value_type area_concat(int i, int j, int ily, int jlx, int iry, int jrx, bool p, int ly, int lx, int ry, int rx) const {
         if (iry <= ly or ry <= ily or jrx <= lx or rx <= jlx) {
             return mon.unit();
         } else if (ly <= ily and iry <= ry and lx <= jlx and jrx <= rx) {
@@ -81,8 +81,8 @@ struct segment_tree_2d {
     /**
      * @note call area_concat O((ry - ly) / h * (rx - lx) / w) times
      */
-    underlying_type area_concat_torus(int ly, int lx, int ry, int rx) const {
-        underlying_type acc = mon.unit();
+    value_type area_concat_torus(int ly, int lx, int ry, int rx) const {
+        value_type acc = mon.unit();
         while (ly < 0) { ly += h1; ry += h1; }
         while (lx < 0) { lx += w1; rx += w1; }
         for (int bi = ly / h1; bi <= (ry - 1) / h1; ++ bi) {
@@ -99,13 +99,13 @@ struct segment_tree_2d {
 };
 
 struct max_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     int unit() const { return INT_MIN; }
     int append(int a, int b) const { return max(a, b); }
 };
 
 struct plus_monoid {
-    typedef int underlying_type;
+    typedef int value_type;
     int unit() const { return 0; }
     int append(int a, int b) const { return a + b; }
 };

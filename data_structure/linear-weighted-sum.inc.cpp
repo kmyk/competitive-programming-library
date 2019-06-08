@@ -35,23 +35,23 @@ struct linear_weighted_plus_monoid {
     typedef struct {
         int l, r;
         ll sum, weighted_sum;
-    } underlying_type;
-    static underlying_type make(int i, ll value) {
-        underlying_type a;
+    } value_type;
+    static value_type make(int i, ll value) {
+        value_type a;
         a.l = i;
         a.r = i + 1;
         a.sum = value;
         a.weighted_sum = 0;
         return a;
     }
-    underlying_type unit() const {
+    value_type unit() const {
         return make(-1, 0);
     }
-    underlying_type append(underlying_type a, underlying_type b) const {
+    value_type append(value_type a, value_type b) const {
         if (a.l == -1) return b;
         if (b.l == -1) return a;
         assert (a.r == b.l);
-        underlying_type c;
+        value_type c;
         c.l = a.l;
         c.r = b.r;
         c.sum = a.sum + b.sum;

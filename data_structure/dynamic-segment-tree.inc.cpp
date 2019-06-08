@@ -6,10 +6,10 @@
 template <class Monoid>
 struct dynamic_segment_tree { // on monoid
     typedef Monoid monoid_type;
-    typedef typename Monoid::underlying_type underlying_type;
+    typedef typename Monoid::value_type value_type;
     struct node_t {
         int left, right; // indices on pool
-        underlying_type value;
+        value_type value;
     };
     deque<node_t> pool;
     stack<int> bin;
@@ -44,11 +44,11 @@ protected:
         ptr = i;
         return i;
     }
-    underlying_type get_value(int i) {
+    value_type get_value(int i) {
         return i == -1 ? mon.unit() : pool[i].value;
     }
 public:
-    void point_set(ll i, underlying_type z) {
+    void point_set(ll i, value_type z) {
         assert (0 <= i);
         while (width <= i) {
             node_t node = { root, -1, pool[root].value };
@@ -58,7 +58,7 @@ public:
         }
         point_set(root, -1, false, 0, width, i, z);
     }
-    void point_set(int i, int parent, bool is_right, ll il, ll ir, ll j, underlying_type z) {
+    void point_set(int i, int parent, bool is_right, ll il, ll ir, ll j, value_type z) {
         if (il == j and ir == j + 1) { // 0-based
             if (i == -1) {
                 i = create_node(parent, is_right);
@@ -101,12 +101,12 @@ public:
             }
         }
     }
-    underlying_type range_concat(ll l, ll r) {
+    value_type range_concat(ll l, ll r) {
         assert (0 <= l and l <= r);
         if (width <= l) return mon.unit();
         return range_concat(root, 0, width, l, min(width, r));
     }
-    underlying_type range_concat(int i, ll il, ll ir, ll l, ll r) {
+    value_type range_concat(int i, ll il, ll ir, ll l, ll r) {
         if (i == -1) return mon.unit();
         if (l <= il and ir <= r) { // 0-based
             return pool[i].value;
