@@ -159,7 +159,7 @@ struct prepared_primes {
         return prime_factorize(n).size() == 1;
     }
 
-    vector<ll> all_factorize(ll n) {
+    vector<ll> list_all_factors(ll n) {
         auto p = prime_factorize(n);
         vector<ll> d;
         d.push_back(1);

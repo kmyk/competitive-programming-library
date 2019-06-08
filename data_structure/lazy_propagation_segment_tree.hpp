@@ -143,6 +143,7 @@ struct modplus_length_monoid {
     typedef std::pair<mint<MOD>, int> underlying_type;
     underlying_type unit() const { return std::make_pair(0, 0); }
     underlying_type append(underlying_type a, underlying_type b) const { return std::make_pair(a.first + b.first, a.second + b.second); }
+    static underlying_type make(mint<MOD> a) { return std::make_pair(a, 1); }
 };
 template <int32_t MOD>
 struct modular_linear_operator_monoid {
