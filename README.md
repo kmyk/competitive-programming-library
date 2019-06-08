@@ -68,6 +68,8 @@
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/wavelet_matrix.test.cpp)
     -   [red black tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/red-black-tree.inc.cpp)
     -   [persistent array](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/persistent-array.inc.cpp)
+    -   [link-cut tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/link_cut_tree.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/link_cut_tree.spaceships.test.cpp)
 
 ## PDF version
 
