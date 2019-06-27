@@ -1,4 +1,6 @@
 #pragma once
+#include <algorithm>
+#include <cassert>
 #include <iostream>
 
 template <int32_t MOD>
@@ -21,7 +23,20 @@ struct mint {
         }
         return y;
     }
-    mint<MOD> inv() const { return pow(MOD - 2); }  // MOD must be a prime
+    mint<MOD> inv() const {
+        assert (value != 0);
+        int64_t a = value, b = MOD;
+        int64_t x = 0, y = 1;
+        for (int64_t u = 1, v = 0; a; ) {
+            int64_t q = b / a;
+            x -= q * u; std::swap(x, u);
+            y -= q * v; std::swap(y, v);
+            b -= q * a; std::swap(b, a);
+        }
+        assert (value * x + MOD * y == b);
+        assert (b == 1);
+        return x;
+    }
     inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
     inline mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
     inline bool operator == (mint<MOD> other) const { return value == other.value; }
