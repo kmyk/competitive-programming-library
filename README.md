@@ -75,3 +75,7 @@
 ## PDF version
 
 [PDF](https://raw.githubusercontent.com/kmyk/competitive-programming-library/master/library.pdf) for ICPC
+
+## License
+
+Licensed under MIT License, but you can use this library without the copyright notice in your submissions for online judges.
