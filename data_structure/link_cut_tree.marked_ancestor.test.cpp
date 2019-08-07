@@ -1,4 +1,4 @@
-#define PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp"
 #include <iostream>
 #include "data_structure/link_cut_tree.hpp"
 #include "utils/macros.hpp"
