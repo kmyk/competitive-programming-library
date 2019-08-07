@@ -40,7 +40,9 @@ mark-verified() {
 
 list-recently-updated() {
     for file in $(find . -name \*.test.cpp) ; do
-        list-dependencies "$file" | xargs -I '{}' find "$file" '{}' -printf "%T+\t${file}\n" | sort -nr | head -n 1
+        list-dependencies "$file" | xargs -n 1 | while read f ; do
+            git log -1 --format="%ci	${file}" "$f"
+        done | sort -nr | head -n 1
     done | sort -nr | head -n 20 | cut -f 2
 }
 
