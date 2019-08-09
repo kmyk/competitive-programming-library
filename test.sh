@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-# you can install oj with: $ pip3 install --user -U online-judge-tools=='6.*'
-which oj > /dev/null
+which oj > /dev/null || { echo 'ERROR: please install `oj'\'' with: $ pip3 install --user -U online-judge-tools=='\''6.*'\''' >& 1 ; exit 1 ; }
 
 CXX=${CXX:-g++}
 CXXFLAGS="${CXXFLAGS:--std=c++14 -O2 -Wall -g}"
@@ -77,7 +76,17 @@ run() {
 }
 
 
-if [[ $# -eq 0 ]] ; then
+if [[ $# -eq 1 && ( $1 = -h || $1 = --help || $1 = -? ) ]] ; then
+    echo Usage: $0 '[FILE ...]'
+    echo 'Compile and Run specified C++ code.'
+    echo 'If the given code contains macro like `#define PROBLEM "https://..."'\'', Download test cases of the problem and Test with them.'
+    echo
+    echo 'Features:'
+    echo '-   glob files with "**/*.test.cpp" if no arguments given.'
+    echo '-   cache results of tests, analyze "#include <...>" relations, and execute tests if and only if necessary.'
+    echo '-   on CI environment (i.e. $CI is defined), only recently modified files are tested (without cache).'
+
+elif [[ $# -eq 0 ]] ; then
     if [[ $CI ]] ; then
         # CI
         for f in $(list-recently-updated) ; do
