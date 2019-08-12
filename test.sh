@@ -47,6 +47,8 @@ list-recently-updated() {
 
 run() {
     file="$1"
+    echo "$ ./test.sh $file"
+
     url="$(get-url "$file")"
     dir=test/$(echo -n "$url" | md5sum | sed 's/ .*//')
     mkdir -p ${dir}
@@ -61,14 +63,17 @@ run() {
         $CXX $CXXFLAGS -I . -o ${dir}/a.out "$file"
         if [[ -n ${url} ]] ; then
             # download
+            echo "$ oj d -a $url"
             if [[ ! -e ${dir}/test ]] ; then
                 sleep 2
                 oj download --system "$url" -d ${dir}/test
             fi
             # test
+            echo '$ oj t'
             oj test -c ${dir}/a.out -d ${dir}/test
         else
             # run
+            echo "$ ./a.out"
             ${dir}/a.out
         fi
         mark-verified "$file"
