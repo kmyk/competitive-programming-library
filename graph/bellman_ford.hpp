@@ -1,4 +1,5 @@
 #pragma once
+#include <cassert>
 #include <climits>
 #include <cstdint>
 #include <stack>
@@ -15,6 +16,7 @@
  * @note INT64_MAX for unreachable nodes
  */
 std::vector<int64_t> bellman_ford_shortest_path(int root, std::vector<std::vector<std::pair<int, int64_t> > > const & g) {
+    assert (not g.empty());
     int n = g.size();
     std::vector<int64_t> dist(n, INT64_MAX);
 

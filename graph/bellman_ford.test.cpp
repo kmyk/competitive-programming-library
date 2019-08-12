@@ -1,5 +1,11 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B"
+#ifdef USE_SPFA
+#include "graph/shortest_path_faster_algorithm.hpp"
+auto BELLMAN_FORD = shortest_path_faster_algorithm;
+#else
 #include "graph/bellman_ford.hpp"
+auto BELLMAN_FORD = bellman_ford_shortest_path;
+#endif
 
 #include <algorithm>
 #include <iostream>
@@ -16,7 +22,7 @@ int main() {
     }
 
     // solve
-    auto dist = bellman_ford_shortest_path(root, g);
+    auto dist = BELLMAN_FORD(root, g);
 
     // output
     if (count(ALL(dist), LLONG_MIN)) {
