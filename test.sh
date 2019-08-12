@@ -74,7 +74,7 @@ run() {
         else
             # run
             echo "$ ./a.out"
-            ${dir}/a.out
+            time ${dir}/a.out
         fi
         mark-verified "$file"
     fi
