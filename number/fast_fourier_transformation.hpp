@@ -8,29 +8,43 @@
 
 /**
  * @note O(N log N)
+ * @note radix-2, decimation-in-frequency, Cooley-Tukey
+ * @note cache std::polar (~ 2x faster)
  */
 template <typename R>
-void fft_inplace(std::vector<std::complex<R> > & f, int dir) {
-    int n = f.size();
+void fft_inplace(std::vector<std::complex<R> > & f, bool inverse) {
+    const int n = f.size();
     assert (n == pow(2, log2(n)));
-    R theta = dir * 2 * M_PI / n;
-    for (int m = n; m >= 2; m >>= 1) {
-        REP (i, m / 2) {
-            std::complex<R> w = std::polar<R>(1, i * theta);
-            for (int j = i; j < n; j += m) {
-                int k = j + m / 2;
+
+    // cache
+    static std::vector<std::complex<R> > cache;
+    if ((int)cache.size() != n / 2) {
+        const R theta = 2 * M_PI / n;
+        cache.resize(n / 2);
+        REP (irev, n / 2) {
+            cache[irev] = std::polar<R>(1, irev * theta);
+        }
+    }
+
+    // bit reverse
+    int i = 0;
+    REP3 (j, 1, n - 1) {
+        for (int k = n >> 1; (i ^= k) < k; k >>= 1);
+        if (j < i) swap(f[i], f[j]);
+    }
+
+    // divide and conquer
+    for (int mh = 1; (mh << 1) <= n; mh <<= 1) {
+        int irev = 0;
+        for (int i = 0; i < n; i += (mh << 1)) {
+            auto w = (inverse ? conj(cache[irev]) : cache[irev]);
+            for (int k = n >> 2; (irev ^= k) < k; k >>= 1);
+            REP3 (j, i, mh + i) {
+                int k = j + mh;
                 std::complex<R> x = f[j] - f[k];
                 f[j] += f[k];
                 f[k] = w * x;
             }
-        }
-        theta *= 2;
-    }
-    int i = 0;
-    REP3 (j, 1, n - 1) {
-        for (int k = n >> 1; k > (i ^= k); ) k >>= 1;
-        if (j < i) {
-            std::swap(f[i], f[j]);
         }
     }
 }
@@ -60,13 +74,13 @@ std::vector<T> convolution(std::vector<T> const & a, std::vector<T> const & b) {
     std::vector<std::complex<R> > x(n), y(n);
     copy(ALL(a), x.begin());
     copy(ALL(b), y.begin());
-    fft_inplace(x, +1);
-    fft_inplace(y, +1);
+    fft_inplace(x, false);
+    fft_inplace(y, false);
     std::vector<std::complex<R> > z(n);
     REP (i, n) {
         z[i] = x[i] * y[i];
     }
-    fft_inplace(z, -1);
+    fft_inplace(z, true);
     std::vector<T> c(m);
     REP (i, m) {
         c[i] = std::is_integral<T>::value ? round(z[i].real() / n) : z[i].real() / n;
