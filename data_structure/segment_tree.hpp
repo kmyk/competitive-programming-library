@@ -44,16 +44,16 @@ struct segment_tree {
 
 struct plus_monoid {
     typedef int value_type;
-    int unit() const { return 0; }
-    int append(int a, int b) const { return a + b; }
+    value_type unit() const { return 0; }
+    value_type append(value_type a, value_type b) const { return a + b; }
 };
 struct max_monoid {
     typedef int value_type;
-    int unit() const { return INT_MIN; }
-    int append(int a, int b) const { return std::max(a, b); }
+    value_type unit() const { return INT_MIN; }
+    value_type append(value_type a, value_type b) const { return std::max(a, b); }
 };
 struct min_monoid {
     typedef int value_type;
-    int unit() const { return INT_MAX; }
-    int append(int a, int b) const { return std::min(a, b); }
+    value_type unit() const { return INT_MAX; }
+    value_type append(value_type a, value_type b) const { return std::min(a, b); }
 };

@@ -55,7 +55,7 @@ struct dual_segment_tree {
 #include <climits>
 #include <utility>
 
-template <typename T> 
+template <typename T>
 struct const_operator_monoid {
     // typedef std::optional<T> value_type;
     typedef std::pair<bool, T> value_type;
@@ -68,23 +68,23 @@ struct const_operator_monoid {
 struct plus_operator_monoid {
     typedef int value_type;
     typedef int target_type;
-    int unit() const { return 0; }
-    int append(int a, int b) const { return a + b; }
-    int apply(int a, int b) const { return a + b; }
+    value_type unit() const { return 0; }
+    value_type append(value_type a, value_type b) const { return a + b; }
+    target_type apply(value_type a, target_type b) const { return a + b; }
 };
 struct max_operator_monoid {
     typedef int value_type;
     typedef int target_type;
-    int unit() const { return INT_MIN; }
-    int append(int a, int b) const { return std::max(a, b); }
-    int apply(int a, int b) const { return std::max(a, b); }
+    value_type unit() const { return INT_MIN; }
+    value_type append(value_type a, value_type b) const { return std::max(a, b); }
+    target_type apply(value_type a, target_type b) const { return std::max(a, b); }
 };
 struct min_operator_monoid {
     typedef int value_type;
     typedef int target_type;
-    int unit() const { return INT_MAX; }
-    int append(int a, int b) const { return std::min(a, b); }
-    int apply(int a, int b) const { return std::min(a, b); }
+    value_type unit() const { return INT_MAX; }
+    value_type append(value_type a, value_type b) const { return std::min(a, b); }
+    target_type apply(value_type a, target_type b) const { return std::min(a, b); }
 };
 
 template <int MOD>
@@ -96,8 +96,8 @@ struct linear_operator_monoid {
         return std::make_pair(1, 0);
     }
     value_type append(value_type g, value_type f) const {
-        target_type fst = g.first * f.first % MOD;
-        target_type snd = (g.second + g.first * f.second) % MOD;
+        int64_t fst = g.first * f.first % MOD;
+        int64_t snd = (g.second + g.first * f.second) % MOD;
         return std::make_pair(fst, snd);
     }
     target_type apply(value_type f, target_type x) const {
