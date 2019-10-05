@@ -142,6 +142,7 @@ struct rolling_hash_monoid {
 };
 
 constexpr uint64_t prime = 1000000000000037;  // if you didn't shift
+constexpr uint64_t base = 1009;
 constexpr uint64_t prime = 1000000007;
 constexpr uint64_t base = 10007;
 uint64_t rolling_hash_push(uint64_t hash, int c) {

@@ -48,16 +48,17 @@ void fft_inplace(std::vector<std::complex<R> > & f, bool inverse) {
         }
     }
 }
+
 template <typename R>
 std::vector<std::complex<R> > fft(std::vector<std::complex<R> > f) {
     f.resize(pow(2, ceil(log2(f.size()))));
-    fft_inplace(f, +1);
+    fft_inplace(f, false);
     return f;
 }
 template <typename R>
 std::vector<std::complex<R> > ifft(std::vector<std::complex<R> > f) {
     f.resize(pow(2, ceil(log2(f.size()))));
-    fft_inplace(f, -1);
+    fft_inplace(f, true);
     return f;
 }
 
