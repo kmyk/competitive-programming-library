@@ -50,6 +50,8 @@
     -   [factorial (embedding)](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial-embed.inc.cpp)
 -   `number/`
     -   [Miller-Rabin](https://github.com/kmyk/competitive-programming-library/blob/master/number/miller-rabin.inc.cpp)
+    -   [number theoretic transformation](https://github.com/kmyk/competitive-programming-library/blob/master/number/number_theoretic_transformation.hpp)
+        -   [test (judge.yosupo.jp)](https://github.com/kmyk/competitive-programming-library/blob/master/number/number_theoretic_transformation.test.cpp)
 -   `graph/`
     -   [centroid decomposition](https://github.com/kmyk/competitive-programming-library/blob/master/graph/centroid-decomposition.inc.cpp)
     -   [strongly connected components decomposition](https://github.com/kmyk/competitive-programming-library/blob/master/graph/strongly_connected_components.cpp)
