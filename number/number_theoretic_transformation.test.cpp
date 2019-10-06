@@ -1,7 +1,7 @@
 #include "number/number_theoretic_transformation.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
 
-#include <iostream>
+#include <cstdio>
 #include <vector>
 #include "utils/macros.hpp"
 using namespace std;
@@ -12,11 +12,11 @@ int main() {
     int n, m; cin >> n >> m;
     vector<mint<MOD> > a(n);
     REP (i, n) {
-        cin >> a[i];
+        scanf("%d", &a[i].value);
     }
     vector<mint<MOD> > b(m);
     REP (j, m) {
-        cin >> b[j];
+        scanf("%d", &b[j].value);
     }
 
     // solve
@@ -24,9 +24,8 @@ int main() {
 
     // output
     REP (i, n + m - 1) {
-        if (i) cout << ' ';
-        cout << c[i];
+        printf("%d ", c[i].value);
     }
-    cout << endl;
+    printf("\n");
     return 0;
 }
