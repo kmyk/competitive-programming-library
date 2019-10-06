@@ -3,6 +3,31 @@
 #include <cassert>
 #include <iostream>
 
+inline int32_t modpow(int64_t x, uint64_t k, int32_t MOD) {
+    assert (0 <= x and x < MOD);
+    int64_t y = 1;
+    for (; k; k >>= 1) {
+        if (k & 1) (y *= x) %= MOD;
+        (x *= x) %= MOD;
+    }
+    return y;
+}
+inline int32_t modinv(int32_t value, int32_t MOD) {
+    assert (0 <= value and value < MOD);
+    assert (value != 0);
+    int64_t a = value, b = MOD;
+    int64_t x = 0, y = 1;
+    for (int64_t u = 1, v = 0; a; ) {
+        int64_t q = b / a;
+        x -= q * u; std::swap(x, u);
+        y -= q * v; std::swap(y, v);
+        b -= q * a; std::swap(b, a);
+    }
+    assert (value * x + MOD * y == b);
+    assert (b == 1);
+    return x;
+}
+
 template <int32_t MOD>
 struct mint {
     int32_t value;
@@ -15,28 +40,8 @@ struct mint {
     inline mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
     inline mint<MOD> & operator *= (mint<MOD> other) { this->value = (int64_t)this->value * other.value % MOD; if (this->value < 0) this->value += MOD; return *this; }
     inline mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0); }
-    mint<MOD> pow(uint64_t k) const {
-        mint<MOD> x = *this, y = 1;
-        for (; k; k >>= 1) {
-            if (k & 1) y *= x;
-            x *= x;
-        }
-        return y;
-    }
-    mint<MOD> inv() const {
-        assert (value != 0);
-        int64_t a = value, b = MOD;
-        int64_t x = 0, y = 1;
-        for (int64_t u = 1, v = 0; a; ) {
-            int64_t q = b / a;
-            x -= q * u; std::swap(x, u);
-            y -= q * v; std::swap(y, v);
-            b -= q * a; std::swap(b, a);
-        }
-        assert (value * x + MOD * y == b);
-        assert (b == 1);
-        return x;
-    }
+    inline mint<MOD> pow(uint64_t k) const { return modpow(value, k, MOD); }
+    inline mint<MOD> inv() const { return modinv(value, MOD); }
     inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
     inline mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
     inline bool operator == (mint<MOD> other) const { return value == other.value; }

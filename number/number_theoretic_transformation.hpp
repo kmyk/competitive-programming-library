@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
+#include <tuple>
 #include <vector>
 #include "modulus/mint.hpp"
 #include "utils/macros.hpp"
@@ -90,13 +91,13 @@ void ntt_inplace(std::vector<mint<PRIME> > & f, bool inverse) {
 template <int32_t PRIME>
 std::vector<mint<PRIME> > ntt(std::vector<mint<PRIME> > f) {
     f.resize(f.size() == 1 ? 1 : 1 << (32 - __builtin_clz(f.size() - 1)));
-    fft_inplace(f, false);
+    ntt_inplace(f, false);
     return f;
 }
 template <int32_t PRIME>
 std::vector<mint<PRIME> > intt(std::vector<mint<PRIME> > f) {
     f.resize(f.size() == 1 ? 1 : 1 << (32 - __builtin_clz(f.size() - 1)));
-    fft_inplace(f, true);
+    ntt_inplace(f, true);
     return f;
 }
 
@@ -119,4 +120,62 @@ std::vector<mint<PRIME> > convolution(std::vector<mint<PRIME> > a, std::vector<m
     }
     ntt_inplace(a, true);
     return a;
+}
+
+/*
+ * @arg eqns is equations like x = a_i (mod m_i)
+ * @return the minimal solution of given equations
+ */
+int32_t garner_algorithm(std::vector<std::pair<int32_t, int32_t> > eqns, int32_t MOD) {
+    eqns.emplace_back(0, MOD);
+    std::vector<int64_t> k(eqns.size(), 1);
+    std::vector<int64_t> c(eqns.size(), 0);
+    REP (i, eqns.size() - 1) {
+        int32_t a_i, m_i; std::tie(a_i, m_i) = eqns[i];
+
+        int32_t x = (a_i - c[i]) * modinv(k[i], m_i) % m_i;
+        if (x < 0) x += m_i;
+        assert (a_i == (k[i] * x + c[i]) % m_i);
+
+        REP3 (j, i + 1, eqns.size()) {
+            int32_t a_j, m_j; std::tie(a_j, m_j) = eqns[j];
+            (c[j] += k[j] * x) %= m_j;
+            (k[j] *= m_i) %= m_j;
+        }
+    }
+    return c.back();
+}
+
+template <int32_t MOD>
+std::vector<mint<MOD> > convolution_arbitrary_modulo(const std::vector<mint<MOD> > & a, const std::vector<mint<MOD> > & b) {
+    constexpr int PRIMES[3] = { 1224736769, 998244353, 985661441 };
+    std::vector<mint<PRIMES[0]> > x0(a.size());
+    std::vector<mint<PRIMES[1]> > x1(a.size());
+    std::vector<mint<PRIMES[2]> > x2(a.size());
+    REP (i, a.size()) {
+        x0[i] = a[i].value;
+        x1[i] = a[i].value;
+        x2[i] = a[i].value;
+    }
+    std::vector<mint<PRIMES[0]> > y0(b.size());
+    std::vector<mint<PRIMES[1]> > y1(b.size());
+    std::vector<mint<PRIMES[2]> > y2(b.size());
+    REP (j, b.size()) {
+        y0[j] = b[j].value;
+        y1[j] = b[j].value;
+        y2[j] = b[j].value;
+    }
+    std::vector<mint<PRIMES[0]> > z0 = convolution(x0, y0);
+    std::vector<mint<PRIMES[1]> > z1 = convolution(x1, y1);
+    std::vector<mint<PRIMES[2]> > z2 = convolution(x2, y2);
+    std::vector<mint<MOD> > c(z0.size());
+    REP (k, z0.size()) {
+        std::vector<std::pair<int32_t, int32_t> > eqns {
+            std::make_pair(z0[k].value, PRIMES[0]),
+            std::make_pair(z1[k].value, PRIMES[1]),
+            std::make_pair(z2[k].value, PRIMES[2]),
+        };
+        c[k] = garner_algorithm(eqns, MOD);
+    }
+    return c;
 }

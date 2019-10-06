@@ -9,7 +9,7 @@ using namespace std;
 constexpr int MOD = 998244353;
 int main() {
     // input
-    int n, m; cin >> n >> m;
+    int n, m; scanf("%d%d", &n, &m);
     vector<mint<MOD> > a(n);
     REP (i, n) {
         scanf("%d", &a[i].value);
@@ -20,7 +20,7 @@ int main() {
     }
 
     // solve
-    vector<mint<MOD> > c = convolution(a, b);
+    vector<mint<MOD> > c = convolution_arbitrary_modulo(a, b);
 
     // output
     REP (i, n + m - 1) {
