@@ -20,7 +20,7 @@ int main() {
     }
 
     // solve
-    vector<mint<MOD> > c = convolution(a, b);
+    vector<mint<MOD> > c = ntt_convolution(a, b);
 
     // output
     REP (i, n + m - 1) {
