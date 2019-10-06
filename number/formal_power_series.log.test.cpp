@@ -16,7 +16,7 @@ int main() {
     }
 
     // solve
-    vector<mint<MOD> > b = formal_power_series<mint<MOD> >(a).log().data();
+    vector<mint<MOD> > b = formal_power_series<mint<MOD> >(a).log(n).data();
     b.resize(n);
 
     // output

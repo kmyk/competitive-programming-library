@@ -68,42 +68,31 @@ struct formal_power_series {
         return b;
     }
     inline formal_power_series<T> modulo_x_to(int k) const {
-        return {{ a.begin(), a.begin() + std::min<int>(size(), k) }};
-        // return formal_power_series<T>(a.begin(), a.begin() + std::min<int>(size(), k));
+        return formal_power_series<T>(a.begin(), a.begin() + std::min<int>(size(), k));
     }
 
-    formal_power_series<T> inv() const {
+    formal_power_series<T> inv(int n) const {
         assert (at(0) != 0);
         formal_power_series<T> res { at(0).inv() };
-        for (int i = 1; i < size(); i *= 2) {
+        for (int i = 1; i < n; i *= 2) {
             res = (res * T(2) - res * res * modulo_x_to(2 * i)).modulo_x_to(2 * i);
         }
-        return res.modulo_x_to(size());
-        /*
-        formal_power_series<T> b { a[0].inv() };
-        formal_power_series<T> two { 2 };
-        for (int i = 1; i < size(); i *= 2) {
-            const int m = std::min<int>(size(), i * 2);
-            b = b.modulo_x_to(m);
-            b = (this->modulo_x_to(m) * b + two) * b;
-        }
-        return b;
-        */
+        return res.modulo_x_to(n);
     }
-    formal_power_series<T> exp() const {
-        auto & h = *this;
-        formal_power_series<T> f { 1 };
-        formal_power_series<T> g { 1 };
-        for (int m = 1; m <= size(); m <<= 1) {
-            g = g * 2 - (f * (g * g)).modulo_x_to(m);
-            auto q = h.differential().modulo_x_to(m - 1);
-            auto w = (q + g * (f.differential() - f * q)).modulo_x_to(2 * m - 1);
-            f = f + (f * (h - w.integral())).modulo_x_to(2 * m);
+    formal_power_series<T> exp(int n) const {
+        formal_power_series<T> f{ 1 };
+        formal_power_series<T> g{ 1 };
+        for (int i = 1; i < n; i *= 2) {
+            g = (g * 2 - f * g * g).modulo_x_to(i);
+            formal_power_series<T> q = differential().modulo_x_to(i - 1);
+            formal_power_series<T> w = (q + g * (f.differential() - f * q)).modulo_x_to(2 * i - 1);
+            f = (f + f * (*this - w.integral()).modulo_x_to(2 * i)).modulo_x_to(2 * i);
         }
-        return f;
+        return f.modulo_x_to(n);
     }
-    inline formal_power_series<T> log() const {
-        return (this->differential() * this->inv()).integral();
+    inline formal_power_series<T> log(int n) const {
+        assert (at(0) == 1);
+        return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
     inline formal_power_series<T> pow(int k) const {
         return (this->log() * k).exp();

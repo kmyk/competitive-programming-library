@@ -3,13 +3,14 @@
 #include <cassert>
 #include <iostream>
 
-inline constexpr int32_t modpow(int64_t x, uint64_t k, int32_t MOD) {
+inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
-    int64_t y = 1;
+    uint_fast64_t y = 1;
     for (; k; k >>= 1) {
         if (k & 1) (y *= x) %= MOD;
         (x *= x) %= MOD;
     }
+    assert (0 <= y and y < MOD);
     return y;
 }
 inline int32_t modinv(int32_t value, int32_t MOD) {
@@ -23,8 +24,9 @@ inline int32_t modinv(int32_t value, int32_t MOD) {
         y -= q * v; std::swap(y, v);
         b -= q * a; std::swap(b, a);
     }
-    assert (value * x + MOD * y == b);
-    assert (b == 1);
+    assert (value * x + MOD * y == b and b == 1);
+    if (x < 0) x += MOD;
+    assert (0 <= x and x < MOD);
     return x;
 }
 
@@ -40,7 +42,7 @@ struct mint {
     inline constexpr mint<MOD> operator * (mint<MOD> other) const { return mint<MOD>(*this) *= other; }
     inline constexpr mint<MOD> & operator += (mint<MOD> other) { this->value += other.value; if (this->value >= MOD) this->value -= MOD; return *this; }
     inline constexpr mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
-    inline constexpr mint<MOD> & operator *= (mint<MOD> other) { this->value = (int64_t)this->value * other.value % MOD; if (this->value < 0) this->value += MOD; return *this; }
+    inline constexpr mint<MOD> & operator *= (mint<MOD> other) { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this; }
     inline constexpr mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0, nullptr); }
     inline constexpr mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
     inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }

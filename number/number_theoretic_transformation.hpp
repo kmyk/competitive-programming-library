@@ -6,7 +6,6 @@
 #include <vector>
 #include "modulus/mint.hpp"
 #include "utils/macros.hpp"
-#include <iostream>
 
 template <int32_t PRIME> struct proth_prime {};
 template <> struct proth_prime<1224736769> { static constexpr int a =             73, b = 24, g =  3; };
