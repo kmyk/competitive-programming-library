@@ -94,7 +94,7 @@ struct formal_power_series {
         assert (at(0) == 1);
         return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
-    inline formal_power_series<T> pow(int k) const {
-        return (this->log() * k).exp();
+    inline formal_power_series<T> pow(int k, int n) const {
+        return (this->log(n) * k).exp(n);
     }
 };
