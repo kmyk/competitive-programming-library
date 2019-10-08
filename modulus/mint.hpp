@@ -35,7 +35,7 @@ struct mint {
     int32_t value;
     mint() : value() {}
     mint(int64_t value_) : value(value_ < 0 ? value_ % MOD + MOD : value_ >= MOD ? value_ % MOD : value_) {}
-    mint(int32_t value_, nullptr_t) : value(value_) {}
+    mint(int32_t value_, std::nullptr_t) : value(value_) {}
     explicit operator bool() const { return value; }
     inline constexpr mint<MOD> operator + (mint<MOD> other) const { return mint<MOD>(*this) += other; }
     inline constexpr mint<MOD> operator - (mint<MOD> other) const { return mint<MOD>(*this) -= other; }
