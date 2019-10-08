@@ -32,7 +32,7 @@ struct is_proth_prime_impl {
     template <int32_t PRIME, class T> static auto check(...) -> std::false_type;
 };
 template <int32_t PRIME>
-struct is_proth_prime : decltype(is_proth_prime_impl::check<PRIME, nullptr_t>(nullptr)) {
+struct is_proth_prime : decltype(is_proth_prime_impl::check<PRIME, std::nullptr_t>(nullptr)) {
 };
 
 /**
