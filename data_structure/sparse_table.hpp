@@ -63,3 +63,9 @@ struct gcd_semilattice {
     int unit() const { return 0; }
     int append(int a, int b) const { return gcd(a, b); }
 };
+
+struct indexed_min_semilattice {
+    typedef std::pair<int, int> value_type;
+    value_type unit() const { return { INT_MAX, INT_MAX }; }
+    value_type append(value_type a, value_type b) const { return std::min(a, b); }
+};

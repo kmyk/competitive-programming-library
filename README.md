@@ -35,7 +35,8 @@ For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en
     -   [matrix](https://github.com/kmyk/competitive-programming-library/blob/master/number/matrix.inc.cpp)
 -   `graph/`
     -   [topological sort](https://github.com/kmyk/competitive-programming-library/blob/master/graph/topological-sort.inc.cpp)
-    -   [lowest common ancestor](https://github.com/kmyk/competitive-programming-library/blob/master/graph/lowest-common-ancestor.inc.cpp)
+    -   [lowest common ancestor](https://github.com/kmyk/competitive-programming-library/blob/master/graph/lowest_common_ancestor.hpp)
+        -   [test (GRL_5_C)](https://github.com/kmyk/competitive-programming-library/tree/master/graph/lowest_common_ancestor.aoj.test.cpp)
     -   [Kruskal's algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/graph/minimum-spanning-tree.inc.cpp)
     -   [Dinic's algorithm](https://github.com/kmyk/competitive-programming-library/blob/master/graph/centroid-decomposition.inc.cp://github.com/kmyk/competitive-programming-library/blob/master/graph/dinic.inc.cpp)
     -   [primal-dual](https://github.com/kmyk/competitive-programming-library/blob/master/graph/centroid-decomposition.inc.cp://github.com/kmyk/competitive-programming-library/blob/master/graph/dinic.inc.cp://github.com/kmyk/competitive-programming-library/blob/master/graph/minimum-cost-flow.inc.cpp)
