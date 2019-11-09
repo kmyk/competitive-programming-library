@@ -30,7 +30,8 @@ For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en
     -   [gcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/gcd.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/number/gcd.test.cpp)
     -   [extgcd](https://github.com/kmyk/competitive-programming-library/blob/master/number/extgcd.inc.cpp)
-    -   [prime numbers](https://github.com/kmyk/competitive-programming-library/blob/master/number/primes.inc.cpp)
+    -   [prime numbers](https://github.com/kmyk/competitive-programming-library/blob/master/number/primes.hpp)
+        -   [test (ALDS1_1_C)](https://github.com/kmyk/competitive-programming-library/tree/master/number/primes.aoj.test.cpp)
     -   [matrix](https://github.com/kmyk/competitive-programming-library/blob/master/number/matrix.inc.cpp)
 -   `graph/`
     -   [topological sort](https://github.com/kmyk/competitive-programming-library/blob/master/graph/topological-sort.inc.cpp)
