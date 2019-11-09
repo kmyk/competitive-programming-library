@@ -3,6 +3,8 @@
 [![Travis](https://img.shields.io/travis/kmyk/competitive-programming-library/master.svg)](https://travis-ci.org/kmyk/competitive-programming-library)
 ![License](https://img.shields.io/github/license/kmyk/competitive-programming-library.svg)
 
+For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en/master/run-ci-on-your-library.en.html>
+
 ## List of Frequently Used Algorithms / Data-Structures
 
 -   [template.cpp](https://github.com/kmyk/competitive-programming-library/tree/master/template.cpp)
