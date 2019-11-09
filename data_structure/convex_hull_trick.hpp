@@ -1,4 +1,5 @@
 #pragma once
+#include <cassert>
 #include <climits>
 #include <cstdint>
 #include <map>
@@ -69,11 +70,16 @@ public:
         }
         cross.emplace(cross_point(*prev(it), *it), *it);
         cross.emplace(cross_point(*it, *next(it)), *next(it));
+        assert (not empty());
+    }
+    bool empty() const {
+        return lines.size() <= 2;
     }
     /**
      * @note O(log n)
      */
     int64_t get_min(int64_t x) const {
+        assert (not empty());
         line_t f = prev(cross.lower_bound(make_rational(x)))->second;
         return f.a * x + f.b;
     }

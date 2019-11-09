@@ -3,7 +3,7 @@
 #include <cstdint>
 
 /**
- * @brie a flexible binary search
+ * @brief a flexible binary search
  * @param[in] p  a monotone predicate defined on [l, r)
  * @return  \min \{ x \in [l, r) \mid p(x) \}, or r if it doesn't exist
  */

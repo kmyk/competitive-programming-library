@@ -10,14 +10,14 @@ mint<MOD> fact(int n) {
     }
     return memo[n];
 }
-template <int32_t PRIME>
-mint<PRIME> inv_fact(int n) {
-    static std::vector<mint<PRIME> > memo;
+template <int32_t MOD>
+mint<MOD> inv_fact(int n) {
+    static std::vector<mint<MOD> > memo;
     if (memo.size() <= n) {
         int l = memo.size();
         int r = n * 1.3 + 100;
         memo.resize(r);
-        memo[r - 1] = fact<PRIME>(r - 1).inv();
+        memo[r - 1] = fact<MOD>(r - 1).inv();
         for (int i = r - 2; i >= l; -- i) {
             memo[i] = memo[i + 1] * (i + 1);
         }

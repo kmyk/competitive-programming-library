@@ -35,7 +35,7 @@ int main() {
         auto f = lagrange_interpolate(points);
 
         // check
-        constexpr long double eps = 1e-8;
+        constexpr long double eps = 1e-4;
         assert (f.size() == points.size());
         for (auto point : points) {
             long double x, y; tie(x, y) = point;

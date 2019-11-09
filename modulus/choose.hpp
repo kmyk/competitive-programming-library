@@ -5,7 +5,6 @@
 #include "utils/macros.hpp"
 
 /**
- * @tparam MOD must be a prime
  * @note O(n log n) at first time, otherwise O(1)
  */
 template <int32_t MOD>
