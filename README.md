@@ -21,6 +21,8 @@ For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en
         -   [test (DSL_2_H)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/lazy_propagation_segment_tree.range_max_range_add.test.cpp)
     -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/convex_hull_trick.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/convex_hull_trick.test.cpp)
+    -   [Li-Chao tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/li_chao_tree.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/li_chao_tree.test.cpp)
 -   `modulus/`
     -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
     -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.hpp)
