@@ -21,8 +21,6 @@ For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en
         -   [test (DSL_2_H)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/lazy_propagation_segment_tree.range_max_range_add.test.cpp)
     -   [convex hull trick (without monotonicity)](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/convex_hull_trick.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/convex_hull_trick.test.cpp)
-    -   [Li-Chao tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/li_chao_tree.hpp)
-        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/li_chao_tree.test.cpp)
 -   `modulus/`
     -   [struct for modular arithmetic](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/mint.hpp)
     -   [factorial](https://github.com/kmyk/competitive-programming-library/blob/master/modulus/factorial.hpp)
@@ -71,6 +69,8 @@ For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en
 -   `data_structure/`
     -   [sparse table](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sparse_table.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/sparse_table.unit.test.cpp)
+    -   [Li-Chao tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/li_chao_tree.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/li_chao_tree.test.cpp)
     -   [fully indexable dictionary](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/fully_indexable_dictionary.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/fully_indexable_dictionary.test.cpp)
     -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet_matrix.hpp)
