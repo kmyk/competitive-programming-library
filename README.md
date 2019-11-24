@@ -71,6 +71,8 @@ For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/sparse_table.unit.test.cpp)
     -   [Li-Chao tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/li_chao_tree.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/li_chao_tree.test.cpp)
+    -   [slinding-window aggregation](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/sliding_window_aggregation.hpp)
+        -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/sliding_window_aggregation.test.cpp)
     -   [fully indexable dictionary](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/fully_indexable_dictionary.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/fully_indexable_dictionary.test.cpp)
     -   [wavelet matrix](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/wavelet_matrix.hpp)
