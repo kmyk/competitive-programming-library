@@ -1,5 +1,6 @@
 #pragma once
 #include <cassert>
+#include <cstddef>
 #include <stack>
 
 template <class Monoid>
@@ -46,7 +47,7 @@ struct sliding_window_aggregation {
     bool empty() const {
         return front.empty() and back.empty();
     }
-    size_t size() const {
+    std::size_t size() const {
         return front.size() + back.size();
     }
 };
