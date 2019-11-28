@@ -1,53 +1,54 @@
 #pragma once
 #include <cassert>
 #include <cstddef>
-#include <stack>
+#include <deque>
+#include "utils/macros.hpp"
 
 template <class Monoid>
 struct sliding_window_aggregation {
     typedef typename Monoid::value_type value_type;
     Monoid mon;
-    std::stack<value_type> front, back;
-    std::stack<value_type> sum_front;
-    value_type sum_back;
+    std::deque<value_type> data;
+    int front;
+    value_type back;
     sliding_window_aggregation(const Monoid & mon_ = Monoid()) : mon(mon_) {
-        sum_front.push(mon.unit());
-        sum_back = mon.unit();
+        front = 0;
+        back = mon.unit();
     }
     /**
      * @note O(1)
      */
     void push(value_type x) {
-        back.push(x);
-        sum_back = mon.append(sum_back, x);
+        data.push_back(x);
+        back = mon.append(back, x);
     }
     /**
      * @note amortized O(1)
      */
     void pop() {
-        if (front.empty()) {
-            while (not back.empty()) {
-                front.push(back.top());
-                sum_front.push(mon.append(front.top(), sum_front.top()));
-                back.pop();
+        assert (not data.empty());
+        data.pop_front();
+        if (front) {
+            -- front;
+        } else {
+            REP_R (i, (int)data.size() - 1) {
+                data[i] = mon.append(data[i], data[i + 1]);
             }
-            sum_back = mon.unit();
+            front = data.size();
+            back = mon.unit();
         }
-        assert (not front.empty());
-        front.pop();
-        sum_front.pop();
     }
     /**
      * @brief get sum of elements in the queue
      * @note O(1)
      */
     value_type accumulate() const {
-        return mon.append(sum_front.top(), sum_back);
+        return front ? mon.append(data.front(), back) : back;
     }
     bool empty() const {
-        return front.empty() and back.empty();
+        return data.empty();
     }
     std::size_t size() const {
-        return front.size() + back.size();
+        return data.size();
     }
 };
