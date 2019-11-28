@@ -1,12 +1,14 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H"
 #include "data_structure/lazy_propagation_segment_tree.hpp"
+#include "utils/monoids.hpp"
 
 #include <iostream>
 using namespace std;
 
 int main() {
     int n, q; cin >> n >> q;
-    lazy_propagation_segment_tree<min_monoid, plus_with_int_max_operator_monoid> segtree(n, 0);
+    lazy_propagation_segment_tree<min_monoid<int>, plus_monoid<int>, plus_min_action<int> > segtree(n);
+    segtree.range_set(0, n, 0);
     while (q --) {
         int com, l, r; cin >> com >> l >> r;
         ++ r;

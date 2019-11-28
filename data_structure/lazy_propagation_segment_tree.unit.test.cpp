@@ -1,13 +1,16 @@
 #include "data_structure/lazy_propagation_segment_tree.hpp"
+#include "utils/monoids.hpp"
 
 #include <cassert>
 #include <vector>
+#include "modulus/mint.hpp"
 #include "utils/macros.hpp"
 using namespace std;
 
 int main() {
     {
-        lazy_propagation_segment_tree<min_monoid, plus_with_int_max_operator_monoid> segtree(9);
+        int n = 9;
+        lazy_propagation_segment_tree<min_monoid<int>, plus_monoid<int>, plus_min_action<int> > segtree(n);
         segtree.point_set(2, 2);
         segtree.point_set(3, 3);
         segtree.point_set(4, 4);
@@ -23,7 +26,8 @@ int main() {
         constexpr int MOD = 1e9 + 7;
         constexpr int n = 13;
         vector<mint<MOD> > ary(n);
-        lazy_propagation_segment_tree<modplus_length_monoid<MOD>, modular_linear_operator_monoid<MOD> > segtree(n, make_pair(0, 1));
+        lazy_propagation_segment_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(n);
+        segtree.range_set(0, n, make_pair(0, 1));
         auto check = [&]() {
             REP (l, n) {
                 mint<MOD> acc = 0;
@@ -37,7 +41,7 @@ int main() {
             REP3 (i, l, r) {
                 ary[i] = a * ary[i] + b;
             }
-            segtree.range_apply(l, r, modular_linear_operator_monoid<MOD>::make(a, b));
+            segtree.range_apply(l, r, make_pair(a, b));
             check();
         };
         apply(1, 4, 1, 1);
