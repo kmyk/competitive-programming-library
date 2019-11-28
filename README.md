@@ -1,9 +1,9 @@
 # Competitive Programming Library
 
-[![Travis](https://img.shields.io/travis/kmyk/competitive-programming-library/master.svg)](https://travis-ci.org/kmyk/competitive-programming-library)
+[![Actions Status](https://github.com/kmyk/competitive-programming-library/workflows/verify/badge.svg)](https://github.com/kmyk/competitive-programming-library/actions)
 ![License](https://img.shields.io/github/license/kmyk/competitive-programming-library.svg)
 
-For CI, you can read the document: <https://online-judge-tools.readthedocs.io/en/master/run-ci-on-your-library.en.html>
+For CI, you can read a document [run-ci-on-your-library.en.html](https://online-judge-tools.readthedocs.io/en/master/run-ci-on-your-library.en.html) and use a tool [kmyk/online-judge-verify-helper](https://github.com/kmyk/online-judge-verify-helper).
 
 ## List of Frequently Used Algorithms / Data-Structures
 
