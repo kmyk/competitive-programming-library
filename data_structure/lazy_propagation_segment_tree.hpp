@@ -1,6 +1,7 @@
 #pragma once
 #include <algorithm>
 #include <cassert>
+#include <type_traits>
 #include <vector>
 #include "utils/macros.hpp"
 
@@ -11,8 +12,8 @@
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X
  */
 template <class MonoidX, class MonoidF, class Action>
-struct lazy_propagation_segment_tree { // on monoids
-    // static_assert (std::is_invocable_r<typename MonoidX::value_type, Action, typename MonoidF::value_type, typename MonoidX::value_type>::value, "");
+struct lazy_propagation_segment_tree {
+    static_assert (std::is_invocable_r<typename MonoidX::value_type, Action, typename MonoidF::value_type, typename MonoidX::value_type>::value, "");
     typedef typename MonoidX::value_type value_type;
     typedef typename MonoidF::value_type operator_type;
     const MonoidX mon_x;
