@@ -82,6 +82,8 @@ For CI, you can read a document [run-ci-on-your-library.en.html](https://online-
     -   [link-cut tree](https://github.com/kmyk/competitive-programming-library/blob/master/data_structure/link_cut_tree.hpp)
         -   [unittest](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/link_cut_tree.spaceships.test.cpp)
         -   [test (Marked Ancestor)](https://github.com/kmyk/competitive-programming-library/tree/master/data_structure/link_cut_tree.marked_ancestor.test.cpp)
+-   `utils/`
+    -   [DSU on tree](https://github.com/kmyk/competitive-programming-library/blob/master/utils/dsu_on_tree.hpp)
 
 ## PDF version
 
