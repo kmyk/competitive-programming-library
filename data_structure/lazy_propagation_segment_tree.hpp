@@ -53,6 +53,9 @@ struct lazy_propagation_segment_tree {
             a[i] = mon_x.mult(a[2 * i + 1], a[2 * i + 2]);
         }
     }
+    void point_apply(int i, operator_type g) {
+        range_apply(i, i + 1, g);
+    }
     void range_apply(int l, int r, operator_type g) {
         assert (0 <= l and l <= r and r <= n);
         range_apply(0, 0, n, l, r, g);
@@ -71,6 +74,9 @@ struct lazy_propagation_segment_tree {
             range_apply(2 * i + 2, (il + ir) / 2, ir, l, r, g);
             a[i] = mon_x.mult(a[2 * i + 1], a[2 * i + 2]);
         }
+    }
+    value_type point_get(int i) {
+        return range_concat(i, i + 1);
     }
     value_type range_concat(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
