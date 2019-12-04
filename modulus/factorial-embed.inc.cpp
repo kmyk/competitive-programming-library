@@ -58,12 +58,12 @@ string fact_pack(unsigned n) {
 int generate_table() {  // int main() {
     int32_t MOD, width; cin >> MOD >> width;
     int64_t acc = 1;
-    cout << "static const char *table = // {{{" << endl << "    \"";
+    cout << "static const char *table =" << endl << "    \"";
     REP (i, MOD) {
         acc = acc * (i + 1) % MOD;
         if (i % width == 0) cout << fact_pack(acc);
     }
-    cout << "\"" << endl << ";  // }}}" << endl;
+    cout << "\"" << endl << ";" << endl;
     return 0;
 }
 
