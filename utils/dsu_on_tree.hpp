@@ -1,7 +1,7 @@
 #pragma once
 #include <stack>
 #include <vector>
-#include "graph/subtree.cpp"
+#include "graph/subtree.hpp"
 #include "utils/macros.hpp"
 
 /**
