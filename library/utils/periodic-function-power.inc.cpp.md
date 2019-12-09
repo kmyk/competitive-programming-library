@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 template <class F, class T>
 T periodic_function_power(F f, ll k, T x) {
@@ -54,6 +59,7 @@ T periodic_function_power(F f, ll k, T x) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

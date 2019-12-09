@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 // http://sigma425.hatenablog.com/entry/2015/12/25/224053
 vector<int> dominator_tree(vector<vector<int> > const & g, int root_g) { // G is a digraph which any vertex can be reached from the root
@@ -112,6 +117,7 @@ vector<int> dominator_tree(vector<vector<int> > const & g, int root_g) { // G is
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

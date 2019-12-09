@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -22,7 +26,7 @@
 
 
 # :warning: template.cpp
-* category: 
+* category: .
 
 
 [Back to top page](../index.html)
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 :%! sh -c "`cat`"
 #!/bin/sh
@@ -60,6 +65,7 @@ int main() {
 EOF
 
 ```
+{% endraw %}
 
 [Back to top page](../index.html)
 

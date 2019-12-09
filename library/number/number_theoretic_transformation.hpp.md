@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/number_theoretic_transformation.hpp
+# :heavy_check_mark: a specialized version of Garner's algorithm
 * category: number
 
 
 [Back to top page](../../index.html)
 
-* a specialized version of Garner's algorithm
 * the convolution on Z/pZ
 
 
@@ -45,6 +48,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -232,6 +236,7 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

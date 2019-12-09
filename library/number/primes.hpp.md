@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/primes.hpp
+# :heavy_check_mark: number/primes.hpp
 * category: number
 
 
@@ -34,7 +38,7 @@
 
 
 ## Required
-* :warning: [utils/fast_zeta_transform.hpp](../utils/fast_zeta_transform.hpp.html)
+* :warning: [upward fast zeta transform on primes](../utils/fast_zeta_transform.hpp.html)
 
 
 ## Verified
@@ -42,6 +46,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -150,6 +155,7 @@ struct prepared_primes {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

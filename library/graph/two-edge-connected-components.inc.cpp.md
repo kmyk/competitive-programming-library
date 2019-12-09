@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/two-edge-connected-components.inc.cpp
+# :warning: 2-edge-connected components decomposition
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* 2-edge-connected components decomposition
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief 2-edge-connected components decomposition
@@ -75,6 +79,7 @@ pair<int, vector<int> > decompose_to_two_edge_connected_components(vector<vector
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

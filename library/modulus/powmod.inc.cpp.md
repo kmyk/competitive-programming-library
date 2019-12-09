@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/powmod.inc.cpp
+# :warning: the baby-step giant-step
 * category: modulus
 
 
 [Back to top page](../../index.html)
 
-* the baby-step giant-step
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @param m must be a positive integer
@@ -205,6 +209,7 @@ vector<int> solve_modeqn(int a, int b, int c, int p) { // ax^2 + bx + c = 0 mod 
 
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

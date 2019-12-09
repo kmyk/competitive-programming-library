@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -29,12 +33,13 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [graph/bellman_ford.hpp](../../library/graph/bellman_ford.hpp.html)
-* :heavy_check_mark: [graph/shortest_path_faster_algorithm.hpp](../../library/graph/shortest_path_faster_algorithm.hpp.html)
+* :heavy_check_mark: [Bellman-Ford algorithm](../../library/graph/bellman_ford.hpp.html)
+* :heavy_check_mark: [Shortest Path Faster Algorithm](../../library/graph/shortest_path_faster_algorithm.hpp.html)
 * :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 #include "graph/bellman_ford.hpp"
 #include "graph/shortest_path_faster_algorithm.hpp"
@@ -78,6 +83,7 @@ int main() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

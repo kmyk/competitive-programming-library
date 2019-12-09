@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/link_cut_tree.hpp
+# :heavy_check_mark: an extended structure of union-find tree
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* an extended structure of union-find tree
 
 
 ## Dependencies
@@ -40,6 +43,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -239,6 +243,7 @@ public:
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

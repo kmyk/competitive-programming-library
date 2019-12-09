@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/convex_hull_trick.hpp
+# :heavy_check_mark: data_structure/convex_hull_trick.hpp
 * category: data_structure
 
 
@@ -34,6 +38,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -149,6 +154,7 @@ struct inverted_convex_hull_trick {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

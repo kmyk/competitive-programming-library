@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,19 +25,19 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/heavy_light_decomposition.inc.cpp
+# :warning: heavy light decomposition
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* heavy light decomposition
 * construct an adjacency list for the decomposed tree
 * reduce a path-query to range-queries aboud nodes
 * see: [http://math314.hateblo.jp/entry/2014/06/24/220107](http://math314.hateblo.jp/entry/2014/06/24/220107)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief heavy light decomposition
@@ -199,6 +203,7 @@ struct heavy_light_decomposition_edge_adapter {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

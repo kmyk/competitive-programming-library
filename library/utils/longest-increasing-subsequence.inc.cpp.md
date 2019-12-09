@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 template <typename T>
 vector<T> longest_strict_increasing_subsequence(vector<T> const & xs) {
@@ -61,6 +66,7 @@ vector<T> longest_weak_increasing_subsequence(vector<T> const & xs) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

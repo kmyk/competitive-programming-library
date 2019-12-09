@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/factorial.hpp
+# :heavy_check_mark: modulus/factorial.hpp
 * category: modulus
 
 
@@ -42,6 +46,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <vector>
@@ -71,6 +76,7 @@ mint<MOD> inv_fact(int n) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

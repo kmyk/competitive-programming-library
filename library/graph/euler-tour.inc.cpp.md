@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/euler-tour.inc.cpp
+# :warning: euler tour
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* euler tour
 * euler tour, push vertices only visiting
 * something like euler tour but do BFS
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief euler tour
@@ -151,6 +155,7 @@ void do_bfs_euler_tour(vector<vector<int> > const & g, int root, vector<int> & t
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

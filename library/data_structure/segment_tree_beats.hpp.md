@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/segment_tree_beats.hpp
+# :warning: a segment tree beats
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* a segment tree beats
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -131,6 +135,7 @@ private:
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

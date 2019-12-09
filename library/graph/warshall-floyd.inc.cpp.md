@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,17 +25,17 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/warshall-floyd.inc.cpp
+# :warning: Warshall-Floyd algorithm
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* Warshall-Floyd algorithm
 * Warshall-Floyd algorithm for connectivity
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief Warshall-Floyd algorithm
@@ -79,6 +83,7 @@ vector<vector<bool> > warshall_floyd(vector<vector<int> > const & g) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

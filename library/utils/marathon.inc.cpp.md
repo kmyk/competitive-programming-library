@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 constexpr double ticks_per_sec = 2800000000;
 constexpr double ticks_per_sec_inv = 1.0 / ticks_per_sec;
@@ -98,6 +103,7 @@ constexpr double TLE = 10.0;  // sec
     return result;
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

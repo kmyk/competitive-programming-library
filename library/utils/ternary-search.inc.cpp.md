@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @arg f must be a downward-convex function
@@ -62,6 +67,7 @@ double golden_section_search(double l, double r, int iteration, Function f) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

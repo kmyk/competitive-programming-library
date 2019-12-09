@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/gcd.hpp
+# :heavy_check_mark: number/gcd.hpp
 * category: number
 
 
@@ -30,7 +34,7 @@
 
 
 ## Required
-* :heavy_check_mark: [data_structure/sparse_table.hpp](../data_structure/sparse_table.hpp.html)
+* :heavy_check_mark: [sparse table on a semilattice](../data_structure/sparse_table.hpp.html)
 
 
 ## Verified
@@ -38,6 +42,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -60,6 +65,7 @@ T lcm(T a, T b) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

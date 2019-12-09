@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,10 +34,11 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [graph/lowest_common_ancestor.hpp](../../library/graph/lowest_common_ancestor.hpp.html)
+* :heavy_check_mark: [lowest common ancestor with \pm 1 RMQ and sparse table](../../library/graph/lowest_common_ancestor.hpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C"
 
@@ -69,6 +74,7 @@ int main() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

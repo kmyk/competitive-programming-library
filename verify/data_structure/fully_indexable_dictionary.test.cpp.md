@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -29,11 +33,12 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/fully_indexable_dictionary.hpp](../../library/data_structure/fully_indexable_dictionary.hpp.html)
+* :heavy_check_mark: [a fully indexable dictionary](../../library/data_structure/fully_indexable_dictionary.hpp.html)
 * :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 #include "data_structure/fully_indexable_dictionary.hpp"
 
@@ -86,6 +91,7 @@ int main() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

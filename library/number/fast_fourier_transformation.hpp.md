@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/fast_fourier_transformation.hpp
+# :heavy_check_mark: the convolution
 * category: number
 
 
 [Back to top page](../../index.html)
 
-* the convolution
 
 
 ## Dependencies
@@ -39,6 +42,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -132,6 +136,7 @@ std::vector<T> convolution(std::vector<T> const & a, std::vector<T> const & b) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

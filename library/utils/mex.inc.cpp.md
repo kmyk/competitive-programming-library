@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/mex.inc.cpp
+# :warning: minimum excluded value
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* minimum excluded value
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief minimum excluded value
@@ -59,6 +63,7 @@ int mex(int a, int b) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

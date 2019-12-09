@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: string/rolling-hash.inc.cpp
+# :warning: a rolling hash
 * category: string
 
 
 [Back to top page](../../index.html)
 
-* a rolling hash
 * an adaptor to a segment tree
 * see: [http://hos.ac/blog/#blog0003](http://hos.ac/blog/#blog0003)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief a rolling hash
@@ -211,6 +215,7 @@ uint64_t rolling_hash(const vector<int> & s) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

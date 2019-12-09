@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/macros.hpp
+# :heavy_check_mark: utils/macros.hpp
 * category: utils
 
 
@@ -30,23 +34,23 @@
 
 
 ## Required
-* :heavy_check_mark: [data_structure/fully_indexable_dictionary.hpp](../data_structure/fully_indexable_dictionary.hpp.html)
-* :heavy_check_mark: [data_structure/lazy_propagation_segment_tree.hpp](../data_structure/lazy_propagation_segment_tree.hpp.html)
+* :heavy_check_mark: [a fully indexable dictionary](../data_structure/fully_indexable_dictionary.hpp.html)
+* :heavy_check_mark: [a lazy propagation segment tree](../data_structure/lazy_propagation_segment_tree.hpp.html)
 * :heavy_check_mark: [data_structure/li_chao_tree.hpp](../data_structure/li_chao_tree.hpp.html)
-* :heavy_check_mark: [data_structure/link_cut_tree.hpp](../data_structure/link_cut_tree.hpp.html)
-* :heavy_check_mark: [data_structure/sliding_window_aggregation.hpp](../data_structure/sliding_window_aggregation.hpp.html)
-* :heavy_check_mark: [data_structure/sparse_table.hpp](../data_structure/sparse_table.hpp.html)
-* :heavy_check_mark: [data_structure/wavelet_matrix.hpp](../data_structure/wavelet_matrix.hpp.html)
-* :heavy_check_mark: [graph/bellman_ford.hpp](../graph/bellman_ford.hpp.html)
-* :heavy_check_mark: [graph/shortest_path_faster_algorithm.hpp](../graph/shortest_path_faster_algorithm.hpp.html)
+* :heavy_check_mark: [an extended structure of union-find tree](../data_structure/link_cut_tree.hpp.html)
+* :heavy_check_mark: [get sum of elements in the queue](../data_structure/sliding_window_aggregation.hpp.html)
+* :heavy_check_mark: [sparse table on a semilattice](../data_structure/sparse_table.hpp.html)
+* :heavy_check_mark: [a wavelet matrix](../data_structure/wavelet_matrix.hpp.html)
+* :heavy_check_mark: [Bellman-Ford algorithm](../graph/bellman_ford.hpp.html)
+* :heavy_check_mark: [Shortest Path Faster Algorithm](../graph/shortest_path_faster_algorithm.hpp.html)
 * :warning: [modulus/choose.hpp](../modulus/choose.hpp.html)
-* :heavy_check_mark: [number/fast_fourier_transformation.hpp](../number/fast_fourier_transformation.hpp.html)
+* :heavy_check_mark: [the convolution](../number/fast_fourier_transformation.hpp.html)
 * :heavy_check_mark: [number/formal_power_series.hpp](../number/formal_power_series.hpp.html)
-* :heavy_check_mark: [number/lagrange_interpolation.hpp](../number/lagrange_interpolation.hpp.html)
-* :heavy_check_mark: [number/number_theoretic_transformation.hpp](../number/number_theoretic_transformation.hpp.html)
+* :heavy_check_mark: [Lagrange interpolation](../number/lagrange_interpolation.hpp.html)
+* :heavy_check_mark: [a specialized version of Garner's algorithm](../number/number_theoretic_transformation.hpp.html)
 * :heavy_check_mark: [number/primes.hpp](../number/primes.hpp.html)
 * :warning: [utils/dsu_on_tree.hpp](dsu_on_tree.hpp.html)
-* :warning: [utils/fast_zeta_transform.hpp](fast_zeta_transform.hpp.html)
+* :warning: [upward fast zeta transform on primes](fast_zeta_transform.hpp.html)
 
 
 ## Verified
@@ -70,6 +74,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -78,6 +83,7 @@
 #define ALL(x) begin(x), end(x)
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

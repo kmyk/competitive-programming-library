@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 ll knapsack_problem_branch_and_bound(int n, ll max_w, vector<ll> const & a_v, vector<ll> const & a_w) {
     vector<ll> v(n), w(n); {
@@ -71,6 +76,7 @@ ll knapsack_problem_branch_and_bound(int n, ll max_w, vector<ll> const & a_v, ve
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

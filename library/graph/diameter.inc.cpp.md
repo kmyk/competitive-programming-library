@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @sa http://techtipshoge.blogspot.jp/2016/09/blog-post.html
@@ -73,6 +78,7 @@ vector<int> get_centers(vector<vector<int> > const & tree) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

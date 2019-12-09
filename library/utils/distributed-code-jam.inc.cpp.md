@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 template <class T> void PutGeneric(int target, T value);
 template <> void PutGeneric(int target, char value) { PutChar(target, value); }
@@ -57,6 +62,7 @@ Container GetVec(int source) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

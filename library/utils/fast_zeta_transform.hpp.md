@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/fast_zeta_transform.hpp
+# :warning: upward fast zeta transform on primes
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* upward fast zeta transform on primes
 
 
 ## Dependencies
@@ -36,6 +39,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -65,6 +69,7 @@ std::vector<typename CommutativeSemiring::value_type> upward_fast_zeta_transform
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

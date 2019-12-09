@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 struct edge_t { int to, cap, rev; };
 int maximum_flow_destructive(int s, int t, vector<vector<edge_t> > & g) { // ford fulkerson, O(EF)
@@ -98,6 +103,7 @@ vector<pair<int,int> > perfect_bipartite_matching(set<int> const & a, set<int> c
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/bellman_ford.hpp
+# :heavy_check_mark: Bellman-Ford algorithm
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* Bellman-Ford algorithm
 
 
 ## Dependencies
@@ -40,6 +43,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -97,6 +101,7 @@ std::vector<int64_t> bellman_ford_shortest_path(int root, std::vector<std::vecto
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/lowest-common-ancestor-doubling.inc.cpp
+# :warning: lowest common ancestor with doubling
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* lowest common ancestor with doubling
 * find the LCA of x and y
 * find the descendant of x for y
 
 
 ## Code
+{% raw %}
 ```cpp
 // https://kimiyuki.net/blog/2016/07/02/yuki-386/
 // https://kimiyuki.net/blog/2015/11/13/yuki-235/
@@ -118,6 +122,7 @@ struct lowest_common_ancestor {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/formal_power_series.hpp
+# :heavy_check_mark: number/formal_power_series.hpp
 * category: number
 
 
@@ -31,7 +35,7 @@
 
 ## Dependencies
 * :heavy_check_mark: [modulus/mint.hpp](../modulus/mint.hpp.html)
-* :heavy_check_mark: [number/number_theoretic_transformation.hpp](number_theoretic_transformation.hpp.html)
+* :heavy_check_mark: [a specialized version of Garner's algorithm](number_theoretic_transformation.hpp.html)
 * :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
 
@@ -42,6 +46,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -145,6 +150,7 @@ struct formal_power_series {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,10 +34,11 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/link_cut_tree.hpp](../../library/data_structure/link_cut_tree.hpp.html)
+* :heavy_check_mark: [an extended structure of union-find tree](../../library/data_structure/link_cut_tree.hpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 // #define PROBLEM "https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships"
 #include <cassert>
@@ -118,6 +123,7 @@ int main() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

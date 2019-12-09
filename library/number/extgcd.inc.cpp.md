@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/extgcd.inc.cpp
+# :warning: extended gcd
 * category: number
 
 
 [Back to top page](../../index.html)
 
-* extended gcd
 * chinese remainder theorem
 * see: [https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466](https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief extended gcd
@@ -125,6 +129,7 @@ pair<ll, ll> crt(pair<ll, ll> eqn1, pair<ll, ll> eqn2) {
 
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

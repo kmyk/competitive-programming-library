@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/fast-mobius-transformation.inc.cpp
+# :warning: (upward) fast zeta transformation
 * category: number
 
 
 [Back to top page](../../index.html)
 
-* (upward) fast zeta transformation
 * (downward) fast zeta transformation
 * (upward) fast mobius transformation
 * (downward) fast mobius transformation
@@ -35,6 +38,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief (upward) fast zeta transformation
@@ -114,6 +118,7 @@ vector<T> downward_fast_mobius_transform(vector<T> f) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/shortest_path_faster_algorithm.hpp
+# :heavy_check_mark: Shortest Path Faster Algorithm
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* Shortest Path Faster Algorithm
 
 
 ## Dependencies
@@ -40,6 +43,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -94,6 +98,7 @@ std::vector<int64_t> shortest_path_faster_algorithm(int root, std::vector<std::v
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

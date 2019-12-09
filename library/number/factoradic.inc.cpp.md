@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 int fact(int n) { return n ? n * fact(n-1) : 1; } // O(N)
 template <class RandomAccessIterator>
@@ -56,6 +61,7 @@ vector<int> decode_factoradic(uint64_t y, int n) { // O(N^2)
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

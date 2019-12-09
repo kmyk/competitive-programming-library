@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @sa https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/
@@ -60,6 +65,7 @@ for (int x = (1 << k) - 1; x < (1 << n); ) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

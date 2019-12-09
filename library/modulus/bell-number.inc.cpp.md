@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,19 +25,19 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/bell-number.inc.cpp
+# :warning: the Bell number
 * category: modulus
 
 
 [Back to top page](../../index.html)
 
-* the Bell number
 * see: [http://mathworld.wolfram.com/BellNumber.html](http://mathworld.wolfram.com/BellNumber.html)
 * see: [https://oeis.org/A110](https://oeis.org/A110)
 * see: [https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0](https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief the Bell number
@@ -75,6 +79,7 @@ mint<MOD> binary_bell_number(int n, int k) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

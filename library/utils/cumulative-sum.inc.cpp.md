@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/cumulative-sum.inc.cpp
+# :warning: cumulative sum
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* cumulative sum
 * 2D cumulative sum
 * see: [std::partial_sum](std::partial_sum)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief cumulative sum
@@ -122,6 +126,7 @@ struct cumulative_sum_2d {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

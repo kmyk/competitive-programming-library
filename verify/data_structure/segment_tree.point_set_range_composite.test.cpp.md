@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,13 +34,14 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/segment_tree.hpp](../../library/data_structure/segment_tree.hpp.html)
+* :heavy_check_mark: [a segment tree](../../library/data_structure/segment_tree.hpp.html)
 * :heavy_check_mark: [modulus/mint.hpp](../../library/modulus/mint.hpp.html)
 * :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
 * :heavy_check_mark: [utils/monoids.hpp](../../library/utils/monoids.hpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 #include "data_structure/segment_tree.hpp"
@@ -68,6 +73,7 @@ int main() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

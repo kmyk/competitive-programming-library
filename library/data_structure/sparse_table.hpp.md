@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/sparse_table.hpp
+# :heavy_check_mark: sparse table on a semilattice
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* sparse table on a semilattice
 
 
 ## Dependencies
@@ -36,7 +39,7 @@
 
 
 ## Required
-* :heavy_check_mark: [graph/lowest_common_ancestor.hpp](../graph/lowest_common_ancestor.hpp.html)
+* :heavy_check_mark: [lowest common ancestor with \pm 1 RMQ and sparse table](../graph/lowest_common_ancestor.hpp.html)
 
 
 ## Verified
@@ -44,6 +47,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -118,6 +122,7 @@ struct indexed_min_semilattice {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

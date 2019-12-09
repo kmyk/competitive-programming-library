@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/utils.inc.cpp
+# :warning: reverse a digraph
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* reverse a digraph
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief reverse a digraph
@@ -47,6 +51,7 @@ vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

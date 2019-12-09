@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,26 +25,25 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/fully_indexable_dictionary.hpp
+# :heavy_check_mark: a fully indexable dictionary
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* a fully indexable dictionary
 * count the number of value in [0, r)
 * find the index of the k-th occurrence of value
 * select(value, k) in [l, size)
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/fully_indexable_dictionary.hpp](fully_indexable_dictionary.hpp.html)
+* :heavy_check_mark: [a fully indexable dictionary](fully_indexable_dictionary.hpp.html)
 * :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
 
 ## Required
-* :heavy_check_mark: [data_structure/fully_indexable_dictionary.hpp](fully_indexable_dictionary.hpp.html)
-* :heavy_check_mark: [data_structure/wavelet_matrix.hpp](wavelet_matrix.hpp.html)
+* :heavy_check_mark: [a fully indexable dictionary](fully_indexable_dictionary.hpp.html)
+* :heavy_check_mark: [a wavelet matrix](wavelet_matrix.hpp.html)
 
 
 ## Verified
@@ -48,6 +51,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -137,6 +141,7 @@ public:
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

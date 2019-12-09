@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/rollback-square-decomposition.inc.cpp
+# :warning: the extended Mo's algorithm
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* the extended Mo's algorithm
 * see: [http://snuke.hatenablog.com/entry/2016/07/01/000000](http://snuke.hatenablog.com/entry/2016/07/01/000000)
 * see: [http://codeforces.com/blog/entry/7383?#comment-161520](http://codeforces.com/blog/entry/7383?#comment-161520)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief the extended Mo's algorithm
@@ -80,6 +84,7 @@ void rollback_square_decomposition(int n, vector<pair<int, int> > const & range,
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

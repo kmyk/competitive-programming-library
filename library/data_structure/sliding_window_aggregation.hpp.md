@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/sliding_window_aggregation.hpp
+# :heavy_check_mark: get sum of elements in the queue
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* get sum of elements in the queue
 
 
 ## Dependencies
@@ -39,6 +42,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -96,6 +100,7 @@ struct sliding_window_aggregation {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

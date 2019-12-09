@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/factorial-embed.inc.cpp
+# :warning: a program to make the table
 * category: modulus
 
 
 [Back to top page](../../index.html)
 
-* a program to make the table
 
 
 ## Code
+{% raw %}
 ```cpp
 int fact_unpack(const char *s) {
     int n = 0;
@@ -116,6 +120,7 @@ mint<1000000007> choose(int64_t n, int64_t r) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

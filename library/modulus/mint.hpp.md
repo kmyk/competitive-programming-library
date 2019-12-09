@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,7 +25,7 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/mint.hpp
+# :heavy_check_mark: modulus/mint.hpp
 * category: modulus
 
 
@@ -33,7 +37,7 @@
 * :warning: [modulus/choose.hpp](choose.hpp.html)
 * :heavy_check_mark: [modulus/factorial.hpp](factorial.hpp.html)
 * :heavy_check_mark: [number/formal_power_series.hpp](../number/formal_power_series.hpp.html)
-* :heavy_check_mark: [number/number_theoretic_transformation.hpp](../number/number_theoretic_transformation.hpp.html)
+* :heavy_check_mark: [a specialized version of Garner's algorithm](../number/number_theoretic_transformation.hpp.html)
 
 
 ## Verified
@@ -44,6 +48,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -103,6 +108,7 @@ template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> 
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

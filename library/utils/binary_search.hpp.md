@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/binary_search.hpp
+# :heavy_check_mark: a flexible binary search
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* a flexible binary search
 
 
 ## Verified
@@ -36,6 +39,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <cassert>
@@ -72,6 +76,7 @@ int64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate p) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

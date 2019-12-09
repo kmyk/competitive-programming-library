@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 struct point_t { ll y, x; };
 point_t operator + (point_t a, point_t b) { return { a.y + b.y, a.x + b.x }; }
@@ -56,6 +61,7 @@ function<bool (point_t)> make_is_on_field(point_t p) { return [=](point_t q) { r
 const point_t directions[4] = { { -1, 0 }, { 1, 0 }, { 0, 1 }, { 0, -1 } };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 struct pma_t { // Aho-Corasick
     pma_t* next[26];
@@ -95,6 +100,7 @@ void ac_delete(pma_t *pma) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

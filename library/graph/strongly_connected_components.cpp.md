@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,17 +25,17 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/strongly_connected_components.cpp
+# :warning: strongly connected components decomposition, Kosaraju's algorithm
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* strongly connected components decomposition, Kosaraju's algorithm
 * memory optimized version
 
 
 ## Code
+{% raw %}
 ```cpp
 vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
     int n = g.size();
@@ -144,6 +148,7 @@ pair<int, vector<int> > decompose_to_strongly_connected_components(vector<vector
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

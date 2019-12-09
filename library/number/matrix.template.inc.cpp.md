@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 template <typename T, size_t H, size_t W>
 using matrix = array<array<T, W>, H>;
@@ -84,6 +89,7 @@ matrix<T, N, N> powmat(matrix<T, N, N> x, ll k) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

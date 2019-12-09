@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 template <typename T> struct weighted_edge { int u, v; T w; };
 template <typename T> bool operator < (weighted_edge<T> const & a, weighted_edge<T> const & b) { return make_tuple(a.w, a.u, a.v) < make_tuple(b.w, b.u, b.v); }
@@ -49,6 +54,7 @@ vector<vector<weighted_edge<T> > > minimum_spanning_tree(int n, vector<weighted_
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

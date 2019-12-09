@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,19 +25,19 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: geometry/a.inc.cpp
+# :warning: Andrew's Monotone Chain
 * category: geometry
 
 
 [Back to top page](../../index.html)
 
-* Andrew's Monotone Chain
 * segment - segment, inclusive
 * point and line
 * line and line
 
 
 ## Code
+{% raw %}
 ```cpp
 typedef complex<double> point;
 double cross(point a, point b) { return a.real() * b.imag() - a.imag() * b.real(); }
@@ -232,6 +236,7 @@ bool does_intersect_strict(polygon const & a, segment const & b) { // the bounda
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

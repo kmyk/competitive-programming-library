@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 // http://yukicoder.me/problems/no/260
 // strmodin(s, a, b, m)[i][j] = the number of digits t in mod m  for  t \le s, i = t \bmod \prod a and t contains digits j \subset b
@@ -63,6 +68,7 @@ vector<vector<ll> > strmodin(string const & s, int a, vector<int> const & b, ll 
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 // http://qiita.com/imos/items/c4c5e19289a79e598b93
 // http://web.mit.edu/andersk/Public/6.851-presentation.pdf
@@ -99,6 +104,7 @@ static ostream & operator << (ostream & out, persistent_array<T> const & a) {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

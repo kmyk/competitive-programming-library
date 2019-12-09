@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/twelvefold-way.inc.cpp
+# :warning: labeled-N labeled-K any-f
 * category: modulus
 
 
 [Back to top page](../../index.html)
 
-* labeled-N labeled-K any-f
 * labeled-N labeled-K injective-f
 * labeled-N labeled-K surjective-f
 * unlabeled-N labeled-K any-f
@@ -40,6 +43,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @sa https://en.wikipedia.org/wiki/Twelvefold_way
@@ -156,6 +160,7 @@ mint<MOD> twelvefold_uui(int n, int k) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

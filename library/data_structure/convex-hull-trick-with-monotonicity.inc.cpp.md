@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 class convex_hull_trick_with_monotonicity {
     typedef pair<ll, ll> line_t;
@@ -134,6 +139,7 @@ unittest() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

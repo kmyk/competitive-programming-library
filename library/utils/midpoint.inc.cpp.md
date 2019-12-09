@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/midpoint.inc.cpp
+# :warning: for given a and c, make b s.t. a < b < c
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* for given a and c, make b s.t. a < b < c
 
 
 ## Code
+{% raw %}
 ```cpp
 class midpoint {
     vector<bool> data;
@@ -65,6 +69,7 @@ public:
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

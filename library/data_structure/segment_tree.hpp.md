@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/segment_tree.hpp
+# :heavy_check_mark: a segment tree
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* a segment tree
 
 
 ## Verified
@@ -36,6 +39,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -76,6 +80,7 @@ struct segment_tree {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

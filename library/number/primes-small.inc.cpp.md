@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,17 +25,17 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/primes-small.inc.cpp
+# :warning: enumerate primes in [2, n) with O(n log log n)
 * category: number
 
 
 [Back to top page](../../index.html)
 
-* enumerate primes in [2, n) with O(n log log n)
 * fully factorize all numbers in [0, n) with O(n log log n)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief enumerate primes in [2, n) with O(n log log n)
@@ -137,6 +141,7 @@ map<int64_t, int> prime_factorize1(int64_t n) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

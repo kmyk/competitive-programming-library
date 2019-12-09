@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 struct dice_t { // regular hexahedron group
     //       ______
@@ -60,6 +65,7 @@ dice_t rotate_left( dice_t dice) { return (dice_t) { dice.c(), dice.b }; }
 bool operator == (dice_t x, dice_t y) { return x.a == y.a and x.b == y.b; }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

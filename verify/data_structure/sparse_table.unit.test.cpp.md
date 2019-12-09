@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -29,10 +33,11 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/sparse_table.hpp](../../library/data_structure/sparse_table.hpp.html)
+* :heavy_check_mark: [sparse table on a semilattice](../../library/data_structure/sparse_table.hpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 #include "data_structure/sparse_table.hpp"
 
@@ -67,6 +72,7 @@ int main() {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

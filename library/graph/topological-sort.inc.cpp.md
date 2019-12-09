@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @return a list of vertices which sorted topologically
@@ -72,6 +77,7 @@ vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,20 +25,19 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/wavelet_matrix.hpp
+# :heavy_check_mark: a wavelet matrix
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* a wavelet matrix
 * find the k-th number in [l, r)
 * count the number of values in [value_l, value_r) in range [l, r)
 * flexible version of range_frequency, buf a little bit slow
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/fully_indexable_dictionary.hpp](fully_indexable_dictionary.hpp.html)
+* :heavy_check_mark: [a fully indexable dictionary](fully_indexable_dictionary.hpp.html)
 * :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
 
@@ -43,6 +46,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <array>
@@ -223,6 +227,7 @@ struct wavelet_matrix {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

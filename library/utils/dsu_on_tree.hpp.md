@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -36,6 +40,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <stack>
@@ -107,6 +112,7 @@ void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, 
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

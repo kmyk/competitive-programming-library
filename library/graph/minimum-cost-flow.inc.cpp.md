@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/minimum-cost-flow.inc.cpp
+# :warning: minimum-cost flow with primal-dual method
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* minimum-cost flow with primal-dual method
 
 
 ## Code
+{% raw %}
 ```cpp
 template <class T>
 struct edge { int to; T cap, cost; int rev; };
@@ -114,6 +118,7 @@ T min_cost_flow_destructive(int src, int dst, T flow, vector<vector<edge<T> > > 
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

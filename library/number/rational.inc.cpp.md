@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 struct rational { int num, den; };
 rational make_rational(ll num, ll den = 1) { ll k = gcd(num, den); return (rational) { int(num / k), int(den / k) }; }
@@ -44,6 +49,7 @@ bool operator != (rational a, rational b) { return a.num != b.num  or a.den != b
 ostream & operator << (ostream & out, rational a) { if (a.den == 0) return out << "invalid"; return out << a.num << '/' << a.den; }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -31,6 +35,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @see https://www.slideshare.net/wata_orz/ss-12131479
@@ -61,6 +66,7 @@ int maximum_independent_set(vector<vector<bool> > const & g) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/double-ended-priority-queue.inc.cpp
+# :warning: a double-ended priority queue
 * category: data_structure
 
 
 [Back to top page](../../index.html)
 
-* a double-ended priority queue
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief a double-ended priority queue
@@ -109,6 +113,7 @@ unittest {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

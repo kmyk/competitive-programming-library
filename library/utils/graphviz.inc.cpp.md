@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 void graphviz(vector<vector<int> > const & g, bool is_digraph = false, string const & name = "graph") {
     ofstream ofs(name + ".dot");
@@ -43,6 +48,7 @@ void graphviz(vector<vector<int> > const & g, bool is_digraph = false, string co
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

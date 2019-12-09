@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,17 +25,17 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/breadth-first-search.inc.cpp
+# :warning: compute the distances from root
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* compute the distances from root
 * 0-1 BFS
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief compute the distances from root
@@ -85,6 +89,7 @@ vector<int> zero_one_breadth_first_search(int root, vector<vector<pair<int, bool
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

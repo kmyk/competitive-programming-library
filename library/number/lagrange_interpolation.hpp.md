@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/lagrange_interpolation.hpp
+# :heavy_check_mark: Lagrange interpolation
 * category: number
 
 
 [Back to top page](../../index.html)
 
-* Lagrange interpolation
 
 
 ## Dependencies
@@ -39,6 +42,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #include <cassert>
 #include <utility>
@@ -104,6 +108,7 @@ std::vector<long double> lagrange_interpolate(const std::vector<std::pair<long d
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -29,15 +33,17 @@
 
 
 ## Dependencies
-* :heavy_check_mark: [graph/bellman_ford.test.cpp](../../library/graph/bellman_ford.test.cpp.html)
+* :heavy_check_mark: [graph/bellman_ford.test.cpp](bellman_ford.test.cpp.html)
 
 
 ## Code
+{% raw %}
 ```cpp
 #define USE_SPFA
 #include "graph/bellman_ford.test.cpp"
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

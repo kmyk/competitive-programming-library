@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,18 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/bernoulli-number.inc.cpp
+# :warning: 0^k + 1^k + 2^k + ... + (n - 1)^k
 * category: modulus
 
 
 [Back to top page](../../index.html)
 
-* 0^k + 1^k + 2^k + ... + (n - 1)^k
 * see: [https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0](https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0)
 * see: [https://yukicoder.me/problems/no/665](https://yukicoder.me/problems/no/665)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @tparam MOD must be a prime
@@ -82,6 +86,7 @@ int sum_of_pow(ll n, int k) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

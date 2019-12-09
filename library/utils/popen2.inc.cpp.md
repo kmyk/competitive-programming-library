@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 pid_t popen2(const char *command, int *fd_r, int *fd_w) {
     constexpr int READ = 0;
@@ -61,6 +66,7 @@ pid_t popen2(const char *command, int *fd_r, int *fd_w) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

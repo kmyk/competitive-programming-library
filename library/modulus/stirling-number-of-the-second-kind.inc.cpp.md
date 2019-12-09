@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,19 +25,19 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/stirling-number-of-the-second-kind.inc.cpp
+# :warning: the Stirling number of the second kind
 * category: modulus
 
 
 [Back to top page](../../index.html)
 
-* the Stirling number of the second kind
 * see: [http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html](http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html)
 * see: [http://oeis.org/A008277](http://oeis.org/A008277)
 * see: [https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0)
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief the Stirling number of the second kind
@@ -76,6 +80,7 @@ mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

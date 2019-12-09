@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,13 +25,12 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/tree-dp.inc.cpp
+# :warning: fold a rooted tree (木DP)
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* fold a rooted tree (木DP)
 * rerooting (全方位木DP)
 * fold a rooted tree (木DP)
 * rerooting (全方位木DP)
@@ -36,6 +39,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief fold a rooted tree (木DP)
@@ -227,6 +231,7 @@ vector<typename TreeOperation::type> reroot_folded_rooted_tree(vector<typename T
 
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

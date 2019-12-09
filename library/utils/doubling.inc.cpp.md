@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/doubling.inc.cpp
+# :warning: the doubling technique
 * category: utils
 
 
 [Back to top page](../../index.html)
 
-* the doubling technique
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief the doubling technique
@@ -83,6 +87,7 @@ unittest {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @note 計算量は確かに落ちるのだけどこれを使って速くなるケースは元々全部連結してて自明な気がする
@@ -74,6 +79,7 @@ struct range_union_find_tree {
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

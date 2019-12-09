@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,18 +25,17 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/lowest_common_ancestor.hpp
+# :heavy_check_mark: lowest common ancestor with \pm 1 RMQ and sparse table
 * category: graph
 
 
 [Back to top page](../../index.html)
 
-* lowest common ancestor with \pm 1 RMQ and sparse table
 * see: [https://www.slideshare.net/yumainoue965/lca-and-rmq](https://www.slideshare.net/yumainoue965/lca-and-rmq)
 
 
 ## Dependencies
-* :heavy_check_mark: [data_structure/sparse_table.hpp](../data_structure/sparse_table.hpp.html)
+* :heavy_check_mark: [sparse table on a semilattice](../data_structure/sparse_table.hpp.html)
 
 
 ## Verified
@@ -40,6 +43,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 #pragma once
 #include <algorithm>
@@ -106,6 +110,7 @@ public:
 };
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

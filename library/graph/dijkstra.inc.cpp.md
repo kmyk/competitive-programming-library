@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @note O((E + V) log V)
@@ -122,6 +127,7 @@ vector<int> reconstruct_edges_dijkstra(int n, int src, int dst, vector<T> const 
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

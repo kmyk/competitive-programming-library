@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -30,6 +34,7 @@
 
 
 ## Code
+{% raw %}
 ```cpp
 bool is_suffix(string const & a, string const & b) {
     if (a.length() > b.length()) return false;
@@ -45,6 +50,7 @@ unittest {
 }
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 

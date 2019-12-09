@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- mathjax config similar to math.stackexchange -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -21,16 +25,16 @@
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: string/knuth-morris-pratt.inc.cpp
+# :warning: Morris-Pratt algorithm
 * category: string
 
 
 [Back to top page](../../index.html)
 
-* Morris-Pratt algorithm
 
 
 ## Code
+{% raw %}
 ```cpp
 /**
  * @brief Morris-Pratt algorithm
@@ -84,6 +88,7 @@ int kmp_match(string const & target, string const & pattern) {
 */
 
 ```
+{% endraw %}
 
 [Back to top page](../../index.html)
 
