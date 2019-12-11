@@ -1,6 +1,3 @@
-:%! sh -c "`cat`"
-#!/bin/sh
-cat <<EOF
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -24,4 +21,3 @@ int main() {
     constexpr char endl = '\n';
     return 0;
 }
-EOF
