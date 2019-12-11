@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: string/aho-corasick.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: string
+* <a href="{{ site.github.repository_url }}/blob/master/string/aho-corasick.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-06-02 16:57:27 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -102,5 +104,5 @@ void ac_delete(pma_t *pma) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

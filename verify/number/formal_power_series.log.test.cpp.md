@@ -26,16 +26,20 @@ layout: default
 
 
 # :heavy_check_mark: number/formal_power_series.log.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.log.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-08 21:29:58 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://judge.yosupo.jp/problem/log_of_formal_power_series](https://judge.yosupo.jp/problem/log_of_formal_power_series)
+* see: <a href="https://judge.yosupo.jp/problem/log_of_formal_power_series">https://judge.yosupo.jp/problem/log_of_formal_power_series</a>
 
 
-## Dependencies
-* :heavy_check_mark: [number/formal_power_series.hpp](../../library/number/formal_power_series.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
+* :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -73,5 +77,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

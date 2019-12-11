@@ -26,23 +26,25 @@ layout: default
 
 
 # :heavy_check_mark: number/primes.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/primes.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:39:14 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
-
-
-## Required
-* :warning: [upward fast zeta transform on primes](../utils/fast_zeta_transform.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified
-* :heavy_check_mark: [number/primes.aoj.test.cpp](../../verify/number/primes.aoj.test.cpp.html)
+## Required By
+* :warning: <a href="../utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
+
+
+## Verified With
+* :heavy_check_mark: <a href="../../verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 
 
 ## Code
@@ -157,5 +159,5 @@ struct prepared_primes {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

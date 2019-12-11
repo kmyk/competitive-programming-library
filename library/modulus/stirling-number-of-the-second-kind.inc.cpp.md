@@ -26,14 +26,16 @@ layout: default
 
 
 # :warning: the Stirling number of the second kind
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/stirling-number-of-the-second-kind.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-02-18 01:11:58 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html](http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html)
-* see: [http://oeis.org/A008277](http://oeis.org/A008277)
-* see: [https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0)
+* see: <a href="http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html">http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html</a>
+* see: <a href="http://oeis.org/A008277">http://oeis.org/A008277</a>
+* see: <a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0">https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0</a>
 
 
 ## Code
@@ -82,5 +84,5 @@ mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

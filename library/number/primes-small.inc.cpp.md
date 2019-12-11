@@ -25,11 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: enumerate primes in [2, n) with O(n log log n)
+# :warning: enumerate primes in \[2, n) with O(n log log n)
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/primes-small.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:39:14 +0900
 
-
-[Back to top page](../../index.html)
 
 * fully factorize all numbers in [0, n) with O(n log log n)
 
@@ -143,5 +145,5 @@ map<int64_t, int> prime_factorize1(int64_t n) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

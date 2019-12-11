@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: compute the distances from root
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/breadth-first-search.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-01-13 05:37:22 +0900
 
-
-[Back to top page](../../index.html)
 
 * 0-1 BFS
 
@@ -91,5 +93,5 @@ vector<int> zero_one_breadth_first_search(int root, vector<vector<pair<int, bool
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

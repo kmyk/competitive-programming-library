@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: number/rational.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/rational.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-07-06 01:52:56 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -51,5 +53,5 @@ ostream & operator << (ostream & out, rational a) { if (a.den == 0) return out <
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

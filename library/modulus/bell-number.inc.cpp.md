@@ -26,14 +26,16 @@ layout: default
 
 
 # :warning: the Bell number
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/bell-number.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-02-18 01:11:58 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://mathworld.wolfram.com/BellNumber.html](http://mathworld.wolfram.com/BellNumber.html)
-* see: [https://oeis.org/A110](https://oeis.org/A110)
-* see: [https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0](https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0)
+* see: <a href="http://mathworld.wolfram.com/BellNumber.html">http://mathworld.wolfram.com/BellNumber.html</a>
+* see: <a href="https://oeis.org/A110">https://oeis.org/A110</a>
+* see: <a href="https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0">https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0</a>
 
 
 ## Code
@@ -81,5 +83,5 @@ mint<MOD> binary_bell_number(int n, int k) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

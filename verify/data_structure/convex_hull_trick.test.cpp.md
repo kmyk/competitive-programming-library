@@ -26,15 +26,17 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/convex_hull_trick.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/convex_hull_trick.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [data_structure/convex_hull_trick.hpp](../../library/data_structure/convex_hull_trick.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -79,5 +81,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

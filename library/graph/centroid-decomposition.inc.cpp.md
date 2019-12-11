@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: graph/centroid-decomposition.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/centroid-decomposition.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-01-14 19:03:00 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -74,5 +76,5 @@ vector<int> get_centroids(vector<vector<int> > const & g, int root, set<int> con
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

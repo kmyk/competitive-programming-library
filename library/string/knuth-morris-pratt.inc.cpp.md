@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: Morris-Pratt algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: string
+* <a href="{{ site.github.repository_url }}/blob/master/string/knuth-morris-pratt.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-05-24 16:32:35 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -90,5 +92,5 @@ int kmp_match(string const & target, string const & pattern) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: graph/dominator-tree.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/dominator-tree.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-06-02 16:57:27 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -119,5 +121,5 @@ vector<int> dominator_tree(vector<vector<int> > const & g, int root_g) { // G is
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

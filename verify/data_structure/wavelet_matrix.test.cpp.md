@@ -26,15 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/wavelet_matrix.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-06-03 23:38:29 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [a wavelet matrix](../../library/data_structure/wavelet_matrix.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
+* :heavy_check_mark: <a href="../../library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -113,5 +116,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

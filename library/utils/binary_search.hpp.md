@@ -26,16 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: a flexible binary search
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Verified
-* :heavy_check_mark: [utils/binary_search.aoj.test.cpp](../../verify/utils/binary_search.aoj.test.cpp.html)
-* :heavy_check_mark: [utils/binary_search.unit.test.cpp](../../verify/utils/binary_search.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/binary_search.unit.test.cpp.html">utils/binary_search.unit.test.cpp</a>
 
 
 ## Code
@@ -78,5 +80,5 @@ int64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate p) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

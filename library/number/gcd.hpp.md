@@ -26,19 +26,24 @@ layout: default
 
 
 # :heavy_check_mark: number/gcd.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/gcd.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-06-04 14:45:23 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Required By
+* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
 
-## Required
-* :heavy_check_mark: [sparse table on a semilattice](../data_structure/sparse_table.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [number/gcd.test.cpp](../../verify/number/gcd.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.unit.test.cpp.html">data_structure/sparse_table.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/gcd.test.cpp.html">number/gcd.test.cpp</a>
 
 
 ## Code
@@ -67,5 +72,5 @@ T lcm(T a, T b) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

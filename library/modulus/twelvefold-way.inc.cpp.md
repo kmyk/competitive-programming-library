@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: labeled-N labeled-K any-f
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold-way.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-02-18 01:11:58 +0900
 
-
-[Back to top page](../../index.html)
 
 * labeled-N labeled-K injective-f
 * labeled-N labeled-K surjective-f
@@ -162,5 +164,5 @@ mint<MOD> twelvefold_uui(int n, int k) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

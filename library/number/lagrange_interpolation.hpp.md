@@ -26,19 +26,21 @@ layout: default
 
 
 # :heavy_check_mark: Lagrange interpolation
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/lagrange_interpolation.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-11 04:56:00 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [number/lagrange_interpolation.test.cpp](../../verify/number/lagrange_interpolation.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/number/lagrange_interpolation.test.cpp.html">number/lagrange_interpolation.test.cpp</a>
 
 
 ## Code
@@ -110,5 +112,5 @@ std::vector<long double> lagrange_interpolate(const std::vector<std::pair<long d
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

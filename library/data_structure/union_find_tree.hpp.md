@@ -26,15 +26,17 @@ layout: default
 
 
 # :heavy_check_mark: a disjoint set structure
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-06-03 23:38:29 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Verified
-* :heavy_check_mark: [data_structure/union_find_tree.test.cpp](../../verify/data_structure/union_find_tree.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
 
 
 ## Code
@@ -69,5 +71,5 @@ struct union_find_tree {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

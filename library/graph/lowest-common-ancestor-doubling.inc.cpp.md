@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: lowest common ancestor with doubling
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/lowest-common-ancestor-doubling.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-25 19:08:00 +0900
 
-
-[Back to top page](../../index.html)
 
 * find the LCA of x and y
 * find the descendant of x for y
@@ -124,5 +126,5 @@ struct lowest_common_ancestor {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

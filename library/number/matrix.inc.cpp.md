@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: number/matrix.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/matrix.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-07-06 01:52:56 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -178,5 +180,5 @@ vector<vector<T> > concat_matrix_vector(vector<vector<T> > const & f, vector<T> 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

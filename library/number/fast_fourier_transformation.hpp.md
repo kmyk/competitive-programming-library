@@ -26,19 +26,21 @@ layout: default
 
 
 # :heavy_check_mark: the convolution
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/fast_fourier_transformation.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-06 01:47:20 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [number/fast_fourier_transformation.unit.test.cpp](../../verify/number/fast_fourier_transformation.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/number/fast_fourier_transformation.unit.test.cpp.html">number/fast_fourier_transformation.unit.test.cpp</a>
 
 
 ## Code
@@ -138,5 +140,5 @@ std::vector<T> convolution(std::vector<T> const & a, std::vector<T> const & b) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

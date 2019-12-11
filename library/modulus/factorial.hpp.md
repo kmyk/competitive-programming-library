@@ -26,23 +26,25 @@ layout: default
 
 
 # :heavy_check_mark: modulus/factorial.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/factorial.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [modulus/mint.hpp](mint.hpp.html)
-
-
-## Required
-* :warning: [modulus/choose.hpp](choose.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 
 
-## Verified
-* :heavy_check_mark: [modulus/factorial.unit.test.cpp](../../verify/modulus/factorial.unit.test.cpp.html)
+## Required By
+* :warning: <a href="choose.hpp.html">modulus/choose.hpp</a>
+
+
+## Verified With
+* :heavy_check_mark: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
 
 
 ## Code
@@ -78,5 +80,5 @@ mint<MOD> inv_fact(int n) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

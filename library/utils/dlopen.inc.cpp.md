@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/dlopen.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/dlopen.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-06-28 15:20:11 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -112,5 +114,5 @@ D(mpz_probab_prime_p)
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

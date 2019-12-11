@@ -26,12 +26,14 @@ layout: default
 
 
 # :warning: utils/maximum-independent-set.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/maximum-independent-set.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-15 22:37:03 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://www.slideshare.net/wata_orz/ss-12131479](https://www.slideshare.net/wata_orz/ss-12131479)
+* see: <a href="https://www.slideshare.net/wata_orz/ss-12131479">https://www.slideshare.net/wata_orz/ss-12131479</a>
 
 
 ## Code
@@ -68,5 +70,5 @@ int maximum_independent_set(vector<vector<bool> > const & g) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

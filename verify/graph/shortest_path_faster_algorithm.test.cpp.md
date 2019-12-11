@@ -26,14 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: graph/shortest_path_faster_algorithm.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/graph/shortest_path_faster_algorithm.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-12 20:37:43 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [graph/bellman_ford.test.cpp](bellman_ford.test.cpp.html)
+## Depends On
+* :heavy_check_mark: <a href="bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -45,5 +49,5 @@ layout: default
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

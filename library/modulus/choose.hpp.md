@@ -26,17 +26,19 @@ layout: default
 
 
 # :warning: modulus/choose.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/choose.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [modulus/factorial.hpp](factorial.hpp.html)
-* :heavy_check_mark: [modulus/mint.hpp](mint.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -86,5 +88,5 @@ mint<MOD> simple_choose(int64_t n, int32_t r) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

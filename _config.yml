@@ -1,3 +1,10 @@
-theme: jekyll-theme-dinky
+docs:
+  categorize_library: true
+  categorize_verify: false
+  description: ''
+  html: false
+  title: C++ Competitive Programming Library
+  toc: false
 plugins:
-  - jemoji
+- jemoji
+theme: jekyll-theme-dinky

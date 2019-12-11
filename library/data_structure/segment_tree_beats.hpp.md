@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: a segment tree beats
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-04 21:35:32 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -137,5 +139,5 @@ private:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/graphviz.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/graphviz.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-27 06:53:37 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -50,5 +52,5 @@ void graphviz(vector<vector<int> > const & g, bool is_digraph = false, string co
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,19 +26,21 @@ layout: default
 
 
 # :heavy_check_mark: graph/subtree.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/subtree.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-29 09:19:37 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Required By
+* :warning: <a href="../utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
 
-## Required
-* :warning: [utils/dsu_on_tree.hpp](../utils/dsu_on_tree.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [graph/subtree.unit.test.cpp](../../verify/graph/subtree.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/graph/subtree.unit.test.cpp.html">graph/subtree.unit.test.cpp</a>
 
 
 ## Code
@@ -92,5 +94,5 @@ std::vector<subtree_info_t> prepare_subtree_info(std::vector<std::vector<int> > 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

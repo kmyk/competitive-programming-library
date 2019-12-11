@@ -26,13 +26,15 @@ layout: default
 
 
 # :warning: 0^k + 1^k + 2^k + ... + (n - 1)^k
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/bernoulli-number.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-04-12 06:30:36 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0](https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0)
-* see: [https://yukicoder.me/problems/no/665](https://yukicoder.me/problems/no/665)
+* see: <a href="https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0">https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0</a>
+* see: <a href="https://yukicoder.me/problems/no/665">https://yukicoder.me/problems/no/665</a>
 
 
 ## Code
@@ -88,5 +90,5 @@ int sum_of_pow(ll n, int k) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

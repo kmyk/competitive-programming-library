@@ -26,14 +26,16 @@ layout: default
 
 
 # :warning: heavy light decomposition
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/heavy_light_decomposition.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-30 16:00:47 +0900
 
-
-[Back to top page](../../index.html)
 
 * construct an adjacency list for the decomposed tree
 * reduce a path-query to range-queries aboud nodes
-* see: [http://math314.hateblo.jp/entry/2014/06/24/220107](http://math314.hateblo.jp/entry/2014/06/24/220107)
+* see: <a href="http://math314.hateblo.jp/entry/2014/06/24/220107">http://math314.hateblo.jp/entry/2014/06/24/220107</a>
 
 
 ## Code
@@ -205,5 +207,5 @@ struct heavy_light_decomposition_edge_adapter {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

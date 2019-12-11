@@ -26,20 +26,24 @@ layout: default
 
 
 # :heavy_check_mark: lowest common ancestor with \pm 1 RMQ and sparse table
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-24 17:26:39 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://www.slideshare.net/yumainoue965/lca-and-rmq](https://www.slideshare.net/yumainoue965/lca-and-rmq)
+* see: <a href="https://www.slideshare.net/yumainoue965/lca-and-rmq">https://www.slideshare.net/yumainoue965/lca-and-rmq</a>
 
 
-## Dependencies
-* :heavy_check_mark: [sparse table on a semilattice](../data_structure/sparse_table.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified
-* :heavy_check_mark: [graph/lowest_common_ancestor.aoj.test.cpp](../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 
 
 ## Code
@@ -112,5 +116,5 @@ public:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

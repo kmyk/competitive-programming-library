@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: number/choose.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/choose.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-07-06 01:52:56 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -48,5 +50,5 @@ double choose(int n, int r) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

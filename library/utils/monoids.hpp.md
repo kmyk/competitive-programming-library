@@ -26,20 +26,22 @@ layout: default
 
 
 # :heavy_check_mark: utils/monoids.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/monoids.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-29 09:20:33 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Verified
-* :heavy_check_mark: [data_structure/dual_segment_tree.range_update_query.test.cpp](../../verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html)
-* :heavy_check_mark: [data_structure/dual_segment_tree.unit.test.cpp](../../verify/data_structure/dual_segment_tree.unit.test.cpp.html)
-* :heavy_check_mark: [data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp](../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html)
-* :heavy_check_mark: [data_structure/lazy_propagation_segment_tree.unit.test.cpp](../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html)
-* :heavy_check_mark: [data_structure/segment_tree.point_set_range_composite.test.cpp](../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html)
-* :heavy_check_mark: [data_structure/segment_tree.range_sum_query.test.cpp](../../verify/data_structure/segment_tree.range_sum_query.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/dual_segment_tree.unit.test.cpp.html">data_structure/dual_segment_tree.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 
 
 ## Code
@@ -189,5 +191,5 @@ struct plus_min_count_action {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

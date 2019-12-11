@@ -26,12 +26,14 @@ layout: default
 
 
 # :warning: geometry/convex-hull.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: geometry
+* <a href="{{ site.github.repository_url }}/blob/master/geometry/convex-hull.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-09-21 20:34:40 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://www.prefield.com/algorithm/geometry/convex_hull.html](http://www.prefield.com/algorithm/geometry/convex_hull.html)
+* see: <a href="http://www.prefield.com/algorithm/geometry/convex_hull.html">http://www.prefield.com/algorithm/geometry/convex_hull.html</a>
 
 
 ## Code
@@ -70,5 +72,5 @@ vector<complex<double> > convex_hull(vector<complex<double> > ps) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

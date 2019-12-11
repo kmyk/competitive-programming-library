@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: modulus/modops.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/modops.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-30 16:00:47 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -51,5 +53,5 @@ inline int modmul<int mod>(int a, int b) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

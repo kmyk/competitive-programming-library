@@ -26,16 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/sliding_window_aggregation.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-28 17:51:23 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [get sum of elements in the queue](../../library/data_structure/sliding_window_aggregation.hpp.html)
-* :heavy_check_mark: [modulus/mint.hpp](../../library/modulus/mint.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -87,5 +89,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

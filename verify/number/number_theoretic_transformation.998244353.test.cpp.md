@@ -26,16 +26,19 @@ layout: default
 
 
 # :heavy_check_mark: number/number_theoretic_transformation.998244353.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.998244353.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-08 21:29:58 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://judge.yosupo.jp/problem/convolution_mod](https://judge.yosupo.jp/problem/convolution_mod)
+* see: <a href="https://judge.yosupo.jp/problem/convolution_mod">https://judge.yosupo.jp/problem/convolution_mod</a>
 
 
-## Dependencies
-* :heavy_check_mark: [a specialized version of Garner's algorithm](../../library/number/number_theoretic_transformation.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -76,5 +79,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/twosat.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/twosat.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-06-02 16:57:27 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -61,5 +63,5 @@ vector<bool> twosat(int n, vector<pair<int, int> > const & cnf) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,15 +26,20 @@ layout: default
 
 
 # :heavy_check_mark: graph/lowest_common_ancestor.aoj.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.aoj.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-24 17:26:39 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C)
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C</a>
 
 
-## Dependencies
-* :heavy_check_mark: [lowest common ancestor with \pm 1 RMQ and sparse table](../../library/graph/lowest_common_ancestor.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :heavy_check_mark: <a href="../../library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
+* :heavy_check_mark: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -76,5 +81,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,20 +26,22 @@ layout: default
 
 
 # :heavy_check_mark: Bellman-Ford algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/bellman_ford.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-12 19:57:24 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [graph/bellman_ford.test.cpp](../../verify/graph/bellman_ford.test.cpp.html)
-* :heavy_check_mark: [graph/shortest_path_faster_algorithm.unit.test.cpp](../../verify/graph/shortest_path_faster_algorithm.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/shortest_path_faster_algorithm.unit.test.cpp.html">graph/shortest_path_faster_algorithm.unit.test.cpp</a>
 
 
 ## Code
@@ -103,5 +105,5 @@ std::vector<int64_t> bellman_ford_shortest_path(int root, std::vector<std::vecto
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: data_structure/treap.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/treap.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-06-03 23:08:10 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -108,5 +110,5 @@ private:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

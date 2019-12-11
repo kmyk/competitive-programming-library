@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: 2-node-connected components decomposition
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/two-node-connected-components.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-12-07 05:10:11 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -86,5 +88,5 @@ vector<vector<pair<int, int> > > decompose_to_two_node_connected_components(vect
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

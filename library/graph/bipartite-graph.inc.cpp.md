@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: graph/bipartite-graph.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/bipartite-graph.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-08-19 10:59:42 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -64,5 +66,5 @@ int check_bipartite_graph(vector<vector<int> > const & g) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,15 +26,17 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/union_find_tree.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-07 22:48:24 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A)
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A</a>
 
 
-## Dependencies
-* :heavy_check_mark: [a disjoint set structure](../../library/data_structure/union_find_tree.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/union_find_tree.hpp.html">a disjoint set structure</a>
 
 
 ## Code
@@ -63,5 +65,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

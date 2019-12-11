@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/subset.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/subset.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-16 00:01:28 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -67,5 +69,5 @@ for (int x = (1 << k) - 1; x < (1 << n); ) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

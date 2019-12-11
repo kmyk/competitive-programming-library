@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: compare substrings of a string with O(1) using suffix arrays
+<a href="../../index.html">Back to top page</a>
+
 * category: string
+* <a href="{{ site.github.repository_url }}/blob/master/string/comparable-view.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-09-21 20:34:40 +0900
 
-
-[Back to top page](../../index.html)
 
 * as a class
 
@@ -164,5 +166,5 @@ unittest {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

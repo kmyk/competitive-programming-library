@@ -26,17 +26,19 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/lazy_propagation_segment_tree.unit.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.unit.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-29 09:20:33 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [a lazy propagation segment tree](../../library/data_structure/lazy_propagation_segment_tree.hpp.html)
-* :heavy_check_mark: [modulus/mint.hpp](../../library/modulus/mint.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
-* :heavy_check_mark: [utils/monoids.hpp](../../library/utils/monoids.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
@@ -99,5 +101,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

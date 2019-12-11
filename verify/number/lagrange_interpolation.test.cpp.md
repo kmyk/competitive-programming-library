@@ -26,14 +26,17 @@ layout: default
 
 
 # :heavy_check_mark: number/lagrange_interpolation.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/number/lagrange_interpolation.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [Lagrange interpolation](../../library/number/lagrange_interpolation.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/number/lagrange_interpolation.hpp.html">Lagrange interpolation</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -88,5 +91,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,15 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/link_cut_tree.spaceships.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.spaceships.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-07 22:48:24 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships](https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships)
+* see: <a href="https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships">https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships</a>
 
 
-## Dependencies
-* :heavy_check_mark: [an extended structure of union-find tree](../../library/data_structure/link_cut_tree.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -125,5 +128,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

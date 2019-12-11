@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: graph/topological-sort.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/topological-sort.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-05-24 16:32:35 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -79,5 +81,5 @@ vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

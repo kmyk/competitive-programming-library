@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/digit-dp.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/digit-dp.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-06-02 16:57:27 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -70,5 +72,5 @@ vector<vector<ll> > strmodin(string const & s, int a, vector<int> const & b, ll 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

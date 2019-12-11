@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: string/prefix.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: string
+* <a href="{{ site.github.repository_url }}/blob/master/string/prefix.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-12-07 05:27:34 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -52,5 +54,5 @@ unittest {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

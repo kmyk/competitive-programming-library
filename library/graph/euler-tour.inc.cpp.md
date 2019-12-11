@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: euler tour
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/euler-tour.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-05 00:46:29 +0900
 
-
-[Back to top page](../../index.html)
 
 * euler tour, push vertices only visiting
 * something like euler tour but do BFS
@@ -157,5 +159,5 @@ void do_bfs_euler_tour(vector<vector<int> > const & g, int root, vector<int> & t
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

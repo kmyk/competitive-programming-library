@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: strongly connected components decomposition, Kosaraju's algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/strongly_connected_components.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-12-07 05:10:11 +0900
 
-
-[Back to top page](../../index.html)
 
 * memory optimized version
 
@@ -150,5 +152,5 @@ pair<int, vector<int> > decompose_to_strongly_connected_components(vector<vector
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

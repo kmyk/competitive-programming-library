@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: for given a and c, make b s.t. a < b < c
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/midpoint.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-09-21 20:34:40 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -71,5 +73,5 @@ public:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

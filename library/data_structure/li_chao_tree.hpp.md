@@ -26,19 +26,21 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/li_chao_tree.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/li_chao_tree.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-24 17:27:27 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [data_structure/li_chao_tree.test.cpp](../../verify/data_structure/li_chao_tree.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/li_chao_tree.test.cpp.html">data_structure/li_chao_tree.test.cpp</a>
 
 
 ## Code
@@ -131,5 +133,5 @@ struct li_chao_tree {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

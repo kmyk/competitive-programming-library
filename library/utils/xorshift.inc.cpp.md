@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/xorshift.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/xorshift.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-07-06 01:52:56 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -62,5 +64,5 @@ private:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

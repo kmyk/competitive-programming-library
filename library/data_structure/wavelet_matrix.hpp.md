@@ -26,23 +26,25 @@ layout: default
 
 
 # :heavy_check_mark: a wavelet matrix
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-06-03 23:38:29 +0900
 
-
-[Back to top page](../../index.html)
 
 * find the k-th number in [l, r)
 * count the number of values in [value_l, value_r) in range [l, r)
 * flexible version of range_frequency, buf a little bit slow
 
 
-## Dependencies
-* :heavy_check_mark: [a fully indexable dictionary](fully_indexable_dictionary.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified
-* :heavy_check_mark: [data_structure/wavelet_matrix.test.cpp](../../verify/data_structure/wavelet_matrix.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
 
 
 ## Code
@@ -229,5 +231,5 @@ struct wavelet_matrix {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: reverse a digraph
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/utils.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-04-12 06:30:36 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -53,5 +55,5 @@ vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

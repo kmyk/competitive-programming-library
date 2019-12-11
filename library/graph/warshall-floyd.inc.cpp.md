@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: Warshall-Floyd algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/warshall-floyd.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-04-12 06:30:36 +0900
 
-
-[Back to top page](../../index.html)
 
 * Warshall-Floyd algorithm for connectivity
 
@@ -85,5 +87,5 @@ vector<vector<bool> > warshall_floyd(vector<vector<int> > const & g) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

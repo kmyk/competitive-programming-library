@@ -26,15 +26,17 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/convex_hull_trick.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/convex_hull_trick.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Verified
-* :heavy_check_mark: [data_structure/convex_hull_trick.test.cpp](../../verify/data_structure/convex_hull_trick.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/convex_hull_trick.test.cpp.html">data_structure/convex_hull_trick.test.cpp</a>
 
 
 ## Code
@@ -156,5 +158,5 @@ struct inverted_convex_hull_trick {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

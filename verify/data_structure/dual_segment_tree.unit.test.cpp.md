@@ -26,15 +26,17 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/dual_segment_tree.unit.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/dual_segment_tree.unit.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-29 09:20:33 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [a dual segment tree](../../library/data_structure/dual_segment_tree.hpp.html)
-* :heavy_check_mark: [utils/monoids.hpp](../../library/utils/monoids.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/dual_segment_tree.hpp.html">a dual segment tree</a>
+* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
@@ -69,5 +71,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

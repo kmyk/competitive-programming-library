@@ -26,15 +26,17 @@ layout: default
 
 
 # :warning: (upward) fast zeta transformation
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/fast-mobius-transformation.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-12-07 05:10:11 +0900
 
-
-[Back to top page](../../index.html)
 
 * (downward) fast zeta transformation
 * (upward) fast mobius transformation
 * (downward) fast mobius transformation
-* see: [http://pekempey.hatenablog.com/entry/2016/10/30/205852](http://pekempey.hatenablog.com/entry/2016/10/30/205852)
+* see: <a href="http://pekempey.hatenablog.com/entry/2016/10/30/205852">http://pekempey.hatenablog.com/entry/2016/10/30/205852</a>
 
 
 ## Code
@@ -120,5 +122,5 @@ vector<T> downward_fast_mobius_transform(vector<T> f) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

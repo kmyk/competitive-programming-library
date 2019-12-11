@@ -26,24 +26,27 @@ layout: default
 
 
 # :heavy_check_mark: sparse table on a semilattice
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 10:09:05 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [number/gcd.hpp](../number/gcd.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
-
-
-## Required
-* :heavy_check_mark: [lowest common ancestor with \pm 1 RMQ and sparse table](../graph/lowest_common_ancestor.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified
-* :heavy_check_mark: [data_structure/sparse_table.unit.test.cpp](../../verify/data_structure/sparse_table.unit.test.cpp.html)
+## Required By
+* :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
+
+
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.unit.test.cpp.html">data_structure/sparse_table.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 
 
 ## Code
@@ -124,5 +127,5 @@ struct indexed_min_semilattice {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

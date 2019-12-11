@@ -26,16 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: graph/shortest_path_faster_algorithm.unit.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/graph/shortest_path_faster_algorithm.unit.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-12 20:37:43 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [Bellman-Ford algorithm](../../library/graph/bellman_ford.hpp.html)
-* :heavy_check_mark: [Shortest Path Faster Algorithm](../../library/graph/shortest_path_faster_algorithm.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
+* :heavy_check_mark: <a href="../../library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -85,5 +87,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

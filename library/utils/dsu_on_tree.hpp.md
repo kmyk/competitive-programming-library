@@ -26,17 +26,19 @@ layout: default
 
 
 # :warning: utils/dsu_on_tree.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-04 23:51:07 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [https://codeforces.com/blog/entry/44351](https://codeforces.com/blog/entry/44351)
+* see: <a href="https://codeforces.com/blog/entry/44351">https://codeforces.com/blog/entry/44351</a>
 
 
-## Dependencies
-* :heavy_check_mark: [graph/subtree.hpp](../graph/subtree.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -114,5 +116,5 @@ void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

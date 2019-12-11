@@ -26,14 +26,16 @@ layout: default
 
 
 # :heavy_check_mark: graph/subtree.unit.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/graph/subtree.unit.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-29 09:19:37 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [graph/subtree.hpp](../../library/graph/subtree.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/graph/subtree.hpp.html">graph/subtree.hpp</a>
 
 
 ## Code
@@ -73,5 +75,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,25 +26,30 @@ layout: default
 
 
 # :heavy_check_mark: a specialized version of Garner's algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-08 21:29:58 +0900
 
-
-[Back to top page](../../index.html)
 
 * the convolution on Z/pZ
 
 
-## Dependencies
-* :heavy_check_mark: [modulus/mint.hpp](../modulus/mint.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required
-* :heavy_check_mark: [number/formal_power_series.hpp](formal_power_series.hpp.html)
+## Required By
+* :heavy_check_mark: <a href="formal_power_series.hpp.html">number/formal_power_series.hpp</a>
 
 
-## Verified
-* :heavy_check_mark: [number/number_theoretic_transformation.998244353.test.cpp](../../verify/number/number_theoretic_transformation.998244353.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
 
 
 ## Code
@@ -238,5 +243,5 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

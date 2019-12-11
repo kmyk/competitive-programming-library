@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/periodic-function-power.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/periodic-function-power.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-12-25 19:08:00 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -61,5 +63,5 @@ T periodic_function_power(F f, ll k, T x) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

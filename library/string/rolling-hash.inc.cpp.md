@@ -26,13 +26,15 @@ layout: default
 
 
 # :warning: a rolling hash
+<a href="../../index.html">Back to top page</a>
+
 * category: string
+* <a href="{{ site.github.repository_url }}/blob/master/string/rolling-hash.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-06 01:47:20 +0900
 
-
-[Back to top page](../../index.html)
 
 * an adaptor to a segment tree
-* see: [http://hos.ac/blog/#blog0003](http://hos.ac/blog/#blog0003)
+* see: <a href="http://hos.ac/blog/#blog0003">http://hos.ac/blog/#blog0003</a>
 
 
 ## Code
@@ -217,5 +219,5 @@ uint64_t rolling_hash(const vector<int> & s) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

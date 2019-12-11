@@ -26,21 +26,22 @@ layout: default
 
 
 # :heavy_check_mark: graph/bellman_ford.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/graph/bellman_ford.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-12 19:57:24 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B)
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B</a>
 
 
-## Dependencies
-* :heavy_check_mark: [Bellman-Ford algorithm](../../library/graph/bellman_ford.hpp.html)
-* :heavy_check_mark: [Shortest Path Faster Algorithm](../../library/graph/shortest_path_faster_algorithm.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required
-* :heavy_check_mark: [graph/shortest_path_faster_algorithm.test.cpp](shortest_path_faster_algorithm.test.cpp.html)
+## Required By
+* :heavy_check_mark: <a href="shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
 
 
 ## Code
@@ -90,5 +91,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/dice.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/dice.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2017-07-02 11:46:07 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -67,5 +69,5 @@ bool operator == (dice_t x, dice_t y) { return x.a == y.a and x.b == y.b; }
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

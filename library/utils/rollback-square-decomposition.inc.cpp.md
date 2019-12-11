@@ -26,13 +26,15 @@ layout: default
 
 
 # :warning: the extended Mo's algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/rollback-square-decomposition.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-04-12 06:30:36 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://snuke.hatenablog.com/entry/2016/07/01/000000](http://snuke.hatenablog.com/entry/2016/07/01/000000)
-* see: [http://codeforces.com/blog/entry/7383?#comment-161520](http://codeforces.com/blog/entry/7383?#comment-161520)
+* see: <a href="http://snuke.hatenablog.com/entry/2016/07/01/000000">http://snuke.hatenablog.com/entry/2016/07/01/000000</a>
+* see: <a href="http://codeforces.com/blog/entry/7383?#comment-161520">http://codeforces.com/blog/entry/7383?#comment-161520</a>
 
 
 ## Code
@@ -86,5 +88,5 @@ void rollback_square_decomposition(int n, vector<pair<int, int> > const & range,
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

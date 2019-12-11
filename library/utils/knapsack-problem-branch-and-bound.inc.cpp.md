@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: utils/knapsack-problem-branch-and-bound.inc.cpp
+<a href="../../index.html">Back to top page</a>
+
 * category: utils
+* <a href="{{ site.github.repository_url }}/blob/master/utils/knapsack-problem-branch-and-bound.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-12-07 05:10:11 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -78,5 +80,5 @@ ll knapsack_problem_branch_and_bound(int n, ll max_w, vector<ll> const & a_v, ve
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

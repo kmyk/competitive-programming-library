@@ -26,25 +26,32 @@ layout: default
 
 
 # :heavy_check_mark: modulus/mint.hpp
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/mint.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-10-08 21:29:58 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Required By
+* :warning: <a href="choose.hpp.html">modulus/choose.hpp</a>
+* :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
+* :heavy_check_mark: <a href="../number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
+* :heavy_check_mark: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
 
-## Required
-* :warning: [modulus/choose.hpp](choose.hpp.html)
-* :heavy_check_mark: [modulus/factorial.hpp](factorial.hpp.html)
-* :heavy_check_mark: [number/formal_power_series.hpp](../number/formal_power_series.hpp.html)
-* :heavy_check_mark: [a specialized version of Garner's algorithm](../number/number_theoretic_transformation.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [data_structure/lazy_propagation_segment_tree.unit.test.cpp](../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html)
-* :heavy_check_mark: [data_structure/segment_tree.point_set_range_composite.test.cpp](../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html)
-* :heavy_check_mark: [data_structure/sliding_window_aggregation.test.cpp](../../verify/data_structure/sliding_window_aggregation.test.cpp.html)
-* :heavy_check_mark: [modulus/mint.unit.test.cpp](../../verify/modulus/mint.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/mint.unit.test.cpp.html">modulus/mint.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
 
 
 ## Code
@@ -110,5 +117,5 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

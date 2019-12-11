@@ -26,20 +26,22 @@ layout: default
 
 
 # :heavy_check_mark: a lazy propagation segment tree
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-29 09:20:33 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp](../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html)
-* :heavy_check_mark: [data_structure/lazy_propagation_segment_tree.unit.test.cpp](../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
 
 
 ## Code
@@ -143,5 +145,5 @@ struct lazy_propagation_segment_tree {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

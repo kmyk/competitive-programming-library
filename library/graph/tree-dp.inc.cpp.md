@@ -26,16 +26,18 @@ layout: default
 
 
 # :warning: fold a rooted tree (木DP)
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/tree-dp.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-08-19 10:59:42 +0900
 
-
-[Back to top page](../../index.html)
 
 * rerooting (全方位木DP)
 * fold a rooted tree (木DP)
 * rerooting (全方位木DP)
-* see: [https://twitter.com/tmaehara/status/980787099472297985](https://twitter.com/tmaehara/status/980787099472297985)
-* see: [https://twitter.com/tmaehara/status/980787099472297985](https://twitter.com/tmaehara/status/980787099472297985)
+* see: <a href="https://twitter.com/tmaehara/status/980787099472297985">https://twitter.com/tmaehara/status/980787099472297985</a>
+* see: <a href="https://twitter.com/tmaehara/status/980787099472297985">https://twitter.com/tmaehara/status/980787099472297985</a>
 
 
 ## Code
@@ -233,5 +235,5 @@ vector<typename TreeOperation::type> reroot_folded_rooted_tree(vector<typename T
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

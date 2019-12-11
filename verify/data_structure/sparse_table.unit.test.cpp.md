@@ -26,14 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/sparse_table.unit.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.unit.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 10:09:05 +0900
 
 
-[Back to top page](../../index.html)
 
 
-
-## Dependencies
-* :heavy_check_mark: [sparse table on a semilattice](../../library/data_structure/sparse_table.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :heavy_check_mark: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -74,5 +78,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

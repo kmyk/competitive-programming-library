@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: suffix array
+<a href="../../index.html">Back to top page</a>
+
 * category: string
+* <a href="{{ site.github.repository_url }}/blob/master/string/suffix-array.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2018-03-01 19:03:05 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -129,5 +131,5 @@ int sa_match(string const & target, string const & pattern, vector<int> const & 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

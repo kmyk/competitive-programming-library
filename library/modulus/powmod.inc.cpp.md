@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: the baby-step giant-step
+<a href="../../index.html">Back to top page</a>
+
 * category: modulus
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/powmod.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-05-24 16:32:35 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -211,5 +213,5 @@ vector<int> solve_modeqn(int a, int b, int c, int p) { // ax^2 + bx + c = 0 mod 
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

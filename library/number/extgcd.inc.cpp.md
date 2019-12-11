@@ -26,13 +26,15 @@ layout: default
 
 
 # :warning: extended gcd
+<a href="../../index.html">Back to top page</a>
+
 * category: number
+* <a href="{{ site.github.repository_url }}/blob/master/number/extgcd.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-05-24 16:32:35 +0900
 
-
-[Back to top page](../../index.html)
 
 * chinese remainder theorem
-* see: [https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466](https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466)
+* see: <a href="https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466">https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466</a>
 
 
 ## Code
@@ -131,5 +133,5 @@ pair<ll, ll> crt(pair<ll, ll> eqn1, pair<ll, ll> eqn2) {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

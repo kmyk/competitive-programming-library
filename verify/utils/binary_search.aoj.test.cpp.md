@@ -26,16 +26,18 @@ layout: default
 
 
 # :heavy_check_mark: utils/binary_search.aoj.test.cpp
+<a href="../../index.html">Back to top page</a>
+
+* <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.aoj.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-11-09 09:23:07 +0900
 
 
-[Back to top page](../../index.html)
-
-* see: [http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B)
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B</a>
 
 
-## Dependencies
-* :heavy_check_mark: [a flexible binary search](../../library/utils/binary_search.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../../library/utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../../library/utils/binary_search.hpp.html">a flexible binary search</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -80,5 +82,5 @@ int main() {
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

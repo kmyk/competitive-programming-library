@@ -26,28 +26,29 @@ layout: default
 
 
 # :heavy_check_mark: a fully indexable dictionary
+<a href="../../index.html">Back to top page</a>
+
 * category: data_structure
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/fully_indexable_dictionary.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-06-03 23:38:29 +0900
 
-
-[Back to top page](../../index.html)
 
 * count the number of value in [0, r)
 * find the index of the k-th occurrence of value
 * select(value, k) in [l, size)
 
 
-## Dependencies
-* :heavy_check_mark: [a fully indexable dictionary](fully_indexable_dictionary.hpp.html)
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required
-* :heavy_check_mark: [a fully indexable dictionary](fully_indexable_dictionary.hpp.html)
-* :heavy_check_mark: [a wavelet matrix](wavelet_matrix.hpp.html)
+## Required By
+* :heavy_check_mark: <a href="wavelet_matrix.hpp.html">a wavelet matrix</a>
 
 
-## Verified
-* :heavy_check_mark: [data_structure/fully_indexable_dictionary.test.cpp](../../verify/data_structure/fully_indexable_dictionary.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/data_structure/fully_indexable_dictionary.test.cpp.html">data_structure/fully_indexable_dictionary.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
 
 
 ## Code
@@ -143,5 +144,5 @@ public:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

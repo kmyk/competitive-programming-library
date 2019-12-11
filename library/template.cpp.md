@@ -26,19 +26,18 @@ layout: default
 
 
 # :warning: template.cpp
+<a href="../index.html">Back to top page</a>
+
 * category: .
+* <a href="{{ site.github.repository_url }}/blob/master/template.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-12 02:11:05 +0900
 
-
-[Back to top page](../index.html)
 
 
 
 ## Code
 {% raw %}
 ```cpp
-:%! sh -c "`cat`"
-#!/bin/sh
-cat <<EOF
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -62,10 +61,9 @@ int main() {
     constexpr char endl = '\n';
     return 0;
 }
-EOF
 
 ```
 {% endraw %}
 
-[Back to top page](../index.html)
+<a href="../index.html">Back to top page</a>
 

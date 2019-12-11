@@ -26,10 +26,12 @@ layout: default
 
 
 # :warning: Dinic
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/dinic.inc.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-05-24 16:32:35 +0900
 
-
-[Back to top page](../../index.html)
 
 
 
@@ -111,5 +113,5 @@ public:
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 

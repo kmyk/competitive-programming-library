@@ -26,20 +26,22 @@ layout: default
 
 
 # :heavy_check_mark: Shortest Path Faster Algorithm
+<a href="../../index.html">Back to top page</a>
+
 * category: graph
+* <a href="{{ site.github.repository_url }}/blob/master/graph/shortest_path_faster_algorithm.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-08-12 20:37:43 +0900
 
 
-[Back to top page](../../index.html)
 
 
+## Depends On
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
-## Dependencies
-* :heavy_check_mark: [utils/macros.hpp](../utils/macros.hpp.html)
 
-
-## Verified
-* :heavy_check_mark: [graph/bellman_ford.test.cpp](../../verify/graph/bellman_ford.test.cpp.html)
-* :heavy_check_mark: [graph/shortest_path_faster_algorithm.unit.test.cpp](../../verify/graph/shortest_path_faster_algorithm.unit.test.cpp.html)
+## Verified With
+* :heavy_check_mark: <a href="../../verify/graph/shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/shortest_path_faster_algorithm.unit.test.cpp.html">graph/shortest_path_faster_algorithm.unit.test.cpp</a>
 
 
 ## Code
@@ -100,5 +102,5 @@ std::vector<int64_t> shortest_path_faster_algorithm(int root, std::vector<std::v
 ```
 {% endraw %}
 
-[Back to top page](../../index.html)
+<a href="../../index.html">Back to top page</a>
 
