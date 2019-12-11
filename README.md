@@ -1,6 +1,7 @@
 # Competitive Programming Library
 
 [![Actions Status](https://github.com/kmyk/competitive-programming-library/workflows/verify/badge.svg)](https://github.com/kmyk/competitive-programming-library/actions)
+[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://kmyk.github.io/competitive-programming-library/)
 ![License](https://img.shields.io/github/license/kmyk/competitive-programming-library.svg)
 
 For CI, you can read a document [run-ci-on-your-library.en.html](https://online-judge-tools.readthedocs.io/en/master/run-ci-on-your-library.en.html) and use a tool [kmyk/online-judge-verify-helper](https://github.com/kmyk/online-judge-verify-helper).
