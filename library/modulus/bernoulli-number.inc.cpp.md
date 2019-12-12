@@ -28,7 +28,7 @@ layout: default
 # :warning: 0^k + 1^k + 2^k + ... + (n - 1)^k
 <a href="../../index.html">Back to top page</a>
 
-* category: modulus
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/bernoulli-number.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2018-04-12 06:30:36 +0900
 

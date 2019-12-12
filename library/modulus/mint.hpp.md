@@ -28,7 +28,7 @@ layout: default
 # :heavy_check_mark: modulus/mint.hpp
 <a href="../../index.html">Back to top page</a>
 
-* category: modulus
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/mint.hpp">View this file on GitHub</a>
     - Last commit date: 2019-10-08 21:29:58 +0900
 

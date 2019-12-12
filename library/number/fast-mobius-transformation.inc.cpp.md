@@ -28,7 +28,7 @@ layout: default
 # :warning: (upward) fast zeta transformation
 <a href="../../index.html">Back to top page</a>
 
-* category: number
+* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/fast-mobius-transformation.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2018-12-07 05:10:11 +0900
 

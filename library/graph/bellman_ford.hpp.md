@@ -28,7 +28,7 @@ layout: default
 # :heavy_check_mark: Bellman-Ford algorithm
 <a href="../../index.html">Back to top page</a>
 
-* category: graph
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/bellman_ford.hpp">View this file on GitHub</a>
     - Last commit date: 2019-08-12 19:57:24 +0900
 

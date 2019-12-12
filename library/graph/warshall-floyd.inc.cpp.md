@@ -28,7 +28,7 @@ layout: default
 # :warning: Warshall-Floyd algorithm
 <a href="../../index.html">Back to top page</a>
 
-* category: graph
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/warshall-floyd.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2018-04-12 06:30:36 +0900
 

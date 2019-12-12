@@ -28,7 +28,7 @@ layout: default
 # :warning: utils/periodic-function-power.inc.cpp
 <a href="../../index.html">Back to top page</a>
 
-* category: utils
+* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/periodic-function-power.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2017-12-25 19:08:00 +0900
 

@@ -28,7 +28,7 @@ layout: default
 # :warning: geometry/convex-hull.inc.cpp
 <a href="../../index.html">Back to top page</a>
 
-* category: geometry
+* category: <a href="../../index.html#ed7daeb157cd9b31e53896ad3c771a26">geometry</a>
 * <a href="{{ site.github.repository_url }}/blob/master/geometry/convex-hull.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2018-09-21 20:34:40 +0900
 

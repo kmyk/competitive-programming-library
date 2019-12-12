@@ -28,7 +28,7 @@ layout: default
 # :warning: modulus/polya-enumeration.inc.cpp
 <a href="../../index.html">Back to top page</a>
 
-* category: modulus
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/polya-enumeration.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2018-12-07 05:10:11 +0900
 

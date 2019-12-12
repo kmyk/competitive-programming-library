@@ -28,9 +28,9 @@ layout: default
 # :warning: utils/dsu_on_tree.hpp
 <a href="../../index.html">Back to top page</a>
 
-* category: utils
+* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-04 23:51:07 +0900
+    - Last commit date: 2019-12-13 04:55:53 +0900
 
 
 * see: <a href="https://codeforces.com/blog/entry/44351">https://codeforces.com/blog/entry/44351</a>
@@ -45,6 +45,7 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
+#include <functional>
 #include <stack>
 #include <vector>
 #include "graph/subtree.hpp"

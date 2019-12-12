@@ -28,7 +28,7 @@ layout: default
 # :heavy_check_mark: utils/monoids.hpp
 <a href="../../index.html">Back to top page</a>
 
-* category: utils
+* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/monoids.hpp">View this file on GitHub</a>
     - Last commit date: 2019-11-29 09:20:33 +0900
 

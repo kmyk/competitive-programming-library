@@ -28,7 +28,7 @@ layout: default
 # :heavy_check_mark: number/formal_power_series.hpp
 <a href="../../index.html">Back to top page</a>
 
-* category: number
+* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.hpp">View this file on GitHub</a>
     - Last commit date: 2019-10-08 21:29:58 +0900
 

@@ -28,7 +28,7 @@ layout: default
 # :heavy_check_mark: a wavelet matrix
 <a href="../../index.html">Back to top page</a>
 
-* category: data_structure
+* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.hpp">View this file on GitHub</a>
     - Last commit date: 2019-06-03 23:38:29 +0900
 

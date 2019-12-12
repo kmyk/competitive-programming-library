@@ -28,7 +28,7 @@ layout: default
 # :warning: a segment tree beats
 <a href="../../index.html">Back to top page</a>
 
-* category: data_structure
+* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
     - Last commit date: 2019-12-04 21:35:32 +0900
 

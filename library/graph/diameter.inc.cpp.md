@@ -28,7 +28,7 @@ layout: default
 # :warning: graph/diameter.inc.cpp
 <a href="../../index.html">Back to top page</a>
 
-* category: graph
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/diameter.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2018-12-07 05:10:11 +0900
 
