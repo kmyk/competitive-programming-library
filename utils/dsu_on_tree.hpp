@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 #include <stack>
 #include <vector>
 #include "graph/subtree.hpp"
