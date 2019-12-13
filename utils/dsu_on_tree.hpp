@@ -14,6 +14,7 @@
  * @note for each x, add(x) and sub(x) are called O(log n) times
  * @note O(n log n) if add, sub, and callback are O(1)
  * @see https://codeforces.com/blog/entry/44351
+ * @note sub(x) can be implemented as reset(), because sub(x) is called until it becomes empty after sub(x) is called once
  */
 template <class Add, class Sub, class Callback>
 void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, Sub & sub, Callback & callback) {
