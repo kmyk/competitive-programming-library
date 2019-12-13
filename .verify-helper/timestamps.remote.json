@@ -13,5 +13,6 @@
 "number/number_theoretic_transformation.998244353.test.cpp": "2019-10-08 21:29:58 +0900",
 "number/primes.aoj.test.cpp": "2019-11-09 09:39:14 +0900",
 "utils/binary_search.aoj.test.cpp": "2019-11-09 09:23:07 +0900",
+"utils/dsu_on_tree.aoj.test.cpp": "2019-12-14 05:03:01 +0900",
 "~": "dummy"
 }
