@@ -35,8 +35,8 @@ layout: default
 
 
 
-## Verified With
-* :warning: <a href="../../verify/data_structure/convex_hull_trick.test.cpp.html">data_structure/convex_hull_trick.test.cpp</a>
+## Required By
+* :warning: <a href="convex_hull_trick.random-test.cpp.html">data_structure/convex_hull_trick.random-test.cpp</a>
 
 
 ## Code

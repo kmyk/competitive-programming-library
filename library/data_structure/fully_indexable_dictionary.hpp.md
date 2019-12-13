@@ -43,12 +43,9 @@ layout: default
 
 
 ## Required By
+* :warning: <a href="fully_indexable_dictionary.random-test.cpp.html">data_structure/fully_indexable_dictionary.random-test.cpp</a>
 * :warning: <a href="wavelet_matrix.hpp.html">a wavelet matrix</a>
-
-
-## Verified With
-* :warning: <a href="../../verify/data_structure/fully_indexable_dictionary.test.cpp.html">data_structure/fully_indexable_dictionary.test.cpp</a>
-* :warning: <a href="../../verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
+* :warning: <a href="wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
 
 ## Code

@@ -25,46 +25,52 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/factorial.unit.test.cpp
+# :warning: modulus/mint.unit.random-test.cpp
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/factorial.unit.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 09:23:07 +0900
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/mint.unit.random-test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-13 18:43:42 +0900
 
 
 
 
 ## Depends On
-* :warning: <a href="../../library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
-* :warning: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :warning: <a href="mint.hpp.html">modulus/mint.hpp</a>
 
 
 ## Code
 {% raw %}
 ```cpp
-#include "modulus/factorial.hpp"
+#include "modulus/mint.hpp"
 
 #include <cassert>
 using namespace std;
 
 int main() {
-    constexpr int32_t MOD = 1e9 + 7;
-    assert (fact<MOD>(0) == 1);
-    assert (fact<MOD>(1) == 1);
-    assert (fact<MOD>(2) == 2);
-    assert (fact<MOD>(3) == 6);
-    assert (fact<MOD>(4) == 24);
-    assert (fact<MOD>(5) == 120);
-    assert (fact<MOD>(6) == 720);
-    assert (fact<MOD>(7) == 5040);
-    assert (fact<MOD>(8) == 40320);
-    assert (fact<MOD>(9) == 362880);
-    assert (fact<MOD>(10) == 3628800);
-    assert (fact<MOD>(11) == 39916800);
-    assert (fact<MOD>(12) == 479001600);
-    assert (fact<MOD>(13) == 227020758);
-    assert (fact<MOD>(14) == 178290591);
-    assert (fact<MOD>(15) == 674358851);
+    constexpr int MOD = 1000000007;
+
+    // ctor
+    assert (mint<MOD>(-2).value == MOD - 2);
+    assert (mint<MOD>(1000ll * MOD + 3).value == 3);
+
+    // pow
+    assert (mint<MOD>(2).pow(3) == 8);
+    assert (mint<MOD>(2).pow(MOD - 1) == 1);
+    assert (mint<MOD>(7).pow(MOD - 2) * 7 == 1);
+    assert (mint<MOD>(42).pow(MOD - 1) == 1);
+
+    // inv
+    assert (mint<256>(1).inv() * 1 == 1);
+    assert (mint<256>(3).inv() * 3 == 1);
+    assert (mint<256>(5).inv() * 5 == 1);
+    assert (mint<256>(7).inv() * 7 == 1);
+    assert (mint<256>(13).inv() * 13 == 1);
+    assert (mint<MOD>(1).inv() * 1 == 1);
+    assert (mint<MOD>(2).inv() * 2 == 1);
+    assert (mint<MOD>(3).inv() * 3 == 1);
+    assert (mint<MOD>(4).inv() * 4 == 1);
+    assert (mint<MOD>(42).inv() * 42 == 1);
     return 0;
 }
 

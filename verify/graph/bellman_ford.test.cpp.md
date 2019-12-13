@@ -41,7 +41,7 @@ layout: default
 
 
 ## Required By
-* :warning: <a href="shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
+* :warning: <a href="../../library/graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
 
 
 ## Code

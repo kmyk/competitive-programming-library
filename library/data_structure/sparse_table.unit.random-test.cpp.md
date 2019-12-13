@@ -25,19 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/sparse_table.unit.test.cpp
+# :warning: data_structure/sparse_table.unit.random-test.cpp
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.unit.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 10:09:05 +0900
+* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.unit.random-test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-13 18:43:42 +0900
 
 
 
 
 ## Depends On
-* :warning: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
-* :warning: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="sparse_table.hpp.html">sparse table on a semilattice</a>
+* :warning: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

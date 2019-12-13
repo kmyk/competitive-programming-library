@@ -25,19 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/sliding_window_aggregation.test.cpp
+# :warning: data_structure/sliding_window_aggregation.random-test.cpp
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-28 17:51:23 +0900
+* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.random-test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-13 18:43:42 +0900
 
 
 
 
 ## Depends On
-* :warning: <a href="../../library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
-* :warning: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
+* :warning: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

@@ -25,18 +25,19 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/lagrange_interpolation.test.cpp
+# :warning: number/lagrange_interpolation.random-test.cpp
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/number/lagrange_interpolation.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 09:23:07 +0900
+* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
+* <a href="{{ site.github.repository_url }}/blob/master/number/lagrange_interpolation.random-test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-13 18:43:42 +0900
 
 
 
 
 ## Depends On
-* :warning: <a href="../../library/number/lagrange_interpolation.hpp.html">Lagrange interpolation</a>
-* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="lagrange_interpolation.hpp.html">Lagrange interpolation</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

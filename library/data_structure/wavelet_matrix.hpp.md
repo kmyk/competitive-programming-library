@@ -43,8 +43,8 @@ layout: default
 * :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified With
-* :warning: <a href="../../verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
+## Required By
+* :warning: <a href="wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
 
 ## Code

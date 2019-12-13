@@ -39,8 +39,8 @@ layout: default
 * :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified With
-* :warning: <a href="../../verify/data_structure/li_chao_tree.test.cpp.html">data_structure/li_chao_tree.test.cpp</a>
+## Required By
+* :warning: <a href="li_chao_tree.random-test.cpp.html">data_structure/li_chao_tree.random-test.cpp</a>
 
 
 ## Code

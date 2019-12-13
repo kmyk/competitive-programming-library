@@ -37,13 +37,13 @@ layout: default
 
 ## Required By
 * :warning: <a href="../data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :warning: <a href="../data_structure/sparse_table.unit.random-test.cpp.html">data_structure/sparse_table.unit.random-test.cpp</a>
 * :warning: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
+* :warning: <a href="gcd.random-test.cpp.html">number/gcd.random-test.cpp</a>
 
 
 ## Verified With
-* :warning: <a href="../../verify/data_structure/sparse_table.unit.test.cpp.html">data_structure/sparse_table.unit.test.cpp</a>
 * :warning: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
-* :warning: <a href="../../verify/number/gcd.test.cpp.html">number/gcd.test.cpp</a>
 
 
 ## Code

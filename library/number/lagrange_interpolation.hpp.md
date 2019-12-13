@@ -39,8 +39,8 @@ layout: default
 * :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified With
-* :warning: <a href="../../verify/number/lagrange_interpolation.test.cpp.html">number/lagrange_interpolation.test.cpp</a>
+## Required By
+* :warning: <a href="lagrange_interpolation.random-test.cpp.html">number/lagrange_interpolation.random-test.cpp</a>
 
 
 ## Code

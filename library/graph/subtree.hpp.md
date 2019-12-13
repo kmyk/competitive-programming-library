@@ -36,11 +36,8 @@ layout: default
 
 
 ## Required By
+* :warning: <a href="subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
 * :warning: <a href="../utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
-
-
-## Verified With
-* :warning: <a href="../../verify/graph/subtree.unit.test.cpp.html">graph/subtree.unit.test.cpp</a>
 
 
 ## Code

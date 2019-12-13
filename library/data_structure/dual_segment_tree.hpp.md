@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: a dual segment tree
+# :heavy_check_mark: a dual segment tree
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -35,9 +35,12 @@ layout: default
 
 
 
+## Required By
+* :warning: <a href="dual_segment_tree.unit.random-test.cpp.html">data_structure/dual_segment_tree.unit.random-test.cpp</a>
+
+
 ## Verified With
-* :warning: <a href="../../verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
-* :warning: <a href="../../verify/data_structure/dual_segment_tree.unit.test.cpp.html">data_structure/dual_segment_tree.unit.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
 
 
 ## Code

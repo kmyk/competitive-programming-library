@@ -41,10 +41,7 @@ layout: default
 
 ## Required By
 * :warning: <a href="choose.hpp.html">modulus/choose.hpp</a>
-
-
-## Verified With
-* :warning: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
+* :warning: <a href="factorial.unit.random-test.cpp.html">modulus/factorial.unit.random-test.cpp</a>
 
 
 ## Code

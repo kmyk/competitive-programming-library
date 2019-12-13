@@ -35,9 +35,12 @@ layout: default
 
 
 
+## Required By
+* :warning: <a href="binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
+
+
 ## Verified With
 * :warning: <a href="../../verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
-* :warning: <a href="../../verify/utils/binary_search.unit.test.cpp.html">utils/binary_search.unit.test.cpp</a>
 
 
 ## Code

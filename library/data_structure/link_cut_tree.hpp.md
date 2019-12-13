@@ -40,7 +40,7 @@ layout: default
 
 
 ## Verified With
-* :warning: <a href="../../verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :warning: <a href="../../verify/data_structure/link_cut_tree.spaceships.test.cpp.html">data_structure/link_cut_tree.spaceships.test.cpp</a>
 
 

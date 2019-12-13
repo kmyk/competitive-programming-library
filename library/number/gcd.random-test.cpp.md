@@ -25,50 +25,37 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/subtree.unit.test.cpp
+# :warning: number/gcd.random-test.cpp
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/graph/subtree.unit.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-29 09:19:37 +0900
+* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
+* <a href="{{ site.github.repository_url }}/blob/master/number/gcd.random-test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-13 18:43:42 +0900
 
 
 
 
 ## Depends On
-* :warning: <a href="../../library/graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="gcd.hpp.html">number/gcd.hpp</a>
 
 
 ## Code
 {% raw %}
 ```cpp
-#include "graph/subtree.hpp"
+#include "number/gcd.hpp"
+
 #include <cassert>
-using namespace std;
 
 int main() {
-    vector<vector<int> > g(9);
-    const int root = 0;
-    g[0].push_back(1);
-    g[0].push_back(2);
-    ;   g[2].push_back(4);
-    ;   g[2].push_back(5);
-    ;   g[2].push_back(6);
-    ;   ;   g[6].push_back(8);
-    g[0].push_back(3);
-    ;   g[3].push_back(7);
-    auto info = prepare_subtree_info(g, root);
-    assert (info[root].parent == -1);
-    assert (info[root].depth == 0);
-    assert (info[root].size == g.size());
-    assert (info[root].height == 3);
-    assert (info[1].parent == 0);
-    assert (info[1].depth == 1);
-    assert (info[1].size == 1);
-    assert (info[1].height == 0);
-    assert (info[6].parent == 2);
-    assert (info[6].depth == 2);
-    assert (info[6].size == 2);
-    assert (info[6].height == 1);
+    assert (gcd(0, 0) == 0);
+    assert (gcd(42, 0) == 42);
+    assert (gcd(0, 42) == 42);
+    assert (gcd(3, -12) == 3);
+    assert (gcd(-3, 12) == -3);
+    assert (gcd(7, -12) == -1);
+    assert (gcd(-7, 12) == 1);
+    assert (gcd(-9, -12) == -3);
+    assert (gcd(-1, -1) == -1);
     return 0;
 }
 
