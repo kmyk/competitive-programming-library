@@ -38,7 +38,7 @@ layout: default
 ## Depends On
 * :warning: <a href="sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
 * :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

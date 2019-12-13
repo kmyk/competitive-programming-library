@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/subtree.hpp
+# :heavy_check_mark: graph/subtree.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -37,11 +37,10 @@ layout: default
 
 ## Required By
 * :warning: <a href="subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
-* :warning: <a href="../utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="../utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
 
 
 ## Verified With
-* :warning: <a href="../../verify/foo.test.cpp.html">foo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 

@@ -36,11 +36,11 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="../../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid</a>
-* :warning: <a href="../../library/graph/subtree.hpp.html">graph/subtree.hpp</a>
-* :warning: <a href="../../library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
-* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :warning: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid</a>
+* :heavy_check_mark: <a href="../../library/graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
