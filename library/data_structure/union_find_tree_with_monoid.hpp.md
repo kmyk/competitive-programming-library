@@ -36,6 +36,7 @@ layout: default
 
 
 ## Verified With
+* :heavy_check_mark: <a href="../../verify/foo.test.cpp.html">foo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 

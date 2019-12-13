@@ -213,7 +213,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
-* :warning: <a href="verify/foo.test.cpp.html">foo.test.cpp</a>
+* :heavy_check_mark: <a href="verify/foo.test.cpp.html">foo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
