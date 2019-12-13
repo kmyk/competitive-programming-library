@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: utils/dsu_on_tree.hpp
+# :warning: utils/dsu_on_tree.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -37,12 +37,12 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
-* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/foo.test.cpp.html">foo.test.cpp</a>
+* :warning: <a href="../../verify/foo.test.cpp.html">foo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 

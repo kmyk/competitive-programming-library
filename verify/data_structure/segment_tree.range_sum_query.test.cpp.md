@@ -37,7 +37,7 @@ layout: default
 
 ## Depends On
 * :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree</a>
-* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :warning: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code

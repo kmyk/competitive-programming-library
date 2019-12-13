@@ -37,7 +37,7 @@ layout: default
 
 ## Depends On
 * :warning: <a href="li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

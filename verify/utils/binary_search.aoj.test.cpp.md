@@ -37,7 +37,7 @@ layout: default
 
 ## Depends On
 * :heavy_check_mark: <a href="../../library/utils/binary_search.hpp.html">a flexible binary search</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

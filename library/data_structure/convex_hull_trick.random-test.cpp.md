@@ -37,7 +37,7 @@ layout: default
 
 ## Depends On
 * :warning: <a href="convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

@@ -38,7 +38,7 @@ layout: default
 ## Depends On
 * :heavy_check_mark: <a href="../../verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :warning: <a href="shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

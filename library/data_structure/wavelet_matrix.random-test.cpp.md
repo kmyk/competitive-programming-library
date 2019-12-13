@@ -38,7 +38,7 @@ layout: default
 ## Depends On
 * :warning: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
 * :warning: <a href="wavelet_matrix.hpp.html">a wavelet matrix</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

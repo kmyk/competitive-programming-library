@@ -39,7 +39,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
 * :heavy_check_mark: <a href="../../library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
 * :heavy_check_mark: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

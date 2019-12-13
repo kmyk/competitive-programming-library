@@ -36,7 +36,7 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="subtree.hpp.html">graph/subtree.hpp</a>
 
 
 ## Code

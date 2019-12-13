@@ -38,8 +38,8 @@ layout: default
 ## Depends On
 * :heavy_check_mark: <a href="lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree</a>
 * :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
-* :heavy_check_mark: <a href="../utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code

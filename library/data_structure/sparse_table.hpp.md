@@ -37,7 +37,7 @@ layout: default
 
 ## Depends On
 * :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required By

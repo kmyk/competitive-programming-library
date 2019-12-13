@@ -25,27 +25,28 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: foo.test.cpp
+# :warning: foo.test.cpp
 <a href="../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/foo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-14 05:18:30 +0900
+    - Last commit date: 2019-12-14 05:18:57 +0900
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995</a>
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid</a>
-* :heavy_check_mark: <a href="../library/graph/subtree.hpp.html">graph/subtree.hpp</a>
-* :heavy_check_mark: <a href="../library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
-* :heavy_check_mark: <a href="../library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :heavy_check_mark: <a href="../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :warning: <a href="../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid</a>
+* :warning: <a href="../library/graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="../library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :warning: <a href="../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
 {% raw %}
 ```cpp
+// hoge
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995"
 #include "utils/dsu_on_tree.hpp"
 #include "data_structure/union_find_tree_with_monoid.hpp"

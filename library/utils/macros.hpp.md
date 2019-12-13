@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: utils/macros.hpp
+# :warning: utils/macros.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -65,7 +65,7 @@ layout: default
 * :heavy_check_mark: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
 * :heavy_check_mark: <a href="../number/primes.hpp.html">number/primes.hpp</a>
 * :warning: <a href="binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
-* :heavy_check_mark: <a href="dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :warning: <a href="dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
 * :warning: <a href="fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
 
 
@@ -73,7 +73,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/foo.test.cpp.html">foo.test.cpp</a>
+* :warning: <a href="../../verify/foo.test.cpp.html">foo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
