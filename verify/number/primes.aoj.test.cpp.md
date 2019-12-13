@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/primes.aoj.test.cpp
+# :heavy_check_mark: number/primes.aoj.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/primes.aoj.test.cpp">View this file on GitHub</a>
@@ -36,8 +36,8 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="../../library/number/primes.hpp.html">number/primes.hpp</a>
-* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/number/primes.hpp.html">number/primes.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

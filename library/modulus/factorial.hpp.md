@@ -36,7 +36,7 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 
 
 ## Required By

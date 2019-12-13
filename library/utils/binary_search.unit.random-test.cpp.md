@@ -36,8 +36,8 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="binary_search.hpp.html">a flexible binary search</a>
-* :warning: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="binary_search.hpp.html">a flexible binary search</a>
+* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

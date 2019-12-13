@@ -36,9 +36,9 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="sparse_table.hpp.html">sparse table on a semilattice</a>
-* :warning: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
-* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="sparse_table.hpp.html">sparse table on a semilattice</a>
+* :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

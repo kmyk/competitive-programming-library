@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/segment_tree.point_set_range_composite.test.cpp
+# :heavy_check_mark: data_structure/segment_tree.point_set_range_composite.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_set_range_composite.test.cpp">View this file on GitHub</a>
@@ -36,10 +36,10 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree</a>
-* :warning: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :warning: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code

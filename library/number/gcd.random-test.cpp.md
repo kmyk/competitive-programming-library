@@ -36,7 +36,7 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="gcd.hpp.html">number/gcd.hpp</a>
 
 
 ## Code

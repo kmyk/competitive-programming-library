@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/segment_tree.range_sum_query.test.cpp
+# :heavy_check_mark: data_structure/segment_tree.range_sum_query.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.range_sum_query.test.cpp">View this file on GitHub</a>
@@ -36,8 +36,8 @@ layout: default
 
 
 ## Depends On
-* :warning: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree</a>
-* :warning: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree</a>
+* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
