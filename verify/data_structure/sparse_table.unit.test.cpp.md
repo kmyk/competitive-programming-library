@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/sparse_table.unit.test.cpp
+# :warning: data_structure/sparse_table.unit.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.unit.test.cpp">View this file on GitHub</a>
@@ -35,9 +35,9 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
-* :heavy_check_mark: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :warning: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

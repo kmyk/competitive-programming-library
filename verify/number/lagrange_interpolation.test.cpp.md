@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/lagrange_interpolation.test.cpp
+# :warning: number/lagrange_interpolation.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/lagrange_interpolation.test.cpp">View this file on GitHub</a>
@@ -35,8 +35,8 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../../library/number/lagrange_interpolation.hpp.html">Lagrange interpolation</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/number/lagrange_interpolation.hpp.html">Lagrange interpolation</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

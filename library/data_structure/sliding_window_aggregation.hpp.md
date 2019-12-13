@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: get sum of elements in the queue
+# :warning: get sum of elements in the queue
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -36,11 +36,11 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
+* :warning: <a href="../../verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
 
 
 ## Code

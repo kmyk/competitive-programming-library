@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/mint.hpp
+# :warning: modulus/mint.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
@@ -37,21 +37,21 @@ layout: default
 
 ## Required By
 * :warning: <a href="choose.hpp.html">modulus/choose.hpp</a>
-* :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="../number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
-* :heavy_check_mark: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :warning: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
+* :warning: <a href="../number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
+* :warning: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/mint.unit.test.cpp.html">modulus/mint.unit.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
+* :warning: <a href="../../verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
+* :warning: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
+* :warning: <a href="../../verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
+* :warning: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
+* :warning: <a href="../../verify/modulus/mint.unit.test.cpp.html">modulus/mint.unit.test.cpp</a>
+* :warning: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
+* :warning: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
+* :warning: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
+* :warning: <a href="../../verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
 
 
 ## Code

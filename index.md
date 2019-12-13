@@ -39,32 +39,32 @@ layout: default
 ### data_structure
 * :warning: <a href="library/data_structure/binary-indexed-tree.inc.cpp.html">data_structure/binary-indexed-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/convex-hull-trick-with-monotonicity.inc.cpp.html">data_structure/convex-hull-trick-with-monotonicity.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
+* :warning: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
 * :warning: <a href="library/data_structure/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue</a>
-* :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree</a>
+* :warning: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree</a>
 * :warning: <a href="library/data_structure/dynamic-segment-tree.inc.cpp.html">data_structure/dynamic-segment-tree.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
+* :warning: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
 * :warning: <a href="library/data_structure/lazy-propagation-red-black-tree.inc.cpp.html">data_structure/lazy-propagation-red-black-tree.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree</a>
-* :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
+* :warning: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree</a>
+* :warning: <a href="library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
 * :warning: <a href="library/data_structure/linear-weighted-sum.inc.cpp.html">data_structure/linear-weighted-sum.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree</a>
+* :warning: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree</a>
 * :warning: <a href="library/data_structure/persistent-array.inc.cpp.html">data_structure/persistent-array.inc.cpp</a>
 * :warning: <a href="library/data_structure/persistent-randomized-binary-search-tree.inc.cpp.html">data_structure/persistent-randomized-binary-search-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/range-union-find-tree.inc.cpp.html">data_structure/range-union-find-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/red-black-tree.inc.cpp.html">data_structure/red-black-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/segment-tree-2d.inc.cpp.html">data_structure/segment-tree-2d.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">a segment tree</a>
+* :warning: <a href="library/data_structure/segment_tree.hpp.html">a segment tree</a>
 * :warning: <a href="library/data_structure/segment_tree_beats.hpp.html">a segment tree beats</a>
 * :warning: <a href="library/data_structure/skew-heap.inc.cpp.html">data_structure/skew-heap.inc.cpp</a>
 * :warning: <a href="library/data_structure/sliding-window.inc.cpp.html">the sliding window minimum algorithm</a>
-* :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
-* :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :warning: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
+* :warning: <a href="library/data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
 * :warning: <a href="library/data_structure/treap.inc.cpp.html">data_structure/treap.inc.cpp</a>
 * :warning: <a href="library/data_structure/trie-tree.inc.cpp.html">data_structure/trie-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/union-find-tree-with-monoid.inc.cpp.html">data_structure/union-find-tree-with-monoid.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure</a>
-* :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix</a>
+* :warning: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure</a>
+* :warning: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix</a>
 
 
 <div id="ed7daeb157cd9b31e53896ad3c771a26"></div>
@@ -76,7 +76,7 @@ layout: default
 
 <div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>
 ### graph
-* :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
+* :warning: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
 * :warning: <a href="library/graph/bipartite-graph.inc.cpp.html">graph/bipartite-graph.inc.cpp</a>
 * :warning: <a href="library/graph/breadth-first-search.inc.cpp.html">compute the distances from root</a>
 * :warning: <a href="library/graph/centroid-decomposition.inc.cpp.html">graph/centroid-decomposition.inc.cpp</a>
@@ -88,13 +88,13 @@ layout: default
 * :warning: <a href="library/graph/ford-fulkerson.inc.cpp.html">graph/ford-fulkerson.inc.cpp</a>
 * :warning: <a href="library/graph/heavy_light_decomposition.inc.cpp.html">heavy light decomposition</a>
 * :warning: <a href="library/graph/lowest-common-ancestor-doubling.inc.cpp.html">lowest common ancestor with doubling</a>
-* :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
+* :warning: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
 * :warning: <a href="library/graph/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method</a>
 * :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
 * :warning: <a href="library/graph/namori-graph.inc.cpp.html">graph/namori-graph.inc.cpp</a>
-* :heavy_check_mark: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
+* :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
 * :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm</a>
-* :heavy_check_mark: <a href="library/graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="library/graph/subtree.hpp.html">graph/subtree.hpp</a>
 * :warning: <a href="library/graph/topological-sort.inc.cpp.html">graph/topological-sort.inc.cpp</a>
 * :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree (木DP)</a>
 * :warning: <a href="library/graph/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition</a>
@@ -111,9 +111,9 @@ layout: default
 * :warning: <a href="library/modulus/choose.hpp.html">modulus/choose.hpp</a>
 * :warning: <a href="library/modulus/discrete-log.inc.cpp.html">modulus/discrete-log.inc.cpp</a>
 * :warning: <a href="library/modulus/factorial-embed.inc.cpp.html">a program to make the table</a>
-* :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
+* :warning: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :warning: <a href="library/modulus/fib.inc.cpp.html">modulus/fib.inc.cpp</a>
-* :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :warning: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :warning: <a href="library/modulus/modops.inc.cpp.html">modulus/modops.inc.cpp</a>
 * :warning: <a href="library/modulus/polya-enumeration.inc.cpp.html">modulus/polya-enumeration.inc.cpp</a>
 * :warning: <a href="library/modulus/powmod.inc.cpp.html">the baby-step giant-step</a>
@@ -127,16 +127,16 @@ layout: default
 * :warning: <a href="library/number/extgcd.inc.cpp.html">extended gcd</a>
 * :warning: <a href="library/number/factoradic.inc.cpp.html">number/factoradic.inc.cpp</a>
 * :warning: <a href="library/number/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation</a>
-* :heavy_check_mark: <a href="library/number/fast_fourier_transformation.hpp.html">the convolution</a>
-* :heavy_check_mark: <a href="library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
-* :heavy_check_mark: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :heavy_check_mark: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation</a>
+* :warning: <a href="library/number/fast_fourier_transformation.hpp.html">the convolution</a>
+* :warning: <a href="library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
+* :warning: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation</a>
 * :warning: <a href="library/number/matrix.inc.cpp.html">number/matrix.inc.cpp</a>
 * :warning: <a href="library/number/matrix.template.inc.cpp.html">number/matrix.template.inc.cpp</a>
 * :warning: <a href="library/number/miller-rabin.inc.cpp.html">number/miller-rabin.inc.cpp</a>
-* :heavy_check_mark: <a href="library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :warning: <a href="library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
 * :warning: <a href="library/number/primes-small.inc.cpp.html">enumerate primes in \[2, n) with O(n log log n)</a>
-* :heavy_check_mark: <a href="library/number/primes.hpp.html">number/primes.hpp</a>
+* :warning: <a href="library/number/primes.hpp.html">number/primes.hpp</a>
 * :warning: <a href="library/number/rational.inc.cpp.html">number/rational.inc.cpp</a>
 
 
@@ -155,7 +155,7 @@ layout: default
 <div id="2b3583e6e17721c54496bd04e57a0c15"></div>
 ### utils
 * :warning: <a href="library/utils/apply-permutation.inc.cpp.html">utils/apply-permutation.inc.cpp</a>
-* :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a flexible binary search</a>
+* :warning: <a href="library/utils/binary_search.hpp.html">a flexible binary search</a>
 * :warning: <a href="library/utils/coordinate-compression.inc.cpp.html">utils/coordinate-compression.inc.cpp</a>
 * :warning: <a href="library/utils/cumulative-sum.inc.cpp.html">cumulative sum</a>
 * :warning: <a href="library/utils/dice.inc.cpp.html">utils/dice.inc.cpp</a>
@@ -171,12 +171,12 @@ layout: default
 * :warning: <a href="library/utils/iterate.inc.cpp.html">utils/iterate.inc.cpp</a>
 * :warning: <a href="library/utils/knapsack-problem-branch-and-bound.inc.cpp.html">utils/knapsack-problem-branch-and-bound.inc.cpp</a>
 * :warning: <a href="library/utils/longest-increasing-subsequence.inc.cpp.html">utils/longest-increasing-subsequence.inc.cpp</a>
-* :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/marathon.inc.cpp.html">utils/marathon.inc.cpp</a>
 * :warning: <a href="library/utils/maximum-independent-set.inc.cpp.html">utils/maximum-independent-set.inc.cpp</a>
 * :warning: <a href="library/utils/mex.inc.cpp.html">minimum excluded value</a>
 * :warning: <a href="library/utils/midpoint.inc.cpp.html">for given a and c, make b s.t. a < b < c</a>
-* :heavy_check_mark: <a href="library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :warning: <a href="library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 * :warning: <a href="library/utils/periodic-function-power.inc.cpp.html">utils/periodic-function-power.inc.cpp</a>
 * :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>
 * :warning: <a href="library/utils/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm</a>
@@ -189,37 +189,37 @@ layout: default
 
 
 ## Verify Files
-* :heavy_check_mark: <a href="verify/data_structure/convex_hull_trick.test.cpp.html">data_structure/convex_hull_trick.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.unit.test.cpp.html">data_structure/dual_segment_tree.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/fully_indexable_dictionary.test.cpp.html">data_structure/fully_indexable_dictionary.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/li_chao_tree.test.cpp.html">data_structure/li_chao_tree.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.spaceships.test.cpp.html">data_structure/link_cut_tree.spaceships.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/sparse_table.unit.test.cpp.html">data_structure/sparse_table.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/shortest_path_faster_algorithm.unit.test.cpp.html">graph/shortest_path_faster_algorithm.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/subtree.unit.test.cpp.html">graph/subtree.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/mint.unit.test.cpp.html">modulus/mint.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/fast_fourier_transformation.unit.test.cpp.html">number/fast_fourier_transformation.unit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/gcd.test.cpp.html">number/gcd.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/lagrange_interpolation.test.cpp.html">number/lagrange_interpolation.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/utils/binary_search.unit.test.cpp.html">utils/binary_search.unit.test.cpp</a>
+* :warning: <a href="verify/data_structure/convex_hull_trick.test.cpp.html">data_structure/convex_hull_trick.test.cpp</a>
+* :warning: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
+* :warning: <a href="verify/data_structure/dual_segment_tree.unit.test.cpp.html">data_structure/dual_segment_tree.unit.test.cpp</a>
+* :warning: <a href="verify/data_structure/fully_indexable_dictionary.test.cpp.html">data_structure/fully_indexable_dictionary.test.cpp</a>
+* :warning: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :warning: <a href="verify/data_structure/lazy_propagation_segment_tree.unit.test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.test.cpp</a>
+* :warning: <a href="verify/data_structure/li_chao_tree.test.cpp.html">data_structure/li_chao_tree.test.cpp</a>
+* :warning: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
+* :warning: <a href="verify/data_structure/link_cut_tree.spaceships.test.cpp.html">data_structure/link_cut_tree.spaceships.test.cpp</a>
+* :warning: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
+* :warning: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
+* :warning: <a href="verify/data_structure/sliding_window_aggregation.test.cpp.html">data_structure/sliding_window_aggregation.test.cpp</a>
+* :warning: <a href="verify/data_structure/sparse_table.unit.test.cpp.html">data_structure/sparse_table.unit.test.cpp</a>
+* :warning: <a href="verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
+* :warning: <a href="verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
+* :warning: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :warning: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
+* :warning: <a href="verify/graph/shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
+* :warning: <a href="verify/graph/shortest_path_faster_algorithm.unit.test.cpp.html">graph/shortest_path_faster_algorithm.unit.test.cpp</a>
+* :warning: <a href="verify/graph/subtree.unit.test.cpp.html">graph/subtree.unit.test.cpp</a>
+* :warning: <a href="verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
+* :warning: <a href="verify/modulus/mint.unit.test.cpp.html">modulus/mint.unit.test.cpp</a>
+* :warning: <a href="verify/number/fast_fourier_transformation.unit.test.cpp.html">number/fast_fourier_transformation.unit.test.cpp</a>
+* :warning: <a href="verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
+* :warning: <a href="verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
+* :warning: <a href="verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
+* :warning: <a href="verify/number/gcd.test.cpp.html">number/gcd.test.cpp</a>
+* :warning: <a href="verify/number/lagrange_interpolation.test.cpp.html">number/lagrange_interpolation.test.cpp</a>
+* :warning: <a href="verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
+* :warning: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
+* :warning: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
+* :warning: <a href="verify/utils/binary_search.unit.test.cpp.html">utils/binary_search.unit.test.cpp</a>
 
 

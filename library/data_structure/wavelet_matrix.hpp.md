@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a wavelet matrix
+# :warning: a wavelet matrix
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -39,12 +39,12 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
+* :warning: <a href="../../verify/data_structure/wavelet_matrix.test.cpp.html">data_structure/wavelet_matrix.test.cpp</a>
 
 
 ## Code

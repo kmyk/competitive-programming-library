@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/bellman_ford.test.cpp
+# :warning: graph/bellman_ford.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/bellman_ford.test.cpp">View this file on GitHub</a>
@@ -36,12 +36,12 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../../library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required By
-* :heavy_check_mark: <a href="shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
+* :warning: <a href="shortest_path_faster_algorithm.test.cpp.html">graph/shortest_path_faster_algorithm.test.cpp</a>
 
 
 ## Code

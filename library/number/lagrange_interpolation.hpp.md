@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Lagrange interpolation
+# :warning: Lagrange interpolation
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
@@ -36,11 +36,11 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/number/lagrange_interpolation.test.cpp.html">number/lagrange_interpolation.test.cpp</a>
+* :warning: <a href="../../verify/number/lagrange_interpolation.test.cpp.html">number/lagrange_interpolation.test.cpp</a>
 
 
 ## Code

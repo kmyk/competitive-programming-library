@@ -36,9 +36,9 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
+* :warning: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

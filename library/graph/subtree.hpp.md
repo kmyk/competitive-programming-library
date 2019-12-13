@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/subtree.hpp
+# :warning: graph/subtree.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -40,7 +40,7 @@ layout: default
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/graph/subtree.unit.test.cpp.html">graph/subtree.unit.test.cpp</a>
+* :warning: <a href="../../verify/graph/subtree.unit.test.cpp.html">graph/subtree.unit.test.cpp</a>
 
 
 ## Code

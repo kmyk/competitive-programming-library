@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a disjoint set structure
+# :warning: a disjoint set structure
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -36,7 +36,7 @@ layout: default
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
+* :warning: <a href="../../verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
 
 
 ## Code

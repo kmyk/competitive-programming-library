@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lowest common ancestor with \pm 1 RMQ and sparse table
+# :warning: lowest common ancestor with \pm 1 RMQ and sparse table
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -37,13 +37,13 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
-* :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../data_structure/sparse_table.hpp.html">sparse table on a semilattice</a>
+* :warning: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
+* :warning: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 
 
 ## Code

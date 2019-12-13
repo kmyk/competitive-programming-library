@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/li_chao_tree.test.cpp
+# :warning: data_structure/li_chao_tree.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/li_chao_tree.test.cpp">View this file on GitHub</a>
@@ -35,8 +35,8 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../../library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

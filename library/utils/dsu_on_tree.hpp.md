@@ -37,8 +37,8 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
-* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

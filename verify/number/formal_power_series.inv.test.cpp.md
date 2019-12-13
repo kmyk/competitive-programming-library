@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/formal_power_series.inv.test.cpp
+# :warning: number/formal_power_series.inv.test.cpp
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.inv.test.cpp">View this file on GitHub</a>
@@ -36,10 +36,10 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../../library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
-* :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :warning: <a href="../../library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
+* :warning: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

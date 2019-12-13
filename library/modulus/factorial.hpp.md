@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/factorial.hpp
+# :warning: modulus/factorial.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
@@ -36,7 +36,7 @@ layout: default
 
 
 ## Depends On
-* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :warning: <a href="mint.hpp.html">modulus/mint.hpp</a>
 
 
 ## Required By
@@ -44,7 +44,7 @@ layout: default
 
 
 ## Verified With
-* :heavy_check_mark: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
+* :warning: <a href="../../verify/modulus/factorial.unit.test.cpp.html">modulus/factorial.unit.test.cpp</a>
 
 
 ## Code
