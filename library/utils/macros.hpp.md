@@ -65,7 +65,7 @@ layout: default
 * :heavy_check_mark: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
 * :heavy_check_mark: <a href="../number/primes.hpp.html">number/primes.hpp</a>
 * :warning: <a href="binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
-* :warning: <a href="dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
 * :warning: <a href="fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
 
 
@@ -81,6 +81,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code

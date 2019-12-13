@@ -70,8 +70,8 @@ layout: default
 * :warning: <a href="library/data_structure/sparse_table.unit.random-test.cpp.html">data_structure/sparse_table.unit.random-test.cpp</a>
 * :warning: <a href="library/data_structure/treap.inc.cpp.html">data_structure/treap.inc.cpp</a>
 * :warning: <a href="library/data_structure/trie-tree.inc.cpp.html">data_structure/trie-tree.inc.cpp</a>
-* :warning: <a href="library/data_structure/union-find-tree-with-monoid.inc.cpp.html">data_structure/union-find-tree-with-monoid.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure</a>
+* :heavy_check_mark: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid</a>
 * :warning: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix</a>
 * :warning: <a href="library/data_structure/wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
@@ -105,7 +105,7 @@ layout: default
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.unit.random-test.cpp.html">graph/shortest_path_faster_algorithm.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm</a>
-* :warning: <a href="library/graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :heavy_check_mark: <a href="library/graph/subtree.hpp.html">graph/subtree.hpp</a>
 * :warning: <a href="library/graph/subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/topological-sort.inc.cpp.html">graph/topological-sort.inc.cpp</a>
 * :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree (木DP)</a>
@@ -181,7 +181,7 @@ layout: default
 * :warning: <a href="library/utils/distributed-code-jam.inc.cpp.html">utils/distributed-code-jam.inc.cpp</a>
 * :warning: <a href="library/utils/dlopen.inc.cpp.html">utils/dlopen.inc.cpp</a>
 * :warning: <a href="library/utils/doubling.inc.cpp.html">the doubling technique</a>
-* :warning: <a href="library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
 * :warning: <a href="library/utils/fib.inc.cpp.html">utils/fib.inc.cpp</a>
 * :warning: <a href="library/utils/graphviz.inc.cpp.html">utils/graphviz.inc.cpp</a>
@@ -221,5 +221,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 

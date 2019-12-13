@@ -25,20 +25,24 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utils/dsu_on_tree.hpp
+# :heavy_check_mark: utils/dsu_on_tree.hpp
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-13 04:55:53 +0900
+    - Last commit date: 2019-12-14 05:03:01 +0900
 
 
 * see: <a href="https://codeforces.com/blog/entry/44351">https://codeforces.com/blog/entry/44351</a>
 
 
 ## Depends On
-* :warning: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :heavy_check_mark: <a href="../graph/subtree.hpp.html">graph/subtree.hpp</a>
 * :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
+
+
+## Verified With
+* :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code
@@ -60,6 +64,7 @@ layout: default
  * @note for each x, add(x) and sub(x) are called O(log n) times
  * @note O(n log n) if add, sub, and callback are O(1)
  * @see https://codeforces.com/blog/entry/44351
+ * @note sub(x) can be implemented as reset(), because sub(x) is called until it becomes empty after sub(x) is called once
  */
 template <class Add, class Sub, class Callback>
 void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, Sub & sub, Callback & callback) {
