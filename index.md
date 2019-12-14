@@ -88,6 +88,7 @@ layout: default
 * :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
 * :warning: <a href="library/graph/bipartite-graph.inc.cpp.html">graph/bipartite-graph.inc.cpp</a>
 * :warning: <a href="library/graph/breadth-first-search.inc.cpp.html">compute the distances from root</a>
+* :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph</a>
 * :warning: <a href="library/graph/centroid-decomposition.inc.cpp.html">graph/centroid-decomposition.inc.cpp</a>
 * :warning: <a href="library/graph/diameter.inc.cpp.html">graph/diameter.inc.cpp</a>
 * :warning: <a href="library/graph/dijkstra.inc.cpp.html">graph/dijkstra.inc.cpp</a>
