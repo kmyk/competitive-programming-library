@@ -1,4 +1,5 @@
 /**
+ * @brief get the namori cycle / なもり閉路
  * @param g a simple connected undirected graph with |E| = |V|
  */
 deque<int> get_namori_cycle(vector<vector<int> > const & g) {

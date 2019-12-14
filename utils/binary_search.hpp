@@ -3,9 +3,9 @@
 #include <cstdint>
 
 /**
- * @brief a flexible binary search
- * @param[in] p  a monotone predicate defined on [l, r)
- * @return  \min \{ x \in [l, r) \mid p(x) \}, or r if it doesn't exist
+ * @brief a binary search / 二分探索
+ * @param[in] p  a monotone predicate defined on $[l, r)$
+ * @return $\min \lbrace x \in [l, r) \mid p(x) \rbrace$, or r if it doesn't exist
  */
 template <typename UnaryPredicate>
 int64_t binsearch(int64_t l, int64_t r, UnaryPredicate p) {
@@ -19,7 +19,7 @@ int64_t binsearch(int64_t l, int64_t r, UnaryPredicate p) {
 }
 
 /**
- * @return  \max \{ x \in (l, r] \mid p(x) \}, or l if it doesn't exist
+ * @return $\max \lbrace x \in (l, r] \mid p(x) \rbrace$, or l if it doesn't exist
  */
 template <typename UnaryPredicate>
 int64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate p) {

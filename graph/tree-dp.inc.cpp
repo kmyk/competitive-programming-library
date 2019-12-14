@@ -1,5 +1,5 @@
 /**
- * @brief fold a rooted tree (木DP)
+ * @brief fold a rooted tree / 木DP
  * @note O(N op) time
  * @note O(N) space, not recursive
  * @note

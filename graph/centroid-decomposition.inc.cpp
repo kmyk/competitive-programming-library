@@ -1,4 +1,5 @@
 /**
+ * @brief get centroids of a graph / 重心分解
  * @note O(n) time
  * @note O(n) space on heap
  * @return the size is 1 or 2

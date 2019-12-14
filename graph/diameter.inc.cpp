@@ -1,4 +1,8 @@
 /**
+ * @brief get the diameter of a tree / 木の直径
+ */
+
+/**
  * @sa http://techtipshoge.blogspot.jp/2016/09/blog-post.html
  */
 pair<int, int> get_eccentricity(int k, vector<vector<int> > const & tree) {
@@ -14,27 +18,4 @@ pair<int, int> get_eccentricity(int k, vector<vector<int> > const & tree) {
 }
 int get_diameter(vector<vector<int> > const & tree) {
     return get_eccentricity(get_eccentricity(0, tree).second, tree).first;
-}
-
-vector<int> get_centers(vector<vector<int> > const & tree) {
-    int n = tree.size();
-    vector<bool> used(n);
-    vector<int> cur, prv;
-    REP (i, n) {
-        if (tree[i].size() <= 1) {
-            cur.push_back(i);
-            used[i] = true;
-        }
-    }
-    while (not cur.empty()) {
-        cur.swap(prv);
-        cur.clear();
-        for (int i : prv) {
-            for (int j : tree[i]) if (not used[j]) {
-                cur.push_back(j);
-                used[j] = true;
-            }
-        }
-    }
-    return prv;
 }

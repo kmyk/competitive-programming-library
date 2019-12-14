@@ -4,7 +4,7 @@
 #include <vector>
 
 /**
- * @brief a segment tree
+ * @brief a segment tree / セグメント木
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>

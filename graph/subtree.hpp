@@ -10,6 +10,7 @@ struct subtree_info_t {
 };
 
 /**
+ * @brief subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ
  * @arg g must be a tree
  * @note O(n) time
  * @note O(n) space on heap

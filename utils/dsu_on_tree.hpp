@@ -6,6 +6,7 @@
 #include "utils/macros.hpp"
 
 /**
+ * @brief DSU on tree (sack)
  * @arg g is a tree
  * @arg root
  * @arg add is a function object which takes a index of a vertex

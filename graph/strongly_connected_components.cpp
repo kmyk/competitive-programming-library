@@ -5,7 +5,7 @@ vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
     return h;
 }
 /**
- * @brief strongly connected components decomposition, Kosaraju's algorithm
+ * @brief strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解
  * @return the pair (the number k of components, the function from vertices of g to components)
  * @note O(V + E)
  */

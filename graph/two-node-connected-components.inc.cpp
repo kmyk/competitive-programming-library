@@ -1,5 +1,5 @@
 /**
- * @brief 2-node-connected components decomposition
+ * @brief 2-node-connected components decomposition / 2-頂点連結成分分解
  * @param g an adjacent list of the simple undirected graph
  * @note O(V + E)
  * @return list of (list of edges in the component)

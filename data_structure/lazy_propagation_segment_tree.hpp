@@ -6,7 +6,7 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief a lazy propagation segment tree
+ * @brief a lazy propagation segment tree / 遅延伝播セグメント木
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X

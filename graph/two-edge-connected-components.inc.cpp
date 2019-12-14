@@ -1,5 +1,5 @@
 /**
- * @brief 2-edge-connected components decomposition
+ * @brief 2-edge-connected components decomposition / 2-辺連結成分分解
  * @param g an adjacent list of the simple undirected graph
  * @note O(V + E)
  */

@@ -5,6 +5,9 @@
 #include <vector>
 #include "utils/macros.hpp"
 
+/**
+ * @note Li-Chao tree
+ */
 template <class T>
 struct li_chao_tree {
     int k;

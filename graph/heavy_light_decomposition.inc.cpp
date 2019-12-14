@@ -1,6 +1,6 @@
 /**
- * @brief heavy light decomposition
- * @description for given rooted tree G = (V, E), decompose the vertices to disjoint paths, and construct new small rooted tree G' = (V', E') of the disjoint paths.
+ * @brief heavy light decomposition / 重軽分解
+ * @description for given rooted tree $G = (V, E)$, decompose the vertices to disjoint paths, and construct new small rooted tree $G' = (V', E')$ of the disjoint paths.
  * @see http://math314.hateblo.jp/entry/2014/06/24/220107
  */
 struct heavy_light_decomposition {

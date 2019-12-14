@@ -1,5 +1,8 @@
-// http://qiita.com/imos/items/c4c5e19289a79e598b93
-// http://web.mit.edu/andersk/Public/6.851-presentation.pdf
+/**
+ * @brief persistent array / 永続配列
+ * @see http://qiita.com/imos/items/c4c5e19289a79e598b93
+ * @see http://web.mit.edu/andersk/Public/6.851-presentation.pdf
+ */
 template <class T>
 struct persistent_array { // fully persistent
     static const int SHIFT_SIZE = 3; // log of the branching factor b
