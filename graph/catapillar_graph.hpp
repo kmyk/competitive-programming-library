@@ -6,6 +6,7 @@
  * @note an empty vector if g is not a catapillar
  * @see https://en.wikipedia.org/wiki/Caterpillar_tree
  * @note example problem: https://atcoder.jp/contests/arc095/tasks/arc095_d
+ * @note ![](https://upload.wikimedia.org/wikipedia/commons/b/b7/Caterpillar_tree.svg)
  */
 vector<int> get_catapillar_central_path(const vector<vector<int> > & g) {
     int n = g.size();
