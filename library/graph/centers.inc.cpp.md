@@ -25,11 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: get the diameter of a tree / 木の直径
+# :warning: get centers of a tree / 木の中心
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
-* <a href="{{ site.github.repository_url }}/blob/master/graph/diameter.inc.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/graph/centers.inc.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-15 04:15:59 +0900
 
 
@@ -39,25 +39,29 @@ layout: default
 {% raw %}
 ```cpp
 /**
- * @brief get the diameter of a tree / 木の直径
+ * @brief get centers of a tree / 木の中心
  */
-
-/**
- * @sa http://techtipshoge.blogspot.jp/2016/09/blog-post.html
- */
-pair<int, int> get_eccentricity(int k, vector<vector<int> > const & tree) {
-    pair<int, int> result = { -1, -1 };  // (depth, vertex)
-    function<void (int, int, int)> dfs = [&](int i, int parent, int depth) {
-        chmax(result, make_pair(depth, i));
-        for (int j : tree[i]) if (j != parent) {
-            dfs(j, i, depth + 1);
+vector<int> get_centers(vector<vector<int> > const & tree) {
+    int n = tree.size();
+    vector<bool> used(n);
+    vector<int> cur, prv;
+    REP (i, n) {
+        if (tree[i].size() <= 1) {
+            cur.push_back(i);
+            used[i] = true;
         }
-    };
-    dfs(k, -1, 0);
-    return result;
-}
-int get_diameter(vector<vector<int> > const & tree) {
-    return get_eccentricity(get_eccentricity(0, tree).second, tree).first;
+    }
+    while (not cur.empty()) {
+        cur.swap(prv);
+        cur.clear();
+        for (int i : prv) {
+            for (int j : tree[i]) if (not used[j]) {
+                cur.push_back(j);
+                used[j] = true;
+            }
+        }
+    }
+    return prv;
 }
 
 ```

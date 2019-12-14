@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/namori-graph.inc.cpp
+# :warning: get the namori cycle / なもり閉路
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/namori-graph.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-12-07 05:10:11 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
@@ -39,6 +39,7 @@ layout: default
 {% raw %}
 ```cpp
 /**
+ * @brief get the namori cycle / なもり閉路
  * @param g a simple connected undirected graph with |E| = |V|
  */
 deque<int> get_namori_cycle(vector<vector<int> > const & g) {

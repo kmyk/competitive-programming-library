@@ -42,25 +42,25 @@ layout: default
 * :warning: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
 * :warning: <a href="library/data_structure/convex_hull_trick.random-test.cpp.html">data_structure/convex_hull_trick.random-test.cpp</a>
 * :warning: <a href="library/data_structure/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue</a>
-* :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree</a>
+* :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木</a>
 * :warning: <a href="library/data_structure/dual_segment_tree.unit.random-test.cpp.html">data_structure/dual_segment_tree.unit.random-test.cpp</a>
 * :warning: <a href="library/data_structure/dynamic-segment-tree.inc.cpp.html">data_structure/dynamic-segment-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
 * :warning: <a href="library/data_structure/fully_indexable_dictionary.random-test.cpp.html">data_structure/fully_indexable_dictionary.random-test.cpp</a>
 * :warning: <a href="library/data_structure/lazy-propagation-red-black-tree.inc.cpp.html">data_structure/lazy-propagation-red-black-tree.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree</a>
+* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木</a>
 * :warning: <a href="library/data_structure/lazy_propagation_segment_tree.unit.random-test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.random-test.cpp</a>
 * :warning: <a href="library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
 * :warning: <a href="library/data_structure/li_chao_tree.random-test.cpp.html">data_structure/li_chao_tree.random-test.cpp</a>
 * :warning: <a href="library/data_structure/linear-weighted-sum.inc.cpp.html">data_structure/linear-weighted-sum.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree</a>
 * :warning: <a href="library/data_structure/link_cut_tree.spaceships.random-test.cpp.html">data_structure/link_cut_tree.spaceships.random-test.cpp</a>
-* :warning: <a href="library/data_structure/persistent-array.inc.cpp.html">data_structure/persistent-array.inc.cpp</a>
+* :warning: <a href="library/data_structure/persistent-array.inc.cpp.html">persistent array / 永続配列</a>
 * :warning: <a href="library/data_structure/persistent-randomized-binary-search-tree.inc.cpp.html">data_structure/persistent-randomized-binary-search-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/range-union-find-tree.inc.cpp.html">data_structure/range-union-find-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/red-black-tree.inc.cpp.html">data_structure/red-black-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/segment-tree-2d.inc.cpp.html">data_structure/segment-tree-2d.inc.cpp</a>
-* :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">a segment tree</a>
+* :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木</a>
 * :warning: <a href="library/data_structure/segment_tree_beats.hpp.html">a segment tree beats</a>
 * :warning: <a href="library/data_structure/skew-heap.inc.cpp.html">data_structure/skew-heap.inc.cpp</a>
 * :warning: <a href="library/data_structure/sliding-window.inc.cpp.html">the sliding window minimum algorithm</a>
@@ -89,29 +89,30 @@ layout: default
 * :warning: <a href="library/graph/bipartite-graph.inc.cpp.html">graph/bipartite-graph.inc.cpp</a>
 * :warning: <a href="library/graph/breadth-first-search.inc.cpp.html">compute the distances from root</a>
 * :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph</a>
-* :warning: <a href="library/graph/centroid-decomposition.inc.cpp.html">graph/centroid-decomposition.inc.cpp</a>
-* :warning: <a href="library/graph/diameter.inc.cpp.html">graph/diameter.inc.cpp</a>
+* :warning: <a href="library/graph/centers.inc.cpp.html">get centers of a tree / 木の中心</a>
+* :warning: <a href="library/graph/centroid-decomposition.inc.cpp.html">get centroids of a graph / 重心分解</a>
+* :warning: <a href="library/graph/diameter.inc.cpp.html">get the diameter of a tree / 木の直径</a>
 * :warning: <a href="library/graph/dijkstra.inc.cpp.html">graph/dijkstra.inc.cpp</a>
 * :warning: <a href="library/graph/dinic.inc.cpp.html">Dinic</a>
 * :warning: <a href="library/graph/dominator-tree.inc.cpp.html">graph/dominator-tree.inc.cpp</a>
 * :warning: <a href="library/graph/euler-tour.inc.cpp.html">euler tour</a>
 * :warning: <a href="library/graph/ford-fulkerson.inc.cpp.html">graph/ford-fulkerson.inc.cpp</a>
-* :warning: <a href="library/graph/heavy_light_decomposition.inc.cpp.html">heavy light decomposition</a>
+* :warning: <a href="library/graph/heavy_light_decomposition.inc.cpp.html">heavy light decomposition / 重軽分解</a>
 * :warning: <a href="library/graph/lowest-common-ancestor-doubling.inc.cpp.html">lowest common ancestor with doubling</a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table</a>
 * :warning: <a href="library/graph/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method</a>
 * :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
-* :warning: <a href="library/graph/namori-graph.inc.cpp.html">graph/namori-graph.inc.cpp</a>
+* :warning: <a href="library/graph/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.unit.random-test.cpp.html">graph/shortest_path_faster_algorithm.unit.random-test.cpp</a>
-* :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm</a>
-* :heavy_check_mark: <a href="library/graph/subtree.hpp.html">graph/subtree.hpp</a>
+* :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解</a>
+* :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ</a>
 * :warning: <a href="library/graph/subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/topological-sort.inc.cpp.html">graph/topological-sort.inc.cpp</a>
-* :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree (木DP)</a>
-* :warning: <a href="library/graph/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition</a>
-* :warning: <a href="library/graph/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition</a>
+* :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree / 木DP</a>
+* :warning: <a href="library/graph/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解</a>
+* :warning: <a href="library/graph/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解</a>
 * :warning: <a href="library/graph/utils.inc.cpp.html">reverse a digraph</a>
 * :warning: <a href="library/graph/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm</a>
 
@@ -133,7 +134,7 @@ layout: default
 * :warning: <a href="library/modulus/polya-enumeration.inc.cpp.html">modulus/polya-enumeration.inc.cpp</a>
 * :warning: <a href="library/modulus/powmod.inc.cpp.html">the baby-step giant-step</a>
 * :warning: <a href="library/modulus/stirling-number-of-the-second-kind.inc.cpp.html">the Stirling number of the second kind</a>
-* :warning: <a href="library/modulus/twelvefold-way.inc.cpp.html">twelvefold way</a>
+* :warning: <a href="library/modulus/twelvefold-way.inc.cpp.html">twelvefold way / 写像12相</a>
 
 
 <div id="b1bc248a7ff2b2e95569f56de68615df"></div>
@@ -173,7 +174,7 @@ layout: default
 <div id="2b3583e6e17721c54496bd04e57a0c15"></div>
 ### utils
 * :warning: <a href="library/utils/apply-permutation.inc.cpp.html">utils/apply-permutation.inc.cpp</a>
-* :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a flexible binary search</a>
+* :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a binary search / 二分探索</a>
 * :warning: <a href="library/utils/binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
 * :warning: <a href="library/utils/coordinate-compression.inc.cpp.html">utils/coordinate-compression.inc.cpp</a>
 * :warning: <a href="library/utils/cumulative-sum.inc.cpp.html">cumulative sum</a>
@@ -182,7 +183,7 @@ layout: default
 * :warning: <a href="library/utils/distributed-code-jam.inc.cpp.html">utils/distributed-code-jam.inc.cpp</a>
 * :warning: <a href="library/utils/dlopen.inc.cpp.html">utils/dlopen.inc.cpp</a>
 * :warning: <a href="library/utils/doubling.inc.cpp.html">the doubling technique</a>
-* :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack)</a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
 * :warning: <a href="library/utils/fib.inc.cpp.html">utils/fib.inc.cpp</a>
 * :warning: <a href="library/utils/graphviz.inc.cpp.html">utils/graphviz.inc.cpp</a>

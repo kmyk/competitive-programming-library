@@ -39,7 +39,7 @@ layout: default
 * :warning: <a href="../data_structure/convex_hull_trick.random-test.cpp.html">data_structure/convex_hull_trick.random-test.cpp</a>
 * :warning: <a href="../data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
 * :warning: <a href="../data_structure/fully_indexable_dictionary.random-test.cpp.html">data_structure/fully_indexable_dictionary.random-test.cpp</a>
-* :heavy_check_mark: <a href="../data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree</a>
+* :heavy_check_mark: <a href="../data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木</a>
 * :warning: <a href="../data_structure/lazy_propagation_segment_tree.unit.random-test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.random-test.cpp</a>
 * :warning: <a href="../data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
 * :warning: <a href="../data_structure/li_chao_tree.random-test.cpp.html">data_structure/li_chao_tree.random-test.cpp</a>
@@ -65,7 +65,7 @@ layout: default
 * :heavy_check_mark: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
 * :heavy_check_mark: <a href="../number/primes.hpp.html">number/primes.hpp</a>
 * :warning: <a href="binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
-* :heavy_check_mark: <a href="dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="dsu_on_tree.hpp.html">DSU on tree (sack)</a>
 * :warning: <a href="fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
 
 

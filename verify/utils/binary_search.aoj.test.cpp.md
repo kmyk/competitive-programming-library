@@ -29,14 +29,14 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 09:23:07 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B</a>
 
 
 ## Depends On
-* :heavy_check_mark: <a href="../../library/utils/binary_search.hpp.html">a flexible binary search</a>
+* :heavy_check_mark: <a href="../../library/utils/binary_search.hpp.html">a binary search / 二分探索</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 

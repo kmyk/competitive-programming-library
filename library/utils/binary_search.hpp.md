@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a flexible binary search
+# :heavy_check_mark: a binary search / 二分探索
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 09:23:07 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
@@ -51,9 +51,9 @@ layout: default
 #include <cstdint>
 
 /**
- * @brief a flexible binary search
- * @param[in] p  a monotone predicate defined on [l, r)
- * @return  \min \{ x \in [l, r) \mid p(x) \}, or r if it doesn't exist
+ * @brief a binary search / 二分探索
+ * @param[in] p  a monotone predicate defined on $[l, r)$
+ * @return $\min \lbrace x \in [l, r) \mid p(x) \rbrace$, or r if it doesn't exist
  */
 template <typename UnaryPredicate>
 int64_t binsearch(int64_t l, int64_t r, UnaryPredicate p) {
@@ -67,7 +67,7 @@ int64_t binsearch(int64_t l, int64_t r, UnaryPredicate p) {
 }
 
 /**
- * @return  \max \{ x \in (l, r] \mid p(x) \}, or l if it doesn't exist
+ * @return $\max \lbrace x \in (l, r] \mid p(x) \rbrace$, or l if it doesn't exist
  */
 template <typename UnaryPredicate>
 int64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate p) {

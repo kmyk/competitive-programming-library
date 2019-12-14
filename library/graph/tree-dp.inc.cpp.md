@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: fold a rooted tree (木DP)
+# :warning: fold a rooted tree / 木DP
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/tree-dp.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-08-19 10:59:42 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 * rerooting (全方位木DP)
@@ -44,7 +44,7 @@ layout: default
 {% raw %}
 ```cpp
 /**
- * @brief fold a rooted tree (木DP)
+ * @brief fold a rooted tree / 木DP
  * @note O(N op) time
  * @note O(N) space, not recursive
  * @note

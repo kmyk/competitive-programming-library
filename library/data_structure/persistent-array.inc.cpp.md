@@ -25,21 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/persistent-array.inc.cpp
+# :warning: persistent array / 永続配列
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/persistent-array.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-03 23:08:10 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
+* see: <a href="http://qiita.com/imos/items/c4c5e19289a79e598b93">http://qiita.com/imos/items/c4c5e19289a79e598b93</a>
+* see: <a href="http://web.mit.edu/andersk/Public/6.851-presentation.pdf">http://web.mit.edu/andersk/Public/6.851-presentation.pdf</a>
 
 
 ## Code
 {% raw %}
 ```cpp
-// http://qiita.com/imos/items/c4c5e19289a79e598b93
-// http://web.mit.edu/andersk/Public/6.851-presentation.pdf
+/**
+ * @brief persistent array / 永続配列
+ * @see http://qiita.com/imos/items/c4c5e19289a79e598b93
+ * @see http://web.mit.edu/andersk/Public/6.851-presentation.pdf
+ */
 template <class T>
 struct persistent_array { // fully persistent
     static const int SHIFT_SIZE = 3; // log of the branching factor b

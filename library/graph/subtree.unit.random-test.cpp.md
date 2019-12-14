@@ -30,13 +30,13 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/subtree.unit.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-13 18:43:42 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
 
 ## Depends On
-* :heavy_check_mark: <a href="subtree.hpp.html">graph/subtree.hpp</a>
+* :heavy_check_mark: <a href="subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ</a>
 
 
 ## Code

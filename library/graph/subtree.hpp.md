@@ -25,19 +25,19 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/subtree.hpp
+# :heavy_check_mark: subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/subtree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-29 09:19:37 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
 
 ## Required By
 * :warning: <a href="subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
-* :heavy_check_mark: <a href="../utils/dsu_on_tree.hpp.html">utils/dsu_on_tree.hpp</a>
+* :heavy_check_mark: <a href="../utils/dsu_on_tree.hpp.html">DSU on tree (sack)</a>
 
 
 ## Verified With
@@ -59,6 +59,7 @@ struct subtree_info_t {
 };
 
 /**
+ * @brief subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ
  * @arg g must be a tree
  * @note O(n) time
  * @note O(n) space on heap

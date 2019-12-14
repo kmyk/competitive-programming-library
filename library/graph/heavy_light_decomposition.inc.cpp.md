@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: heavy light decomposition
+# :warning: heavy light decomposition / 重軽分解
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/heavy_light_decomposition.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2017-12-30 16:00:47 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 * construct an adjacency list for the decomposed tree
@@ -42,8 +42,8 @@ layout: default
 {% raw %}
 ```cpp
 /**
- * @brief heavy light decomposition
- * @description for given rooted tree G = (V, E), decompose the vertices to disjoint paths, and construct new small rooted tree G' = (V', E') of the disjoint paths.
+ * @brief heavy light decomposition / 重軽分解
+ * @description for given rooted tree $G = (V, E)$, decompose the vertices to disjoint paths, and construct new small rooted tree $G' = (V', E')$ of the disjoint paths.
  * @see http://math314.hateblo.jp/entry/2014/06/24/220107
  */
 struct heavy_light_decomposition {

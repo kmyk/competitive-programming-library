@@ -30,13 +30,13 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.unit.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-13 18:43:42 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
 
 ## Depends On
-* :heavy_check_mark: <a href="binary_search.hpp.html">a flexible binary search</a>
+* :heavy_check_mark: <a href="binary_search.hpp.html">a binary search / 二分探索</a>
 * :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 

@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: strongly connected components decomposition, Kosaraju's algorithm
+# :warning: strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/strongly_connected_components.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-12-07 05:10:11 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 * memory optimized version
@@ -46,7 +46,7 @@ vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
     return h;
 }
 /**
- * @brief strongly connected components decomposition, Kosaraju's algorithm
+ * @brief strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解
  * @return the pair (the number k of components, the function from vertices of g to components)
  * @note O(V + E)
  */

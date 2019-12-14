@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a lazy propagation segment tree
+# :heavy_check_mark: a lazy propagation segment tree / 遅延伝播セグメント木
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-29 09:20:33 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
@@ -58,7 +58,7 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief a lazy propagation segment tree
+ * @brief a lazy propagation segment tree / 遅延伝播セグメント木
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X

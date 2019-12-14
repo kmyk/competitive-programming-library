@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: 2-edge-connected components decomposition
+# :warning: 2-edge-connected components decomposition / 2-辺連結成分分解
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/two-edge-connected-components.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-12-07 05:10:11 +0900
+    - Last commit date: 2019-12-15 04:15:59 +0900
 
 
 
@@ -39,7 +39,7 @@ layout: default
 {% raw %}
 ```cpp
 /**
- * @brief 2-edge-connected components decomposition
+ * @brief 2-edge-connected components decomposition / 2-辺連結成分分解
  * @param g an adjacent list of the simple undirected graph
  * @note O(V + E)
  */
