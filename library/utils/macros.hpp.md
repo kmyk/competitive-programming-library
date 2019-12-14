@@ -52,7 +52,7 @@ layout: default
 * :warning: <a href="../data_structure/wavelet_matrix.hpp.html">a wavelet matrix</a>
 * :warning: <a href="../data_structure/wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 * :heavy_check_mark: <a href="../graph/bellman_ford.hpp.html">Bellman-Ford algorithm</a>
-* :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
+* :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table</a>
 * :warning: <a href="../graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
 * :warning: <a href="../graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
 * :warning: <a href="../graph/shortest_path_faster_algorithm.unit.random-test.cpp.html">graph/shortest_path_faster_algorithm.unit.random-test.cpp</a>

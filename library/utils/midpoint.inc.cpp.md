@@ -25,19 +25,23 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: for given a and c, make b s.t. a < b < c
+# :warning: a structure to make a midpoint for given two points
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/midpoint.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-09-21 20:34:40 +0900
+    - Last commit date: 2019-12-15 03:56:03 +0900
 
 
+* for given $a$ and $c$, make $b$ s.t. $a < b < c$
 
 
 ## Code
 {% raw %}
 ```cpp
+/**
+ * @brief a structure to make a midpoint for given two points
+ */
 class midpoint {
     vector<bool> data;
     midpoint(vector<bool> const & data_) : data(data_) {}
@@ -46,7 +50,7 @@ public:
     static midpoint min() { return midpoint(vector<bool>()); }
     static midpoint max() { return midpoint(vector<bool>(1, true)); }
     /**
-     * @brief for given a and c, make b s.t. a < b < c
+     * @brief for given $a$ and $c$, make $b$ s.t. $a < b < c$
      */
     midpoint between(midpoint const & other) const {
         auto const & a = this->data;

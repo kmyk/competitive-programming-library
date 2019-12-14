@@ -98,7 +98,7 @@ layout: default
 * :warning: <a href="library/graph/ford-fulkerson.inc.cpp.html">graph/ford-fulkerson.inc.cpp</a>
 * :warning: <a href="library/graph/heavy_light_decomposition.inc.cpp.html">heavy light decomposition</a>
 * :warning: <a href="library/graph/lowest-common-ancestor-doubling.inc.cpp.html">lowest common ancestor with doubling</a>
-* :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with \pm 1 RMQ and sparse table</a>
+* :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table</a>
 * :warning: <a href="library/graph/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method</a>
 * :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
 * :warning: <a href="library/graph/namori-graph.inc.cpp.html">graph/namori-graph.inc.cpp</a>
@@ -120,7 +120,7 @@ layout: default
 ### modulus
 * :warning: <a href="library/modulus/998244353.inc.cpp.html">modulus/998244353.inc.cpp</a>
 * :warning: <a href="library/modulus/bell-number.inc.cpp.html">the Bell number</a>
-* :warning: <a href="library/modulus/bernoulli-number.inc.cpp.html">0^k + 1^k + 2^k + ... + (n - 1)^k</a>
+* :warning: <a href="library/modulus/bernoulli-number.inc.cpp.html">the Bernoulli number</a>
 * :warning: <a href="library/modulus/choose.hpp.html">modulus/choose.hpp</a>
 * :warning: <a href="library/modulus/discrete-log.inc.cpp.html">modulus/discrete-log.inc.cpp</a>
 * :warning: <a href="library/modulus/factorial-embed.inc.cpp.html">a program to make the table</a>
@@ -133,7 +133,7 @@ layout: default
 * :warning: <a href="library/modulus/polya-enumeration.inc.cpp.html">modulus/polya-enumeration.inc.cpp</a>
 * :warning: <a href="library/modulus/powmod.inc.cpp.html">the baby-step giant-step</a>
 * :warning: <a href="library/modulus/stirling-number-of-the-second-kind.inc.cpp.html">the Stirling number of the second kind</a>
-* :warning: <a href="library/modulus/twelvefold-way.inc.cpp.html">labeled-N labeled-K any-f</a>
+* :warning: <a href="library/modulus/twelvefold-way.inc.cpp.html">twelvefold way</a>
 
 
 <div id="b1bc248a7ff2b2e95569f56de68615df"></div>
@@ -194,7 +194,7 @@ layout: default
 * :warning: <a href="library/utils/marathon.inc.cpp.html">utils/marathon.inc.cpp</a>
 * :warning: <a href="library/utils/maximum-independent-set.inc.cpp.html">utils/maximum-independent-set.inc.cpp</a>
 * :warning: <a href="library/utils/mex.inc.cpp.html">minimum excluded value</a>
-* :warning: <a href="library/utils/midpoint.inc.cpp.html">for given a and c, make b s.t. a < b < c</a>
+* :warning: <a href="library/utils/midpoint.inc.cpp.html">a structure to make a midpoint for given two points</a>
 * :heavy_check_mark: <a href="library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 * :warning: <a href="library/utils/periodic-function-power.inc.cpp.html">utils/periodic-function-power.inc.cpp</a>
 * :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>

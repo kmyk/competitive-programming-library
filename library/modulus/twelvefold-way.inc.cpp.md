@@ -25,14 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: labeled-N labeled-K any-f
+# :warning: twelvefold way
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold-way.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-02-18 01:11:58 +0900
+    - Last commit date: 2019-12-15 03:56:03 +0900
 
 
+* labeled-N labeled-K any-f
 * labeled-N labeled-K injective-f
 * labeled-N labeled-K surjective-f
 * unlabeled-N labeled-K any-f
@@ -48,6 +49,7 @@ layout: default
 {% raw %}
 ```cpp
 /**
+ * @brief twelvefold way
  * @sa https://en.wikipedia.org/wiki/Twelvefold_way
  * @sa https://mathtrain.jp/twelveway
  * @note the numbers of mapprings f putting N balls into K boxes

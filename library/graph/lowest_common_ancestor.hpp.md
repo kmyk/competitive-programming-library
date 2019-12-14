@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lowest common ancestor with \pm 1 RMQ and sparse table
+# :heavy_check_mark: lowest common ancestor with $\pm$ 1 RMQ and sparse table
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-24 17:26:39 +0900
+    - Last commit date: 2019-12-15 03:56:03 +0900
 
 
 * see: <a href="https://www.slideshare.net/yumainoue965/lca-and-rmq">https://www.slideshare.net/yumainoue965/lca-and-rmq</a>
@@ -58,7 +58,7 @@ layout: default
 #include "data_structure/sparse_table.hpp"
 
 /**
- * @brief lowest common ancestor with \pm 1 RMQ and sparse table
+ * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
  * @see https://www.slideshare.net/yumainoue965/lca-and-rmq
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */
@@ -67,7 +67,7 @@ struct lowest_common_ancestor {
     std::vector<int> index;
     lowest_common_ancestor() = default;
     /**
-     * @note O(N)
+     * @note $O(N)$
      * @param g is an adjacent list of a tree
      * @note you can easily modify this to accept forests
      */
@@ -91,7 +91,7 @@ private:
     }
 public:
     /**
-     * @note O(1)
+     * @note $O(1)$
      */
     int operator () (int x, int y) const {
         assert (0 <= x and x < index.size());
