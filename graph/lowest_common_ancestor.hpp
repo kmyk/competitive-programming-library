@@ -7,7 +7,7 @@
 #include "data_structure/sparse_table.hpp"
 
 /**
- * @brief lowest common ancestor with \pm 1 RMQ and sparse table
+ * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
  * @see https://www.slideshare.net/yumainoue965/lca-and-rmq
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */
@@ -16,7 +16,7 @@ struct lowest_common_ancestor {
     std::vector<int> index;
     lowest_common_ancestor() = default;
     /**
-     * @note O(N)
+     * @note $O(N)$
      * @param g is an adjacent list of a tree
      * @note you can easily modify this to accept forests
      */
@@ -40,7 +40,7 @@ private:
     }
 public:
     /**
-     * @note O(1)
+     * @note $O(1)$
      */
     int operator () (int x, int y) const {
         assert (0 <= x and x < index.size());

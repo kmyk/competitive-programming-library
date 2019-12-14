@@ -1,6 +1,7 @@
 /**
+ * @brief the Bernoulli number
  * @tparam MOD must be a prime
- * @note O(n^2)
+ * @note $O(n^2)$
  * @see https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0
  */
 template <int MOD>
@@ -30,7 +31,7 @@ unittest {
 }
 
 /**
- * @brief 0^k + 1^k + 2^k + ... + (n - 1)^k
+ * @brief $0^k + 1^k + 2^k + ... + (n - 1)^k$
  * @see https://yukicoder.me/problems/no/665
  * @note n can be >= MOD
  */

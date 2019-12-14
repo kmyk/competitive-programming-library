@@ -1,4 +1,5 @@
 /**
+ * @brief twelvefold way
  * @sa https://en.wikipedia.org/wiki/Twelvefold_way
  * @sa https://mathtrain.jp/twelveway
  * @note the numbers of mapprings f putting N balls into K boxes

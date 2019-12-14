@@ -1,3 +1,6 @@
+/**
+ * @brief a structure to make a midpoint for given two points
+ */
 class midpoint {
     vector<bool> data;
     midpoint(vector<bool> const & data_) : data(data_) {}
@@ -6,7 +9,7 @@ public:
     static midpoint min() { return midpoint(vector<bool>()); }
     static midpoint max() { return midpoint(vector<bool>(1, true)); }
     /**
-     * @brief for given a and c, make b s.t. a < b < c
+     * @brief for given $a$ and $c$, make $b$ s.t. $a < b < c$
      */
     midpoint between(midpoint const & other) const {
         auto const & a = this->data;
