@@ -30,7 +30,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/catapillar_graph.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 03:50:42 +0900
+    - Last commit date: 2019-12-15 03:57:55 +0900
 
 
 * see: <a href="https://en.wikipedia.org/wiki/Caterpillar_tree">https://en.wikipedia.org/wiki/Caterpillar_tree</a>
@@ -47,6 +47,7 @@ layout: default
  * @note an empty vector if g is not a catapillar
  * @see https://en.wikipedia.org/wiki/Caterpillar_tree
  * @note example problem: https://atcoder.jp/contests/arc095/tasks/arc095_d
+ * @note ![](https://upload.wikimedia.org/wikipedia/commons/b/b7/Caterpillar_tree.svg)
  */
 vector<int> get_catapillar_central_path(const vector<vector<int> > & g) {
     int n = g.size();
