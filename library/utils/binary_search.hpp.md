@@ -48,9 +48,50 @@ layout: default
 
 ## Code
 
+<a id="unbundled"></a>
 {% raw %}
 ```cpp
 #pragma once
+#include <cassert>
+#include <cstdint>
+
+/**
+ * @brief a binary search / 二分探索
+ * @param[in] p  a monotone predicate defined on $[l, r)$
+ * @return $\min \lbrace x \in [l, r) \mid p(x) \rbrace$, or r if it doesn't exist
+ */
+template <typename UnaryPredicate>
+int64_t binsearch(int64_t l, int64_t r, UnaryPredicate p) {
+    assert (l <= r);
+    -- l;
+    while (r - l > 1) {
+        int64_t m = l + (r - l) / 2;
+        (p(m) ? r : l) = m;
+    }
+    return r;
+}
+
+/**
+ * @return $\max \lbrace x \in (l, r] \mid p(x) \rbrace$, or l if it doesn't exist
+ */
+template <typename UnaryPredicate>
+int64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate p) {
+    assert (l <= r);
+    ++ r;
+    while (r - l > 1) {
+        int64_t m = l + (r - l) / 2;
+        (p(m) ? l : r) = m;
+    }
+    return l;
+}
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 2 "utils/binary_search.hpp"
 #include <cassert>
 #include <cstdint>
 

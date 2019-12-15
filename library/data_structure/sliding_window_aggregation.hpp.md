@@ -48,6 +48,7 @@ layout: default
 
 ## Code
 
+<a id="unbundled"></a>
 {% raw %}
 ```cpp
 #pragma once
@@ -55,6 +56,73 @@ layout: default
 #include <cstddef>
 #include <deque>
 #include "utils/macros.hpp"
+
+template <class Monoid>
+struct sliding_window_aggregation {
+    typedef typename Monoid::value_type value_type;
+    Monoid mon;
+    std::deque<value_type> data;
+    int front;
+    value_type back;
+    sliding_window_aggregation(const Monoid & mon_ = Monoid()) : mon(mon_) {
+        front = 0;
+        back = mon.unit();
+    }
+    /**
+     * @note O(1)
+     */
+    void push(value_type x) {
+        data.push_back(x);
+        back = mon.append(back, x);
+    }
+    /**
+     * @note amortized O(1)
+     */
+    void pop() {
+        assert (not data.empty());
+        data.pop_front();
+        if (front) {
+            -- front;
+        } else {
+            REP_R (i, (int)data.size() - 1) {
+                data[i] = mon.append(data[i], data[i + 1]);
+            }
+            front = data.size();
+            back = mon.unit();
+        }
+    }
+    /**
+     * @brief get sum of elements in the queue
+     * @note O(1)
+     */
+    value_type accumulate() const {
+        return front ? mon.append(data.front(), back) : back;
+    }
+    bool empty() const {
+        return data.empty();
+    }
+    std::size_t size() const {
+        return data.size();
+    }
+};
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 2 "data_structure/sliding_window_aggregation.hpp"
+#include <cassert>
+#include <cstddef>
+#include <deque>
+#line 1 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) begin(x), end(x)
+#line 6 "data_structure/sliding_window_aggregation.hpp"
 
 template <class Monoid>
 struct sliding_window_aggregation {

@@ -49,6 +49,7 @@ layout: default
 
 ## Code
 
+<a id="unbundled"></a>
 {% raw %}
 ```cpp
 #pragma once
@@ -60,6 +61,70 @@ layout: default
 #include <utility>
 #include <vector>
 #include "utils/macros.hpp"
+
+/**
+ * @brief Shortest Path Faster Algorithm
+ * @note the interface is same to one of Bellman Ford
+ */
+std::vector<int64_t> shortest_path_faster_algorithm(int root, std::vector<std::vector<std::pair<int, int64_t> > > const & g) {
+    assert (not g.empty());
+    int n = g.size();
+    std::vector<int64_t> dist(n, INT64_MAX);
+    std::deque<int> cur, nxt;
+    std::vector<bool> pushed(n);
+    dist[root] = 0;
+    nxt.push_back(root);
+    pushed[root] = true;
+
+    REP (iteration, 2 * n - 2) {
+        cur.swap(nxt);
+        while (not cur.empty()) {
+            int x = cur.front();
+            cur.pop_front();
+            pushed[x] = false;
+            for (const auto & edge : g[x]) {
+                int y; int64_t cost; std::tie(y, cost) = edge;
+                if ((dist[x] == INT64_MIN ? INT64_MIN : dist[x] + cost) < dist[y]) {
+                    dist[y] = (iteration >= n - 1 ? INT64_MIN : dist[x] + cost);
+                    if (not pushed[y]) {
+                        if (not nxt.empty() and dist[y] < dist[nxt.front()]) {
+                            // Small Label First
+                            nxt.push_front(y);
+                        } else {
+                            nxt.push_back(y);
+                        }
+                        pushed[y] = true;
+                    }
+                }
+            }
+        }
+        if (nxt.empty()) break;
+    }
+
+    return dist;
+}
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 2 "graph/shortest_path_faster_algorithm.hpp"
+#include <cassert>
+#include <climits>
+#include <cstdint>
+#include <deque>
+#include <tuple>
+#include <utility>
+#include <vector>
+#line 1 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) begin(x), end(x)
+#line 10 "graph/shortest_path_faster_algorithm.hpp"
 
 /**
  * @brief Shortest Path Faster Algorithm

@@ -38,6 +38,7 @@ layout: default
 
 ## Code
 
+<a id="unbundled"></a>
 {% raw %}
 ```cpp
 /**
@@ -53,6 +54,24 @@ vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
     }
     return h;
 }
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 1 "graph/utils.inc.cpp"
+/**
+ * @brief reverse a digraph
+ */
+vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
+    int n = g.size();
+    vector<vector<int> > h(n);
+    REP (i, n) {
+        for (int j : g[i]) {
+            h[j].push_back(i);
+        }
 
 ```
 {% endraw %}

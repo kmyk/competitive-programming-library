@@ -38,6 +38,7 @@ layout: default
 
 ## Code
 
+<a id="unbundled"></a>
 {% raw %}
 ```cpp
 /**
@@ -90,6 +91,29 @@ int kmp_match(string const & target, string const & pattern) {
     return kmp_match(target, pattern, kmp_build_fail(pattern));
 }
 */
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 1 "string/knuth-morris-pratt.inc.cpp"
+/**
+ * @brief Morris-Pratt algorithm
+ * @description compute the list of the lengthes of the longest borders
+ * @note O(N)
+ */
+template <class Iterator>
+vector<int> morris_pratt(Iterator first, Iterator last) {
+    int length = distance(first, last);
+    vector<int> border(length + 1);
+    border[0] = -1;
+    int j = -1;
+    REP (i, length) {
+        while (j >= 0 and pattern[i] != pattern[j]) {
+            j = border[j];
+        }
 
 ```
 {% endraw %}

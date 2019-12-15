@@ -38,8 +38,25 @@ layout: default
 
 ## Code
 
+<a id="unbundled"></a>
 {% raw %}
 ```cpp
+double choose(int n, int r) {
+    double acc = 1;
+    REP (i, r) {
+        acc *= n - i;
+        acc /= i + 1;
+    }
+    return acc;
+}
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 1 "number/choose.inc.cpp"
 double choose(int n, int r) {
     double acc = 1;
     REP (i, r) {
