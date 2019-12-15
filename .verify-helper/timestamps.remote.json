@@ -5,6 +5,7 @@
 "data_structure/segment_tree.point_set_range_composite.test.cpp": "2019-12-15 04:15:59 +0900",
 "data_structure/segment_tree.range_sum_query.test.cpp": "2019-12-15 04:15:59 +0900",
 "data_structure/union_find_tree.test.cpp": "2019-08-07 22:48:24 +0900",
+"data_structure/wavelet_matrix.aoj2674.test.cpp": "2019-12-16 04:00:06 +0900",
 "data_structure/wavelet_matrix.rectangle_sum.test.cpp": "2019-12-16 03:47:02 +0900",
 "graph/bellman_ford.test.cpp": "2019-08-12 19:57:24 +0900",
 "graph/lowest_common_ancestor.aoj.test.cpp": "2019-12-15 03:56:03 +0900",
