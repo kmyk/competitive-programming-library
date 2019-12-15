@@ -11,12 +11,14 @@
 /**
  * @brief a wavelet matrix
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
+ * @see https://www.slideshare.net/pfi/ss-15916040
  */
 template <int BITS>
 struct wavelet_matrix {
     static_assert (BITS < CHAR_BIT * sizeof(uint64_t), "");
     std::array<fully_indexable_dictionary, BITS> fid;
     std::array<int, BITS> zero_count;
+
     wavelet_matrix() = default;
     /**
      * @note O(N BITS)
@@ -43,7 +45,9 @@ struct wavelet_matrix {
             data.swap(next);
         }
     }
+
     /**
+     * @brief count the occurrences of value in [l, r)
      * @note O(BITS)
      * @note even if l = 0, of course the final [l, r) is not always [0, r)
      */
@@ -60,7 +64,9 @@ struct wavelet_matrix {
     int rank(uint64_t value, int r) const {
         return rank(value, 0, r);
     }
+
     /**
+     * @brief find the index of the k-th occurence of value
      * @note O(BITS SELECT) when FID's select() is O(SELECT)
      */
     int select(uint64_t value, int k) const {
@@ -83,10 +89,15 @@ struct wavelet_matrix {
         }
         return k;
     }
+    /**
+     * @brief find the index of the k-th occurence of value in [l, n)
+     */
     int select(uint64_t value, int k, int l) const {
         return select(value, k + rank(value, l));
     }
+
     /**
+     * @brief returns the i-th element
      * @note O(BITS)
      */
     uint64_t access(int i) const {
@@ -99,6 +110,7 @@ struct wavelet_matrix {
         }
         return acc;
     }
+
     /**
      * @brief find the k-th number in [l, r)
      * @note O(BITS)
@@ -125,6 +137,7 @@ struct wavelet_matrix {
         }
         return acc;
     }
+
     /**
      * @brief count the number of values in [value_l, value_r) in range [l, r)
      * @note O(BITS)
@@ -147,6 +160,7 @@ struct wavelet_matrix {
             range_frequency(k - 1,             l - lc,             r - rc,  v, a, b) +
             range_frequency(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b);
     }
+
     /**
      * @brief flexible version of range_frequency, buf a little bit slow
      * @note O(K BITS), K is the number of kinds of values in the range
