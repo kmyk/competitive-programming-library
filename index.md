@@ -236,6 +236,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.aoj2674.test.cpp.html">data_structure/wavelet_matrix.aoj2674.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
