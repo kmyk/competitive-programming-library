@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-16 03:47:02 +0900
+    - Last commit date: 2019-12-16 04:05:17 +0900
 
 
 

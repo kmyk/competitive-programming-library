@@ -31,12 +31,13 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/fully_indexable_dictionary.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-03 23:38:29 +0900
+    - Last commit date: 2019-12-16 04:05:17 +0900
 
 
-* count the number of value in [0, r)
-* find the index of the k-th occurrence of value
+* count the number of value in $[0, r)$
+* find the index of the $k$-th occurrence of value
 * select(value, k) in [l, size)
+* get the $i$-th element
 
 
 ## Depends on
@@ -66,12 +67,11 @@ layout: default
 #include <cassert>
 #include <cstdint>
 #include <vector>
-#include "data_structure/fully_indexable_dictionary.hpp"
 #include "utils/macros.hpp"
 
 /**
  * @brief a fully indexable dictionary
- * @note space complexity o(N). 1.5N-bit consumed
+ * @note space complexity $o(N)$. $1.5N$-bit consumed
  */
 class fully_indexable_dictionary {
     static constexpr std::size_t block_size = 64;
@@ -81,7 +81,7 @@ public:
     std::size_t size;
     fully_indexable_dictionary() = default;
     template <typename T>
-    fully_indexable_dictionary(std::vector<T> const & bits) {
+    fully_indexable_dictionary(const std::vector<T> & bits) {
         size = bits.size();
         std::size_t block_count = size / block_size + 1;
         block.resize(block_count);
@@ -94,9 +94,10 @@ public:
             rank_block[i + 1] = rank_block[i] + __builtin_popcountll(block[i]);
         }
     }
+
     /**
-     * @brief count the number of value in [0, r)
-     * @note O(1)
+     * @brief count the number of value in $[0, r)$
+     * @note $O(1)$
      */
     int rank(bool value, int r) const {
         assert (0 <= r and r <= size);
@@ -108,10 +109,11 @@ public:
         assert (0 <= l and l <= r and r <= size);
         return rank(value, r) - rank(value, l);
     }
+
     /**
-     * @brief find the index of the k-th occurrence of value
+     * @brief find the index of the $k$-th occurrence of value
      * @note if there is no such index, returns size
-     * @note O(log N)
+     * @note $O(\log N)$
      */
     int select(bool value, int k) const {
         if (k >= rank(value, size)) return size;
@@ -125,7 +127,7 @@ public:
         int block_index = l;
         // binary search: max { i | rank(i) <= k }
         l = block_index * block_size;
-        r = std::min<int>(size, (block_index + 1) * block_size); // [l, r)
+        r = std::min<int>(size, (block_index + 1) * block_size);  // [l, r)
         while (r - l > 1) {
             int m = (l + r) / 2;
             (rank(value, m) <= k ? l : r) = m;
@@ -139,8 +141,10 @@ public:
         assert (0 <= l and l <= size);
         return select(value, k + rank(value, l));
     }
+
     /**
-     * @note O(1)
+     * @brief get the $i$-th element
+     * @note $O(1)$
      */
     bool access(int i) const {
         assert (0 <= i and i < size);

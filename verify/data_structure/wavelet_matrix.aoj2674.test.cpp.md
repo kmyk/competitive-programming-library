@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.aoj2674.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-16 04:00:06 +0900
+    - Last commit date: 2019-12-16 04:05:17 +0900
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674</a>
