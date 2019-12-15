@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: geometry/point-int.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#ed7daeb157cd9b31e53896ad3c771a26">geometry</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 struct point_t { ll y, x; };

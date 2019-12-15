@@ -26,6 +26,7 @@ layout: default
 
 
 # :heavy_check_mark: number/primes.hpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
@@ -35,19 +36,23 @@ layout: default
 
 
 
-## Depends On
+## Depends on
+
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required By
-* :warning: <a href="../utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes</a>
+## Required by
+
+* :warning: <a href="../utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
 
 
-## Verified With
+## Verified with
+
 * :heavy_check_mark: <a href="../../verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once

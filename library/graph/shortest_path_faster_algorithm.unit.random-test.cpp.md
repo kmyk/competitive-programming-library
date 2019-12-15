@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: graph/shortest_path_faster_algorithm.unit.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -35,13 +36,15 @@ layout: default
 
 
 
-## Depends On
-* :heavy_check_mark: <a href="bellman_ford.hpp.html">Bellman-Ford algorithm</a>
-* :warning: <a href="shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm</a>
+## Depends on
+
+* :heavy_check_mark: <a href="bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
+* :warning: <a href="shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "graph/bellman_ford.hpp"

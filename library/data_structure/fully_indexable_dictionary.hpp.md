@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: a fully indexable dictionary
+# :heavy_check_mark: a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -38,17 +39,25 @@ layout: default
 * select(value, k) in [l, size)
 
 
-## Depends On
+## Depends on
+
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required By
+## Required by
+
 * :warning: <a href="fully_indexable_dictionary.random-test.cpp.html">data_structure/fully_indexable_dictionary.random-test.cpp</a>
-* :warning: <a href="wavelet_matrix.hpp.html">a wavelet matrix</a>
+* :heavy_check_mark: <a href="wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :warning: <a href="wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
 
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
+
+
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once

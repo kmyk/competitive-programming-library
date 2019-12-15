@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: DSU on tree (sack)
+# :heavy_check_mark: DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -36,16 +37,19 @@ layout: default
 * see: <a href="https://codeforces.com/blog/entry/44351">https://codeforces.com/blog/entry/44351</a>
 
 
-## Depends On
-* :heavy_check_mark: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ</a>
+## Depends on
+
+* :heavy_check_mark: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
 * :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified With
+## Verified with
+
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once

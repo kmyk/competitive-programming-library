@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: utils/binary_search.unit.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -35,12 +36,14 @@ layout: default
 
 
 
-## Depends On
-* :heavy_check_mark: <a href="binary_search.hpp.html">a binary search / 二分探索</a>
+## Depends on
+
+* :heavy_check_mark: <a href="binary_search.hpp.html">a binary search / 二分探索 <small>(utils/binary_search.hpp)</small></a>
 * :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "utils/binary_search.hpp"

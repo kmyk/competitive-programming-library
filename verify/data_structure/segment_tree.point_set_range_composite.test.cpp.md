@@ -26,6 +26,7 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/segment_tree.point_set_range_composite.test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_set_range_composite.test.cpp">View this file on GitHub</a>
@@ -35,14 +36,16 @@ layout: default
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
 
 
-## Depends On
-* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木</a>
+## Depends on
+
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"

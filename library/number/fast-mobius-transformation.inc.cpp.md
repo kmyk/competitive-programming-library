@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: (upward) fast zeta transformation
+# :warning: (upward) fast zeta transformation <small>(number/fast-mobius-transformation.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
@@ -40,6 +41,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

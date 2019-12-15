@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: the sliding window minimum algorithm
+# :warning: the sliding window minimum algorithm <small>(data_structure/sliding-window.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

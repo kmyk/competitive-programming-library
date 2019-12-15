@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: lowest common ancestor with doubling
+# :warning: lowest common ancestor with doubling <small>(graph/lowest-common-ancestor-doubling.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -38,6 +39,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 // https://kimiyuki.net/blog/2016/07/02/yuki-386/

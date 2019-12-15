@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: number/gcd.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
@@ -35,11 +36,13 @@ layout: default
 
 
 
-## Depends On
+## Depends on
+
 * :heavy_check_mark: <a href="gcd.hpp.html">number/gcd.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "number/gcd.hpp"

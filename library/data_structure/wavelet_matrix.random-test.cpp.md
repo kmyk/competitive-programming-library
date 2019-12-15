@@ -26,22 +26,25 @@ layout: default
 
 
 # :warning: data_structure/wavelet_matrix.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-13 18:43:42 +0900
+    - Last commit date: 2019-12-16 03:47:02 +0900
 
 
 
 
-## Depends On
-* :warning: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
-* :warning: <a href="wavelet_matrix.hpp.html">a wavelet matrix</a>
+## Depends on
+
+* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
+* :heavy_check_mark: <a href="wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "data_structure/wavelet_matrix.hpp"

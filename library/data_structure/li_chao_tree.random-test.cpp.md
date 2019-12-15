@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: data_structure/li_chao_tree.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -35,12 +36,14 @@ layout: default
 
 
 
-## Depends On
+## Depends on
+
 * :warning: <a href="li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "data_structure/li_chao_tree.hpp"

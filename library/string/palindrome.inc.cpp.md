@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: string/palindrome.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
@@ -33,9 +34,11 @@ layout: default
     - Last commit date: 2019-05-24 16:32:35 +0900
 
 
+* see: <a href="http://snuke.hatenablog.com/entry/2014/12/02/235837">http://snuke.hatenablog.com/entry/2014/12/02/235837</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

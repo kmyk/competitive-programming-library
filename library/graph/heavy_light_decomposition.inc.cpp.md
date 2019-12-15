@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: heavy light decomposition / 重軽分解
+# :warning: heavy light decomposition / 重軽分解 <small>(graph/heavy_light_decomposition.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -39,6 +40,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

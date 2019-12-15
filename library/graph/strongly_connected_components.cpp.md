@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解
+# :warning: strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -37,6 +38,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {

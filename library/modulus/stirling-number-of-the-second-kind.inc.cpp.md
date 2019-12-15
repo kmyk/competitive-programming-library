@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: the Stirling number of the second kind
+# :warning: the Stirling number of the second kind <small>(modulus/stirling-number-of-the-second-kind.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
@@ -39,6 +40,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

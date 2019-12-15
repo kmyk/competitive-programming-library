@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: get the diameter of a tree / 木の直径
+# :warning: get the diameter of a tree / 木の直径 <small>(graph/diameter.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -33,9 +34,11 @@ layout: default
     - Last commit date: 2019-12-15 04:15:59 +0900
 
 
+* see: <a href="http://techtipshoge.blogspot.jp/2016/09/blog-post.html">http://techtipshoge.blogspot.jp/2016/09/blog-post.html</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

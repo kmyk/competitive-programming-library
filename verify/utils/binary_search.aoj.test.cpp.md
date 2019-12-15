@@ -26,6 +26,7 @@ layout: default
 
 
 # :heavy_check_mark: utils/binary_search.aoj.test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.aoj.test.cpp">View this file on GitHub</a>
@@ -35,12 +36,14 @@ layout: default
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B</a>
 
 
-## Depends On
-* :heavy_check_mark: <a href="../../library/utils/binary_search.hpp.html">a binary search / 二分探索</a>
+## Depends on
+
+* :heavy_check_mark: <a href="../../library/utils/binary_search.hpp.html">a binary search / 二分探索 <small>(utils/binary_search.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B"

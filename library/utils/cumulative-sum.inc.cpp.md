@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: cumulative sum
+# :warning: cumulative sum <small>(utils/cumulative-sum.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -38,6 +39,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

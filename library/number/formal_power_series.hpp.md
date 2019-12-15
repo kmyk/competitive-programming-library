@@ -26,6 +26,7 @@ layout: default
 
 
 # :heavy_check_mark: number/formal_power_series.hpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
@@ -35,19 +36,22 @@ layout: default
 
 
 
-## Depends On
+## Depends on
+
 * :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Verified With
+## Verified with
+
 * :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once

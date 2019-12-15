@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: a rolling hash
+# :warning: a rolling hash <small>(string/rolling-hash.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
@@ -38,6 +39,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

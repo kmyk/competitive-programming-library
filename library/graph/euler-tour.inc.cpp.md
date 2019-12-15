@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: euler tour
+# :warning: euler tour <small>(graph/euler-tour.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -35,9 +36,11 @@ layout: default
 
 * euler tour, push vertices only visiting
 * something like euler tour but do BFS
+* see: <a href="https://yukicoder.me/problems/no/899">https://yukicoder.me/problems/no/899</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

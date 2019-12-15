@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: a double-ended priority queue
+# :warning: a double-ended priority queue <small>(data_structure/double-ended-priority-queue.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -33,9 +34,11 @@ layout: default
     - Last commit date: 2019-06-03 23:08:10 +0900
 
 
+* see: <a href="https://topcoder.g.hatena.ne.jp/spaghetti_source/20121006#c1349522933">https://topcoder.g.hatena.ne.jp/spaghetti_source/20121006#c1349522933</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

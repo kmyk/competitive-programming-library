@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: modulus/factorial.unit.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
@@ -35,12 +36,14 @@ layout: default
 
 
 
-## Depends On
+## Depends on
+
 * :warning: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "modulus/factorial.hpp"

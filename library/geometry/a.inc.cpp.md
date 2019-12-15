@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: Andrew's Monotone Chain
+# :warning: Andrew's Monotone Chain <small>(geometry/a.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#ed7daeb157cd9b31e53896ad3c771a26">geometry</a>
@@ -39,6 +40,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 typedef complex<double> point;

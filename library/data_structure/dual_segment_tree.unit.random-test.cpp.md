@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: data_structure/dual_segment_tree.unit.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -35,12 +36,14 @@ layout: default
 
 
 
-## Depends On
-* :heavy_check_mark: <a href="dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木</a>
+## Depends on
+
+* :heavy_check_mark: <a href="dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "data_structure/dual_segment_tree.hpp"

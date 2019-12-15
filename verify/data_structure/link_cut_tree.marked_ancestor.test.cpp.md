@@ -26,6 +26,7 @@ layout: default
 
 
 # :heavy_check_mark: data_structure/link_cut_tree.marked_ancestor.test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.marked_ancestor.test.cpp">View this file on GitHub</a>
@@ -35,12 +36,14 @@ layout: default
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp</a>
 
 
-## Depends On
-* :heavy_check_mark: <a href="../../library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree</a>
+## Depends on
+
+* :heavy_check_mark: <a href="../../library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp"

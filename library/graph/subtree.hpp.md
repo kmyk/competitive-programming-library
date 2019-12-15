@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ
+# :heavy_check_mark: subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -35,16 +36,19 @@ layout: default
 
 
 
-## Required By
+## Required by
+
 * :warning: <a href="subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
-* :heavy_check_mark: <a href="../utils/dsu_on_tree.hpp.html">DSU on tree (sack)</a>
+* :heavy_check_mark: <a href="../utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 
 
-## Verified With
+## Verified with
+
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once

@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: utils/subset.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -33,9 +34,11 @@ layout: default
     - Last commit date: 2017-12-16 00:01:28 +0900
 
 
+* see: <a href="https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/">https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

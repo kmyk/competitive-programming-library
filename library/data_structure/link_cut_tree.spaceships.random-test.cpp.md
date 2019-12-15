@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: data_structure/link_cut_tree.spaceships.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -36,12 +37,14 @@ layout: default
 * see: <a href="https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships">https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships</a>
 
 
-## Depends On
-* :heavy_check_mark: <a href="link_cut_tree.hpp.html">an extended structure of union-find tree</a>
+## Depends on
+
+* :heavy_check_mark: <a href="link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 // #define PROBLEM "https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships"

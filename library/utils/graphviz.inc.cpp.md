@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: utils/graphviz.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 void graphviz(vector<vector<int> > const & g, bool is_digraph = false, string const & name = "graph") {

@@ -26,6 +26,7 @@ layout: default
 
 
 # :heavy_check_mark: number/formal_power_series.inv.test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.inv.test.cpp">View this file on GitHub</a>
@@ -35,14 +36,16 @@ layout: default
 * see: <a href="https://judge.yosupo.jp/problem/inv_of_formal_power_series">https://judge.yosupo.jp/problem/inv_of_formal_power_series</a>
 
 
-## Depends On
+## Depends on
+
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
-* :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm</a>
+* :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "number/formal_power_series.hpp"

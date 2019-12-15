@@ -25,29 +25,43 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: a wavelet matrix
+# :heavy_check_mark: a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-03 23:38:29 +0900
+    - Last commit date: 2019-12-16 03:47:02 +0900
 
 
+* count the occurrences of value in [l, r)
+* find the index of the k-th occurence of value
+* find the index of the k-th occurence of value in [l, n)
+* returns the i-th element
 * find the k-th number in [l, r)
 * count the number of values in [value_l, value_r) in range [l, r)
 * flexible version of range_frequency, buf a little bit slow
+* see: <a href="https://www.slideshare.net/pfi/ss-15916040">https://www.slideshare.net/pfi/ss-15916040</a>
 
 
-## Depends On
-* :warning: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
+## Depends on
+
+* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required By
+## Required by
+
 * :warning: <a href="wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
 
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
+
+
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once
@@ -63,12 +77,14 @@ layout: default
 /**
  * @brief a wavelet matrix
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
+ * @see https://www.slideshare.net/pfi/ss-15916040
  */
 template <int BITS>
 struct wavelet_matrix {
     static_assert (BITS < CHAR_BIT * sizeof(uint64_t), "");
     std::array<fully_indexable_dictionary, BITS> fid;
     std::array<int, BITS> zero_count;
+
     wavelet_matrix() = default;
     /**
      * @note O(N BITS)
@@ -95,7 +111,9 @@ struct wavelet_matrix {
             data.swap(next);
         }
     }
+
     /**
+     * @brief count the occurrences of value in [l, r)
      * @note O(BITS)
      * @note even if l = 0, of course the final [l, r) is not always [0, r)
      */
@@ -112,7 +130,9 @@ struct wavelet_matrix {
     int rank(uint64_t value, int r) const {
         return rank(value, 0, r);
     }
+
     /**
+     * @brief find the index of the k-th occurence of value
      * @note O(BITS SELECT) when FID's select() is O(SELECT)
      */
     int select(uint64_t value, int k) const {
@@ -135,10 +155,15 @@ struct wavelet_matrix {
         }
         return k;
     }
+    /**
+     * @brief find the index of the k-th occurence of value in [l, n)
+     */
     int select(uint64_t value, int k, int l) const {
         return select(value, k + rank(value, l));
     }
+
     /**
+     * @brief returns the i-th element
      * @note O(BITS)
      */
     uint64_t access(int i) const {
@@ -151,6 +176,7 @@ struct wavelet_matrix {
         }
         return acc;
     }
+
     /**
      * @brief find the k-th number in [l, r)
      * @note O(BITS)
@@ -177,6 +203,7 @@ struct wavelet_matrix {
         }
         return acc;
     }
+
     /**
      * @brief count the number of values in [value_l, value_r) in range [l, r)
      * @note O(BITS)
@@ -199,6 +226,7 @@ struct wavelet_matrix {
             range_frequency(k - 1,             l - lc,             r - rc,  v, a, b) +
             range_frequency(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b);
     }
+
     /**
      * @brief flexible version of range_frequency, buf a little bit slow
      * @note O(K BITS), K is the number of kinds of values in the range

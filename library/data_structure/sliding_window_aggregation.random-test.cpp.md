@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: data_structure/sliding_window_aggregation.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -35,13 +36,15 @@ layout: default
 
 
 
-## Depends On
-* :warning: <a href="sliding_window_aggregation.hpp.html">get sum of elements in the queue</a>
+## Depends on
+
+* :warning: <a href="sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "data_structure/sliding_window_aggregation.hpp"

@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: data_structure/convex_hull_trick.hpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -33,13 +34,19 @@ layout: default
     - Last commit date: 2019-11-09 09:23:07 +0900
 
 
+* see: <a href="http://d.hatena.ne.jp/sune2/20140310/1394440369">http://d.hatena.ne.jp/sune2/20140310/1394440369</a>
+* see: <a href="http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html">http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html</a>
+* see: <a href="http://satanic0258.hatenablog.com/entry/2016/08/16/181331">http://satanic0258.hatenablog.com/entry/2016/08/16/181331</a>
+* see: <a href="http://wcipeg.com/wiki/Convex_hull_trick">http://wcipeg.com/wiki/Convex_hull_trick</a>
 
 
-## Required By
+## Required by
+
 * :warning: <a href="convex_hull_trick.random-test.cpp.html">data_structure/convex_hull_trick.random-test.cpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #pragma once

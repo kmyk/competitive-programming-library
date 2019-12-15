@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: template.cpp
+
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include <bits/stdc++.h>

@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: graph/dominator-tree.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 // http://sigma425.hatenablog.com/entry/2015/12/25/224053

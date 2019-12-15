@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: data_structure/fully_indexable_dictionary.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
@@ -35,12 +36,14 @@ layout: default
 
 
 
-## Depends On
-* :warning: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary</a>
+## Depends on
+
+* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "data_structure/fully_indexable_dictionary.hpp"

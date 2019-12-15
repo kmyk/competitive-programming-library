@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: geometry/convex-hull.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#ed7daeb157cd9b31e53896ad3c771a26">geometry</a>
@@ -37,6 +38,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 double dot(complex<double> a, complex<double> b) { return real(a * conj(b)); }

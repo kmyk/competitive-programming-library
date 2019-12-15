@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: get a central path of a catapillar graph
+# :warning: get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -37,6 +38,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

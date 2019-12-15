@@ -25,7 +25,8 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: twelvefold way / 写像12相
+# :warning: twelvefold way / 写像12相 <small>(modulus/twelvefold-way.inc.cpp)</small>
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
@@ -43,9 +44,12 @@ layout: default
 * labeled-N unlabeled-K injective-f
 * labeled-N unlabeled-K surjective-f
 * unlabeled-N unlabeled-K injective-f
+* see: <a href="https://en.wikipedia.org/wiki/Twelvefold_way">https://en.wikipedia.org/wiki/Twelvefold_way</a>
+* see: <a href="https://mathtrain.jp/twelveway">https://mathtrain.jp/twelveway</a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 /**

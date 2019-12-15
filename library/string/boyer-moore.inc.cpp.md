@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: string/boyer-moore.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 array<int,26> bm_build_skip(string const & pattern) { // O(m)

@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: graph/subtree.unit.random-test.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
@@ -35,11 +36,13 @@ layout: default
 
 
 
-## Depends On
-* :heavy_check_mark: <a href="subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ</a>
+## Depends on
+
+* :heavy_check_mark: <a href="subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
 
 
 ## Code
+
 {% raw %}
 ```cpp
 #include "graph/subtree.hpp"

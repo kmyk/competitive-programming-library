@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: utils/knapsack-problem-branch-and-bound.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 ll knapsack_problem_branch_and_bound(int n, ll max_w, vector<ll> const & a_v, vector<ll> const & a_w) {

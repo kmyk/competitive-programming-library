@@ -26,6 +26,7 @@ layout: default
 
 
 # :warning: modulus/modops.inc.cpp
+
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
@@ -36,6 +37,7 @@ layout: default
 
 
 ## Code
+
 {% raw %}
 ```cpp
 inline int modadd<int mod>(int a, int b) {
