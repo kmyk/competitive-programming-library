@@ -59,11 +59,13 @@ layout: default
 * :warning: <a href="../graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
 * :warning: <a href="../graph/shortest_path_faster_algorithm.unit.random-test.cpp.html">graph/shortest_path_faster_algorithm.unit.random-test.cpp</a>
 * :warning: <a href="../modulus/choose.hpp.html">modulus/choose.hpp</a>
+* :warning: <a href="../monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
 * :warning: <a href="../number/fast_fourier_transformation.hpp.html">the convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
 * :warning: <a href="../number/fast_fourier_transformation.unit.random-test.cpp.html">number/fast_fourier_transformation.unit.random-test.cpp</a>
 * :heavy_check_mark: <a href="../number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
 * :warning: <a href="../number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
 * :warning: <a href="../number/lagrange_interpolation.random-test.cpp.html">number/lagrange_interpolation.random-test.cpp</a>
+* :warning: <a href="../number/matrix_template.hpp.html">number/matrix_template.hpp</a>
 * :heavy_check_mark: <a href="../number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="../number/primes.hpp.html">number/primes.hpp</a>
 * :warning: <a href="binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>

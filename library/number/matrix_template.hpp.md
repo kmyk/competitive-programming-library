@@ -25,15 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/matrix.template.inc.cpp
+# :warning: number/matrix_template.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
-* <a href="{{ site.github.repository_url }}/blob/master/number/matrix.template.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-12-07 05:10:11 +0900
+* <a href="{{ site.github.repository_url }}/blob/master/number/matrix_template.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-19 00:15:23 +0900
 
 
+
+
+## Depends on
+
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+
+
+## Required by
+
+* :warning: <a href="../monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
 
 
 ## Code
@@ -41,8 +51,13 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#pragma once
+#include <array>
+#include <cstdint>
+#include "utils/macros.hpp"
+
 template <typename T, size_t H, size_t W>
-using matrix = array<array<T, W>, H>;
+using matrix = std::array<std::array<T, W>, H>;
 
 template <typename T, size_t A, size_t B, size_t C>
 matrix<T, A, C> operator * (matrix<T, A, B> const & a, matrix<T, B, C> const & b) {
@@ -51,8 +66,8 @@ matrix<T, A, C> operator * (matrix<T, A, B> const & a, matrix<T, B, C> const & b
     return c;
 }
 template <typename T, size_t H, size_t W>
-array<T, H> operator * (matrix<T, H, W> const & a, array<T, W> const & b) {
-    array<T, H> c = {};
+std::array<T, H> operator * (matrix<T, H, W> const & a, std::array<T, W> const & b) {
+    std::array<T, H> c = {};
     REP (y, H) REP (z, W) c[y] += a[y][z] * b[z];
     return c;
 }
@@ -65,8 +80,8 @@ matrix<T, H, W> operator + (matrix<T, H, W> const & a, matrix<T, H, W> const & b
 }
 
 template <typename T, size_t N>
-array<T, N> operator + (array<T, N> const & a, array<T, N> const & b) {
-    array<T, N> c;
+std::array<T, N> operator + (std::array<T, N> const & a, std::array<T, N> const & b) {
+    std::array<T, N> c;
     REP (i, N) c[i] = a[i] + b[i];
     return c;
 }
@@ -84,7 +99,7 @@ matrix<T, N, N> unit_matrix() {
 }
 
 template <typename T, size_t N>
-matrix<T, N, N> powmat(matrix<T, N, N> x, ll k) {
+matrix<T, N, N> powmat(matrix<T, N, N> x, int64_t k) {
     matrix<T, N, N> y = unit_matrix<T, N>();
     for (; k; k >>= 1) {
         if (k & 1) y = y * x;
@@ -99,9 +114,19 @@ matrix<T, N, N> powmat(matrix<T, N, N> x, ll k) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "number/matrix.template.inc.cpp"
+#line 2 "number/matrix_template.hpp"
+#include <array>
+#include <cstdint>
+#line 1 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) begin(x), end(x)
+#line 5 "number/matrix_template.hpp"
+
 template <typename T, size_t H, size_t W>
-using matrix = array<array<T, W>, H>;
+using matrix = std::array<std::array<T, W>, H>;
 
 template <typename T, size_t A, size_t B, size_t C>
 matrix<T, A, C> operator * (matrix<T, A, B> const & a, matrix<T, B, C> const & b) {
@@ -110,8 +135,8 @@ matrix<T, A, C> operator * (matrix<T, A, B> const & a, matrix<T, B, C> const & b
     return c;
 }
 template <typename T, size_t H, size_t W>
-array<T, H> operator * (matrix<T, H, W> const & a, array<T, W> const & b) {
-    array<T, H> c = {};
+std::array<T, H> operator * (matrix<T, H, W> const & a, std::array<T, W> const & b) {
+    std::array<T, H> c = {};
     REP (y, H) REP (z, W) c[y] += a[y][z] * b[z];
     return c;
 }
@@ -124,8 +149,8 @@ matrix<T, H, W> operator + (matrix<T, H, W> const & a, matrix<T, H, W> const & b
 }
 
 template <typename T, size_t N>
-array<T, N> operator + (array<T, N> const & a, array<T, N> const & b) {
-    array<T, N> c;
+std::array<T, N> operator + (std::array<T, N> const & a, std::array<T, N> const & b) {
+    std::array<T, N> c;
     REP (i, N) c[i] = a[i] + b[i];
     return c;
 }
@@ -143,7 +168,7 @@ matrix<T, N, N> unit_matrix() {
 }
 
 template <typename T, size_t N>
-matrix<T, N, N> powmat(matrix<T, N, N> x, ll k) {
+matrix<T, N, N> powmat(matrix<T, N, N> x, int64_t k) {
     matrix<T, N, N> y = unit_matrix<T, N>();
     for (; k; k >>= 1) {
         if (k & 1) y = y * x;

@@ -151,6 +151,14 @@ layout: default
 * :warning: <a href="library/modulus/twelvefold-way.inc.cpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold-way.inc.cpp)</small></a>
 
 
+<div id="315142c884fa9bdd2be3b42923ffe964"></div>
+
+### monoids
+
+* :warning: <a href="library/monoids/dual.hpp.html">monoids/dual.hpp</a>
+* :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
+
+
 <div id="b1bc248a7ff2b2e95569f56de68615df"></div>
 
 ### number
@@ -167,7 +175,7 @@ layout: default
 * :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
 * :warning: <a href="library/number/lagrange_interpolation.random-test.cpp.html">number/lagrange_interpolation.random-test.cpp</a>
 * :warning: <a href="library/number/matrix.inc.cpp.html">number/matrix.inc.cpp</a>
-* :warning: <a href="library/number/matrix.template.inc.cpp.html">number/matrix.template.inc.cpp</a>
+* :warning: <a href="library/number/matrix_template.hpp.html">number/matrix_template.hpp</a>
 * :warning: <a href="library/number/miller-rabin.inc.cpp.html">number/miller-rabin.inc.cpp</a>
 * :heavy_check_mark: <a href="library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
 * :warning: <a href="library/number/primes-small.inc.cpp.html">enumerate primes in \[2, n) with O(n log log n) <small>(number/primes-small.inc.cpp)</small></a>
