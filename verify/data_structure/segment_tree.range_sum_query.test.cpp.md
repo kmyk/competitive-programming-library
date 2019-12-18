@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.range_sum_query.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 04:15:59 +0900
+    - Last commit date: 2019-12-19 02:03:14 +0900
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -39,6 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
@@ -81,6 +82,13 @@ int main() {
 #include <algorithm>
 #include <cassert>
 #include <vector>
+#line 1 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) begin(x), end(x)
+#line 6 "data_structure/segment_tree.hpp"
 
 /**
  * @brief a segment tree / セグメント木
@@ -112,6 +120,34 @@ struct segment_tree {
             if (r % 2 == 1) racc = mon.mult(a[(-- r) - 1], racc);
         }
         return mon.mult(lacc, racc);
+    }
+
+    /**
+     * @brief a fast & semigroup-friendly version constructor
+     * @note $O(n)$
+     */
+    segment_tree(const std::vector<value_type> & a_, const Monoid & mon_ = Monoid()) : mon(mon_) {
+        n = 1; while (n < a_.size()) n *= 2;
+        a.resize(2 * n - 1, mon.unit());
+        std::copy(ALL(a_), a.begin() + (n - 1));
+        unsafe_rebuild();
+    }
+    /**
+     * @brief update a leaf node without updating ancestors
+     * @note $O(1)$
+     */
+    void unsafe_point_set(int i, value_type b) {  // 0-based
+        assert (0 <= i and i < n);
+        a[i + n - 1] = b;
+    }
+    /**
+     * @brief re-build non-leaf nodes from leaf nodes
+     * @note $O(n)$
+     */
+    void unsafe_rebuild() {
+        REP_R (i, n - 1) {
+            a[i] = mon.mult(a[2 * i + 1], a[2 * i + 2]);
+        }
     }
 };
 #line 2 "utils/monoids.hpp"
