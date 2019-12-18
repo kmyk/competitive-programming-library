@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <cassert>
 #include <vector>
+#include "utils/macros.hpp"
 
 /**
  * @brief a segment tree / セグメント木
@@ -33,5 +34,33 @@ struct segment_tree {
             if (r % 2 == 1) racc = mon.mult(a[(-- r) - 1], racc);
         }
         return mon.mult(lacc, racc);
+    }
+
+    /**
+     * @brief a fast & semigroup-friendly version constructor
+     * @note $O(n)$
+     */
+    segment_tree(const std::vector<value_type> & a_, const Monoid & mon_ = Monoid()) : mon(mon_) {
+        n = 1; while (n < a_.size()) n *= 2;
+        a.resize(2 * n - 1, mon.unit());
+        std::copy(ALL(a_), a.begin() + (n - 1));
+        unsafe_rebuild();
+    }
+    /**
+     * @brief update a leaf node without updating ancestors
+     * @note $O(1)$
+     */
+    void unsafe_point_set(int i, value_type b) {  // 0-based
+        assert (0 <= i and i < n);
+        a[i + n - 1] = b;
+    }
+    /**
+     * @brief re-build non-leaf nodes from leaf nodes
+     * @note $O(n)$
+     */
+    void unsafe_rebuild() {
+        REP_R (i, n - 1) {
+            a[i] = mon.mult(a[2 * i + 1], a[2 * i + 2]);
+        }
     }
 };
