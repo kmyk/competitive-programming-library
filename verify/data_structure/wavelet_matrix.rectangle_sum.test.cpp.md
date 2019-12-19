@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.rectangle_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-16 04:05:17 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 * see: <a href="https://judge.yosupo.jp/problem/rectangle_sum">https://judge.yosupo.jp/problem/rectangle_sum</a>
@@ -40,6 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -51,6 +52,7 @@ layout: default
 #define PROBLEM "https://judge.yosupo.jp/problem/rectangle_sum"
 #include "data_structure/wavelet_matrix.hpp"
 #include "utils/macros.hpp"
+#include "utils/coordinate_compression.hpp"
 #include <cstdint>
 #include <cstdio>
 #include <numeric>
@@ -66,15 +68,25 @@ int main() {
         scanf("%d%d%lld", &x[i], &y[i], &w[i]);
     }
 
+    // coordinate compression
+    coordinate_compression<int> compress_x(ALL(x));
+    coordinate_compression<int> compress_y(ALL(y));
+    constexpr int BITS = 18;
+    assert (compress_x.data.size() < (1 << BITS));
+    assert (compress_y.data.size() < (1 << BITS));
+    REP (i, n) {
+        x[i] = compress_x[x[i]];
+        y[i] = compress_y[y[i]];
+    }
+
     // construct wavlet matrices
-    constexpr int BITS = 30;
+    constexpr int WIDTH = 16;
+    constexpr int HEIGHT = 8;
     vector<int> order(n);
     iota(ALL(order), 0);
     sort(ALL(order), [&](int i, int j) {
         return x[i] < x[j];
     });
-    constexpr int WIDTH = 16;
-    constexpr int HEIGHT = 8;
     array<vector<int>, HEIGHT> x1;
     array<vector<int>, HEIGHT> y1;
     for (int i : order) {
@@ -94,18 +106,27 @@ int main() {
     }
 
     // answer to queries
+    vector<int> lx(q), ly(q), rx(q), ry(q);
     REP (i, q) {
-        int lx, ly, rx, ry; scanf("%d%d%d%d", &lx, &ly, &rx, &ry);
-        long long answer = 0;
-        REP_R (k, HEIGHT) {
-            int l = lower_bound(ALL(x1[k]), lx) - x1[k].begin();
-            int r = lower_bound(ALL(x1[k]), rx) - x1[k].begin();
-            int a = ly;
-            int b = ry;
-            answer *= WIDTH;
-            answer += wm[k].range_frequency(l, r, a, b);
+        scanf("%d%d%d%d", &lx[i], &ly[i], &rx[i], &ry[i]);
+        lx[i] = compress_x[lx[i]];
+        rx[i] = compress_x[rx[i]];
+        ly[i] = compress_y[ly[i]];
+        ry[i] = compress_y[ry[i]];
+    }
+    vector<long long> answer(q);
+    REP_R (k, HEIGHT) {
+        REP (i, q) {  // swap loops to optimize cache
+            int l = lower_bound(ALL(x1[k]), lx[i]) - x1[k].begin();
+            int r = lower_bound(ALL(x1[k]), rx[i]) - x1[k].begin();
+            int a = ly[i];
+            int b = ry[i];
+            answer[i] *= WIDTH;
+            answer[i] += wm[k].range_frequency(l, r, a, b);
         }
-        printf("%lld\n", answer);
+    }
+    REP (i, q) {
+        printf("%lld\n", answer[i]);
     }
     return 0;
 }
@@ -129,12 +150,12 @@ int main() {
 #include <cassert>
 #include <cstdint>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 7 "data_structure/fully_indexable_dictionary.hpp"
 
 /**
@@ -219,12 +240,6 @@ public:
         return block[i / block_size] & (1ull << (i % block_size));
     }
 };
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
 #line 9 "data_structure/wavelet_matrix.hpp"
 
 
@@ -409,13 +424,33 @@ struct wavelet_matrix {
         range_frequency_callback(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b, callback);
     }
 };
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
-#line 4 "data_structure/wavelet_matrix.rectangle_sum.test.cpp"
+#line 2 "utils/coordinate_compression.hpp"
+#include <algorithm>
+#include <vector>
+#line 5 "utils/coordinate_compression.hpp"
+
+template <class T>
+struct coordinate_compression {
+    std::vector<T> data;
+    coordinate_compression() = default;
+    template <class Iterator>
+    coordinate_compression(Iterator first, Iterator last) {
+        unsafe_insert(first, last);
+        unsafe_rebuild();
+    }
+    template <class Iterator>
+    void unsafe_insert(Iterator first, Iterator last) {
+        data.insert(data.end(), first, last);
+    }
+    void unsafe_rebuild() {
+        std::sort(ALL(data));
+        data.erase(std::unique(ALL(data)), data.end());
+    }
+    int operator [] (const T & value) {
+        return std::lower_bound(ALL(data), value) - data.begin();
+    }
+};
+#line 5 "data_structure/wavelet_matrix.rectangle_sum.test.cpp"
 #include <cstdint>
 #include <cstdio>
 #include <numeric>
@@ -431,15 +466,25 @@ int main() {
         scanf("%d%d%lld", &x[i], &y[i], &w[i]);
     }
 
+    // coordinate compression
+    coordinate_compression<int> compress_x(ALL(x));
+    coordinate_compression<int> compress_y(ALL(y));
+    constexpr int BITS = 18;
+    assert (compress_x.data.size() < (1 << BITS));
+    assert (compress_y.data.size() < (1 << BITS));
+    REP (i, n) {
+        x[i] = compress_x[x[i]];
+        y[i] = compress_y[y[i]];
+    }
+
     // construct wavlet matrices
-    constexpr int BITS = 30;
+    constexpr int WIDTH = 16;
+    constexpr int HEIGHT = 8;
     vector<int> order(n);
     iota(ALL(order), 0);
     sort(ALL(order), [&](int i, int j) {
         return x[i] < x[j];
     });
-    constexpr int WIDTH = 16;
-    constexpr int HEIGHT = 8;
     array<vector<int>, HEIGHT> x1;
     array<vector<int>, HEIGHT> y1;
     for (int i : order) {
@@ -459,18 +504,27 @@ int main() {
     }
 
     // answer to queries
+    vector<int> lx(q), ly(q), rx(q), ry(q);
     REP (i, q) {
-        int lx, ly, rx, ry; scanf("%d%d%d%d", &lx, &ly, &rx, &ry);
-        long long answer = 0;
-        REP_R (k, HEIGHT) {
-            int l = lower_bound(ALL(x1[k]), lx) - x1[k].begin();
-            int r = lower_bound(ALL(x1[k]), rx) - x1[k].begin();
-            int a = ly;
-            int b = ry;
-            answer *= WIDTH;
-            answer += wm[k].range_frequency(l, r, a, b);
+        scanf("%d%d%d%d", &lx[i], &ly[i], &rx[i], &ry[i]);
+        lx[i] = compress_x[lx[i]];
+        rx[i] = compress_x[rx[i]];
+        ly[i] = compress_y[ly[i]];
+        ry[i] = compress_y[ry[i]];
+    }
+    vector<long long> answer(q);
+    REP_R (k, HEIGHT) {
+        REP (i, q) {  // swap loops to optimize cache
+            int l = lower_bound(ALL(x1[k]), lx[i]) - x1[k].begin();
+            int r = lower_bound(ALL(x1[k]), rx[i]) - x1[k].begin();
+            int a = ly[i];
+            int b = ry[i];
+            answer[i] *= WIDTH;
+            answer[i] += wm[k].range_frequency(l, r, a, b);
         }
-        printf("%lld\n", answer);
+    }
+    REP (i, q) {
+        printf("%lld\n", answer[i]);
     }
     return 0;
 }

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 04:15:59 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995</a>
@@ -195,12 +195,12 @@ std::vector<subtree_info_t> prepare_subtree_info(std::vector<std::vector<int> > 
     info[root].parent = -1;
     return info;
 }
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 7 "utils/dsu_on_tree.hpp"
 
 /**
@@ -433,12 +433,6 @@ struct plus_min_count_action {
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
 #line 10 "utils/dsu_on_tree.aoj.test.cpp"
 using namespace std;
 

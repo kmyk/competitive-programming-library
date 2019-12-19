@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 03:56:03 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 * see: <a href="https://www.slideshare.net/yumainoue965/lca-and-rmq">https://www.slideshare.net/yumainoue965/lca-and-rmq</a>
@@ -133,12 +133,12 @@ public:
 #line 2 "data_structure/sparse_table.hpp"
 #include <cassert>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 5 "data_structure/sparse_table.hpp"
 
 /**

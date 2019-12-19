@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/fast_zeta_transform.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-04 22:38:25 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 
@@ -89,12 +89,12 @@ std::vector<typename CommutativeSemiring::value_type> upward_fast_zeta_transform
 #include <cstdint>
 #include <map>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 8 "number/primes.hpp"
 
 /**
@@ -194,12 +194,6 @@ struct prepared_primes {
         return phi;
     }
 };
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
 #line 6 "utils/fast_zeta_transform.hpp"
 
 /**

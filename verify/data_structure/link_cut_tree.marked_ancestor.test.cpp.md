@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.marked_ancestor.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-08-07 22:48:24 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp</a>
@@ -97,12 +97,12 @@ int main() {
 #include <iostream>
 #include <sstream>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 9 "data_structure/link_cut_tree.hpp"
 
 
@@ -292,12 +292,6 @@ public:
         return oss.str();
     }
 };
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
 #line 5 "data_structure/link_cut_tree.marked_ancestor.test.cpp"
 using namespace std;
 

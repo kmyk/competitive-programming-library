@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/fast_fourier_transformation.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-10-06 01:47:20 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 
@@ -154,12 +154,12 @@ std::vector<T> convolution(std::vector<T> const & a, std::vector<T> const & b) {
 #include <cmath>
 #include <complex>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 8 "number/fast_fourier_transformation.hpp"
 
 /**

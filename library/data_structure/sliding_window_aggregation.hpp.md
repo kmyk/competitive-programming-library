@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-28 17:51:23 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 
@@ -116,12 +116,12 @@ struct sliding_window_aggregation {
 #include <cassert>
 #include <cstddef>
 #include <deque>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 6 "data_structure/sliding_window_aggregation.hpp"
 
 template <class Monoid>

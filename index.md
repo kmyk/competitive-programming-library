@@ -204,7 +204,7 @@ layout: default
 * :warning: <a href="library/utils/apply-permutation.inc.cpp.html">utils/apply-permutation.inc.cpp</a>
 * :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a binary search / 二分探索 <small>(utils/binary_search.hpp)</small></a>
 * :warning: <a href="library/utils/binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
-* :warning: <a href="library/utils/coordinate-compression.inc.cpp.html">utils/coordinate-compression.inc.cpp</a>
+* :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :warning: <a href="library/utils/cumulative-sum.inc.cpp.html">cumulative sum <small>(utils/cumulative-sum.inc.cpp)</small></a>
 * :warning: <a href="library/utils/dice.inc.cpp.html">utils/dice.inc.cpp</a>
 * :warning: <a href="library/utils/digit-dp.inc.cpp.html">utils/digit-dp.inc.cpp</a>

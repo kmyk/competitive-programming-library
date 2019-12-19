@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoids/matrix_template.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-19 00:15:23 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 
@@ -71,12 +71,12 @@ struct matrix_monoid {
 #line 2 "number/matrix_template.hpp"
 #include <array>
 #include <cstdint>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 5 "number/matrix_template.hpp"
 
 template <typename T, size_t H, size_t W>

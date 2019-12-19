@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.exp.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-10-08 21:29:58 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 * see: <a href="https://judge.yosupo.jp/problem/exp_of_formal_power_series">https://judge.yosupo.jp/problem/exp_of_formal_power_series</a>
@@ -153,12 +153,12 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 #include <cstdint>
 #include <tuple>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 9 "number/number_theoretic_transformation.hpp"
 
 template <int32_t PRIME> struct proth_prime {};
@@ -336,12 +336,6 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
     }
     return c;
 }
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
 #line 11 "number/formal_power_series.hpp"
 
 template <class T>
@@ -438,12 +432,6 @@ struct formal_power_series {
 
 #include <cstdio>
 #include <vector>
-#line 1 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
 #line 7 "number/formal_power_series.exp.test.cpp"
 using namespace std;
 

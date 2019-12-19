@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/shortest_path_faster_algorithm.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-08-12 20:37:43 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 
@@ -118,12 +118,12 @@ std::vector<int64_t> shortest_path_faster_algorithm(int root, std::vector<std::v
 #include <tuple>
 #include <utility>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 10 "graph/shortest_path_faster_algorithm.hpp"
 
 /**

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 04:15:59 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 * see: <a href="https://codeforces.com/blog/entry/44351">https://codeforces.com/blog/entry/44351</a>
@@ -180,12 +180,12 @@ std::vector<subtree_info_t> prepare_subtree_info(std::vector<std::vector<int> > 
     info[root].parent = -1;
     return info;
 }
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 7 "utils/dsu_on_tree.hpp"
 
 /**

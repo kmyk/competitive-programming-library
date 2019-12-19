@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.unit.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-13 18:43:42 +0900
+    - Last commit date: 2019-12-20 06:12:24 +0900
 
 
 
@@ -89,12 +89,12 @@ int main() {
 #line 2 "data_structure/sparse_table.hpp"
 #include <cassert>
 #include <vector>
-#line 1 "utils/macros.hpp"
+#line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) begin(x), end(x)
+#define ALL(x) std::begin(x), std::end(x)
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
