@@ -1,6 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/rectangle_sum"
 #include "data_structure/wavelet_matrix.hpp"
 #include "utils/macros.hpp"
+#include "utils/coordinate_compression.hpp"
 #include <cstdint>
 #include <cstdio>
 #include <numeric>
@@ -16,15 +17,25 @@ int main() {
         scanf("%d%d%lld", &x[i], &y[i], &w[i]);
     }
 
+    // coordinate compression
+    coordinate_compression<int> compress_x(ALL(x));
+    coordinate_compression<int> compress_y(ALL(y));
+    constexpr int BITS = 18;
+    assert (compress_x.data.size() < (1 << BITS));
+    assert (compress_y.data.size() < (1 << BITS));
+    REP (i, n) {
+        x[i] = compress_x[x[i]];
+        y[i] = compress_y[y[i]];
+    }
+
     // construct wavlet matrices
-    constexpr int BITS = 30;
+    constexpr int WIDTH = 16;
+    constexpr int HEIGHT = 8;
     vector<int> order(n);
     iota(ALL(order), 0);
     sort(ALL(order), [&](int i, int j) {
         return x[i] < x[j];
     });
-    constexpr int WIDTH = 16;
-    constexpr int HEIGHT = 8;
     array<vector<int>, HEIGHT> x1;
     array<vector<int>, HEIGHT> y1;
     for (int i : order) {
@@ -44,18 +55,27 @@ int main() {
     }
 
     // answer to queries
+    vector<int> lx(q), ly(q), rx(q), ry(q);
     REP (i, q) {
-        int lx, ly, rx, ry; scanf("%d%d%d%d", &lx, &ly, &rx, &ry);
-        long long answer = 0;
-        REP_R (k, HEIGHT) {
-            int l = lower_bound(ALL(x1[k]), lx) - x1[k].begin();
-            int r = lower_bound(ALL(x1[k]), rx) - x1[k].begin();
-            int a = ly;
-            int b = ry;
-            answer *= WIDTH;
-            answer += wm[k].range_frequency(l, r, a, b);
+        scanf("%d%d%d%d", &lx[i], &ly[i], &rx[i], &ry[i]);
+        lx[i] = compress_x[lx[i]];
+        rx[i] = compress_x[rx[i]];
+        ly[i] = compress_y[ly[i]];
+        ry[i] = compress_y[ry[i]];
+    }
+    vector<long long> answer(q);
+    REP_R (k, HEIGHT) {
+        REP (i, q) {  // swap loops to optimize cache
+            int l = lower_bound(ALL(x1[k]), lx[i]) - x1[k].begin();
+            int r = lower_bound(ALL(x1[k]), rx[i]) - x1[k].begin();
+            int a = ly[i];
+            int b = ry[i];
+            answer[i] *= WIDTH;
+            answer[i] += wm[k].range_frequency(l, r, a, b);
         }
-        printf("%lld\n", answer);
+    }
+    REP (i, q) {
+        printf("%lld\n", answer[i]);
     }
     return 0;
 }
