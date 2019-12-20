@@ -2,6 +2,7 @@
 #include "utils/dsu_on_tree.hpp"
 #include "data_structure/union_find_tree_with_monoid.hpp"
 #include "utils/monoids.hpp"
+#include "utils/stack_pivot.hpp"
 
 #include <iostream>
 #include <unordered_map>
@@ -57,7 +58,7 @@ vector<int> solve(int n, int k, const vector<vector<int> > & g, const vector<int
     return answer;
 }
 
-int main() {
+int moin() {
     // input
     int n, k; cin >> n >> k;
     vector<vector<int> > g(n);
@@ -85,3 +86,5 @@ int main() {
     }
     return 0;
 }
+
+STACK_PIVOT_MAIN(moin)
