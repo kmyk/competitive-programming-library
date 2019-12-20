@@ -1,10 +1,11 @@
 #pragma once
 #include <cstdlib>
 
-/**
- * @note use as int main() { STACK_PIVOT(1 << 30) main_(); exit(EXIT_SUCCESS); }
- */
-#define STACK_PIVOT(STACK_SIZE) \
-    char *malloced = (char *)malloc(STACK_SIZE); \
-    char *addr = malloced + (STACK_SIZE) - sizeof(int); \
-    __asm__("mov %0, %%rsp; call" : "=g" (addr) );
+#define BEGIN_STACK_PIVOT(STACK_SIZE) \
+    static volatile char *old_stack; \
+    asm volatile("mov %%rsp, %0" : "=r" (old_stack) ); \
+    char *new_stack = (char *)malloc(STACK_SIZE) + (STACK_SIZE) - sizeof(void *); \
+    asm volatile("mov %0, %%rsp" : : "r" (new_stack) );
+
+#define END_STACK_PIVOT() \
+    asm volatile("mov %0, %%rsp" : : "r" (old_stack) );
