@@ -135,6 +135,12 @@ vector<vector<pair<int, int> > > decompose_to_two_node_connected_components(vect
                 }
             }
         }
+    };
+    REP (i, n) if (not used[i]) {
+        go(i, -1);
+    }
+    return components;
+}
 
 ```
 {% endraw %}

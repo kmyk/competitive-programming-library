@@ -227,6 +227,10 @@ unittest {
             assert (acc_l == m.weighted_sum);
             assert (acc_r == m.sum * (m.r - m.l) - m.weighted_sum);
             assert (acc_l == lws.range_sum(l, r));
+            assert (acc_r == lws.inversed_range_sum(l, r));
+        }
+    }
+}
 
 ```
 {% endraw %}

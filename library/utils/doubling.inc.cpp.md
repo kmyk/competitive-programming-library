@@ -144,6 +144,9 @@ struct doubling_table {
 unittest {
     vector<int> step { 1, 3, 3, 4, 5, 6, 8, 8, 9, 10 };
     doubling_table steps(step);
+    assert (steps.get(6, 2) == step[step[6]]);
+    assert (steps.get(3, 5) == step[step[step[step[step[3]]]]]);
+}
 
 ```
 {% endraw %}

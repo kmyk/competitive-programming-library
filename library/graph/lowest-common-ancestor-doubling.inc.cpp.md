@@ -209,6 +209,12 @@ struct lowest_common_ancestor {
         REP_R (k, log_n) {
             if (a[k][y] != -1 and depth[a[k][y]] >= depth[x] + 1) {
                 y = a[k][y];
+            }
+        }
+        assert (a[0][y] == x);
+        return y;
+    }
+};
 
 ```
 {% endraw %}

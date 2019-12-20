@@ -120,6 +120,15 @@ unittest {
     assert (bell_number<MOD>(1000) == 465231251);  // https://www.wolframalpha.com/input/?i=1000-th+bell+number+modulo+10%5E9+%2B+7
 }
 
+template <int MOD>
+mint<MOD> binary_bell_number(int n, int k) {
+    mint<MOD> acc = 0;
+    REP3 (i, 1, k + 1) {
+        acc += stirling_number_of_the_second_kind(n, i);
+    }
+    return acc;
+}
+
 ```
 {% endraw %}
 

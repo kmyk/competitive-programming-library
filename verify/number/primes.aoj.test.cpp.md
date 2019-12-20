@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/number/primes.hpp.html">number/primes.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

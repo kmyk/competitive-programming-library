@@ -199,6 +199,9 @@ unittest {
             assert (a == b);
             skew.pop();
             que.pop();
+        }
+    }
+}
 
 ```
 {% endraw %}

@@ -694,6 +694,9 @@ unittest {
             REP (i, rbtree.size()) {
                 assert (rbtree.get(i) == dec[i]);
             }
+        }
+    }
+}
 
 ```
 {% endraw %}

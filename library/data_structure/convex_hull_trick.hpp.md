@@ -273,6 +273,14 @@ private:
         if (f1.a == f2.a and f1.b <= f2.b) return false;
         if (f1.a == INT64_MAX or f3.a == - INT64_MAX) return true;
         return (f2.a - f1.a) * (f3.b - f2.b) < (f2.b - f1.b) * (f3.a - f2.a);
+    }
+};
+
+struct inverted_convex_hull_trick {
+    convex_hull_trick data;
+    void add_line(int64_t a, int64_t b) { data.add_line(- a, - b); }
+    int64_t get_max(int64_t x) { return - data.get_min(x); }
+};
 
 ```
 {% endraw %}

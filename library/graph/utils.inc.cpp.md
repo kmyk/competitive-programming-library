@@ -72,6 +72,9 @@ vector<vector<int> > opposite_graph(vector<vector<int> > const & g) {
         for (int j : g[i]) {
             h[j].push_back(i);
         }
+    }
+    return h;
+}
 
 ```
 {% endraw %}

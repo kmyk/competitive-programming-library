@@ -579,6 +579,8 @@ vector<double> linsolve_glpk(vector<vector<double> > const & a, vector<double> c
     glp_delete_prob(lp);
     glp_free_env();
     glp_term_out(preserved_term_out);
+    return result;
+}
 
 ```
 {% endraw %}

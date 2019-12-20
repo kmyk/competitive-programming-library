@@ -124,6 +124,21 @@ void rollback_square_decomposition(int n, vector<pair<int, int> > const & range,
         }
     }
     REP (b, bucket_count) {
+        sort(ALL(bucket[b]), [&](int i, int j) { return range[i].second < range[j].second; });
+        int l = (b + 1) * bucket_size;
+        mo.reset(l);
+        int r = l;
+        for (int i : bucket[b]) {
+            int l_i, r_i; tie(l_i, r_i) = range[i];
+            mo.extend_right(r, r_i);
+            mo.snapshot();
+            mo.extend_left(l_i, l);
+            mo.query();
+            mo.rollback();
+            r = r_i;
+        }
+    }
+}
 
 ```
 {% endraw %}

@@ -126,6 +126,11 @@ pair<int, vector<int> > decompose_to_two_edge_connected_components(vector<vector
         };
         REP (i, n) if (component_of[i] == -1) {
             component_of[i] = size ++;
+            go(i);
+        }
+    }
+    return { size, move(component_of) };
+}
 
 ```
 {% endraw %}

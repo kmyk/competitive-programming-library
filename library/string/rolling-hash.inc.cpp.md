@@ -396,6 +396,11 @@ uint64_t rolling_hash_range(const vector<uint64_t> & hash, int l, int r) {
 }
 uint64_t rolling_hash(const vector<int> & s) {
     uint64_t hash = 0;
+    for (int c : s) {
+        hash = rolling_hash_push(hash, c);
+    }
+    return hash;
+}
 
 ```
 {% endraw %}

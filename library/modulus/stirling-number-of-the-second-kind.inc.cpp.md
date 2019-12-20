@@ -122,6 +122,14 @@ mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
  */
 template <int MOD>
 mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
+    assert (0 <= n and 0 <= k);
+    mint<MOD> acc = 0;
+    REP3 (i, 1, k + 1) {
+        int parity = ((k - i) % 2 == 0 ? +1 : -1);
+        acc += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;
+    }
+    return acc * fact_inv<MOD>(k);
+}
 
 ```
 {% endraw %}

@@ -221,6 +221,12 @@ int sa_prefix_upper_bound(string const & s, vector<int> const & sa, string const
         (s.compare(sa[m], t.size(), t) <= 0 ? l : r) = m;
     }
     return r;
+}
+int sa_match(string const & target, string const & pattern, vector<int> const & sa, segment_tree<int> const & lcp) { // O(m \log n)
+    int l = sa_lower_bound(target, sa, pattern);
+    int r = sa_prefix_upper_bound(target, sa, pattern);
+    return r - l;
+}
 
 ```
 {% endraw %}

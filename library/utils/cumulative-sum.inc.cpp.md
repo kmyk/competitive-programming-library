@@ -219,6 +219,10 @@ struct cumulative_sum_2d {
                 int rx1 = (bj == rx / w ? rx % w : w);
                 acc += get(ly1, lx1, ry1, rx1);
             }
+        }
+        return acc;
+    }
+};
 
 ```
 {% endraw %}

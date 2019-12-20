@@ -354,6 +354,9 @@ unittest {
                 }
             }
             assert (acc == segtree.area_concat_torus(ly, lx, ry, rx));
+        }
+    }
+}
 
 ```
 {% endraw %}

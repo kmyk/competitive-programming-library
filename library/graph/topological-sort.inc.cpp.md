@@ -122,6 +122,11 @@ vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
     vector<vector<int> > g_rev(g.size());
     REP (i, g.size()) {
         for (int j : g[i]) {
+            g_rev[j].push_back(i);
+        }
+    }
+    return g_rev;
+}
 
 ```
 {% endraw %}

@@ -292,6 +292,10 @@ unittest {
             auto view2 = factory.make_view(l2, r2);
             auto sub1 = s.substr(l1, r1 - l1);
             auto sub2 = s.substr(l2, r2 - l2);
+            assert ((view1 < view2) == (sub1 < sub2));
+        }
+    }
+}
 
 ```
 {% endraw %}

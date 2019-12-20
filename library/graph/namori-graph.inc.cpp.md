@@ -177,6 +177,10 @@ unittest {
     add_edge(4, 6);
     add_edge(6, 2);
     add_edge(6, 7);
+    add_edge(7, 8);
+    add_edge(8, 9);
+    assert (get_namori_cycle(g) == deque<int>({ 2, 4, 6 }));
+}
 
 ```
 {% endraw %}

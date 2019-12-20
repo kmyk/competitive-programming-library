@@ -85,6 +85,13 @@ pair<int, int> get_eccentricity(int k, vector<vector<int> > const & tree) {
         for (int j : tree[i]) if (j != parent) {
             dfs(j, i, depth + 1);
         }
+    };
+    dfs(k, -1, 0);
+    return result;
+}
+int get_diameter(vector<vector<int> > const & tree) {
+    return get_eccentricity(get_eccentricity(0, tree).second, tree).first;
+}
 
 ```
 {% endraw %}

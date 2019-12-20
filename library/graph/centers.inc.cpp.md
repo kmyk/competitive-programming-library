@@ -96,6 +96,9 @@ vector<int> get_centers(vector<vector<int> > const & tree) {
                 used[j] = true;
             }
         }
+    }
+    return prv;
+}
 
 ```
 {% endraw %}

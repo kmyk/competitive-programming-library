@@ -371,6 +371,11 @@ struct heavy_light_decomposition_edge_adapter {
     void path_apply(int x, int y, typename Endomorphism::type f) {
         path_do_something(x, y, [&](SegmentTree & segtree, int l, int r) {
             segtree.range_apply(l, r, f);
+        }, [&](type & value) {
+            value = endo.apply(f, value);
+        });
+    }
+};
 
 ```
 {% endraw %}

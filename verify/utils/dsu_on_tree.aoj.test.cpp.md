@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: utils/dsu_on_tree.aoj.test.cpp
+# :warning: utils/dsu_on_tree.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-20 14:14:37+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995</a>
@@ -38,11 +38,12 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :warning: <a href="../../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
+* :warning: <a href="../../library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
+* :warning: <a href="../../library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
+* :warning: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../../library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :warning: <a href="../../library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
 
 
 ## Code
@@ -54,6 +55,7 @@ layout: default
 #include "utils/dsu_on_tree.hpp"
 #include "data_structure/union_find_tree_with_monoid.hpp"
 #include "utils/monoids.hpp"
+#include "utils/stack_pivot.hpp"
 
 #include <iostream>
 #include <unordered_map>
@@ -109,7 +111,7 @@ vector<int> solve(int n, int k, const vector<vector<int> > & g, const vector<int
     return answer;
 }
 
-int main() {
+int moin() {
     // input
     int n, k; cin >> n >> k;
     vector<vector<int> > g(n);
@@ -137,6 +139,8 @@ int main() {
     }
     return 0;
 }
+
+STACK_PIVOT_MAIN(moin)
 
 ```
 {% endraw %}
@@ -255,6 +259,18 @@ void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, 
         // go heavy
         go(z, true);
         for (int y : g[x]) if (y != info[x].parent) {
+            if (y != z) {
+                subtree_apply(y, add);
+            }
+        }
+        add(x);
+        callback(x);
+        if (not keep) {
+            subtree_apply(x, sub);
+        }
+    };
+    go(root, false);
+}
 #line 2 "data_structure/union_find_tree_with_monoid.hpp"
 #include <vector>
 
@@ -428,12 +444,36 @@ struct plus_min_count_action {
         return std::make_pair(f + x.first, x.second);
     }
 };
-#line 5 "utils/dsu_on_tree.aoj.test.cpp"
+#line 2 "utils/stack_pivot.hpp"
+#include <cstdlib>
+
+/**
+ * @note This is a workaround for WSL. We cannot use ulimit -s unlimited on the environment.
+ * @note To use such techniques, you should take care of the alignment of rsp. If not, you'll get SIGSEGV around XMM registers.
+ */
+
+#define BEGIN_STACK_PIVOT(STACK_SIZE) \
+    static volatile char *old_stack; \
+    asm volatile("mov %%rsp, %0" : "=r" (old_stack) ); \
+    char *new_stack = ((char *)malloc(STACK_SIZE) + (STACK_SIZE) - 0x10); \
+    asm volatile("mov %0, %%rsp" : : "r" (new_stack) );
+
+#define END_STACK_PIVOT() \
+    asm volatile("mov %0, %%rsp" : : "r" (old_stack) );
+
+#define STACK_PIVOT_MAIN(moin) \
+    int main() { \
+        BEGIN_STACK_PIVOT(1 << 28) \
+        static int returncode = moin(); \
+        END_STACK_PIVOT() \
+        return returncode; \
+    }
+#line 6 "utils/dsu_on_tree.aoj.test.cpp"
 
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
-#line 10 "utils/dsu_on_tree.aoj.test.cpp"
+#line 11 "utils/dsu_on_tree.aoj.test.cpp"
 using namespace std;
 
 vector<int> solve(int n, int k, const vector<vector<int> > & g, const vector<int> & c, const vector<int> & d) {
@@ -484,7 +524,7 @@ vector<int> solve(int n, int k, const vector<vector<int> > & g, const vector<int
     return answer;
 }
 
-int main() {
+int moin() {
     // input
     int n, k; cin >> n >> k;
     vector<vector<int> > g(n);
@@ -512,6 +552,8 @@ int main() {
     }
     return 0;
 }
+
+STACK_PIVOT_MAIN(moin)
 
 ```
 {% endraw %}

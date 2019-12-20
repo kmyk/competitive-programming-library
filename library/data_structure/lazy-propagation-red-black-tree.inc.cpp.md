@@ -990,6 +990,9 @@ unittest {
             REP (i, rbtree.size()) {
                 assert (rbtree.point_get(i) == dec[i]);
             }
+        }
+    }
+}
 
 ```
 {% endraw %}

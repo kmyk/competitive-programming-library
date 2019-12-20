@@ -133,6 +133,11 @@ vector<vector<bool> > warshall_floyd(vector<vector<int> > const & g) {
     }
     REP (k, n) REP (i, n) REP (j, n) {
         if (conn[i][k] and conn[k][j]) {
+            conn[i][j] = true;
+        }
+    }
+    return conn;
+}
 
 ```
 {% endraw %}

@@ -184,6 +184,16 @@ vector<int> get_catapillar_central_path(const vector<vector<int> > & g) {
                 break;
             }
             if (not found) {
+                break;
+            }
+        }
+        for (int j : g[i]) if (g[i].size() == 1 and j != parent) {
+            path.push_back(j);
+            break;
+        }
+        return path;
+    }
+}
 
 ```
 {% endraw %}

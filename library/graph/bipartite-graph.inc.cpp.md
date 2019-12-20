@@ -93,6 +93,10 @@ int check_bipartite_graph(vector<vector<int> > const & g) {
         }
         return true;
     };
+    used[0] = 0;
+    if (not dfs(0, -1)) return -1;
+    return count(whole(used), 0);
+}
 
 ```
 {% endraw %}

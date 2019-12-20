@@ -113,6 +113,12 @@ vector<int> get_centroids(vector<vector<int> > const & g, int root, set<int> con
             size[i] += size[j];
             if (size[j] > n / 2) is_centroid = false;
         }
+        if (n - size[i] > n / 2) is_centroid = false;
+        if (is_centroid) result.push_back(x);
+    };
+    go(root, -1);
+    return result;
+}
 
 ```
 {% endraw %}

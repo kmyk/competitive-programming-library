@@ -267,6 +267,21 @@ void do_bfs_euler_tour(vector<vector<int> > const & g, int root, vector<int> & t
         tour.push_back(x);
         fill(ALL(left[x]), n);
         fill(ALL(right[x]), n);
+        // update parent
+        int y = x;
+        REP (d, DEPTH) {
+            y = parent[y];
+            if (y == -1) break;
+            left[y][d] = min(left[y][d], i);
+            right[y][d] = i + 1;
+        }
+        // go children
+        for (int y : g[x]) if (y != parent[x]) {
+            parent[y] = x;
+            que.push(y);
+        }
+    }
+}
 
 ```
 {% endraw %}

@@ -276,6 +276,19 @@ mint<MOD> twelvefold_lui(int n, int k) {
 template <int MOD>
 mint<MOD> twelvefold_lus(int n, int k) {
     return stirling_number_of_the_second_kind<MOD>(n, k);
+}
+
+
+/**
+ * @brief unlabeled-N unlabeled-K injective-f
+ * @note the number of S_K \circ f \circ S_N for injective f : N \rightarrowtail K
+ * @note O(1)
+ */
+template <int MOD>
+mint<MOD> twelvefold_uui(int n, int k) {
+    if (n > k) return 0;
+    return 1;
+}
 
 ```
 {% endraw %}

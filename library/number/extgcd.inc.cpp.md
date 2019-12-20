@@ -222,6 +222,13 @@ pair<ll, ll> crt(pair<ll, ll> eqn1, pair<ll, ll> eqn2) {
     if (m1 == 0 or m2 == 0) return make_pair(0ll, 0ll);
     assert (1 <= m1 and 1 <= m2);
     ll m1_inv, d; tie(m1_inv, ignore, d) = extgcd(m1, m2);
+    if ((x1 - x2) % d) return make_pair(0ll, 0ll);
+    ll m = m1 * m2 / d;
+    // ll x = x1 + (m1 / d) * (x2 - x1) % m * (m1_inv % m) % m;
+    ll x = x1 + multmod(multmod(m1 / d, x2 - x1, m), m1_inv, m);
+    return make_pair((x % m + m) % m, m);
+}
+
 
 ```
 {% endraw %}

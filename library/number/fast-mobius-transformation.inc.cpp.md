@@ -191,6 +191,20 @@ vector<T> upward_fast_mobius_transform(vector<T> f) {
  * @note related to inclusion-exclusion principle
  * @note inverse of (downward) fast zeta transformation
  * @see http://pekempey.hatenablog.com/entry/2016/10/30/205852
+ * @param T is a commutative group
+ */
+template <typename T>
+vector<T> downward_fast_mobius_transform(vector<T> f) {
+    int pow_n = f.size();
+    for (int i = 1; i < pow_n; i <<= 1) {
+        REP (s, pow_n) {
+            if (s & i) {
+                f[s] -= f[s ^ i];
+            }
+        }
+    }
+    return f;
+}
 
 ```
 {% endraw %}

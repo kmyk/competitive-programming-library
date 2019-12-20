@@ -375,6 +375,61 @@ unittest {
 
 // 簡略化したやつ 未検証
 
+/**
+ * @brief fold a rooted tree (木DP)
+ * @note O(N op) time
+ * @note O(N) space on stack
+ * @note
+ *     struct tree_operation {
+ *         typedef int type;
+ *         type unit(int i);  // get an initial value of root i
+ *         type add(int i, type data_i, int j, type data_j);  // add a subtree j to the root i
+ *     };
+ * @note you can replace unit() + add() with a single function
+ */
+template <typename TreeOperation>
+vector<typename TreeOperation::type> fold_rooted_tree(vector<vector<int> > const & g, int root, TreeOperation op = TreeOperation()) {
+    int n = g.size();
+    vector<typename TreeOperation::type> data(n);
+    function<void (int, int)> go = [&](int i, int parent) {
+        data[i] = op.unit(i);
+        for (int j : g[i]) if (j != parent) {
+            go(j, i);
+            data[i] = op.add(i, data[i], j, data[j]);
+        }
+    };
+    go(root, -1);
+    return data;
+}
+
+/**
+ * @brief rerooting (全方位木DP)
+ * @note O(N op) time
+ * @note O(N) space on stack
+ * @note
+ *     struct tree_operation {
+ *         typedef int type;
+ *         type      add(int i, type data_i, int j, type data_j);  // add    a subtree j to   the root i
+ *         type subtract(int i, type data_i, int j, type data_j);  // remove a subtree j from the root i
+ *     };
+ * @note a commutative group is one of the structures for this
+ * @note you can replace add() + subtract() with a single function
+ * @see https://twitter.com/tmaehara/status/980787099472297985
+ */
+template <typename TreeOperation>
+vector<typename TreeOperation::type> reroot_folded_rooted_tree(vector<typename TreeOperation::type> data, vector<vector<int> > const & g, int root, TreeOperation op = TreeOperation()) {
+    function<void (int, int)> go = [&](int i, int parent) {
+        if (parent != -1) {
+            data[i] = op.add(i, data[i], op.subtract(parent, data[parent], i, data[i]));
+        }
+        for (int j : g[i]) if (j != parent) {
+            go(j, i);
+        }
+    };
+    go(root, -1);
+    return data;
+}
+
 
 ```
 {% endraw %}

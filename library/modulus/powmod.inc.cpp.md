@@ -386,6 +386,11 @@ vector<int> solve_modeqn(int a, int b, int c, int p) { // ax^2 + bx + c = 0 mod 
     xs.push_back((- b - w) *(ll) modinv(2 * a % p, p) % p);
     if (xs[0] < 0) xs[0] += p;
     if (xs[1] < 0) xs[1] += p;
+    whole(sort, xs);
+    xs.erase(whole(unique, xs), xs.end());
+    return xs;
+}
+
 
 ```
 {% endraw %}

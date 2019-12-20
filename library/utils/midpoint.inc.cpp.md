@@ -115,6 +115,9 @@ public:
         return midpoint(c);
     }
     bool operator < (midpoint const & other) const {
+        return this->data < other.data;
+    }
+};
 
 ```
 {% endraw %}

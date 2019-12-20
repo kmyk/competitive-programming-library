@@ -224,6 +224,9 @@ vector<int> reconstruct_edges_dijkstra(int n, int src, int dst, vector<T> const 
         i = next;
         edges.push_back(next_edge);
     }
+    reverse(ALL(edges));
+    return edges;
+}
 
 ```
 {% endraw %}

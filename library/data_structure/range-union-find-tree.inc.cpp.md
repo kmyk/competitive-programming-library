@@ -127,6 +127,10 @@ struct range_union_find_tree {
                 data[k].unite_trees(i, root);
                 data[k].unite_trees(i + (1 << k), root + (1 << k));
             }
+        }
+        return data[0];
+    }
+};
 
 ```
 {% endraw %}

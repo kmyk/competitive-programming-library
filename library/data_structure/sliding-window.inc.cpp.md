@@ -109,6 +109,12 @@ public:
             data.pop_front();
         }
     }
+    void push_front(int i, T a) {
+        if (data.empty() or not compare(data.front().second, a)) {
+            data.emplace_front(i, a);
+        }
+    }
+};
 
 ```
 {% endraw %}

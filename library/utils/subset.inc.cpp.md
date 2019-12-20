@@ -99,6 +99,11 @@ or (int y = x; y < (1 << n); y = (y + 1) | x) {
 }
 
 // for an ordinal n and integer k, list x \subseteq n s.t. \|x\| = k
+for (int x = (1 << k) - 1; x < (1 << n); ) {
+    ...
+    int t = x | (x - 1);
+    x = (t + 1) | (((~ t & - ~ t) - 1) >> (__builtin_ctz(x) + 1));
+}
 
 ```
 {% endraw %}

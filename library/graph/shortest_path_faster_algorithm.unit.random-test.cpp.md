@@ -40,7 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
 * :warning: <a href="shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -148,6 +148,13 @@ std::vector<int64_t> bellman_ford_shortest_path(int root, std::vector<std::vecto
                 if (dist[i] == INT64_MIN or dist[i] + cost < dist[j]) {
                     dist[j] = INT64_MIN;
                     stk.push(j);
+                }
+            }
+        }
+    }
+
+    return dist;
+}
 #line 2 "graph/shortest_path_faster_algorithm.hpp"
 #include <cassert>
 #include <climits>

@@ -102,6 +102,11 @@ double golden_section_search(double l, double r, int iteration, Function f) {
             m1 = m2;
             f1 = f2;
             m2 = l + (r - l) / GOLDEN_RATIO;
+            f2 = f(m2);
+        }
+    }
+    return (l + r) / 2;
+}
 
 ```
 {% endraw %}

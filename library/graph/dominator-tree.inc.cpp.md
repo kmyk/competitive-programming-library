@@ -206,6 +206,7 @@ vector<int> dominator_tree(vector<vector<int> > const & g, int root_g) { // G is
     }
     result[root_g] = -1;
     return result;
+}
 
 ```
 {% endraw %}

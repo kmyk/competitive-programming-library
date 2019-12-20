@@ -90,6 +90,7 @@ vector<bool> twosat(int n, vector<pair<int, int> > const & cnf) {
         valuation[x-1] = component[i(x)] > component[i(- x)]; // use components which indices are large
     }
     return valuation;
+}
 
 ```
 {% endraw %}

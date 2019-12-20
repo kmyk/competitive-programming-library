@@ -314,6 +314,11 @@ public:
         if (ir - il == 1) {
             func(il, pool[i].value);
         } else {
+            traverse_leaves(pool[i].left,  il, (il + ir) / 2, func);
+            traverse_leaves(pool[i].right, (il + ir) / 2, ir, func);
+        }
+    }
+};
 
 ```
 {% endraw %}

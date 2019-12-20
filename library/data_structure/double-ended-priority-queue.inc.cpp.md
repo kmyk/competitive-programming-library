@@ -194,6 +194,12 @@ unittest {
                     int b = depq.get_max();
                     assert (a == b);
                     mlt.erase(prev(mlt.end()));
+                    depq.pop_max();
+                }
+            }
+        }
+    }
+}
 
 ```
 {% endraw %}

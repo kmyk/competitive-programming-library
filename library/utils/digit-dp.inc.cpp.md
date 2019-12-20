@@ -107,6 +107,8 @@ vector<vector<ll> > strmodin(string const & s, int a, vector<int> const & b, ll 
     }
     cur[bound_i][bound_j] += 1;
     cur[bound_i][bound_j] %= m;
+    return cur;
+}
 
 ```
 {% endraw %}

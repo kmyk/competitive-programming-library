@@ -185,6 +185,12 @@ public:
                 ll delta = dfs(src, dst, INF);
                 if (delta <= 0) break;
                 flow += delta;
+            }
+            bfs(src);
+        }
+        return flow;
+    }
+};
 
 ```
 {% endraw %}

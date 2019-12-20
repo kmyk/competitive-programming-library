@@ -144,6 +144,12 @@ vector<int> zero_one_breadth_first_search(int root, vector<vector<pair<int, bool
                     que.emplace_back(j, dist[j]);
                 } else {
                     que.emplace_front(j, dist[j]);
+                }
+            }
+        }
+    }
+    return dist;
+}
 
 ```
 {% endraw %}

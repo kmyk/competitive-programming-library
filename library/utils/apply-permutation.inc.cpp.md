@@ -80,6 +80,9 @@ vector<T> apply_permutation(vector<int> const & sigma, vector<T> const & xs) {
 unittest {
     vector<char> xs { 'a', 'b', 'c', 'd', 'e' };
     vector<int> sigma { 4, 3, 2, 0, 1 };
+    vector<char> ys { 'e', 'd', 'c', 'a', 'b' };
+    assert (ys == apply_permutation(sigma, xs));
+}
 
 ```
 {% endraw %}

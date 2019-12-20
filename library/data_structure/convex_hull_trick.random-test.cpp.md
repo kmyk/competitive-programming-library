@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :warning: <a href="convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -193,6 +193,14 @@ private:
         if (f1.a == f2.a and f1.b <= f2.b) return false;
         if (f1.a == INT64_MAX or f3.a == - INT64_MAX) return true;
         return (f2.a - f1.a) * (f3.b - f2.b) < (f2.b - f1.b) * (f3.a - f2.a);
+    }
+};
+
+struct inverted_convex_hull_trick {
+    convex_hull_trick data;
+    void add_line(int64_t a, int64_t b) { data.add_line(- a, - b); }
+    int64_t get_max(int64_t x) { return - data.get_min(x); }
+};
 #line 2 "data_structure/convex_hull_trick.random-test.cpp"
 
 #include <algorithm>

@@ -96,6 +96,7 @@ bool is_prime(ll n, int iteration, Generator & gen) { // miller-rabin primality 
 bool is_prime(ll n) {
     static default_random_engine engine = default_random_engine(random_device()());
     return is_prime(n, 20, engine);
+}
 
 ```
 {% endraw %}

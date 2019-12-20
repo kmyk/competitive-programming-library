@@ -251,6 +251,9 @@ map<int64_t, int> prime_factorize1(int64_t n) {
     }
     if (n) {
         ++ factors[n];
+    }
+    return factors;
+}
 
 ```
 {% endraw %}

@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by
@@ -170,6 +170,13 @@ std::vector<int64_t> bellman_ford_shortest_path(int root, std::vector<std::vecto
                 if (dist[i] == INT64_MIN or dist[i] + cost < dist[j]) {
                     dist[j] = INT64_MIN;
                     stk.push(j);
+                }
+            }
+        }
+    }
+
+    return dist;
+}
 
 ```
 {% endraw %}

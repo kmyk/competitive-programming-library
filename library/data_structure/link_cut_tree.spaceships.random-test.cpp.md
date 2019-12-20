@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -138,6 +138,7 @@ int main() {
 ```cpp
 #line 1 "data_structure/link_cut_tree.spaceships.random-test.cpp"
 // #define PROBLEM "https://atcoder.jp/contests/joisc2013-day4/tasks/joisc2013_spaceships"
+#include <cassert>
 #line 2 "data_structure/link_cut_tree.hpp"
 #include <algorithm>
 #include <cassert>
@@ -340,8 +341,7 @@ public:
         return oss.str();
     }
 };
-#line 3 "data_structure/link_cut_tree.spaceships.random-test.cpp"
-#include "data_structure/link_cut_tree.hpp"
+#line 4 "data_structure/link_cut_tree.spaceships.random-test.cpp"
 
 /*
 int main() {
@@ -396,6 +396,30 @@ void sample2() {
     assert (g.get_lowest_common_ancestor(5, 7) == 4);
     g.cut(7);
     assert (g.get_lowest_common_ancestor(0, 3) == 3);
+    assert (g.get_lowest_common_ancestor(5, 7) == -1);
+    assert (g.get_lowest_common_ancestor(5, 2) == 4);
+    g.cut(2);
+    assert (g.get_lowest_common_ancestor(0, 1) == 1);
+    g.link(3, 2);
+    assert (g.get_lowest_common_ancestor(1, 5) == 4);
+    g.link(7, 2);
+    assert (g.get_lowest_common_ancestor(0, 6) == 2);
+    assert (g.get_lowest_common_ancestor(0, 5) == 4);
+    assert (g.get_lowest_common_ancestor(4, 3) == 3);
+    g.cut(1);
+    g.cut(4);
+    g.link(2, 5);
+    g.link(1, 6);
+    assert (g.get_lowest_common_ancestor(0, 3) == 2);
+    assert (g.get_lowest_common_ancestor(0, 4) == 4);
+    assert (g.get_lowest_common_ancestor(5, 6) == 5);
+}
+
+int main() {
+    sample1();
+    sample2();
+    return 0;
+}
 
 ```
 {% endraw %}

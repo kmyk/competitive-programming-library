@@ -31,9 +31,14 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/stack_pivot.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 10:10:20+09:00
+    - Last commit date: 2019-12-20 14:14:37+09:00
 
 
+
+
+## Verified with
+
+* :warning: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code
@@ -45,13 +50,26 @@ layout: default
 #include <cstdlib>
 
 /**
- * @note use as int main() { STACK_PIVOT main_(); exit(EXIT_SUCCESS); }
+ * @note This is a workaround for WSL. We cannot use ulimit -s unlimited on the environment.
+ * @note To use such techniques, you should take care of the alignment of rsp. If not, you'll get SIGSEGV around XMM registers.
  */
-#define STACK_PIVOT \
-    size_t stack_size = 1 << 26; \
-    char *malloced = (char *)malloc(stack_size); \
-    char *addr = malloced + stack_size - sizeof(int); \
-    __asm__("mov %0, %%rsp;" : "=g" (addr) );
+
+#define BEGIN_STACK_PIVOT(STACK_SIZE) \
+    static volatile char *old_stack; \
+    asm volatile("mov %%rsp, %0" : "=r" (old_stack) ); \
+    char *new_stack = ((char *)malloc(STACK_SIZE) + (STACK_SIZE) - 0x10); \
+    asm volatile("mov %0, %%rsp" : : "r" (new_stack) );
+
+#define END_STACK_PIVOT() \
+    asm volatile("mov %0, %%rsp" : : "r" (old_stack) );
+
+#define STACK_PIVOT_MAIN(moin) \
+    int main() { \
+        BEGIN_STACK_PIVOT(1 << 28) \
+        static int returncode = moin(); \
+        END_STACK_PIVOT() \
+        return returncode; \
+    }
 
 ```
 {% endraw %}
@@ -63,13 +81,26 @@ layout: default
 #include <cstdlib>
 
 /**
- * @note use as int main() { STACK_PIVOT main_(); exit(EXIT_SUCCESS); }
+ * @note This is a workaround for WSL. We cannot use ulimit -s unlimited on the environment.
+ * @note To use such techniques, you should take care of the alignment of rsp. If not, you'll get SIGSEGV around XMM registers.
  */
-#define STACK_PIVOT \
-    size_t stack_size = 1 << 26; \
-    char *malloced = (char *)malloc(stack_size); \
-    char *addr = malloced + stack_size - sizeof(int); \
-    __asm__("mov %0, %%rsp;" : "=g" (addr) );
+
+#define BEGIN_STACK_PIVOT(STACK_SIZE) \
+    static volatile char *old_stack; \
+    asm volatile("mov %%rsp, %0" : "=r" (old_stack) ); \
+    char *new_stack = ((char *)malloc(STACK_SIZE) + (STACK_SIZE) - 0x10); \
+    asm volatile("mov %0, %%rsp" : : "r" (new_stack) );
+
+#define END_STACK_PIVOT() \
+    asm volatile("mov %0, %%rsp" : : "r" (old_stack) );
+
+#define STACK_PIVOT_MAIN(moin) \
+    int main() { \
+        BEGIN_STACK_PIVOT(1 << 28) \
+        static int returncode = moin(); \
+        END_STACK_PIVOT() \
+        return returncode; \
+    }
 
 ```
 {% endraw %}

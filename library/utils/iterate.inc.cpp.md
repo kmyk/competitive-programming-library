@@ -88,6 +88,7 @@ sequence iterate(int a, function<int (int)> f) {
 }
 int at(sequence const & xs, int i) {
     return xs.data[i < xs.offset ? i : (i - xs.offset) % xs.cycle + xs.offset];
+}
 
 ```
 {% endraw %}

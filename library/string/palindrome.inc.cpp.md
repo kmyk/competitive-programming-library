@@ -211,6 +211,11 @@ struct prepared_manacher {
             int m = (l + r) / 2;
             return r - m <= even[m];
         } else {
+            int m = (l + r) / 2;
+            return r - m <= odd[m];
+        }
+    }
+};
 
 ```
 {% endraw %}

@@ -94,6 +94,11 @@ int mex(C const & xs) {
  */
 int mex(int a, int b) {
     for (int i = 0; ; ++ i) {
+        if (i != a and i != b) {
+            return i;
+        }
+    }
+}
 
 ```
 {% endraw %}

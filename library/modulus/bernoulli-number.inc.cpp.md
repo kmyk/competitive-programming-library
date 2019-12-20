@@ -140,6 +140,12 @@ template <int MOD>
 int sum_of_pow(ll n, int k) {
     ll acc = 0;
     REP (j, k + 1) {
+        acc += choose<MOD>(k + 1, j) *(ll) bernoulli_number<MOD>(j) % MOD *(ll) powmod(n % MOD, k - j + 1, MOD) % MOD;
+    }
+    acc %= MOD;
+    (acc *= modinv(k + 1, MOD)) %= MOD;
+    return acc;
+}
 
 ```
 {% endraw %}

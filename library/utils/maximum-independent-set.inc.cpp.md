@@ -99,6 +99,11 @@ int maximum_independent_set(vector<vector<bool> > const & g) {
         repeat_from (j, i + 1, n) {
             used[j] = (used[j] or g[i][j]);
         }
+        setmax(result, 1 + go(i + 1, used));  // use i
+        return result;
+    };
+    return go(0, vector<bool>(n));
+}
 
 ```
 {% endraw %}

@@ -184,6 +184,11 @@ static ostream & operator << (ostream & out, persistent_array<T> const & a) {
     } else {
         repeat (i, 10 - a.shift) out << ' ';
         persistent_array<T> const *p = &a;
+        out << p << ' ' << a.size << endl;
+        for (auto it : a.children) if (it) out << *it;
+    }
+    return out;
+};
 
 ```
 {% endraw %}

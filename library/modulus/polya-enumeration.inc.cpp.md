@@ -105,6 +105,10 @@ mint<MOD> count_cycle_coloring(int n, int k) {
 unittest {
     constexpr int MOD = 1e9 + 7;
     assert (count_cycle_coloring<MOD>(2, 10).value == 55);
+    assert (count_cycle_coloring<MOD>(4, 10).value == 2530);
+    assert (count_cycle_coloring<MOD>(4, 2).value == 6);
+    assert (count_cycle_coloring<MOD>(1000000000, 1000000000).value == 898487047);
+}
 
 ```
 {% endraw %}

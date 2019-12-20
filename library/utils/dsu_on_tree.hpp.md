@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
+# :warning: DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
@@ -39,13 +39,13 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
+* :warning: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
+* :warning: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code
@@ -240,6 +240,18 @@ void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, 
         // go heavy
         go(z, true);
         for (int y : g[x]) if (y != info[x].parent) {
+            if (y != z) {
+                subtree_apply(y, add);
+            }
+        }
+        add(x);
+        callback(x);
+        if (not keep) {
+            subtree_apply(x, sub);
+        }
+    };
+    go(root, false);
+}
 
 ```
 {% endraw %}
