@@ -229,6 +229,7 @@ layout: default
 * :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>
 * :warning: <a href="library/utils/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(utils/rollback-square-decomposition.inc.cpp)</small></a>
 * :warning: <a href="library/utils/simplex.inc.cpp.html">utils/simplex.inc.cpp</a>
+* :warning: <a href="library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
 * :warning: <a href="library/utils/string-skip-list.inc.cpp.html">utils/string-skip-list.inc.cpp</a>
 * :warning: <a href="library/utils/subset.inc.cpp.html">utils/subset.inc.cpp</a>
 * :warning: <a href="library/utils/ternary-search.inc.cpp.html">utils/ternary-search.inc.cpp</a>

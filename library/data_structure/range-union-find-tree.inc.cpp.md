@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/range-union-find-tree.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-03 23:08:10 +0900
+    - Last commit date: 2019-06-03 23:08:10+09:00
 
 
 

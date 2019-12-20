@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/dinic.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-05-24 16:32:35 +0900
+    - Last commit date: 2019-05-24 16:32:35+09:00
 
 
 

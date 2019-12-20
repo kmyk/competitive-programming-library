@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/bipartite-graph.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-08-19 10:59:42 +0900
+    - Last commit date: 2018-08-19 10:59:42+09:00
 
 
 

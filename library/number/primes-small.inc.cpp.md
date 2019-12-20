@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/primes-small.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 09:39:14 +0900
+    - Last commit date: 2019-11-09 09:39:14+09:00
 
 
 * fully factorize all numbers in [0, n) with O(n log log n)

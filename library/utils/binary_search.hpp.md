@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 04:15:59 +0900
+    - Last commit date: 2019-12-15 04:15:59+09:00
 
 
 

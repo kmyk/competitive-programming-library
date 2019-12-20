@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest-common-ancestor-doubling.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2017-12-25 19:08:00 +0900
+    - Last commit date: 2017-12-25 19:08:00+09:00
 
 
 * find the LCA of x and y

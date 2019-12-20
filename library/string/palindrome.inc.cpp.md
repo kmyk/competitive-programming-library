@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
 * <a href="{{ site.github.repository_url }}/blob/master/string/palindrome.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-05-24 16:32:35 +0900
+    - Last commit date: 2019-05-24 16:32:35+09:00
 
 
 * see: <a href="http://snuke.hatenablog.com/entry/2014/12/02/235837">http://snuke.hatenablog.com/entry/2014/12/02/235837</a>

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/ternary-search.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-12-07 05:10:11 +0900
+    - Last commit date: 2018-12-07 05:10:11+09:00
 
 
 

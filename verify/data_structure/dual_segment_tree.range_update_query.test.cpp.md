@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/dual_segment_tree.range_update_query.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 04:15:59 +0900
+    - Last commit date: 2019-12-15 04:15:59+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D</a>

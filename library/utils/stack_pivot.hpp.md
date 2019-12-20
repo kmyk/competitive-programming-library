@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: modulus/modops.inc.cpp
+# :warning: utils/stack_pivot.hpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/modops.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2017-12-30 16:00:47+09:00
+* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
+* <a href="{{ site.github.repository_url }}/blob/master/utils/stack_pivot.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-20 10:10:20+09:00
 
 
 
@@ -41,17 +41,17 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-inline int modadd<int mod>(int a, int b) {
-    int c = a + b;
-    return c < mod ? c : c - mod;
-}
-inline int modsub<int mod>(int a, int b) {
-    int c = a - b;
-    return c >= 0 ? c : c + mod;
-}
-inline int modmul<int mod>(int a, int b) {
-    return a *(ll) b % mod;
-}
+#pragma once
+#include <cstdlib>
+
+/**
+ * @note use as int main() { STACK_PIVOT main_(); exit(EXIT_SUCCESS); }
+ */
+#define STACK_PIVOT \
+    size_t stack_size = 1 << 26; \
+    char *malloced = (char *)malloc(stack_size); \
+    char *addr = malloced + stack_size - sizeof(int); \
+    __asm__("mov %0, %%rsp;" : "=g" (addr) );
 
 ```
 {% endraw %}
@@ -59,18 +59,17 @@ inline int modmul<int mod>(int a, int b) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "modulus/modops.inc.cpp"
-inline int modadd<int mod>(int a, int b) {
-    int c = a + b;
-    return c < mod ? c : c - mod;
-}
-inline int modsub<int mod>(int a, int b) {
-    int c = a - b;
-    return c >= 0 ? c : c + mod;
-}
-inline int modmul<int mod>(int a, int b) {
-    return a *(ll) b % mod;
-}
+#line 2 "utils/stack_pivot.hpp"
+#include <cstdlib>
+
+/**
+ * @note use as int main() { STACK_PIVOT main_(); exit(EXIT_SUCCESS); }
+ */
+#define STACK_PIVOT \
+    size_t stack_size = 1 << 26; \
+    char *malloced = (char *)malloc(stack_size); \
+    char *addr = malloced + stack_size - sizeof(int); \
+    __asm__("mov %0, %%rsp;" : "=g" (addr) );
 
 ```
 {% endraw %}

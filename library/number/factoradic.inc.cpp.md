@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/factoradic.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2017-06-02 16:57:27 +0900
+    - Last commit date: 2017-06-02 16:57:27+09:00
 
 
 

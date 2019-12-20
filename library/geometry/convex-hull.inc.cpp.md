@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#ed7daeb157cd9b31e53896ad3c771a26">geometry</a>
 * <a href="{{ site.github.repository_url }}/blob/master/geometry/convex-hull.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-09-21 20:34:40 +0900
+    - Last commit date: 2018-09-21 20:34:40+09:00
 
 
 * see: <a href="http://www.prefield.com/algorithm/geometry/convex_hull.html">http://www.prefield.com/algorithm/geometry/convex_hull.html</a>

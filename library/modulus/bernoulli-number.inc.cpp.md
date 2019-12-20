@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/bernoulli-number.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-15 03:56:03 +0900
+    - Last commit date: 2019-12-15 03:56:03+09:00
 
 
 * $0^k + 1^k + 2^k + ... + (n - 1)^k$

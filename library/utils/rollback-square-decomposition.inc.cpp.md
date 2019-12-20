@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/rollback-square-decomposition.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2018-04-12 06:30:36 +0900
+    - Last commit date: 2018-04-12 06:30:36+09:00
 
 
 * see: <a href="http://snuke.hatenablog.com/entry/2016/07/01/000000">http://snuke.hatenablog.com/entry/2016/07/01/000000</a>

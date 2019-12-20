@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.rectangle_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24 +0900
+    - Last commit date: 2019-12-20 06:17:05+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/rectangle_sum">https://judge.yosupo.jp/problem/rectangle_sum</a>
@@ -68,7 +68,7 @@ int main() {
         scanf("%d%d%lld", &x[i], &y[i], &w[i]);
     }
 
-    // coordinate compression
+    // coordinate compression (not so important, 0.5 sec faster)
     coordinate_compression<int> compress_x(ALL(x));
     coordinate_compression<int> compress_y(ALL(y));
     constexpr int BITS = 18;
@@ -116,7 +116,7 @@ int main() {
     }
     vector<long long> answer(q);
     REP_R (k, HEIGHT) {
-        REP (i, q) {  // swap loops to optimize cache
+        REP (i, q) {  // swap loops to optimize cache (important, 2x faster)
             int l = lower_bound(ALL(x1[k]), lx[i]) - x1[k].begin();
             int r = lower_bound(ALL(x1[k]), rx[i]) - x1[k].begin();
             int a = ly[i];
@@ -466,7 +466,7 @@ int main() {
         scanf("%d%d%lld", &x[i], &y[i], &w[i]);
     }
 
-    // coordinate compression
+    // coordinate compression (not so important, 0.5 sec faster)
     coordinate_compression<int> compress_x(ALL(x));
     coordinate_compression<int> compress_y(ALL(y));
     constexpr int BITS = 18;
@@ -514,7 +514,7 @@ int main() {
     }
     vector<long long> answer(q);
     REP_R (k, HEIGHT) {
-        REP (i, q) {  // swap loops to optimize cache
+        REP (i, q) {  // swap loops to optimize cache (important, 2x faster)
             int l = lower_bound(ALL(x1[k]), lx[i]) - x1[k].begin();
             int r = lower_bound(ALL(x1[k]), rx[i]) - x1[k].begin();
             int a = ly[i];

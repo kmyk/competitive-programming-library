@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
 * <a href="{{ site.github.repository_url }}/blob/master/string/knuth-morris-pratt.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-05-24 16:32:35 +0900
+    - Last commit date: 2019-05-24 16:32:35+09:00
 
 
 

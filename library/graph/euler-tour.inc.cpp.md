@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/euler-tour.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-10-05 00:46:29 +0900
+    - Last commit date: 2019-10-05 00:46:29+09:00
 
 
 * euler tour, push vertices only visiting
