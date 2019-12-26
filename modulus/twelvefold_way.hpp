@@ -1,3 +1,9 @@
+#pragma once
+#include "modulus/mint.hpp"
+#include "modulus/choose.hpp"
+#include "modulus/stirling_number_of_the_second_kind.hpp"
+#include "modulus/bell_number.hpp"
+
 /**
  * @brief twelvefold way / 写像12相
  * @sa https://en.wikipedia.org/wiki/Twelvefold_way
@@ -34,7 +40,7 @@ mint<MOD> twelvefold_lli(int n, int k) {
  */
 template <int MOD>
 mint<MOD> twelvefold_lls(int n, int k) {
-    return stirling_number_of_the_second_kind<MOD>(n, k) * fact(k);
+    return stirling_number_of_the_second_kind<MOD>(n, k) * fact<MOD>(k);
 }
 
 
@@ -77,7 +83,7 @@ mint<MOD> twelvefold_uls(int n, int k) {
  */
 template <int MOD>
 mint<MOD> twelvefold_lua(int n, int k) {
-    return binary_bell_number(n, k);
+    return bell_number<MOD>(n, k);
 }
 
 /**
