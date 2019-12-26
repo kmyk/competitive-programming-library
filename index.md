@@ -144,9 +144,10 @@ layout: default
 * :warning: <a href="library/modulus/fib.inc.cpp.html">modulus/fib.inc.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :warning: <a href="library/modulus/mint.unit.random-test.cpp.html">modulus/mint.unit.random-test.cpp</a>
-* :warning: <a href="library/modulus/modops.inc.cpp.html">modulus/modops.inc.cpp</a>
+* :heavy_check_mark: <a href="library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :warning: <a href="library/modulus/modsqrt_modlog.inc.cpp.html">the baby-step giant-step <small>(modulus/modsqrt_modlog.inc.cpp)</small></a>
 * :warning: <a href="library/modulus/polya-enumeration.inc.cpp.html">modulus/polya-enumeration.inc.cpp</a>
-* :warning: <a href="library/modulus/powmod.inc.cpp.html">the baby-step giant-step <small>(modulus/powmod.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 

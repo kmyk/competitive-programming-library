@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-26 23:56:34+09:00
 
 
 * the convolution on Z/pZ
@@ -40,6 +40,8 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -262,6 +264,8 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#line 2 "modulus/modpow.hpp"
+#include <cassert>
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -273,6 +277,10 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
+#line 2 "modulus/modinv.hpp"
+#include <algorithm>
+#include <cassert>
+
 inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
     assert (value != 0);
@@ -289,6 +297,8 @@ inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= x and x < MOD);
     return x;
 }
+#line 7 "modulus/mint.hpp"
+
 
 template <int32_t MOD>
 struct mint {

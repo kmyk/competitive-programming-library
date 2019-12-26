@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.unit.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-26 23:56:34+09:00
 
 
 
@@ -40,6 +40,8 @@ layout: default
 
 * :heavy_check_mark: <a href="lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 * :heavy_check_mark: <a href="../utils/monoids.hpp.html">utils/monoids.hpp</a>
 
@@ -357,6 +359,8 @@ struct plus_min_count_action {
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#line 2 "modulus/modpow.hpp"
+#include <cassert>
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -368,6 +372,10 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
+#line 2 "modulus/modinv.hpp"
+#include <algorithm>
+#include <cassert>
+
 inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
     assert (value != 0);
@@ -384,6 +392,8 @@ inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= x and x < MOD);
     return x;
 }
+#line 7 "modulus/mint.hpp"
+
 
 template <int32_t MOD>
 struct mint {

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/factorial.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-11-09 09:23:07+09:00
+    - Last commit date: 2019-12-26 23:56:34+09:00
 
 
 
@@ -39,6 +39,8 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 
 
 ## Required by
@@ -108,6 +110,8 @@ mint<MOD> inv_fact(int n) {
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#line 2 "modulus/modpow.hpp"
+#include <cassert>
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -119,6 +123,10 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
+#line 2 "modulus/modinv.hpp"
+#include <algorithm>
+#include <cassert>
+
 inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
     assert (value != 0);
@@ -135,6 +143,8 @@ inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= x and x < MOD);
     return x;
 }
+#line 7 "modulus/mint.hpp"
+
 
 template <int32_t MOD>
 struct mint {

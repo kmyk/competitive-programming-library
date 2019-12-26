@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.998244353.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-26 23:56:34+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/convolution_mod">https://judge.yosupo.jp/problem/convolution_mod</a>
@@ -39,6 +39,8 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -96,6 +98,8 @@ int main() {
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#line 2 "modulus/modpow.hpp"
+#include <cassert>
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -107,6 +111,10 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
+#line 2 "modulus/modinv.hpp"
+#include <algorithm>
+#include <cassert>
+
 inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
     assert (value != 0);
@@ -123,6 +131,8 @@ inline int32_t modinv(int32_t value, int32_t MOD) {
     assert (0 <= x and x < MOD);
     return x;
 }
+#line 7 "modulus/mint.hpp"
+
 
 template <int32_t MOD>
 struct mint {
