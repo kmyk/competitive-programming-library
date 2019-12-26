@@ -40,7 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="sparse_table.hpp.html">sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
-* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

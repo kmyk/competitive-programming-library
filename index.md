@@ -79,7 +79,7 @@ layout: default
 * :warning: <a href="library/data_structure/treap.inc.cpp.html">data_structure/treap.inc.cpp</a>
 * :warning: <a href="library/data_structure/trie-tree.inc.cpp.html">data_structure/trie-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :warning: <a href="library/data_structure/wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
@@ -119,7 +119,7 @@ layout: default
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.unit.random-test.cpp.html">graph/shortest_path_faster_algorithm.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.cpp)</small></a>
-* :warning: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
 * :warning: <a href="library/graph/subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/topological-sort.inc.cpp.html">graph/topological-sort.inc.cpp</a>
 * :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(graph/tree-dp.inc.cpp)</small></a>
@@ -134,12 +134,12 @@ layout: default
 ### modulus
 
 * :warning: <a href="library/modulus/998244353.inc.cpp.html">modulus/998244353.inc.cpp</a>
-* :warning: <a href="library/modulus/bell-number.inc.cpp.html">the Bell number <small>(modulus/bell-number.inc.cpp)</small></a>
+* :heavy_check_mark: <a href="library/modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
 * :warning: <a href="library/modulus/bernoulli-number.inc.cpp.html">the Bernoulli number <small>(modulus/bernoulli-number.inc.cpp)</small></a>
-* :warning: <a href="library/modulus/choose.hpp.html">modulus/choose.hpp</a>
+* :heavy_check_mark: <a href="library/modulus/choose.hpp.html">modulus/choose.hpp</a>
 * :warning: <a href="library/modulus/discrete-log.inc.cpp.html">modulus/discrete-log.inc.cpp</a>
 * :warning: <a href="library/modulus/factorial-embed.inc.cpp.html">a program to make the table <small>(modulus/factorial-embed.inc.cpp)</small></a>
-* :warning: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
+* :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :warning: <a href="library/modulus/factorial.unit.random-test.cpp.html">modulus/factorial.unit.random-test.cpp</a>
 * :warning: <a href="library/modulus/fib.inc.cpp.html">modulus/fib.inc.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
@@ -147,8 +147,8 @@ layout: default
 * :warning: <a href="library/modulus/modops.inc.cpp.html">modulus/modops.inc.cpp</a>
 * :warning: <a href="library/modulus/polya-enumeration.inc.cpp.html">modulus/polya-enumeration.inc.cpp</a>
 * :warning: <a href="library/modulus/powmod.inc.cpp.html">the baby-step giant-step <small>(modulus/powmod.inc.cpp)</small></a>
-* :warning: <a href="library/modulus/stirling-number-of-the-second-kind.inc.cpp.html">the Stirling number of the second kind <small>(modulus/stirling-number-of-the-second-kind.inc.cpp)</small></a>
-* :warning: <a href="library/modulus/twelvefold-way.inc.cpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold-way.inc.cpp)</small></a>
+* :heavy_check_mark: <a href="library/modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
+* :heavy_check_mark: <a href="library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 
 
 <div id="315142c884fa9bdd2be3b42923ffe964"></div>
@@ -211,7 +211,7 @@ layout: default
 * :warning: <a href="library/utils/distributed-code-jam.inc.cpp.html">utils/distributed-code-jam.inc.cpp</a>
 * :warning: <a href="library/utils/dlopen.inc.cpp.html">utils/dlopen.inc.cpp</a>
 * :warning: <a href="library/utils/doubling.inc.cpp.html">the doubling technique <small>(utils/doubling.inc.cpp)</small></a>
-* :warning: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
 * :warning: <a href="library/utils/fib.inc.cpp.html">utils/fib.inc.cpp</a>
 * :warning: <a href="library/utils/graphviz.inc.cpp.html">utils/graphviz.inc.cpp</a>
@@ -219,17 +219,17 @@ layout: default
 * :warning: <a href="library/utils/iterate.inc.cpp.html">utils/iterate.inc.cpp</a>
 * :warning: <a href="library/utils/knapsack-problem-branch-and-bound.inc.cpp.html">utils/knapsack-problem-branch-and-bound.inc.cpp</a>
 * :warning: <a href="library/utils/longest-increasing-subsequence.inc.cpp.html">utils/longest-increasing-subsequence.inc.cpp</a>
-* :warning: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/marathon.inc.cpp.html">utils/marathon.inc.cpp</a>
 * :warning: <a href="library/utils/maximum-independent-set.inc.cpp.html">utils/maximum-independent-set.inc.cpp</a>
 * :warning: <a href="library/utils/mex.inc.cpp.html">minimum excluded value <small>(utils/mex.inc.cpp)</small></a>
 * :warning: <a href="library/utils/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(utils/midpoint.inc.cpp)</small></a>
-* :warning: <a href="library/utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :heavy_check_mark: <a href="library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 * :warning: <a href="library/utils/periodic-function-power.inc.cpp.html">utils/periodic-function-power.inc.cpp</a>
 * :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>
 * :warning: <a href="library/utils/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(utils/rollback-square-decomposition.inc.cpp)</small></a>
 * :warning: <a href="library/utils/simplex.inc.cpp.html">utils/simplex.inc.cpp</a>
-* :warning: <a href="library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
+* :heavy_check_mark: <a href="library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
 * :warning: <a href="library/utils/string-skip-list.inc.cpp.html">utils/string-skip-list.inc.cpp</a>
 * :warning: <a href="library/utils/subset.inc.cpp.html">utils/subset.inc.cpp</a>
 * :warning: <a href="library/utils/ternary-search.inc.cpp.html">utils/ternary-search.inc.cpp</a>
@@ -249,12 +249,22 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_3.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_3.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_4.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_4.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_5.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_5.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_6.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_6.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
-* :warning: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 

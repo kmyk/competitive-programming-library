@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
+# :heavy_check_mark: DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
@@ -39,13 +39,13 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :warning: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
+* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with
 
-* :warning: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
 
 ## Code

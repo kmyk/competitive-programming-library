@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by

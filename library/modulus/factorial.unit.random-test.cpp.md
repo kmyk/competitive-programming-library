@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
+* :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 
 

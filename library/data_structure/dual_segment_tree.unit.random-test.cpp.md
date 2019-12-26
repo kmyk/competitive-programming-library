@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
-* :warning: <a href="../utils/monoids.hpp.html">utils/monoids.hpp</a>
+* :heavy_check_mark: <a href="../utils/monoids.hpp.html">utils/monoids.hpp</a>
 
 
 ## Code
