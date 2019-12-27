@@ -20,7 +20,7 @@ struct sliding_window_aggregation {
      */
     void push(value_type x) {
         data.push_back(x);
-        back = mon.append(back, x);
+        back = mon.mult(back, x);
     }
     /**
      * @note amortized O(1)
@@ -32,7 +32,7 @@ struct sliding_window_aggregation {
             -- front;
         } else {
             REP_R (i, (int)data.size() - 1) {
-                data[i] = mon.append(data[i], data[i + 1]);
+                data[i] = mon.mult(data[i], data[i + 1]);
             }
             front = data.size();
             back = mon.unit();
@@ -43,7 +43,7 @@ struct sliding_window_aggregation {
      * @note O(1)
      */
     value_type accumulate() const {
-        return front ? mon.append(data.front(), back) : back;
+        return front ? mon.mult(data.front(), back) : back;
     }
     bool empty() const {
         return data.empty();
