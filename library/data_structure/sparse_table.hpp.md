@@ -44,7 +44,6 @@ layout: default
 
 ## Required by
 
-* :warning: <a href="sparse_table.unit.random-test.cpp.html">data_structure/sparse_table.unit.random-test.cpp</a>
 * :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
 
 

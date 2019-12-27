@@ -42,11 +42,6 @@ layout: default
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required by
-
-* :warning: <a href="../../library/graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
-
-
 ## Code
 
 <a id="unbundled"></a>

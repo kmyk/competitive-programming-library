@@ -38,7 +38,6 @@ layout: default
 
 ## Required by
 
-* :warning: <a href="subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
 * :heavy_check_mark: <a href="../utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 
 

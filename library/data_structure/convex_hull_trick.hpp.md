@@ -40,11 +40,6 @@ layout: default
 * see: <a href="http://wcipeg.com/wiki/Convex_hull_trick">http://wcipeg.com/wiki/Convex_hull_trick</a>
 
 
-## Required by
-
-* :warning: <a href="convex_hull_trick.random-test.cpp.html">data_structure/convex_hull_trick.random-test.cpp</a>
-
-
 ## Code
 
 <a id="unbundled"></a>

@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small>
+# :heavy_check_mark: get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-27 19:18:01+09:00
 
 
 
@@ -41,9 +41,9 @@ layout: default
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required by
+## Verified with
 
-* :warning: <a href="sliding_window_aggregation.random-test.cpp.html">data_structure/sliding_window_aggregation.random-test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
 
 
 ## Code
@@ -73,7 +73,7 @@ struct sliding_window_aggregation {
      */
     void push(value_type x) {
         data.push_back(x);
-        back = mon.append(back, x);
+        back = mon.mult(back, x);
     }
     /**
      * @note amortized O(1)
@@ -85,7 +85,7 @@ struct sliding_window_aggregation {
             -- front;
         } else {
             REP_R (i, (int)data.size() - 1) {
-                data[i] = mon.append(data[i], data[i + 1]);
+                data[i] = mon.mult(data[i], data[i + 1]);
             }
             front = data.size();
             back = mon.unit();
@@ -96,7 +96,7 @@ struct sliding_window_aggregation {
      * @note O(1)
      */
     value_type accumulate() const {
-        return front ? mon.append(data.front(), back) : back;
+        return front ? mon.mult(data.front(), back) : back;
     }
     bool empty() const {
         return data.empty();
@@ -140,7 +140,7 @@ struct sliding_window_aggregation {
      */
     void push(value_type x) {
         data.push_back(x);
-        back = mon.append(back, x);
+        back = mon.mult(back, x);
     }
     /**
      * @note amortized O(1)
@@ -152,7 +152,7 @@ struct sliding_window_aggregation {
             -- front;
         } else {
             REP_R (i, (int)data.size() - 1) {
-                data[i] = mon.append(data[i], data[i + 1]);
+                data[i] = mon.mult(data[i], data[i + 1]);
             }
             front = data.size();
             back = mon.unit();
@@ -163,7 +163,7 @@ struct sliding_window_aggregation {
      * @note O(1)
      */
     value_type accumulate() const {
-        return front ? mon.append(data.front(), back) : back;
+        return front ? mon.mult(data.front(), back) : back;
     }
     bool empty() const {
         return data.empty();

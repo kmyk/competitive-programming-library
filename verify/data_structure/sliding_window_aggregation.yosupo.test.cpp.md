@@ -25,24 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/sliding_window_aggregation.random-test.cpp
+# :heavy_check_mark: data_structure/sliding_window_aggregation.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.random-test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-26 23:56:34+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.yosupo.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-27 19:18:01+09:00
 
 
+* see: <a href="https://judge.yosupo.jp/problem/queue_operate_all_composite">https://judge.yosupo.jp/problem/queue_operate_all_composite</a>
 
 
 ## Depends on
 
-* :warning: <a href="sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
-* :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="../modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/dual.hpp.html">monoids/dual.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -50,44 +52,30 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#define PROBLEM "https://judge.yosupo.jp/problem/queue_operate_all_composite"
 #include "data_structure/sliding_window_aggregation.hpp"
-
-#include <algorithm>
-#include <cassert>
-#include <climits>
-#include <deque>
-#include <random>
-#include <vector>
-#include "utils/macros.hpp"
+#include "monoids/linear_function.hpp"
+#include "monoids/dual.hpp"
 #include "modulus/mint.hpp"
+#include <cstdio>
+#include <tuple>
 using namespace std;
 
-constexpr int MOD = 1e9 + 7;
-struct linear_function_monoid {
-    typedef pair<mint<MOD>, mint<MOD> > value_type;
-    value_type unit() const { return make_pair(1, 0); }
-    value_type append(value_type f, value_type g) const { return make_pair(f.first * g.first, f.first * g.second + f.second); }
-};
-
+constexpr int MOD = 998244353;
 int main() {
-    random_device device;
-    default_random_engine gen(device());
-    REP (iteration, 10000) {
-        deque<typename linear_function_monoid::value_type> deq;
-        sliding_window_aggregation<linear_function_monoid> swag;
-        REP (i, 1000) {
-            if (not deq.empty() and bernoulli_distribution()(gen) < 0.3) {
-                deq.pop_front();
-                swag.pop();
-            } else {
-                mint<MOD> a = uniform_int_distribution<int>(0, MOD - 1)(gen);
-                mint<MOD> b = uniform_int_distribution<int>(0, MOD - 1)(gen);
-                deq.emplace_back(a, b);
-                swag.push(make_pair(a, b));
-            }
-            assert (accumulate(ALL(deq), linear_function_monoid().unit(), [&](typename linear_function_monoid::value_type f, typename linear_function_monoid::value_type g) {
-                return linear_function_monoid().append(f, g);
-            }) == swag.accumulate());
+    int q; scanf("%d", &q);
+    sliding_window_aggregation<dual_monoid<linear_function_monoid<mint<MOD> > > > swag;
+    while (q --) {
+        int t; scanf("%d", &t);
+        if (t == 0) {
+            int a, b; scanf("%d%d", &a, &b);
+            swag.push(make_pair(a, b));
+        } else if (t == 1) {
+            swag.pop();
+        } else if (t == 2) {
+            int x; scanf("%d", &x);
+            mint<MOD> a, b; tie(a, b) = swag.accumulate();
+            printf("%d\n", (a * x + b).value);
         }
     }
     return 0;
@@ -99,6 +87,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "data_structure/sliding_window_aggregation.yosupo.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/queue_operate_all_composite"
 #line 2 "data_structure/sliding_window_aggregation.hpp"
 #include <cassert>
 #include <cstddef>
@@ -127,7 +117,7 @@ struct sliding_window_aggregation {
      */
     void push(value_type x) {
         data.push_back(x);
-        back = mon.append(back, x);
+        back = mon.mult(back, x);
     }
     /**
      * @note amortized O(1)
@@ -139,7 +129,7 @@ struct sliding_window_aggregation {
             -- front;
         } else {
             REP_R (i, (int)data.size() - 1) {
-                data[i] = mon.append(data[i], data[i + 1]);
+                data[i] = mon.mult(data[i], data[i + 1]);
             }
             front = data.size();
             back = mon.unit();
@@ -150,7 +140,7 @@ struct sliding_window_aggregation {
      * @note O(1)
      */
     value_type accumulate() const {
-        return front ? mon.append(data.front(), back) : back;
+        return front ? mon.mult(data.front(), back) : back;
     }
     bool empty() const {
         return data.empty();
@@ -159,14 +149,34 @@ struct sliding_window_aggregation {
         return data.size();
     }
 };
-#line 2 "data_structure/sliding_window_aggregation.random-test.cpp"
+#line 2 "monoids/linear_function.hpp"
+#include <utility>
 
-#include <algorithm>
-#include <cassert>
-#include <climits>
-#include <deque>
-#include <random>
-#include <vector>
+template <class CommutativeRing>
+struct linear_function_monoid {
+    typedef std::pair<CommutativeRing, CommutativeRing> value_type;
+    linear_function_monoid() = default;
+    value_type unit() const {
+        return std::make_pair(1, 0);
+    }
+    value_type mult(value_type g, value_type f) const {
+        CommutativeRing fst = g.first * f.first;
+        CommutativeRing snd = g.second + g.first * f.second;
+        return std::make_pair(fst, snd);
+    }
+};
+#line 2 "monoids/dual.hpp"
+
+/**
+ * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
+ */
+template <class Monoid>
+struct dual_monoid {
+    typedef typename Monoid::value_type value_type;
+    Monoid base;
+    value_type unit() const { return base.unit(); }
+    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+};
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
 #include <cassert>
@@ -231,35 +241,26 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 11 "data_structure/sliding_window_aggregation.random-test.cpp"
+#line 6 "data_structure/sliding_window_aggregation.yosupo.test.cpp"
+#include <cstdio>
+#include <tuple>
 using namespace std;
 
-constexpr int MOD = 1e9 + 7;
-struct linear_function_monoid {
-    typedef pair<mint<MOD>, mint<MOD> > value_type;
-    value_type unit() const { return make_pair(1, 0); }
-    value_type append(value_type f, value_type g) const { return make_pair(f.first * g.first, f.first * g.second + f.second); }
-};
-
+constexpr int MOD = 998244353;
 int main() {
-    random_device device;
-    default_random_engine gen(device());
-    REP (iteration, 10000) {
-        deque<typename linear_function_monoid::value_type> deq;
-        sliding_window_aggregation<linear_function_monoid> swag;
-        REP (i, 1000) {
-            if (not deq.empty() and bernoulli_distribution()(gen) < 0.3) {
-                deq.pop_front();
-                swag.pop();
-            } else {
-                mint<MOD> a = uniform_int_distribution<int>(0, MOD - 1)(gen);
-                mint<MOD> b = uniform_int_distribution<int>(0, MOD - 1)(gen);
-                deq.emplace_back(a, b);
-                swag.push(make_pair(a, b));
-            }
-            assert (accumulate(ALL(deq), linear_function_monoid().unit(), [&](typename linear_function_monoid::value_type f, typename linear_function_monoid::value_type g) {
-                return linear_function_monoid().append(f, g);
-            }) == swag.accumulate());
+    int q; scanf("%d", &q);
+    sliding_window_aggregation<dual_monoid<linear_function_monoid<mint<MOD> > > > swag;
+    while (q --) {
+        int t; scanf("%d", &t);
+        if (t == 0) {
+            int a, b; scanf("%d%d", &a, &b);
+            swag.push(make_pair(a, b));
+        } else if (t == 1) {
+            swag.pop();
+        } else if (t == 2) {
+            int x; scanf("%d", &x);
+            mint<MOD> a, b; tie(a, b) = swag.accumulate();
+            printf("%d\n", (a * x + b).value);
         }
     }
     return 0;

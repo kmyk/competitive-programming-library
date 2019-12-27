@@ -25,21 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoids/dual.hpp
+# :warning: monoids/trivial.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
-* <a href="{{ site.github.repository_url }}/blob/master/monoids/dual.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-19 00:15:23+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/monoids/trivial.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-27 19:16:13+09:00
 
 
-* see: <a href="http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual">http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual</a>
 
 
-## Verified with
+## Required by
 
-* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
+* :warning: <a href="trivial_action.hpp.html">monoids/trivial_action.hpp</a>
 
 
 ## Code
@@ -49,15 +48,10 @@ layout: default
 ```cpp
 #pragma once
 
-/**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
- */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+struct trivial_monoid {
+    typedef struct {} value_type;
+    value_type unit() const { return (value_type) {}; }
+    value_type unit(value_type a, value_type b) const { return (value_type) {}; }
 };
 
 ```
@@ -66,17 +60,12 @@ struct dual_monoid {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "monoids/dual.hpp"
+#line 2 "monoids/trivial.hpp"
 
-/**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
- */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+struct trivial_monoid {
+    typedef struct {} value_type;
+    value_type unit() const { return (value_type) {}; }
+    value_type unit(value_type a, value_type b) const { return (value_type) {}; }
 };
 
 ```

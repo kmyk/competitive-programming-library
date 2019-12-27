@@ -25,26 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/gcd.hpp
+# :heavy_check_mark: monoids/min.hpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
-* <a href="{{ site.github.repository_url }}/blob/master/number/gcd.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-04 14:45:23+09:00
+* category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
+* <a href="{{ site.github.repository_url }}/blob/master/monoids/min.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-27 19:16:13+09:00
 
 
 
 
 ## Required by
 
-* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
-* :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
+* :heavy_check_mark: <a href="plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 
 
 ## Code
@@ -54,23 +53,14 @@ layout: default
 ```cpp
 #pragma once
 #include <algorithm>
+#include <limits>
 
-/**
- * @note if arguments are negative, the result may be negative
- */
-template <typename T>
-T gcd(T a, T b) {
-    while (a) {
-        b %= a;
-        std::swap(a, b);
-    }
-    return b;
-}
-
-template <typename T>
-T lcm(T a, T b) {
-    return a / gcd(a, b) * b;
-}
+template <class T>
+struct min_monoid {
+    typedef T value_type;
+    value_type unit() const { return std::numeric_limits<T>::max(); }
+    value_type mult(value_type a, value_type b) const { return std::min(a, b); }
+};
 
 ```
 {% endraw %}
@@ -78,25 +68,16 @@ T lcm(T a, T b) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "number/gcd.hpp"
+#line 2 "monoids/min.hpp"
 #include <algorithm>
+#include <limits>
 
-/**
- * @note if arguments are negative, the result may be negative
- */
-template <typename T>
-T gcd(T a, T b) {
-    while (a) {
-        b %= a;
-        std::swap(a, b);
-    }
-    return b;
-}
-
-template <typename T>
-T lcm(T a, T b) {
-    return a / gcd(a, b) * b;
-}
+template <class T>
+struct min_monoid {
+    typedef T value_type;
+    value_type unit() const { return std::numeric_limits<T>::max(); }
+    value_type mult(value_type a, value_type b) const { return std::min(a, b); }
+};
 
 ```
 {% endraw %}

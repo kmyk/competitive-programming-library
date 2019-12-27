@@ -48,21 +48,15 @@ layout: default
 * :warning: <a href="library/data_structure/binary-indexed-tree.inc.cpp.html">data_structure/binary-indexed-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/convex-hull-trick-with-monotonicity.inc.cpp.html">data_structure/convex-hull-trick-with-monotonicity.inc.cpp</a>
 * :warning: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
-* :warning: <a href="library/data_structure/convex_hull_trick.random-test.cpp.html">data_structure/convex_hull_trick.random-test.cpp</a>
 * :warning: <a href="library/data_structure/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue <small>(data_structure/double-ended-priority-queue.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/dual_segment_tree.unit.random-test.cpp.html">data_structure/dual_segment_tree.unit.random-test.cpp</a>
 * :warning: <a href="library/data_structure/dynamic-segment-tree.inc.cpp.html">data_structure/dynamic-segment-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :warning: <a href="library/data_structure/fully_indexable_dictionary.random-test.cpp.html">data_structure/fully_indexable_dictionary.random-test.cpp</a>
 * :warning: <a href="library/data_structure/lazy-propagation-red-black-tree.inc.cpp.html">data_structure/lazy-propagation-red-black-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/lazy_propagation_segment_tree.unit.random-test.cpp.html">data_structure/lazy_propagation_segment_tree.unit.random-test.cpp</a>
 * :warning: <a href="library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
-* :warning: <a href="library/data_structure/li_chao_tree.random-test.cpp.html">data_structure/li_chao_tree.random-test.cpp</a>
 * :warning: <a href="library/data_structure/linear-weighted-sum.inc.cpp.html">data_structure/linear-weighted-sum.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/link_cut_tree.spaceships.random-test.cpp.html">data_structure/link_cut_tree.spaceships.random-test.cpp</a>
 * :warning: <a href="library/data_structure/persistent-array.inc.cpp.html">persistent array / 永続配列 <small>(data_structure/persistent-array.inc.cpp)</small></a>
 * :warning: <a href="library/data_structure/persistent-randomized-binary-search-tree.inc.cpp.html">data_structure/persistent-randomized-binary-search-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/range-union-find-tree.inc.cpp.html">data_structure/range-union-find-tree.inc.cpp</a>
@@ -72,16 +66,13 @@ layout: default
 * :warning: <a href="library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :warning: <a href="library/data_structure/skew-heap.inc.cpp.html">data_structure/skew-heap.inc.cpp</a>
 * :warning: <a href="library/data_structure/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(data_structure/sliding-window.inc.cpp)</small></a>
-* :warning: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
-* :warning: <a href="library/data_structure/sliding_window_aggregation.random-test.cpp.html">data_structure/sliding_window_aggregation.random-test.cpp</a>
+* :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
-* :warning: <a href="library/data_structure/sparse_table.unit.random-test.cpp.html">data_structure/sparse_table.unit.random-test.cpp</a>
 * :warning: <a href="library/data_structure/treap.inc.cpp.html">data_structure/treap.inc.cpp</a>
 * :warning: <a href="library/data_structure/trie-tree.inc.cpp.html">data_structure/trie-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
-* :warning: <a href="library/data_structure/wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
 
 
 <div id="ed7daeb157cd9b31e53896ad3c771a26"></div>
@@ -116,11 +107,8 @@ layout: default
 * :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
 * :warning: <a href="library/graph/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路 <small>(graph/namori-graph.inc.cpp)</small></a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
-* :warning: <a href="library/graph/shortest_path_faster_algorithm.random-test.cpp.html">graph/shortest_path_faster_algorithm.random-test.cpp</a>
-* :warning: <a href="library/graph/shortest_path_faster_algorithm.unit.random-test.cpp.html">graph/shortest_path_faster_algorithm.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.cpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :warning: <a href="library/graph/subtree.unit.random-test.cpp.html">graph/subtree.unit.random-test.cpp</a>
 * :warning: <a href="library/graph/topological-sort.inc.cpp.html">graph/topological-sort.inc.cpp</a>
 * :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(graph/tree-dp.inc.cpp)</small></a>
 * :warning: <a href="library/graph/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(graph/two-edge-connected-components.inc.cpp)</small></a>
@@ -140,10 +128,8 @@ layout: default
 * :warning: <a href="library/modulus/discrete-log.inc.cpp.html">modulus/discrete-log.inc.cpp</a>
 * :warning: <a href="library/modulus/factorial-embed.inc.cpp.html">a program to make the table <small>(modulus/factorial-embed.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
-* :warning: <a href="library/modulus/factorial.unit.random-test.cpp.html">modulus/factorial.unit.random-test.cpp</a>
 * :warning: <a href="library/modulus/fib.inc.cpp.html">modulus/fib.inc.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :warning: <a href="library/modulus/mint.unit.random-test.cpp.html">modulus/mint.unit.random-test.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :warning: <a href="library/modulus/modsqrt_modlog.inc.cpp.html">the baby-step giant-step <small>(modulus/modsqrt_modlog.inc.cpp)</small></a>
@@ -156,8 +142,22 @@ layout: default
 
 ### monoids
 
-* :warning: <a href="library/monoids/dual.hpp.html">monoids/dual.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/dual.hpp.html">monoids/dual.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/left.hpp.html">monoids/left.hpp</a>
+* :warning: <a href="library/monoids/left_action.hpp.html">monoids/left_action.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
+* :warning: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
+* :warning: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
+* :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/plus.hpp.html">monoids/plus.hpp</a>
+* :warning: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
+* :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
+* :warning: <a href="library/monoids/plus_min_count_action.hpp.html">monoids/plus_min_count_action.hpp</a>
+* :warning: <a href="library/monoids/trivial.hpp.html">monoids/trivial.hpp</a>
+* :warning: <a href="library/monoids/trivial_action.hpp.html">monoids/trivial_action.hpp</a>
 
 
 <div id="b1bc248a7ff2b2e95569f56de68615df"></div>
@@ -169,12 +169,9 @@ layout: default
 * :warning: <a href="library/number/factoradic.inc.cpp.html">number/factoradic.inc.cpp</a>
 * :warning: <a href="library/number/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation <small>(number/fast-mobius-transformation.inc.cpp)</small></a>
 * :warning: <a href="library/number/fast_fourier_transformation.hpp.html">the convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
-* :warning: <a href="library/number/fast_fourier_transformation.unit.random-test.cpp.html">number/fast_fourier_transformation.unit.random-test.cpp</a>
 * :heavy_check_mark: <a href="library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
 * :heavy_check_mark: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :warning: <a href="library/number/gcd.random-test.cpp.html">number/gcd.random-test.cpp</a>
 * :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
-* :warning: <a href="library/number/lagrange_interpolation.random-test.cpp.html">number/lagrange_interpolation.random-test.cpp</a>
 * :warning: <a href="library/number/matrix.inc.cpp.html">number/matrix.inc.cpp</a>
 * :warning: <a href="library/number/matrix_template.hpp.html">number/matrix_template.hpp</a>
 * :warning: <a href="library/number/miller-rabin.inc.cpp.html">number/miller-rabin.inc.cpp</a>
@@ -204,7 +201,6 @@ layout: default
 
 * :warning: <a href="library/utils/apply-permutation.inc.cpp.html">utils/apply-permutation.inc.cpp</a>
 * :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a binary search / 二分探索 <small>(utils/binary_search.hpp)</small></a>
-* :warning: <a href="library/utils/binary_search.unit.random-test.cpp.html">utils/binary_search.unit.random-test.cpp</a>
 * :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :warning: <a href="library/utils/cumulative-sum.inc.cpp.html">cumulative sum <small>(utils/cumulative-sum.inc.cpp)</small></a>
 * :warning: <a href="library/utils/dice.inc.cpp.html">utils/dice.inc.cpp</a>
@@ -225,7 +221,6 @@ layout: default
 * :warning: <a href="library/utils/maximum-independent-set.inc.cpp.html">utils/maximum-independent-set.inc.cpp</a>
 * :warning: <a href="library/utils/mex.inc.cpp.html">minimum excluded value <small>(utils/mex.inc.cpp)</small></a>
 * :warning: <a href="library/utils/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(utils/midpoint.inc.cpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/monoids.hpp.html">utils/monoids.hpp</a>
 * :warning: <a href="library/utils/periodic-function-power.inc.cpp.html">utils/periodic-function-power.inc.cpp</a>
 * :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>
 * :warning: <a href="library/utils/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(utils/rollback-square-decomposition.inc.cpp)</small></a>
@@ -245,6 +240,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.aoj2674.test.cpp.html">data_structure/wavelet_matrix.aoj2674.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>

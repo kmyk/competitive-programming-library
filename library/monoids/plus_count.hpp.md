@@ -25,21 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoids/dual.hpp
+# :warning: monoids/plus_count.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
-* <a href="{{ site.github.repository_url }}/blob/master/monoids/dual.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-19 00:15:23+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/monoids/plus_count.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-27 19:16:13+09:00
 
 
-* see: <a href="http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual">http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
 
 
 ## Code
@@ -48,16 +42,20 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
+#include <utility>
 
-/**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
- */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+template <class T>
+struct plus_count_monoid {
+    typedef std::pair<T, int> value_type;
+    value_type unit() const {
+        return std::make_pair(T(), 0);
+    }
+    value_type mult(value_type a, value_type b) const {
+        return std::make_pair(a.first + b.first, a.second + b.second);
+    }
+    static value_type make(T a) {
+        return std::make_pair(a, 1);
+    }
 };
 
 ```
@@ -66,17 +64,21 @@ struct dual_monoid {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "monoids/dual.hpp"
+#line 2 "monoids/plus_count.hpp"
+#include <utility>
 
-/**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
- */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+template <class T>
+struct plus_count_monoid {
+    typedef std::pair<T, int> value_type;
+    value_type unit() const {
+        return std::make_pair(T(), 0);
+    }
+    value_type mult(value_type a, value_type b) const {
+        return std::make_pair(a.first + b.first, a.second + b.second);
+    }
+    static value_type make(T a) {
+        return std::make_pair(a, 1);
+    }
 };
 
 ```

@@ -25,21 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoids/dual.hpp
+# :heavy_check_mark: monoids/left.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
-* <a href="{{ site.github.repository_url }}/blob/master/monoids/dual.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-19 00:15:23+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/monoids/left.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-27 19:16:13+09:00
 
 
-* see: <a href="http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual">http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual</a>
+
+
+## Required by
+
+* :warning: <a href="left_action.hpp.html">monoids/left_action.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
 
 
 ## Code
@@ -48,16 +52,14 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
+#include <utility>
 
-/**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
- */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+template <class T>
+struct left_monoid {
+    // typedef std::optional<T> value_type;
+    typedef std::pair<bool, T> value_type;
+    value_type unit() const { return std::make_pair(false, T()); }
+    value_type mult(value_type a, value_type b) const { return a.first ? a : b; }
 };
 
 ```
@@ -66,17 +68,15 @@ struct dual_monoid {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "monoids/dual.hpp"
+#line 2 "monoids/left.hpp"
+#include <utility>
 
-/**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
- */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+template <class T>
+struct left_monoid {
+    // typedef std::optional<T> value_type;
+    typedef std::pair<bool, T> value_type;
+    value_type unit() const { return std::make_pair(false, T()); }
+    value_type mult(value_type a, value_type b) const { return a.first ? a : b; }
 };
 
 ```

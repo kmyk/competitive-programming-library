@@ -25,21 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoids/dual.hpp
+# :warning: monoids/trivial_action.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
-* <a href="{{ site.github.repository_url }}/blob/master/monoids/dual.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-19 00:15:23+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/monoids/trivial_action.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-27 19:16:13+09:00
 
 
-* see: <a href="http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual">http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual</a>
 
 
-## Verified with
+## Depends on
 
-* :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
+* :warning: <a href="trivial.hpp.html">monoids/trivial.hpp</a>
 
 
 ## Code
@@ -48,16 +47,14 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
+#include "monoids/trivial.hpp"
 
 /**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
+ * @note lazy_propagation_segment_tree<Monoid, trivial_monoid, trivial_action<typename Monoid::value_type> > is the same to segment_tree<Monoid>
  */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+template <class T>
+struct trivial_action {
+    T operator () (typename trivial_monoid::value_type f, T x) const { return x; }
 };
 
 ```
@@ -66,17 +63,21 @@ struct dual_monoid {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "monoids/dual.hpp"
+#line 2 "monoids/trivial.hpp"
+
+struct trivial_monoid {
+    typedef struct {} value_type;
+    value_type unit() const { return (value_type) {}; }
+    value_type unit(value_type a, value_type b) const { return (value_type) {}; }
+};
+#line 3 "monoids/trivial_action.hpp"
 
 /**
- * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
+ * @note lazy_propagation_segment_tree<Monoid, trivial_monoid, trivial_action<typename Monoid::value_type> > is the same to segment_tree<Monoid>
  */
-template <class Monoid>
-struct dual_monoid {
-    typedef typename Monoid::value_type value_type;
-    Monoid base;
-    value_type unit() const { return base.unit(); }
-    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+template <class T>
+struct trivial_action {
+    T operator () (typename trivial_monoid::value_type f, T x) const { return x; }
 };
 
 ```

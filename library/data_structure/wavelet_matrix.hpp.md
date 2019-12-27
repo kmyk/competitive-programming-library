@@ -50,11 +50,6 @@ layout: default
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required by
-
-* :warning: <a href="wavelet_matrix.random-test.cpp.html">data_structure/wavelet_matrix.random-test.cpp</a>
-
-
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.aoj2674.test.cpp.html">data_structure/wavelet_matrix.aoj2674.test.cpp</a>

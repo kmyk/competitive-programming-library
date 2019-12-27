@@ -41,11 +41,6 @@ layout: default
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required by
-
-* :warning: <a href="li_chao_tree.random-test.cpp.html">data_structure/li_chao_tree.random-test.cpp</a>
-
-
 ## Code
 
 <a id="unbundled"></a>

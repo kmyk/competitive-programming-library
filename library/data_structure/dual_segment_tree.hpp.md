@@ -36,11 +36,6 @@ layout: default
 
 
 
-## Required by
-
-* :warning: <a href="dual_segment_tree.unit.random-test.cpp.html">data_structure/dual_segment_tree.unit.random-test.cpp</a>
-
-
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>

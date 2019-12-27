@@ -41,11 +41,6 @@ layout: default
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
-## Required by
-
-* :warning: <a href="lagrange_interpolation.random-test.cpp.html">number/lagrange_interpolation.random-test.cpp</a>
-
-
 ## Code
 
 <a id="unbundled"></a>
