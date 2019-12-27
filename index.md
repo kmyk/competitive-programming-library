@@ -156,6 +156,7 @@ layout: default
 * :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :warning: <a href="library/monoids/plus_min_count_action.hpp.html">monoids/plus_min_count_action.hpp</a>
+* :warning: <a href="library/monoids/product.hpp.html">monoids/product.hpp</a>
 * :warning: <a href="library/monoids/trivial.hpp.html">monoids/trivial.hpp</a>
 * :warning: <a href="library/monoids/trivial_action.hpp.html">monoids/trivial_action.hpp</a>
 
