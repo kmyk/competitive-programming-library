@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 #include "data_structure/segment_tree.hpp"
-#include "utils/monoids.hpp"
+#include "monoids/linear_function.hpp"
 #include "modulus/mint.hpp"
 #include "utils/macros.hpp"
 #include <cstdint>

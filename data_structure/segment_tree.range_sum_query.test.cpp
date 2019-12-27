@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 #include "data_structure/segment_tree.hpp"
-#include "utils/monoids.hpp"
+#include "monoids/plus.hpp"
 
 #include <iostream>
 using namespace std;

@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995"
 #include "utils/dsu_on_tree.hpp"
 #include "data_structure/union_find_tree_with_monoid.hpp"
-#include "utils/monoids.hpp"
+#include "monoids/plus.hpp"
 #include "utils/stack_pivot.hpp"
 
 #include <iostream>
