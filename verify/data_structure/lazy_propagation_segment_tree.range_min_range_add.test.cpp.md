@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+# :x: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 19:05:48+09:00
+    - Last commit date: 2019-12-29 19:06:35+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -38,10 +38,10 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
+* :x: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
+* :x: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
-* :heavy_check_mark: <a href="../../library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
+* :x: <a href="../../library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -56,7 +56,6 @@ layout: default
 #include "monoids/plus.hpp"
 #include "monoids/plus_min_action.hpp"
 #include <cstdio>
-using namespace std;
 
 int main() {
     int n, q; scanf("%d%d", &n, &q);
@@ -211,7 +210,6 @@ struct plus_min_action {
 };
 #line 6 "data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp"
 #include <cstdio>
-using namespace std;
 
 int main() {
     int n, q; scanf("%d%d", &n, &q);

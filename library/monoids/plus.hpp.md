@@ -39,13 +39,13 @@ layout: default
 ## Required by
 
 * :warning: <a href="plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
-* :heavy_check_mark: <a href="plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
+* :x: <a href="plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :warning: <a href="plus_min_count_action.hpp.html">monoids/plus_min_count_action.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :x: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
