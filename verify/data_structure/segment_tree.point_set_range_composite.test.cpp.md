@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_set_range_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+    - Last commit date: 2019-12-29 19:00:42+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -42,6 +42,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/dual.hpp.html">monoids/dual.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -54,6 +55,7 @@ layout: default
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 #include "data_structure/segment_tree.hpp"
 #include "monoids/linear_function.hpp"
+#include "monoids/dual.hpp"
 #include "modulus/mint.hpp"
 #include "utils/macros.hpp"
 #include <cstdint>
@@ -63,17 +65,17 @@ using namespace std;
 constexpr int MOD = 998244353;
 int main() {
     int n, q; scanf("%d%d", &n, &q);
-    segment_tree<linear_function_monoid<mint<MOD> > > segtree(n);
+    segment_tree<dual_monoid<linear_function_monoid<mint<MOD> > > > segtree(n);
     REP (i, n) {
         int a, b; scanf("%d%d", &a, &b);
-        segtree.point_set(n - i - 1, make_pair(a, b));
+        segtree.point_set(i, make_pair(a, b));
     }
     while (q --) {
         int f, x, y, z; scanf("%d%d%d%d", &f, &x, &y, &z);
         if (f == 0) {
-            segtree.point_set(n - x - 1, make_pair(y, z));
+            segtree.point_set(x, make_pair(y, z));
         } else if (f == 1) {
-            mint<MOD> a, b; tie(a, b) = segtree.range_concat(n - y, n - x);
+            mint<MOD> a, b; tie(a, b) = segtree.range_concat(x, y);
             printf("%d\n", (a * z + b).value);
         }
     }
@@ -176,6 +178,18 @@ struct linear_function_monoid {
         return std::make_pair(fst, snd);
     }
 };
+#line 2 "monoids/dual.hpp"
+
+/**
+ * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
+ */
+template <class Monoid>
+struct dual_monoid {
+    typedef typename Monoid::value_type value_type;
+    Monoid base;
+    value_type unit() const { return base.unit(); }
+    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
+};
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
 #include <cassert>
@@ -240,7 +254,7 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 6 "data_structure/segment_tree.point_set_range_composite.test.cpp"
+#line 7 "data_structure/segment_tree.point_set_range_composite.test.cpp"
 #include <cstdint>
 #include <tuple>
 using namespace std;
@@ -248,17 +262,17 @@ using namespace std;
 constexpr int MOD = 998244353;
 int main() {
     int n, q; scanf("%d%d", &n, &q);
-    segment_tree<linear_function_monoid<mint<MOD> > > segtree(n);
+    segment_tree<dual_monoid<linear_function_monoid<mint<MOD> > > > segtree(n);
     REP (i, n) {
         int a, b; scanf("%d%d", &a, &b);
-        segtree.point_set(n - i - 1, make_pair(a, b));
+        segtree.point_set(i, make_pair(a, b));
     }
     while (q --) {
         int f, x, y, z; scanf("%d%d%d%d", &f, &x, &y, &z);
         if (f == 0) {
-            segtree.point_set(n - x - 1, make_pair(y, z));
+            segtree.point_set(x, make_pair(y, z));
         } else if (f == 1) {
-            mint<MOD> a, b; tie(a, b) = segtree.range_concat(n - y, n - x);
+            mint<MOD> a, b; tie(a, b) = segtree.range_concat(x, y);
             printf("%d\n", (a * z + b).value);
         }
     }
