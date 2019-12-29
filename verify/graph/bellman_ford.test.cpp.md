@@ -95,6 +95,17 @@ int main() {
 {% raw %}
 ```cpp
 Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.0/x64/lib/python3.8/site-packages/onlinejudge_verify/main.py", line 169, in main
+    subcommand_run(paths=[], jobs=parsed.jobs)
+  File "/opt/hostedtoolcache/Python/3.8.0/x64/lib/python3.8/site-packages/onlinejudge_verify/main.py", line 66, in subcommand_run
+    onlinejudge_verify.verify.main(paths, marker=marker, timeout=timeout, jobs=jobs)
+  File "/opt/hostedtoolcache/Python/3.8.0/x64/lib/python3.8/site-packages/onlinejudge_verify/verify.py", line 113, in main
+    raise Exception('{} test failed'.format(len(failed_test_paths)))
+Exception: 1 test failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.8.0/x64/lib/python3.8/site-packages/onlinejudge_verify/docs.py", line 340, in write_contents
     bundler.update(self.file_class.file_path)
   File "/opt/hostedtoolcache/Python/3.8.0/x64/lib/python3.8/site-packages/onlinejudge_verify/bundle.py", line 153, in update
