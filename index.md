@@ -47,14 +47,14 @@ layout: default
 
 * :warning: <a href="library/data_structure/binary-indexed-tree.inc.cpp.html">data_structure/binary-indexed-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/convex-hull-trick-with-monotonicity.inc.cpp.html">data_structure/convex-hull-trick-with-monotonicity.inc.cpp</a>
-* :warning: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
+* :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
 * :warning: <a href="library/data_structure/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue <small>(data_structure/double-ended-priority-queue.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
 * :warning: <a href="library/data_structure/dynamic-segment-tree.inc.cpp.html">data_structure/dynamic-segment-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :warning: <a href="library/data_structure/lazy-propagation-red-black-tree.inc.cpp.html">data_structure/lazy-propagation-red-black-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/li_chao_tree.hpp.html">data_structure/li_chao_tree.hpp</a>
+* :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
 * :warning: <a href="library/data_structure/linear-weighted-sum.inc.cpp.html">data_structure/linear-weighted-sum.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
 * :warning: <a href="library/data_structure/persistent-array.inc.cpp.html">persistent array / 永続配列 <small>(data_structure/persistent-array.inc.cpp)</small></a>
@@ -236,8 +236,10 @@ layout: default
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/data_structure/convex_hull_trick.line_add_get_min.test.cpp.html">data_structure/convex_hull_trick.line_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/li_chao_tree.segment_add_get_min.test.cpp.html">data_structure/li_chao_tree.segment_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
