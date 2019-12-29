@@ -4,7 +4,6 @@
 #include "monoids/plus.hpp"
 #include "monoids/plus_min_action.hpp"
 #include <cstdio>
-using namespace std;
 
 int main() {
     int n, q; scanf("%d%d", &n, &q);
