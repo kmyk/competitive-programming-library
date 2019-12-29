@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: monoids/plus_min_action.hpp
+# :heavy_check_mark: monoids/plus_min_action.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,13 +38,13 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="min.hpp.html">monoids/min.hpp</a>
+* :heavy_check_mark: <a href="min.hpp.html">monoids/min.hpp</a>
 * :heavy_check_mark: <a href="plus.hpp.html">monoids/plus.hpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 
 
 ## Code

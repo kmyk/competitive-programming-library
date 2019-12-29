@@ -53,7 +53,7 @@ layout: default
 * :warning: <a href="library/data_structure/dynamic-segment-tree.inc.cpp.html">data_structure/dynamic-segment-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :warning: <a href="library/data_structure/lazy-propagation-red-black-tree.inc.cpp.html">data_structure/lazy-propagation-red-black-tree.inc.cpp</a>
-* :x: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
 * :warning: <a href="library/data_structure/linear-weighted-sum.inc.cpp.html">data_structure/linear-weighted-sum.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
@@ -149,12 +149,12 @@ layout: default
 * :warning: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
 * :warning: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
-* :x: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :warning: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
 * :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
-* :x: <a href="library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :warning: <a href="library/monoids/plus_min_count_action.hpp.html">monoids/plus_min_count_action.hpp</a>
 * :warning: <a href="library/monoids/product.hpp.html">monoids/product.hpp</a>
 * :warning: <a href="library/monoids/trivial.hpp.html">monoids/trivial.hpp</a>
@@ -238,7 +238,7 @@ layout: default
 
 * :heavy_check_mark: <a href="verify/data_structure/convex_hull_trick.line_add_get_min.test.cpp.html">data_structure/convex_hull_trick.line_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
-* :x: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/li_chao_tree.segment_add_get_min.test.cpp.html">data_structure/li_chao_tree.segment_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>

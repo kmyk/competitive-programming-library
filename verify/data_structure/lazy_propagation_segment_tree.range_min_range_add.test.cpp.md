@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+# :heavy_check_mark: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,10 +38,10 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
-* :x: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
-* :x: <a href="../../library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
