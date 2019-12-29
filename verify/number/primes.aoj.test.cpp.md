@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/primes.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-29 19:02:34+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C</a>
@@ -50,17 +50,17 @@ layout: default
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C"
 #include "number/primes.hpp"
 #include <cassert>
-#include <iostream>
+#include <cstdio>
 
 int main() {
-    int n; std::cin >> n;
+    int n; scanf("%d", &n);
     prepared_primes primes(1e6 + 3);
     int cnt = 0;
     REP (i, n) {
-        int a; std::cin >> a;
+        int a; scanf("%d", &a);
         cnt += primes.is_prime(a);
     }
-    std::cout << cnt << std::endl;
+    printf("%d\n", cnt);
     return 0;
 }
 
@@ -185,17 +185,17 @@ struct prepared_primes {
 };
 #line 3 "number/primes.aoj.test.cpp"
 #include <cassert>
-#include <iostream>
+#include <cstdio>
 
 int main() {
-    int n; std::cin >> n;
+    int n; scanf("%d", &n);
     prepared_primes primes(1e6 + 3);
     int cnt = 0;
     REP (i, n) {
-        int a; std::cin >> a;
+        int a; scanf("%d", &a);
         cnt += primes.is_prime(a);
     }
-    std::cout << cnt << std::endl;
+    printf("%d\n", cnt);
     return 0;
 }
 
