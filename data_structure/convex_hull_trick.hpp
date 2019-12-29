@@ -20,7 +20,7 @@ namespace convex_hull_trick_details {
     bool operator < (rational_t lhs, rational_t rhs) {
         if (lhs.num ==   INT64_MAX or rhs.num == - INT64_MAX) return false;
         if (lhs.num == - INT64_MAX or rhs.num ==   INT64_MAX) return true;
-        return lhs.num * rhs.den < rhs.num * lhs.den;  // TODO: check overflow
+        return (__int128_t)lhs.num * rhs.den < (__int128_t)rhs.num * lhs.den;
     }
 }
 
@@ -101,7 +101,7 @@ private:
     bool is_required(line_t f1, line_t f2, line_t f3) const {
         if (f1.a == f2.a and f1.b <= f2.b) return false;
         if (f1.a == INT64_MAX or f3.a == - INT64_MAX) return true;
-        return (f2.a - f1.a) * (f3.b - f2.b) < (f2.b - f1.b) * (f3.a - f2.a);
+        return (__int128_t)(f2.a - f1.a) * (f3.b - f2.b) < (__int128_t)(f2.b - f1.b) * (f3.a - f2.a);
     }
 };
 
