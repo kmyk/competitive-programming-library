@@ -15,8 +15,15 @@ jobs:
     - name: Install dependencies
       run: pip3 install -U git+https://github.com/kmyk/online-judge-verify-helper
 
+    - name: Cache test cases
+      uses: actions/cache@v1
+      with:
+        path: .verify-helper/cache
+        key: verify-helper-cache-${{ github.sha }}
+        restore-keys: verify-helper-cache-
+
     - name: Run tests
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: oj-verify all
+      run: oj-verify all -j 2
