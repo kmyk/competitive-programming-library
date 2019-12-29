@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+    - Last commit date: 2019-12-29 19:05:48+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -55,22 +55,21 @@ layout: default
 #include "monoids/min.hpp"
 #include "monoids/plus.hpp"
 #include "monoids/plus_min_action.hpp"
-
-#include <iostream>
+#include <cstdio>
 using namespace std;
 
 int main() {
-    int n, q; cin >> n >> q;
+    int n, q; scanf("%d%d", &n, &q);
     lazy_propagation_segment_tree<min_monoid<int>, plus_monoid<int>, plus_min_action<int> > segtree(n);
     segtree.range_set(0, n, 0);
     while (q --) {
-        int com, l, r; cin >> com >> l >> r;
+        int com, l, r; scanf("%d%d%d", &com, &l, &r);
         ++ r;
         if (com == 0) {
-            int x; cin >> x;
+            int x; scanf("%d", &x);
             segtree.range_apply(l, r, x);
         } else if (com == 1) {
-            cout << segtree.range_concat(l, r) << endl;
+            printf("%d\n", segtree.range_concat(l, r));
         }
     }
     return 0;
@@ -211,22 +210,21 @@ struct plus_min_action {
     }
 };
 #line 6 "data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp"
-
-#include <iostream>
+#include <cstdio>
 using namespace std;
 
 int main() {
-    int n, q; cin >> n >> q;
+    int n, q; scanf("%d%d", &n, &q);
     lazy_propagation_segment_tree<min_monoid<int>, plus_monoid<int>, plus_min_action<int> > segtree(n);
     segtree.range_set(0, n, 0);
     while (q --) {
-        int com, l, r; cin >> com >> l >> r;
+        int com, l, r; scanf("%d%d%d", &com, &l, &r);
         ++ r;
         if (com == 0) {
-            int x; cin >> x;
+            int x; scanf("%d", &x);
             segtree.range_apply(l, r, x);
         } else if (com == 1) {
-            cout << segtree.range_concat(l, r) << endl;
+            printf("%d\n", segtree.range_concat(l, r));
         }
     }
     return 0;
