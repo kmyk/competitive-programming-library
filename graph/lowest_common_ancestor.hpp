@@ -5,6 +5,7 @@
 #include <utility>
 #include <vector>
 #include "data_structure/sparse_table.hpp"
+#include "monoids/min_index.hpp"
 
 /**
  * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
@@ -12,7 +13,7 @@
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */
 struct lowest_common_ancestor {
-    sparse_table<indexed_min_semilattice> table;
+    sparse_table<min_index_monoid<int> > table;
     std::vector<int> index;
     lowest_common_ancestor() = default;
     /**
@@ -24,7 +25,7 @@ struct lowest_common_ancestor {
         std::vector<std::pair<int, int> > tour;
         index.assign(g.size(), -1);
         dfs(root, -1, 0, g, tour);
-        table = sparse_table<indexed_min_semilattice>(tour);
+        table = sparse_table<min_index_monoid<int> >(tour);
     }
 private:
     /**
