@@ -25,15 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/segment_tree.range_sum_query.test.cpp
+# :heavy_check_mark: data_structure/segment_tree.point_add_range_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.range_sum_query.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_add_range_sum.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-30 22:32:43+09:00
 
 
-* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
+* see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
 
 
 ## Depends on
@@ -48,23 +48,30 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
+#define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 #include "data_structure/segment_tree.hpp"
 #include "monoids/plus.hpp"
-
-#include <iostream>
+#include "utils/macros.hpp"
+#include <cstdint>
+#include <tuple>
+#include <vector>
 using namespace std;
 
+constexpr int MOD = 998244353;
 int main() {
-    int n, q; cin >> n >> q;
-    segment_tree<plus_monoid<int> > segtree(n);
+    int n, q; scanf("%d%d", &n, &q);
+    vector<int64_t> a(n);
+    REP (i, n) {
+        scanf("%lld", &a[i]);
+    }
+    segment_tree<plus_monoid<int64_t> > segtree(ALL(a));
     while (q --) {
-        int com, x, y; cin >> com >> x >> y;
-        -- x;
-        if (com == 0) {
-            segtree.point_set(x, segtree.range_concat(x, x + 1) + y);
-        } else if (com == 1) {
-            cout << segtree.range_concat(x, y) << endl;
+        int t, x, y; scanf("%d%d%d", &t, &x, &y);
+        if (t == 0) {
+            segtree.point_set(x, segtree.point_get(x) + y);
+        } else if (t == 1) {
+            int64_t answer = segtree.range_concat(x, y);
+            printf("%lld\n", answer);
         }
     }
     return 0;
@@ -76,8 +83,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "data_structure/segment_tree.range_sum_query.test.cpp"
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
+#line 1 "data_structure/segment_tree.point_add_range_sum.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 #line 2 "data_structure/segment_tree.hpp"
 #include <algorithm>
 #include <cassert>
@@ -165,21 +172,27 @@ struct plus_monoid {
     value_type unit() const { return value_type(); }
     value_type mult(value_type a, value_type b) const { return a + b; }
 };
-#line 4 "data_structure/segment_tree.range_sum_query.test.cpp"
-
-#include <iostream>
+#line 5 "data_structure/segment_tree.point_add_range_sum.test.cpp"
+#include <cstdint>
+#include <tuple>
+#include <vector>
 using namespace std;
 
+constexpr int MOD = 998244353;
 int main() {
-    int n, q; cin >> n >> q;
-    segment_tree<plus_monoid<int> > segtree(n);
+    int n, q; scanf("%d%d", &n, &q);
+    vector<int64_t> a(n);
+    REP (i, n) {
+        scanf("%lld", &a[i]);
+    }
+    segment_tree<plus_monoid<int64_t> > segtree(ALL(a));
     while (q --) {
-        int com, x, y; cin >> com >> x >> y;
-        -- x;
-        if (com == 0) {
-            segtree.point_set(x, segtree.range_concat(x, x + 1) + y);
-        } else if (com == 1) {
-            cout << segtree.range_concat(x, y) << endl;
+        int t, x, y; scanf("%d%d%d", &t, &x, &y);
+        if (t == 0) {
+            segtree.point_set(x, segtree.point_get(x) + y);
+        } else if (t == 1) {
+            int64_t answer = segtree.range_concat(x, y);
+            printf("%lld\n", answer);
         }
     }
     return 0;

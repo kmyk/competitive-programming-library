@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-30 22:32:43+09:00
 
 
 * a fast & semigroup-friendly version constructor
@@ -46,6 +46,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_add_range_sum.test.cpp.html">data_structure/segment_tree.point_add_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 
@@ -93,14 +94,21 @@ struct segment_tree {
         return mon.mult(lacc, racc);
     }
 
+    value_type point_get(int i) {  // 0-based
+        assert (0 <= i and i < n);
+        return a[i + n - 1];
+    }
+
     /**
      * @brief a fast & semigroup-friendly version constructor
      * @note $O(n)$
      */
-    segment_tree(const std::vector<value_type> & a_, const Monoid & mon_ = Monoid()) : mon(mon_) {
-        n = 1; while (n < a_.size()) n *= 2;
+    template <class InputIterator>
+    segment_tree(InputIterator first, InputIterator last, const Monoid & mon_ = Monoid()) : mon(mon_) {
+        int size = std::distance(first, last);
+        n = 1; while (n < size) n *= 2;
         a.resize(2 * n - 1, mon.unit());
-        std::copy(ALL(a_), a.begin() + (n - 1));
+        std::copy(first, last, a.begin() + (n - 1));
         unsafe_rebuild();
     }
     /**
@@ -172,14 +180,21 @@ struct segment_tree {
         return mon.mult(lacc, racc);
     }
 
+    value_type point_get(int i) {  // 0-based
+        assert (0 <= i and i < n);
+        return a[i + n - 1];
+    }
+
     /**
      * @brief a fast & semigroup-friendly version constructor
      * @note $O(n)$
      */
-    segment_tree(const std::vector<value_type> & a_, const Monoid & mon_ = Monoid()) : mon(mon_) {
-        n = 1; while (n < a_.size()) n *= 2;
+    template <class InputIterator>
+    segment_tree(InputIterator first, InputIterator last, const Monoid & mon_ = Monoid()) : mon(mon_) {
+        int size = std::distance(first, last);
+        n = 1; while (n < size) n *= 2;
         a.resize(2 * n - 1, mon.unit());
-        std::copy(ALL(a_), a.begin() + (n - 1));
+        std::copy(first, last, a.begin() + (n - 1));
         unsafe_rebuild();
     }
     /**

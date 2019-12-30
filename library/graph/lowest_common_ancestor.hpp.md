@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:14:44+09:00
+    - Last commit date: 2019-12-30 22:21:30+09:00
 
 
 * see: <a href="https://www.slideshare.net/yumainoue965/lca-and-rmq">https://www.slideshare.net/yumainoue965/lca-and-rmq</a>
@@ -86,7 +86,7 @@ struct lowest_common_ancestor {
     }
 private:
     /**
-     * @note to avoid stack overflow
+     * @note sometimes causes stack overflow without ulimit -s unlimited
      */
     void dfs(int x, int parent, int depth, std::vector<std::vector<int> > const & g, std::vector<std::pair<int, int> > & tour) {
         index[x] = tour.size();
@@ -223,7 +223,7 @@ struct lowest_common_ancestor {
     }
 private:
     /**
-     * @note to avoid stack overflow
+     * @note sometimes causes stack overflow without ulimit -s unlimited
      */
     void dfs(int x, int parent, int depth, std::vector<std::vector<int> > const & g, std::vector<std::pair<int, int> > & tour) {
         index[x] = tour.size();

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_set_range_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 19:00:42+09:00
+    - Last commit date: 2019-12-30 22:32:43+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -134,14 +134,21 @@ struct segment_tree {
         return mon.mult(lacc, racc);
     }
 
+    value_type point_get(int i) {  // 0-based
+        assert (0 <= i and i < n);
+        return a[i + n - 1];
+    }
+
     /**
      * @brief a fast & semigroup-friendly version constructor
      * @note $O(n)$
      */
-    segment_tree(const std::vector<value_type> & a_, const Monoid & mon_ = Monoid()) : mon(mon_) {
-        n = 1; while (n < a_.size()) n *= 2;
+    template <class InputIterator>
+    segment_tree(InputIterator first, InputIterator last, const Monoid & mon_ = Monoid()) : mon(mon_) {
+        int size = std::distance(first, last);
+        n = 1; while (n < size) n *= 2;
         a.resize(2 * n - 1, mon.unit());
-        std::copy(ALL(a_), a.begin() + (n - 1));
+        std::copy(first, last, a.begin() + (n - 1));
         unsafe_rebuild();
     }
     /**
