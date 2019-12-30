@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/union_find_tree.test.cpp
+# :heavy_check_mark: data_structure/union_find_tree.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-08-07 22:48:24+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.aoj.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-30 22:19:09+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A</a>
@@ -48,19 +48,18 @@ layout: default
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 #include "data_structure/union_find_tree.hpp"
-
-#include <iostream>
-using namespace std;
+#include <cstdio>
 
 int main() {
-    int n, q; cin >> n >> q;
+    int n, q; scanf("%d%d", &n, &q);
     union_find_tree uft(n);
     while (q --) {
-        int com, x, y; cin >> com >> x >> y;
+        int com, x, y; scanf("%d%d%d", &com, &x, &y);
         if (com == 0) {
             uft.unite_trees(x, y);
         } else if (com == 1) {
-            cout << uft.is_same(x, y) << endl;
+            bool answer = uft.is_same(x, y);
+            printf("%d\n", (int)answer);
         }
     }
     return 0;
@@ -72,7 +71,7 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "data_structure/union_find_tree.test.cpp"
+#line 1 "data_structure/union_find_tree.aoj.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 #line 2 "data_structure/union_find_tree.hpp"
 #include <vector>
@@ -99,20 +98,19 @@ struct union_find_tree {
     }
     bool is_same(int i, int j) { return find_root(i) == find_root(j); }
 };
-#line 3 "data_structure/union_find_tree.test.cpp"
-
-#include <iostream>
-using namespace std;
+#line 3 "data_structure/union_find_tree.aoj.test.cpp"
+#include <cstdio>
 
 int main() {
-    int n, q; cin >> n >> q;
+    int n, q; scanf("%d%d", &n, &q);
     union_find_tree uft(n);
     while (q --) {
-        int com, x, y; cin >> com >> x >> y;
+        int com, x, y; scanf("%d%d%d", &com, &x, &y);
         if (com == 0) {
             uft.unite_trees(x, y);
         } else if (com == 1) {
-            cout << uft.is_same(x, y) << endl;
+            bool answer = uft.is_same(x, y);
+            printf("%d\n", (int)answer);
         }
     }
     return 0;

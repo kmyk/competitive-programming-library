@@ -25,21 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small>
+# :heavy_check_mark: data_structure/union_find_tree.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-03 23:38:29+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.yosupo.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-30 22:19:09+09:00
 
 
+* see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
 
 
-## Verified with
+## Depends on
 
-* :heavy_check_mark: <a href="../../verify/data_structure/union_find_tree.aoj.test.cpp.html">data_structure/union_find_tree.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/data_structure/union_find_tree.yosupo.test.cpp.html">data_structure/union_find_tree.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
 
 
 ## Code
@@ -47,31 +46,24 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#pragma once
-#include <vector>
+#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
+#include "data_structure/union_find_tree.hpp"
+#include <cstdio>
 
-/**
- * @brief a disjoint set structure
- * @note union-by-size + path-compression
- */
-struct union_find_tree {
-    std::vector<int> data;
-    union_find_tree() = default;
-    explicit union_find_tree(std::size_t n) : data(n, -1) {}
-    bool is_root(int i) { return data[i] < 0; }
-    int find_root(int i) { return is_root(i) ? i : (data[i] = find_root(data[i])); }
-    int tree_size(int i) { return - data[find_root(i)]; }
-    int unite_trees(int i, int j) {
-        i = find_root(i); j = find_root(j);
-        if (i != j) {
-            if (tree_size(i) < tree_size(j)) std::swap(i, j);
-            data[i] += data[j];
-            data[j] = i;
+int main() {
+    int n, q; scanf("%d%d", &n, &q);
+    union_find_tree uft(n);
+    while (q --) {
+        int t, u, v; scanf("%d%d%d", &t, &u, &v);
+        if (t == 0) {
+            uft.unite_trees(u, v);
+        } else if (t == 1) {
+            bool answer = uft.is_same(u, v);
+            printf("%d\n", (int)answer);
         }
-        return i;
     }
-    bool is_same(int i, int j) { return find_root(i) == find_root(j); }
-};
+    return 0;
+}
 
 ```
 {% endraw %}
@@ -79,6 +71,8 @@ struct union_find_tree {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "data_structure/union_find_tree.yosupo.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 #line 2 "data_structure/union_find_tree.hpp"
 #include <vector>
 
@@ -104,6 +98,23 @@ struct union_find_tree {
     }
     bool is_same(int i, int j) { return find_root(i) == find_root(j); }
 };
+#line 3 "data_structure/union_find_tree.yosupo.test.cpp"
+#include <cstdio>
+
+int main() {
+    int n, q; scanf("%d%d", &n, &q);
+    union_find_tree uft(n);
+    while (q --) {
+        int t, u, v; scanf("%d%d%d", &t, &u, &v);
+        if (t == 0) {
+            uft.unite_trees(u, v);
+        } else if (t == 1) {
+            bool answer = uft.is_same(u, v);
+            printf("%d\n", (int)answer);
+        }
+    }
+    return 0;
+}
 
 ```
 {% endraw %}
