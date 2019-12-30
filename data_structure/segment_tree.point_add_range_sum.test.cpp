@@ -7,7 +7,6 @@
 #include <vector>
 using namespace std;
 
-constexpr int MOD = 998244353;
 int main() {
     int n, q; scanf("%d%d", &n, &q);
     vector<int64_t> a(n);
