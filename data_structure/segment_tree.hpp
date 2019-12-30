@@ -36,14 +36,21 @@ struct segment_tree {
         return mon.mult(lacc, racc);
     }
 
+    value_type point_get(int i) {  // 0-based
+        assert (0 <= i and i < n);
+        return a[i + n - 1];
+    }
+
     /**
      * @brief a fast & semigroup-friendly version constructor
      * @note $O(n)$
      */
-    segment_tree(const std::vector<value_type> & a_, const Monoid & mon_ = Monoid()) : mon(mon_) {
-        n = 1; while (n < a_.size()) n *= 2;
+    template <class InputIterator>
+    segment_tree(InputIterator first, InputIterator last, const Monoid & mon_ = Monoid()) : mon(mon_) {
+        int size = std::distance(first, last);
+        n = 1; while (n < size) n *= 2;
         a.resize(2 * n - 1, mon.unit());
-        std::copy(ALL(a_), a.begin() + (n - 1));
+        std::copy(first, last, a.begin() + (n - 1));
         unsafe_rebuild();
     }
     /**
