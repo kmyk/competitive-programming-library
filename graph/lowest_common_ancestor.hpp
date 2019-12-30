@@ -29,7 +29,7 @@ struct lowest_common_ancestor {
     }
 private:
     /**
-     * @note to avoid stack overflow
+     * @note sometimes causes stack overflow without ulimit -s unlimited
      */
     void dfs(int x, int parent, int depth, std::vector<std::vector<int> > const & g, std::vector<std::pair<int, int> > & tour) {
         index[x] = tour.size();
