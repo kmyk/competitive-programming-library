@@ -25,15 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/topological-sort.inc.cpp
+# :heavy_check_mark: graph/topological_sort.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
-* <a href="{{ site.github.repository_url }}/blob/master/graph/topological-sort.inc.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-05-24 16:32:35+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/graph/topological_sort.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-30 23:14:29+09:00
 
 
+
+
+## Depends on
+
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
 
 
 ## Code
@@ -41,18 +51,24 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#pragma once
+#include <algorithm>
+#include <functional>
+#include <vector>
+#include "utils/macros.hpp"
+
 /**
  * @return a list of vertices which sorted topologically
  * @note the empty list is returned if cycles exist
- * @note O(V + E)
+ * @note $O(V + E)$
  */
-vector<int> topological_sort(const vector<vector<int> > & g_rev) {
-    int n = g_rev.size();
-    vector<int> order;
-    vector<char> used(n);
-    function<bool (int)> go = [&](int i) {
+std::vector<int> topological_sort(const std::vector<std::vector<int> > & g) {
+    int n = g.size();
+    std::vector<int> order;
+    std::vector<char> used(n);
+    std::function<bool (int)> go = [&](int i) {
         used[i] = 1;  // in stack
-        for (int j : g_rev[i]) {
+        for (int j : g[i]) {
             if (used[j] == 1) return true;
             if (not used[j]) {
                 if (go(j)) return true;
@@ -63,22 +79,10 @@ vector<int> topological_sort(const vector<vector<int> > & g_rev) {
         return false;
     };
     REP (i, n) if (not used[i]) {
-        if (go(i)) return vector<int>();
+        if (go(i)) return std::vector<int>();
     }
+    std::reverse(ALL(order));
     return order;
-}
-
-/**
- * @note you can use std::reverse instead of this
- */
-vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
-    vector<vector<int> > g_rev(g.size());
-    REP (i, g.size()) {
-        for (int j : g[i]) {
-            g_rev[j].push_back(i);
-        }
-    }
-    return g_rev;
 }
 
 ```
@@ -87,19 +91,30 @@ vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "graph/topological-sort.inc.cpp"
+#line 2 "graph/topological_sort.hpp"
+#include <algorithm>
+#include <functional>
+#include <vector>
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
+#line 6 "graph/topological_sort.hpp"
+
 /**
  * @return a list of vertices which sorted topologically
  * @note the empty list is returned if cycles exist
- * @note O(V + E)
+ * @note $O(V + E)$
  */
-vector<int> topological_sort(const vector<vector<int> > & g_rev) {
-    int n = g_rev.size();
-    vector<int> order;
-    vector<char> used(n);
-    function<bool (int)> go = [&](int i) {
+std::vector<int> topological_sort(const std::vector<std::vector<int> > & g) {
+    int n = g.size();
+    std::vector<int> order;
+    std::vector<char> used(n);
+    std::function<bool (int)> go = [&](int i) {
         used[i] = 1;  // in stack
-        for (int j : g_rev[i]) {
+        for (int j : g[i]) {
             if (used[j] == 1) return true;
             if (not used[j]) {
                 if (go(j)) return true;
@@ -110,22 +125,10 @@ vector<int> topological_sort(const vector<vector<int> > & g_rev) {
         return false;
     };
     REP (i, n) if (not used[i]) {
-        if (go(i)) return vector<int>();
+        if (go(i)) return std::vector<int>();
     }
+    std::reverse(ALL(order));
     return order;
-}
-
-/**
- * @note you can use std::reverse instead of this
- */
-vector<vector<int> > opposite_graph(const vector<vector<int> > & g) {
-    vector<vector<int> > g_rev(g.size());
-    REP (i, g.size()) {
-        for (int j : g[i]) {
-            g_rev[j].push_back(i);
-        }
-    }
-    return g_rev;
 }
 
 ```

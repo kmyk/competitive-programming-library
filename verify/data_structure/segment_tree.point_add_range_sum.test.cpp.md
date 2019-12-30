@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_add_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:32:43+09:00
+    - Last commit date: 2019-12-30 22:34:48+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
@@ -57,7 +57,6 @@ layout: default
 #include <vector>
 using namespace std;
 
-constexpr int MOD = 998244353;
 int main() {
     int n, q; scanf("%d%d", &n, &q);
     vector<int64_t> a(n);
@@ -178,7 +177,6 @@ struct plus_monoid {
 #include <vector>
 using namespace std;
 
-constexpr int MOD = 998244353;
 int main() {
     int n, q; scanf("%d%d", &n, &q);
     vector<int64_t> a(n);

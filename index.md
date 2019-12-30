@@ -105,10 +105,12 @@ layout: default
 * :warning: <a href="library/graph/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(graph/minimum-cost-flow.inc.cpp)</small></a>
 * :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
 * :warning: <a href="library/graph/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路 <small>(graph/namori-graph.inc.cpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
-* :warning: <a href="library/graph/strongly_connected_components.cpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.cpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :warning: <a href="library/graph/topological-sort.inc.cpp.html">graph/topological-sort.inc.cpp</a>
+* :heavy_check_mark: <a href="library/graph/topological_sort.hpp.html">graph/topological_sort.hpp</a>
+* :heavy_check_mark: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
 * :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(graph/tree-dp.inc.cpp)</small></a>
 * :warning: <a href="library/graph/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(graph/two-edge-connected-components.inc.cpp)</small></a>
 * :warning: <a href="library/graph/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(graph/two-node-connected-components.inc.cpp)</small></a>
@@ -254,6 +256,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
