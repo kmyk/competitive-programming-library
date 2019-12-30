@@ -149,14 +149,14 @@ layout: default
 * :heavy_check_mark: <a href="library/monoids/left.hpp.html">monoids/left.hpp</a>
 * :warning: <a href="library/monoids/left_action.hpp.html">monoids/left_action.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
-* :warning: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
 * :warning: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus.hpp.html">monoids/plus.hpp</a>
-* :warning: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
 * :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :warning: <a href="library/monoids/plus_min_count_action.hpp.html">monoids/plus_min_count_action.hpp</a>
@@ -242,6 +242,7 @@ layout: default
 
 * :heavy_check_mark: <a href="verify/data_structure/convex_hull_trick.line_add_get_min.test.cpp.html">data_structure/convex_hull_trick.line_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/li_chao_tree.segment_add_get_min.test.cpp.html">data_structure/li_chao_tree.segment_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
