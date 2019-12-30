@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2019-12-30 22:14:44+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C</a>
@@ -38,9 +38,9 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -52,18 +52,18 @@ layout: default
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C"
 
 #include "graph/lowest_common_ancestor.hpp"
-#include <cassert>
-#include <iostream>
+#include <cstdio>
+#include <vector>
 using namespace std;
 
 int main() {
     // read a tree
-    int n; cin >> n;
+    int n; scanf("%d", &n);
     vector<vector<int> > g(n);
     REP (i, n) {
-        int k; cin >> k;
+        int k; scanf("%d", &k);
         REP (j, k) {
-            int c; cin >> c;
+            int c; scanf("%d", &c);
             g[i].push_back(c);
             g[c].push_back(i);
         }
@@ -74,10 +74,10 @@ int main() {
     lowest_common_ancestor lca(root, g);
 
     // answer to queries
-    int q; cin >> q;
+    int q; scanf("%d", &q);
     while (q --) {
-        int u, v; cin >> u >> v;
-        cout << lca(u, v) << endl;
+        int u, v; scanf("%d%d", &u, &v);
+        printf("%d\n", lca(u, v));
     }
     return 0;
 }
@@ -109,10 +109,10 @@ int main() {
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
- * @brief sparse table on a semilattice
+ * @brief a sparse table on a semilattice
  * @note a semilattice is a commutative idempotent semigroup
  * @note for convenience, it requires the unit
- * @note O(N log N) space
+ * @note $O(N \log N)$ space
  */
 template <class Semilattice>
 struct sparse_table {
@@ -120,11 +120,12 @@ struct sparse_table {
     std::vector<std::vector<value_type> > table;
     Semilattice lat;
     sparse_table() = default;
+
     /**
-     * @note O(N \log N) time
+     * @note $O(N \log N)$ time
      */
-    sparse_table(std::vector<value_type> const & data, Semilattice const & a_lat = Semilattice())
-            : lat(a_lat) {
+    sparse_table(std::vector<value_type> const & data, Semilattice const & lat_ = Semilattice())
+            : lat(lat_) {
         int n = data.size();
         int log_n = 32 - __builtin_clz(n);
         table.resize(log_n, std::vector<value_type>(n));
@@ -132,68 +133,38 @@ struct sparse_table {
         REP (k, log_n - 1) {
             REP (i, n) {
                 table[k + 1][i] = i + (1ll << k) < n ?
-                    lat.append(table[k][i], table[k][i + (1ll << k)]) :
+                    lat.mult(table[k][i], table[k][i + (1ll << k)]) :
                     table[k][i];
             }
         }
     }
+
     /**
-     * @note O(1)
+     * @note $O(1)$
      */
     value_type range_concat(int l, int r) const {
         if (l == r) return lat.unit();  // if there is no unit, remove this line
         assert (0 <= l and l < r and r <= table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
-        return lat.append(table[k][l], table[k][r - (1ll << k)]);
+        return lat.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
-
-
+#line 2 "monoids/min_index.hpp"
 #include <algorithm>
 #include <climits>
-#line 2 "number/gcd.hpp"
-#include <algorithm>
+#include <limits>
+#include <utility>
 
 /**
- * @note if arguments are negative, the result may be negative
+ * @note a semilattice
  */
-template <typename T>
-T gcd(T a, T b) {
-    while (a) {
-        b %= a;
-        std::swap(a, b);
-    }
-    return b;
-}
-
-template <typename T>
-T lcm(T a, T b) {
-    return a / gcd(a, b) * b;
-}
-#line 50 "data_structure/sparse_table.hpp"
-
-struct max_semilattice {
-    typedef int value_type;
-    int unit() const { return INT_MIN; }
-    int append(int a, int b) const { return std::max(a, b); }
+template <class T>
+struct min_index_monoid {
+    typedef std::pair<T, int> value_type;
+    value_type unit() const { return std::make_pair(std::numeric_limits<T>::max(), INT_MAX); }
+    value_type mult(value_type a, value_type b) const { return std::min(a, b); }
 };
-struct min_semilattice {
-    typedef int value_type;
-    int unit() const { return INT_MAX; }
-    int append(int a, int b) const { return std::min(a, b); }
-};
-struct gcd_semilattice {
-    typedef int value_type;
-    int unit() const { return 0; }
-    int append(int a, int b) const { return gcd(a, b); }
-};
-
-struct indexed_min_semilattice {
-    typedef std::pair<int, int> value_type;
-    value_type unit() const { return { INT_MAX, INT_MAX }; }
-    value_type append(value_type a, value_type b) const { return std::min(a, b); }
-};
-#line 8 "graph/lowest_common_ancestor.hpp"
+#line 9 "graph/lowest_common_ancestor.hpp"
 
 /**
  * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
@@ -201,7 +172,7 @@ struct indexed_min_semilattice {
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */
 struct lowest_common_ancestor {
-    sparse_table<indexed_min_semilattice> table;
+    sparse_table<min_index_monoid<int> > table;
     std::vector<int> index;
     lowest_common_ancestor() = default;
     /**
@@ -213,7 +184,7 @@ struct lowest_common_ancestor {
         std::vector<std::pair<int, int> > tour;
         index.assign(g.size(), -1);
         dfs(root, -1, 0, g, tour);
-        table = sparse_table<indexed_min_semilattice>(tour);
+        table = sparse_table<min_index_monoid<int> >(tour);
     }
 private:
     /**
@@ -251,18 +222,18 @@ public:
     }
 };
 #line 4 "graph/lowest_common_ancestor.aoj.test.cpp"
-#include <cassert>
-#include <iostream>
+#include <cstdio>
+#include <vector>
 using namespace std;
 
 int main() {
     // read a tree
-    int n; cin >> n;
+    int n; scanf("%d", &n);
     vector<vector<int> > g(n);
     REP (i, n) {
-        int k; cin >> k;
+        int k; scanf("%d", &k);
         REP (j, k) {
-            int c; cin >> c;
+            int c; scanf("%d", &c);
             g[i].push_back(c);
             g[c].push_back(i);
         }
@@ -273,10 +244,10 @@ int main() {
     lowest_common_ancestor lca(root, g);
 
     // answer to queries
-    int q; cin >> q;
+    int q; scanf("%d", &q);
     while (q --) {
-        int u, v; cin >> u >> v;
-        cout << lca(u, v) << endl;
+        int u, v; scanf("%d%d", &u, &v);
+        printf("%d\n", lca(u, v));
     }
     return 0;
 }

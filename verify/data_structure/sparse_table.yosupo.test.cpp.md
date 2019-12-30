@@ -25,32 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small>
+# :heavy_check_mark: data_structure/sparse_table.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.hpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-30 22:14:44+09:00
 
 
+* see: <a href="https://judge.yosupo.jp/problem/staticrmq">https://judge.yosupo.jp/problem/staticrmq</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
-
-
-## Required by
-
-* :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -58,52 +48,34 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#pragma once
-#include <cassert>
-#include <vector>
+#define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
+#include "data_structure/sparse_table.hpp"
+
 #include "utils/macros.hpp"
+#include "monoids/min.hpp"
+#include <cstdio>
+#include <vector>
+using namespace std;
 
-/**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
- * @note $O(N \log N)$ space
- */
-template <class Semilattice>
-struct sparse_table {
-    typedef typename Semilattice::value_type value_type;
-    std::vector<std::vector<value_type> > table;
-    Semilattice lat;
-    sparse_table() = default;
-
-    /**
-     * @note $O(N \log N)$ time
-     */
-    sparse_table(std::vector<value_type> const & data, Semilattice const & lat_ = Semilattice())
-            : lat(lat_) {
-        int n = data.size();
-        int log_n = 32 - __builtin_clz(n);
-        table.resize(log_n, std::vector<value_type>(n));
-        table[0] = data;
-        REP (k, log_n - 1) {
-            REP (i, n) {
-                table[k + 1][i] = i + (1ll << k) < n ?
-                    lat.mult(table[k][i], table[k][i + (1ll << k)]) :
-                    table[k][i];
-            }
-        }
+int main() {
+    // input a sequence
+    int n, q; scanf("%d%d", &n, &q);
+    vector<int> a(n);
+    REP (i, n) {
+        scanf("%d", &a[i]);
     }
 
-    /**
-     * @note $O(1)$
-     */
-    value_type range_concat(int l, int r) const {
-        if (l == r) return lat.unit();  // if there is no unit, remove this line
-        assert (0 <= l and l < r and r <= table[0].size());
-        int k = 31 - __builtin_clz(r - l);  // log2
-        return lat.mult(table[k][l], table[k][r - (1ll << k)]);
+    // construct the sparse table
+    sparse_table<min_monoid<int> > st(a);
+
+    // answer to queries
+    while (q --) {
+        int l, r; scanf("%d%d", &l, &r);
+        int answer = st.range_concat(l, r);
+        printf("%d\n", answer);
     }
-};
+    return 0;
+}
 
 ```
 {% endraw %}
@@ -111,6 +83,8 @@ struct sparse_table {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "data_structure/sparse_table.yosupo.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
 #line 2 "data_structure/sparse_table.hpp"
 #include <cassert>
 #include <vector>
@@ -163,6 +137,42 @@ struct sparse_table {
         return lat.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
+#line 3 "data_structure/sparse_table.yosupo.test.cpp"
+
+#line 2 "monoids/min.hpp"
+#include <algorithm>
+#include <limits>
+
+template <class T>
+struct min_monoid {
+    typedef T value_type;
+    value_type unit() const { return std::numeric_limits<T>::max(); }
+    value_type mult(value_type a, value_type b) const { return std::min(a, b); }
+};
+#line 6 "data_structure/sparse_table.yosupo.test.cpp"
+#include <cstdio>
+#include <vector>
+using namespace std;
+
+int main() {
+    // input a sequence
+    int n, q; scanf("%d%d", &n, &q);
+    vector<int> a(n);
+    REP (i, n) {
+        scanf("%d", &a[i]);
+    }
+
+    // construct the sparse table
+    sparse_table<min_monoid<int> > st(a);
+
+    // answer to queries
+    while (q --) {
+        int l, r; scanf("%d%d", &l, &r);
+        int answer = st.range_concat(l, r);
+        printf("%d\n", answer);
+    }
+    return 0;
+}
 
 ```
 {% endraw %}

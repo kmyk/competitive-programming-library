@@ -67,7 +67,7 @@ layout: default
 * :warning: <a href="library/data_structure/skew-heap.inc.cpp.html">data_structure/skew-heap.inc.cpp</a>
 * :warning: <a href="library/data_structure/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(data_structure/sliding-window.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
 * :warning: <a href="library/data_structure/treap.inc.cpp.html">data_structure/treap.inc.cpp</a>
 * :warning: <a href="library/data_structure/trie-tree.inc.cpp.html">data_structure/trie-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
@@ -101,7 +101,6 @@ layout: default
 * :warning: <a href="library/graph/euler-tour.inc.cpp.html">euler tour <small>(graph/euler-tour.inc.cpp)</small></a>
 * :warning: <a href="library/graph/ford-fulkerson.inc.cpp.html">graph/ford-fulkerson.inc.cpp</a>
 * :warning: <a href="library/graph/heavy_light_decomposition.inc.cpp.html">heavy light decomposition / 重軽分解 <small>(graph/heavy_light_decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/graph/lowest-common-ancestor-doubling.inc.cpp.html">lowest common ancestor with doubling <small>(graph/lowest-common-ancestor-doubling.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :warning: <a href="library/graph/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(graph/minimum-cost-flow.inc.cpp)</small></a>
 * :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
@@ -143,6 +142,7 @@ layout: default
 ### monoids
 
 * :heavy_check_mark: <a href="library/monoids/dual.hpp.html">monoids/dual.hpp</a>
+* :warning: <a href="library/monoids/gcd.hpp.html">monoids/gcd.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/left.hpp.html">monoids/left.hpp</a>
 * :warning: <a href="library/monoids/left_action.hpp.html">monoids/left_action.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
@@ -151,6 +151,7 @@ layout: default
 * :warning: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :warning: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
 * :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
@@ -171,7 +172,7 @@ layout: default
 * :warning: <a href="library/number/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation <small>(number/fast-mobius-transformation.inc.cpp)</small></a>
 * :warning: <a href="library/number/fast_fourier_transformation.hpp.html">the convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
-* :heavy_check_mark: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :warning: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
 * :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
 * :warning: <a href="library/number/matrix.inc.cpp.html">number/matrix.inc.cpp</a>
 * :warning: <a href="library/number/matrix_template.hpp.html">number/matrix_template.hpp</a>
@@ -244,11 +245,13 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/union_find_tree.test.cpp.html">data_structure/union_find_tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.aoj2674.test.cpp.html">data_structure/wavelet_matrix.aoj2674.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>

@@ -25,26 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoids/min.hpp
+# :warning: monoids/gcd.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
-* <a href="{{ site.github.repository_url }}/blob/master/monoids/min.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/monoids/gcd.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-30 22:14:44+09:00
 
 
 
 
-## Required by
+## Depends on
 
-* :heavy_check_mark: <a href="plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
+* :warning: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
 
 
 ## Code
@@ -53,14 +47,15 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
-#include <algorithm>
-#include <limits>
+#include "number/gcd.hpp"
 
-template <class T>
-struct min_monoid {
-    typedef T value_type;
-    value_type unit() const { return std::numeric_limits<T>::max(); }
-    value_type mult(value_type a, value_type b) const { return std::min(a, b); }
+/**
+ * @note a semilattice
+ */
+struct gcd_monoid {
+    typedef int value_type;
+    int unit() const { return 0; }
+    int mult(int a, int b) const { return gcd(a, b); }
 };
 
 ```
@@ -69,15 +64,34 @@ struct min_monoid {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "monoids/min.hpp"
+#line 2 "number/gcd.hpp"
 #include <algorithm>
-#include <limits>
 
-template <class T>
-struct min_monoid {
-    typedef T value_type;
-    value_type unit() const { return std::numeric_limits<T>::max(); }
-    value_type mult(value_type a, value_type b) const { return std::min(a, b); }
+/**
+ * @note if arguments are negative, the result may be negative
+ */
+template <typename T>
+T gcd(T a, T b) {
+    while (a) {
+        b %= a;
+        std::swap(a, b);
+    }
+    return b;
+}
+
+template <typename T>
+T lcm(T a, T b) {
+    return a / gcd(a, b) * b;
+}
+#line 3 "monoids/gcd.hpp"
+
+/**
+ * @note a semilattice
+ */
+struct gcd_monoid {
+    typedef int value_type;
+    int unit() const { return 0; }
+    int mult(int a, int b) const { return gcd(a, b); }
 };
 
 ```
