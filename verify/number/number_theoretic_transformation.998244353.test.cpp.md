@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.998244353.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-26 23:56:34+09:00
+    - Last commit date: 2019-12-31 01:41:19+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/convolution_mod">https://judge.yosupo.jp/problem/convolution_mod</a>
@@ -115,9 +115,9 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
 #include <algorithm>
 #include <cassert>
 
-inline int32_t modinv(int32_t value, int32_t MOD) {
+inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
-    assert (value != 0);
+    if (value == 0) return -1;
     int64_t a = value, b = MOD;
     int64_t x = 0, y = 1;
     for (int64_t u = 1, v = 0; a; ) {
@@ -126,10 +126,16 @@ inline int32_t modinv(int32_t value, int32_t MOD) {
         y -= q * v; std::swap(y, v);
         b -= q * a; std::swap(b, a);
     }
-    assert (value * x + MOD * y == b and b == 1);
+    if (not (value * x + MOD * y == b and b == 1)) return -1;
     if (x < 0) x += MOD;
     assert (0 <= x and x < MOD);
     return x;
+}
+
+inline int32_t modinv(int32_t x, int32_t MOD) {
+    int32_t y = modinv_nocheck(x, MOD);
+    assert (y != -1);
+    return y;
 }
 #line 7 "modulus/mint.hpp"
 
