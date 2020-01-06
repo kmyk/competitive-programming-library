@@ -6,7 +6,7 @@
 #include <tuple>
 #include <vector>
 #include "modulus/mint.hpp"
-#include "number/number_theoretic_transformation.hpp"
+#include "modulus/number_theoretic_transformation.hpp"
 #include "utils/macros.hpp"
 
 template <class T>

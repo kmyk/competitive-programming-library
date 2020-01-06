@@ -1,5 +1,5 @@
-#include "number/formal_power_series.hpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/log_of_formal_power_series"
+#include "modulus/formal_power_series.hpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/exp_of_formal_power_series"
 
 #include <cstdio>
 #include <vector>
@@ -16,7 +16,7 @@ int main() {
     }
 
     // solve
-    vector<mint<MOD> > b = formal_power_series<mint<MOD> >(a).log(n).data();
+    vector<mint<MOD> > b = formal_power_series<mint<MOD> >(a).exp(n).data();
     b.resize(n);
 
     // output

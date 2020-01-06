@@ -1,4 +1,4 @@
-#include "number/number_theoretic_transformation.hpp"
+#include "modulus/number_theoretic_transformation.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
 
 #include <vector>
