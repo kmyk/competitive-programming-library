@@ -25,31 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/formal_power_series.hpp
+# :heavy_check_mark: modulus/number_theoretic_transformation.998244353.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
-* <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation.998244353.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-01-07 07:13:17+09:00
 
 
+* see: <a href="https://judge.yosupo.jp/problem/convolution_mod">https://judge.yosupo.jp/problem/convolution_mod</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="../modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(modulus/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/fastio_printer.hpp.html">utils/fastio_printer.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/fastio_scanner.hpp.html">utils/fastio_scanner.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -57,106 +52,42 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#pragma once
-#include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <initializer_list>
-#include <tuple>
+#include "modulus/number_theoretic_transformation.hpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
+
 #include <vector>
-#include "modulus/mint.hpp"
-#include "number/number_theoretic_transformation.hpp"
 #include "utils/macros.hpp"
+#include "utils/fastio_scanner.hpp"
+#include "utils/fastio_printer.hpp"
 
-template <class T>
-struct formal_power_series {
-    std::vector<T> a;
+constexpr int MOD = 998244353;
+int main() {
+    scanner sc;
+    printer pr;
 
-    inline size_t size() const { return a.size(); }
-    inline bool empty() const { return a.empty(); }
-    inline T at(int i) const { return (i < size() ? a[i] : T(0)); }
-    inline const std::vector<T> & data() const { return a; }
-
-    formal_power_series() = default;
-    formal_power_series(const std::vector<T> & a_) : a(a_) { shrink(); }
-    formal_power_series(const std::initializer_list<T> & init) : a(init) { shrink(); }
-    template <class Iterator>
-    formal_power_series(Iterator first, Iterator last) : a(first, last) { shrink(); }
-    void shrink() { while (not a.empty() and a.back().value == 0) a.pop_back(); }
-
-    inline formal_power_series<T> operator + (const formal_power_series<T> & other) const {
-        return formal_power_series<T>(a) += other;
+    // input
+    int n = sc.get<int32_t>();
+    int m = sc.get<int32_t>();
+    std::vector<mint<MOD> > a(n);
+    REP (i, n) {
+        a[i].value = sc.get<int32_t>();
     }
-    inline formal_power_series<T> operator - (const formal_power_series<T> & other) const {
-        return formal_power_series<T>(a) -= other;
-    }
-    inline formal_power_series<T> & operator += (const formal_power_series<T> & other) {
-        if (a.size() < other.a.size()) a.resize(other.a.size(), T(0));
-        REP (i, other.a.size()) a[i] += other.a[i];
-        return *this;
-    }
-    inline formal_power_series<T> & operator -= (const formal_power_series<T> & other) {
-        if (a.size() < other.a.size()) a.resize(other.a.size(), T(0));
-        REP (i, other.a.size()) a[i] -= other.a[i];
-        return *this;
-    }
-    inline formal_power_series<T> operator * (const formal_power_series<T> & other) const {
-        return formal_power_series<T>(ntt_convolution(a, other.a));
-    }
-    inline formal_power_series<T> operator * (T b) {
-        return formal_power_series<T>(a) *= b;
-    }
-    inline formal_power_series<T> & operator *= (T b) {
-        REP (i, size()) a[i] *= b;
-        return *this;
+    std::vector<mint<MOD> > b(m);
+    REP (j, m) {
+        b[j].value = sc.get<int32_t>();
     }
 
-    inline formal_power_series<T> integral() const {
-        std::vector<T> b(size() + 1);
-        REP (i, size()) {
-            b[i + 1] = a[i] / (i + 1);
-        }
-        return b;
-    }
-    inline formal_power_series<T> differential() const {
-        if (empty()) return *this;
-        std::vector<T> b(size() - 1);
-        REP (i, size() - 1) {
-            b[i] = a[i + 1] * (i + 1);
-        }
-        return b;
-    }
-    inline formal_power_series<T> modulo_x_to(int k) const {
-        return formal_power_series<T>(a.begin(), a.begin() + std::min<int>(size(), k));
-    }
+    // solve
+    std::vector<mint<MOD> > c = ntt_convolution(a, b);
 
-    formal_power_series<T> inv(int n) const {
-        assert (at(0) != 0);
-        formal_power_series<T> res { at(0).inv() };
-        for (int i = 1; i < n; i *= 2) {
-            res = (res * T(2) - res * res * modulo_x_to(2 * i)).modulo_x_to(2 * i);
-        }
-        return res.modulo_x_to(n);
+    // output
+    REP (i, n + m - 1) {
+        pr.put(c[i].value);
+        pr.put<char>(' ');
     }
-    formal_power_series<T> exp(int n) const {
-        formal_power_series<T> f{ 1 };
-        formal_power_series<T> g{ 1 };
-        for (int i = 1; i < n; i *= 2) {
-            g = (g * 2 - f * g * g).modulo_x_to(i);
-            formal_power_series<T> q = differential().modulo_x_to(i - 1);
-            formal_power_series<T> w = (q + g * (f.differential() - f * q)).modulo_x_to(2 * i - 1);
-            f = (f + f * (*this - w.integral()).modulo_x_to(2 * i)).modulo_x_to(2 * i);
-        }
-        return f.modulo_x_to(n);
-    }
-    inline formal_power_series<T> log(int n) const {
-        assert (at(0) == 1);
-        return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
-    }
-    inline formal_power_series<T> pow(int k, int n) const {
-        return (this->log(n) * k).exp(n);
-    }
-};
+    pr.put<char>('\n');
+    return 0;
+}
 
 ```
 {% endraw %}
@@ -164,11 +95,10 @@ struct formal_power_series {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "number/formal_power_series.hpp"
+#line 2 "modulus/number_theoretic_transformation.hpp"
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
-#include <initializer_list>
 #include <tuple>
 #include <vector>
 #line 2 "modulus/mint.hpp"
@@ -241,19 +171,13 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "number/number_theoretic_transformation.hpp"
-#include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <tuple>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
-#line 9 "number/number_theoretic_transformation.hpp"
+#line 9 "modulus/number_theoretic_transformation.hpp"
 
 template <int32_t PRIME> struct proth_prime {};
 template <> struct proth_prime<1224736769> { static constexpr int a =             73, b = 24, g =  3; };
@@ -430,97 +354,169 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
     }
     return c;
 }
-#line 11 "number/formal_power_series.hpp"
+#line 2 "modulus/number_theoretic_transformation.998244353.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
 
-template <class T>
-struct formal_power_series {
-    std::vector<T> a;
+#include <vector>
+#line 2 "utils/fastio_scanner.hpp"
+#include <algorithm>
+#include <cassert>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <type_traits>
+#include <unistd.h>
 
-    inline size_t size() const { return a.size(); }
-    inline bool empty() const { return a.empty(); }
-    inline T at(int i) const { return (i < size() ? a[i] : T(0)); }
-    inline const std::vector<T> & data() const { return a; }
-
-    formal_power_series() = default;
-    formal_power_series(const std::vector<T> & a_) : a(a_) { shrink(); }
-    formal_power_series(const std::initializer_list<T> & init) : a(init) { shrink(); }
-    template <class Iterator>
-    formal_power_series(Iterator first, Iterator last) : a(first, last) { shrink(); }
-    void shrink() { while (not a.empty() and a.back().value == 0) a.pop_back(); }
-
-    inline formal_power_series<T> operator + (const formal_power_series<T> & other) const {
-        return formal_power_series<T>(a) += other;
+class scanner {
+    static constexpr int N = 65536;
+    static constexpr int K = 64;
+    char buf[K + N];
+    int l = 0;
+    int r = 0;
+    void flush() {
+        if (K < r - l) return;
+        memmove(buf + K - (r - l), buf + l, r - l);
+        l = K - (r - l);
+        r = K + read(STDIN_FILENO, buf + K, N);
+        assert (l < r);
     }
-    inline formal_power_series<T> operator - (const formal_power_series<T> & other) const {
-        return formal_power_series<T>(a) -= other;
-    }
-    inline formal_power_series<T> & operator += (const formal_power_series<T> & other) {
-        if (a.size() < other.a.size()) a.resize(other.a.size(), T(0));
-        REP (i, other.a.size()) a[i] += other.a[i];
-        return *this;
-    }
-    inline formal_power_series<T> & operator -= (const formal_power_series<T> & other) {
-        if (a.size() < other.a.size()) a.resize(other.a.size(), T(0));
-        REP (i, other.a.size()) a[i] -= other.a[i];
-        return *this;
-    }
-    inline formal_power_series<T> operator * (const formal_power_series<T> & other) const {
-        return formal_power_series<T>(ntt_convolution(a, other.a));
-    }
-    inline formal_power_series<T> operator * (T b) {
-        return formal_power_series<T>(a) *= b;
-    }
-    inline formal_power_series<T> & operator *= (T b) {
-        REP (i, size()) a[i] *= b;
-        return *this;
-    }
-
-    inline formal_power_series<T> integral() const {
-        std::vector<T> b(size() + 1);
-        REP (i, size()) {
-            b[i + 1] = a[i] / (i + 1);
+    void prepare() {
+        flush();
+        while (isspace(buf[l])) {
+            ++ l;
+            flush();
         }
-        return b;
     }
-    inline formal_power_series<T> differential() const {
-        if (empty()) return *this;
-        std::vector<T> b(size() - 1);
-        REP (i, size() - 1) {
-            b[i] = a[i + 1] * (i + 1);
+public:
+    scanner() = default;
+    scanner(const scanner &) = delete;
+    scanner & operator = (const scanner &) = delete;
+    template <class Char, std::enable_if_t<std::is_same<Char, char>::value, int> = 0>
+    inline char get() {
+        prepare();
+        return buf[l ++];
+    }
+    template <class String, std::enable_if_t<std::is_same<String, std::string>::value, int> = 0>
+    std::string get() {
+        prepare();
+        std::string s;
+        do {
+            s.push_back(buf[l ++]);
+            if (r == l) flush();
+        } while (not isspace(buf[l]));
+        return s;
+    }
+    template <class Integer, std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
+    Integer get() {
+        prepare();
+        bool is_negative = false;
+        if (std::is_signed<Integer>::value and buf[l] == '-') {
+            is_negative = true;
+            ++ l;
         }
-        return b;
-    }
-    inline formal_power_series<T> modulo_x_to(int k) const {
-        return formal_power_series<T>(a.begin(), a.begin() + std::min<int>(size(), k));
-    }
-
-    formal_power_series<T> inv(int n) const {
-        assert (at(0) != 0);
-        formal_power_series<T> res { at(0).inv() };
-        for (int i = 1; i < n; i *= 2) {
-            res = (res * T(2) - res * res * modulo_x_to(2 * i)).modulo_x_to(2 * i);
+        Integer x = 0;
+        while (l < r and '0' <= buf[l] and buf[l] <= '9') {
+            x *= 10;
+            x += buf[l] - '0';
+            ++ l;
         }
-        return res.modulo_x_to(n);
-    }
-    formal_power_series<T> exp(int n) const {
-        formal_power_series<T> f{ 1 };
-        formal_power_series<T> g{ 1 };
-        for (int i = 1; i < n; i *= 2) {
-            g = (g * 2 - f * g * g).modulo_x_to(i);
-            formal_power_series<T> q = differential().modulo_x_to(i - 1);
-            formal_power_series<T> w = (q + g * (f.differential() - f * q)).modulo_x_to(2 * i - 1);
-            f = (f + f * (*this - w.integral()).modulo_x_to(2 * i)).modulo_x_to(2 * i);
+        if (std::is_signed<Integer>::value and is_negative) {
+            x *= -1;
         }
-        return f.modulo_x_to(n);
-    }
-    inline formal_power_series<T> log(int n) const {
-        assert (at(0) == 1);
-        return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
-    }
-    inline formal_power_series<T> pow(int k, int n) const {
-        return (this->log(n) * k).exp(n);
+        return x;
     }
 };
+#line 2 "utils/fastio_printer.hpp"
+#include <algorithm>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <type_traits>
+#include <unistd.h>
+
+class printer {
+    static constexpr int N = 65536;
+    static constexpr int K = 64;
+    char buf[N];
+    int i = 0;
+    inline void flush() {
+        write(STDOUT_FILENO, buf, i);
+        i = 0;
+    }
+public:
+    printer() = default;
+    printer(const printer &) = delete;
+    printer & operator = (const printer &) = delete;
+    ~printer() {
+        flush();
+    }
+    template <class Char, std::enable_if_t<std::is_same<Char, char>::value, int> = 0>
+    inline void put(char c) {
+        if (i == N) flush();
+        buf[i ++] = c;
+    }
+    template <class String, std::enable_if_t<std::is_same<String, std::string>::value, int> = 0>
+    void put(const std::string & s) {
+        for (int l = 0; l < (int)s.length(); ) {
+            if (i == N) flush();
+            int r = std::min<int>(s.length(), l + (N - i));
+            memcpy(buf + i, s.data() + l, r - l);
+            i += r - l;
+            l = r;
+        }
+    }
+    template <class Integer, std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
+    void put(Integer x) {
+        if (N - i < K) flush();
+        if (std::is_signed<Integer>::value and x < 0) {
+            x *= -1;
+            buf[i ++] = '-';
+        }
+        if (x == 0) {
+            buf[i ++] = '0';
+            return;
+        }
+        char s[K];
+        int j = 0;
+        while (x) {
+            s[j ++] = x % 10 + '0';
+            x /= 10;
+        }
+        while (j) {
+            buf[i ++] = s[-- j];
+        }
+    }
+};
+#line 8 "modulus/number_theoretic_transformation.998244353.test.cpp"
+
+constexpr int MOD = 998244353;
+int main() {
+    scanner sc;
+    printer pr;
+
+    // input
+    int n = sc.get<int32_t>();
+    int m = sc.get<int32_t>();
+    std::vector<mint<MOD> > a(n);
+    REP (i, n) {
+        a[i].value = sc.get<int32_t>();
+    }
+    std::vector<mint<MOD> > b(m);
+    REP (j, m) {
+        b[j].value = sc.get<int32_t>();
+    }
+
+    // solve
+    std::vector<mint<MOD> > c = ntt_convolution(a, b);
+
+    // output
+    REP (i, n + m - 1) {
+        pr.put(c[i].value);
+        pr.put<char>(' ');
+    }
+    pr.put<char>('\n');
+    return 0;
+}
 
 ```
 {% endraw %}

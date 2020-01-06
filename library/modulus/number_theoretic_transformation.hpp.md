@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small>
+# :heavy_check_mark: a specialized version of Garner's algorithm <small>(modulus/number_theoretic_transformation.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
-* <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-01-07 07:13:17+09:00
 
 
 * the convolution on Z/pZ
@@ -39,23 +39,23 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="../modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by
 
-* :heavy_check_mark: <a href="formal_power_series.hpp.html">number/formal_power_series.hpp</a>
+* :heavy_check_mark: <a href="formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.exp.test.cpp.html">number/formal_power_series.exp.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.inv.test.cpp.html">number/formal_power_series.inv.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/formal_power_series.log.test.cpp.html">number/formal_power_series.log.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/number/number_theoretic_transformation.998244353.test.cpp.html">number/number_theoretic_transformation.998244353.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation.998244353.test.cpp.html">modulus/number_theoretic_transformation.998244353.test.cpp</a>
 
 
 ## Code
@@ -254,7 +254,7 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "number/number_theoretic_transformation.hpp"
+#line 2 "modulus/number_theoretic_transformation.hpp"
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
@@ -336,7 +336,7 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
-#line 9 "number/number_theoretic_transformation.hpp"
+#line 9 "modulus/number_theoretic_transformation.hpp"
 
 template <int32_t PRIME> struct proth_prime {};
 template <> struct proth_prime<1224736769> { static constexpr int a =             73, b = 24, g =  3; };

@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/formal_power_series.log.test.cpp
+# :heavy_check_mark: modulus/formal_power_series.log.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/number/formal_power_series.log.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/formal_power_series.log.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-01-07 07:13:17+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/log_of_formal_power_series">https://judge.yosupo.jp/problem/log_of_formal_power_series</a>
@@ -38,11 +38,11 @@ layout: default
 
 ## Depends on
 
+* :heavy_check_mark: <a href="../../library/modulus/formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="../../library/number/formal_power_series.hpp.html">number/formal_power_series.hpp</a>
-* :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(modulus/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -51,7 +51,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#include "number/formal_power_series.hpp"
+#include "modulus/formal_power_series.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/log_of_formal_power_series"
 
 #include <cstdio>
@@ -86,7 +86,7 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "number/formal_power_series.hpp"
+#line 2 "modulus/formal_power_series.hpp"
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
@@ -163,7 +163,7 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "number/number_theoretic_transformation.hpp"
+#line 2 "modulus/number_theoretic_transformation.hpp"
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
@@ -175,7 +175,7 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
-#line 9 "number/number_theoretic_transformation.hpp"
+#line 9 "modulus/number_theoretic_transformation.hpp"
 
 template <int32_t PRIME> struct proth_prime {};
 template <> struct proth_prime<1224736769> { static constexpr int a =             73, b = 24, g =  3; };
@@ -352,7 +352,7 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
     }
     return c;
 }
-#line 11 "number/formal_power_series.hpp"
+#line 11 "modulus/formal_power_series.hpp"
 
 template <class T>
 struct formal_power_series {
@@ -443,12 +443,12 @@ struct formal_power_series {
         return (this->log(n) * k).exp(n);
     }
 };
-#line 2 "number/formal_power_series.log.test.cpp"
+#line 2 "modulus/formal_power_series.log.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/log_of_formal_power_series"
 
 #include <cstdio>
 #include <vector>
-#line 7 "number/formal_power_series.log.test.cpp"
+#line 7 "modulus/formal_power_series.log.test.cpp"
 using namespace std;
 
 constexpr int MOD = 998244353;
