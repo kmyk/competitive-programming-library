@@ -215,6 +215,8 @@ layout: default
 * :warning: <a href="library/utils/doubling.inc.cpp.html">the doubling technique <small>(utils/doubling.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
+* :heavy_check_mark: <a href="library/utils/fastio_printer.hpp.html">utils/fastio_printer.hpp</a>
+* :heavy_check_mark: <a href="library/utils/fastio_scanner.hpp.html">utils/fastio_scanner.hpp</a>
 * :warning: <a href="library/utils/fib.inc.cpp.html">utils/fib.inc.cpp</a>
 * :warning: <a href="library/utils/graphviz.inc.cpp.html">utils/graphviz.inc.cpp</a>
 * :warning: <a href="library/utils/inversion-number.inc.cpp.html">utils/inversion-number.inc.cpp</a>
@@ -226,6 +228,7 @@ layout: default
 * :warning: <a href="library/utils/maximum-independent-set.inc.cpp.html">utils/maximum-independent-set.inc.cpp</a>
 * :warning: <a href="library/utils/mex.inc.cpp.html">minimum excluded value <small>(utils/mex.inc.cpp)</small></a>
 * :warning: <a href="library/utils/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(utils/midpoint.inc.cpp)</small></a>
+* :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
 * :warning: <a href="library/utils/periodic-function-power.inc.cpp.html">utils/periodic-function-power.inc.cpp</a>
 * :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>
 * :warning: <a href="library/utils/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(utils/rollback-square-decomposition.inc.cpp)</small></a>

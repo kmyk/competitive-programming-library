@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/number/number_theoretic_transformation.998244353.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+    - Last commit date: 2020-01-07 06:36:24+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/convolution_mod">https://judge.yosupo.jp/problem/convolution_mod</a>
@@ -42,6 +42,8 @@ layout: default
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/number/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(number/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/fastio_printer.hpp.html">utils/fastio_printer.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/fastio_scanner.hpp.html">utils/fastio_scanner.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -53,32 +55,37 @@ layout: default
 #include "number/number_theoretic_transformation.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
 
-#include <cstdio>
 #include <vector>
 #include "utils/macros.hpp"
-using namespace std;
+#include "utils/fastio_scanner.hpp"
+#include "utils/fastio_printer.hpp"
 
 constexpr int MOD = 998244353;
 int main() {
+    scanner sc;
+    printer pr;
+
     // input
-    int n, m; scanf("%d%d", &n, &m);
-    vector<mint<MOD> > a(n);
+    int n = sc.get<int32_t>();
+    int m = sc.get<int32_t>();
+    std::vector<mint<MOD> > a(n);
     REP (i, n) {
-        scanf("%d", &a[i].value);
+        a[i].value = sc.get<int32_t>();
     }
-    vector<mint<MOD> > b(m);
+    std::vector<mint<MOD> > b(m);
     REP (j, m) {
-        scanf("%d", &b[j].value);
+        b[j].value = sc.get<int32_t>();
     }
 
     // solve
-    vector<mint<MOD> > c = ntt_convolution(a, b);
+    std::vector<mint<MOD> > c = ntt_convolution(a, b);
 
     // output
     REP (i, n + m - 1) {
-        printf("%d ", c[i].value);
+        pr.put(c[i].value);
+        pr.put<char>(' ');
     }
-    printf("\n");
+    pr.put<char>('\n');
     return 0;
 }
 
@@ -350,32 +357,164 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
 #line 2 "number/number_theoretic_transformation.998244353.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
 
-#include <cstdio>
 #include <vector>
-#line 7 "number/number_theoretic_transformation.998244353.test.cpp"
-using namespace std;
+#line 2 "utils/fastio_scanner.hpp"
+#include <algorithm>
+#include <cassert>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <type_traits>
+#include <unistd.h>
+
+class scanner {
+    static constexpr int N = 65536;
+    static constexpr int K = 64;
+    char buf[K + N];
+    int l = 0;
+    int r = 0;
+    void flush() {
+        if (K < r - l) return;
+        memmove(buf + K - (r - l), buf + l, r - l);
+        l = K - (r - l);
+        r = K + read(STDIN_FILENO, buf + K, N);
+        assert (l < r);
+    }
+    void prepare() {
+        flush();
+        while (isspace(buf[l])) {
+            ++ l;
+            flush();
+        }
+    }
+public:
+    scanner() = default;
+    scanner(const scanner &) = delete;
+    scanner & operator = (const scanner &) = delete;
+    template <class Char, std::enable_if_t<std::is_same<Char, char>::value, int> = 0>
+    inline char get() {
+        prepare();
+        return buf[l ++];
+    }
+    template <class String, std::enable_if_t<std::is_same<String, std::string>::value, int> = 0>
+    std::string get() {
+        prepare();
+        std::string s;
+        do {
+            s.push_back(buf[l ++]);
+            if (r == l) flush();
+        } while (not isspace(buf[l]));
+        return s;
+    }
+    template <class Integer, std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
+    Integer get() {
+        prepare();
+        bool is_negative = false;
+        if (std::is_signed<Integer>::value and buf[l] == '-') {
+            is_negative = true;
+            ++ l;
+        }
+        Integer x = 0;
+        while (l < r and '0' <= buf[l] and buf[l] <= '9') {
+            x *= 10;
+            x += buf[l] - '0';
+            ++ l;
+        }
+        if (std::is_signed<Integer>::value and is_negative) {
+            x *= -1;
+        }
+        return x;
+    }
+};
+#line 2 "utils/fastio_printer.hpp"
+#include <algorithm>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <type_traits>
+#include <unistd.h>
+
+class printer {
+    static constexpr int N = 65536;
+    static constexpr int K = 64;
+    char buf[N];
+    int i = 0;
+    inline void flush() {
+        write(STDOUT_FILENO, buf, i);
+        i = 0;
+    }
+public:
+    printer() = default;
+    printer(const printer &) = delete;
+    printer & operator = (const printer &) = delete;
+    ~printer() {
+        flush();
+    }
+    template <class Char, std::enable_if_t<std::is_same<Char, char>::value, int> = 0>
+    inline void put(char c) {
+        if (i == N) flush();
+        buf[i ++] = c;
+    }
+    template <class String, std::enable_if_t<std::is_same<String, std::string>::value, int> = 0>
+    void put(const std::string & s) {
+        for (int l = 0; l < (int)s.length(); ) {
+            if (i == N) flush();
+            int r = std::min<int>(s.length(), l + (N - i));
+            memcpy(buf + i, s.data() + l, r - l);
+            i += r - l;
+            l = r;
+        }
+    }
+    template <class Integer, std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
+    void put(Integer x) {
+        if (N - i < K) flush();
+        if (std::is_signed<Integer>::value and x < 0) {
+            x *= -1;
+            buf[i ++] = '-';
+        }
+        if (x == 0) {
+            buf[i ++] = '0';
+            return;
+        }
+        char s[K];
+        int j = 0;
+        while (x) {
+            s[j ++] = x % 10 + '0';
+            x /= 10;
+        }
+        while (j) {
+            buf[i ++] = s[-- j];
+        }
+    }
+};
+#line 8 "number/number_theoretic_transformation.998244353.test.cpp"
 
 constexpr int MOD = 998244353;
 int main() {
+    scanner sc;
+    printer pr;
+
     // input
-    int n, m; scanf("%d%d", &n, &m);
-    vector<mint<MOD> > a(n);
+    int n = sc.get<int32_t>();
+    int m = sc.get<int32_t>();
+    std::vector<mint<MOD> > a(n);
     REP (i, n) {
-        scanf("%d", &a[i].value);
+        a[i].value = sc.get<int32_t>();
     }
-    vector<mint<MOD> > b(m);
+    std::vector<mint<MOD> > b(m);
     REP (j, m) {
-        scanf("%d", &b[j].value);
+        b[j].value = sc.get<int32_t>();
     }
 
     // solve
-    vector<mint<MOD> > c = ntt_convolution(a, b);
+    std::vector<mint<MOD> > c = ntt_convolution(a, b);
 
     // output
     REP (i, n + m - 1) {
-        printf("%d ", c[i].value);
+        pr.put(c[i].value);
+        pr.put<char>(' ');
     }
-    printf("\n");
+    pr.put<char>('\n');
     return 0;
 }
 
