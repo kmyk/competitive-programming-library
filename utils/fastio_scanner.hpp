@@ -55,7 +55,7 @@ public:
             ++ l;
         }
         Integer x = 0;
-        while (l < r and '0' <= buf[l] and buf[l] <= '9') {
+        while (l < r and isdigit(buf[l])) {
             x *= 10;
             x += buf[l] - '0';
             ++ l;

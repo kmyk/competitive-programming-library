@@ -12,15 +12,15 @@ int main() {
     printer pr;
 
     // input
-    int n = sc.get<int32_t>();
-    int m = sc.get<int32_t>();
+    int n = sc.get<uint32_t>();
+    int m = sc.get<uint32_t>();
     std::vector<mint<MOD> > a(n);
     REP (i, n) {
-        a[i].value = sc.get<int32_t>();
+        a[i].value = sc.get<uint32_t>();
     }
     std::vector<mint<MOD> > b(m);
     REP (j, m) {
-        b[j].value = sc.get<int32_t>();
+        b[j].value = sc.get<uint32_t>();
     }
 
     // solve
@@ -28,7 +28,7 @@ int main() {
 
     // output
     REP (i, n + m - 1) {
-        pr.put(c[i].value);
+        pr.put<uint32_t>(c[i].value);
         pr.put<char>(' ');
     }
     pr.put<char>('\n');
