@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation.998244353.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-07 07:13:17+09:00
+    - Last commit date: 2020-01-07 07:28:15+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/convolution_mod">https://judge.yosupo.jp/problem/convolution_mod</a>
@@ -66,15 +66,15 @@ int main() {
     printer pr;
 
     // input
-    int n = sc.get<int32_t>();
-    int m = sc.get<int32_t>();
+    int n = sc.get<uint32_t>();
+    int m = sc.get<uint32_t>();
     std::vector<mint<MOD> > a(n);
     REP (i, n) {
-        a[i].value = sc.get<int32_t>();
+        a[i].value = sc.get<uint32_t>();
     }
     std::vector<mint<MOD> > b(m);
     REP (j, m) {
-        b[j].value = sc.get<int32_t>();
+        b[j].value = sc.get<uint32_t>();
     }
 
     // solve
@@ -82,7 +82,7 @@ int main() {
 
     // output
     REP (i, n + m - 1) {
-        pr.put(c[i].value);
+        pr.put<uint32_t>(c[i].value);
         pr.put<char>(' ');
     }
     pr.put<char>('\n');
@@ -415,7 +415,7 @@ public:
             ++ l;
         }
         Integer x = 0;
-        while (l < r and '0' <= buf[l] and buf[l] <= '9') {
+        while (l < r and isdigit(buf[l])) {
             x *= 10;
             x += buf[l] - '0';
             ++ l;
@@ -495,15 +495,15 @@ int main() {
     printer pr;
 
     // input
-    int n = sc.get<int32_t>();
-    int m = sc.get<int32_t>();
+    int n = sc.get<uint32_t>();
+    int m = sc.get<uint32_t>();
     std::vector<mint<MOD> > a(n);
     REP (i, n) {
-        a[i].value = sc.get<int32_t>();
+        a[i].value = sc.get<uint32_t>();
     }
     std::vector<mint<MOD> > b(m);
     REP (j, m) {
-        b[j].value = sc.get<int32_t>();
+        b[j].value = sc.get<uint32_t>();
     }
 
     // solve
@@ -511,7 +511,7 @@ int main() {
 
     // output
     REP (i, n + m - 1) {
-        pr.put(c[i].value);
+        pr.put<uint32_t>(c[i].value);
         pr.put<char>(' ');
     }
     pr.put<char>('\n');

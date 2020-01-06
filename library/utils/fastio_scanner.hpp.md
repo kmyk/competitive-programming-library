@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/fastio_scanner.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-07 06:36:24+09:00
+    - Last commit date: 2020-01-07 07:28:15+09:00
 
 
 
@@ -103,7 +103,7 @@ public:
             ++ l;
         }
         Integer x = 0;
-        while (l < r and '0' <= buf[l] and buf[l] <= '9') {
+        while (l < r and isdigit(buf[l])) {
             x *= 10;
             x += buf[l] - '0';
             ++ l;
@@ -178,7 +178,7 @@ public:
             ++ l;
         }
         Integer x = 0;
-        while (l < r and '0' <= buf[l] and buf[l] <= '9') {
+        while (l < r and isdigit(buf[l])) {
             x *= 10;
             x += buf[l] - '0';
             ++ l;
