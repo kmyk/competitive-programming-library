@@ -25,15 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small>
+# :heavy_check_mark: a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum}) <small>(data_structure/segment_tree_beats.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 14:39:04+09:00
+    - Last commit date: 2020-01-08 19:00:13+09:00
 
 
+## 概要
+
+整数 $\mathbb{Z} = (\mathbb{Z}, +, 0, \le)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in \mathbb{Z}^n$ に対し、次が処理可能:
+
+-   区間 chmin: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets \min(a_i, b)$ という更新を、全体で均し $O((\log N)^2)$ で行う
+-   区間 chmax: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets \max(a_i, b)$ という更新を、全体で均し $O((\log N)^2)$ で行う
+-   区間加算: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets a_i + b$ という更新を、全体で $O(\log N)$ で行う
+-   区間代入: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets b$ という更新を、全体で $O(\log N)$ で行う
+-   区間 min: 与えられた $l, r$ に対し、$\min _ {i \in [l, r)} a_i$ を $O(\log N)$ で計算する
+-   区間 max: 与えられた $l, r$ に対し、$\max _ {i \in [l, r)} a_i$ を $O(\log N)$ で計算する
+-   区間和: 与えられた $l, r$ に対し、$\sum _ {i \in [l, r)} a_i$ を $O(\log N)$ で計算する
 
 
 ## Depends on
@@ -60,8 +71,8 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief a segment tree beats
- * @note range {chmin, chmax, add, update} + range {min, max, sum}
+ * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
+ * @docs data_structure/segment_tree_beats.md
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
@@ -342,8 +353,8 @@ private:
 #line 8 "data_structure/segment_tree_beats.hpp"
 
 /**
- * @brief a segment tree beats
- * @note range {chmin, chmax, add, update} + range {min, max, sum}
+ * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
+ * @docs data_structure/segment_tree_beats.md
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children

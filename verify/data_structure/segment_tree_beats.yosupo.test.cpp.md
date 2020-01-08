@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 18:35:19+09:00
+    - Last commit date: 2020-01-08 19:00:13+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum">https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum}) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -111,8 +111,8 @@ int main() {
 #line 8 "data_structure/segment_tree_beats.hpp"
 
 /**
- * @brief a segment tree beats
- * @note range {chmin, chmax, add, update} + range {min, max, sum}
+ * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
+ * @docs data_structure/segment_tree_beats.md
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
