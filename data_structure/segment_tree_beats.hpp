@@ -7,8 +7,8 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief a segment tree beats
- * @note range {chmin, chmax, add, update} + range {min, max, sum}
+ * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
+ * @docs data_structure/segment_tree_beats.md
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
