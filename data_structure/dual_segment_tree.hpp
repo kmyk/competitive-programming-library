@@ -5,6 +5,7 @@
 
 /**
  * @brief a dual segment tree / 双対セグメント木
+ * @docs data_structure/dual_segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>

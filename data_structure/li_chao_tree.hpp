@@ -7,6 +7,7 @@
 
 /**
  * @brief Li-Chao tree
+ * @docs data_structure/li_chao_tree.md
  */
 struct li_chao_tree {
     int k;

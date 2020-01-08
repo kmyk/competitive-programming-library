@@ -4,6 +4,9 @@
 #include <deque>
 #include "utils/macros.hpp"
 
+/**
+ * @brief Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る)
+ */
 template <class Monoid>
 struct sliding_window_aggregation {
     typedef typename Monoid::value_type value_type;

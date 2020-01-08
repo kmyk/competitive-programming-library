@@ -6,6 +6,7 @@
 
 /**
  * @brief a segment tree / セグメント木
+ * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>
