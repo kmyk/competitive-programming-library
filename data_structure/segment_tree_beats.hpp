@@ -1,7 +1,10 @@
 #pragma once
 #include <algorithm>
 #include <cassert>
+#include <climits>
+#include <cstdint>
 #include <vector>
+#include "utils/macros.hpp"
 
 /**
  * @brief a segment tree beats
