@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -97,6 +97,7 @@ int main() {
 
 /**
  * @brief a lazy propagation segment tree / 遅延伝播セグメント木
+ * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X

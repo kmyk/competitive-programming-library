@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/dual_segment_tree.range_update_query.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D</a>
@@ -87,6 +87,7 @@ int main() {
 
 /**
  * @brief a dual segment tree / 双対セグメント木
+ * @docs data_structure/dual_segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>

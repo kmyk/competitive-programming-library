@@ -25,15 +25,16 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small>
+# :heavy_check_mark: Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:18:01+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
+* get sum of elements in the queue
 
 
 ## Depends on
@@ -57,6 +58,9 @@ layout: default
 #include <deque>
 #include "utils/macros.hpp"
 
+/**
+ * @brief Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る)
+ */
 template <class Monoid>
 struct sliding_window_aggregation {
     typedef typename Monoid::value_type value_type;
@@ -124,6 +128,9 @@ struct sliding_window_aggregation {
 #define ALL(x) std::begin(x), std::end(x)
 #line 6 "data_structure/sliding_window_aggregation.hpp"
 
+/**
+ * @brief Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る)
+ */
 template <class Monoid>
 struct sliding_window_aggregation {
     typedef typename Monoid::value_type value_type;

@@ -31,12 +31,18 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
 * a fast & semigroup-friendly version constructor
 * update a leaf node without updating ancestors
 * re-build non-leaf nodes from leaf nodes
+## 概要
+
+monoid $F = (F, \circ, \mathrm{id})$ の要素の列 $f = (f_0, f_1, \dots, f _ {n - 1}) \in F^n$ に対し、次が処理可能:
+
+-   区間更新: 与えられた $l, r, g$ に対し、それぞれの $i \in [l, r)$ に対し $f_i \gets g \circ f_i$ と $O(\log N)$ で更新する
+-   点取得: 与えられた $i$ に対し、値 $f_i$ を $O(\log N)$ で計算する
 
 
 ## Depends on
@@ -64,6 +70,7 @@ layout: default
 
 /**
  * @brief a segment tree / セグメント木
+ * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>
@@ -150,6 +157,7 @@ struct segment_tree {
 
 /**
  * @brief a segment tree / セグメント木
+ * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>

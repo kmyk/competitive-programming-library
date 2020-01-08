@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/li_chao_tree.segment_add_get_min.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 14:39:34+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/segment_add_get_min">https://judge.yosupo.jp/problem/segment_add_get_min</a>
@@ -132,6 +132,7 @@ int main() {
 
 /**
  * @brief Li-Chao tree
+ * @docs data_structure/li_chao_tree.md
  */
 struct li_chao_tree {
     int k;

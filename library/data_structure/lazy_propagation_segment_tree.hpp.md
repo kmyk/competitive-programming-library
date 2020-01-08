@@ -31,9 +31,24 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
+## 概要
+
+次があるとする:
+
+-   monoid $M = (M, \cdot, 1)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in M^n$
+-   monoid $F = (F, \circ, \mathrm{id})$ の要素の列 $f = (f_0, f_1, \dots, f _ {n - 1}) \in F^n$
+-   monoid $F$ の半群 $M$ に対する作用 $\star$。つまり関数 $\star : F \times M \to M$ であって、次を満たすもの
+    -   $\forall a \in M.~ \mathrm{id} \star a = a$
+    -   $\forall f, g \in F.~ \forall a \in M.~ (f \circ g) \star a = f \star (g \star a)$
+    -   $\forall f \in F.~ \forall a, b \in M.~ f \star (a \cdot b) = (f \star a) \cdot (f \star b)$
+
+このとき、次が処理可能:
+
+-   区間更新: 与えられた $l, r, f$ に対し、それぞれの $i \in [l, r)$ に対し $a_i \gets f \star a_i$ と $O(\log N)$ で更新する
+-   区間積: 与えられた $l, r$ に対し、積 $a_l \cdot a _ {l + 1} \cdot \dots \cdot a _ {r - 1}$ を $O(\log N)$ で計算する
 
 
 ## Depends on
@@ -61,6 +76,7 @@ layout: default
 
 /**
  * @brief a lazy propagation segment tree / 遅延伝播セグメント木
+ * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X
@@ -185,6 +201,7 @@ struct lazy_propagation_segment_tree {
 
 /**
  * @brief a lazy propagation segment tree / 遅延伝播セグメント木
+ * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X

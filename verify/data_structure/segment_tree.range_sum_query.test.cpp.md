@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.range_sum_query.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -92,6 +92,7 @@ int main() {
 
 /**
  * @brief a segment tree / セグメント木
+ * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
 template <class Monoid>

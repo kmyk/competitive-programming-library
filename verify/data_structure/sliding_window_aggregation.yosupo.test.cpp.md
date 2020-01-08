@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sliding_window_aggregation.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/queue_operate_all_composite">https://judge.yosupo.jp/problem/queue_operate_all_composite</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/sliding_window_aggregation.hpp.html">Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
@@ -101,6 +101,9 @@ int main() {
 #define ALL(x) std::begin(x), std::end(x)
 #line 6 "data_structure/sliding_window_aggregation.hpp"
 
+/**
+ * @brief Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る)
+ */
 template <class Monoid>
 struct sliding_window_aggregation {
     typedef typename Monoid::value_type value_type;

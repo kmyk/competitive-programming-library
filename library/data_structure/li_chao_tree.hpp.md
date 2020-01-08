@@ -31,9 +31,15 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/li_chao_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 14:39:34+09:00
+    - Last commit date: 2020-01-08 19:38:32+09:00
 
 
+## 概要
+
+定義域を区間に制限された一次関数の集合 $F = \emptyset \subseteq \lbrace \lambda x \in \lbrack l, r). ax + b \mid a, b, l, r \in \mathbb{Z} \rbrace$ に対し、次が処理可能:
+
+-   線分追加: 与えられた $f = \lambda x \lbrack l, r). ax + b$ に対し $F \gets F \cup \lbrace f \rbrace$ と均し $O(\log N)$ で更新する
+-   最小値取得: 与えられた $x$ に対し $$\min _ {f \in F \wdge f : \lbrack l, r) \wedge i \in \lbrack l, r)} f(x)$$ を $O(\log N)$ で計算する
 
 
 ## Depends on
@@ -60,6 +66,7 @@ layout: default
 
 /**
  * @brief Li-Chao tree
+ * @docs data_structure/li_chao_tree.md
  */
 struct li_chao_tree {
     int k;
@@ -173,6 +180,7 @@ struct li_chao_tree {
 
 /**
  * @brief Li-Chao tree
+ * @docs data_structure/li_chao_tree.md
  */
 struct li_chao_tree {
     int k;
