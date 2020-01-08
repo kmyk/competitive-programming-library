@@ -80,10 +80,9 @@ layout: default
 ### hack
 
 * :heavy_check_mark: <a href="library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :warning: <a href="library/hack/fastio_getint_unlocked.hpp.html">hack/fastio_getint_unlocked.hpp</a>
 * :warning: <a href="library/hack/fastio_printer.hpp.html">hack/fastio_printer.hpp</a>
-* :warning: <a href="library/hack/fastio_putint_unlocked.hpp.html">hack/fastio_putint_unlocked.hpp</a>
 * :warning: <a href="library/hack/fastio_scanner.hpp.html">hack/fastio_scanner.hpp</a>
+* :warning: <a href="library/hack/fastio_unlocked.hpp.html">hack/fastio_unlocked.hpp</a>
 * :heavy_check_mark: <a href="library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 
 

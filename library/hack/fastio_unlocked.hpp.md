@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: hack/fastio_getint_unlocked.hpp
+# :warning: hack/fastio_unlocked.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#d78b6f30225cdc811adfe8d4e7c9fd34">hack</a>
-* <a href="{{ site.github.repository_url }}/blob/master/hack/fastio_getint_unlocked.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 18:35:19+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/hack/fastio_unlocked.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-01-08 18:45:57+09:00
 
 
 
@@ -52,13 +52,21 @@ inline int64_t getint_unlocked() {
     return n;
 }
 
+inline void putint_unlocked(int64_t n) {
+    char s[20];
+    int i = 0;
+    if (n < 0) { putchar_unlocked('-'); n *= -1; }
+    do { s[i ++] = n % 10; n /= 10; } while (n);
+    while (i) putchar_unlocked(s[-- i] + '0');
+}
+
 ```
 {% endraw %}
 
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "hack/fastio_getint_unlocked.hpp"
+#line 2 "hack/fastio_unlocked.hpp"
 #include <cstdint>
 #include <cstdio>
 
@@ -67,6 +75,14 @@ inline int64_t getint_unlocked() {
     if (n + '0' == '-') return -getint_unlocked();
     for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
     return n;
+}
+
+inline void putint_unlocked(int64_t n) {
+    char s[20];
+    int i = 0;
+    if (n < 0) { putchar_unlocked('-'); n *= -1; }
+    do { s[i ++] = n % 10; n /= 10; } while (n);
+    while (i) putchar_unlocked(s[-- i] + '0');
 }
 
 ```
