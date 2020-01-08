@@ -26,11 +26,8 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @sa http://d.hatena.ne.jp/sune2/20140310/1394440369
- * @sa http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html
- * @sa http://satanic0258.hatenablog.com/entry/2016/08/16/181331
- * @sa http://wcipeg.com/wiki/Convex_hull_trick
- * @note verified at http://codeforces.com/contest/631/submission/31828502
+ * @brief a convex hull trick (非単調, online)
+ * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {
     typedef convex_hull_trick_details::line_t line_t;
