@@ -63,7 +63,7 @@ layout: default
 * :warning: <a href="library/data_structure/red-black-tree.inc.cpp.html">data_structure/red-black-tree.inc.cpp</a>
 * :warning: <a href="library/data_structure/segment-tree-2d.inc.cpp.html">data_structure/segment-tree-2d.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :warning: <a href="library/data_structure/skew-heap.inc.cpp.html">data_structure/skew-heap.inc.cpp</a>
 * :warning: <a href="library/data_structure/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(data_structure/sliding-window.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
@@ -255,6 +255,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_add_range_sum.test.cpp.html">data_structure/segment_tree.point_add_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
+* :heavy_check_mark: <a href="verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/union_find_tree.aoj.test.cpp.html">data_structure/union_find_tree.aoj.test.cpp</a>

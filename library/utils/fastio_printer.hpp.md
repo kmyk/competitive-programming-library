@@ -38,6 +38,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation.998244353.test.cpp.html">modulus/number_theoretic_transformation.998244353.test.cpp</a>
 
 
