@@ -45,43 +45,19 @@ layout: default
 
 ### data_structure
 
-* :warning: <a href="library/data_structure/binary-indexed-tree.inc.cpp.html">data_structure/binary-indexed-tree.inc.cpp</a>
-* :warning: <a href="library/data_structure/convex-hull-trick-with-monotonicity.inc.cpp.html">data_structure/convex-hull-trick-with-monotonicity.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
-* :warning: <a href="library/data_structure/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue <small>(data_structure/double-ended-priority-queue.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/dynamic-segment-tree.inc.cpp.html">data_structure/dynamic-segment-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :warning: <a href="library/data_structure/lazy-propagation-red-black-tree.inc.cpp.html">data_structure/lazy-propagation-red-black-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/linear-weighted-sum.inc.cpp.html">data_structure/linear-weighted-sum.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">an extended structure of union-find tree <small>(data_structure/link_cut_tree.hpp)</small></a>
-* :warning: <a href="library/data_structure/persistent-array.inc.cpp.html">persistent array / 永続配列 <small>(data_structure/persistent-array.inc.cpp)</small></a>
-* :warning: <a href="library/data_structure/persistent-randomized-binary-search-tree.inc.cpp.html">data_structure/persistent-randomized-binary-search-tree.inc.cpp</a>
-* :warning: <a href="library/data_structure/range-union-find-tree.inc.cpp.html">data_structure/range-union-find-tree.inc.cpp</a>
-* :warning: <a href="library/data_structure/red-black-tree.inc.cpp.html">data_structure/red-black-tree.inc.cpp</a>
-* :warning: <a href="library/data_structure/segment-tree-2d.inc.cpp.html">data_structure/segment-tree-2d.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
-* :warning: <a href="library/data_structure/skew-heap.inc.cpp.html">data_structure/skew-heap.inc.cpp</a>
-* :warning: <a href="library/data_structure/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(data_structure/sliding-window.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">get sum of elements in the queue <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
-* :warning: <a href="library/data_structure/treap.inc.cpp.html">data_structure/treap.inc.cpp</a>
-* :warning: <a href="library/data_structure/trie-tree.inc.cpp.html">data_structure/trie-tree.inc.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
-
-
-<div id="ed7daeb157cd9b31e53896ad3c771a26"></div>
-
-### geometry
-
-* :warning: <a href="library/geometry/a.inc.cpp.html">Andrew's Monotone Chain <small>(geometry/a.inc.cpp)</small></a>
-* :warning: <a href="library/geometry/convex-hull.inc.cpp.html">geometry/convex-hull.inc.cpp</a>
-* :warning: <a href="library/geometry/point-int.inc.cpp.html">geometry/point-int.inc.cpp</a>
 
 
 <div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>
@@ -89,47 +65,35 @@ layout: default
 ### graph
 
 * :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
-* :warning: <a href="library/graph/bipartite-graph.inc.cpp.html">graph/bipartite-graph.inc.cpp</a>
-* :warning: <a href="library/graph/breadth-first-search.inc.cpp.html">compute the distances from root <small>(graph/breadth-first-search.inc.cpp)</small></a>
 * :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small></a>
-* :warning: <a href="library/graph/centers.inc.cpp.html">get centers of a tree / 木の中心 <small>(graph/centers.inc.cpp)</small></a>
-* :warning: <a href="library/graph/centroid-decomposition.inc.cpp.html">get centroids of a graph / 重心分解 <small>(graph/centroid-decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/graph/diameter.inc.cpp.html">get the diameter of a tree / 木の直径 <small>(graph/diameter.inc.cpp)</small></a>
-* :warning: <a href="library/graph/dijkstra.inc.cpp.html">graph/dijkstra.inc.cpp</a>
-* :warning: <a href="library/graph/dinic.inc.cpp.html">Dinic <small>(graph/dinic.inc.cpp)</small></a>
-* :warning: <a href="library/graph/dominator-tree.inc.cpp.html">graph/dominator-tree.inc.cpp</a>
-* :warning: <a href="library/graph/euler-tour.inc.cpp.html">euler tour <small>(graph/euler-tour.inc.cpp)</small></a>
-* :warning: <a href="library/graph/ford-fulkerson.inc.cpp.html">graph/ford-fulkerson.inc.cpp</a>
-* :warning: <a href="library/graph/heavy_light_decomposition.inc.cpp.html">heavy light decomposition / 重軽分解 <small>(graph/heavy_light_decomposition.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
-* :warning: <a href="library/graph/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(graph/minimum-cost-flow.inc.cpp)</small></a>
-* :warning: <a href="library/graph/minimum-spanning-tree.inc.cpp.html">graph/minimum-spanning-tree.inc.cpp</a>
-* :warning: <a href="library/graph/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路 <small>(graph/namori-graph.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/topological_sort.hpp.html">graph/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :warning: <a href="library/graph/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(graph/tree-dp.inc.cpp)</small></a>
-* :warning: <a href="library/graph/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(graph/two-edge-connected-components.inc.cpp)</small></a>
-* :warning: <a href="library/graph/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(graph/two-node-connected-components.inc.cpp)</small></a>
-* :warning: <a href="library/graph/utils.inc.cpp.html">reverse a digraph <small>(graph/utils.inc.cpp)</small></a>
-* :warning: <a href="library/graph/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(graph/warshall-floyd.inc.cpp)</small></a>
+
+
+<div id="d78b6f30225cdc811adfe8d4e7c9fd34"></div>
+
+### hack
+
+* :heavy_check_mark: <a href="library/hack/fastio.hpp.html">hack/fastio.hpp</a>
+* :warning: <a href="library/hack/fastio_getint_unlocked.hpp.html">hack/fastio_getint_unlocked.hpp</a>
+* :warning: <a href="library/hack/fastio_printer.hpp.html">hack/fastio_printer.hpp</a>
+* :warning: <a href="library/hack/fastio_putint_unlocked.hpp.html">hack/fastio_putint_unlocked.hpp</a>
+* :warning: <a href="library/hack/fastio_scanner.hpp.html">hack/fastio_scanner.hpp</a>
+* :heavy_check_mark: <a href="library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 
 
 <div id="06efba23b1f3a9b846a25c6b49f30348"></div>
 
 ### modulus
 
-* :warning: <a href="library/modulus/998244353.inc.cpp.html">modulus/998244353.inc.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
-* :warning: <a href="library/modulus/bernoulli-number.inc.cpp.html">the Bernoulli number <small>(modulus/bernoulli-number.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/choose.hpp.html">modulus/choose.hpp</a>
-* :warning: <a href="library/modulus/discrete-log.inc.cpp.html">modulus/discrete-log.inc.cpp</a>
-* :warning: <a href="library/modulus/factorial-embed.inc.cpp.html">a program to make the table <small>(modulus/factorial-embed.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
-* :warning: <a href="library/modulus/fib.inc.cpp.html">modulus/fib.inc.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
@@ -137,7 +101,6 @@ layout: default
 * :heavy_check_mark: <a href="library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/modsqrt.hpp.html">find the sqrt $b$ of $a$ modulo $p$ <small>(modulus/modsqrt.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(modulus/number_theoretic_transformation.hpp)</small></a>
-* :warning: <a href="library/modulus/polya-enumeration.inc.cpp.html">modulus/polya-enumeration.inc.cpp</a>
 * :heavy_check_mark: <a href="library/modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 
@@ -174,77 +137,113 @@ layout: default
 
 ### number
 
-* :warning: <a href="library/number/choose.inc.cpp.html">number/choose.inc.cpp</a>
-* :warning: <a href="library/number/extgcd.inc.cpp.html">extended gcd <small>(number/extgcd.inc.cpp)</small></a>
-* :warning: <a href="library/number/factoradic.inc.cpp.html">number/factoradic.inc.cpp</a>
-* :warning: <a href="library/number/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation <small>(number/fast-mobius-transformation.inc.cpp)</small></a>
 * :warning: <a href="library/number/fast_fourier_transformation.hpp.html">the convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
 * :warning: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
 * :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
-* :warning: <a href="library/number/matrix.inc.cpp.html">number/matrix.inc.cpp</a>
 * :warning: <a href="library/number/matrix_template.hpp.html">number/matrix_template.hpp</a>
-* :warning: <a href="library/number/miller-rabin.inc.cpp.html">number/miller-rabin.inc.cpp</a>
-* :warning: <a href="library/number/primes-small.inc.cpp.html">enumerate primes in \[2, n) with O(n log log n) <small>(number/primes-small.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/number/primes.hpp.html">number/primes.hpp</a>
-* :warning: <a href="library/number/rational.inc.cpp.html">number/rational.inc.cpp</a>
 
 
-<div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
+<div id="149603e6c03516362a8da23f624db945"></div>
 
-### string
+### old
 
-* :warning: <a href="library/string/aho-corasick.inc.cpp.html">string/aho-corasick.inc.cpp</a>
-* :warning: <a href="library/string/boyer-moore.inc.cpp.html">string/boyer-moore.inc.cpp</a>
-* :warning: <a href="library/string/comparable-view.inc.cpp.html">compare substrings of a string with O(1) using suffix arrays <small>(string/comparable-view.inc.cpp)</small></a>
-* :warning: <a href="library/string/knuth-morris-pratt.inc.cpp.html">Morris-Pratt algorithm <small>(string/knuth-morris-pratt.inc.cpp)</small></a>
-* :warning: <a href="library/string/palindrome.inc.cpp.html">string/palindrome.inc.cpp</a>
-* :warning: <a href="library/string/prefix.inc.cpp.html">string/prefix.inc.cpp</a>
-* :warning: <a href="library/string/rolling-hash.inc.cpp.html">a rolling hash <small>(string/rolling-hash.inc.cpp)</small></a>
-* :warning: <a href="library/string/suffix-array.inc.cpp.html">suffix array <small>(string/suffix-array.inc.cpp)</small></a>
+* :warning: <a href="library/old/998244353.inc.cpp.html">old/998244353.inc.cpp</a>
+* :warning: <a href="library/old/a.inc.cpp.html">Andrew's Monotone Chain <small>(old/a.inc.cpp)</small></a>
+* :warning: <a href="library/old/aho-corasick.inc.cpp.html">old/aho-corasick.inc.cpp</a>
+* :warning: <a href="library/old/apply-permutation.inc.cpp.html">old/apply-permutation.inc.cpp</a>
+* :warning: <a href="library/old/bernoulli-number.inc.cpp.html">the Bernoulli number <small>(old/bernoulli-number.inc.cpp)</small></a>
+* :warning: <a href="library/old/binary-indexed-tree.inc.cpp.html">old/binary-indexed-tree.inc.cpp</a>
+* :warning: <a href="library/old/bipartite-graph.inc.cpp.html">old/bipartite-graph.inc.cpp</a>
+* :warning: <a href="library/old/boyer-moore.inc.cpp.html">old/boyer-moore.inc.cpp</a>
+* :warning: <a href="library/old/breadth-first-search.inc.cpp.html">compute the distances from root <small>(old/breadth-first-search.inc.cpp)</small></a>
+* :warning: <a href="library/old/centers.inc.cpp.html">get centers of a tree / 木の中心 <small>(old/centers.inc.cpp)</small></a>
+* :warning: <a href="library/old/centroid-decomposition.inc.cpp.html">get centroids of a graph / 重心分解 <small>(old/centroid-decomposition.inc.cpp)</small></a>
+* :warning: <a href="library/old/choose.inc.cpp.html">old/choose.inc.cpp</a>
+* :warning: <a href="library/old/comparable-view.inc.cpp.html">compare substrings of a string with O(1) using suffix arrays <small>(old/comparable-view.inc.cpp)</small></a>
+* :warning: <a href="library/old/convex-hull-trick-with-monotonicity.inc.cpp.html">old/convex-hull-trick-with-monotonicity.inc.cpp</a>
+* :warning: <a href="library/old/convex-hull.inc.cpp.html">old/convex-hull.inc.cpp</a>
+* :warning: <a href="library/old/cumulative-sum.inc.cpp.html">cumulative sum <small>(old/cumulative-sum.inc.cpp)</small></a>
+* :warning: <a href="library/old/diameter.inc.cpp.html">get the diameter of a tree / 木の直径 <small>(old/diameter.inc.cpp)</small></a>
+* :warning: <a href="library/old/dice.inc.cpp.html">old/dice.inc.cpp</a>
+* :warning: <a href="library/old/digit-dp.inc.cpp.html">old/digit-dp.inc.cpp</a>
+* :warning: <a href="library/old/dijkstra.inc.cpp.html">old/dijkstra.inc.cpp</a>
+* :warning: <a href="library/old/dinic.inc.cpp.html">Dinic <small>(old/dinic.inc.cpp)</small></a>
+* :warning: <a href="library/old/discrete-log.inc.cpp.html">old/discrete-log.inc.cpp</a>
+* :warning: <a href="library/old/distributed-code-jam.inc.cpp.html">old/distributed-code-jam.inc.cpp</a>
+* :warning: <a href="library/old/dlopen.inc.cpp.html">old/dlopen.inc.cpp</a>
+* :warning: <a href="library/old/dominator-tree.inc.cpp.html">old/dominator-tree.inc.cpp</a>
+* :warning: <a href="library/old/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue <small>(old/double-ended-priority-queue.inc.cpp)</small></a>
+* :warning: <a href="library/old/doubling.inc.cpp.html">the doubling technique <small>(old/doubling.inc.cpp)</small></a>
+* :warning: <a href="library/old/dynamic-segment-tree.inc.cpp.html">old/dynamic-segment-tree.inc.cpp</a>
+* :warning: <a href="library/old/euler-tour.inc.cpp.html">euler tour <small>(old/euler-tour.inc.cpp)</small></a>
+* :warning: <a href="library/old/extgcd.inc.cpp.html">extended gcd <small>(old/extgcd.inc.cpp)</small></a>
+* :warning: <a href="library/old/factoradic.inc.cpp.html">old/factoradic.inc.cpp</a>
+* :warning: <a href="library/old/factorial-embed.inc.cpp.html">a program to make the table <small>(old/factorial-embed.inc.cpp)</small></a>
+* :warning: <a href="library/old/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation <small>(old/fast-mobius-transformation.inc.cpp)</small></a>
+* :warning: <a href="library/old/fib.inc.cpp.html">old/fib.inc.cpp</a>
+* :warning: <a href="library/old/ford-fulkerson.inc.cpp.html">old/ford-fulkerson.inc.cpp</a>
+* :warning: <a href="library/old/graphviz.inc.cpp.html">old/graphviz.inc.cpp</a>
+* :warning: <a href="library/old/heavy_light_decomposition.inc.cpp.html">heavy light decomposition / 重軽分解 <small>(old/heavy_light_decomposition.inc.cpp)</small></a>
+* :warning: <a href="library/old/inversion-number.inc.cpp.html">old/inversion-number.inc.cpp</a>
+* :warning: <a href="library/old/iterate.inc.cpp.html">old/iterate.inc.cpp</a>
+* :warning: <a href="library/old/knapsack-problem-branch-and-bound.inc.cpp.html">old/knapsack-problem-branch-and-bound.inc.cpp</a>
+* :warning: <a href="library/old/knuth-morris-pratt.inc.cpp.html">Morris-Pratt algorithm <small>(old/knuth-morris-pratt.inc.cpp)</small></a>
+* :warning: <a href="library/old/lazy-propagation-red-black-tree.inc.cpp.html">old/lazy-propagation-red-black-tree.inc.cpp</a>
+* :warning: <a href="library/old/linear-weighted-sum.inc.cpp.html">old/linear-weighted-sum.inc.cpp</a>
+* :warning: <a href="library/old/longest-increasing-subsequence.inc.cpp.html">old/longest-increasing-subsequence.inc.cpp</a>
+* :warning: <a href="library/old/marathon.inc.cpp.html">old/marathon.inc.cpp</a>
+* :warning: <a href="library/old/matrix.inc.cpp.html">old/matrix.inc.cpp</a>
+* :warning: <a href="library/old/maximum-independent-set.inc.cpp.html">old/maximum-independent-set.inc.cpp</a>
+* :warning: <a href="library/old/mex.inc.cpp.html">minimum excluded value <small>(old/mex.inc.cpp)</small></a>
+* :warning: <a href="library/old/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(old/midpoint.inc.cpp)</small></a>
+* :warning: <a href="library/old/miller-rabin.inc.cpp.html">old/miller-rabin.inc.cpp</a>
+* :warning: <a href="library/old/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(old/minimum-cost-flow.inc.cpp)</small></a>
+* :warning: <a href="library/old/minimum-spanning-tree.inc.cpp.html">old/minimum-spanning-tree.inc.cpp</a>
+* :warning: <a href="library/old/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路 <small>(old/namori-graph.inc.cpp)</small></a>
+* :warning: <a href="library/old/palindrome.inc.cpp.html">old/palindrome.inc.cpp</a>
+* :warning: <a href="library/old/periodic-function-power.inc.cpp.html">old/periodic-function-power.inc.cpp</a>
+* :warning: <a href="library/old/persistent-array.inc.cpp.html">persistent array / 永続配列 <small>(old/persistent-array.inc.cpp)</small></a>
+* :warning: <a href="library/old/persistent-randomized-binary-search-tree.inc.cpp.html">old/persistent-randomized-binary-search-tree.inc.cpp</a>
+* :warning: <a href="library/old/point-int.inc.cpp.html">old/point-int.inc.cpp</a>
+* :warning: <a href="library/old/polya-enumeration.inc.cpp.html">old/polya-enumeration.inc.cpp</a>
+* :warning: <a href="library/old/popen2.inc.cpp.html">old/popen2.inc.cpp</a>
+* :warning: <a href="library/old/prefix.inc.cpp.html">old/prefix.inc.cpp</a>
+* :warning: <a href="library/old/primes-small.inc.cpp.html">enumerate primes in \[2, n) with O(n log log n) <small>(old/primes-small.inc.cpp)</small></a>
+* :warning: <a href="library/old/range-union-find-tree.inc.cpp.html">old/range-union-find-tree.inc.cpp</a>
+* :warning: <a href="library/old/rational.inc.cpp.html">old/rational.inc.cpp</a>
+* :warning: <a href="library/old/red-black-tree.inc.cpp.html">old/red-black-tree.inc.cpp</a>
+* :warning: <a href="library/old/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small></a>
+* :warning: <a href="library/old/rolling-hash.inc.cpp.html">a rolling hash <small>(old/rolling-hash.inc.cpp)</small></a>
+* :warning: <a href="library/old/segment-tree-2d.inc.cpp.html">old/segment-tree-2d.inc.cpp</a>
+* :warning: <a href="library/old/simplex.inc.cpp.html">old/simplex.inc.cpp</a>
+* :warning: <a href="library/old/skew-heap.inc.cpp.html">old/skew-heap.inc.cpp</a>
+* :warning: <a href="library/old/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(old/sliding-window.inc.cpp)</small></a>
+* :warning: <a href="library/old/string-skip-list.inc.cpp.html">old/string-skip-list.inc.cpp</a>
+* :warning: <a href="library/old/subset.inc.cpp.html">old/subset.inc.cpp</a>
+* :warning: <a href="library/old/suffix-array.inc.cpp.html">suffix array <small>(old/suffix-array.inc.cpp)</small></a>
+* :warning: <a href="library/old/ternary-search.inc.cpp.html">old/ternary-search.inc.cpp</a>
+* :warning: <a href="library/old/treap.inc.cpp.html">old/treap.inc.cpp</a>
+* :warning: <a href="library/old/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(old/tree-dp.inc.cpp)</small></a>
+* :warning: <a href="library/old/trie-tree.inc.cpp.html">old/trie-tree.inc.cpp</a>
+* :warning: <a href="library/old/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(old/two-edge-connected-components.inc.cpp)</small></a>
+* :warning: <a href="library/old/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(old/two-node-connected-components.inc.cpp)</small></a>
+* :warning: <a href="library/old/twosat.inc.cpp.html">old/twosat.inc.cpp</a>
+* :warning: <a href="library/old/utils.inc.cpp.html">reverse a digraph <small>(old/utils.inc.cpp)</small></a>
+* :warning: <a href="library/old/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(old/warshall-floyd.inc.cpp)</small></a>
+* :warning: <a href="library/old/xorshift.inc.cpp.html">old/xorshift.inc.cpp</a>
 
 
 <div id="2b3583e6e17721c54496bd04e57a0c15"></div>
 
 ### utils
 
-* :warning: <a href="library/utils/apply-permutation.inc.cpp.html">utils/apply-permutation.inc.cpp</a>
 * :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a binary search / 二分探索 <small>(utils/binary_search.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
-* :warning: <a href="library/utils/cumulative-sum.inc.cpp.html">cumulative sum <small>(utils/cumulative-sum.inc.cpp)</small></a>
-* :warning: <a href="library/utils/dice.inc.cpp.html">utils/dice.inc.cpp</a>
-* :warning: <a href="library/utils/digit-dp.inc.cpp.html">utils/digit-dp.inc.cpp</a>
-* :warning: <a href="library/utils/distributed-code-jam.inc.cpp.html">utils/distributed-code-jam.inc.cpp</a>
-* :warning: <a href="library/utils/dlopen.inc.cpp.html">utils/dlopen.inc.cpp</a>
-* :warning: <a href="library/utils/doubling.inc.cpp.html">the doubling technique <small>(utils/doubling.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/fastio.hpp.html">utils/fastio.hpp</a>
-* :warning: <a href="library/utils/fastio_getint_unlocked.hpp.html">utils/fastio_getint_unlocked.hpp</a>
-* :heavy_check_mark: <a href="library/utils/fastio_printer.hpp.html">utils/fastio_printer.hpp</a>
-* :warning: <a href="library/utils/fastio_putint_unlocked.hpp.html">utils/fastio_putint_unlocked.hpp</a>
-* :heavy_check_mark: <a href="library/utils/fastio_scanner.hpp.html">utils/fastio_scanner.hpp</a>
-* :warning: <a href="library/utils/fib.inc.cpp.html">utils/fib.inc.cpp</a>
-* :warning: <a href="library/utils/graphviz.inc.cpp.html">utils/graphviz.inc.cpp</a>
-* :warning: <a href="library/utils/inversion-number.inc.cpp.html">utils/inversion-number.inc.cpp</a>
-* :warning: <a href="library/utils/iterate.inc.cpp.html">utils/iterate.inc.cpp</a>
-* :warning: <a href="library/utils/knapsack-problem-branch-and-bound.inc.cpp.html">utils/knapsack-problem-branch-and-bound.inc.cpp</a>
-* :warning: <a href="library/utils/longest-increasing-subsequence.inc.cpp.html">utils/longest-increasing-subsequence.inc.cpp</a>
 * :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :warning: <a href="library/utils/marathon.inc.cpp.html">utils/marathon.inc.cpp</a>
-* :warning: <a href="library/utils/maximum-independent-set.inc.cpp.html">utils/maximum-independent-set.inc.cpp</a>
-* :warning: <a href="library/utils/mex.inc.cpp.html">minimum excluded value <small>(utils/mex.inc.cpp)</small></a>
-* :warning: <a href="library/utils/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(utils/midpoint.inc.cpp)</small></a>
 * :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
-* :warning: <a href="library/utils/periodic-function-power.inc.cpp.html">utils/periodic-function-power.inc.cpp</a>
-* :warning: <a href="library/utils/popen2.inc.cpp.html">utils/popen2.inc.cpp</a>
-* :warning: <a href="library/utils/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(utils/rollback-square-decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/utils/simplex.inc.cpp.html">utils/simplex.inc.cpp</a>
-* :heavy_check_mark: <a href="library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
-* :warning: <a href="library/utils/string-skip-list.inc.cpp.html">utils/string-skip-list.inc.cpp</a>
-* :warning: <a href="library/utils/subset.inc.cpp.html">utils/subset.inc.cpp</a>
-* :warning: <a href="library/utils/ternary-search.inc.cpp.html">utils/ternary-search.inc.cpp</a>
-* :warning: <a href="library/utils/twosat.inc.cpp.html">utils/twosat.inc.cpp</a>
-* :warning: <a href="library/utils/xorshift.inc.cpp.html">utils/xorshift.inc.cpp</a>
 
 
 ## Verify Files

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+    - Last commit date: 2020-01-08 18:35:19+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995</a>
@@ -40,10 +40,10 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
 
 
 ## Code
@@ -55,7 +55,7 @@ layout: default
 #include "utils/dsu_on_tree.hpp"
 #include "data_structure/union_find_tree_with_monoid.hpp"
 #include "monoids/plus.hpp"
-#include "utils/stack_pivot.hpp"
+#include "hack/stack_pivot.hpp"
 
 #include <iostream>
 #include <unordered_map>
@@ -312,7 +312,7 @@ struct plus_monoid {
     value_type unit() const { return value_type(); }
     value_type mult(value_type a, value_type b) const { return a + b; }
 };
-#line 2 "utils/stack_pivot.hpp"
+#line 2 "hack/stack_pivot.hpp"
 #include <cstdlib>
 
 /**

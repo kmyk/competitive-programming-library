@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 18:24:20+09:00
+    - Last commit date: 2020-01-08 18:35:19+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum">https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum</a>
@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/fastio.hpp.html">utils/fastio.hpp</a>
+* :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -54,7 +54,7 @@ layout: default
 #include <cstdint>
 #include <vector>
 #include "utils/macros.hpp"
-#include "utils/fastio.hpp"
+#include "hack/fastio.hpp"
 
 int main() {
     int n = in<int>();
@@ -375,7 +375,7 @@ private:
 
 #include <cstdint>
 #include <vector>
-#line 2 "utils/fastio.hpp"
+#line 2 "hack/fastio.hpp"
 #include <cstdint>
 #include <cstdio>
 #include <string>

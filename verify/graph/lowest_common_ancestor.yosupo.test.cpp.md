@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:21:30+09:00
+    - Last commit date: 2020-01-08 18:35:19+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/lca">https://judge.yosupo.jp/problem/lca</a>
@@ -40,9 +40,9 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/stack_pivot.hpp.html">utils/stack_pivot.hpp</a>
 
 
 ## Code
@@ -54,7 +54,7 @@ layout: default
 #include "graph/lowest_common_ancestor.hpp"
 
 #include "utils/macros.hpp"
-#include "utils/stack_pivot.hpp"
+#include "hack/stack_pivot.hpp"
 #include <cstdio>
 #include <vector>
 using namespace std;
@@ -223,7 +223,7 @@ public:
 };
 #line 3 "graph/lowest_common_ancestor.yosupo.test.cpp"
 
-#line 2 "utils/stack_pivot.hpp"
+#line 2 "hack/stack_pivot.hpp"
 #include <cstdlib>
 
 /**
