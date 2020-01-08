@@ -146,6 +146,8 @@ layout: default
 
 ### monoids
 
+* :warning: <a href="library/monoids/chmin_chmax_add.hpp.html">monoids/chmin_chmax_add.hpp</a>
+* :warning: <a href="library/monoids/chmin_chmax_add_min_max_action.hpp.html">monoids/chmin_chmax_add_min_max_action.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/dual.hpp.html">monoids/dual.hpp</a>
 * :warning: <a href="library/monoids/gcd.hpp.html">monoids/gcd.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/left.hpp.html">monoids/left.hpp</a>
@@ -157,6 +159,7 @@ layout: default
 * :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
+* :warning: <a href="library/monoids/min_max.hpp.html">monoids/min_max.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
 * :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
