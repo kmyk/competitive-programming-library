@@ -49,11 +49,11 @@ public:
         x = index[x];
         y = index[y];
         if (x > y) std::swap(x, y);
-        return table.range_concat(x, y + 1).second;
+        return table.range_get(x, y + 1).second;
     }
     int get_depth(int x) const {
         assert (0 <= x and x < index.size());
-        return table.range_concat(index[x], index[x] + 1).first;
+        return table.range_get(index[x], index[x] + 1).first;
     }
     int get_dist(int x, int y) const {
         assert (0 <= x and x < index.size());

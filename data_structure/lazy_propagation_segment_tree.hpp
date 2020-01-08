@@ -92,9 +92,9 @@ struct lazy_propagation_segment_tree {
     }
 
     value_type point_get(int i) {
-        return range_concat(i, i + 1);
+        return range_get(i, i + 1);
     }
-    value_type range_concat(int l, int r) {
+    value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
 	if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();

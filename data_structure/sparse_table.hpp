@@ -37,7 +37,7 @@ struct sparse_table {
     /**
      * @note $O(1)$
      */
-    value_type range_concat(int l, int r) const {
+    value_type range_get(int l, int r) const {
         if (l == r) return lat.unit();  // if there is no unit, remove this line
         assert (0 <= l and l < r and r <= table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2

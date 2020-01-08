@@ -26,7 +26,7 @@ struct segment_tree {
             a[i - 1] = mon.mult(a[2 * i - 1], a[2 * i]);
         }
     }
-    value_type range_concat(int l, int r) {  // 0-based, [l, r)
+    value_type range_get(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
         value_type lacc = mon.unit(), racc = mon.unit();
         for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-based loop, 2x faster than recursion

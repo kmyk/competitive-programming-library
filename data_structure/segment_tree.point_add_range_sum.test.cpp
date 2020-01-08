@@ -19,7 +19,7 @@ int main() {
         if (t == 0) {
             segtree.point_set(x, segtree.point_get(x) + y);
         } else if (t == 1) {
-            int64_t answer = segtree.range_concat(x, y);
+            int64_t answer = segtree.range_get(x, y);
             printf("%lld\n", answer);
         }
     }

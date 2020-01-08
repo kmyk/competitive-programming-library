@@ -29,7 +29,7 @@ int main() {
             segtree.range_apply(l, r, f);
         } else if (t == 1) {
             int l, r; scanf("%d%d", &l, &r);
-            mint<MOD> answer = segtree.range_concat(l, r).first;
+            mint<MOD> answer = segtree.range_get(l, r).first;
             printf("%d\n", answer.value);
         }
     }

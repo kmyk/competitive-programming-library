@@ -21,7 +21,7 @@ int main() {
     // answer to queries
     while (q --) {
         int l, r; scanf("%d%d", &l, &r);
-        int answer = st.range_concat(l, r);
+        int answer = st.range_get(l, r);
         printf("%d\n", answer);
     }
     return 0;

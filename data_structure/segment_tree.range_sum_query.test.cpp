@@ -12,9 +12,9 @@ int main() {
         int com, x, y; cin >> com >> x >> y;
         -- x;
         if (com == 0) {
-            segtree.point_set(x, segtree.range_concat(x, x + 1) + y);
+            segtree.point_set(x, segtree.range_get(x, x + 1) + y);
         } else if (com == 1) {
-            cout << segtree.range_concat(x, y) << endl;
+            cout << segtree.range_get(x, y) << endl;
         }
     }
     return 0;

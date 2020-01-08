@@ -21,7 +21,7 @@ int main() {
         if (f == 0) {
             segtree.point_set(x, make_pair(y, z));
         } else if (f == 1) {
-            mint<MOD> a, b; tie(a, b) = segtree.range_concat(x, y);
+            mint<MOD> a, b; tie(a, b) = segtree.range_get(x, y);
             printf("%d\n", (a * z + b).value);
         }
     }

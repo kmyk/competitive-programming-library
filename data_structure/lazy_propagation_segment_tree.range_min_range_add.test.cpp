@@ -16,7 +16,7 @@ int main() {
             int x; scanf("%d", &x);
             segtree.range_apply(l, r, x);
         } else if (com == 1) {
-            printf("%d\n", segtree.range_concat(l, r));
+            printf("%d\n", segtree.range_get(l, r));
         }
     }
     return 0;
