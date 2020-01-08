@@ -2,7 +2,7 @@
 #include "graph/lowest_common_ancestor.hpp"
 
 #include "utils/macros.hpp"
-#include "utils/stack_pivot.hpp"
+#include "hack/stack_pivot.hpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

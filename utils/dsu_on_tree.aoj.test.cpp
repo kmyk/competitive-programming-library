@@ -2,7 +2,7 @@
 #include "utils/dsu_on_tree.hpp"
 #include "data_structure/union_find_tree_with_monoid.hpp"
 #include "monoids/plus.hpp"
-#include "utils/stack_pivot.hpp"
+#include "hack/stack_pivot.hpp"
 
 #include <iostream>
 #include <unordered_map>

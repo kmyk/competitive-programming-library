@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "utils/macros.hpp"
-#include "utils/fastio.hpp"
+#include "hack/fastio.hpp"
 
 constexpr int MOD = 998244353;
 int main() {

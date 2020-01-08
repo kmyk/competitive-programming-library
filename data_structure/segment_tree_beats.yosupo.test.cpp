@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <vector>
 #include "utils/macros.hpp"
-#include "utils/fastio.hpp"
+#include "hack/fastio.hpp"
 
 int main() {
     int n = in<int>();
