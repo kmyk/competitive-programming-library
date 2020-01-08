@@ -26,7 +26,7 @@ struct lazy_propagation_segment_tree {
     lazy_propagation_segment_tree() = default;
     lazy_propagation_segment_tree(int n_, const MonoidX & mon_x_ = MonoidX(), const MonoidF & mon_f_ = MonoidF(), const Action & act_ = Action())
             : mon_x(mon_x_), mon_f(mon_f_), act(act_) {
-        n = 1; while (n <= n_) n *= 2;
+        n = 1; while (n < n_) n *= 2;
         a.resize(2 * n - 1, mon_x.unit());
         f.resize(n - 1, mon_f.unit());
     }
@@ -34,7 +34,7 @@ struct lazy_propagation_segment_tree {
     lazy_propagation_segment_tree(InputIterator first, InputIterator last, const MonoidX & mon_x_ = MonoidX(), const MonoidF & mon_f_ = MonoidF(), const Action & act_ = Action())
             : mon_x(mon_x_), mon_f(mon_f_), act(act_) {
         int size = std::distance(first, last);
-        n = 1; while (n <= size) n *= 2;
+        n = 1; while (n < size) n *= 2;
         a.resize(2 * n - 1, mon_x.unit());
         f.resize(n - 1, mon_f.unit());
         std::copy(first, last, a.begin() + (n - 1));
@@ -96,6 +96,7 @@ struct lazy_propagation_segment_tree {
     }
     value_type range_concat(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
+	if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();
         for (int l1 = (l += n), r1 = (r += n) - 1; l1 > 1; l /= 2, r /= 2, l1 /= 2, r1 /= 2) {  // 1-based loop, 2x faster than recursion
             if (l < r) {
