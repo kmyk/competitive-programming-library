@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:32:43+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * a fast & semigroup-friendly version constructor
@@ -84,7 +84,7 @@ struct segment_tree {
             a[i - 1] = mon.mult(a[2 * i - 1], a[2 * i]);
         }
     }
-    value_type range_concat(int l, int r) {  // 0-based, [l, r)
+    value_type range_get(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
         value_type lacc = mon.unit(), racc = mon.unit();
         for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-based loop, 2x faster than recursion
@@ -170,7 +170,7 @@ struct segment_tree {
             a[i - 1] = mon.mult(a[2 * i - 1], a[2 * i]);
         }
     }
-    value_type range_concat(int l, int r) {  // 0-based, [l, r)
+    value_type range_get(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
         value_type lacc = mon.unit(), racc = mon.unit();
         for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-based loop, 2x faster than recursion

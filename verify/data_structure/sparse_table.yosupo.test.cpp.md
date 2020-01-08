@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:14:44+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/staticrmq">https://judge.yosupo.jp/problem/staticrmq</a>
@@ -71,7 +71,7 @@ int main() {
     // answer to queries
     while (q --) {
         int l, r; scanf("%d%d", &l, &r);
-        int answer = st.range_concat(l, r);
+        int answer = st.range_get(l, r);
         printf("%d\n", answer);
     }
     return 0;
@@ -130,7 +130,7 @@ struct sparse_table {
     /**
      * @note $O(1)$
      */
-    value_type range_concat(int l, int r) const {
+    value_type range_get(int l, int r) const {
         if (l == r) return lat.unit();  // if there is no unit, remove this line
         assert (0 <= l and l < r and r <= table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
@@ -168,7 +168,7 @@ int main() {
     // answer to queries
     while (q --) {
         int l, r; scanf("%d%d", &l, &r);
-        int answer = st.range_concat(l, r);
+        int answer = st.range_get(l, r);
         printf("%d\n", answer);
     }
     return 0;

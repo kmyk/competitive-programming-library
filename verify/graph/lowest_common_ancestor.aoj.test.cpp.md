@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:21:30+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C</a>
@@ -142,7 +142,7 @@ struct sparse_table {
     /**
      * @note $O(1)$
      */
-    value_type range_concat(int l, int r) const {
+    value_type range_get(int l, int r) const {
         if (l == r) return lat.unit();  // if there is no unit, remove this line
         assert (0 <= l and l < r and r <= table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
@@ -208,11 +208,11 @@ public:
         x = index[x];
         y = index[y];
         if (x > y) std::swap(x, y);
-        return table.range_concat(x, y + 1).second;
+        return table.range_get(x, y + 1).second;
     }
     int get_depth(int x) const {
         assert (0 <= x and x < index.size());
-        return table.range_concat(index[x], index[x] + 1).first;
+        return table.range_get(index[x], index[x] + 1).first;
     }
     int get_dist(int x, int y) const {
         assert (0 <= x and x < index.size());

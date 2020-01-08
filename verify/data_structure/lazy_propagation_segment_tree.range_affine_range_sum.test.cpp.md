@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 13:22:02+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_affine_range_sum">https://judge.yosupo.jp/problem/range_affine_range_sum</a>
@@ -84,7 +84,7 @@ int main() {
             segtree.range_apply(l, r, f);
         } else if (t == 1) {
             int l, r; scanf("%d%d", &l, &r);
-            mint<MOD> answer = segtree.range_concat(l, r).first;
+            mint<MOD> answer = segtree.range_get(l, r).first;
             printf("%d\n", answer.value);
         }
     }
@@ -199,9 +199,9 @@ struct lazy_propagation_segment_tree {
     }
 
     value_type point_get(int i) {
-        return range_concat(i, i + 1);
+        return range_get(i, i + 1);
     }
-    value_type range_concat(int l, int r) {
+    value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
 	if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();
@@ -356,7 +356,7 @@ int main() {
             segtree.range_apply(l, r, f);
         } else if (t == 1) {
             int l, r; scanf("%d%d", &l, &r);
-            mint<MOD> answer = segtree.range_concat(l, r).first;
+            mint<MOD> answer = segtree.range_get(l, r).first;
             printf("%d\n", answer.value);
         }
     }

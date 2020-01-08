@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 13:22:02+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 
@@ -146,9 +146,9 @@ struct lazy_propagation_segment_tree {
     }
 
     value_type point_get(int i) {
-        return range_concat(i, i + 1);
+        return range_get(i, i + 1);
     }
-    value_type range_concat(int l, int r) {
+    value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
 	if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();
@@ -270,9 +270,9 @@ struct lazy_propagation_segment_tree {
     }
 
     value_type point_get(int i) {
-        return range_concat(i, i + 1);
+        return range_get(i, i + 1);
     }
-    value_type range_concat(int l, int r) {
+    value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
 	if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();

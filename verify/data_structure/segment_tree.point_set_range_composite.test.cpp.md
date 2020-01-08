@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.point_set_range_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -75,7 +75,7 @@ int main() {
         if (f == 0) {
             segtree.point_set(x, make_pair(y, z));
         } else if (f == 1) {
-            mint<MOD> a, b; tie(a, b) = segtree.range_concat(x, y);
+            mint<MOD> a, b; tie(a, b) = segtree.range_get(x, y);
             printf("%d\n", (a * z + b).value);
         }
     }
@@ -124,7 +124,7 @@ struct segment_tree {
             a[i - 1] = mon.mult(a[2 * i - 1], a[2 * i]);
         }
     }
-    value_type range_concat(int l, int r) {  // 0-based, [l, r)
+    value_type range_get(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
         value_type lacc = mon.unit(), racc = mon.unit();
         for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-based loop, 2x faster than recursion
@@ -285,7 +285,7 @@ int main() {
         if (f == 0) {
             segtree.point_set(x, make_pair(y, z));
         } else if (f == 1) {
-            mint<MOD> a, b; tie(a, b) = segtree.range_concat(x, y);
+            mint<MOD> a, b; tie(a, b) = segtree.range_get(x, y);
             printf("%d\n", (a * z + b).value);
         }
     }

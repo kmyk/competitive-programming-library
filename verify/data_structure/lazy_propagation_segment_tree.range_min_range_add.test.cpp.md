@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 13:22:02+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -68,7 +68,7 @@ int main() {
             int x; scanf("%d", &x);
             segtree.range_apply(l, r, x);
         } else if (com == 1) {
-            printf("%d\n", segtree.range_concat(l, r));
+            printf("%d\n", segtree.range_get(l, r));
         }
     }
     return 0;
@@ -182,9 +182,9 @@ struct lazy_propagation_segment_tree {
     }
 
     value_type point_get(int i) {
-        return range_concat(i, i + 1);
+        return range_get(i, i + 1);
     }
-    value_type range_concat(int l, int r) {
+    value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
 	if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();
@@ -239,7 +239,7 @@ int main() {
             int x; scanf("%d", &x);
             segtree.range_apply(l, r, x);
         } else if (com == 1) {
-            printf("%d\n", segtree.range_concat(l, r));
+            printf("%d\n", segtree.range_get(l, r));
         }
     }
     return 0;

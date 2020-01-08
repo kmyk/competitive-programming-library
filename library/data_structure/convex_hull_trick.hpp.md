@@ -25,19 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/convex_hull_trick.hpp
+# :heavy_check_mark: a convex hull trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/convex_hull_trick.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 14:28:06+09:00
+    - Last commit date: 2020-01-08 19:16:44+09:00
 
 
-* see: <a href="http://d.hatena.ne.jp/sune2/20140310/1394440369">http://d.hatena.ne.jp/sune2/20140310/1394440369</a>
-* see: <a href="http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html">http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html</a>
-* see: <a href="http://satanic0258.hatenablog.com/entry/2016/08/16/181331">http://satanic0258.hatenablog.com/entry/2016/08/16/181331</a>
-* see: <a href="http://wcipeg.com/wiki/Convex_hull_trick">http://wcipeg.com/wiki/Convex_hull_trick</a>
+## 概要
+
+一次関数の集合 $F = \emptyset \subseteq \lbrace \lambda x. ax + b \mid a, b \in \mathbb{Z} \rbrace$ に対し、次が処理可能:
+
+-   直線追加: 与えられた $f = \lambda x. ax + b$ に対し $F \gets F \cup \lbrace f \rbrace$ と均し $O(\log N)$ で更新する
+-   最小値取得: 与えられた $x$ に対し $\min _ {f \in F} f(x)$ を $O(\log N)$ で計算する
 
 
 ## Verified with
@@ -78,11 +80,8 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @sa http://d.hatena.ne.jp/sune2/20140310/1394440369
- * @sa http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html
- * @sa http://satanic0258.hatenablog.com/entry/2016/08/16/181331
- * @sa http://wcipeg.com/wiki/Convex_hull_trick
- * @note verified at http://codeforces.com/contest/631/submission/31828502
+ * @brief a convex hull trick (非単調, online)
+ * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {
     typedef convex_hull_trick_details::line_t line_t;
@@ -197,11 +196,8 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @sa http://d.hatena.ne.jp/sune2/20140310/1394440369
- * @sa http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html
- * @sa http://satanic0258.hatenablog.com/entry/2016/08/16/181331
- * @sa http://wcipeg.com/wiki/Convex_hull_trick
- * @note verified at http://codeforces.com/contest/631/submission/31828502
+ * @brief a convex hull trick (非単調, online)
+ * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {
     typedef convex_hull_trick_details::line_t line_t;

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/convex_hull_trick.line_add_get_min.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 14:28:06+09:00
+    - Last commit date: 2020-01-08 19:16:44+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/line_add_get_min">https://judge.yosupo.jp/problem/line_add_get_min</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
+* :heavy_check_mark: <a href="../../library/data_structure/convex_hull_trick.hpp.html">a convex hull trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -110,11 +110,8 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @sa http://d.hatena.ne.jp/sune2/20140310/1394440369
- * @sa http://techtipshoge.blogspot.jp/2013/06/convex-hull-trickdequepop-back.html
- * @sa http://satanic0258.hatenablog.com/entry/2016/08/16/181331
- * @sa http://wcipeg.com/wiki/Convex_hull_trick
- * @note verified at http://codeforces.com/contest/631/submission/31828502
+ * @brief a convex hull trick (非単調, online)
+ * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {
     typedef convex_hull_trick_details::line_t line_t;

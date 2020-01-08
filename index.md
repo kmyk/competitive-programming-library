@@ -45,7 +45,7 @@ layout: default
 
 ### data_structure
 
-* :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">data_structure/convex_hull_trick.hpp</a>
+* :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">a convex hull trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>

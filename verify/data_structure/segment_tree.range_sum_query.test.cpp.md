@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.range_sum_query.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:32:43+09:00
+    - Last commit date: 2020-01-08 19:11:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -62,9 +62,9 @@ int main() {
         int com, x, y; cin >> com >> x >> y;
         -- x;
         if (com == 0) {
-            segtree.point_set(x, segtree.range_concat(x, x + 1) + y);
+            segtree.point_set(x, segtree.range_get(x, x + 1) + y);
         } else if (com == 1) {
-            cout << segtree.range_concat(x, y) << endl;
+            cout << segtree.range_get(x, y) << endl;
         }
     }
     return 0;
@@ -112,7 +112,7 @@ struct segment_tree {
             a[i - 1] = mon.mult(a[2 * i - 1], a[2 * i]);
         }
     }
-    value_type range_concat(int l, int r) {  // 0-based, [l, r)
+    value_type range_get(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
         value_type lacc = mon.unit(), racc = mon.unit();
         for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-based loop, 2x faster than recursion
@@ -177,9 +177,9 @@ int main() {
         int com, x, y; cin >> com >> x >> y;
         -- x;
         if (com == 0) {
-            segtree.point_set(x, segtree.range_concat(x, x + 1) + y);
+            segtree.point_set(x, segtree.range_get(x, x + 1) + y);
         } else if (com == 1) {
-            cout << segtree.range_concat(x, y) << endl;
+            cout << segtree.range_get(x, y) << endl;
         }
     }
     return 0;
