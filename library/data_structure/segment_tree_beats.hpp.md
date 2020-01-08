@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-04 21:35:32+09:00
+    - Last commit date: 2020-01-08 13:24:33+09:00
 
 
 
@@ -48,12 +48,19 @@ layout: default
 
 /**
  * @brief a segment tree beats
+ * @note range {chmin, chmax, add, update} + range {min, max, sum}
  */
 class segment_tree_beats {
+    // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
     typedef struct {
-        int64_t first;
-        int64_t second;
-        int cnt;
+        int64_t max;
+        int64_t max_second;
+        int max_count;
+        int64_t min;
+        int64_t min_second;
+        int min_count;
+        int64_t lazy_add;
+        int64_t lazy_update;
         int64_t sum;
     } value_type;
 
@@ -64,78 +71,240 @@ public:
     segment_tree_beats() = default;
     segment_tree_beats(int n_) {
         n = 1; while (n < n_) n *= 2;
-        a.resize(2 * n - 1, (value_type) { INT64_MAX, INT64_MIN, -1, 0 });
-        REP (i, 2 * n - 1) {
-            a[i].cnt = n >> (32 - __builtin_clz(i + 1) - 1);
+        a.resize(2 * n - 1);
+        tag<UPDATE>(0, 0);
+    }
+    template <class InputIterator>
+    segment_tree_beats(InputIterator first, InputIterator last) {
+        int n_ = std::distance(first, last);
+        n = 1; while (n < n_) n *= 2;
+        a.resize(2 * n - 1);
+        REP (i, n_) {
+            tag<UPDATE>(n - 1 + i, *(first + i));
+        }
+        REP3 (i, n_, n) {
+            tag<UPDATE>(n - 1 + i, 0);
+        }
+        REP_R (i, n - 1) {
+            update(i);
         }
     }
 
     void range_chmin(int l, int r, int64_t value) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
-        range_chmin(0, 0, n, l, r, value);
+        range_apply<CHMIN>(0, 0, n, l, r, value);
     }
-    void range_chmin(int i, int il, int ir, int l, int r, int64_t g) {
-        if (ir <= l or r <= il or break_condition(i, g)) {
-            // break
-        } else if (l <= il and ir <= r and tag_condition(i, g)) {
-            tag(i, g);
-        } else {
-            pushdown(i);
-            range_chmin(2 * i + 1, il, (il + ir) / 2, l, r, g);
-            range_chmin(2 * i + 2, (il + ir) / 2, ir, l, r, g);
-            update(i);
-        }
+    void range_chmax(int l, int r, int64_t value) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        range_apply<CHMAX>(0, 0, n, l, r, value);
+    }
+    void range_add(int l, int r, int64_t value) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        range_apply<ADD>(0, 0, n, l, r, value);
+    }
+    void range_update(int l, int r, int64_t value) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        range_apply<UPDATE>(0, 0, n, l, r, value);
     }
 
+    int64_t range_min(int l, int r) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        return range_get<MIN>(0, 0, n, l, r);
+    }
+    int64_t range_max(int l, int r) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        return range_get<MAX>(0, 0, n, l, r);
+    }
     int64_t range_sum(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
-        return range_sum(0, 0, n, l, r);
-    }
-    int64_t range_sum(int i, int il, int ir, int l, int r) {
-        if (ir <= l or r <= il) {
-            return 0;
-        } else if (l <= il and ir <= r) {
-            return a[i].sum;
-        } else {
-            pushdown(i);
-            int64_t sum_l = range_sum(2 * i + 1, il, (il + ir) / 2, l, r);
-            int64_t sum_r = range_sum(2 * i + 2, (il + ir) / 2, ir, l, r);
-            return sum_l + sum_r;
-        }
+        return range_get<SUM>(0, 0, n, l, r);
     }
 
 private:
-    bool break_condition(int i, int64_t g) {
-         return a[i].first <= g;
-    }
-    bool tag_condition(int i, int64_t g) {
-         return a[i].second < g and g < a[i].first;
-    }
-    void tag(int i, int64_t g) {
-        if (a[i].first != INT64_MAX) {
-            a[i].sum -= a[i].first * a[i].cnt;
+    static constexpr char CHMIN = 0;
+    static constexpr char CHMAX = 1;
+    static constexpr char ADD = 2;
+    static constexpr char UPDATE = 3;
+    static constexpr char MIN = 10;
+    static constexpr char MAX = 11;
+    static constexpr char SUM = 12;
+
+    template <char TYPE>
+    void range_apply(int i, int il, int ir, int l, int r, int64_t g) {
+        if (ir <= l or r <= il or break_condition<TYPE>(i, g)) {
+            // break
+        } else if (l <= il and ir <= r and tag_condition<TYPE>(i, g)) {
+            tag<TYPE>(i, g);
+        } else {
+            pushdown(i);
+            range_apply<TYPE>(2 * i + 1, il, (il + ir) / 2, l, r, g);
+            range_apply<TYPE>(2 * i + 2, (il + ir) / 2, ir, l, r, g);
+            update(i);
         }
-        a[i].sum += g * a[i].cnt;
-        a[i].first = g;
+    }
+    template <char TYPE>
+    inline bool break_condition(int i, int64_t g) {
+        switch (TYPE) {
+            case CHMIN: return a[i].max <= g;
+            case CHMAX: return g <= a[i].min;
+            case ADD: return false;
+            case UPDATE: return false;
+            default: assert (false);
+        }
+    }
+    template <char TYPE>
+    inline bool tag_condition(int i, int64_t g) {
+        switch (TYPE) {
+            case CHMIN: return a[i].max_second < g and g < a[i].max;
+            case CHMAX: return a[i].min < g and g < a[i].min_second;
+            case ADD: return true;
+            case UPDATE: return true;
+            default: assert (false);
+        }
+    }
+    template <char TYPE>
+    inline void tag(int i, int64_t g) {
+        int length = n >> (32 - __builtin_clz(i + 1) - 1);
+        if (TYPE == CHMIN) {
+            if (a[i].max == a[i].min or g <= a[i].min) {
+                tag<UPDATE>(i, g);
+                return;
+            }
+            if (a[i].max != INT64_MIN) {
+                a[i].sum -= a[i].max * a[i].max_count;
+            }
+            a[i].max = g;
+            a[i].min_second = std::min(a[i].min_second, g);
+            if (a[i].lazy_update != INT64_MAX) {
+                a[i].lazy_update = std::min(a[i].lazy_update, g);
+            }
+            a[i].sum += g * a[i].max_count;
+        } else if (TYPE == CHMAX) {
+            if (a[i].max == a[i].min or a[i].max <= g) {
+                tag<UPDATE>(i, g);
+                return;
+            }
+            if (a[i].min != INT64_MAX) {
+                a[i].sum -= a[i].min * a[i].min_count;
+            }
+            a[i].min = g;
+            a[i].max_second = std::max(a[i].max_second, g);
+            if (a[i].lazy_update != INT64_MAX) {
+                a[i].lazy_update = std::max(a[i].lazy_update, g);
+            }
+            a[i].sum += g * a[i].min_count;
+        } else if (TYPE == ADD) {
+            if (a[i].max != INT64_MAX) {
+                a[i].max += g;
+            }
+            if (a[i].max_second != INT64_MIN) {
+                a[i].max_second += g;
+            }
+            if (a[i].min != INT64_MIN) {
+                a[i].min += g;
+            }
+            if (a[i].min_second != INT64_MAX) {
+                a[i].min_second += g;
+            }
+            a[i].lazy_add += g;
+            if (a[i].lazy_update != INT64_MAX) {
+                a[i].lazy_update += g;
+            }
+            a[i].sum += g * length;
+        } else if (TYPE == UPDATE) {
+            a[i].max = g;
+            a[i].max_second = INT64_MIN;
+            a[i].max_count = length;
+            a[i].min = g;
+            a[i].min_second = INT64_MAX;
+            a[i].min_count = length;
+            a[i].lazy_add = 0;
+            a[i].lazy_update = INT64_MAX;
+            a[i].sum = g * length;
+        } else {
+            assert (false);
+        }
     }
     void pushdown(int i) {
-        if (a[i].first < a[2 * i + 1].first) {
-            tag(2 * i + 1, a[i].first);
+        int l = 2 * i + 1;
+        int r = 2 * i + 2;
+        // update
+        if (a[i].lazy_update != INT64_MAX) {
+            tag<UPDATE>(l, a[i].lazy_update);
+            tag<UPDATE>(r, a[i].lazy_update);
+            a[i].lazy_update = INT64_MAX;
+            return;
         }
-        if (a[i].first < a[2 * i + 2].first) {
-            tag(2 * i + 2, a[i].first);
+        // add
+        if (a[i].lazy_add != 0) {
+            tag<ADD>(l, a[i].lazy_add);
+            tag<ADD>(r, a[i].lazy_add);
+            a[i].lazy_add = 0;
+        }
+        // chmin
+        if (a[i].max < a[l].max) {
+            tag<CHMIN>(l, a[i].max);
+        }
+        if (a[i].max < a[r].max) {
+            tag<CHMIN>(r, a[i].max);
+        }
+        // chmax
+        if (a[l].min < a[i].min) {
+            tag<CHMAX>(l, a[i].min);
+        }
+        if (a[r].min < a[i].min) {
+            tag<CHMAX>(r, a[i].min);
         }
     }
     void update(int i) {
         int l = 2 * i + 1;
         int r = 2 * i + 2;
-        vector<int64_t> b { a[l].first, a[l].second, a[r].first, a[r].second };
+        // chmin
+        std::vector<int64_t> b { a[l].max, a[l].max_second, a[r].max, a[r].max_second };
         std::sort(b.rbegin(), b.rend());
         b.erase(std::unique(ALL(b)), b.end());
-        a[i].first = b[0];
-        a[i].second = b[1];
-        a[i].cnt = (b[0] == a[l].first ? a[l].cnt : 0) + (b[0] == a[r].first ? a[r].cnt : 0);
+        a[i].max = b[0];
+        a[i].max_second = b[1];
+        a[i].max_count = (b[0] == a[l].max ? a[l].max_count : 0) + (b[0] == a[r].max ? a[r].max_count : 0);
+        // chmax
+        std::vector<int64_t> c { a[l].min, a[l].min_second, a[r].min, a[r].min_second };
+        std::sort(ALL(c));
+        c.erase(std::unique(ALL(c)), c.end());
+        a[i].min = c[0];
+        a[i].min_second = c[1];
+        a[i].min_count = (c[0] == a[l].min ? a[l].min_count : 0) + (c[0] == a[r].min ? a[r].min_count : 0);
+        // add
+        a[i].lazy_add = 0;
+        // update
+        a[i].lazy_update = INT64_MAX;
+        // sum
         a[i].sum = a[l].sum + a[r].sum;
+    }
+
+    template <char TYPE>
+    int64_t range_get(int i, int il, int ir, int l, int r) {
+        if (ir <= l or r <= il) {
+            return 0;
+        } else if (l <= il and ir <= r) {
+            // base
+            switch (TYPE) {
+                case MIN: return a[i].min;
+                case MAX: return a[i].max;
+                case SUM: return a[i].sum;
+                default: assert (false);
+            }
+        } else {
+            pushdown(i);
+            int64_t value_l = range_get<TYPE>(2 * i + 1, il, (il + ir) / 2, l, r);
+            int64_t value_r = range_get<TYPE>(2 * i + 2, (il + ir) / 2, ir, l, r);
+            // mult
+            switch (TYPE) {
+                case MIN: return std::min(value_l, value_r);
+                case MAX: return std::max(value_l, value_r);
+                case SUM: return value_l + value_r;
+                default: assert (false);
+            }
+        }
     }
 };
 
@@ -152,12 +321,19 @@ private:
 
 /**
  * @brief a segment tree beats
+ * @note range {chmin, chmax, add, update} + range {min, max, sum}
  */
 class segment_tree_beats {
+    // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
     typedef struct {
-        int64_t first;
-        int64_t second;
-        int cnt;
+        int64_t max;
+        int64_t max_second;
+        int max_count;
+        int64_t min;
+        int64_t min_second;
+        int min_count;
+        int64_t lazy_add;
+        int64_t lazy_update;
         int64_t sum;
     } value_type;
 
@@ -168,78 +344,240 @@ public:
     segment_tree_beats() = default;
     segment_tree_beats(int n_) {
         n = 1; while (n < n_) n *= 2;
-        a.resize(2 * n - 1, (value_type) { INT64_MAX, INT64_MIN, -1, 0 });
-        REP (i, 2 * n - 1) {
-            a[i].cnt = n >> (32 - __builtin_clz(i + 1) - 1);
+        a.resize(2 * n - 1);
+        tag<UPDATE>(0, 0);
+    }
+    template <class InputIterator>
+    segment_tree_beats(InputIterator first, InputIterator last) {
+        int n_ = std::distance(first, last);
+        n = 1; while (n < n_) n *= 2;
+        a.resize(2 * n - 1);
+        REP (i, n_) {
+            tag<UPDATE>(n - 1 + i, *(first + i));
+        }
+        REP3 (i, n_, n) {
+            tag<UPDATE>(n - 1 + i, 0);
+        }
+        REP_R (i, n - 1) {
+            update(i);
         }
     }
 
     void range_chmin(int l, int r, int64_t value) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
-        range_chmin(0, 0, n, l, r, value);
+        range_apply<CHMIN>(0, 0, n, l, r, value);
     }
-    void range_chmin(int i, int il, int ir, int l, int r, int64_t g) {
-        if (ir <= l or r <= il or break_condition(i, g)) {
-            // break
-        } else if (l <= il and ir <= r and tag_condition(i, g)) {
-            tag(i, g);
-        } else {
-            pushdown(i);
-            range_chmin(2 * i + 1, il, (il + ir) / 2, l, r, g);
-            range_chmin(2 * i + 2, (il + ir) / 2, ir, l, r, g);
-            update(i);
-        }
+    void range_chmax(int l, int r, int64_t value) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        range_apply<CHMAX>(0, 0, n, l, r, value);
+    }
+    void range_add(int l, int r, int64_t value) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        range_apply<ADD>(0, 0, n, l, r, value);
+    }
+    void range_update(int l, int r, int64_t value) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        range_apply<UPDATE>(0, 0, n, l, r, value);
     }
 
+    int64_t range_min(int l, int r) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        return range_get<MIN>(0, 0, n, l, r);
+    }
+    int64_t range_max(int l, int r) {  // 0-based, [l, r)
+        assert (0 <= l and l <= r and r <= n);
+        return range_get<MAX>(0, 0, n, l, r);
+    }
     int64_t range_sum(int l, int r) {  // 0-based, [l, r)
         assert (0 <= l and l <= r and r <= n);
-        return range_sum(0, 0, n, l, r);
-    }
-    int64_t range_sum(int i, int il, int ir, int l, int r) {
-        if (ir <= l or r <= il) {
-            return 0;
-        } else if (l <= il and ir <= r) {
-            return a[i].sum;
-        } else {
-            pushdown(i);
-            int64_t sum_l = range_sum(2 * i + 1, il, (il + ir) / 2, l, r);
-            int64_t sum_r = range_sum(2 * i + 2, (il + ir) / 2, ir, l, r);
-            return sum_l + sum_r;
-        }
+        return range_get<SUM>(0, 0, n, l, r);
     }
 
 private:
-    bool break_condition(int i, int64_t g) {
-         return a[i].first <= g;
-    }
-    bool tag_condition(int i, int64_t g) {
-         return a[i].second < g and g < a[i].first;
-    }
-    void tag(int i, int64_t g) {
-        if (a[i].first != INT64_MAX) {
-            a[i].sum -= a[i].first * a[i].cnt;
+    static constexpr char CHMIN = 0;
+    static constexpr char CHMAX = 1;
+    static constexpr char ADD = 2;
+    static constexpr char UPDATE = 3;
+    static constexpr char MIN = 10;
+    static constexpr char MAX = 11;
+    static constexpr char SUM = 12;
+
+    template <char TYPE>
+    void range_apply(int i, int il, int ir, int l, int r, int64_t g) {
+        if (ir <= l or r <= il or break_condition<TYPE>(i, g)) {
+            // break
+        } else if (l <= il and ir <= r and tag_condition<TYPE>(i, g)) {
+            tag<TYPE>(i, g);
+        } else {
+            pushdown(i);
+            range_apply<TYPE>(2 * i + 1, il, (il + ir) / 2, l, r, g);
+            range_apply<TYPE>(2 * i + 2, (il + ir) / 2, ir, l, r, g);
+            update(i);
         }
-        a[i].sum += g * a[i].cnt;
-        a[i].first = g;
+    }
+    template <char TYPE>
+    inline bool break_condition(int i, int64_t g) {
+        switch (TYPE) {
+            case CHMIN: return a[i].max <= g;
+            case CHMAX: return g <= a[i].min;
+            case ADD: return false;
+            case UPDATE: return false;
+            default: assert (false);
+        }
+    }
+    template <char TYPE>
+    inline bool tag_condition(int i, int64_t g) {
+        switch (TYPE) {
+            case CHMIN: return a[i].max_second < g and g < a[i].max;
+            case CHMAX: return a[i].min < g and g < a[i].min_second;
+            case ADD: return true;
+            case UPDATE: return true;
+            default: assert (false);
+        }
+    }
+    template <char TYPE>
+    inline void tag(int i, int64_t g) {
+        int length = n >> (32 - __builtin_clz(i + 1) - 1);
+        if (TYPE == CHMIN) {
+            if (a[i].max == a[i].min or g <= a[i].min) {
+                tag<UPDATE>(i, g);
+                return;
+            }
+            if (a[i].max != INT64_MIN) {
+                a[i].sum -= a[i].max * a[i].max_count;
+            }
+            a[i].max = g;
+            a[i].min_second = std::min(a[i].min_second, g);
+            if (a[i].lazy_update != INT64_MAX) {
+                a[i].lazy_update = std::min(a[i].lazy_update, g);
+            }
+            a[i].sum += g * a[i].max_count;
+        } else if (TYPE == CHMAX) {
+            if (a[i].max == a[i].min or a[i].max <= g) {
+                tag<UPDATE>(i, g);
+                return;
+            }
+            if (a[i].min != INT64_MAX) {
+                a[i].sum -= a[i].min * a[i].min_count;
+            }
+            a[i].min = g;
+            a[i].max_second = std::max(a[i].max_second, g);
+            if (a[i].lazy_update != INT64_MAX) {
+                a[i].lazy_update = std::max(a[i].lazy_update, g);
+            }
+            a[i].sum += g * a[i].min_count;
+        } else if (TYPE == ADD) {
+            if (a[i].max != INT64_MAX) {
+                a[i].max += g;
+            }
+            if (a[i].max_second != INT64_MIN) {
+                a[i].max_second += g;
+            }
+            if (a[i].min != INT64_MIN) {
+                a[i].min += g;
+            }
+            if (a[i].min_second != INT64_MAX) {
+                a[i].min_second += g;
+            }
+            a[i].lazy_add += g;
+            if (a[i].lazy_update != INT64_MAX) {
+                a[i].lazy_update += g;
+            }
+            a[i].sum += g * length;
+        } else if (TYPE == UPDATE) {
+            a[i].max = g;
+            a[i].max_second = INT64_MIN;
+            a[i].max_count = length;
+            a[i].min = g;
+            a[i].min_second = INT64_MAX;
+            a[i].min_count = length;
+            a[i].lazy_add = 0;
+            a[i].lazy_update = INT64_MAX;
+            a[i].sum = g * length;
+        } else {
+            assert (false);
+        }
     }
     void pushdown(int i) {
-        if (a[i].first < a[2 * i + 1].first) {
-            tag(2 * i + 1, a[i].first);
+        int l = 2 * i + 1;
+        int r = 2 * i + 2;
+        // update
+        if (a[i].lazy_update != INT64_MAX) {
+            tag<UPDATE>(l, a[i].lazy_update);
+            tag<UPDATE>(r, a[i].lazy_update);
+            a[i].lazy_update = INT64_MAX;
+            return;
         }
-        if (a[i].first < a[2 * i + 2].first) {
-            tag(2 * i + 2, a[i].first);
+        // add
+        if (a[i].lazy_add != 0) {
+            tag<ADD>(l, a[i].lazy_add);
+            tag<ADD>(r, a[i].lazy_add);
+            a[i].lazy_add = 0;
+        }
+        // chmin
+        if (a[i].max < a[l].max) {
+            tag<CHMIN>(l, a[i].max);
+        }
+        if (a[i].max < a[r].max) {
+            tag<CHMIN>(r, a[i].max);
+        }
+        // chmax
+        if (a[l].min < a[i].min) {
+            tag<CHMAX>(l, a[i].min);
+        }
+        if (a[r].min < a[i].min) {
+            tag<CHMAX>(r, a[i].min);
         }
     }
     void update(int i) {
         int l = 2 * i + 1;
         int r = 2 * i + 2;
-        vector<int64_t> b { a[l].first, a[l].second, a[r].first, a[r].second };
+        // chmin
+        std::vector<int64_t> b { a[l].max, a[l].max_second, a[r].max, a[r].max_second };
         std::sort(b.rbegin(), b.rend());
         b.erase(std::unique(ALL(b)), b.end());
-        a[i].first = b[0];
-        a[i].second = b[1];
-        a[i].cnt = (b[0] == a[l].first ? a[l].cnt : 0) + (b[0] == a[r].first ? a[r].cnt : 0);
+        a[i].max = b[0];
+        a[i].max_second = b[1];
+        a[i].max_count = (b[0] == a[l].max ? a[l].max_count : 0) + (b[0] == a[r].max ? a[r].max_count : 0);
+        // chmax
+        std::vector<int64_t> c { a[l].min, a[l].min_second, a[r].min, a[r].min_second };
+        std::sort(ALL(c));
+        c.erase(std::unique(ALL(c)), c.end());
+        a[i].min = c[0];
+        a[i].min_second = c[1];
+        a[i].min_count = (c[0] == a[l].min ? a[l].min_count : 0) + (c[0] == a[r].min ? a[r].min_count : 0);
+        // add
+        a[i].lazy_add = 0;
+        // update
+        a[i].lazy_update = INT64_MAX;
+        // sum
         a[i].sum = a[l].sum + a[r].sum;
+    }
+
+    template <char TYPE>
+    int64_t range_get(int i, int il, int ir, int l, int r) {
+        if (ir <= l or r <= il) {
+            return 0;
+        } else if (l <= il and ir <= r) {
+            // base
+            switch (TYPE) {
+                case MIN: return a[i].min;
+                case MAX: return a[i].max;
+                case SUM: return a[i].sum;
+                default: assert (false);
+            }
+        } else {
+            pushdown(i);
+            int64_t value_l = range_get<TYPE>(2 * i + 1, il, (il + ir) / 2, l, r);
+            int64_t value_r = range_get<TYPE>(2 * i + 2, (il + ir) / 2, ir, l, r);
+            // mult
+            switch (TYPE) {
+                case MIN: return std::min(value_l, value_r);
+                case MAX: return std::max(value_l, value_r);
+                case SUM: return value_l + value_r;
+                default: assert (false);
+            }
+        }
     }
 };
 
