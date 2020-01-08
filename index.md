@@ -218,7 +218,10 @@ layout: default
 * :warning: <a href="library/utils/doubling.inc.cpp.html">the doubling technique <small>(utils/doubling.inc.cpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
+* :heavy_check_mark: <a href="library/utils/fastio.hpp.html">utils/fastio.hpp</a>
+* :warning: <a href="library/utils/fastio_getint_unlocked.hpp.html">utils/fastio_getint_unlocked.hpp</a>
 * :heavy_check_mark: <a href="library/utils/fastio_printer.hpp.html">utils/fastio_printer.hpp</a>
+* :warning: <a href="library/utils/fastio_putint_unlocked.hpp.html">utils/fastio_putint_unlocked.hpp</a>
 * :heavy_check_mark: <a href="library/utils/fastio_scanner.hpp.html">utils/fastio_scanner.hpp</a>
 * :warning: <a href="library/utils/fib.inc.cpp.html">utils/fib.inc.cpp</a>
 * :warning: <a href="library/utils/graphviz.inc.cpp.html">utils/graphviz.inc.cpp</a>

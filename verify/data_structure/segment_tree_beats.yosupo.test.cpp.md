@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 14:39:04+09:00
+    - Last commit date: 2020-01-08 18:24:20+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum">https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum</a>
@@ -39,8 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">a segment tree beats <small>(data_structure/segment_tree_beats.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/fastio_printer.hpp.html">utils/fastio_printer.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/fastio_scanner.hpp.html">utils/fastio_scanner.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/fastio.hpp.html">utils/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -55,39 +54,35 @@ layout: default
 #include <cstdint>
 #include <vector>
 #include "utils/macros.hpp"
-#include "utils/fastio_scanner.hpp"
-#include "utils/fastio_printer.hpp"
+#include "utils/fastio.hpp"
 
 int main() {
-    scanner sc;
-    printer pr;
-
-    int n = sc.get<int>();
-    int q = sc.get<int>();
+    int n = in<int>();
+    int q = in<int>();
 
     std::vector<int64_t> a(n);
     REP (i, n) {
-        a[i] = sc.get<int64_t>();
+        a[i] = in<int64_t>();
     }
     segment_tree_beats beats(ALL(a));
 
     while (q --) {
-        int ty = sc.get<int>();
-        int l = sc.get<int>();
-        int r = sc.get<int>();
+        int ty = in<int>();
+        int l = in<int>();
+        int r = in<int>();
         if (ty == 0) {
-            int64_t b = sc.get<int64_t>();
+            int64_t b = in<int64_t>();
             beats.range_chmin(l, r, b);
         } else if (ty == 1) {
-            int64_t b = sc.get<int64_t>();
+            int64_t b = in<int64_t>();
             beats.range_chmax(l, r, b);
         } else if (ty == 2) {
-            int64_t b = sc.get<int64_t>();
+            int64_t b = in<int64_t>();
             beats.range_add(l, r, b);
         } else {
             int64_t sum = beats.range_sum(l, r);
-            pr.put<int64_t>(sum);
-            pr.put<char>('\n');
+            out<int64_t>(sum);
+            out<char>('\n');
         }
     }
     return 0;
@@ -380,167 +375,69 @@ private:
 
 #include <cstdint>
 #include <vector>
-#line 2 "utils/fastio_scanner.hpp"
-#include <algorithm>
-#include <cassert>
-#include <cstdlib>
-#include <cstring>
+#line 2 "utils/fastio.hpp"
+#include <cstdint>
+#include <cstdio>
 #include <string>
 #include <type_traits>
-#include <unistd.h>
 
-class scanner {
-    static constexpr int N = 65536;
-    static constexpr int K = 64;
-    char buf[K + N];
-    int l = 0;
-    int r = 0;
-    void flush() {
-        if (K < r - l) return;
-        memmove(buf + K - (r - l), buf + l, r - l);
-        l = K - (r - l);
-        r = K + read(STDIN_FILENO, buf + K, N);
-        assert (l < r);
-    }
-    void prepare() {
-        flush();
-        while (isspace(buf[l])) {
-            ++ l;
-            flush();
-        }
-    }
-public:
-    scanner() = default;
-    scanner(const scanner &) = delete;
-    scanner & operator = (const scanner &) = delete;
-    template <class Char, std::enable_if_t<std::is_same<Char, char>::value, int> = 0>
-    inline char get() {
-        prepare();
-        return buf[l ++];
-    }
-    template <class String, std::enable_if_t<std::is_same<String, std::string>::value, int> = 0>
-    std::string get() {
-        prepare();
-        std::string s;
-        do {
-            s.push_back(buf[l ++]);
-            if (r == l) flush();
-        } while (not isspace(buf[l]));
-        return s;
-    }
-    template <class Integer, std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
-    Integer get() {
-        prepare();
-        bool is_negative = false;
-        if (std::is_signed<Integer>::value and buf[l] == '-') {
-            is_negative = true;
-            ++ l;
-        }
-        Integer x = 0;
-        while (l < r and isdigit(buf[l])) {
-            x *= 10;
-            x += buf[l] - '0';
-            ++ l;
-        }
-        if (std::is_signed<Integer>::value and is_negative) {
-            x *= -1;
-        }
-        return x;
-    }
-};
-#line 2 "utils/fastio_printer.hpp"
-#include <algorithm>
-#include <cstdlib>
-#include <cstring>
-#include <string>
-#include <type_traits>
-#include <unistd.h>
+template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
+inline Char in() { return getchar_unlocked(); }
+template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
+inline std::string in() {
+    std::string s;
+    for (char c; not isspace(c = getchar_unlocked()); ) s.push_back(c);
+    return s;
+}
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+inline Integer in() {
+    Integer n = getchar_unlocked() - '0';
+    if (std::is_signed<Integer>::value and n + '0' == '-') return -in<Integer>();
+    for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
+    return n;
+}
 
-class printer {
-    static constexpr int N = 65536;
-    static constexpr int K = 64;
-    char buf[N];
+template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
+inline void out(char c) { putchar_unlocked(c); }
+template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
+inline void out(const std::string & s) { for (char c : s) putchar_unlocked(c); }
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+inline void out(Integer n) {
+    char s[20];
     int i = 0;
-    inline void flush() {
-        write(STDOUT_FILENO, buf, i);
-        i = 0;
-    }
-public:
-    printer() = default;
-    printer(const printer &) = delete;
-    printer & operator = (const printer &) = delete;
-    ~printer() {
-        flush();
-    }
-    template <class Char, std::enable_if_t<std::is_same<Char, char>::value, int> = 0>
-    inline void put(char c) {
-        if (i == N) flush();
-        buf[i ++] = c;
-    }
-    template <class String, std::enable_if_t<std::is_same<String, std::string>::value, int> = 0>
-    void put(const std::string & s) {
-        for (int l = 0; l < (int)s.length(); ) {
-            if (i == N) flush();
-            int r = std::min<int>(s.length(), l + (N - i));
-            memcpy(buf + i, s.data() + l, r - l);
-            i += r - l;
-            l = r;
-        }
-    }
-    template <class Integer, std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
-    void put(Integer x) {
-        if (N - i < K) flush();
-        if (std::is_signed<Integer>::value and x < 0) {
-            x *= -1;
-            buf[i ++] = '-';
-        }
-        if (x == 0) {
-            buf[i ++] = '0';
-            return;
-        }
-        char s[K];
-        int j = 0;
-        while (x) {
-            s[j ++] = x % 10 + '0';
-            x /= 10;
-        }
-        while (j) {
-            buf[i ++] = s[-- j];
-        }
-    }
-};
-#line 9 "data_structure/segment_tree_beats.yosupo.test.cpp"
+    if (std::is_signed<Integer>::value and n < 0) { putchar_unlocked('-'); n *= -1; }
+    do { s[i ++] = n % 10; n /= 10; } while (n);
+    while (i) putchar_unlocked(s[-- i] + '0');
+}
+#line 8 "data_structure/segment_tree_beats.yosupo.test.cpp"
 
 int main() {
-    scanner sc;
-    printer pr;
-
-    int n = sc.get<int>();
-    int q = sc.get<int>();
+    int n = in<int>();
+    int q = in<int>();
 
     std::vector<int64_t> a(n);
     REP (i, n) {
-        a[i] = sc.get<int64_t>();
+        a[i] = in<int64_t>();
     }
     segment_tree_beats beats(ALL(a));
 
     while (q --) {
-        int ty = sc.get<int>();
-        int l = sc.get<int>();
-        int r = sc.get<int>();
+        int ty = in<int>();
+        int l = in<int>();
+        int r = in<int>();
         if (ty == 0) {
-            int64_t b = sc.get<int64_t>();
+            int64_t b = in<int64_t>();
             beats.range_chmin(l, r, b);
         } else if (ty == 1) {
-            int64_t b = sc.get<int64_t>();
+            int64_t b = in<int64_t>();
             beats.range_chmax(l, r, b);
         } else if (ty == 2) {
-            int64_t b = sc.get<int64_t>();
+            int64_t b = in<int64_t>();
             beats.range_add(l, r, b);
         } else {
             int64_t sum = beats.range_sum(l, r);
-            pr.put<int64_t>(sum);
-            pr.put<char>('\n');
+            out<int64_t>(sum);
+            out<char>('\n');
         }
     }
     return 0;
