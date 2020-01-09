@@ -31,9 +31,10 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:00:13+09:00
+    - Last commit date: 2020-01-09 13:14:38+09:00
 
 
+* see: <a href="https://codeforces.com/blog/entry/57319">https://codeforces.com/blog/entry/57319</a>
 ## 概要
 
 整数 $\mathbb{Z} = (\mathbb{Z}, +, 0, \le)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in \mathbb{Z}^n$ に対し、次が処理可能:
@@ -73,6 +74,7 @@ layout: default
 /**
  * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
  * @docs data_structure/segment_tree_beats.md
+ * @see https://codeforces.com/blog/entry/57319
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
@@ -355,6 +357,7 @@ private:
 /**
  * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
  * @docs data_structure/segment_tree_beats.md
+ * @see https://codeforces.com/blog/entry/57319
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children

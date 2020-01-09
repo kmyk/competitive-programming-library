@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:00:13+09:00
+    - Last commit date: 2020-01-09 13:14:38+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum">https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum</a>
@@ -113,6 +113,7 @@ int main() {
 /**
  * @brief a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum})
  * @docs data_structure/segment_tree_beats.md
+ * @see https://codeforces.com/blog/entry/57319
  */
 class segment_tree_beats {
     // MEMO: values for queries (max, min, lazy_add, and lazy_update) already apply to the current node; but not for children
