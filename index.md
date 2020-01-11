@@ -118,6 +118,7 @@ layout: default
 * :heavy_check_mark: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
 * :warning: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
+* :warning: <a href="library/monoids/max_index.hpp.html">monoids/max_index.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
