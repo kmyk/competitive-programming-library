@@ -57,8 +57,10 @@ layout: default
 * :heavy_check_mark: <a href="../modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/choose.hpp.html">modulus/choose.hpp</a>
 * :heavy_check_mark: <a href="../modulus/formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
+* :warning: <a href="../modulus/garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/modlog.hpp.html">the baby-step giant-step <small>(modulus/modlog.hpp)</small></a>
-* :heavy_check_mark: <a href="../modulus/number_theoretic_transformation.hpp.html">a specialized version of Garner's algorithm <small>(modulus/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../modulus/number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../modulus/number_theoretic_transformation_with_garner.hpp.html">multiprecation on $\mathbb{Z}/n\mathbb{Z}\[x\]$ <small>(modulus/number_theoretic_transformation_with_garner.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 * :warning: <a href="../monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
@@ -94,7 +96,8 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/modlog.yosupo.test.cpp.html">modulus/modlog.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation.998244353.test.cpp.html">modulus/number_theoretic_transformation.998244353.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation.yosupo.test.cpp.html">modulus/number_theoretic_transformation.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp.html">modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
