@@ -5,4 +5,4 @@ docs:
   toc: false
 plugins:
 - jemoji
-theme: jekyll-theme-minima
+theme: jekyll-theme-slate
