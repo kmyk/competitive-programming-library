@@ -25,15 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/segment_tree_beats.yosupo.test.cpp
+# :heavy_check_mark: data_structure/segment_tree_beats.DSL_2_F.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.yosupo.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.DSL_2_F.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-23 16:19:00+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum">https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F</a>
 
 
 ## Depends on
@@ -48,7 +48,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
 #include "data_structure/segment_tree_beats.hpp"
 
 #include <cstdint>
@@ -60,28 +60,21 @@ int main() {
     int n = in<int>();
     int q = in<int>();
 
-    std::vector<int64_t> a(n);
-    REP (i, n) {
-        a[i] = in<int64_t>();
-    }
-    segment_tree_beats beats(ALL(a));
+    constexpr int64_t initial = (1ull << 31) - 1;
+    segment_tree_beats beats(n);
+    beats.range_update(0, n, initial);
 
     while (q --) {
         int ty = in<int>();
         int l = in<int>();
         int r = in<int>();
+        ++ r;
         if (ty == 0) {
-            int64_t b = in<int64_t>();
-            beats.range_chmin(l, r, b);
-        } else if (ty == 1) {
-            int64_t b = in<int64_t>();
-            beats.range_chmax(l, r, b);
-        } else if (ty == 2) {
-            int64_t b = in<int64_t>();
-            beats.range_add(l, r, b);
+            int64_t x = in<int64_t>();
+            beats.range_update(l, r, x);
         } else {
-            int64_t sum = beats.range_sum(l, r);
-            out<int64_t>(sum);
+            int64_t min = beats.range_min(l, r);
+            out<int64_t>(min);
             out<char>('\n');
         }
     }
@@ -94,8 +87,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "data_structure/segment_tree_beats.yosupo.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum"
+#line 1 "data_structure/segment_tree_beats.DSL_2_F.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
 #line 2 "data_structure/segment_tree_beats.hpp"
 #include <algorithm>
 #include <cassert>
@@ -377,7 +370,7 @@ private:
         }
     }
 };
-#line 3 "data_structure/segment_tree_beats.yosupo.test.cpp"
+#line 3 "data_structure/segment_tree_beats.DSL_2_F.test.cpp"
 
 #include <cstdint>
 #include <vector>
@@ -415,34 +408,27 @@ inline void out(Integer n) {
     do { s[i ++] = n % 10; n /= 10; } while (n);
     while (i) putchar_unlocked(s[-- i] + '0');
 }
-#line 8 "data_structure/segment_tree_beats.yosupo.test.cpp"
+#line 8 "data_structure/segment_tree_beats.DSL_2_F.test.cpp"
 
 int main() {
     int n = in<int>();
     int q = in<int>();
 
-    std::vector<int64_t> a(n);
-    REP (i, n) {
-        a[i] = in<int64_t>();
-    }
-    segment_tree_beats beats(ALL(a));
+    constexpr int64_t initial = (1ull << 31) - 1;
+    segment_tree_beats beats(n);
+    beats.range_update(0, n, initial);
 
     while (q --) {
         int ty = in<int>();
         int l = in<int>();
         int r = in<int>();
+        ++ r;
         if (ty == 0) {
-            int64_t b = in<int64_t>();
-            beats.range_chmin(l, r, b);
-        } else if (ty == 1) {
-            int64_t b = in<int64_t>();
-            beats.range_chmax(l, r, b);
-        } else if (ty == 2) {
-            int64_t b = in<int64_t>();
-            beats.range_add(l, r, b);
+            int64_t x = in<int64_t>();
+            beats.range_update(l, r, x);
         } else {
-            int64_t sum = beats.range_sum(l, r);
-            out<int64_t>(sum);
+            int64_t min = beats.range_min(l, r);
+            out<int64_t>(min);
             out<char>('\n');
         }
     }

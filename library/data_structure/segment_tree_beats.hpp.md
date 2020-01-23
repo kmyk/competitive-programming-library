@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-09 13:14:38+09:00
+    - Last commit date: 2020-01-23 16:19:00+09:00
 
 
 * see: <a href="https://codeforces.com/blog/entry/57319">https://codeforces.com/blog/entry/57319</a>
@@ -55,6 +55,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_F.test.cpp.html">data_structure/segment_tree_beats.DSL_2_F.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
 
 
@@ -310,7 +311,12 @@ private:
     template <char TYPE>
     int64_t range_get(int i, int il, int ir, int l, int r) {
         if (ir <= l or r <= il) {
-            return 0;
+            switch (TYPE) {
+                case MIN: return INT64_MAX;
+                case MAX: return INT64_MIN;
+                case SUM: return 0;
+                default: assert (false);
+            }
         } else if (l <= il and ir <= r) {
             // base
             switch (TYPE) {
@@ -593,7 +599,12 @@ private:
     template <char TYPE>
     int64_t range_get(int i, int il, int ir, int l, int r) {
         if (ir <= l or r <= il) {
-            return 0;
+            switch (TYPE) {
+                case MIN: return INT64_MAX;
+                case MAX: return INT64_MIN;
+                case SUM: return 0;
+                default: assert (false);
+            }
         } else if (l <= il and ir <= r) {
             // base
             switch (TYPE) {
