@@ -84,6 +84,9 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_F.test.cpp.html">data_structure/segment_tree_beats.DSL_2_F.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_G.test.cpp.html">data_structure/segment_tree_beats.DSL_2_G.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_H.test.cpp.html">data_structure/segment_tree_beats.DSL_2_H.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_I.test.cpp.html">data_structure/segment_tree_beats.DSL_2_I.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>

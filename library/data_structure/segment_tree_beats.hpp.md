@@ -56,6 +56,9 @@ layout: default
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_F.test.cpp.html">data_structure/segment_tree_beats.DSL_2_F.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_G.test.cpp.html">data_structure/segment_tree_beats.DSL_2_G.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_H.test.cpp.html">data_structure/segment_tree_beats.DSL_2_H.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_I.test.cpp.html">data_structure/segment_tree_beats.DSL_2_I.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
 
 
