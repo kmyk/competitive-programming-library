@@ -245,7 +245,12 @@ private:
     template <char TYPE>
     int64_t range_get(int i, int il, int ir, int l, int r) {
         if (ir <= l or r <= il) {
-            return 0;
+            switch (TYPE) {
+                case MIN: return INT64_MAX;
+                case MAX: return INT64_MIN;
+                case SUM: return 0;
+                default: assert (false);
+            }
         } else if (l <= il and ir <= r) {
             // base
             switch (TYPE) {
