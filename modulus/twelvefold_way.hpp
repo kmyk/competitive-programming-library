@@ -1,6 +1,8 @@
 #pragma once
 #include "modulus/mint.hpp"
 #include "modulus/choose.hpp"
+#include "modulus/permute.hpp"
+#include "modulus/multichoose.hpp"
 #include "modulus/stirling_number_of_the_second_kind.hpp"
 #include "modulus/bell_number.hpp"
 
