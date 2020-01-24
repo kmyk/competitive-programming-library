@@ -45,8 +45,10 @@ layout: default
 * :warning: <a href="garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="modlog.hpp.html">the baby-step giant-step <small>(modulus/modlog.hpp)</small></a>
+* :heavy_check_mark: <a href="multichoose.hpp.html">modulus/multichoose.hpp</a>
 * :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="number_theoretic_transformation_with_garner.hpp.html">multiprecation on $\mathbb{Z}/n\mathbb{Z}\[x\]$ <small>(modulus/number_theoretic_transformation_with_garner.hpp)</small></a>
+* :heavy_check_mark: <a href="permute.hpp.html">modulus/permute.hpp</a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 

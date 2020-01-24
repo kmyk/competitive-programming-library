@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-11 22:01:30+09:00
+    - Last commit date: 2020-01-25 06:00:40+09:00
 
 
 * labeled-N labeled-K any-f
@@ -56,6 +56,8 @@ layout: default
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="multichoose.hpp.html">modulus/multichoose.hpp</a>
+* :heavy_check_mark: <a href="permute.hpp.html">modulus/permute.hpp</a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -82,6 +84,8 @@ layout: default
 #pragma once
 #include "modulus/mint.hpp"
 #include "modulus/choose.hpp"
+#include "modulus/permute.hpp"
+#include "modulus/multichoose.hpp"
 #include "modulus/stirling_number_of_the_second_kind.hpp"
 #include "modulus/bell_number.hpp"
 
@@ -304,13 +308,7 @@ mint<MOD> inv_fact(int n) {
     }
     return memo[n];
 }
-#line 2 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) std::begin(x), std::end(x)
-#line 6 "modulus/choose.hpp"
+#line 5 "modulus/choose.hpp"
 
 /**
  * @note O(n log n) at first time, otherwise O(1)
@@ -320,11 +318,19 @@ mint<MOD> choose(int n, int r) {
     assert (0 <= r and r <= n);
     return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
 }
+#line 2 "modulus/permute.hpp"
+#include <cassert>
+#line 5 "modulus/permute.hpp"
+
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {
     assert (0 <= r and r <= n);
     return fact<MOD>(n) * inv_fact<MOD>(n - r);
 }
+#line 2 "modulus/multichoose.hpp"
+#include <cassert>
+#line 5 "modulus/multichoose.hpp"
+
 template <int32_t MOD>
 mint<MOD> multichoose(int n, int r) {
     assert (0 <= n and 0 <= r);
@@ -334,6 +340,12 @@ mint<MOD> multichoose(int n, int r) {
 #line 2 "modulus/stirling_number_of_the_second_kind.hpp"
 #include <cassert>
 #include <vector>
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
 #line 8 "modulus/stirling_number_of_the_second_kind.hpp"
 
 /**
@@ -408,7 +420,7 @@ template <int MOD>
 mint<MOD> unary_bell_number(int n) {
     return bell_number<MOD>(n, n);
 }
-#line 6 "modulus/twelvefold_way.hpp"
+#line 8 "modulus/twelvefold_way.hpp"
 
 /**
  * @brief twelvefold way / 写像12相

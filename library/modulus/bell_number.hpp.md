@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/bell_number.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-11 22:01:30+09:00
+    - Last commit date: 2020-01-25 06:00:40+09:00
 
 
 * see: <a href="http://mathworld.wolfram.com/BellNumber.html">http://mathworld.wolfram.com/BellNumber.html</a>
@@ -213,13 +213,7 @@ mint<MOD> inv_fact(int n) {
     }
     return memo[n];
 }
-#line 2 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) std::begin(x), std::end(x)
-#line 6 "modulus/choose.hpp"
+#line 5 "modulus/choose.hpp"
 
 /**
  * @note O(n log n) at first time, otherwise O(1)
@@ -229,20 +223,15 @@ mint<MOD> choose(int n, int r) {
     assert (0 <= r and r <= n);
     return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
 }
-template <int32_t MOD>
-mint<MOD> permute(int n, int r) {
-    assert (0 <= r and r <= n);
-    return fact<MOD>(n) * inv_fact<MOD>(n - r);
-}
-template <int32_t MOD>
-mint<MOD> multichoose(int n, int r) {
-    assert (0 <= n and 0 <= r);
-    if (n == 0 and r == 0) return 1;
-    return choose<MOD>(n + r - 1, r);
-}
 #line 2 "modulus/stirling_number_of_the_second_kind.hpp"
 #include <cassert>
 #include <vector>
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
 #line 8 "modulus/stirling_number_of_the_second_kind.hpp"
 
 /**

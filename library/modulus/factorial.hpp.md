@@ -47,6 +47,8 @@ layout: default
 
 * :heavy_check_mark: <a href="bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
 * :heavy_check_mark: <a href="choose.hpp.html">modulus/choose.hpp</a>
+* :heavy_check_mark: <a href="multichoose.hpp.html">modulus/multichoose.hpp</a>
+* :heavy_check_mark: <a href="permute.hpp.html">modulus/permute.hpp</a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 
