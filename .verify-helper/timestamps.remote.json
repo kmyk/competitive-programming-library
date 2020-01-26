@@ -20,6 +20,7 @@
 "data_structure/wavelet_matrix.aoj2674.test.cpp": "2019-12-20 06:12:24 +0900",
 "data_structure/wavelet_matrix.rectangle_sum.test.cpp": "2019-12-20 06:17:05 +0900",
 "graph/bellman_ford.test.cpp": "2019-12-20 06:12:24 +0900",
+"graph/kruskal.aoj.test.cpp": "2020-01-27 03:24:33 +0900",
 "graph/lowest_common_ancestor.aoj.test.cpp": "2020-01-08 19:11:32 +0900",
 "graph/lowest_common_ancestor.yosupo.test.cpp": "2020-01-08 19:11:32 +0900",
 "graph/strongly_connected_components.yosupo.test.cpp": "2019-12-30 23:14:29 +0900",
