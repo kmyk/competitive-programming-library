@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: compute a minimum spanning forest with Kruskal's method <small>(graph/kruskal.hpp)</small>
+# :heavy_check_mark: compute a minimum spanning tree with Kruskal's method <small>(graph/kruskal.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/kruskal.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-27 03:24:33+09:00
+    - Last commit date: 2020-01-27 04:12:05+09:00
 
 
 
@@ -61,8 +61,9 @@ layout: default
 #include <vector>
 
 /**
- * @brief compute a minimum spanning forest with Kruskal's method
+ * @brief compute a minimum spanning tree with Kruskal's method
  * @note $O(E \log E)$
+ * @note it becomes a forest if the given graph is not connected
  * @return a list of indices of edges
  */
 template <typename T>
@@ -129,8 +130,9 @@ struct union_find_tree {
 #include <vector>
 
 /**
- * @brief compute a minimum spanning forest with Kruskal's method
+ * @brief compute a minimum spanning tree with Kruskal's method
  * @note $O(E \log E)$
+ * @note it becomes a forest if the given graph is not connected
  * @return a list of indices of edges
  */
 template <typename T>

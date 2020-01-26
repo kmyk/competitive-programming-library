@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: monoids/trivial.hpp
+# :heavy_check_mark: monoids/trivial.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoids/trivial.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+    - Last commit date: 2020-01-27 07:18:51+09:00
 
 
 
@@ -39,6 +39,11 @@ layout: default
 ## Required by
 
 * :warning: <a href="trivial_action.hpp.html">monoids/trivial_action.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 
 
 ## Code
@@ -51,7 +56,7 @@ layout: default
 struct trivial_monoid {
     typedef struct {} value_type;
     value_type unit() const { return (value_type) {}; }
-    value_type unit(value_type a, value_type b) const { return (value_type) {}; }
+    value_type mult(value_type a, value_type b) const { return (value_type) {}; }
 };
 
 ```
@@ -65,7 +70,7 @@ struct trivial_monoid {
 struct trivial_monoid {
     typedef struct {} value_type;
     value_type unit() const { return (value_type) {}; }
-    value_type unit(value_type a, value_type b) const { return (value_type) {}; }
+    value_type mult(value_type a, value_type b) const { return (value_type) {}; }
 };
 
 ```

@@ -31,14 +31,14 @@ layout: default
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoids/trivial_action.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:16:13+09:00
+    - Last commit date: 2020-01-27 07:18:51+09:00
 
 
 
 
 ## Depends on
 
-* :warning: <a href="trivial.hpp.html">monoids/trivial.hpp</a>
+* :heavy_check_mark: <a href="trivial.hpp.html">monoids/trivial.hpp</a>
 
 
 ## Code
@@ -68,7 +68,7 @@ struct trivial_action {
 struct trivial_monoid {
     typedef struct {} value_type;
     value_type unit() const { return (value_type) {}; }
-    value_type unit(value_type a, value_type b) const { return (value_type) {}; }
+    value_type mult(value_type a, value_type b) const { return (value_type) {}; }
 };
 #line 3 "monoids/trivial_action.hpp"
 
