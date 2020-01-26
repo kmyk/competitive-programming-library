@@ -66,6 +66,7 @@ layout: default
 
 * :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
 * :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/kruskal.hpp.html">compute a minimum spanning forest with Kruskal's method <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
@@ -203,7 +204,6 @@ layout: default
 * :warning: <a href="library/old/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(old/midpoint.inc.cpp)</small></a>
 * :warning: <a href="library/old/miller-rabin.inc.cpp.html">old/miller-rabin.inc.cpp</a>
 * :warning: <a href="library/old/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(old/minimum-cost-flow.inc.cpp)</small></a>
-* :warning: <a href="library/old/minimum-spanning-tree.inc.cpp.html">old/minimum-spanning-tree.inc.cpp</a>
 * :warning: <a href="library/old/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路 <small>(old/namori-graph.inc.cpp)</small></a>
 * :warning: <a href="library/old/palindrome.inc.cpp.html">old/palindrome.inc.cpp</a>
 * :warning: <a href="library/old/periodic-function-power.inc.cpp.html">old/periodic-function-power.inc.cpp</a>
@@ -273,6 +273,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.aoj2674.test.cpp.html">data_structure/wavelet_matrix.aoj2674.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :heavy_check_mark: <a href="verify/graph/kruskal.aoj.test.cpp.html">graph/kruskal.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>

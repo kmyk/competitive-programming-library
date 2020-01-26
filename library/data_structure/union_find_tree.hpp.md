@@ -36,10 +36,16 @@ layout: default
 
 
 
+## Required by
+
+* :heavy_check_mark: <a href="../graph/kruskal.hpp.html">compute a minimum spanning forest with Kruskal's method <small>(graph/kruskal.hpp)</small></a>
+
+
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/data_structure/union_find_tree.aoj.test.cpp.html">data_structure/union_find_tree.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/union_find_tree.yosupo.test.cpp.html">data_structure/union_find_tree.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/kruskal.aoj.test.cpp.html">graph/kruskal.aoj.test.cpp</a>
 
 
 ## Code
