@@ -5,7 +5,6 @@
 #include "hack/fastio.hpp"
 #include <stack>
 #include <vector>
-#include <fstream>
 using namespace std;
 
 int main() {
