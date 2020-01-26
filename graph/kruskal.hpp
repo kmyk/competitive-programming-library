@@ -7,8 +7,9 @@
 #include <vector>
 
 /**
- * @brief compute a minimum spanning forest with Kruskal's method
+ * @brief compute a minimum spanning tree with Kruskal's method
  * @note $O(E \log E)$
+ * @note it becomes a forest if the given graph is not connected
  * @return a list of indices of edges
  */
 template <typename T>
