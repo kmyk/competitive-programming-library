@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-27 07:18:51+09:00
+    - Last commit date: 2020-01-27 07:23:04+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/vertex_add_path_sum">https://judge.yosupo.jp/problem/vertex_add_path_sum</a>
@@ -56,7 +56,6 @@ layout: default
 #include "hack/fastio.hpp"
 #include <stack>
 #include <vector>
-#include <fstream>
 using namespace std;
 
 int main() {
@@ -434,7 +433,6 @@ inline void out(Integer n) {
 #line 6 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
 #include <stack>
 #include <vector>
-#include <fstream>
 using namespace std;
 
 int main() {
