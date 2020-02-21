@@ -55,6 +55,7 @@ layout: default
 * :heavy_check_mark: <a href="../graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/topological_sort.hpp.html">graph/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="../graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
+* :heavy_check_mark: <a href="../graph/tree_decomposition.hpp.html">木分解 <small>(graph/tree_decomposition.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
 * :warning: <a href="../modulus/garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
@@ -98,6 +99,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/tree_decomposition.aoj_2405.test.cpp.html">graph/tree_decomposition.aoj_2405.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
