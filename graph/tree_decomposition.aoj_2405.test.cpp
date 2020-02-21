@@ -8,7 +8,7 @@ using namespace std;
 
 constexpr int MOD = 1000003;
 mint<MOD> solve(int n, int m, vector<vector<int> > & g) {
-    // update g
+    // add the implicitly given edges to g
     REP (x, n) {
         g[x].push_back((x + 1) % n);
         g[(x + 1) % n].push_back(x);
@@ -18,11 +18,11 @@ mint<MOD> solve(int n, int m, vector<vector<int> > & g) {
         g[x].erase(unique(ALL(g[x])), g[x].end());
     }
 
-    // tree decomposition
+    // get a tree decomposition
     auto [parent, bags_] = get_tree_decomposition(g);
     auto nice = get_nice_tree_decomposition(parent, bags_);
 
-    // dp
+    // dp on a nice tree decomposition
     vector<set<int> > bags(nice.size());
     auto index = [&](int a, int x) {
         assert (bags[a].count(x));
@@ -40,10 +40,12 @@ mint<MOD> solve(int n, int m, vector<vector<int> > & g) {
     vector<vector<mint<MOD> > > dp(nice.size());
     REP (a, nice.size()) {
         auto [tag, x, b] = nice[a];
+
         if (tag == LEAF) {
             bags[a].insert(x);
             dp[a].resize(1 << bags[a].size());
             dp[a][0] += 1;
+
         } else if (tag == INTRODUCE) {
             bags[a] = bags[b];
             bags[a].insert(x);
@@ -53,6 +55,7 @@ mint<MOD> solve(int n, int m, vector<vector<int> > & g) {
                 int s = translate(b, t, a);
                 dp[a][s] += dp[b][t];
             }
+
         } else if (tag == FORGET) {
             assert (bags[b].count(x));
             bags[a] = bags[b];
@@ -71,6 +74,7 @@ mint<MOD> solve(int n, int m, vector<vector<int> > & g) {
                     }
                 }
             }
+
         } else if (tag == JOIN) {
             assert (bags[x] == bags[b]);
             bags[a] = bags[b];
@@ -80,6 +84,7 @@ mint<MOD> solve(int n, int m, vector<vector<int> > & g) {
                     dp[a][s | t] += dp[x][s] * dp[b][t];
                 }
             }
+
         }
     }
     return dp.back().back();
