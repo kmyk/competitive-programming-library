@@ -13,7 +13,9 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief 木分解
+ * @brief 木分解 (木幅 $t \le 2$)
+ * @docs graph/tree_decomposition.md
+ * @note $O(N)$ ?
  * @see https://ei1333.hateblo.jp/entry/2020/02/12/150319
  * @arg g is a simple connected graph $G = (V, E)$ whose treewidth $t \le 2$
  * @return a decomposed tree $T = (I, F)$ as a triple of (the root, the list of children $c : I \to \mathcal{P} \to I$, what vertices are contained $X : I \to \mathcal{P}(V)$)
@@ -132,6 +134,10 @@ enum nice_tree_decomposition_tag {
     FORGET,
     JOIN,
 };
+
+/**
+ * @note $O(t N)$
+ */
 inline std::vector<std::tuple<nice_tree_decomposition_tag, int, int> > get_nice_tree_decomposition(const std::vector<int> & parent, const std::vector<std::vector<int> > & bags) {
     assert (not parent.empty());
     assert (parent.back() == -1);  // assume that vertices are topologically sorted and reversed
