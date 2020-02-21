@@ -74,7 +74,7 @@ layout: default
 * :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/topological_sort.hpp.html">graph/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :heavy_check_mark: <a href="library/graph/tree_decomposition.hpp.html">木分解 <small>(graph/tree_decomposition.hpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
 
 
 <div id="d78b6f30225cdc811adfe8d4e7c9fd34"></div>

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/tree_decomposition.aoj_2405.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 09:15:39+09:00
+    - Last commit date: 2020-02-21 10:52:58+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/graph/tree_decomposition.hpp.html">木分解 <small>(graph/tree_decomposition.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
@@ -190,7 +190,9 @@ int main() {
 #line 14 "graph/tree_decomposition.hpp"
 
 /**
- * @brief 木分解
+ * @brief 木分解 (木幅 $t \le 2$)
+ * @docs graph/tree_decomposition.md
+ * @note $O(N)$ ?
  * @see https://ei1333.hateblo.jp/entry/2020/02/12/150319
  * @arg g is a simple connected graph $G = (V, E)$ whose treewidth $t \le 2$
  * @return a decomposed tree $T = (I, F)$ as a triple of (the root, the list of children $c : I \to \mathcal{P} \to I$, what vertices are contained $X : I \to \mathcal{P}(V)$)
@@ -309,6 +311,10 @@ enum nice_tree_decomposition_tag {
     FORGET,
     JOIN,
 };
+
+/**
+ * @note $O(t N)$
+ */
 inline std::vector<std::tuple<nice_tree_decomposition_tag, int, int> > get_nice_tree_decomposition(const std::vector<int> & parent, const std::vector<std::vector<int> > & bags) {
     assert (not parent.empty());
     assert (parent.back() == -1);  // assume that vertices are topologically sorted and reversed

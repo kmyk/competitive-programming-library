@@ -55,7 +55,7 @@ layout: default
 * :heavy_check_mark: <a href="../graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/topological_sort.hpp.html">graph/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="../graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :heavy_check_mark: <a href="../graph/tree_decomposition.hpp.html">木分解 <small>(graph/tree_decomposition.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
 * :warning: <a href="../modulus/garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
