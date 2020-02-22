@@ -8,7 +8,7 @@
 #include "monoids/min_index.hpp"
 
 /**
- * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
+ * @brief lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table)
  * @see https://www.slideshare.net/yumainoue965/lca-and-rmq
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */

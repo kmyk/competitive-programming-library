@@ -4,7 +4,7 @@
 #include "modulus/factorial.hpp"
 
 /**
- * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {

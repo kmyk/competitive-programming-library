@@ -10,11 +10,9 @@
 #include <iostream>
 
 /**
- * @brief the baby-step giant-step
+ * @brief discrete log / 離散対数 (the baby-step giant-step, $O(\sqrt{m})$)
  * @description find the smallest $x \ge 0$ s.t. $g^x \equiv y \pmod{m}$
  * @param m is a positive integer
- * @note $O(\sqrt{m})$
- * @note meet-in-the-middle; let $x = a \sqrt{m} + b$
  * @note -1 if not found
  */
 inline int modlog(int g, int y, int m) {
@@ -23,6 +21,8 @@ inline int modlog(int g, int y, int m) {
     if (m == 1) return 0;
     if (y == 1) return 0;
     if (g == 0 and y == 0) return 1;
+
+    // meet-in-the-middle; let x = a \sqrt{m} + b
     int sqrt_m = sqrt(m) + 100;  // + 100 is required to bruteforce g^b for b < 100; this avoids problems with g != 0 and y = 0
     assert (sqrt_m >= 0);
 

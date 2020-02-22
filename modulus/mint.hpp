@@ -6,6 +6,9 @@
 #include "modulus/modinv.hpp"
 
 
+/**
+ * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
+ */
 template <int32_t MOD>
 struct mint {
     int32_t value;

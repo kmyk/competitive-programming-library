@@ -9,6 +9,9 @@
 #include "modulus/number_theoretic_transformation.hpp"
 #include "utils/macros.hpp"
 
+/**
+ * @brief formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$
+ */
 template <class T>
 struct formal_power_series {
     std::vector<T> a;

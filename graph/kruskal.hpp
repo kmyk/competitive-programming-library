@@ -7,7 +7,7 @@
 #include <vector>
 
 /**
- * @brief compute a minimum spanning tree with Kruskal's method
+ * @brief minimum spanning tree / 最小全域木 (Kruskal's method)
  * @note $O(E \log E)$
  * @note it becomes a forest if the given graph is not connected
  * @return a list of indices of edges

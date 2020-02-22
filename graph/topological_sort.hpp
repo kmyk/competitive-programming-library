@@ -5,6 +5,7 @@
 #include "utils/macros.hpp"
 
 /**
+ * @brief topological sort
  * @return a list of vertices which sorted topologically
  * @note the empty list is returned if cycles exist
  * @note $O(V + E)$
