@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small>
+# :heavy_check_mark: permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/permute.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 21:48:33+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 
@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 
@@ -74,7 +74,7 @@ layout: default
 #include "modulus/factorial.hpp"
 
 /**
- * @brief 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {
@@ -136,6 +136,9 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
 #line 7 "modulus/mint.hpp"
 
 
+/**
+ * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
+ */
 template <int32_t MOD>
 struct mint {
     int32_t value;
@@ -189,7 +192,7 @@ mint<MOD> inv_fact(int n) {
 #line 5 "modulus/permute.hpp"
 
 /**
- * @brief 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {

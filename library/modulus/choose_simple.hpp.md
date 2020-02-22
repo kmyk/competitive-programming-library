@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: 組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small>
+# :warning: combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/choose_simple.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 21:48:33+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
@@ -55,7 +55,7 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief 組合せ ${} _ n C _ r$ (愚直 $O(r)$)
+ * @brief combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$)
  */
 template <int32_t MOD>
 mint<MOD> choose_simple(int n, int r) {
@@ -123,6 +123,9 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
 #line 7 "modulus/mint.hpp"
 
 
+/**
+ * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
+ */
 template <int32_t MOD>
 struct mint {
     int32_t value;
@@ -156,7 +159,7 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 #line 5 "modulus/choose_simple.hpp"
 
 /**
- * @brief 組合せ ${} _ n C _ r$ (愚直 $O(r)$)
+ * @brief combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$)
  */
 template <int32_t MOD>
 mint<MOD> choose_simple(int n, int r) {

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/kruskal.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-27 04:12:05+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A</a>
@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/graph/kruskal.hpp.html">compute a minimum spanning tree with Kruskal's method <small>(graph/kruskal.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -127,7 +127,7 @@ struct union_find_tree {
 #include <vector>
 
 /**
- * @brief compute a minimum spanning tree with Kruskal's method
+ * @brief minimum spanning tree / 最小全域木 (Kruskal's method)
  * @note $O(E \log E)$
  * @note it becomes a forest if the given graph is not connected
  * @return a list of indices of edges

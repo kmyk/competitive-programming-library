@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lowest common ancestor with $\pm$ 1 RMQ and sparse table <small>(graph/lowest_common_ancestor.hpp)</small>
+# :heavy_check_mark: lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 * see: <a href="https://www.slideshare.net/yumainoue965/lca-and-rmq">https://www.slideshare.net/yumainoue965/lca-and-rmq</a>
@@ -65,7 +65,7 @@ layout: default
 #include "monoids/min_index.hpp"
 
 /**
- * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
+ * @brief lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table)
  * @see https://www.slideshare.net/yumainoue965/lca-and-rmq
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */
@@ -202,7 +202,7 @@ struct min_index_monoid {
 #line 9 "graph/lowest_common_ancestor.hpp"
 
 /**
- * @brief lowest common ancestor with $\pm$ 1 RMQ and sparse table
+ * @brief lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table)
  * @see https://www.slideshare.net/yumainoue965/lca-and-rmq
  * @note verified http://www.utpc.jp/2011/problems/travel.html
  */

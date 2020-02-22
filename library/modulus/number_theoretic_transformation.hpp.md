@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-12 17:06:03+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 * multiprecation on $\mathbb{F}_p[x]$ for Proth primes
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
@@ -47,7 +47,7 @@ layout: default
 
 ## Required by
 
-* :heavy_check_mark: <a href="formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
+* :heavy_check_mark: <a href="formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
 * :heavy_check_mark: <a href="number_theoretic_transformation_with_garner.hpp.html">multiprecation on $\mathbb{Z}/n\mathbb{Z}\[x\]$ <small>(modulus/number_theoretic_transformation_with_garner.hpp)</small></a>
 
 
@@ -235,6 +235,9 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
 #line 7 "modulus/mint.hpp"
 
 
+/**
+ * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
+ */
 template <int32_t MOD>
 struct mint {
     int32_t value;

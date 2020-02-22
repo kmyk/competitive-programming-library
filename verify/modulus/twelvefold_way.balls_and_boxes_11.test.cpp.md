@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_11.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 22:10:57+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_K">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_K</a>
@@ -39,13 +39,13 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/permute.hpp.html">順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
@@ -123,6 +123,9 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
 #line 7 "modulus/mint.hpp"
 
 
+/**
+ * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
+ */
 template <int32_t MOD>
 struct mint {
     int32_t value;
@@ -178,7 +181,7 @@ mint<MOD> inv_fact(int n) {
 #line 5 "modulus/choose.hpp"
 
 /**
- * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {
@@ -190,7 +193,7 @@ mint<MOD> choose(int n, int r) {
 #line 5 "modulus/permute.hpp"
 
 /**
- * @brief 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {

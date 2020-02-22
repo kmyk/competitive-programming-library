@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/topological_sort.hpp
+# :heavy_check_mark: topological sort <small>(graph/topological_sort.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/topological_sort.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 23:14:29+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 
@@ -58,6 +58,7 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
+ * @brief topological sort
  * @return a list of vertices which sorted topologically
  * @note the empty list is returned if cycles exist
  * @note $O(V + E)$
@@ -104,6 +105,7 @@ std::vector<int> topological_sort(const std::vector<std::vector<int> > & g) {
 #line 6 "graph/topological_sort.hpp"
 
 /**
+ * @brief topological sort
  * @return a list of vertices which sorted topologically
  * @note the empty list is returned if cycles exist
  * @note $O(V + E)$

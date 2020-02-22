@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/strongly_connected_components.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 23:14:29+09:00
+    - Last commit date: 2020-02-22 23:03:03+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/scc">https://judge.yosupo.jp/problem/scc</a>
@@ -40,7 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :heavy_check_mark: <a href="../../library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/graph/topological_sort.hpp.html">graph/topological_sort.hpp</a>
+* :heavy_check_mark: <a href="../../library/graph/topological_sort.hpp.html">topological sort <small>(graph/topological_sort.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -200,6 +200,7 @@ std::vector<std::vector<int> > make_quotient_graph(const std::vector<std::vector
 #line 6 "graph/topological_sort.hpp"
 
 /**
+ * @brief topological sort
  * @return a list of vertices which sorted topologically
  * @note the empty list is returned if cycles exist
  * @note $O(V + E)$

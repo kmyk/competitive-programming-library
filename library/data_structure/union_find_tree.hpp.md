@@ -38,7 +38,7 @@ layout: default
 
 ## Required by
 
-* :heavy_check_mark: <a href="../graph/kruskal.hpp.html">compute a minimum spanning tree with Kruskal's method <small>(graph/kruskal.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 
 
 ## Verified with
