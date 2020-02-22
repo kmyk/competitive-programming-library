@@ -34,6 +34,8 @@ layout: default
     - Last commit date: 2020-01-08 19:38:32+09:00
 
 
+
+
 ## 概要
 
 定義域を区間に制限された一次関数の集合 $F = \emptyset \subseteq \lbrace \lambda x \in \lbrack l, r). ax + b \mid a, b, l, r \in \mathbb{Z} \rbrace$ に対し、次が処理可能:

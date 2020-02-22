@@ -34,6 +34,8 @@ layout: default
     - Last commit date: 2020-01-08 19:16:44+09:00
 
 
+
+
 ## 概要
 
 一次関数の集合 $F = \emptyset \subseteq \lbrace \lambda x. ax + b \mid a, b \in \mathbb{Z} \rbrace$ に対し、次が処理可能:

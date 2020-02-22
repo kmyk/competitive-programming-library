@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_8.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-25 06:00:40+09:00
+    - Last commit date: 2020-02-22 22:10:57+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_H</a>
@@ -39,13 +39,13 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">modulus/choose.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/multichoose.hpp.html">modulus/multichoose.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/permute.hpp.html">modulus/permute.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/permute.hpp.html">順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
@@ -178,7 +178,7 @@ mint<MOD> inv_fact(int n) {
 #line 5 "modulus/choose.hpp"
 
 /**
- * @note O(n log n) at first time, otherwise O(1)
+ * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {
@@ -189,6 +189,9 @@ mint<MOD> choose(int n, int r) {
 #include <cassert>
 #line 5 "modulus/permute.hpp"
 
+/**
+ * @brief 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
+ */
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {
     assert (0 <= r and r <= n);
@@ -198,6 +201,9 @@ mint<MOD> permute(int n, int r) {
 #include <cassert>
 #line 5 "modulus/multichoose.hpp"
 
+/**
+ * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$)
+ */
 template <int32_t MOD>
 mint<MOD> multichoose(int n, int r) {
     assert (0 <= n and 0 <= r);

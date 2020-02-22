@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/bell_number.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-25 06:00:40+09:00
+    - Last commit date: 2020-02-22 21:48:33+09:00
 
 
 * see: <a href="http://mathworld.wolfram.com/BellNumber.html">http://mathworld.wolfram.com/BellNumber.html</a>
@@ -41,7 +41,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="choose.hpp.html">modulus/choose.hpp</a>
+* :heavy_check_mark: <a href="choose.hpp.html">組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
 * :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
@@ -216,7 +216,7 @@ mint<MOD> inv_fact(int n) {
 #line 5 "modulus/choose.hpp"
 
 /**
- * @note O(n log n) at first time, otherwise O(1)
+ * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {

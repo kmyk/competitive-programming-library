@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/choose.hpp
+# :heavy_check_mark: 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/choose.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-25 06:00:40+09:00
+    - Last commit date: 2020-02-22 21:48:33+09:00
 
 
 
@@ -47,6 +47,7 @@ layout: default
 ## Required by
 
 * :heavy_check_mark: <a href="bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
+* :heavy_check_mark: <a href="multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 
@@ -76,7 +77,7 @@ layout: default
 #include "modulus/factorial.hpp"
 
 /**
- * @note O(n log n) at first time, otherwise O(1)
+ * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {
@@ -191,7 +192,7 @@ mint<MOD> inv_fact(int n) {
 #line 5 "modulus/choose.hpp"
 
 /**
- * @note O(n log n) at first time, otherwise O(1)
+ * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {

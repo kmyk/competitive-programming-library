@@ -34,6 +34,8 @@ layout: default
     - Last commit date: 2020-01-08 19:38:32+09:00
 
 
+
+
 ## 概要
 
 monoid $F = (F, \circ, \mathrm{id})$ の要素の列 $f = (f_0, f_1, \dots, f _ {n - 1}) \in F^n$ に対し、次が処理可能:

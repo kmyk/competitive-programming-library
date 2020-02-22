@@ -35,6 +35,8 @@ layout: default
 
 
 * see: <a href="https://ei1333.hateblo.jp/entry/2020/02/12/150319">https://ei1333.hateblo.jp/entry/2020/02/12/150319</a>
+
+
 ## 説明
 
 ある (根付きではなく) 頂点に集合重みの付いた木 $T = (I, F; X)$ が無向グラフ $G = (V, E)$ の a tree decomposition であるとは、次をすべて満たすことをいう。

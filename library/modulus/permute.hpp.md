@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/permute.hpp
+# :heavy_check_mark: 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/permute.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-25 06:00:40+09:00
+    - Last commit date: 2020-02-22 21:48:33+09:00
 
 
 
@@ -73,6 +73,9 @@ layout: default
 #include "modulus/mint.hpp"
 #include "modulus/factorial.hpp"
 
+/**
+ * @brief 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
+ */
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {
     assert (0 <= r and r <= n);
@@ -185,6 +188,9 @@ mint<MOD> inv_fact(int n) {
 }
 #line 5 "modulus/permute.hpp"
 
+/**
+ * @brief 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)
+ */
 template <int32_t MOD>
 mint<MOD> permute(int n, int r) {
     assert (0 <= r and r <= n);

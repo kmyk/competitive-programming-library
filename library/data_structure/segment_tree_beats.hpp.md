@@ -35,6 +35,8 @@ layout: default
 
 
 * see: <a href="https://codeforces.com/blog/entry/57319">https://codeforces.com/blog/entry/57319</a>
+
+
 ## 概要
 
 整数 $\mathbb{Z} = (\mathbb{Z}, +, 0, \le)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in \mathbb{Z}^n$ に対し、次が処理可能:

@@ -39,16 +39,17 @@ layout: default
 ## Required by
 
 * :heavy_check_mark: <a href="bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
-* :heavy_check_mark: <a href="choose.hpp.html">modulus/choose.hpp</a>
+* :heavy_check_mark: <a href="choose.hpp.html">組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
+* :warning: <a href="choose_simple.hpp.html">組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small></a>
 * :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="formal_power_series.hpp.html">modulus/formal_power_series.hpp</a>
 * :warning: <a href="garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
 * :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="modlog.hpp.html">the baby-step giant-step <small>(modulus/modlog.hpp)</small></a>
-* :heavy_check_mark: <a href="multichoose.hpp.html">modulus/multichoose.hpp</a>
+* :heavy_check_mark: <a href="multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
 * :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="number_theoretic_transformation_with_garner.hpp.html">multiprecation on $\mathbb{Z}/n\mathbb{Z}\[x\]$ <small>(modulus/number_theoretic_transformation_with_garner.hpp)</small></a>
-* :heavy_check_mark: <a href="permute.hpp.html">modulus/permute.hpp</a>
+* :heavy_check_mark: <a href="permute.hpp.html">順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
 * :heavy_check_mark: <a href="twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 

@@ -37,6 +37,8 @@ layout: default
 * a fast & semigroup-friendly version constructor
 * update a leaf node without updating ancestors
 * re-build non-leaf nodes from leaf nodes
+
+
 ## 概要
 
 monoid $F = (F, \circ, \mathrm{id})$ の要素の列 $f = (f_0, f_1, \dots, f _ {n - 1}) \in F^n$ に対し、次が処理可能:
