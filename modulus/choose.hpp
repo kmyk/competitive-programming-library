@@ -4,7 +4,7 @@
 #include "modulus/factorial.hpp"
 
 /**
- * @note O(n log n) at first time, otherwise O(1)
+ * @brief 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
  */
 template <int32_t MOD>
 mint<MOD> choose(int n, int r) {
