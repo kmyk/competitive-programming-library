@@ -23,21 +23,26 @@ public:
     }
     template <class InputIterator>
     euler_tour_subtree_query(const std::vector<std::vector<int> > & g, int root, InputIterator first, InputIterator last, const CommutativeMonoid & mon_ = CommutativeMonoid())
-            : data(first, last, mon_) {
+            : data(std::distance(first, last), mon_) {
+        assert ((int)g.size() == std::distance(first, last));
         std::vector<int> tour;
         do_euler_tour_preorder(g, root, tour, left, right);
+        REP (x, g.size()) {
+            data.unsafe_point_set(left[x], *(first ++));
+        }
+        data.unsafe_rebuild();
     }
 
     void vertex_set(int x, value_type a) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_set(left[x], a);
     }
     value_type vertex_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_get(left[x]);
     }
     value_type subtree_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.range_get(left[x], right[x]);
     }
 };

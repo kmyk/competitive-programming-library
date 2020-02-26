@@ -9,8 +9,8 @@
 void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, std::vector<int> & tour, std::vector<int> & left, std::vector<int> & right) {
     int n = g.size();
     tour.clear();
-    left.resize(n);
-    right.resize(n);
+    left.assign(n, -1);
+    right.assign(n, -1);
     std::function<void (int, int)> go = [&](int x, int parent) {
         left[x] = tour.size();
         tour.push_back(x);
