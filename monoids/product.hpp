@@ -2,7 +2,7 @@
 #include <utility>
 
 template <class Monoid1, class Monoid2>
-struct productt_monoid {
+struct product_monoid {
     typedef std::pair<typename Monoid1::value_type, typename Monoid2::value_type> value_type;
     Monoid1 mon1;
     Monoid2 mon2;
