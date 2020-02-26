@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoids/product.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-27 19:38:00+09:00
+    - Last commit date: 2020-02-26 11:29:49+09:00
 
 
 
@@ -45,7 +45,7 @@ layout: default
 #include <utility>
 
 template <class Monoid1, class Monoid2>
-struct productt_monoid {
+struct product_monoid {
     typedef std::pair<typename Monoid1::value_type, typename Monoid2::value_type> value_type;
     Monoid1 mon1;
     Monoid2 mon2;
@@ -67,7 +67,7 @@ struct productt_monoid {
 #include <utility>
 
 template <class Monoid1, class Monoid2>
-struct productt_monoid {
+struct product_monoid {
     typedef std::pair<typename Monoid1::value_type, typename Monoid2::value_type> value_type;
     Monoid1 mon1;
     Monoid2 mon2;

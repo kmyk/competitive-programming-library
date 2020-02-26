@@ -25,22 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+# :heavy_check_mark: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.vertex_set_path_composite.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-26 11:29:49+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/vertex_add_path_sum">https://judge.yosupo.jp/problem/vertex_add_path_sum</a>
+* see: <a href="https://judge.yosupo.jp/problem/vertex_set_path_composite">https://judge.yosupo.jp/problem/vertex_set_path_composite</a>
 
 
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/dual.hpp.html">monoids/dual.hpp</a>
+* :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/reversible.hpp.html">monoids/reversible.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -50,24 +54,28 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/vertex_add_path_sum"
+#define PROBLEM "https://judge.yosupo.jp/problem/vertex_set_path_composite"
 #include "data_structure/link_cut_tree.hpp"
-#include "monoids/plus.hpp"
+#include "modulus/mint.hpp"
+#include "monoids/linear_function.hpp"
+#include "monoids/dual.hpp"
 #include "utils/macros.hpp"
 #include "hack/fastio.hpp"
 #include <stack>
 #include <vector>
 using namespace std;
 
+constexpr int MOD = 998244353;
 int main() {
     int n = in<int>();
     int q = in<int>();
 
     // initialize
-    link_cut_tree<plus_monoid<int64_t> > lct(n);
+    link_cut_tree<dual_monoid<linear_function_monoid<mint<MOD> > > > lct(n);
     REP (i, n) {
-        int64_t a_i = in<int64_t>();
-        lct.point_set(i, a_i);
+        mint<MOD> a_i = in<int32_t>();
+        mint<MOD> b_i = in<int32_t>();
+        lct.point_set(i, make_pair(a_i, b_i));
     }
     vector<vector<int> > g(n);
     REP (i, n - 1) {
@@ -95,12 +103,15 @@ int main() {
         int t = in<int>();
         if (t == 0) {
             int p = in<int>();
-            int64_t x = in<int64_t>();
-            lct.point_set(p, lct.point_get(p) + x);
+            mint<MOD> c = in<int32_t>();
+            mint<MOD> d = in<int32_t>();
+            lct.point_set(p, make_pair(c, d));
         } else if (t == 1) {
             int u = in<int>();
             int v = in<int>();
-            out<int64_t>(lct.path_get(u, v));
+            mint<MOD> x = in<int32_t>();
+            auto [a, b] = lct.path_get(u, v);
+            out<int32_t>((a * x + b).value);
             out<char>('\n');
         }
     }
@@ -113,8 +124,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/vertex_add_path_sum"
+#line 1 "data_structure/link_cut_tree.vertex_set_path_composite.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/vertex_set_path_composite"
 #line 2 "data_structure/link_cut_tree.hpp"
 #include <algorithm>
 #include <cassert>
@@ -397,13 +408,106 @@ public:
         return oss.str();
     }
 };
-#line 2 "monoids/plus.hpp"
+#line 2 "modulus/mint.hpp"
+#include <algorithm>
+#include <cassert>
+#include <iostream>
+#line 2 "modulus/modpow.hpp"
+#include <cassert>
 
-template <class T>
-struct plus_monoid {
-    typedef T value_type;
-    value_type unit() const { return value_type(); }
-    value_type mult(value_type a, value_type b) const { return a + b; }
+inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
+    assert (0 <= x and x < MOD);
+    uint_fast64_t y = 1;
+    for (; k; k >>= 1) {
+        if (k & 1) (y *= x) %= MOD;
+        (x *= x) %= MOD;
+    }
+    assert (0 <= y and y < MOD);
+    return y;
+}
+#line 2 "modulus/modinv.hpp"
+#include <algorithm>
+#include <cassert>
+
+inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
+    assert (0 <= value and value < MOD);
+    if (value == 0) return -1;
+    int64_t a = value, b = MOD;
+    int64_t x = 0, y = 1;
+    for (int64_t u = 1, v = 0; a; ) {
+        int64_t q = b / a;
+        x -= q * u; std::swap(x, u);
+        y -= q * v; std::swap(y, v);
+        b -= q * a; std::swap(b, a);
+    }
+    if (not (value * x + MOD * y == b and b == 1)) return -1;
+    if (x < 0) x += MOD;
+    assert (0 <= x and x < MOD);
+    return x;
+}
+
+inline int32_t modinv(int32_t x, int32_t MOD) {
+    int32_t y = modinv_nocheck(x, MOD);
+    assert (y != -1);
+    return y;
+}
+#line 7 "modulus/mint.hpp"
+
+
+/**
+ * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
+ */
+template <int32_t MOD>
+struct mint {
+    int32_t value;
+    mint() : value() {}
+    mint(int64_t value_) : value(value_ < 0 ? value_ % MOD + MOD : value_ >= MOD ? value_ % MOD : value_) {}
+    mint(int32_t value_, std::nullptr_t) : value(value_) {}
+    explicit operator bool() const { return value; }
+    inline constexpr mint<MOD> operator + (mint<MOD> other) const { return mint<MOD>(*this) += other; }
+    inline constexpr mint<MOD> operator - (mint<MOD> other) const { return mint<MOD>(*this) -= other; }
+    inline constexpr mint<MOD> operator * (mint<MOD> other) const { return mint<MOD>(*this) *= other; }
+    inline constexpr mint<MOD> & operator += (mint<MOD> other) { this->value += other.value; if (this->value >= MOD) this->value -= MOD; return *this; }
+    inline constexpr mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
+    inline constexpr mint<MOD> & operator *= (mint<MOD> other) { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this; }
+    inline constexpr mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0, nullptr); }
+    inline constexpr mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
+    inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }
+    inline constexpr mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
+    inline constexpr mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
+    inline constexpr bool operator == (mint<MOD> other) const { return value == other.value; }
+    inline constexpr bool operator != (mint<MOD> other) const { return value != other.value; }
+};
+template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
+template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
+template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
+#line 2 "monoids/linear_function.hpp"
+#include <utility>
+
+template <class CommutativeRing>
+struct linear_function_monoid {
+    typedef std::pair<CommutativeRing, CommutativeRing> value_type;
+    linear_function_monoid() = default;
+    value_type unit() const {
+        return std::make_pair(1, 0);
+    }
+    value_type mult(value_type g, value_type f) const {
+        CommutativeRing fst = g.first * f.first;
+        CommutativeRing snd = g.second + g.first * f.second;
+        return std::make_pair(fst, snd);
+    }
+};
+#line 2 "monoids/dual.hpp"
+
+/**
+ * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
+ */
+template <class Monoid>
+struct dual_monoid {
+    typedef typename Monoid::value_type value_type;
+    Monoid base;
+    value_type unit() const { return base.unit(); }
+    value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
 };
 #line 2 "hack/fastio.hpp"
 #include <cstdint>
@@ -439,20 +543,22 @@ inline void out(Integer n) {
     do { s[i ++] = n % 10; n /= 10; } while (n);
     while (i) putchar_unlocked(s[-- i] + '0');
 }
-#line 6 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
+#line 8 "data_structure/link_cut_tree.vertex_set_path_composite.test.cpp"
 #include <stack>
 #include <vector>
 using namespace std;
 
+constexpr int MOD = 998244353;
 int main() {
     int n = in<int>();
     int q = in<int>();
 
     // initialize
-    link_cut_tree<plus_monoid<int64_t> > lct(n);
+    link_cut_tree<dual_monoid<linear_function_monoid<mint<MOD> > > > lct(n);
     REP (i, n) {
-        int64_t a_i = in<int64_t>();
-        lct.point_set(i, a_i);
+        mint<MOD> a_i = in<int32_t>();
+        mint<MOD> b_i = in<int32_t>();
+        lct.point_set(i, make_pair(a_i, b_i));
     }
     vector<vector<int> > g(n);
     REP (i, n - 1) {
@@ -480,12 +586,15 @@ int main() {
         int t = in<int>();
         if (t == 0) {
             int p = in<int>();
-            int64_t x = in<int64_t>();
-            lct.point_set(p, lct.point_get(p) + x);
+            mint<MOD> c = in<int32_t>();
+            mint<MOD> d = in<int32_t>();
+            lct.point_set(p, make_pair(c, d));
         } else if (t == 1) {
             int u = in<int>();
             int v = in<int>();
-            out<int64_t>(lct.path_get(u, v));
+            mint<MOD> x = in<int32_t>();
+            auto [a, b] = lct.path_get(u, v);
+            out<int32_t>((a * x + b).value);
             out<char>('\n');
         }
     }

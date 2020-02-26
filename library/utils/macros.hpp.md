@@ -41,7 +41,7 @@ layout: default
 * :heavy_check_mark: <a href="../data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../data_structure/link_cut_tree.hpp.html">Link-Cut tree (with commutative monoids, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/segment_tree_beats.hpp.html">a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum}) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/sliding_window_aggregation.hpp.html">Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
@@ -83,6 +83,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/data_structure/li_chao_tree.segment_add_get_min.test.cpp.html">data_structure/li_chao_tree.segment_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp.html">data_structure/link_cut_tree.vertex_add_path_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.vertex_set_path_composite.test.cpp.html">data_structure/link_cut_tree.vertex_set_path_composite.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_add_range_sum.test.cpp.html">data_structure/segment_tree.point_add_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>

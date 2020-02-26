@@ -25,19 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Link-Cut tree (with commutative monoids, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small>
+# :heavy_check_mark: Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-27 07:18:51+09:00
+    - Last commit date: 2020-02-26 11:29:49+09:00
 
 
 
 
 ## Depends on
 
+* :heavy_check_mark: <a href="../monoids/reversible.hpp.html">monoids/reversible.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -45,6 +46,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp.html">data_structure/link_cut_tree.vertex_add_path_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.vertex_set_path_composite.test.cpp.html">data_structure/link_cut_tree.vertex_set_path_composite.test.cpp</a>
 
 
 ## Code
@@ -60,21 +62,22 @@ layout: default
 #include <sstream>
 #include <vector>
 #include "utils/macros.hpp"
+#include "monoids/reversible.hpp"
+#include <iostream>
 
 
 /**
- * @brief Link-Cut tree (with commutative monoids, vertex set + path get)
+ * @brief Link-Cut tree (monoids without commutativity, vertex set + path get)
  * @description manages a dynamic forest of rooted trees
- * @note this is for the problem "Spaceships", JOI Sprint Training Camp (http://imoz.jp/data/joi/2013-sp-d4-spaceships.pdf)
  * @note in each splay tree, nodes are sorted from bottom to top. the rightmost node of the root splay tree of the auxiliary tree is the root of represented tree.
- * @note TODO: remove the assumption about commutativity
  */
-template <class CommutativeMonoid>
+template <class Monoid>
 class link_cut_tree {
-    typedef typename CommutativeMonoid::value_type value_type;
-    const CommutativeMonoid mon;
+    typedef typename Monoid::value_type value_type;
+    typedef typename reversible_monoid<Monoid>::value_type reversible_type;
+    const reversible_monoid<Monoid> mon;
     std::vector<value_type> data;  // data of the original tree
-    std::vector<value_type> path;  // sum of data of the sub-tree in the belonging splay tree
+    std::vector<reversible_type> path;  // sum of data of the sub-tree in the belonging splay tree
     std::vector<int> parent, left, right;  // of the auxiliary tree
 
     /**
@@ -143,7 +146,7 @@ class link_cut_tree {
     }
 
     /**
-     * @description make `a` belongs the root of the auxiliary tree
+     * @description make `a` the root of the auxiliary tree
      * @note doen't splay
      * @note `a` becomes a terminal of the heavy path
      */
@@ -160,29 +163,21 @@ class link_cut_tree {
             left[parent[b]] = b;
             update_path(parent[b]);
         }
-    }
-
-    /**
-     * @description make `a` the root of the auxiliary tree
-     */
-    void access(int a) {
-        expose(a);
         splay(a);
-        assert (parent[a] == -1);
     }
 
     /**
      * @note `a` should be the root of the splay tree
      */
     void update_path(int a) {
-        path[a] = data[a];
-        if (right[a] != -1) path[a] = mon.mult(path[right[a]], path[a]);
-        if (left[a] != -1) path[a] = mon.mult(path[a], path[left[a]]);
+        path[a] = reversible_monoid<Monoid>::make(data[a]);
+        if (right[a] != -1) path[a] = mon.mult(path[a], path[right[a]]);
+        if (left[a] != -1) path[a] = mon.mult(path[left[a]], path[a]);
     }
 
 public:
-    link_cut_tree(int size, const CommutativeMonoid & mon_ = CommutativeMonoid())
-            : mon(mon_), data(size, mon.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1) {
+    link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
+            : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1) {
     }
 
     /**
@@ -191,8 +186,8 @@ public:
      * @note `b` must not be a descendant of `a`
      */
     void link(int a, int b) {
-        access(b);  // for the time complexity
-        access(a);  // to make `a` the root
+        expose(b);  // for the time complexity
+        expose(a);  // to make `a` the root
         assert (right[a] == -1);  // `a` must be a root
         parent[a] = b;
     }
@@ -202,7 +197,7 @@ public:
      * @note `a` must not be a root
      */
     void cut(int a) {
-        access(a);  // to make `a` the root
+        expose(a);  // to make `a` the root
         assert (right[a] != -1);  // `a` must not be a root
         parent[right[a]] = -1;
         right[a] = -1;
@@ -213,8 +208,8 @@ public:
      * @note -1 is returned when `a` and `b` are not in the same tree
      */
     int get_lowest_common_ancestor(int a, int b) {
-        access(b);  // for the time complexity
-        access(a);  // to make `a` the root
+        expose(b);  // for the time complexity
+        expose(a);  // to make `a` the root
         int preserved = -1;
         std::swap(left[a], preserved);  // make `a` and `b` belong different splay trees even if `b` is a descendant of `a`
         int result = b;
@@ -241,7 +236,7 @@ public:
 #endif
 
     int get_root(int a) {
-        access(a);
+        expose(a);
         while (right[a] != -1) {
             a = right[a];
         }
@@ -259,31 +254,33 @@ public:
     }
 
     value_type path_get(int a, int b) {
-        access(b);  // for the time complexity
-        access(a);  // to make `a` the root
-        value_type cur = (left[b] == -1 ? data[b] : mon.mult(data[b], path[left[b]]));
-        value_type nxt = (right[b] == -1 ? data[b] : mon.mult(path[right[b]], data[b]));
-        for (int c = b; c != a and c != -1; c = parent[c]) {
+        expose(a);  // for the time complexity
+        expose(b);  // to make `b` the root
+        auto data_a = reversible_monoid<Monoid>::make(data[a]);
+        reversible_type up = (right[a] == -1 ? data_a : mon.mult(data_a, path[right[a]]));
+        reversible_type down = (left[a] == -1 ? data_a : mon.mult(path[left[a]], data_a));
+        for (int c = a; c != b and c != -1; c = parent[c]) {
             assert (parent[c] != -1);
+            auto data_parent_c = reversible_monoid<Monoid>::make(data[parent[c]]);
             switch (get_parent_edge_type(c)) {
-                case -1:  // heavy (left)
-                    nxt = mon.mult(data[parent[c]], nxt);
-                    if (right[parent[c]] != -1) nxt = mon.mult(path[right[parent[c]]], nxt);
+                case -1:  // heavy (left-child)
+                    up = mon.mult(up, data_parent_c);
+                    if (right[parent[c]] != -1) up = mon.mult(up, path[right[parent[c]]]);
                     break;
-                case 1:  // heavy (right)
-                    cur = mon.mult(cur, data[parent[c]]);
-                    if (left[parent[c]] != -1) cur = mon.mult(cur, path[left[parent[c]]]);
+                case 1:  // heavy (right-child)
+                    down = mon.mult(data_parent_c, down);
+                    if (left[parent[c]] != -1) down = mon.mult(path[left[parent[c]]], down);
                     break;
                 case 0:  // light
-                    cur = nxt;
-                    nxt = mon.mult(data[parent[c]], nxt);
-                    if (right[parent[c]] != -1) nxt = mon.mult(path[right[parent[c]]], nxt);
-                    cur = mon.mult(cur, data[parent[c]]);
-                    if (left[parent[c]] != -1) cur = mon.mult(cur, path[left[parent[c]]]);
+                    down = reversible_monoid<Monoid>::reverse(up);
+                    up = mon.mult(up, data_parent_c);
+                    if (right[parent[c]] != -1) up = mon.mult(up, path[right[parent[c]]]);
+                    down = mon.mult(data_parent_c, down);
+                    if (left[parent[c]] != -1) down = mon.mult(path[left[parent[c]]], down);
                     break;
             }
         }
-        return cur;
+        return reversible_monoid<Monoid>::get(reversible_monoid<Monoid>::reverse(down));
     }
 
     std::string to_graphviz() const {
@@ -340,22 +337,36 @@ public:
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
-#line 9 "data_structure/link_cut_tree.hpp"
+#line 2 "monoids/reversible.hpp"
+#include <utility>
+
+template <class Monoid>
+struct reversible_monoid {
+    typedef typename Monoid::value_type base_type;
+    typedef std::pair<base_type, base_type> value_type;
+    Monoid base;
+    value_type unit() const { return std::make_pair(base.unit(), base.unit()); }
+    value_type mult(const value_type & a, const value_type & b) const { return std::make_pair(base.mult(a.first, b.first), base.mult(b.second, a.second)); }
+    static value_type make(const base_type & x) { return std::make_pair(x, x); }
+    static value_type reverse(const value_type & a) { return std::make_pair(a.second, a.first); }
+    static base_type get(const value_type & a) { return a.first; }
+};
+#line 10 "data_structure/link_cut_tree.hpp"
+#include <iostream>
 
 
 /**
- * @brief Link-Cut tree (with commutative monoids, vertex set + path get)
+ * @brief Link-Cut tree (monoids without commutativity, vertex set + path get)
  * @description manages a dynamic forest of rooted trees
- * @note this is for the problem "Spaceships", JOI Sprint Training Camp (http://imoz.jp/data/joi/2013-sp-d4-spaceships.pdf)
  * @note in each splay tree, nodes are sorted from bottom to top. the rightmost node of the root splay tree of the auxiliary tree is the root of represented tree.
- * @note TODO: remove the assumption about commutativity
  */
-template <class CommutativeMonoid>
+template <class Monoid>
 class link_cut_tree {
-    typedef typename CommutativeMonoid::value_type value_type;
-    const CommutativeMonoid mon;
+    typedef typename Monoid::value_type value_type;
+    typedef typename reversible_monoid<Monoid>::value_type reversible_type;
+    const reversible_monoid<Monoid> mon;
     std::vector<value_type> data;  // data of the original tree
-    std::vector<value_type> path;  // sum of data of the sub-tree in the belonging splay tree
+    std::vector<reversible_type> path;  // sum of data of the sub-tree in the belonging splay tree
     std::vector<int> parent, left, right;  // of the auxiliary tree
 
     /**
@@ -424,7 +435,7 @@ class link_cut_tree {
     }
 
     /**
-     * @description make `a` belongs the root of the auxiliary tree
+     * @description make `a` the root of the auxiliary tree
      * @note doen't splay
      * @note `a` becomes a terminal of the heavy path
      */
@@ -441,29 +452,21 @@ class link_cut_tree {
             left[parent[b]] = b;
             update_path(parent[b]);
         }
-    }
-
-    /**
-     * @description make `a` the root of the auxiliary tree
-     */
-    void access(int a) {
-        expose(a);
         splay(a);
-        assert (parent[a] == -1);
     }
 
     /**
      * @note `a` should be the root of the splay tree
      */
     void update_path(int a) {
-        path[a] = data[a];
-        if (right[a] != -1) path[a] = mon.mult(path[right[a]], path[a]);
-        if (left[a] != -1) path[a] = mon.mult(path[a], path[left[a]]);
+        path[a] = reversible_monoid<Monoid>::make(data[a]);
+        if (right[a] != -1) path[a] = mon.mult(path[a], path[right[a]]);
+        if (left[a] != -1) path[a] = mon.mult(path[left[a]], path[a]);
     }
 
 public:
-    link_cut_tree(int size, const CommutativeMonoid & mon_ = CommutativeMonoid())
-            : mon(mon_), data(size, mon.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1) {
+    link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
+            : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1) {
     }
 
     /**
@@ -472,8 +475,8 @@ public:
      * @note `b` must not be a descendant of `a`
      */
     void link(int a, int b) {
-        access(b);  // for the time complexity
-        access(a);  // to make `a` the root
+        expose(b);  // for the time complexity
+        expose(a);  // to make `a` the root
         assert (right[a] == -1);  // `a` must be a root
         parent[a] = b;
     }
@@ -483,7 +486,7 @@ public:
      * @note `a` must not be a root
      */
     void cut(int a) {
-        access(a);  // to make `a` the root
+        expose(a);  // to make `a` the root
         assert (right[a] != -1);  // `a` must not be a root
         parent[right[a]] = -1;
         right[a] = -1;
@@ -494,8 +497,8 @@ public:
      * @note -1 is returned when `a` and `b` are not in the same tree
      */
     int get_lowest_common_ancestor(int a, int b) {
-        access(b);  // for the time complexity
-        access(a);  // to make `a` the root
+        expose(b);  // for the time complexity
+        expose(a);  // to make `a` the root
         int preserved = -1;
         std::swap(left[a], preserved);  // make `a` and `b` belong different splay trees even if `b` is a descendant of `a`
         int result = b;
@@ -522,7 +525,7 @@ public:
 #endif
 
     int get_root(int a) {
-        access(a);
+        expose(a);
         while (right[a] != -1) {
             a = right[a];
         }
@@ -540,31 +543,33 @@ public:
     }
 
     value_type path_get(int a, int b) {
-        access(b);  // for the time complexity
-        access(a);  // to make `a` the root
-        value_type cur = (left[b] == -1 ? data[b] : mon.mult(data[b], path[left[b]]));
-        value_type nxt = (right[b] == -1 ? data[b] : mon.mult(path[right[b]], data[b]));
-        for (int c = b; c != a and c != -1; c = parent[c]) {
+        expose(a);  // for the time complexity
+        expose(b);  // to make `b` the root
+        auto data_a = reversible_monoid<Monoid>::make(data[a]);
+        reversible_type up = (right[a] == -1 ? data_a : mon.mult(data_a, path[right[a]]));
+        reversible_type down = (left[a] == -1 ? data_a : mon.mult(path[left[a]], data_a));
+        for (int c = a; c != b and c != -1; c = parent[c]) {
             assert (parent[c] != -1);
+            auto data_parent_c = reversible_monoid<Monoid>::make(data[parent[c]]);
             switch (get_parent_edge_type(c)) {
-                case -1:  // heavy (left)
-                    nxt = mon.mult(data[parent[c]], nxt);
-                    if (right[parent[c]] != -1) nxt = mon.mult(path[right[parent[c]]], nxt);
+                case -1:  // heavy (left-child)
+                    up = mon.mult(up, data_parent_c);
+                    if (right[parent[c]] != -1) up = mon.mult(up, path[right[parent[c]]]);
                     break;
-                case 1:  // heavy (right)
-                    cur = mon.mult(cur, data[parent[c]]);
-                    if (left[parent[c]] != -1) cur = mon.mult(cur, path[left[parent[c]]]);
+                case 1:  // heavy (right-child)
+                    down = mon.mult(data_parent_c, down);
+                    if (left[parent[c]] != -1) down = mon.mult(path[left[parent[c]]], down);
                     break;
                 case 0:  // light
-                    cur = nxt;
-                    nxt = mon.mult(data[parent[c]], nxt);
-                    if (right[parent[c]] != -1) nxt = mon.mult(path[right[parent[c]]], nxt);
-                    cur = mon.mult(cur, data[parent[c]]);
-                    if (left[parent[c]] != -1) cur = mon.mult(cur, path[left[parent[c]]]);
+                    down = reversible_monoid<Monoid>::reverse(up);
+                    up = mon.mult(up, data_parent_c);
+                    if (right[parent[c]] != -1) up = mon.mult(up, path[right[parent[c]]]);
+                    down = mon.mult(data_parent_c, down);
+                    if (left[parent[c]] != -1) down = mon.mult(path[left[parent[c]]], down);
                     break;
             }
         }
-        return cur;
+        return reversible_monoid<Monoid>::get(reversible_monoid<Monoid>::reverse(down));
     }
 
     std::string to_graphviz() const {
