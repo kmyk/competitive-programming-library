@@ -8,15 +8,17 @@ template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
 inline Char in() { return getchar_unlocked(); }
 template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
 inline std::string in() {
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
     std::string s;
-    for (char c; not isspace(c = getchar_unlocked()); ) s.push_back(c);
+    do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
 template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
 inline Integer in() {
-    Integer n = getchar_unlocked() - '0';
-    if (std::is_signed<Integer>::value and n + '0' == '-') return -in<Integer>();
-    for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
+    if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
+    Integer n = 0;
+    do { n = n * 10 + c - '0'; } while (not isspace(c = getchar_unlocked()));
     return n;
 }
 
