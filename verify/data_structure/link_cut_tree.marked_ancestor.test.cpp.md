@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.marked_ancestor.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 12:05:39+09:00
+    - Last commit date: 2020-02-26 14:11:54+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp</a>
@@ -141,15 +141,18 @@ class link_cut_tree {
     std::vector<value_type> data;  // data of the original tree
     std::vector<reversible_type> path;  // sum of data of the sub-tree in the belonging splay tree
     std::vector<int> parent, left, right;  // of the auxiliary tree
+    std::vector<bool> is_reversed;  // of the auxiliary tree; not applied to left, right, and path yet
 
     /**
      * @description returns whether `a` and `parent[a]` is in the same splay tree
      */
     int get_parent_edge_type(int a) const {
         if (parent[a] != -1 and left[parent[a]] == a) {
-            return -1;  // heavy (left)
+            assert (not is_reversed[parent[a]]);
+            return -1;  // heavy (left-child)
         } else if (parent[a] != -1 and right[parent[a]] == a) {
-            return +1;  // heavy (right)
+            assert (not is_reversed[parent[a]]);
+            return +1;  // heavy (right-child)
         } else {
             return 0;  // light
         }
@@ -160,6 +163,9 @@ class link_cut_tree {
      */
     void rotate(int a) {
         int b = parent[a];
+        assert (b != -1);
+        assert (not is_reversed[b]);
+        assert (not is_reversed[a]);
         switch (get_parent_edge_type(b)) {
             case -1:  // left
                 left[parent[b]] = a;
@@ -190,6 +196,7 @@ class link_cut_tree {
      * @description make `a` the root of the beloging splay tree
      */
     void splay(int a) {
+        propagate_reverse_splay(a);
         while (get_parent_edge_type(a)) {
             // a is not the root of the splay tree
             if (not get_parent_edge_type(parent[a])) {
@@ -209,15 +216,16 @@ class link_cut_tree {
 
     /**
      * @description make `a` the root of the auxiliary tree
-     * @note doen't splay
      * @note `a` becomes a terminal of the heavy path
      */
     void expose(int a) {
+        propagate_reverse_expose(a);
         // make a light path from `a` to the root
         for (int b = a; b != -1; b = parent[b]) {
             splay(b);
         }
         // make `a` the terminal of the path
+        assert (not is_reversed[a]);
         left[a] = -1;
         update_path(a);
         // make the path heavy
@@ -226,6 +234,28 @@ class link_cut_tree {
             update_path(parent[b]);
         }
         splay(a);
+    }
+
+    void propagate_reverse_node(int a) {
+        if (is_reversed[a]) {
+            is_reversed[a] = false;
+            path[a] = reversible_monoid<Monoid>::reverse(path[a]);
+            if (right[a] != -1) is_reversed[right[a]] = not is_reversed[right[a]];
+            if (left[a] != -1) is_reversed[left[a]] = not is_reversed[left[a]];
+            std::swap(left[a], right[a]);
+        }
+    }
+    void propagate_reverse_splay(int a) {
+        if (parent[a] != -1 and (left[parent[a]] == a or right[parent[a]] == a)) {
+            propagate_reverse_splay(parent[a]);
+        }
+        propagate_reverse_node(a);
+    }
+    void propagate_reverse_expose(int a) {
+        if (parent[a] != -1) {
+            propagate_reverse_expose(parent[a]);
+        }
+        propagate_reverse_node(a);
     }
 
     /**
@@ -239,7 +269,7 @@ class link_cut_tree {
 
 public:
     link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
-            : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1) {
+            : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1), is_reversed(size, false) {
     }
 
     /**
@@ -250,6 +280,7 @@ public:
     void link(int a, int b) {
         expose(b);  // for the time complexity
         expose(a);  // to make `a` the root
+        assert (not is_reversed[a]);
         assert (right[a] == -1);  // `a` must be a root
         parent[a] = b;
     }
@@ -260,6 +291,7 @@ public:
      */
     void cut(int a) {
         expose(a);  // to make `a` the root
+        assert (not is_reversed[a]);
         assert (right[a] != -1);  // `a` must not be a root
         parent[right[a]] = -1;
         right[a] = -1;
@@ -272,6 +304,7 @@ public:
     int get_lowest_common_ancestor(int a, int b) {
         expose(b);  // for the time complexity
         expose(a);  // to make `a` the root
+        assert (not is_reversed[a]);
         int preserved = -1;
         std::swap(left[a], preserved);  // make `a` and `b` belong different splay trees even if `b` is a descendant of `a`
         int result = b;
@@ -286,23 +319,37 @@ public:
         return c == a ? result : -1;
     }
 
-#if 0  // not verified yet
-    bool is_same_tree(int a, int b) {
+    bool are_connected(int a, int b) {
         return get_lowest_common_ancestor(a, b) != -1;
     }
 
     int get_parent(int a) {
-        splay(a);
-        return parent[a];
+        expose(a);
+        assert (not is_reversed[a]);
+        if (right[a] == -1) return parent[a];
+        for (int b = right[a]; ; b = left[b]) {
+            propagate_reverse_node(b);
+            if (left[b] == -1) return b;
+        }
     }
-#endif
 
     int get_root(int a) {
         expose(a);
+        assert (not is_reversed[a]);
         while (right[a] != -1) {
             a = right[a];
         }
         return a;
+    }
+
+    /**
+     * @description make `a` the root of the represented tree
+     */
+    void evert(int a) {
+        expose(a);  // to make `a` the root
+        assert (not is_reversed[a]);
+        assert (left[a] == -1);  // `a` is the terminal
+        is_reversed[a] = true;
     }
 
     void point_set(int a, value_type value) {
@@ -318,11 +365,13 @@ public:
     value_type path_get(int a, int b) {
         expose(a);  // for the time complexity
         expose(b);  // to make `b` the root
+        assert (not is_reversed[a]);
         auto data_a = reversible_monoid<Monoid>::make(data[a]);
         reversible_type up = (right[a] == -1 ? data_a : mon.mult(data_a, path[right[a]]));
         reversible_type down = (left[a] == -1 ? data_a : mon.mult(path[left[a]], data_a));
         for (int c = a; c != b and c != -1; c = parent[c]) {
             assert (parent[c] != -1);
+            assert (not is_reversed[parent[c]]);
             auto data_parent_c = reversible_monoid<Monoid>::make(data[parent[c]]);
             switch (get_parent_edge_type(c)) {
                 case -1:  // heavy (left-child)
@@ -353,7 +402,7 @@ public:
         oss << "    node [ shape = circle, style = filled, fillcolor = \"#ffffffff\" ]" << endl;
         REP (a, parent.size()) {
             // oss << "    " << a << ";" << endl;
-            oss << "    " << a << "[ label = \"" << a << "(" << data[a] << "," << path[a] << ")\"];" << endl;
+            oss << "    " << a << "[ label = \"" << a << "(" << data[a] << "," << path[a] << (is_reversed[a] ? " +rev" : "") << ")\"];" << endl;
         }
         function <void (int)> go = [&](int a) {
             if (parent[a] != -1 and not get_parent_edge_type(a)) {

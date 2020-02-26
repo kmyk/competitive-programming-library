@@ -25,15 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+# :heavy_check_mark: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-26 14:11:54+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/vertex_add_path_sum">https://judge.yosupo.jp/problem/vertex_add_path_sum</a>
+* see: <a href="https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum">https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum</a>
 
 
 ## Depends on
@@ -50,7 +50,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/vertex_add_path_sum"
+#define PROBLEM "https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum"
 #include "data_structure/link_cut_tree.hpp"
 #include "monoids/plus.hpp"
 #include "utils/macros.hpp"
@@ -94,10 +94,18 @@ int main() {
     while (q --) {
         int t = in<int>();
         if (t == 0) {
+            int u = in<int>();
+            int v = in<int>();
+            int w = in<int>();
+            int x = in<int>();
+            lct.cut(lct.get_parent(u) == v ? u : v);
+            lct.evert(w);
+            lct.link(w, x);
+        } else if (t == 1) {
             int p = in<int>();
             int64_t x = in<int64_t>();
             lct.point_set(p, lct.point_get(p) + x);
-        } else if (t == 1) {
+        } else if (t == 2) {
             int u = in<int>();
             int v = in<int>();
             out<int64_t>(lct.path_get(u, v));
@@ -113,8 +121,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/vertex_add_path_sum"
+#line 1 "data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum"
 #line 2 "data_structure/link_cut_tree.hpp"
 #include <algorithm>
 #include <cassert>
@@ -487,7 +495,7 @@ inline void out(Integer n) {
     do { s[i ++] = n % 10; n /= 10; } while (n);
     while (i) putchar_unlocked(s[-- i] + '0');
 }
-#line 6 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
+#line 6 "data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp"
 #include <stack>
 #include <vector>
 using namespace std;
@@ -527,10 +535,18 @@ int main() {
     while (q --) {
         int t = in<int>();
         if (t == 0) {
+            int u = in<int>();
+            int v = in<int>();
+            int w = in<int>();
+            int x = in<int>();
+            lct.cut(lct.get_parent(u) == v ? u : v);
+            lct.evert(w);
+            lct.link(w, x);
+        } else if (t == 1) {
             int p = in<int>();
             int64_t x = in<int64_t>();
             lct.point_set(p, lct.point_get(p) + x);
-        } else if (t == 1) {
+        } else if (t == 2) {
             int u = in<int>();
             int v = in<int>();
             out<int64_t>(lct.path_get(u, v));
