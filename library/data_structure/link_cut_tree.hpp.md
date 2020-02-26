@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 14:11:54+09:00
+    - Last commit date: 2020-02-26 18:09:07+09:00
 
 
 
@@ -51,7 +51,7 @@ layout: default
 
 加えて、それぞれの頂点 $x$ に monoid 値重み $a_x \in M$ を乗せて、次が処理できる。
 
--   $\mathtt{point\unicode{95}set}(x, b)$: 頂点 $x$ の重みを $a_x \gets b$ と更新する。
+-   $\mathtt{vertex\unicode{95}set}(x, b)$: 頂点 $x$ の重みを $a_x \gets b$ と更新する。
 -   $\mathtt{path\unicode{95}get}(x, y)$: 頂点 $x$ から $y$ への唯一のパス $x, z_1, z_2, \dots, y$ に沿った重みの積 $a_x \cdot a _ {z_1} \cdot a _ {z_2} \cdot \dots \cdot a_y$ を計算する。
 
 
@@ -225,7 +225,7 @@ class link_cut_tree {
     }
 
 public:
-    link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
+    link_cut_tree(int size, const Monoid & mon_ = Monoid())
             : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1), is_reversed(size, false) {
     }
 
@@ -309,13 +309,13 @@ public:
         is_reversed[a] = true;
     }
 
-    void point_set(int a, value_type value) {
+    void vertex_set(int a, value_type value) {
         splay(a);  // to make `a` the root of a splay tree
         data[a] = value;
         update_path(a);
     }
 
-    value_type point_get(int a) const {
+    value_type vertex_get(int a) const {
         return data[a];
     }
 
@@ -412,6 +412,8 @@ struct reversible_monoid {
     typedef typename Monoid::value_type base_type;
     typedef std::pair<base_type, base_type> value_type;
     Monoid base;
+    reversible_monoid() = default;
+    reversible_monoid(const Monoid & base_) : base(base_) {}
     value_type unit() const { return std::make_pair(base.unit(), base.unit()); }
     value_type mult(const value_type & a, const value_type & b) const { return std::make_pair(base.mult(a.first, b.first), base.mult(b.second, a.second)); }
     static value_type make(const base_type & x) { return std::make_pair(x, x); }
@@ -562,7 +564,7 @@ class link_cut_tree {
     }
 
 public:
-    link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
+    link_cut_tree(int size, const Monoid & mon_ = Monoid())
             : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1), is_reversed(size, false) {
     }
 
@@ -646,13 +648,13 @@ public:
         is_reversed[a] = true;
     }
 
-    void point_set(int a, value_type value) {
+    void vertex_set(int a, value_type value) {
         splay(a);  // to make `a` the root of a splay tree
         data[a] = value;
         update_path(a);
     }
 
-    value_type point_get(int a) const {
+    value_type vertex_get(int a) const {
         return data[a];
     }
 

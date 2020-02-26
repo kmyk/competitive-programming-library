@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.marked_ancestor.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 14:11:54+09:00
+    - Last commit date: 2020-02-26 18:09:07+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp</a>
@@ -118,6 +118,8 @@ struct reversible_monoid {
     typedef typename Monoid::value_type base_type;
     typedef std::pair<base_type, base_type> value_type;
     Monoid base;
+    reversible_monoid() = default;
+    reversible_monoid(const Monoid & base_) : base(base_) {}
     value_type unit() const { return std::make_pair(base.unit(), base.unit()); }
     value_type mult(const value_type & a, const value_type & b) const { return std::make_pair(base.mult(a.first, b.first), base.mult(b.second, a.second)); }
     static value_type make(const base_type & x) { return std::make_pair(x, x); }
@@ -268,7 +270,7 @@ class link_cut_tree {
     }
 
 public:
-    link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
+    link_cut_tree(int size, const Monoid & mon_ = Monoid())
             : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1), is_reversed(size, false) {
     }
 
@@ -352,13 +354,13 @@ public:
         is_reversed[a] = true;
     }
 
-    void point_set(int a, value_type value) {
+    void vertex_set(int a, value_type value) {
         splay(a);  // to make `a` the root of a splay tree
         data[a] = value;
         update_path(a);
     }
 
-    value_type point_get(int a) const {
+    value_type vertex_get(int a) const {
         return data[a];
     }
 

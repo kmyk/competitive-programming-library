@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoids/reversible.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 11:29:49+09:00
+    - Last commit date: 2020-02-26 18:09:07+09:00
 
 
 
@@ -62,6 +62,8 @@ struct reversible_monoid {
     typedef typename Monoid::value_type base_type;
     typedef std::pair<base_type, base_type> value_type;
     Monoid base;
+    reversible_monoid() = default;
+    reversible_monoid(const Monoid & base_) : base(base_) {}
     value_type unit() const { return std::make_pair(base.unit(), base.unit()); }
     value_type mult(const value_type & a, const value_type & b) const { return std::make_pair(base.mult(a.first, b.first), base.mult(b.second, a.second)); }
     static value_type make(const base_type & x) { return std::make_pair(x, x); }
@@ -83,6 +85,8 @@ struct reversible_monoid {
     typedef typename Monoid::value_type base_type;
     typedef std::pair<base_type, base_type> value_type;
     Monoid base;
+    reversible_monoid() = default;
+    reversible_monoid(const Monoid & base_) : base(base_) {}
     value_type unit() const { return std::make_pair(base.unit(), base.unit()); }
     value_type mult(const value_type & a, const value_type & b) const { return std::make_pair(base.mult(a.first, b.first), base.mult(b.second, a.second)); }
     static value_type make(const base_type & x) { return std::make_pair(x, x); }
