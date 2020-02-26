@@ -100,7 +100,6 @@ class link_cut_tree {
      * @note `a` becomes a terminal of the heavy path
      */
     void expose(int a) {
-        propagate_reverse_expose(a);
         // make a light path from `a` to the root
         for (int b = a; b != -1; b = parent[b]) {
             splay(b);
@@ -131,12 +130,8 @@ class link_cut_tree {
             propagate_reverse_splay(parent[a]);
         }
         propagate_reverse_node(a);
-    }
-    void propagate_reverse_expose(int a) {
-        if (parent[a] != -1) {
-            propagate_reverse_expose(parent[a]);
-        }
-        propagate_reverse_node(a);
+        if (right[a] != -1) propagate_reverse_node(right[a]);
+        if (left[a] != -1) propagate_reverse_node(left[a]);
     }
 
     /**
