@@ -15,7 +15,7 @@ int main() {
     link_cut_tree<plus_monoid<int64_t> > lct(n);
     REP (i, n) {
         int64_t a_i = in<int64_t>();
-        lct.point_set(i, a_i);
+        lct.vertex_set(i, a_i);
     }
     vector<vector<int> > g(n);
     REP (i, n - 1) {
@@ -52,7 +52,7 @@ int main() {
         } else if (t == 1) {
             int p = in<int>();
             int64_t x = in<int64_t>();
-            lct.point_set(p, lct.point_get(p) + x);
+            lct.vertex_set(p, lct.vertex_get(p) + x);
         } else if (t == 2) {
             int u = in<int>();
             int v = in<int>();

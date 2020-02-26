@@ -149,7 +149,7 @@ class link_cut_tree {
     }
 
 public:
-    link_cut_tree(int size, const reversible_monoid<Monoid> & mon_ = reversible_monoid<Monoid>())
+    link_cut_tree(int size, const Monoid & mon_ = Monoid())
             : mon(mon_), data(size, mon.base.unit()), path(size, mon.unit()), parent(size, -1), left(size, -1), right(size, -1), is_reversed(size, false) {
     }
 
@@ -233,13 +233,13 @@ public:
         is_reversed[a] = true;
     }
 
-    void point_set(int a, value_type value) {
+    void vertex_set(int a, value_type value) {
         splay(a);  // to make `a` the root of a splay tree
         data[a] = value;
         update_path(a);
     }
 
-    value_type point_get(int a) const {
+    value_type vertex_get(int a) const {
         return data[a];
     }
 

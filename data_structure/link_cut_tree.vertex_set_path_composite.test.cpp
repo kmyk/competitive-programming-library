@@ -19,7 +19,7 @@ int main() {
     REP (i, n) {
         mint<MOD> a_i = in<int32_t>();
         mint<MOD> b_i = in<int32_t>();
-        lct.point_set(i, make_pair(a_i, b_i));
+        lct.vertex_set(i, make_pair(a_i, b_i));
     }
     vector<vector<int> > g(n);
     REP (i, n - 1) {
@@ -49,7 +49,7 @@ int main() {
             int p = in<int>();
             mint<MOD> c = in<int32_t>();
             mint<MOD> d = in<int32_t>();
-            lct.point_set(p, make_pair(c, d));
+            lct.vertex_set(p, make_pair(c, d));
         } else if (t == 1) {
             int u = in<int>();
             int v = in<int>();
