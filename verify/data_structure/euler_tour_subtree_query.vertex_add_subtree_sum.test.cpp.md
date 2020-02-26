@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+# :heavy_check_mark: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 18:18:34+09:00
+    - Last commit date: 2020-02-26 19:51:56+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/vertex_add_subtree_sum">https://judge.yosupo.jp/problem/vertex_add_subtree_sum</a>
@@ -38,9 +38,9 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
-* :x: <a href="../../library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
@@ -121,8 +121,8 @@ int main() {
 void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, std::vector<int> & tour, std::vector<int> & left, std::vector<int> & right) {
     int n = g.size();
     tour.clear();
-    left.resize(n);
-    right.resize(n);
+    left.assign(n, -1);
+    right.assign(n, -1);
     std::function<void (int, int)> go = [&](int x, int parent) {
         left[x] = tour.size();
         tour.push_back(x);
@@ -227,21 +227,26 @@ public:
     }
     template <class InputIterator>
     euler_tour_subtree_query(const std::vector<std::vector<int> > & g, int root, InputIterator first, InputIterator last, const CommutativeMonoid & mon_ = CommutativeMonoid())
-            : data(first, last, mon_) {
+            : data(std::distance(first, last), mon_) {
+        assert ((int)g.size() == std::distance(first, last));
         std::vector<int> tour;
         do_euler_tour_preorder(g, root, tour, left, right);
+        REP (x, g.size()) {
+            data.unsafe_point_set(left[x], *(first ++));
+        }
+        data.unsafe_rebuild();
     }
 
     void vertex_set(int x, value_type a) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_set(left[x], a);
     }
     value_type vertex_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_get(left[x]);
     }
     value_type subtree_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.range_get(left[x], right[x]);
     }
 };
@@ -263,15 +268,17 @@ template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
 inline Char in() { return getchar_unlocked(); }
 template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
 inline std::string in() {
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
     std::string s;
-    for (char c; not isspace(c = getchar_unlocked()); ) s.push_back(c);
+    do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
 template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
 inline Integer in() {
-    Integer n = getchar_unlocked() - '0';
-    if (std::is_signed<Integer>::value and n + '0' == '-') return -in<Integer>();
-    for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
+    if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
+    Integer n = 0;
+    do { n = n * 10 + c - '0'; } while (not isspace(c = getchar_unlocked()));
     return n;
 }
 

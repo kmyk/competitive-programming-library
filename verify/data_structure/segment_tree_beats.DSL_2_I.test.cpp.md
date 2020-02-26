@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.DSL_2_I.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-23 16:30:06+09:00
+    - Last commit date: 2020-02-26 19:41:19+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_I">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_I</a>
@@ -382,15 +382,17 @@ template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
 inline Char in() { return getchar_unlocked(); }
 template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
 inline std::string in() {
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
     std::string s;
-    for (char c; not isspace(c = getchar_unlocked()); ) s.push_back(c);
+    do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
 template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
 inline Integer in() {
-    Integer n = getchar_unlocked() - '0';
-    if (std::is_signed<Integer>::value and n + '0' == '-') return -in<Integer>();
-    for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
+    if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
+    Integer n = 0;
+    do { n = n * 10 + c - '0'; } while (not isspace(c = getchar_unlocked()));
     return n;
 }
 

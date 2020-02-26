@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small>
+# :heavy_check_mark: Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/euler_tour_subtree_query.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 18:18:34+09:00
+    - Last commit date: 2020-02-26 19:51:56+09:00
 
 
 
@@ -48,13 +48,13 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
-* :x: <a href="../graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../../verify/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp.html">data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp.html">data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp</a>
 
 
 ## Code
@@ -87,21 +87,26 @@ public:
     }
     template <class InputIterator>
     euler_tour_subtree_query(const std::vector<std::vector<int> > & g, int root, InputIterator first, InputIterator last, const CommutativeMonoid & mon_ = CommutativeMonoid())
-            : data(first, last, mon_) {
+            : data(std::distance(first, last), mon_) {
+        assert ((int)g.size() == std::distance(first, last));
         std::vector<int> tour;
         do_euler_tour_preorder(g, root, tour, left, right);
+        REP (x, g.size()) {
+            data.unsafe_point_set(left[x], *(first ++));
+        }
+        data.unsafe_rebuild();
     }
 
     void vertex_set(int x, value_type a) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_set(left[x], a);
     }
     value_type vertex_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_get(left[x]);
     }
     value_type subtree_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.range_get(left[x], right[x]);
     }
 };
@@ -132,8 +137,8 @@ public:
 void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, std::vector<int> & tour, std::vector<int> & left, std::vector<int> & right) {
     int n = g.size();
     tour.clear();
-    left.resize(n);
-    right.resize(n);
+    left.assign(n, -1);
+    right.assign(n, -1);
     std::function<void (int, int)> go = [&](int x, int parent) {
         left[x] = tour.size();
         tour.push_back(x);
@@ -238,21 +243,26 @@ public:
     }
     template <class InputIterator>
     euler_tour_subtree_query(const std::vector<std::vector<int> > & g, int root, InputIterator first, InputIterator last, const CommutativeMonoid & mon_ = CommutativeMonoid())
-            : data(first, last, mon_) {
+            : data(std::distance(first, last), mon_) {
+        assert ((int)g.size() == std::distance(first, last));
         std::vector<int> tour;
         do_euler_tour_preorder(g, root, tour, left, right);
+        REP (x, g.size()) {
+            data.unsafe_point_set(left[x], *(first ++));
+        }
+        data.unsafe_rebuild();
     }
 
     void vertex_set(int x, value_type a) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_set(left[x], a);
     }
     value_type vertex_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.point_get(left[x]);
     }
     value_type subtree_get(int x) {
-        assert (0 <= x and x < left.size());
+        assert (0 <= x and x < (int)left.size());
         return data.range_get(left[x], right[x]);
     }
 };

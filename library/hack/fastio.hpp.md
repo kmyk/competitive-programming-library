@@ -31,14 +31,14 @@ layout: default
 
 * category: <a href="../../index.html#d78b6f30225cdc811adfe8d4e7c9fd34">hack</a>
 * <a href="{{ site.github.repository_url }}/blob/master/hack/fastio.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 18:35:19+09:00
+    - Last commit date: 2020-02-26 19:41:19+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../../verify/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp.html">data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp.html">data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp.html">data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp.html">data_structure/link_cut_tree.vertex_add_path_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/link_cut_tree.vertex_set_path_composite.test.cpp.html">data_structure/link_cut_tree.vertex_set_path_composite.test.cpp</a>
@@ -66,15 +66,17 @@ template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
 inline Char in() { return getchar_unlocked(); }
 template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
 inline std::string in() {
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
     std::string s;
-    for (char c; not isspace(c = getchar_unlocked()); ) s.push_back(c);
+    do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
 template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
 inline Integer in() {
-    Integer n = getchar_unlocked() - '0';
-    if (std::is_signed<Integer>::value and n + '0' == '-') return -in<Integer>();
-    for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
+    if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
+    Integer n = 0;
+    do { n = n * 10 + c - '0'; } while (not isspace(c = getchar_unlocked()));
     return n;
 }
 
@@ -107,15 +109,17 @@ template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>
 inline Char in() { return getchar_unlocked(); }
 template <class String, std::enable_if_t<std::is_same_v<String, std::string>, int> = 0>
 inline std::string in() {
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
     std::string s;
-    for (char c; not isspace(c = getchar_unlocked()); ) s.push_back(c);
+    do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
 template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
 inline Integer in() {
-    Integer n = getchar_unlocked() - '0';
-    if (std::is_signed<Integer>::value and n + '0' == '-') return -in<Integer>();
-    for (char c; (c = getchar_unlocked()) >= '0'; ) n = n * 10 + c - '0';
+    char c; do { c = getchar_unlocked(); } while (isspace(c));
+    if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
+    Integer n = 0;
+    do { n = n * 10 + c - '0'; } while (not isspace(c = getchar_unlocked()));
     return n;
 }
 
