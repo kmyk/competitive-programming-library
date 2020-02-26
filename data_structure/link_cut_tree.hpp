@@ -12,6 +12,7 @@
 
 /**
  * @brief Link-Cut tree (monoids without commutativity, vertex set + path get)
+ * @docs data_structure/link_cut_tree.md
  * @description manages a dynamic forest of rooted trees
  * @note in each splay tree, nodes are sorted from bottom to top. the rightmost node of the root splay tree of the auxiliary tree is the root of represented tree.
  */
