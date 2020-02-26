@@ -31,9 +31,27 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 11:29:49+09:00
+    - Last commit date: 2020-02-26 12:03:39+09:00
 
 
+
+
+## Operations
+
+根付き木からなる森 $G$ を動的に操作できる。頂点数を $N$ として均し $O(\log N)$ で次が処理できる。
+
+-   $\mathtt{link}(x, y)$: 根である頂点 $x$ から頂点 $y$ に辺を追加する。
+-   $\mathtt{cut}(x)$: 根でない頂点 $x$ とその親との間の辺を削除する。
+-   この森における接続性についての様々な質問
+    -   $\mathtt{get\unicode{95}parent}(x)$
+    -   $\mathtt{get\unicode{95}root}(x)$
+    -   $\mathtt{is\unicode{95}same\unicode{95}tree}(x, y)$
+    -   $\mathtt{get\unicode{95}lowest\unicode{95}common\unicode{95}ancestor}(x, y)$
+
+加えて、それぞれの頂点 $x$ に monoid 値重み $a_x \in M$ を乗せて、次が処理できる。
+
+-   $\mathtt{point\unicode{95}set}(x, b)$: 頂点 $x$ の重みを $a_x \gets b$ と更新する。
+-   $\mathtt{path\unicode{95}get}(x, y)$: 頂点 $x$ から $y$ への唯一のパス $x, z_1, z_2, \dots, y$ に沿った重みの積 $a_x \cdot a _ {z_1} \cdot a _ {z_2} \cdot \dots \cdot a_y$ を計算する。
 
 
 ## Depends on
@@ -68,6 +86,7 @@ layout: default
 
 /**
  * @brief Link-Cut tree (monoids without commutativity, vertex set + path get)
+ * @docs data_structure/link_cut_tree.md
  * @description manages a dynamic forest of rooted trees
  * @note in each splay tree, nodes are sorted from bottom to top. the rightmost node of the root splay tree of the auxiliary tree is the root of represented tree.
  */
@@ -357,6 +376,7 @@ struct reversible_monoid {
 
 /**
  * @brief Link-Cut tree (monoids without commutativity, vertex set + path get)
+ * @docs data_structure/link_cut_tree.md
  * @description manages a dynamic forest of rooted trees
  * @note in each splay tree, nodes are sorted from bottom to top. the rightmost node of the root splay tree of the auxiliary tree is the root of represented tree.
  */

@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 11:29:49+09:00
+    - Last commit date: 2020-02-26 12:03:39+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/vertex_add_path_sum">https://judge.yosupo.jp/problem/vertex_add_path_sum</a>
@@ -148,6 +148,7 @@ struct reversible_monoid {
 
 /**
  * @brief Link-Cut tree (monoids without commutativity, vertex set + path get)
+ * @docs data_structure/link_cut_tree.md
  * @description manages a dynamic forest of rooted trees
  * @note in each splay tree, nodes are sorted from bottom to top. the rightmost node of the root splay tree of the auxiliary tree is the root of represented tree.
  */
