@@ -7,8 +7,9 @@
 -   この森における接続性についての様々な質問
     -   $\mathtt{get\unicode{95}parent}(x)$
     -   $\mathtt{get\unicode{95}root}(x)$
-    -   $\mathtt{is\unicode{95}same\unicode{95}tree}(x, y)$
+    -   $\mathtt{are\unicode{95}connected}(x, y)$
     -   $\mathtt{get\unicode{95}lowest\unicode{95}common\unicode{95}ancestor}(x, y)$
+-   $\mathtt{evert}(x)$: 頂点 $x$ を根にする。つまり、頂点 $x$ からその所属する木の根までの辺をすべて反転させる。
 
 加えて、それぞれの頂点 $x$ に monoid 値重み $a_x \in M$ を乗せて、次が処理できる。
 
