@@ -2,12 +2,10 @@
 #include <algorithm>
 #include <cassert>
 #include <functional>
-#include <iostream>
 #include <sstream>
 #include <vector>
 #include "utils/macros.hpp"
 #include "monoids/reversible.hpp"
-#include <iostream>
 
 
 /**
