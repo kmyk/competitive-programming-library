@@ -44,7 +44,7 @@ int main() {
         if (t == 0) {
             int p = in<int>();
             int64_t x = in<int64_t>();
-            lct.point_set(p, lct.point_get(p) + x);
+            lct.vertex_set(p, lct.vertex_get(p) + x);
         } else if (t == 1) {
             int u = in<int>();
             int v = in<int>();
