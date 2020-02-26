@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.vertex_set_path_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 12:03:39+09:00
+    - Last commit date: 2020-02-26 12:05:39+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/vertex_set_path_composite">https://judge.yosupo.jp/problem/vertex_set_path_composite</a>
@@ -130,7 +130,6 @@ int main() {
 #include <algorithm>
 #include <cassert>
 #include <functional>
-#include <iostream>
 #include <sstream>
 #include <vector>
 #line 2 "utils/macros.hpp"
@@ -153,8 +152,7 @@ struct reversible_monoid {
     static value_type reverse(const value_type & a) { return std::make_pair(a.second, a.first); }
     static base_type get(const value_type & a) { return a.first; }
 };
-#line 10 "data_structure/link_cut_tree.hpp"
-#include <iostream>
+#line 9 "data_structure/link_cut_tree.hpp"
 
 
 /**
