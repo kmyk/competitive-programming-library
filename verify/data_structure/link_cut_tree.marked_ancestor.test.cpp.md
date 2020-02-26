@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.marked_ancestor.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 18:09:07+09:00
+    - Last commit date: 2020-02-26 22:02:40+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp</a>
@@ -221,7 +221,6 @@ class link_cut_tree {
      * @note `a` becomes a terminal of the heavy path
      */
     void expose(int a) {
-        propagate_reverse_expose(a);
         // make a light path from `a` to the root
         for (int b = a; b != -1; b = parent[b]) {
             splay(b);
@@ -252,12 +251,8 @@ class link_cut_tree {
             propagate_reverse_splay(parent[a]);
         }
         propagate_reverse_node(a);
-    }
-    void propagate_reverse_expose(int a) {
-        if (parent[a] != -1) {
-            propagate_reverse_expose(parent[a]);
-        }
-        propagate_reverse_node(a);
+        if (right[a] != -1) propagate_reverse_node(right[a]);
+        if (left[a] != -1) propagate_reverse_node(left[a]);
     }
 
     /**
