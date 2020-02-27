@@ -205,7 +205,10 @@ public:
         if (right[a] == -1) return parent[a];
         for (int b = right[a]; ; b = left[b]) {
             propagate_reverse_node(b);
-            if (left[b] == -1) return b;
+            if (left[b] == -1) {
+                splay(b);  // for the time complexity
+                return b;
+            }
         }
     }
 
@@ -215,6 +218,7 @@ public:
         while (right[a] != -1) {
             a = right[a];
         }
+        splay(a);  // for the time complexity
         return a;
     }
 
