@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 22:02:40+09:00
+    - Last commit date: 2020-02-27 11:49:55+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum">https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum</a>
@@ -351,7 +351,10 @@ public:
         if (right[a] == -1) return parent[a];
         for (int b = right[a]; ; b = left[b]) {
             propagate_reverse_node(b);
-            if (left[b] == -1) return b;
+            if (left[b] == -1) {
+                splay(b);  // for the time complexity
+                return b;
+            }
         }
     }
 
@@ -361,6 +364,7 @@ public:
         while (right[a] != -1) {
             a = right[a];
         }
+        splay(a);  // for the time complexity
         return a;
     }
 
