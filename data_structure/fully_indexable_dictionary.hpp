@@ -6,7 +6,8 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief a fully indexable dictionary
+ * @brief Fully Indexable Dictionary / 完備辞書
+ * @docs data_structure/fully_indexable_dictionary.md
  * @note space complexity $o(N)$. $1.5N$-bit consumed
  */
 class fully_indexable_dictionary {
