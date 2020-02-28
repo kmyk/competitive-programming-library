@@ -25,23 +25,23 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a convex hull trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small>
+# :heavy_check_mark: Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/convex_hull_trick.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:16:44+09:00
+    - Last commit date: 2020-02-28 14:33:39+09:00
 
 
 
 
 ## 概要
 
-一次関数の集合 $F = \emptyset \subseteq \lbrace \lambda x. ax + b \mid a, b \in \mathbb{Z} \rbrace$ に対し、次が処理可能:
+一次関数の集合 $F = \emptyset \subseteq \lbrace \lambda x. ax + b \mid a, b \in \mathbb{Z} \rbrace$ に対し、次が $O(\log N)$ amortized (一部は $O(\log N)$) で処理可能:
 
--   直線追加: 与えられた $f = \lambda x. ax + b$ に対し $F \gets F \cup \lbrace f \rbrace$ と均し $O(\log N)$ で更新する
--   最小値取得: 与えられた $x$ に対し $\min _ {f \in F} f(x)$ を $O(\log N)$ で計算する
+-   $\mathtt{add\unicode{95}line}(f)$: $F \gets F \cup \lbrace f \rbrace$ と更新する。
+-   $\mathtt{get\unicode{95}min}(x)$: 最小値 $\min _ {f \in F} f(x)$ を計算する。
 
 
 ## Verified with
@@ -82,7 +82,7 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @brief a convex hull trick (非単調, online)
+ * @brief Convex Hull Trick (非単調, online)
  * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {
@@ -198,7 +198,7 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @brief a convex hull trick (非単調, online)
+ * @brief Convex Hull Trick (非単調, online)
  * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {

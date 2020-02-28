@@ -25,15 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small>
+# :heavy_check_mark: Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/union_find_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-06-03 23:38:29+09:00
+    - Last commit date: 2020-02-28 14:33:39+09:00
 
 
+
+
+## 概要
+
+頂点数 $N$ で辺数 $0$ の無向グラフ $G = (V, E)$ に対し、次が $O(\alpha(N))$ amortized (ただし $\alpha$ は Ackermann 関数の逆関数) で処理可能。
+
+-   $\mathtt{unite\unicode{95}trees}(u, v)$: 頂点 $u, v$ 間に辺を追加する。
+    -   $u, v$ 間の辺は無向であることに注意
+-   $\mathtt{find\unicode{95}root}(v)$: 頂点 $v$ の所属する連結成分の代表元を取得する。
+-   $\mathtt{is\unicode{95}same}(u, v)$: 頂点 $u, v$ が同じ連結成分に所属するかを判定する。
+-   $\mathtt{tree\unicode{95}size}(v)$: 頂点 $v$ の所属する連結成分の要素数を取得する。
 
 
 ## Required by
@@ -57,7 +68,8 @@ layout: default
 #include <vector>
 
 /**
- * @brief a disjoint set structure
+ * @brief Union-Find Tree
+ * @docs data_structure/union_find_tree.md
  * @note union-by-size + path-compression
  */
 struct union_find_tree {
@@ -89,7 +101,8 @@ struct union_find_tree {
 #include <vector>
 
 /**
- * @brief a disjoint set structure
+ * @brief Union-Find Tree
+ * @docs data_structure/union_find_tree.md
  * @note union-by-size + path-compression
  */
 struct union_find_tree {

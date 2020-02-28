@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/convex_hull_trick.line_add_get_min.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:16:44+09:00
+    - Last commit date: 2020-02-28 14:33:39+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/line_add_get_min">https://judge.yosupo.jp/problem/line_add_get_min</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/convex_hull_trick.hpp.html">a convex hull trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/convex_hull_trick.hpp.html">Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -110,7 +110,7 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @brief a convex hull trick (非単調, online)
+ * @brief Convex Hull Trick (非単調, online)
  * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {

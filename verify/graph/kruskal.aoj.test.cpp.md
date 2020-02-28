@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/kruskal.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+    - Last commit date: 2020-02-28 14:33:39+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/union_find_tree.hpp.html">Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -93,7 +93,8 @@ int main() {
 #include <vector>
 
 /**
- * @brief a disjoint set structure
+ * @brief Union-Find Tree
+ * @docs data_structure/union_find_tree.md
  * @note union-by-size + path-compression
  */
 struct union_find_tree {

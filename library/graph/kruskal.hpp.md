@@ -31,14 +31,14 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/kruskal.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+    - Last commit date: 2020-02-28 14:33:39+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../data_structure/union_find_tree.hpp.html">a disjoint set structure <small>(data_structure/union_find_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/union_find_tree.hpp.html">Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -96,7 +96,8 @@ std::vector<int> compute_minimum_spanning_tree(int n, std::vector<std::tuple<int
 #include <vector>
 
 /**
- * @brief a disjoint set structure
+ * @brief Union-Find Tree
+ * @docs data_structure/union_find_tree.md
  * @note union-by-size + path-compression
  */
 struct union_find_tree {

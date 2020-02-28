@@ -39,15 +39,20 @@ layout: default
 
 ## 概要
 
-整数 $\mathbb{Z} = (\mathbb{Z}, +, 0, \le)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in \mathbb{Z}^n$ に対し、次が処理可能:
+整数 $\mathbb{Z} = (\mathbb{Z}, +, 0, \le)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in \mathbb{Z}^n$ に対し、次が $O((\log N)^2)$ amortized (一部は $O(\log N)$) で処理可能:
 
--   区間 chmin: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets \min(a_i, b)$ という更新をまとめて均し $O((\log N)^2)$ で行う
--   区間 chmax: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets \max(a_i, b)$ という更新をまとめて均し $O((\log N)^2)$ で行う
--   区間加算: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets a_i + b$ という更新をまとめて $O(\log N)$ で行う
--   区間代入: 与えられた $l, r, b$ に対し、それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets b$ という更新をまとめて $O(\log N)$ で行う
--   区間 min: 与えられた $l, r$ に対し、$\min _ {i \in [l, r)} a_i$ を $O(\log N)$ で計算する
--   区間 max: 与えられた $l, r$ に対し、$\max _ {i \in [l, r)} a_i$ を $O(\log N)$ で計算する
--   区間和: 与えられた $l, r$ に対し、$\sum _ {i \in [l, r)} a_i$ を $O(\log N)$ で計算する
+-   $\mathtt{range\unicode{95}chmin}(l, r, b)$: それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets \min(a_i, b)$ と更新する。
+-   $\mathtt{range\unicode{95}chmax}(l, r, b)$: それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets \max(a_i, b)$ と更新する。
+-   $\mathtt{range\unicode{95}add}(l, r, b)$: それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets a_i + b$ と更新する。
+-   $\mathtt{range\unicode{95}update}(l, r, b)$: それぞれの $i \in \lbrack l, r)$ に対し $a_i \gets b$ と更新する。
+-   $\mathtt{range\unicode{95}min}(l, r)$: $\min _ {i \in [l, r)} a_i$ を計算する。
+-   $\mathtt{range\unicode{95}max}(l, r)$: $\max _ {i \in [l, r)} a_i$ を計算する。
+-   $\mathtt{range\unicode{95}sum}(l, r)$: $\sum _ {i \in [l, r)} a_i$ を計算する。
+
+他にも:
+
+-   $\mathtt{point\unicode{95}set}(i, b)$: $a_i \gets b$ と更新する。
+-   $\mathtt{point\unicode{95}get}(i)$: 値 $a_i$ を計算する。
 
 
 ## Depends on
