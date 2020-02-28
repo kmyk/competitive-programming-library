@@ -9,7 +9,8 @@
 
 
 /**
- * @brief a wavelet matrix
+ * @brief Wavelet Matrix
+ * @docs data_structure/wavelet_matrix.md
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
  * @see https://www.slideshare.net/pfi/ss-15916040
  */
