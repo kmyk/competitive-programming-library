@@ -26,7 +26,7 @@ namespace convex_hull_trick_details {
 
 
 /*
- * @brief a convex hull trick (非単調, online)
+ * @brief Convex Hull Trick (非単調, online)
  * @docs data_structure/convex_hull_trick.md
  */
 class convex_hull_trick {

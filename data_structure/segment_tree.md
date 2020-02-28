@@ -1,6 +1,6 @@
 ## 概要
 
-monoid $F = (F, \circ, \mathrm{id})$ の要素の列 $f = (f_0, f_1, \dots, f _ {n - 1}) \in F^n$ に対し、次が処理可能:
+monoid $M = (M, \cdot, 1)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in M^n$ に対し、次が $O(\log N)$ で処理可能:
 
--   区間更新: 与えられた $l, r, g$ に対し、それぞれの $i \in [l, r)$ に対し $f_i \gets g \circ f_i$ と $O(\log N)$ で更新する
--   点取得: 与えられた $i$ に対し、値 $f_i$ を $O(\log N)$ で計算する
+-   $\mathtt{point\unicode{95}set}(i, b)$: $a_i \gets b$ と更新する。
+-   $\mathtt{range\unicode{95}get}(l, r)$: 積 $a_l \cdot a _ {l + 1} \cdot \dots \cdot a _ {r - 1}$ を計算する。

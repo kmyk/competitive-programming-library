@@ -2,7 +2,8 @@
 #include <vector>
 
 /**
- * @brief a disjoint set structure
+ * @brief Union-Find Tree
+ * @docs data_structure/union_find_tree.md
  * @note union-by-size + path-compression
  */
 struct union_find_tree {
