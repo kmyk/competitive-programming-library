@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.aoj2674.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-28 14:56:31+09:00
+    - Last commit date: 2020-02-28 15:08:46+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -114,7 +114,8 @@ int main() {
 #line 7 "data_structure/fully_indexable_dictionary.hpp"
 
 /**
- * @brief a fully indexable dictionary
+ * @brief Fully Indexable Dictionary / 完備辞書
+ * @docs data_structure/fully_indexable_dictionary.md
  * @note space complexity $o(N)$. $1.5N$-bit consumed
  */
 class fully_indexable_dictionary {

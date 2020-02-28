@@ -25,19 +25,29 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small>
+# :heavy_check_mark: Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/fully_indexable_dictionary.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2020-02-28 15:08:46+09:00
 
 
 * count the number of value in $[0, r)$
 * find the index of the $k$-th occurrence of value
 * select(value, k) in [l, size)
 * get the $i$-th element
+
+
+## 概要
+
+長さ $N$ の bit 列 $b = (b_0, b_1, \dots, b _ {n - 1}) \in 2^N$ に対し、次が $O(1)$ で処理可能:
+
+-   $\mathtt{rank}(l, r)$: 区間 $\lbrack l, r)$ 中の値 $1$ の出現回数 $$\unicode{35} \lbrace i \in \lbrack l, r) \mid a_i = 1 \rbrace$$ を計算する。
+-   $\mathtt{select}(k)$: 位置 $l$ 以降で $k \ge 0$ 番目に出現する値 $1$ の位置 $i$ (つまり $i \ge l$ かつ $a_i = 1$ かつ $$\unicode{35} \lbrace j \in \lbrack l, i) \mid a_j = 1 \rbrace = k$$ を満たす $i$) を計算する。
+    -   ただし今回の実装では妥協の結果 $O(\log N)$ になっている
+-   $\mathtt{access}(i)$: 値 $b_i$ を計算する。
 
 
 ## Depends on
@@ -70,7 +80,8 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief a fully indexable dictionary
+ * @brief Fully Indexable Dictionary / 完備辞書
+ * @docs data_structure/fully_indexable_dictionary.md
  * @note space complexity $o(N)$. $1.5N$-bit consumed
  */
 class fully_indexable_dictionary {
@@ -172,7 +183,8 @@ public:
 #line 7 "data_structure/fully_indexable_dictionary.hpp"
 
 /**
- * @brief a fully indexable dictionary
+ * @brief Fully Indexable Dictionary / 完備辞書
+ * @docs data_structure/fully_indexable_dictionary.md
  * @note space complexity $o(N)$. $1.5N$-bit consumed
  */
 class fully_indexable_dictionary {

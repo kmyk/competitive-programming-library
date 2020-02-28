@@ -48,7 +48,7 @@ layout: default
 * :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">a dual segment tree / 双対セグメント木 <small>(data_structure/dual_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>

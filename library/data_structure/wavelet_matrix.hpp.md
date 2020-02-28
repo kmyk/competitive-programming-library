@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-28 14:56:31+09:00
+    - Last commit date: 2020-02-28 15:08:46+09:00
 
 
 * count the occurrences of value in [l, r)
@@ -46,10 +46,15 @@ layout: default
 
 ## 概要
 
-ある固定された $\mathrm{BITS}$ と $2^\mathrm{BITS}$ 未満の自然数の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in (2^\mathrm{BITS})^N$ に対し、次が $O(\mathrm{BITS})$ で処理可能:
+完備辞書を $K$ 本ならべて $2^K$ 未満の自然数に対応させたような静的データ構造。
+
+## Operations
+
+ある固定された自然数 $K$ と $2^K$ 未満の自然数の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in (2^K)^N$ に対し、次が $O(K)$ で処理可能:
 
 -   $\mathtt{rank}(b, l, r)$: 区間 $\lbrack l, r)$ 中の値 $b$ の出現回数 $$\unicode{35} \lbrace i \in \lbrack l, r) \mid a_i = b \rbrace$$ を計算する。
 -   $\mathtt{select}(b, k, l)$: 位置 $l$ 以降で $k \ge 0$ 番目に出現する値 $b$ の位置 $i$ (つまり $i \ge l$ かつ $a_i = b$ かつ $$\unicode{35} \lbrace j \in \lbrack l, i) \mid a_j = b \rbrace = k$$ を満たす $i$) を計算する。
+    -   ただし今回の実装では完備辞書側の妥協の結果 $O(K \log N)$ になっている
 -   $\mathtt{access}(i)$: 値 $a_i$ を計算する。
 -   $\mathtt{quantile}(k, l, r)$: 区間 $\lbrack l, r)$ 内で $k \ge 0$ 番目に小さい要素 $a_i$ (つまり $$\unicode{35} \lbrace j \in \lbrack l, r) \mid (a_j, j) \lt (a_i, i) \rbrace = k$$ を満たす $i$) を計算する。
 -   $\mathtt{range\unicode{95}frequency}(l, r, b_l, b_r)$: 区間 $\lbrack l, r)$ 内における $b_l$ 以上 $b_r$ 未満の要素の数 $$\unicode{35} \lbrace i \in \lbrack l, r) \mid a_i \in \lbrack b_l, b_r) \rbrace$$ を計算する。
@@ -57,7 +62,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
+* :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -292,7 +297,8 @@ struct wavelet_matrix {
 #line 7 "data_structure/fully_indexable_dictionary.hpp"
 
 /**
- * @brief a fully indexable dictionary
+ * @brief Fully Indexable Dictionary / 完備辞書
+ * @docs data_structure/fully_indexable_dictionary.md
  * @note space complexity $o(N)$. $1.5N$-bit consumed
  */
 class fully_indexable_dictionary {
