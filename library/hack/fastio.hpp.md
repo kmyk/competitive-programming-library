@@ -48,6 +48,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_H.test.cpp.html">data_structure/segment_tree_beats.DSL_2_H.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.DSL_2_I.test.cpp.html">data_structure/segment_tree_beats.DSL_2_I.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.range_kth_smallest.test.cpp.html">data_structure/wavelet_matrix.range_kth_smallest.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation.yosupo.test.cpp.html">modulus/number_theoretic_transformation.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp.html">modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp</a>
 
