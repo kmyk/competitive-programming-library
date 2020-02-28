@@ -58,7 +58,7 @@ layout: default
 * :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 
 
 <div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>

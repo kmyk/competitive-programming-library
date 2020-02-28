@@ -47,7 +47,7 @@ layout: default
 
 ## Required by
 
-* :heavy_check_mark: <a href="wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
+* :heavy_check_mark: <a href="wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 
 
 ## Verified with

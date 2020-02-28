@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.rectangle_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:17:05+09:00
+    - Last commit date: 2020-02-28 14:56:31+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/rectangle_sum">https://judge.yosupo.jp/problem/rectangle_sum</a>
@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/fully_indexable_dictionary.hpp.html">a fully indexable dictionary <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/data_structure/wavelet_matrix.hpp.html">a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -244,7 +244,8 @@ public:
 
 
 /**
- * @brief a wavelet matrix
+ * @brief Wavelet Matrix
+ * @docs data_structure/wavelet_matrix.md
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
  * @see https://www.slideshare.net/pfi/ss-15916040
  */

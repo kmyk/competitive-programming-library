@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a wavelet matrix <small>(data_structure/wavelet_matrix.hpp)</small>
+# :heavy_check_mark: Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/wavelet_matrix.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-20 06:12:24+09:00
+    - Last commit date: 2020-02-28 14:56:31+09:00
 
 
 * count the occurrences of value in [l, r)
@@ -42,6 +42,17 @@ layout: default
 * count the number of values in [value_l, value_r) in range [l, r)
 * flexible version of range_frequency, buf a little bit slow
 * see: <a href="https://www.slideshare.net/pfi/ss-15916040">https://www.slideshare.net/pfi/ss-15916040</a>
+
+
+## 概要
+
+ある固定された $\mathrm{BITS}$ と $2^\mathrm{BITS}$ 未満の自然数の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \in (2^\mathrm{BITS})^N$ に対し、次が $O(\mathrm{BITS})$ で処理可能:
+
+-   $\mathtt{rank}(b, l, r)$: 区間 $\lbrack l, r)$ 中の値 $b$ の出現回数 $$\unicode{35} \lbrace i \in \lbrack l, r) \mid a_i = b \rbrace$$ を計算する。
+-   $\mathtt{select}(b, k, l)$: 位置 $l$ 以降で $k \ge 0$ 番目に出現する値 $b$ の位置 $i$ (つまり $i \ge l$ かつ $a_i = b$ かつ $$\unicode{35} \lbrace j \in \lbrack l, i) \mid a_j = b \rbrace = k$$ を満たす $i$) を計算する。
+-   $\mathtt{access}(i)$: 値 $a_i$ を計算する。
+-   $\mathtt{quantile}(k, l, r)$: 区間 $\lbrack l, r)$ 内で $k \ge 0$ 番目に小さい要素 $a_i$ (つまり $$\unicode{35} \lbrace j \in \lbrack l, r) \mid (a_j, j) \lt (a_i, i) \rbrace = k$$ を満たす $i$) を計算する。
+-   $\mathtt{range\unicode{95}frequency}(l, r, b_l, b_r)$: 区間 $\lbrack l, r)$ 内における $b_l$ 以上 $b_r$ 未満の要素の数 $$\unicode{35} \lbrace i \in \lbrack l, r) \mid a_i \in \lbrack b_l, b_r) \rbrace$$ を計算する。
 
 
 ## Depends on
@@ -73,7 +84,8 @@ layout: default
 
 
 /**
- * @brief a wavelet matrix
+ * @brief Wavelet Matrix
+ * @docs data_structure/wavelet_matrix.md
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
  * @see https://www.slideshare.net/pfi/ss-15916040
  */
@@ -365,7 +377,8 @@ public:
 
 
 /**
- * @brief a wavelet matrix
+ * @brief Wavelet Matrix
+ * @docs data_structure/wavelet_matrix.md
  * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS \le \log N, using coordinate compression
  * @see https://www.slideshare.net/pfi/ss-15916040
  */
