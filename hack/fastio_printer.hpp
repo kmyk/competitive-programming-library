@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 class printer {
-    static constexpr int N = 65536;
+    static constexpr int N = 131072;
     static constexpr int K = 64;
     char buf[N];
     int i = 0;

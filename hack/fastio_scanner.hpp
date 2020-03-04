@@ -8,7 +8,7 @@
 #include <unistd.h>
 
 class scanner {
-    static constexpr int N = 65536;
+    static constexpr int N = 131072;
     static constexpr int K = 64;
     char buf[K + N];
     int l = 0;
@@ -56,8 +56,7 @@ public:
         }
         Integer x = 0;
         while (l < r and isdigit(buf[l])) {
-            x *= 10;
-            x += buf[l] - '0';
+            x = 10 * x + buf[l] - '0';
             ++ l;
         }
         if (std::is_signed<Integer>::value and is_negative) {
