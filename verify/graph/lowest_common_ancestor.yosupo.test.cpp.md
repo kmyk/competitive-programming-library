@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 13:34:36+09:00
+    - Last commit date: 2020-03-04 19:51:45+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/lca">https://judge.yosupo.jp/problem/lca</a>
@@ -113,26 +113,27 @@ STACK_PIVOT_MAIN(moin)
  * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
-template <class Semilattice>
+template <class IdempotentMonoid>
 struct sparse_table {
-    typedef typename Semilattice::value_type value_type;
+    typedef typename IdempotentMonoid::value_type value_type;
     std::vector<std::vector<value_type> > table;
-    Semilattice lat;
+    IdempotentMonoid mon;
     sparse_table() = default;
 
     /**
      * @note $O(N \log N)$ time
      */
-    sparse_table(std::vector<value_type> const & data, Semilattice const & lat_ = Semilattice())
-            : lat(lat_) {
-        int n = data.size();
+    template <class InputIterator>
+    sparse_table(InputIterator first, InputIterator last, const IdempotentMonoid & mon_ = IdempotentMonoid())
+            : mon(mon_) {
+        table.emplace_back(first, last);
+        int n = table[0].size();
         int log_n = 32 - __builtin_clz(n);
         table.resize(log_n, std::vector<value_type>(n));
-        table[0] = data;
         REP (k, log_n - 1) {
             REP (i, n) {
                 table[k + 1][i] = i + (1ll << k) < n ?
-                    lat.mult(table[k][i], table[k][i + (1ll << k)]) :
+                    mon.mult(table[k][i], table[k][i + (1ll << k)]) :
                     table[k][i];
             }
         }
@@ -142,10 +143,10 @@ struct sparse_table {
      * @note $O(1)$
      */
     value_type range_get(int l, int r) const {
-        if (l == r) return lat.unit();  // if there is no unit, remove this line
-        assert (0 <= l and l < r and r <= table[0].size());
+        if (l == r) return mon.unit();  // if there is no unit, remove this line
+        assert (0 <= l and l < r and r <= (int)table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
-        return lat.mult(table[k][l], table[k][r - (1ll << k)]);
+        return mon.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
 #line 2 "monoids/min_index.hpp"
@@ -183,7 +184,7 @@ struct lowest_common_ancestor {
         std::vector<std::pair<int, int> > tour;
         index.assign(g.size(), -1);
         dfs(root, -1, 0, g, tour);
-        table = sparse_table<min_index_monoid<int> >(tour);
+        table = sparse_table<min_index_monoid<int> >(ALL(tour));
     }
 private:
     /**

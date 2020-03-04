@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 13:34:36+09:00
+    - Last commit date: 2020-03-04 19:51:45+09:00
 
 
 
@@ -44,6 +44,7 @@ layout: default
 ## Required by
 
 * :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
+* :heavy_check_mark: <a href="../string/longest_common_prefix.hpp.html">Longest Common Prefix / 最長共通接頭辞 (接尾辞配列, 前処理 $O(N (\log N)^2)$ + $O(1)$) <small>(string/longest_common_prefix.hpp)</small></a>
 
 
 ## Verified with
@@ -51,6 +52,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/string/longest_common_prefix.yosupo.test.cpp.html">string/longest_common_prefix.yosupo.test.cpp</a>
 
 
 ## Code
@@ -68,26 +70,27 @@ layout: default
  * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
-template <class Semilattice>
+template <class IdempotentMonoid>
 struct sparse_table {
-    typedef typename Semilattice::value_type value_type;
+    typedef typename IdempotentMonoid::value_type value_type;
     std::vector<std::vector<value_type> > table;
-    Semilattice lat;
+    IdempotentMonoid mon;
     sparse_table() = default;
 
     /**
      * @note $O(N \log N)$ time
      */
-    sparse_table(std::vector<value_type> const & data, Semilattice const & lat_ = Semilattice())
-            : lat(lat_) {
-        int n = data.size();
+    template <class InputIterator>
+    sparse_table(InputIterator first, InputIterator last, const IdempotentMonoid & mon_ = IdempotentMonoid())
+            : mon(mon_) {
+        table.emplace_back(first, last);
+        int n = table[0].size();
         int log_n = 32 - __builtin_clz(n);
         table.resize(log_n, std::vector<value_type>(n));
-        table[0] = data;
         REP (k, log_n - 1) {
             REP (i, n) {
                 table[k + 1][i] = i + (1ll << k) < n ?
-                    lat.mult(table[k][i], table[k][i + (1ll << k)]) :
+                    mon.mult(table[k][i], table[k][i + (1ll << k)]) :
                     table[k][i];
             }
         }
@@ -97,10 +100,10 @@ struct sparse_table {
      * @note $O(1)$
      */
     value_type range_get(int l, int r) const {
-        if (l == r) return lat.unit();  // if there is no unit, remove this line
-        assert (0 <= l and l < r and r <= table[0].size());
+        if (l == r) return mon.unit();  // if there is no unit, remove this line
+        assert (0 <= l and l < r and r <= (int)table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
-        return lat.mult(table[k][l], table[k][r - (1ll << k)]);
+        return mon.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
 
@@ -126,26 +129,27 @@ struct sparse_table {
  * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
-template <class Semilattice>
+template <class IdempotentMonoid>
 struct sparse_table {
-    typedef typename Semilattice::value_type value_type;
+    typedef typename IdempotentMonoid::value_type value_type;
     std::vector<std::vector<value_type> > table;
-    Semilattice lat;
+    IdempotentMonoid mon;
     sparse_table() = default;
 
     /**
      * @note $O(N \log N)$ time
      */
-    sparse_table(std::vector<value_type> const & data, Semilattice const & lat_ = Semilattice())
-            : lat(lat_) {
-        int n = data.size();
+    template <class InputIterator>
+    sparse_table(InputIterator first, InputIterator last, const IdempotentMonoid & mon_ = IdempotentMonoid())
+            : mon(mon_) {
+        table.emplace_back(first, last);
+        int n = table[0].size();
         int log_n = 32 - __builtin_clz(n);
         table.resize(log_n, std::vector<value_type>(n));
-        table[0] = data;
         REP (k, log_n - 1) {
             REP (i, n) {
                 table[k + 1][i] = i + (1ll << k) < n ?
-                    lat.mult(table[k][i], table[k][i + (1ll << k)]) :
+                    mon.mult(table[k][i], table[k][i + (1ll << k)]) :
                     table[k][i];
             }
         }
@@ -155,10 +159,10 @@ struct sparse_table {
      * @note $O(1)$
      */
     value_type range_get(int l, int r) const {
-        if (l == r) return lat.unit();  // if there is no unit, remove this line
-        assert (0 <= l and l < r and r <= table[0].size());
+        if (l == r) return mon.unit();  // if there is no unit, remove this line
+        assert (0 <= l and l < r and r <= (int)table[0].size());
         int k = 31 - __builtin_clz(r - l);  // log2
-        return lat.mult(table[k][l], table[k][r - (1ll << k)]);
+        return mon.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
 
