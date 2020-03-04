@@ -7,6 +7,7 @@
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
+ * @docs data_structure/lazy_propagation_red_black_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X
