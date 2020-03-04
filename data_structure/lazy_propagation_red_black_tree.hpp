@@ -4,7 +4,6 @@
 #include <memory>
 #include <type_traits>
 #include <vector>
-#include "utils/macros.hpp"
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
@@ -43,8 +42,8 @@ class lazy_propagation_red_black_tree {
                 , lazy(MonoidF().unit())
                 , reversed(false)
                 , color(c)
-                , rank(max(l->rank + (l->color == BLACK),
-                           r->rank + (r->color == BLACK)))
+                , rank(std::max(l->rank + (l->color == BLACK),
+                                r->rank + (r->color == BLACK)))
                 , size(l->size + r->size)
                 , left(l)
                 , right(r) {
@@ -63,12 +62,13 @@ class lazy_propagation_red_black_tree {
 
     static void propagate_only_operator(node_t *a) {
         MonoidF mon_f;
+        Action act;
         if (not a->is_leaf) {
             if (a->lazy != mon_f.unit()) {
                 auto const & l = a->left;
                 auto const & r = a->right;
-                l->data = mon_f.apply(a->lazy, l->data);
-                r->data = mon_f.apply(a->lazy, r->data);
+                l->data = act(a->lazy, l->data);
+                r->data = act(a->lazy, r->data);
                 if (not l->is_leaf) l->lazy = mon_f.mult(a->lazy, l->lazy);
                 if (not r->is_leaf) r->lazy = mon_f.mult(a->lazy, r->lazy);
                 a->lazy = mon_f.unit();
@@ -272,7 +272,7 @@ public:
             : root(a_root) {
     }
     template <class InputIterator>
-    lazy_propagation_red_black_tree(InputIterator first, InputIterator last) {
+    lazy_propagation_red_black_tree(InputIterator first, InputIterator last)
             : root(nullptr) {
         for (; first != last; ++ first) {
             this->push_back(*first);

@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
-#include "data_structure/lazy_propagation_segment_red_black_tree.hpp"
+#include "data_structure/lazy_propagation_red_black_tree.hpp"
 #include "monoids/plus_count.hpp"
 #include "monoids/linear_function.hpp"
 #include "monoids/linear_function_plus_count_action.hpp"
@@ -20,7 +20,7 @@ int main() {
         a[i].first = a_i;
         a[i].second = 1;
     }
-    lazy_propagation_segment_red_black_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(ALL(a));
+    lazy_propagation_red_black_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(ALL(a));
     while (q --) {
         int t; scanf("%d", &t);
         if (t == 0) {
