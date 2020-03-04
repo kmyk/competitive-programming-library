@@ -34,8 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* euler tour, push vertices only visiting
-* something like euler tour but do BFS
 * see: <a href="https://yukicoder.me/problems/no/899">https://yukicoder.me/problems/no/899</a>
 
 

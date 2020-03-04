@@ -34,7 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* $0^k + 1^k + 2^k + ... + (n - 1)^k$
 * see: <a href="https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0">https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0</a>
 * see: <a href="https://yukicoder.me/problems/no/665">https://yukicoder.me/problems/no/665</a>
 

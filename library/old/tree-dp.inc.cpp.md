@@ -34,9 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* rerooting (全方位木DP)
-* fold a rooted tree (木DP)
-* rerooting (全方位木DP)
 * see: <a href="https://twitter.com/tmaehara/status/980787099472297985">https://twitter.com/tmaehara/status/980787099472297985</a>
 * see: <a href="https://twitter.com/tmaehara/status/980787099472297985">https://twitter.com/tmaehara/status/980787099472297985</a>
 

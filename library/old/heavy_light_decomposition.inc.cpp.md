@@ -34,8 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* construct an adjacency list for the decomposed tree
-* reduce a path-query to range-queries aboud nodes
 * see: <a href="http://math314.hateblo.jp/entry/2014/06/24/220107">http://math314.hateblo.jp/entry/2014/06/24/220107</a>
 
 

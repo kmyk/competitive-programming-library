@@ -34,7 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* chinese remainder theorem
 * see: <a href="https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466">https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466</a>
 
 

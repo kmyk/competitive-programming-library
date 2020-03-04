@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small>
+# :x: the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/multichoose.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/stirling_number_of_the_second_kind_direct.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-04 12:42:08+09:00
 
 
 
@@ -43,6 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by
@@ -71,17 +72,25 @@ layout: default
 ```cpp
 #pragma once
 #include <cassert>
+#include <vector>
+#include <map>
+#include "utils/macros.hpp"
 #include "modulus/mint.hpp"
+#include "modulus/factorial.hpp"
 #include "modulus/choose.hpp"
 
 /**
- * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief the Stirling number of the second kind ($O(K \log N)$)
  */
-template <int32_t MOD>
-mint<MOD> multichoose(int n, int r) {
-    assert (0 <= n and 0 <= r);
-    if (n == 0 and r == 0) return 1;
-    return choose<MOD>(n + r - 1, r);
+template <int MOD>
+mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
+    assert (0 <= n and 0 <= k);
+    mint<MOD> acc = 0;
+    REP (i, k + 1) {
+        int parity = ((k - i) % 2 == 0 ? +1 : -1);
+        acc += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;
+    }
+    return acc * inv_fact<MOD>(k);
 }
 
 ```
@@ -90,8 +99,16 @@ mint<MOD> multichoose(int n, int r) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "modulus/multichoose.hpp"
+#line 2 "modulus/stirling_number_of_the_second_kind_direct.hpp"
 #include <cassert>
+#include <vector>
+#include <map>
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
 #include <cassert>
@@ -165,8 +182,6 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "modulus/choose.hpp"
-#include <cassert>
 #line 2 "modulus/factorial.hpp"
 #include <vector>
 #line 4 "modulus/factorial.hpp"
@@ -193,6 +208,8 @@ mint<MOD> inv_fact(int n) {
     }
     return memo[n];
 }
+#line 2 "modulus/choose.hpp"
+#include <cassert>
 #line 5 "modulus/choose.hpp"
 
 /**
@@ -203,16 +220,20 @@ mint<MOD> choose(int n, int r) {
     assert (0 <= r and r <= n);
     return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
 }
-#line 5 "modulus/multichoose.hpp"
+#line 9 "modulus/stirling_number_of_the_second_kind_direct.hpp"
 
 /**
- * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief the Stirling number of the second kind ($O(K \log N)$)
  */
-template <int32_t MOD>
-mint<MOD> multichoose(int n, int r) {
-    assert (0 <= n and 0 <= r);
-    if (n == 0 and r == 0) return 1;
-    return choose<MOD>(n + r - 1, r);
+template <int MOD>
+mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
+    assert (0 <= n and 0 <= k);
+    mint<MOD> acc = 0;
+    REP (i, k + 1) {
+        int parity = ((k - i) % 2 == 0 ? +1 : -1);
+        acc += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;
+    }
+    return acc * inv_fact<MOD>(k);
 }
 
 ```

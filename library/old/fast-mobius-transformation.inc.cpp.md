@@ -34,9 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* (downward) fast zeta transformation
-* (upward) fast mobius transformation
-* (downward) fast mobius transformation
 * see: <a href="http://pekempey.hatenablog.com/entry/2016/10/30/205852">http://pekempey.hatenablog.com/entry/2016/10/30/205852</a>
 
 

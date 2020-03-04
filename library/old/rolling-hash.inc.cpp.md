@@ -34,7 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* an adaptor to a segment tree
 * see: <a href="http://hos.ac/blog/#blog0003">http://hos.ac/blog/#blog0003</a>
 
 

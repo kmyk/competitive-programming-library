@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+# :x: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_4.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+    - Last commit date: 2020-03-04 12:42:08+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D</a>
@@ -38,16 +38,17 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/modulus/bell_number.hpp.html">the Bell number <small>(modulus/bell_number.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
+* :x: <a href="../../library/modulus/bell_number.hpp.html">the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small></a>
+* :x: <a href="../../library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/stirling_number_of_the_second_kind.hpp.html">the Stirling number of the second kind <small>(modulus/stirling_number_of_the_second_kind.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
+* :x: <a href="../../library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
+* :x: <a href="../../library/modulus/permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
+* :x: <a href="../../library/modulus/stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
+* :x: <a href="../../library/modulus/stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
+* :x: <a href="../../library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -213,27 +214,45 @@ mint<MOD> multichoose(int n, int r) {
     if (n == 0 and r == 0) return 1;
     return choose<MOD>(n + r - 1, r);
 }
-#line 2 "modulus/stirling_number_of_the_second_kind.hpp"
+#line 2 "modulus/stirling_number_of_the_second_kind_direct.hpp"
 #include <cassert>
 #include <vector>
+#include <map>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
-#line 8 "modulus/stirling_number_of_the_second_kind.hpp"
+#line 9 "modulus/stirling_number_of_the_second_kind_direct.hpp"
 
 /**
- * @brief the Stirling number of the second kind
+ * @brief the Stirling number of the second kind ($O(K \log N)$)
+ */
+template <int MOD>
+mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
+    assert (0 <= n and 0 <= k);
+    mint<MOD> acc = 0;
+    REP (i, k + 1) {
+        int parity = ((k - i) % 2 == 0 ? +1 : -1);
+        acc += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;
+    }
+    return acc * inv_fact<MOD>(k);
+}
+#line 2 "modulus/stirling_number_of_the_second_kind_table.hpp"
+#include <cassert>
+#include <vector>
+#line 6 "modulus/stirling_number_of_the_second_kind_table.hpp"
+
+/**
+ * @brief the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$)
  * @description the number of ways of partitioning a set of n elements into k nonempty sets
  * @see http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html
  * @see http://oeis.org/A008277
  * @see https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0
- * @note $O(NK)$, memoized
  */
 template <int MOD>
-mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
+mint<MOD> stirling_number_of_the_second_kind_table(int n, int k) {
     assert (0 <= n and 0 <= k);
     if (n  < k) return 0;
     if (n == k) return 1;
@@ -251,34 +270,18 @@ mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
         stirling_number_of_the_second_kind<MOD>(n - 1, k - 1) +
         stirling_number_of_the_second_kind<MOD>(n - 1, k) * k;
 }
-
-/**
- * @note O(K \log N)
- */
-template <int MOD>
-mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
-    assert (0 <= n and 0 <= k);
-    mint<MOD> acc = 0;
-    REP3 (i, 1, k + 1) {
-        int parity = ((k - i) % 2 == 0 ? +1 : -1);
-        acc += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;
-    }
-    return acc * inv_fact<MOD>(k);
-}
 #line 5 "modulus/bell_number.hpp"
 
 /**
- * @brief the Bell number
+ * @brief the Bell number (前処理 $O(NK)$ + $O(1)$)
  * @description the number of ways a set of n elements can be partitioned into nonempty subsets
  * @see http://mathworld.wolfram.com/BellNumber.html
  * @see https://oeis.org/A110
  * @see https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0
- * @tparam MOD must be a prime
- * @note $O(nk)$, memoized
  */
-template <int MOD>
-mint<MOD> bell_number(int n, int k) {
-    static std::vector<std::vector<mint<MOD> > > memo;
+template <int PRIME>
+mint<PRIME> bell_number(int n, int k) {
+    static std::vector<std::vector<mint<PRIME> > > memo;
     if (memo.size() <= n) {
         memo.resize(n + 1);
     }
@@ -287,14 +290,14 @@ mint<MOD> bell_number(int n, int k) {
     }
     while (memo[n].size() <= k) {
         int i = memo[n].size();
-        memo[n].push_back(memo[n].back() + stirling_number_of_the_second_kind<MOD>(n, i));
+        memo[n].push_back(memo[n].back() + stirling_number_of_the_second_kind_table<PRIME>(n, i));
     }
     return memo[n][k];
 }
 
-template <int MOD>
-mint<MOD> unary_bell_number(int n) {
-    return bell_number<MOD>(n, n);
+template <int PRIME>
+mint<PRIME> unary_bell_number(int n) {
+    return bell_number<PRIME>(n, n);
 }
 #line 8 "modulus/twelvefold_way.hpp"
 
@@ -330,11 +333,10 @@ mint<MOD> twelvefold_lli(int n, int k) {
 /**
  * @brief labeled-N labeled-K surjective-f
  * @note the number of f for surjective f : N \twoheadrightarrow K
- * @note O(NK) or O(N \log K)
  */
 template <int MOD>
 mint<MOD> twelvefold_lls(int n, int k) {
-    return stirling_number_of_the_second_kind<MOD>(n, k) * fact<MOD>(k);
+    return stirling_number_of_the_second_kind_direct<MOD>(n, k) * fact<MOD>(k);
 }
 
 

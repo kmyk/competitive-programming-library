@@ -34,7 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* fully factorize all numbers in [0, n) with O(n log log n)
 
 
 ## Code

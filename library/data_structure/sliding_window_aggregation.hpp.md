@@ -34,7 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 19:38:32+09:00
 
 
-* get sum of elements in the queue
 
 
 ## Depends on

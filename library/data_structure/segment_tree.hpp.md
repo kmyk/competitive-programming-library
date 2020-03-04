@@ -34,9 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 19:38:32+09:00
 
 
-* a fast & semigroup-friendly version constructor
-* update a leaf node without updating ancestors
-* re-build non-leaf nodes from leaf nodes
 
 
 ## 概要

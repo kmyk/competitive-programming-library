@@ -34,7 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* for given $a$ and $c$, make $b$ s.t. $a < b < c$
 
 
 ## Code

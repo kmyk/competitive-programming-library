@@ -34,10 +34,6 @@ layout: default
     - Last commit date: 2020-02-28 15:08:46+09:00
 
 
-* count the number of value in $[0, r)$
-* find the index of the $k$-th occurrence of value
-* select(value, k) in [l, size)
-* get the $i$-th element
 
 
 ## 概要

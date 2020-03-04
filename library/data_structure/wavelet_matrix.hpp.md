@@ -34,13 +34,6 @@ layout: default
     - Last commit date: 2020-02-28 15:08:46+09:00
 
 
-* count the occurrences of value in [l, r)
-* find the index of the k-th occurence of value
-* find the index of the k-th occurence of value in [l, n)
-* returns the i-th element
-* find the k-th number in [l, r)
-* count the number of values in [value_l, value_r) in range [l, r)
-* flexible version of range_frequency, buf a little bit slow
 * see: <a href="https://www.slideshare.net/pfi/ss-15916040">https://www.slideshare.net/pfi/ss-15916040</a>
 
 

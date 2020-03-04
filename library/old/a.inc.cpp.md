@@ -34,9 +34,6 @@ layout: default
     - Last commit date: 2020-01-08 18:35:19+09:00
 
 
-* segment - segment, inclusive
-* point and line
-* line and line
 
 
 ## Code
