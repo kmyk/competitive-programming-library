@@ -4,9 +4,8 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
+ * @brief Sparse Table (idempotent monoid)
+ * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
 template <class Semilattice>
