@@ -25,25 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_segment_red_black_tree.hpp)</small>
+# :heavy_check_mark: Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_red_black_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_red_black_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 20:34:24+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_red_black_tree.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-04 20:48:38+09:00
 
 
-
-
-## Depends on
-
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../../verify/data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp</a>
 
 
 ## Code
@@ -57,7 +52,6 @@ layout: default
 #include <memory>
 #include <type_traits>
 #include <vector>
-#include "utils/macros.hpp"
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
@@ -96,8 +90,8 @@ class lazy_propagation_red_black_tree {
                 , lazy(MonoidF().unit())
                 , reversed(false)
                 , color(c)
-                , rank(max(l->rank + (l->color == BLACK),
-                           r->rank + (r->color == BLACK)))
+                , rank(std::max(l->rank + (l->color == BLACK),
+                                r->rank + (r->color == BLACK)))
                 , size(l->size + r->size)
                 , left(l)
                 , right(r) {
@@ -116,12 +110,13 @@ class lazy_propagation_red_black_tree {
 
     static void propagate_only_operator(node_t *a) {
         MonoidF mon_f;
+        Action act;
         if (not a->is_leaf) {
             if (a->lazy != mon_f.unit()) {
                 auto const & l = a->left;
                 auto const & r = a->right;
-                l->data = mon_f.apply(a->lazy, l->data);
-                r->data = mon_f.apply(a->lazy, r->data);
+                l->data = act(a->lazy, l->data);
+                r->data = act(a->lazy, r->data);
                 if (not l->is_leaf) l->lazy = mon_f.mult(a->lazy, l->lazy);
                 if (not r->is_leaf) r->lazy = mon_f.mult(a->lazy, r->lazy);
                 a->lazy = mon_f.unit();
@@ -325,7 +320,7 @@ public:
             : root(a_root) {
     }
     template <class InputIterator>
-    lazy_propagation_red_black_tree(InputIterator first, InputIterator last) {
+    lazy_propagation_red_black_tree(InputIterator first, InputIterator last)
             : root(nullptr) {
         for (; first != last; ++ first) {
             this->push_back(*first);
@@ -422,19 +417,12 @@ public:
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "data_structure/lazy_propagation_segment_red_black_tree.hpp"
+#line 2 "data_structure/lazy_propagation_red_black_tree.hpp"
 #include <algorithm>
 #include <cassert>
 #include <memory>
 #include <type_traits>
 #include <vector>
-#line 2 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) std::begin(x), std::end(x)
-#line 8 "data_structure/lazy_propagation_segment_red_black_tree.hpp"
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
@@ -473,8 +461,8 @@ class lazy_propagation_red_black_tree {
                 , lazy(MonoidF().unit())
                 , reversed(false)
                 , color(c)
-                , rank(max(l->rank + (l->color == BLACK),
-                           r->rank + (r->color == BLACK)))
+                , rank(std::max(l->rank + (l->color == BLACK),
+                                r->rank + (r->color == BLACK)))
                 , size(l->size + r->size)
                 , left(l)
                 , right(r) {
@@ -493,12 +481,13 @@ class lazy_propagation_red_black_tree {
 
     static void propagate_only_operator(node_t *a) {
         MonoidF mon_f;
+        Action act;
         if (not a->is_leaf) {
             if (a->lazy != mon_f.unit()) {
                 auto const & l = a->left;
                 auto const & r = a->right;
-                l->data = mon_f.apply(a->lazy, l->data);
-                r->data = mon_f.apply(a->lazy, r->data);
+                l->data = act(a->lazy, l->data);
+                r->data = act(a->lazy, r->data);
                 if (not l->is_leaf) l->lazy = mon_f.mult(a->lazy, l->lazy);
                 if (not r->is_leaf) r->lazy = mon_f.mult(a->lazy, r->lazy);
                 a->lazy = mon_f.unit();
@@ -702,7 +691,7 @@ public:
             : root(a_root) {
     }
     template <class InputIterator>
-    lazy_propagation_red_black_tree(InputIterator first, InputIterator last) {
+    lazy_propagation_red_black_tree(InputIterator first, InputIterator last)
             : root(nullptr) {
         for (; first != last; ++ first) {
             this->push_back(*first);

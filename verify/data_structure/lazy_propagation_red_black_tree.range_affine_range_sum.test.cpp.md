@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp
+# :heavy_check_mark: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 20:34:24+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-04 20:48:38+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_affine_range_sum">https://judge.yosupo.jp/problem/range_affine_range_sum</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/data_structure/lazy_propagation_segment_red_black_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_segment_red_black_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_red_black_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_red_black_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
@@ -54,7 +54,7 @@ layout: default
 {% raw %}
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
-#include "data_structure/lazy_propagation_segment_red_black_tree.hpp"
+#include "data_structure/lazy_propagation_red_black_tree.hpp"
 #include "monoids/plus_count.hpp"
 #include "monoids/linear_function.hpp"
 #include "monoids/linear_function_plus_count_action.hpp"
@@ -75,7 +75,7 @@ int main() {
         a[i].first = a_i;
         a[i].second = 1;
     }
-    lazy_propagation_segment_red_black_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(ALL(a));
+    lazy_propagation_red_black_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(ALL(a));
     while (q --) {
         int t; scanf("%d", &t);
         if (t == 0) {
@@ -97,21 +97,14 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp"
+#line 1 "data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
-#line 2 "data_structure/lazy_propagation_segment_red_black_tree.hpp"
+#line 2 "data_structure/lazy_propagation_red_black_tree.hpp"
 #include <algorithm>
 #include <cassert>
 #include <memory>
 #include <type_traits>
 #include <vector>
-#line 2 "utils/macros.hpp"
-#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
-#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
-#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
-#define ALL(x) std::begin(x), std::end(x)
-#line 8 "data_structure/lazy_propagation_segment_red_black_tree.hpp"
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
@@ -150,8 +143,8 @@ class lazy_propagation_red_black_tree {
                 , lazy(MonoidF().unit())
                 , reversed(false)
                 , color(c)
-                , rank(max(l->rank + (l->color == BLACK),
-                           r->rank + (r->color == BLACK)))
+                , rank(std::max(l->rank + (l->color == BLACK),
+                                r->rank + (r->color == BLACK)))
                 , size(l->size + r->size)
                 , left(l)
                 , right(r) {
@@ -170,12 +163,13 @@ class lazy_propagation_red_black_tree {
 
     static void propagate_only_operator(node_t *a) {
         MonoidF mon_f;
+        Action act;
         if (not a->is_leaf) {
             if (a->lazy != mon_f.unit()) {
                 auto const & l = a->left;
                 auto const & r = a->right;
-                l->data = mon_f.apply(a->lazy, l->data);
-                r->data = mon_f.apply(a->lazy, r->data);
+                l->data = act(a->lazy, l->data);
+                r->data = act(a->lazy, r->data);
                 if (not l->is_leaf) l->lazy = mon_f.mult(a->lazy, l->lazy);
                 if (not r->is_leaf) r->lazy = mon_f.mult(a->lazy, r->lazy);
                 a->lazy = mon_f.unit();
@@ -379,7 +373,7 @@ public:
             : root(a_root) {
     }
     template <class InputIterator>
-    lazy_propagation_red_black_tree(InputIterator first, InputIterator last) {
+    lazy_propagation_red_black_tree(InputIterator first, InputIterator last)
             : root(nullptr) {
         for (; first != last; ++ first) {
             this->push_back(*first);
@@ -587,7 +581,13 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 8 "data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp"
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
+#line 8 "data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp"
 #include <cstdio>
 #include <utility>
 #include <vector>
@@ -603,7 +603,7 @@ int main() {
         a[i].first = a_i;
         a[i].second = 1;
     }
-    lazy_propagation_segment_red_black_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(ALL(a));
+    lazy_propagation_red_black_tree<plus_count_monoid<mint<MOD> >, linear_function_monoid<mint<MOD> >, linear_function_plus_count_action<mint<MOD> > > segtree(ALL(a));
     while (q --) {
         int t; scanf("%d", &t);
         if (t == 0) {
