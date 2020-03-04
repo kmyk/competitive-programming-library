@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: hack/fastio_printer.hpp
+# :heavy_check_mark: hack/fastio_printer.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#d78b6f30225cdc811adfe8d4e7c9fd34">hack</a>
 * <a href="{{ site.github.repository_url }}/blob/master/hack/fastio_printer.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 18:35:19+09:00
+    - Last commit date: 2020-03-04 16:58:19+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/hack/fastio_scanner_and_printer.yosupo.test.cpp.html">hack/fastio_scanner_and_printer.yosupo.test.cpp</a>
 
 
 ## Code
@@ -50,7 +55,7 @@ layout: default
 #include <unistd.h>
 
 class printer {
-    static constexpr int N = 65536;
+    static constexpr int N = 131072;
     static constexpr int K = 64;
     char buf[N];
     int i = 0;
@@ -118,7 +123,7 @@ public:
 #include <unistd.h>
 
 class printer {
-    static constexpr int N = 65536;
+    static constexpr int N = 131072;
     static constexpr int K = 64;
     char buf[N];
     int i = 0;

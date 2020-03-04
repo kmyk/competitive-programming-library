@@ -84,9 +84,8 @@ layout: default
 ### hack
 
 * :heavy_check_mark: <a href="library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :warning: <a href="library/hack/fastio_printer.hpp.html">hack/fastio_printer.hpp</a>
-* :warning: <a href="library/hack/fastio_scanner.hpp.html">hack/fastio_scanner.hpp</a>
-* :warning: <a href="library/hack/fastio_unlocked.hpp.html">hack/fastio_unlocked.hpp</a>
+* :heavy_check_mark: <a href="library/hack/fastio_printer.hpp.html">hack/fastio_printer.hpp</a>
+* :heavy_check_mark: <a href="library/hack/fastio_scanner.hpp.html">hack/fastio_scanner.hpp</a>
 * :heavy_check_mark: <a href="library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 
 
@@ -294,6 +293,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/tree_decomposition.aoj_2405.test.cpp.html">graph/tree_decomposition.aoj_2405.test.cpp</a>
 * :heavy_check_mark: <a href="verify/hack/fastio.yosupo.test.cpp.html">hack/fastio.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="verify/hack/fastio_scanner_and_printer.yosupo.test.cpp.html">hack/fastio_scanner_and_printer.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
