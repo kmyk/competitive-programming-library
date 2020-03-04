@@ -232,7 +232,7 @@ layout: default
 * :warning: <a href="library/old/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(old/sliding-window.inc.cpp)</small></a>
 * :warning: <a href="library/old/string-skip-list.inc.cpp.html">old/string-skip-list.inc.cpp</a>
 * :warning: <a href="library/old/subset.inc.cpp.html">old/subset.inc.cpp</a>
-* :warning: <a href="library/old/suffix-array.inc.cpp.html">suffix array <small>(old/suffix-array.inc.cpp)</small></a>
+* :warning: <a href="library/old/suffix-array.inc.cpp.html">old/suffix-array.inc.cpp</a>
 * :warning: <a href="library/old/ternary-search.inc.cpp.html">old/ternary-search.inc.cpp</a>
 * :warning: <a href="library/old/treap.inc.cpp.html">old/treap.inc.cpp</a>
 * :warning: <a href="library/old/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(old/tree-dp.inc.cpp)</small></a>
@@ -243,6 +243,14 @@ layout: default
 * :warning: <a href="library/old/utils.inc.cpp.html">reverse a digraph <small>(old/utils.inc.cpp)</small></a>
 * :warning: <a href="library/old/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(old/warshall-floyd.inc.cpp)</small></a>
 * :warning: <a href="library/old/xorshift.inc.cpp.html">old/xorshift.inc.cpp</a>
+
+
+<div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
+
+### string
+
+* :warning: <a href="library/string/longest_common_prefix.hpp.html">Longest Common Prefix / 最長共通接頭辞 ($O(N)$) <small>(string/longest_common_prefix.hpp)</small></a>
+* :heavy_check_mark: <a href="library/string/suffix_array.hpp.html">Suffix Array / 接尾辞配列 ($O(N (\log N)^2)$, Manber & Myers) <small>(string/suffix_array.hpp)</small></a>
 
 
 <div id="2b3583e6e17721c54496bd04e57a0c15"></div>
@@ -310,6 +318,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
 
