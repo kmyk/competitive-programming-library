@@ -27,6 +27,6 @@ mint<MOD> stirling_number_of_the_second_kind_table(int n, int k) {
     }
     if (memo[n][k]) return memo[n][k];
     return memo[n][k] =
-        stirling_number_of_the_second_kind<MOD>(n - 1, k - 1) +
-        stirling_number_of_the_second_kind<MOD>(n - 1, k) * k;
+        stirling_number_of_the_second_kind_table<MOD>(n - 1, k - 1) +
+        stirling_number_of_the_second_kind_table<MOD>(n - 1, k) * k;
 }

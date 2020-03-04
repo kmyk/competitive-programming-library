@@ -38,6 +38,7 @@ mint<MOD> twelvefold_lli(int n, int k) {
 /**
  * @brief labeled-N labeled-K surjective-f
  * @note the number of f for surjective f : N \twoheadrightarrow K
+ * @note O(NK) or O(N \log K)
  */
 template <int MOD>
 mint<MOD> twelvefold_lls(int n, int k) {
@@ -105,7 +106,7 @@ mint<MOD> twelvefold_lui(int n, int k) {
  */
 template <int MOD>
 mint<MOD> twelvefold_lus(int n, int k) {
-    return stirling_number_of_the_second_kind<MOD>(n, k);
+    return stirling_number_of_the_second_kind_direct<MOD>(n, k);
 }
 
 
