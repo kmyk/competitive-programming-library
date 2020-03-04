@@ -5,7 +5,7 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief Segment Tree / セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Segment Tree / セグメント木 (monoids, 完全二分木)
  * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */

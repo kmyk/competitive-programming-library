@@ -7,7 +7,7 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木)
+ * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木)
  * @docs data_structure/segment_tree_beats.md
  * @see https://codeforces.com/blog/entry/57319
  */
