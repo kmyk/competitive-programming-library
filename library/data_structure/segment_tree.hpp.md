@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small>
+# :heavy_check_mark: Segment Tree / セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/segment_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:38:32+09:00
+    - Last commit date: 2020-03-04 15:06:14+09:00
 
 
 
@@ -74,7 +74,7 @@ monoid $M = (M, \cdot, 1)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \
 #include "utils/macros.hpp"
 
 /**
- * @brief a segment tree / セグメント木
+ * @brief Segment Tree / セグメント木 (monoids, 配列上の完全二分木)
  * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
@@ -161,7 +161,7 @@ struct segment_tree {
 #line 6 "data_structure/segment_tree.hpp"
 
 /**
- * @brief a segment tree / セグメント木
+ * @brief Segment Tree / セグメント木 (monoids, 配列上の完全二分木)
  * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */

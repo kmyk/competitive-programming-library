@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 19:51:56+09:00
+    - Last commit date: 2020-03-04 15:06:14+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/vertex_add_subtree_sum">https://judge.yosupo.jp/problem/vertex_add_subtree_sum</a>
@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
@@ -140,7 +140,7 @@ void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, 
 #line 6 "data_structure/segment_tree.hpp"
 
 /**
- * @brief a segment tree / セグメント木
+ * @brief Segment Tree / セグメント木 (monoids, 配列上の完全二分木)
  * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */

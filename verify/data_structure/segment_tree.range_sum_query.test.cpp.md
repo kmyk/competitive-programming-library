@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree.range_sum_query.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:38:32+09:00
+    - Last commit date: 2020-03-04 15:06:14+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -91,7 +91,7 @@ int main() {
 #line 6 "data_structure/segment_tree.hpp"
 
 /**
- * @brief a segment tree / セグメント木
+ * @brief Segment Tree / セグメント木 (monoids, 配列上の完全二分木)
  * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */

@@ -40,11 +40,11 @@ layout: default
 
 * :heavy_check_mark: <a href="../data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :heavy_check_mark: <a href="../data_structure/lazy_propagation_segment_tree.hpp.html">a lazy propagation segment tree / 遅延伝播セグメント木 <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../data_structure/segment_tree_beats.hpp.html">a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum}) <small>(data_structure/segment_tree_beats.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/sliding_window_aggregation.hpp.html">Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
