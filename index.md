@@ -160,10 +160,8 @@ layout: default
 
 ### old
 
-* :warning: <a href="library/old/998244353.inc.cpp.html">old/998244353.inc.cpp</a>
 * :warning: <a href="library/old/a.inc.cpp.html">Andrew's Monotone Chain <small>(old/a.inc.cpp)</small></a>
 * :warning: <a href="library/old/aho-corasick.inc.cpp.html">old/aho-corasick.inc.cpp</a>
-* :warning: <a href="library/old/apply-permutation.inc.cpp.html">old/apply-permutation.inc.cpp</a>
 * :warning: <a href="library/old/bernoulli-number.inc.cpp.html">the Bernoulli number <small>(old/bernoulli-number.inc.cpp)</small></a>
 * :warning: <a href="library/old/binary-indexed-tree.inc.cpp.html">old/binary-indexed-tree.inc.cpp</a>
 * :warning: <a href="library/old/bipartite-graph.inc.cpp.html">old/bipartite-graph.inc.cpp</a>
@@ -171,7 +169,6 @@ layout: default
 * :warning: <a href="library/old/breadth-first-search.inc.cpp.html">compute the distances from root <small>(old/breadth-first-search.inc.cpp)</small></a>
 * :warning: <a href="library/old/centers.inc.cpp.html">get centers of a tree / 木の中心 <small>(old/centers.inc.cpp)</small></a>
 * :warning: <a href="library/old/centroid-decomposition.inc.cpp.html">get centroids of a graph / 重心分解 <small>(old/centroid-decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/old/choose.inc.cpp.html">old/choose.inc.cpp</a>
 * :warning: <a href="library/old/comparable-view.inc.cpp.html">compare substrings of a string with O(1) using suffix arrays <small>(old/comparable-view.inc.cpp)</small></a>
 * :warning: <a href="library/old/convex-hull-trick-with-monotonicity.inc.cpp.html">old/convex-hull-trick-with-monotonicity.inc.cpp</a>
 * :warning: <a href="library/old/convex-hull.inc.cpp.html">old/convex-hull.inc.cpp</a>
@@ -181,7 +178,6 @@ layout: default
 * :warning: <a href="library/old/digit-dp.inc.cpp.html">old/digit-dp.inc.cpp</a>
 * :warning: <a href="library/old/dijkstra.inc.cpp.html">old/dijkstra.inc.cpp</a>
 * :warning: <a href="library/old/dinic.inc.cpp.html">Dinic <small>(old/dinic.inc.cpp)</small></a>
-* :warning: <a href="library/old/discrete-log.inc.cpp.html">old/discrete-log.inc.cpp</a>
 * :warning: <a href="library/old/distributed-code-jam.inc.cpp.html">old/distributed-code-jam.inc.cpp</a>
 * :warning: <a href="library/old/dlopen.inc.cpp.html">old/dlopen.inc.cpp</a>
 * :warning: <a href="library/old/dominator-tree.inc.cpp.html">old/dominator-tree.inc.cpp</a>
@@ -193,7 +189,6 @@ layout: default
 * :warning: <a href="library/old/factoradic.inc.cpp.html">old/factoradic.inc.cpp</a>
 * :warning: <a href="library/old/factorial-embed.inc.cpp.html">a program to make the table <small>(old/factorial-embed.inc.cpp)</small></a>
 * :warning: <a href="library/old/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation <small>(old/fast-mobius-transformation.inc.cpp)</small></a>
-* :warning: <a href="library/old/fib.inc.cpp.html">old/fib.inc.cpp</a>
 * :warning: <a href="library/old/ford-fulkerson.inc.cpp.html">old/ford-fulkerson.inc.cpp</a>
 * :warning: <a href="library/old/graphviz.inc.cpp.html">old/graphviz.inc.cpp</a>
 * :warning: <a href="library/old/heavy_light_decomposition.inc.cpp.html">heavy light decomposition / 重軽分解 <small>(old/heavy_light_decomposition.inc.cpp)</small></a>
@@ -219,7 +214,6 @@ layout: default
 * :warning: <a href="library/old/point-int.inc.cpp.html">old/point-int.inc.cpp</a>
 * :warning: <a href="library/old/polya-enumeration.inc.cpp.html">old/polya-enumeration.inc.cpp</a>
 * :warning: <a href="library/old/popen2.inc.cpp.html">old/popen2.inc.cpp</a>
-* :warning: <a href="library/old/prefix.inc.cpp.html">old/prefix.inc.cpp</a>
 * :warning: <a href="library/old/primes-small.inc.cpp.html">enumerate primes in \[2, n) with O(n log log n) <small>(old/primes-small.inc.cpp)</small></a>
 * :warning: <a href="library/old/range-union-find-tree.inc.cpp.html">old/range-union-find-tree.inc.cpp</a>
 * :warning: <a href="library/old/rational.inc.cpp.html">old/rational.inc.cpp</a>
