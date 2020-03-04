@@ -32,6 +32,7 @@
 "graph/strongly_connected_components.yosupo.test.cpp": "2020-02-22 23:03:03 +0900",
 "graph/tree_decomposition.aoj_2405.test.cpp": "2020-02-22 23:03:03 +0900",
 "hack/fastio.yosupo.test.cpp": "2020-03-04 16:22:43 +0900",
+"hack/fastio_scanner_and_printer.yosupo.test.cpp": "2020-03-04 16:58:19 +0900",
 "modulus/formal_power_series.exp.test.cpp": "2020-02-22 23:03:03 +0900",
 "modulus/formal_power_series.inv.test.cpp": "2020-02-22 23:03:03 +0900",
 "modulus/formal_power_series.log.test.cpp": "2020-02-22 23:03:03 +0900",
