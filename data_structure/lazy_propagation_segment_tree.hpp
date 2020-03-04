@@ -6,7 +6,7 @@
 #include "utils/macros.hpp"
 
 /**
- * @brief a lazy propagation segment tree / 遅延伝播セグメント木
+ * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木)
  * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
