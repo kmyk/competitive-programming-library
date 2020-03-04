@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small>
+# :heavy_check_mark: Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-03-04 13:34:36+09:00
 
 
 
@@ -64,9 +64,8 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
+ * @brief Sparse Table (idempotent monoid)
+ * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
 template <class Semilattice>
@@ -123,9 +122,8 @@ struct sparse_table {
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
+ * @brief Sparse Table (idempotent monoid)
+ * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
 template <class Semilattice>

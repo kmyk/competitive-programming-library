@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/sparse_table.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-08 19:11:32+09:00
+    - Last commit date: 2020-03-04 13:34:36+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/staticrmq">https://judge.yosupo.jp/problem/staticrmq</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -97,9 +97,8 @@ int main() {
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
+ * @brief Sparse Table (idempotent monoid)
+ * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
 template <class Semilattice>

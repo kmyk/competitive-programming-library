@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+    - Last commit date: 2020-03-04 13:34:36+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/lca">https://judge.yosupo.jp/problem/lca</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
@@ -109,9 +109,8 @@ STACK_PIVOT_MAIN(moin)
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
+ * @brief Sparse Table (idempotent monoid)
+ * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
 template <class Semilattice>

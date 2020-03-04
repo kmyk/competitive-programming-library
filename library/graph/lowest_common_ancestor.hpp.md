@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lowest_common_ancestor.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+    - Last commit date: 2020-03-04 13:34:36+09:00
 
 
 * see: <a href="https://www.slideshare.net/yumainoue965/lca-and-rmq">https://www.slideshare.net/yumainoue965/lca-and-rmq</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../monoids/min_index.hpp.html">monoids/min_index.hpp</a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -144,9 +144,8 @@ public:
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
- * @brief a sparse table on a semilattice
- * @note a semilattice is a commutative idempotent semigroup
- * @note for convenience, it requires the unit
+ * @brief Sparse Table (idempotent monoid)
+ * @note the unit is required just for convenience
  * @note $O(N \log N)$ space
  */
 template <class Semilattice>

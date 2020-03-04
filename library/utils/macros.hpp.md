@@ -46,7 +46,7 @@ layout: default
 * :heavy_check_mark: <a href="../data_structure/segment_tree.hpp.html">a segment tree / セグメント木 <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/segment_tree_beats.hpp.html">a segment tree beats (range {chmin, chmax, add, update} + range {min, max, sum}) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/sliding_window_aggregation.hpp.html">Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
-* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">a sparse table on a semilattice <small>(data_structure/sparse_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
