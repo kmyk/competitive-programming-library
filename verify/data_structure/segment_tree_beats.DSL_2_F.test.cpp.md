@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.DSL_2_F.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 15:06:14+09:00
+    - Last commit date: 2020-03-04 20:34:24+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -104,7 +104,7 @@ int main() {
 #line 8 "data_structure/segment_tree_beats.hpp"
 
 /**
- * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木)
+ * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木)
  * @docs data_structure/segment_tree_beats.md
  * @see https://codeforces.com/blog/entry/57319
  */

@@ -46,14 +46,15 @@ layout: default
 ### data_structure
 
 * :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">Dual Segment Tree / 双対セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
+* :x: <a href="library/data_structure/lazy_propagation_segment_red_black_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_segment_red_black_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="library/data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small></a>
@@ -195,7 +196,6 @@ layout: default
 * :warning: <a href="library/old/iterate.inc.cpp.html">old/iterate.inc.cpp</a>
 * :warning: <a href="library/old/knapsack-problem-branch-and-bound.inc.cpp.html">old/knapsack-problem-branch-and-bound.inc.cpp</a>
 * :warning: <a href="library/old/knuth-morris-pratt.inc.cpp.html">Morris-Pratt algorithm <small>(old/knuth-morris-pratt.inc.cpp)</small></a>
-* :warning: <a href="library/old/lazy-propagation-red-black-tree.inc.cpp.html">old/lazy-propagation-red-black-tree.inc.cpp</a>
 * :warning: <a href="library/old/linear-weighted-sum.inc.cpp.html">old/linear-weighted-sum.inc.cpp</a>
 * :warning: <a href="library/old/longest-increasing-subsequence.inc.cpp.html">old/longest-increasing-subsequence.inc.cpp</a>
 * :warning: <a href="library/old/marathon.inc.cpp.html">old/marathon.inc.cpp</a>
@@ -263,6 +263,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/convex_hull_trick.line_add_get_min.test.cpp.html">data_structure/convex_hull_trick.line_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp.html">data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp</a>
+* :x: <a href="verify/data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_segment_red_black_tree.range_affine_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/li_chao_tree.segment_add_get_min.test.cpp.html">data_structure/li_chao_tree.segment_add_get_min.test.cpp</a>

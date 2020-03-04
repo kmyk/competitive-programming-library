@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Dual Segment Tree / 双対セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small>
+# :heavy_check_mark: Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/dual_segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 15:06:14+09:00
+    - Last commit date: 2020-03-04 20:34:24+09:00
 
 
 
@@ -60,7 +60,7 @@ monoid $F = (F, \circ, \mathrm{id})$ の要素の列 $f = (f_0, f_1, \dots, f _ 
 #include <vector>
 
 /**
- * @brief Dual Segment Tree / 双対セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木)
  * @docs data_structure/dual_segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
@@ -114,7 +114,7 @@ struct dual_segment_tree {
 #include <vector>
 
 /**
- * @brief Dual Segment Tree / 双対セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木)
  * @docs data_structure/dual_segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */

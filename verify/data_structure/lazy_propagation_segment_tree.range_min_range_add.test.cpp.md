@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 15:06:14+09:00
+    - Last commit date: 2020-03-04 20:34:24+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
@@ -96,7 +96,7 @@ int main() {
 #line 7 "data_structure/lazy_propagation_segment_tree.hpp"
 
 /**
- * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木)
  * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid

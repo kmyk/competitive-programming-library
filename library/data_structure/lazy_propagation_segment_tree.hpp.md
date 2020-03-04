@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small>
+# :heavy_check_mark: Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 15:06:14+09:00
+    - Last commit date: 2020-03-04 20:34:24+09:00
 
 
 
@@ -83,7 +83,7 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木)
  * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
@@ -208,7 +208,7 @@ struct lazy_propagation_segment_tree {
 #line 7 "data_structure/lazy_propagation_segment_tree.hpp"
 
 /**
- * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木)
  * @docs data_structure/lazy_propagation_segment_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid

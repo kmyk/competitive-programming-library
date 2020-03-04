@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small>
+# :heavy_check_mark: Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 15:06:14+09:00
+    - Last commit date: 2020-03-04 20:34:24+09:00
 
 
 * see: <a href="https://codeforces.com/blog/entry/57319">https://codeforces.com/blog/entry/57319</a>
@@ -83,7 +83,7 @@ layout: default
 #include "utils/macros.hpp"
 
 /**
- * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木)
+ * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木)
  * @docs data_structure/segment_tree_beats.md
  * @see https://codeforces.com/blog/entry/57319
  */
@@ -371,7 +371,7 @@ private:
 #line 8 "data_structure/segment_tree_beats.hpp"
 
 /**
- * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 配列上の完全二分木)
+ * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木)
  * @docs data_structure/segment_tree_beats.md
  * @see https://codeforces.com/blog/entry/57319
  */

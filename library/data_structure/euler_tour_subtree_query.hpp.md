@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/euler_tour_subtree_query.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 15:06:14+09:00
+    - Last commit date: 2020-03-04 20:34:24+09:00
 
 
 
@@ -47,7 +47,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 配列上の完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
+* :heavy_check_mark: <a href="segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
 * :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
@@ -156,7 +156,7 @@ void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, 
 #line 6 "data_structure/segment_tree.hpp"
 
 /**
- * @brief Segment Tree / セグメント木 (monoids, 配列上の完全二分木)
+ * @brief Segment Tree / セグメント木 (monoids, 完全二分木)
  * @docs data_structure/segment_tree.md
  * @tparam Monoid (commutativity is not required)
  */
