@@ -16,7 +16,7 @@ int main() {
     }
 
     // construct the sparse table
-    sparse_table<min_monoid<int> > st(a);
+    sparse_table<min_monoid<int> > st(ALL(a));
 
     // answer to queries
     while (q --) {

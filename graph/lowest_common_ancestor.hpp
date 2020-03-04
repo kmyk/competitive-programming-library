@@ -25,7 +25,7 @@ struct lowest_common_ancestor {
         std::vector<std::pair<int, int> > tour;
         index.assign(g.size(), -1);
         dfs(root, -1, 0, g, tour);
-        table = sparse_table<min_index_monoid<int> >(tour);
+        table = sparse_table<min_index_monoid<int> >(ALL(tour));
     }
 private:
     /**
