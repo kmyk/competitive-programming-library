@@ -3,7 +3,7 @@
 #include "modulus/choose.hpp"
 #include "modulus/permute.hpp"
 #include "modulus/multichoose.hpp"
-#include "modulus/stirling_number_of_the_second_kind.hpp"
+#include "modulus/stirling_number_of_the_second_kind_direct.hpp"
 #include "modulus/bell_number.hpp"
 
 /**
@@ -38,11 +38,10 @@ mint<MOD> twelvefold_lli(int n, int k) {
 /**
  * @brief labeled-N labeled-K surjective-f
  * @note the number of f for surjective f : N \twoheadrightarrow K
- * @note O(NK) or O(N \log K)
  */
 template <int MOD>
 mint<MOD> twelvefold_lls(int n, int k) {
-    return stirling_number_of_the_second_kind<MOD>(n, k) * fact<MOD>(k);
+    return stirling_number_of_the_second_kind_direct<MOD>(n, k) * fact<MOD>(k);
 }
 
 

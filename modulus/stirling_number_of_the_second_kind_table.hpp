@@ -3,19 +3,16 @@
 #include <vector>
 #include "utils/macros.hpp"
 #include "modulus/mint.hpp"
-#include "modulus/factorial.hpp"
-#include "modulus/choose.hpp"
 
 /**
- * @brief the Stirling number of the second kind
+ * @brief the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$)
  * @description the number of ways of partitioning a set of n elements into k nonempty sets
  * @see http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html
  * @see http://oeis.org/A008277
  * @see https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0
- * @note $O(NK)$, memoized
  */
 template <int MOD>
-mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
+mint<MOD> stirling_number_of_the_second_kind_table(int n, int k) {
     assert (0 <= n and 0 <= k);
     if (n  < k) return 0;
     if (n == k) return 1;
@@ -32,18 +29,4 @@ mint<MOD> stirling_number_of_the_second_kind(int n, int k) {
     return memo[n][k] =
         stirling_number_of_the_second_kind<MOD>(n - 1, k - 1) +
         stirling_number_of_the_second_kind<MOD>(n - 1, k) * k;
-}
-
-/**
- * @note O(K \log N)
- */
-template <int MOD>
-mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
-    assert (0 <= n and 0 <= k);
-    mint<MOD> acc = 0;
-    REP3 (i, 1, k + 1) {
-        int parity = ((k - i) % 2 == 0 ? +1 : -1);
-        acc += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;
-    }
-    return acc * inv_fact<MOD>(k);
 }
