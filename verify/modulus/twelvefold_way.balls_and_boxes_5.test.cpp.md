@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+# :heavy_check_mark: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_5.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 12:42:08+09:00
+    - Last commit date: 2020-03-04 12:57:27+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E</a>
@@ -38,17 +38,17 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/modulus/bell_number.hpp.html">the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small></a>
-* :x: <a href="../../library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/bell_number.hpp.html">the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :x: <a href="../../library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
-* :x: <a href="../../library/modulus/permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
-* :x: <a href="../../library/modulus/stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
-* :x: <a href="../../library/modulus/stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
-* :x: <a href="../../library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -267,8 +267,8 @@ mint<MOD> stirling_number_of_the_second_kind_table(int n, int k) {
     }
     if (memo[n][k]) return memo[n][k];
     return memo[n][k] =
-        stirling_number_of_the_second_kind<MOD>(n - 1, k - 1) +
-        stirling_number_of_the_second_kind<MOD>(n - 1, k) * k;
+        stirling_number_of_the_second_kind_table<MOD>(n - 1, k - 1) +
+        stirling_number_of_the_second_kind_table<MOD>(n - 1, k) * k;
 }
 #line 5 "modulus/bell_number.hpp"
 
@@ -333,6 +333,7 @@ mint<MOD> twelvefold_lli(int n, int k) {
 /**
  * @brief labeled-N labeled-K surjective-f
  * @note the number of f for surjective f : N \twoheadrightarrow K
+ * @note O(NK) or O(N \log K)
  */
 template <int MOD>
 mint<MOD> twelvefold_lls(int n, int k) {
@@ -400,7 +401,7 @@ mint<MOD> twelvefold_lui(int n, int k) {
  */
 template <int MOD>
 mint<MOD> twelvefold_lus(int n, int k) {
-    return stirling_number_of_the_second_kind<MOD>(n, k);
+    return stirling_number_of_the_second_kind_direct<MOD>(n, k);
 }
 
 
