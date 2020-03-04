@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 20:48:38+09:00
+    - Last commit date: 2020-03-04 20:56:55+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_affine_range_sum">https://judge.yosupo.jp/problem/range_affine_range_sum</a>
@@ -108,6 +108,7 @@ int main() {
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
+ * @docs data_structure/lazy_propagation_red_black_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X

@@ -31,9 +31,18 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_red_black_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 20:48:38+09:00
+    - Last commit date: 2020-03-04 20:56:55+09:00
 
 
+
+
+## Operations
+
+完全二分木上の遅延伝播セグメント木でできることに加え、$O(\log N)$ で次ができる:
+
+-   $\mathtt{insert}(i, b)$: 列の $i$ 番目の要素の前に要素 $b$ を挿入する。
+-   $\mathtt{erase}(i)$: 列の $i$ 番目の要素を削除する。
+-   $\mathtt{reverse}(l, r)$: 列の $l, l+1, \dots, r-1$ 番目の要素を反転する。つまり $(a_0, a_1, \dots, a _ {l-1}, a_l, a _ {l+1}, \dots, a _ {r-1}, a_r, a _ {r + 1}, \dots, a _ {n - 1}) \gets (a_0, a_1, \dots, a _ {l-1}, a _ {r-1}, a _ {r-2}, \dots, a_l, a_r, a _ {r + 1}, \dots, a _ {n - 1})$ と更新する。
 
 
 ## Verified with
@@ -55,6 +64,7 @@ layout: default
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
+ * @docs data_structure/lazy_propagation_red_black_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X
@@ -426,6 +436,7 @@ public:
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木)
+ * @docs data_structure/lazy_propagation_red_black_tree.md
  * @tparam MonoidX is a monoid
  * @tparam MonoidF is a monoid
  * @tparam Action is a function phi : F * X -> X where the partial applied phi(f, -) : X -> X is a homomorphism on X
