@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT number/matrix_template.hpp
+# :warning: number/matrix_template.hpp
 
 <a href="../../index.html">Back to top page</a>
 

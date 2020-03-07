@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED modulus/modinv.hpp
+# :heavy_check_mark: modulus/modinv.hpp
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/distributed-code-jam.inc.cpp
+# :warning: old/distributed-code-jam.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

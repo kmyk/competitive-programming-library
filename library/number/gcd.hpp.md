@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT number/gcd.hpp
+# :warning: number/gcd.hpp
 
 <a href="../../index.html">Back to top page</a>
 

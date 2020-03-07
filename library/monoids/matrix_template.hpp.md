@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT monoids/matrix_template.hpp
+# :warning: monoids/matrix_template.hpp
 
 <a href="../../index.html">Back to top page</a>
 

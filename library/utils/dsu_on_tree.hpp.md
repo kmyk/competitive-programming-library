@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
+# :heavy_check_mark: DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

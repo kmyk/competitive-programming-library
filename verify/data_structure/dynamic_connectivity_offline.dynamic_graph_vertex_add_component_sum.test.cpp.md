@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+# :heavy_check_mark: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-08 03:44:30+09:00
+    - Last commit date: 2020-03-08 04:11:51+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum">https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum</a>
@@ -262,6 +262,7 @@ struct reporting_segment_tree {
 
 /**
  * @brief Dynamic Connectivity (offline, commutative monoids)
+ * @docs data_structure/dynamic_connectivity_offline.md
  */
 template <class CommutativeMonoid>
 class dynamic_connectivity_offline {

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small>
+# :heavy_check_mark: Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

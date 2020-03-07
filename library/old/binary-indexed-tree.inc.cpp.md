@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/binary-indexed-tree.inc.cpp
+# :warning: old/binary-indexed-tree.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

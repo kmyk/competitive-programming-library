@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small>
+# :heavy_check_mark: minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

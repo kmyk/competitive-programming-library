@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED a binary search / 二分探索 <small>(utils/binary_search.hpp)</small>
+# :heavy_check_mark: a binary search / 二分探索 <small>(utils/binary_search.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

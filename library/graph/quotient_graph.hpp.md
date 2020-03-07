@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED graph/quotient_graph.hpp
+# :heavy_check_mark: graph/quotient_graph.hpp
 
 <a href="../../index.html">Back to top page</a>
 

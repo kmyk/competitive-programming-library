@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT enumerate primes in \[2, n) with O(n log log n) <small>(old/primes-small.inc.cpp)</small>
+# :warning: enumerate primes in \[2, n) with O(n log log n) <small>(old/primes-small.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

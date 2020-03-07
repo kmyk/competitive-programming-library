@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED data_structure/wavelet_matrix.rectangle_sum.test.cpp
+# :heavy_check_mark: data_structure/wavelet_matrix.rectangle_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

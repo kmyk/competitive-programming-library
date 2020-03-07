@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/inversion-number.inc.cpp
+# :warning: old/inversion-number.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

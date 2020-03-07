@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small>
+# :heavy_check_mark: twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

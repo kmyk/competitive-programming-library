@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT minimum-cost flow with primal-dual method <small>(old/minimum-cost-flow.inc.cpp)</small>
+# :warning: minimum-cost flow with primal-dual method <small>(old/minimum-cost-flow.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT get the diameter of a tree / 木の直径 <small>(old/diameter.inc.cpp)</small>
+# :warning: get the diameter of a tree / 木の直径 <small>(old/diameter.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT compute the distances from root <small>(old/breadth-first-search.inc.cpp)</small>
+# :warning: compute the distances from root <small>(old/breadth-first-search.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

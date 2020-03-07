@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED 木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small>
+# :heavy_check_mark: 木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT monoids/left_action.hpp
+# :warning: monoids/left_action.hpp
 
 <a href="../../index.html">Back to top page</a>
 

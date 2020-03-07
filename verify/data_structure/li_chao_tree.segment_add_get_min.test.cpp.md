@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED data_structure/li_chao_tree.segment_add_get_min.test.cpp
+# :heavy_check_mark: data_structure/li_chao_tree.segment_add_get_min.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

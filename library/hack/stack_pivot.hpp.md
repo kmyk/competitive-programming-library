@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED hack/stack_pivot.hpp
+# :heavy_check_mark: hack/stack_pivot.hpp
 
 <a href="../../index.html">Back to top page</a>
 

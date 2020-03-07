@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED utils/macros.hpp
+# :heavy_check_mark: utils/macros.hpp
 
 <a href="../../index.html">Back to top page</a>
 

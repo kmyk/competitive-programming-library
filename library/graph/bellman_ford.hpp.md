@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small>
+# :heavy_check_mark: Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

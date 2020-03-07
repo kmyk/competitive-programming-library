@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED graph/tree_decomposition.aoj_2405.test.cpp
+# :heavy_check_mark: graph/tree_decomposition.aoj_2405.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

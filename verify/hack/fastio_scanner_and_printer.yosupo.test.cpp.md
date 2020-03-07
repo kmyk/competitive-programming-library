@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED hack/fastio_scanner_and_printer.yosupo.test.cpp
+# :heavy_check_mark: hack/fastio_scanner_and_printer.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

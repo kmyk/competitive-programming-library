@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small>
+# :warning: the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

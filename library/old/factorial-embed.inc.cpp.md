@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT a program to make the table <small>(old/factorial-embed.inc.cpp)</small>
+# :warning: a program to make the table <small>(old/factorial-embed.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED number/primes.aoj.test.cpp
+# :heavy_check_mark: number/primes.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

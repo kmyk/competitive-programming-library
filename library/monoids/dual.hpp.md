@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED monoids/dual.hpp
+# :heavy_check_mark: monoids/dual.hpp
 
 <a href="../../index.html">Back to top page</a>
 

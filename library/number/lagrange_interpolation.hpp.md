@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small>
+# :warning: Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

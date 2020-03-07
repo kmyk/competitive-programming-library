@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/ford-fulkerson.inc.cpp
+# :warning: old/ford-fulkerson.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

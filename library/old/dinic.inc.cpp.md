@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT Dinic <small>(old/dinic.inc.cpp)</small>
+# :warning: Dinic <small>(old/dinic.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

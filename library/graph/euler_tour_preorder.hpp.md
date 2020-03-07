@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small>
+# :heavy_check_mark: Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT get centers of a tree / 木の中心 <small>(old/centers.inc.cpp)</small>
+# :warning: get centers of a tree / 木の中心 <small>(old/centers.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

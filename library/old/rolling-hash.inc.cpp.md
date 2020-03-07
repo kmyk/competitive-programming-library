@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT a rolling hash <small>(old/rolling-hash.inc.cpp)</small>
+# :warning: a rolling hash <small>(old/rolling-hash.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

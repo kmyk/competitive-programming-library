@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/dice.inc.cpp
+# :warning: old/dice.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

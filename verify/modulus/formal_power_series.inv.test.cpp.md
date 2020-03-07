@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED modulus/formal_power_series.inv.test.cpp
+# :heavy_check_mark: modulus/formal_power_series.inv.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

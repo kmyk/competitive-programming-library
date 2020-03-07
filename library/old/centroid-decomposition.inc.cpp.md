@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT get centroids of a graph / 重心分解 <small>(old/centroid-decomposition.inc.cpp)</small>
+# :warning: get centroids of a graph / 重心分解 <small>(old/centroid-decomposition.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

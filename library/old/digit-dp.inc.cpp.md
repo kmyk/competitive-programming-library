@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/digit-dp.inc.cpp
+# :warning: old/digit-dp.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

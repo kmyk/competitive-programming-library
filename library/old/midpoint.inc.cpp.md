@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT a structure to make a midpoint for given two points <small>(old/midpoint.inc.cpp)</small>
+# :warning: a structure to make a midpoint for given two points <small>(old/midpoint.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

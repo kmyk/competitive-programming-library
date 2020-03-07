@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+# :heavy_check_mark: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

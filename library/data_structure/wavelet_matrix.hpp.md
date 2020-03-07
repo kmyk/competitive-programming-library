@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small>
+# :heavy_check_mark: Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

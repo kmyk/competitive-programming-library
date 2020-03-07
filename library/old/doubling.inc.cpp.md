@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT the doubling technique <small>(old/doubling.inc.cpp)</small>
+# :warning: the doubling technique <small>(old/doubling.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

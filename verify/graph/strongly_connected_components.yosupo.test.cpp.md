@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED graph/strongly_connected_components.yosupo.test.cpp
+# :heavy_check_mark: graph/strongly_connected_components.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

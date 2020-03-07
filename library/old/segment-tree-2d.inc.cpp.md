@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT old/segment-tree-2d.inc.cpp
+# :warning: old/segment-tree-2d.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

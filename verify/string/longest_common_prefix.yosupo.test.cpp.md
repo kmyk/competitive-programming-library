@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED string/longest_common_prefix.yosupo.test.cpp
+# :heavy_check_mark: string/longest_common_prefix.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

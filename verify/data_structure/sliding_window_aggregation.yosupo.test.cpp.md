@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED data_structure/sliding_window_aggregation.yosupo.test.cpp
+# :heavy_check_mark: data_structure/sliding_window_aggregation.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.DEFAULT heavy light decomposition / 重軽分解 <small>(old/heavy_light_decomposition.inc.cpp)</small>
+# :warning: heavy light decomposition / 重軽分解 <small>(old/heavy_light_decomposition.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

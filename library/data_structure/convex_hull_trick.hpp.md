@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small>
+# :heavy_check_mark: Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

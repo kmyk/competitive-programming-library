@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# VerificationStatus.VERIFIED utils/coordinate_compression.hpp
+# :heavy_check_mark: utils/coordinate_compression.hpp
 
 <a href="../../index.html">Back to top page</a>
 
