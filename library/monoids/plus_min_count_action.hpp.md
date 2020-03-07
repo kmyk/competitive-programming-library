@@ -81,7 +81,7 @@ struct plus_monoid {
 };
 #line 2 "monoids/min_count.hpp"
 #include <limits>
-#include <utility>
+#line 4 "monoids/min_count.hpp"
 
 template <class T>
 struct min_count_monoid {

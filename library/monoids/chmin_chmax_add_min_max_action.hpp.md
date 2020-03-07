@@ -81,10 +81,7 @@ struct chmin_chmax_add_min_max_action {
 #include <cassert>
 #include <numeric>
 #include <utility>
-#line 2 "monoids/chmin_chmax_add.hpp"
-#include <algorithm>
-#include <numeric>
-#include <utility>
+#line 5 "monoids/chmin_chmax_add.hpp"
 
 /**
  * @note represents the monoid $M = (\lbrace \lambda x. \min(a, \max(b, c + x)) \mid a, b, c \rbrace, \circ, \mathrm{id})$
@@ -128,10 +125,7 @@ struct chmin_chmax_add_monoid {
         return (value_type) { MAX, MIN, value };
     }
 };
-#line 2 "monoids/min_max.hpp"
-#include <algorithm>
-#include <numeric>
-#include <utility>
+#line 5 "monoids/min_max.hpp"
 
 template <class T>
 struct min_max_monoid {

@@ -140,11 +140,7 @@ public:
         return x;
     }
 };
-#line 2 "hack/fastio_printer.hpp"
-#include <algorithm>
-#include <cstdlib>
-#include <cstring>
-#include <string>
+#line 6 "hack/fastio_printer.hpp"
 #include <type_traits>
 #include <unistd.h>
 

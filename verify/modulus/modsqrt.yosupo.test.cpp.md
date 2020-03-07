@@ -75,8 +75,7 @@ int main() {
 #line 2 "modulus/modsqrt.hpp"
 #include <cassert>
 #include <cstdint>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -132,8 +131,7 @@ int modsqrt(int a, int p) {
     assert (x * x % p == a);
     return x;
 }
-#line 3 "modulus/modsqrt.yosupo.test.cpp"
-#include <cassert>
+#line 4 "modulus/modsqrt.yosupo.test.cpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

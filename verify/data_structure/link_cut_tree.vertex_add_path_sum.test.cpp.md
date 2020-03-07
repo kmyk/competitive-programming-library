@@ -492,7 +492,7 @@ inline void out(Integer n) {
 }
 #line 6 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
 #include <stack>
-#include <vector>
+#line 8 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp"
 using namespace std;
 
 int main() {

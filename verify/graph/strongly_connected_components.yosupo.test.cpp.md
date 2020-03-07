@@ -103,8 +103,6 @@ int main() {
 #include <functional>
 #include <utility>
 #include <vector>
-#line 2 "graph/transpose_graph.hpp"
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -168,8 +166,6 @@ std::pair<int, std::vector<int> > decompose_to_strongly_connected_components(con
 std::pair<int, std::vector<int> > decompose_to_strongly_connected_components(const std::vector<std::vector<int> > & g) {
     return decompose_to_strongly_connected_components(g, make_transpose_graph(g));
 }
-#line 2 "graph/quotient_graph.hpp"
-#include <vector>
 #line 5 "graph/quotient_graph.hpp"
 
 /**
@@ -195,8 +191,6 @@ std::vector<std::vector<int> > make_quotient_graph(const std::vector<std::vector
 }
 #line 2 "graph/topological_sort.hpp"
 #include <algorithm>
-#include <functional>
-#include <vector>
 #line 6 "graph/topological_sort.hpp"
 
 /**
@@ -230,7 +224,7 @@ std::vector<int> topological_sort(const std::vector<std::vector<int> > & g) {
 #line 6 "graph/strongly_connected_components.yosupo.test.cpp"
 #include <cassert>
 #include <cstdio>
-#include <vector>
+#line 9 "graph/strongly_connected_components.yosupo.test.cpp"
 using namespace std;
 
 int main() {

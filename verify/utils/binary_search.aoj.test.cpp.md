@@ -126,8 +126,7 @@ int64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate p) {
 }
 #line 3 "utils/binary_search.aoj.test.cpp"
 
-#include <cassert>
-#include <cstdint>
+#line 6 "utils/binary_search.aoj.test.cpp"
 #include <iostream>
 #include <vector>
 #line 2 "utils/macros.hpp"

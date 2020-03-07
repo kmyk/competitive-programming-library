@@ -480,8 +480,7 @@ struct plus_count_monoid {
         return std::make_pair(a, 1);
     }
 };
-#line 2 "monoids/linear_function.hpp"
-#include <utility>
+#line 3 "monoids/linear_function.hpp"
 
 template <class CommutativeRing>
 struct linear_function_monoid {
@@ -496,8 +495,6 @@ struct linear_function_monoid {
         return std::make_pair(fst, snd);
     }
 };
-#line 2 "monoids/linear_function_plus_count_action.hpp"
-#include <utility>
 #line 4 "monoids/linear_function_plus_count_action.hpp"
 
 /**
@@ -509,12 +506,9 @@ struct linear_function_plus_count_action {
         return std::make_pair(f.first * x.first + f.second * x.second, x.second);
     }
 };
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -526,9 +520,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -590,8 +582,7 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 #define ALL(x) std::begin(x), std::end(x)
 #line 8 "data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp"
 #include <cstdio>
-#include <utility>
-#include <vector>
+#line 11 "data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp"
 using namespace std;
 
 constexpr int MOD = 998244353;

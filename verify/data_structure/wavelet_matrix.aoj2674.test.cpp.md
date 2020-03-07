@@ -102,9 +102,6 @@ int main() {
 #include <vector>
 #line 2 "data_structure/fully_indexable_dictionary.hpp"
 #include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))

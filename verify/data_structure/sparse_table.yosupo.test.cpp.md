@@ -151,7 +151,7 @@ struct min_monoid {
 };
 #line 6 "data_structure/sparse_table.yosupo.test.cpp"
 #include <cstdio>
-#include <vector>
+#line 8 "data_structure/sparse_table.yosupo.test.cpp"
 using namespace std;
 
 int main() {

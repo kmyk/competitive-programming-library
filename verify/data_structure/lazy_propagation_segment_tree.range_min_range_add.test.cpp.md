@@ -200,8 +200,7 @@ struct lazy_propagation_segment_tree {
         return mon_x.mult(lacc, racc);
     }
 };
-#line 2 "monoids/min.hpp"
-#include <algorithm>
+#line 3 "monoids/min.hpp"
 #include <limits>
 
 template <class T>

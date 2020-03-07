@@ -182,10 +182,9 @@ struct dual_monoid {
 };
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -197,9 +196,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);

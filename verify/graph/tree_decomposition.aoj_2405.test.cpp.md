@@ -172,7 +172,7 @@ int main() {
 #line 2 "graph/tree_decomposition.hpp"
 #include <algorithm>
 #include <cassert>
-#include <cstdio>
+#line 5 "graph/tree_decomposition.hpp"
 #include <cstdint>
 #include <functional>
 #include <set>
@@ -365,12 +365,9 @@ inline std::vector<std::tuple<nice_tree_decomposition_tag, int, int> > get_nice_
     }
     return nice;
 }
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -382,9 +379,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);

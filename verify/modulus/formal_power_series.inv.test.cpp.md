@@ -93,12 +93,9 @@ int main() {
 #include <initializer_list>
 #include <tuple>
 #include <vector>
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -110,9 +107,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -166,12 +161,6 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "modulus/number_theoretic_transformation.hpp"
-#include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <tuple>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -380,7 +369,6 @@ struct formal_power_series {
 #define PROBLEM "https://judge.yosupo.jp/problem/inv_of_formal_power_series"
 
 #include <cstdio>
-#include <vector>
 #line 7 "modulus/formal_power_series.inv.test.cpp"
 using namespace std;
 

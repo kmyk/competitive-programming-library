@@ -128,7 +128,7 @@ public:
 #define ALL(x) std::begin(x), std::end(x)
 #line 2 "graph/euler_tour_preorder.hpp"
 #include <functional>
-#include <vector>
+#line 4 "graph/euler_tour_preorder.hpp"
 
 /**
  * @brief Euler Tour (preorder)
@@ -151,8 +151,6 @@ void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, 
 }
 #line 2 "data_structure/segment_tree.hpp"
 #include <algorithm>
-#include <cassert>
-#include <vector>
 #line 6 "data_structure/segment_tree.hpp"
 
 /**

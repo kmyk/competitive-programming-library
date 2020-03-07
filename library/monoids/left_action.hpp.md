@@ -68,8 +68,7 @@ struct left_action {
 ```cpp
 #line 2 "monoids/left_action.hpp"
 #include <utility>
-#line 2 "monoids/left.hpp"
-#include <utility>
+#line 3 "monoids/left.hpp"
 
 template <class T>
 struct left_monoid {

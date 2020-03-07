@@ -74,8 +74,7 @@ struct linear_function_plus_count_action {
 ```cpp
 #line 2 "monoids/linear_function_plus_count_action.hpp"
 #include <utility>
-#line 2 "monoids/linear_function.hpp"
-#include <utility>
+#line 3 "monoids/linear_function.hpp"
 
 template <class CommutativeRing>
 struct linear_function_monoid {

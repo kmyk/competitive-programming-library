@@ -131,12 +131,9 @@ typename std::enable_if<not is_proth_prime<MOD>::value, std::vector<mint<MOD> > 
 #include <cstdint>
 #include <tuple>
 #include <vector>
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -148,9 +145,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -210,12 +205,6 @@ template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD>
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
-#line 2 "modulus/number_theoretic_transformation.hpp"
-#include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <tuple>
-#include <vector>
 #line 9 "modulus/number_theoretic_transformation.hpp"
 
 template <int32_t PRIME> struct proth_prime {};

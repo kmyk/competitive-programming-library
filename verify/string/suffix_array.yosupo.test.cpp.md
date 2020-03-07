@@ -88,8 +88,7 @@ int main() {
 #include <vector>
 #line 2 "string/suffix_array.hpp"
 #include <algorithm>
-#include <string>
-#include <vector>
+#line 5 "string/suffix_array.hpp"
 #include <utility>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
@@ -132,7 +131,7 @@ void compute_suffix_array(std::string const & s, std::vector<int> & sa, std::vec
 #line 2 "hack/fastio.hpp"
 #include <cstdint>
 #include <cstdio>
-#include <string>
+#line 5 "hack/fastio.hpp"
 #include <type_traits>
 
 template <class Char, std::enable_if_t<std::is_same_v<Char, char>, int> = 0>

@@ -96,9 +96,6 @@ int main() {
 #include <vector>
 #line 2 "data_structure/fully_indexable_dictionary.hpp"
 #include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -375,8 +372,7 @@ struct wavelet_matrix {
         range_frequency_callback(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b, callback);
     }
 };
-#line 2 "hack/fastio.hpp"
-#include <cstdint>
+#line 3 "hack/fastio.hpp"
 #include <cstdio>
 #include <string>
 #include <type_traits>
@@ -411,8 +407,7 @@ inline void out(Integer n) {
     do { s[i ++] = n % 10; n /= 10; } while (n);
     while (i) putchar_unlocked(s[-- i] + '0');
 }
-#line 5 "data_structure/wavelet_matrix.range_kth_smallest.test.cpp"
-#include <cstdint>
+#line 6 "data_structure/wavelet_matrix.range_kth_smallest.test.cpp"
 using namespace std;
 
 int main() {

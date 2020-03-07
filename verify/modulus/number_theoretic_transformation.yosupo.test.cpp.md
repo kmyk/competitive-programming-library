@@ -96,12 +96,9 @@ int main() {
 #include <cstdint>
 #include <tuple>
 #include <vector>
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -113,9 +110,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -282,9 +277,7 @@ typename std::enable_if<is_proth_prime<PRIME>::value, std::vector<mint<PRIME> > 
 #line 2 "modulus/number_theoretic_transformation.yosupo.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
 
-#include <vector>
-#line 2 "hack/fastio.hpp"
-#include <cstdint>
+#line 3 "hack/fastio.hpp"
 #include <cstdio>
 #include <string>
 #include <type_traits>

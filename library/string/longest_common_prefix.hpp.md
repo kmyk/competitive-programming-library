@@ -113,10 +113,7 @@ public:
 #include <algorithm>
 #include <string>
 #include <vector>
-#line 2 "string/suffix_array.hpp"
-#include <algorithm>
-#include <string>
-#include <vector>
+#line 5 "string/suffix_array.hpp"
 #include <utility>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
@@ -158,7 +155,6 @@ void compute_suffix_array(std::string const & s, std::vector<int> & sa, std::vec
 }
 #line 2 "data_structure/sparse_table.hpp"
 #include <cassert>
-#include <vector>
 #line 5 "data_structure/sparse_table.hpp"
 
 /**
@@ -202,8 +198,7 @@ struct sparse_table {
         return mon.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
-#line 2 "monoids/min.hpp"
-#include <algorithm>
+#line 3 "monoids/min.hpp"
 #include <limits>
 
 template <class T>

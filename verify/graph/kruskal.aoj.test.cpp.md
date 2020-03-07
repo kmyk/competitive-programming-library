@@ -125,7 +125,7 @@ struct union_find_tree {
 #include <algorithm>
 #include <numeric>
 #include <tuple>
-#include <vector>
+#line 8 "graph/kruskal.hpp"
 
 /**
  * @brief minimum spanning tree / 最小全域木 (Kruskal's method)
@@ -156,7 +156,7 @@ std::vector<int> compute_minimum_spanning_tree(int n, std::vector<std::tuple<int
 
 #line 5 "graph/kruskal.aoj.test.cpp"
 #include <cstdio>
-#include <vector>
+#line 7 "graph/kruskal.aoj.test.cpp"
 using namespace std;
 
 int main() {

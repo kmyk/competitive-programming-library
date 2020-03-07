@@ -128,7 +128,7 @@ struct union_find_tree {
 #include <algorithm>
 #include <numeric>
 #include <tuple>
-#include <vector>
+#line 8 "graph/kruskal.hpp"
 
 /**
  * @brief minimum spanning tree / 最小全域木 (Kruskal's method)

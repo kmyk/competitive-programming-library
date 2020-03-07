@@ -183,8 +183,7 @@ struct prepared_primes {
         return phi;
     }
 };
-#line 3 "number/primes.aoj.test.cpp"
-#include <cassert>
+#line 4 "number/primes.aoj.test.cpp"
 #include <cstdio>
 
 int main() {

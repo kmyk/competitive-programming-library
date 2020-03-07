@@ -81,9 +81,7 @@ int main() {
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
 #include <cassert>
-#include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -95,9 +93,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -151,8 +147,6 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "modulus/choose.hpp"
-#include <cassert>
 #line 2 "modulus/factorial.hpp"
 #include <vector>
 #line 4 "modulus/factorial.hpp"
@@ -189,8 +183,6 @@ mint<MOD> choose(int n, int r) {
     assert (0 <= r and r <= n);
     return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
 }
-#line 2 "modulus/permute.hpp"
-#include <cassert>
 #line 5 "modulus/permute.hpp"
 
 /**
@@ -201,8 +193,6 @@ mint<MOD> permute(int n, int r) {
     assert (0 <= r and r <= n);
     return fact<MOD>(n) * inv_fact<MOD>(n - r);
 }
-#line 2 "modulus/multichoose.hpp"
-#include <cassert>
 #line 5 "modulus/multichoose.hpp"
 
 /**
@@ -214,9 +204,7 @@ mint<MOD> multichoose(int n, int r) {
     if (n == 0 and r == 0) return 1;
     return choose<MOD>(n + r - 1, r);
 }
-#line 2 "modulus/stirling_number_of_the_second_kind_direct.hpp"
-#include <cassert>
-#include <vector>
+#line 4 "modulus/stirling_number_of_the_second_kind_direct.hpp"
 #include <map>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
@@ -239,9 +227,6 @@ mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
     }
     return acc * inv_fact<MOD>(k);
 }
-#line 2 "modulus/stirling_number_of_the_second_kind_table.hpp"
-#include <cassert>
-#include <vector>
 #line 6 "modulus/stirling_number_of_the_second_kind_table.hpp"
 
 /**

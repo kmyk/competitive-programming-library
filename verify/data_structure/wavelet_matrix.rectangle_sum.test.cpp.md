@@ -147,9 +147,6 @@ int main() {
 #include <vector>
 #line 2 "data_structure/fully_indexable_dictionary.hpp"
 #include <algorithm>
-#include <cassert>
-#include <cstdint>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -426,9 +423,6 @@ struct wavelet_matrix {
         range_frequency_callback(k - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b, callback);
     }
 };
-#line 2 "utils/coordinate_compression.hpp"
-#include <algorithm>
-#include <vector>
 #line 5 "utils/coordinate_compression.hpp"
 
 template <class T>
@@ -452,8 +446,7 @@ struct coordinate_compression {
         return std::lower_bound(ALL(data), value) - data.begin();
     }
 };
-#line 5 "data_structure/wavelet_matrix.rectangle_sum.test.cpp"
-#include <cstdint>
+#line 6 "data_structure/wavelet_matrix.rectangle_sum.test.cpp"
 #include <cstdio>
 #include <numeric>
 using namespace std;

@@ -137,7 +137,7 @@ void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, 
 #include <vector>
 #line 2 "graph/subtree.hpp"
 #include <algorithm>
-#include <vector>
+#line 4 "graph/subtree.hpp"
 
 struct subtree_info_t {
     int parent;  // in the entire tree

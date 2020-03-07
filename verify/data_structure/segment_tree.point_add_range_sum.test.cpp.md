@@ -175,7 +175,7 @@ struct plus_monoid {
 #line 5 "data_structure/segment_tree.point_add_range_sum.test.cpp"
 #include <cstdint>
 #include <tuple>
-#include <vector>
+#line 8 "data_structure/segment_tree.point_add_range_sum.test.cpp"
 using namespace std;
 
 int main() {

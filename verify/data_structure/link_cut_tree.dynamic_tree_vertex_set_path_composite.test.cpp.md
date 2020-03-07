@@ -464,12 +464,9 @@ public:
         return oss.str();
     }
 };
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -481,9 +478,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -537,8 +532,7 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "monoids/linear_function.hpp"
-#include <utility>
+#line 3 "monoids/linear_function.hpp"
 
 template <class CommutativeRing>
 struct linear_function_monoid {
@@ -603,7 +597,7 @@ inline void out(Integer n) {
 }
 #line 8 "data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp"
 #include <stack>
-#include <vector>
+#line 10 "data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp"
 
 constexpr int MOD = 998244353;
 int main() {

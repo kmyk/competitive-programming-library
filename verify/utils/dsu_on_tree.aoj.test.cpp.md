@@ -156,7 +156,7 @@ STACK_PIVOT_MAIN(moin)
 #include <vector>
 #line 2 "graph/subtree.hpp"
 #include <algorithm>
-#include <vector>
+#line 4 "graph/subtree.hpp"
 
 struct subtree_info_t {
     int parent;  // in the entire tree
@@ -271,8 +271,7 @@ void dsu_on_tree(const std::vector<std::vector<int> > & g, int root, Add & add, 
     };
     go(root, false);
 }
-#line 2 "data_structure/union_find_tree_with_monoid.hpp"
-#include <vector>
+#line 3 "data_structure/union_find_tree_with_monoid.hpp"
 
 /**
  * @brief a disjoint set structure with monoid

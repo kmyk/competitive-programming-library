@@ -97,9 +97,6 @@ STACK_PIVOT_MAIN(moin)
 #include <functional>
 #include <utility>
 #include <vector>
-#line 2 "data_structure/sparse_table.hpp"
-#include <cassert>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
@@ -149,11 +146,10 @@ struct sparse_table {
         return mon.mult(table[k][l], table[k][r - (1ll << k)]);
     }
 };
-#line 2 "monoids/min_index.hpp"
-#include <algorithm>
+#line 3 "monoids/min_index.hpp"
 #include <climits>
 #include <limits>
-#include <utility>
+#line 6 "monoids/min_index.hpp"
 
 /**
  * @note a semilattice
@@ -249,7 +245,7 @@ public:
     }
 #line 6 "graph/lowest_common_ancestor.yosupo.test.cpp"
 #include <cstdio>
-#include <vector>
+#line 8 "graph/lowest_common_ancestor.yosupo.test.cpp"
 using namespace std;
 
 int moin() {

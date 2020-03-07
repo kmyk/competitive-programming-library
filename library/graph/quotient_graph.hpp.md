@@ -88,8 +88,6 @@ std::vector<std::vector<int> > make_quotient_graph(const std::vector<std::vector
 ```cpp
 #line 2 "graph/quotient_graph.hpp"
 #include <vector>
-#line 2 "graph/transpose_graph.hpp"
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))

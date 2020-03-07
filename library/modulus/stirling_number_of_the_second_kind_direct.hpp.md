@@ -111,10 +111,9 @@ mint<MOD> stirling_number_of_the_second_kind_direct(int n, int k) {
 #define ALL(x) std::begin(x), std::end(x)
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
-#include <cassert>
+#line 4 "modulus/mint.hpp"
 #include <iostream>
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -126,9 +125,7 @@ inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= y and y < MOD);
     return y;
 }
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
-#include <cassert>
+#line 4 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -182,8 +179,6 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "modulus/factorial.hpp"
-#include <vector>
 #line 4 "modulus/factorial.hpp"
 
 template <int32_t MOD>
@@ -208,8 +203,6 @@ mint<MOD> inv_fact(int n) {
     }
     return memo[n];
 }
-#line 2 "modulus/choose.hpp"
-#include <cassert>
 #line 5 "modulus/choose.hpp"
 
 /**

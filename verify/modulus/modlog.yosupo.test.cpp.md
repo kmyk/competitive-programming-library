@@ -80,8 +80,7 @@ int main() {
 #include <cmath>
 #include <cstdint>
 #include <unordered_map>
-#line 2 "modulus/modinv.hpp"
-#include <algorithm>
+#line 3 "modulus/modinv.hpp"
 #include <cassert>
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
@@ -106,8 +105,7 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
     assert (y != -1);
     return y;
 }
-#line 2 "modulus/modpow.hpp"
-#include <cassert>
+#line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (0 <= x and x < MOD);
@@ -168,8 +166,7 @@ inline int modlog(int g, int y, int m) {
     }
     return -1;
 }
-#line 3 "modulus/modlog.yosupo.test.cpp"
-#include <cassert>
+#line 4 "modulus/modlog.yosupo.test.cpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

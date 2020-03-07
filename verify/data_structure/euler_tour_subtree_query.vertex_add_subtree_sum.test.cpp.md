@@ -112,7 +112,7 @@ int main() {
 #define ALL(x) std::begin(x), std::end(x)
 #line 2 "graph/euler_tour_preorder.hpp"
 #include <functional>
-#include <vector>
+#line 4 "graph/euler_tour_preorder.hpp"
 
 /**
  * @brief Euler Tour (preorder)
@@ -135,8 +135,6 @@ void do_euler_tour_preorder(std::vector<std::vector<int> > const & g, int root, 
 }
 #line 2 "data_structure/segment_tree.hpp"
 #include <algorithm>
-#include <cassert>
-#include <vector>
 #line 6 "data_structure/segment_tree.hpp"
 
 /**
@@ -294,8 +292,7 @@ inline void out(Integer n) {
     do { s[i ++] = n % 10; n /= 10; } while (n);
     while (i) putchar_unlocked(s[-- i] + '0');
 }
-#line 6 "data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp"
-#include <vector>
+#line 7 "data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp"
 using namespace std;
 
 int main() {

@@ -85,10 +85,9 @@ std::vector<typename CommutativeSemiring::value_type> upward_fast_zeta_transform
 #include <vector>
 #line 2 "number/primes.hpp"
 #include <algorithm>
-#include <cassert>
+#line 4 "number/primes.hpp"
 #include <cstdint>
 #include <map>
-#include <vector>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))

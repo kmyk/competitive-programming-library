@@ -227,7 +227,7 @@ struct li_chao_tree {
 #line 4 "data_structure/li_chao_tree.segment_add_get_min.test.cpp"
 #include <cstdio>
 #include <tuple>
-#include <vector>
+#line 7 "data_structure/li_chao_tree.segment_add_get_min.test.cpp"
 using namespace std;
 
 int main() {

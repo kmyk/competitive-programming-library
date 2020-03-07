@@ -370,10 +370,7 @@ private:
 };
 #line 3 "data_structure/segment_tree_beats.DSL_2_H.test.cpp"
 
-#include <cstdint>
-#include <vector>
-#line 2 "hack/fastio.hpp"
-#include <cstdint>
+#line 3 "hack/fastio.hpp"
 #include <cstdio>
 #include <string>
 #include <type_traits>
