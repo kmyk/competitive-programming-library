@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 20:34:24+09:00
+    - Last commit date: 2020-03-08 03:43:59+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_affine_range_sum">https://judge.yosupo.jp/problem/range_affine_range_sum</a>
@@ -205,7 +205,7 @@ struct lazy_propagation_segment_tree {
     }
     value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
-	if (l == 0 and r == n) return a[0];
+        if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();
         for (int l1 = (l += n), r1 = (r += n) - 1; l1 > 1; l /= 2, r /= 2, l1 /= 2, r1 /= 2) {  // 1-based loop, 2x faster than recursion
             if (l < r) {
