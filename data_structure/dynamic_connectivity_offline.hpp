@@ -11,6 +11,7 @@
 
 /**
  * @brief Dynamic Connectivity (offline, commutative monoids)
+ * @docs data_structure/dynamic_connectivity_offline.md
  */
 template <class CommutativeMonoid>
 class dynamic_connectivity_offline {
