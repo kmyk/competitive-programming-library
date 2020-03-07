@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: old/longest-increasing-subsequence.inc.cpp
+# VerificationStatus.DEFAULT old/longest-increasing-subsequence.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

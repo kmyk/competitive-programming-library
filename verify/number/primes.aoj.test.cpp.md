@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/primes.aoj.test.cpp
+# VerificationStatus.VERIFIED number/primes.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/primes.aoj.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-29 19:02:34+09:00
 

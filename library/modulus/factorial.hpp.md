@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/factorial.hpp
+# VerificationStatus.VERIFIED modulus/factorial.hpp
 
 <a href="../../index.html">Back to top page</a>
 

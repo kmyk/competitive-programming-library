@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: utils/dsu_on_tree.aoj.test.cpp
+# VerificationStatus.VERIFIED utils/dsu_on_tree.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/dsu_on_tree.aoj.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-08 18:35:19+09:00
 

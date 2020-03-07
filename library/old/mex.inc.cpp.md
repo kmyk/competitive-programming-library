@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: minimum excluded value <small>(old/mex.inc.cpp)</small>
+# VerificationStatus.DEFAULT minimum excluded value <small>(old/mex.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

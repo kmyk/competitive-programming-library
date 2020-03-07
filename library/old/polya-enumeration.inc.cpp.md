@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: old/polya-enumeration.inc.cpp
+# VerificationStatus.DEFAULT old/polya-enumeration.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

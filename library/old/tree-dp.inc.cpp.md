@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: fold a rooted tree / 木DP <small>(old/tree-dp.inc.cpp)</small>
+# VerificationStatus.DEFAULT fold a rooted tree / 木DP <small>(old/tree-dp.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

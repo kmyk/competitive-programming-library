@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: reverse a digraph <small>(old/utils.inc.cpp)</small>
+# VerificationStatus.DEFAULT reverse a digraph <small>(old/utils.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

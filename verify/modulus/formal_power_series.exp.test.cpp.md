@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/formal_power_series.exp.test.cpp
+# VerificationStatus.VERIFIED modulus/formal_power_series.exp.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/formal_power_series.exp.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-22 23:03:03+09:00
 

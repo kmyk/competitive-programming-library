@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: old/linear-weighted-sum.inc.cpp
+# VerificationStatus.DEFAULT old/linear-weighted-sum.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

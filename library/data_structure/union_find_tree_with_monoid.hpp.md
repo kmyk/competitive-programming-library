@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small>
+# VerificationStatus.VERIFIED a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: string/suffix_array.yosupo.test.cpp
+# VerificationStatus.VERIFIED string/suffix_array.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
 * <a href="{{ site.github.repository_url }}/blob/master/string/suffix_array.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-04 19:51:45+09:00
 

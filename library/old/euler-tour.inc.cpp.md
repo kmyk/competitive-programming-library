@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: euler tour <small>(old/euler-tour.inc.cpp)</small>
+# VerificationStatus.DEFAULT euler tour <small>(old/euler-tour.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

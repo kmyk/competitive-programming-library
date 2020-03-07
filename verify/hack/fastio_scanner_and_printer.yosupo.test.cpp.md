@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: hack/fastio_scanner_and_printer.yosupo.test.cpp
+# VerificationStatus.VERIFIED hack/fastio_scanner_and_printer.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#d78b6f30225cdc811adfe8d4e7c9fd34">hack</a>
 * <a href="{{ site.github.repository_url }}/blob/master/hack/fastio_scanner_and_printer.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-04 16:58:19+09:00
 

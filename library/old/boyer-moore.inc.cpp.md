@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: old/boyer-moore.inc.cpp
+# VerificationStatus.DEFAULT old/boyer-moore.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

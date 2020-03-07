@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+# VerificationStatus.VERIFIED modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-04 12:42:08+09:00
 

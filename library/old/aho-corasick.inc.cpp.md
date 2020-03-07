@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: old/aho-corasick.inc.cpp
+# VerificationStatus.DEFAULT old/aho-corasick.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: a double-ended priority queue <small>(old/double-ended-priority-queue.inc.cpp)</small>
+# VerificationStatus.DEFAULT a double-ended priority queue <small>(old/double-ended-priority-queue.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

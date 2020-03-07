@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: the convolution <small>(number/fast_fourier_transformation.hpp)</small>
+# VerificationStatus.DEFAULT the convolution <small>(number/fast_fourier_transformation.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

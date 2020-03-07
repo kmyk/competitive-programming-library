@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: hack/fastio_scanner.hpp
+# VerificationStatus.VERIFIED hack/fastio_scanner.hpp
 
 <a href="../../index.html">Back to top page</a>
 

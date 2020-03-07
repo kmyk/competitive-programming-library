@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: the Bernoulli number <small>(old/bernoulli-number.inc.cpp)</small>
+# VerificationStatus.DEFAULT the Bernoulli number <small>(old/bernoulli-number.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

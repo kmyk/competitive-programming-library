@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data_structure/segment_tree_beats.yosupo.test.cpp
+# VerificationStatus.VERIFIED data_structure/segment_tree_beats.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/segment_tree_beats.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-04 20:34:24+09:00
 

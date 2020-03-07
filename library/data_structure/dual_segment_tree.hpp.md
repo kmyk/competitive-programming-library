@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small>
+# VerificationStatus.VERIFIED Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

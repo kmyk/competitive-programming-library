@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/number_theoretic_transformation.yosupo.test.cpp
+# VerificationStatus.VERIFIED modulus/number_theoretic_transformation.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-26 19:41:19+09:00
 

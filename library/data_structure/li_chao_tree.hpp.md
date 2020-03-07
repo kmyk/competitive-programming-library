@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small>
+# VerificationStatus.VERIFIED Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

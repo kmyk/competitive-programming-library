@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoids/linear_function.hpp
+# VerificationStatus.VERIFIED monoids/linear_function.hpp
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small>
+# VerificationStatus.DEFAULT upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: number/primes.hpp
+# VerificationStatus.VERIFIED number/primes.hpp
 
 <a href="../../index.html">Back to top page</a>
 

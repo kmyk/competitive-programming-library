@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: utils/binary_search.aoj.test.cpp
+# VerificationStatus.VERIFIED utils/binary_search.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utils/binary_search.aoj.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-20 06:12:24+09:00
 

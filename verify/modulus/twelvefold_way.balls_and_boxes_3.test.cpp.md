@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+# VerificationStatus.VERIFIED modulus/twelvefold_way.balls_and_boxes_3.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_3.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-04 12:57:27+09:00
 

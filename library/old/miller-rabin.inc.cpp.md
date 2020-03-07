@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: old/miller-rabin.inc.cpp
+# VerificationStatus.DEFAULT old/miller-rabin.inc.cpp
 
 <a href="../../index.html">Back to top page</a>
 

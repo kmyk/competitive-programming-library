@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small>
+# VerificationStatus.DEFAULT Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

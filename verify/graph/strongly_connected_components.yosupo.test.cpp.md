@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/strongly_connected_components.yosupo.test.cpp
+# VerificationStatus.VERIFIED graph/strongly_connected_components.yosupo.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/strongly_connected_components.yosupo.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-22 23:03:03+09:00
 

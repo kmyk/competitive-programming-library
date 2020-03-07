@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: the sliding window minimum algorithm <small>(old/sliding-window.inc.cpp)</small>
+# VerificationStatus.DEFAULT the sliding window minimum algorithm <small>(old/sliding-window.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

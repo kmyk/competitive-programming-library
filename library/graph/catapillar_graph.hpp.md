@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small>
+# VerificationStatus.DEFAULT get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

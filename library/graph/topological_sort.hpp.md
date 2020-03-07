@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: topological sort <small>(graph/topological_sort.hpp)</small>
+# VerificationStatus.VERIFIED topological sort <small>(graph/topological_sort.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

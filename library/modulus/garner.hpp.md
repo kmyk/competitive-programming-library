@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: Garner's algorithm <small>(modulus/garner.hpp)</small>
+# VerificationStatus.DEFAULT Garner's algorithm <small>(modulus/garner.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

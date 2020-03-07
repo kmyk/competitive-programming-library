@@ -25,10 +25,11 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/kruskal.aoj.test.cpp
+# VerificationStatus.VERIFIED graph/kruskal.aoj.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/kruskal.aoj.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-28 14:33:39+09:00
 

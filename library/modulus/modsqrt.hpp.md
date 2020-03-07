@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: find the sqrt $b$ of $a$ modulo $p$ <small>(modulus/modsqrt.hpp)</small>
+# VerificationStatus.VERIFIED find the sqrt $b$ of $a$ modulo $p$ <small>(modulus/modsqrt.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 

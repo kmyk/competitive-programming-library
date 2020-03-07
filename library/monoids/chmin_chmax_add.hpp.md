@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: monoids/chmin_chmax_add.hpp
+# VerificationStatus.DEFAULT monoids/chmin_chmax_add.hpp
 
 <a href="../../index.html">Back to top page</a>
 
