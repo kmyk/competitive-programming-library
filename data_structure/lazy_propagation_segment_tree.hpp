@@ -97,7 +97,7 @@ struct lazy_propagation_segment_tree {
     }
     value_type range_get(int l, int r) {
         assert (0 <= l and l <= r and r <= n);
-	if (l == 0 and r == n) return a[0];
+        if (l == 0 and r == n) return a[0];
         value_type lacc = mon_x.unit(), racc = mon_x.unit();
         for (int l1 = (l += n), r1 = (r += n) - 1; l1 > 1; l /= 2, r /= 2, l1 /= 2, r1 /= 2) {  // 1-based loop, 2x faster than recursion
             if (l < r) {
