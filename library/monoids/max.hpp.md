@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: monoids/max.hpp
+# :heavy_check_mark: monoids/max.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -39,6 +39,11 @@ layout: default
 ## Required by
 
 * :warning: <a href="plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/old/rollback-square-decomposition.yukicoder-1031.test.cpp.html">old/rollback-square-decomposition.yukicoder-1031.test.cpp</a>
 
 
 ## Code

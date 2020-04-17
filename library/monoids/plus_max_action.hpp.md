@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="max.hpp.html">monoids/max.hpp</a>
+* :heavy_check_mark: <a href="max.hpp.html">monoids/max.hpp</a>
 * :heavy_check_mark: <a href="plus.hpp.html">monoids/plus.hpp</a>
 
 

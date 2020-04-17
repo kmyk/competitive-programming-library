@@ -131,7 +131,7 @@ layout: default
 * :heavy_check_mark: <a href="library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
-* :warning: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
+* :heavy_check_mark: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
 * :warning: <a href="library/monoids/max_index.hpp.html">monoids/max_index.hpp</a>
 * :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
@@ -220,7 +220,7 @@ layout: default
 * :warning: <a href="library/old/range-union-find-tree.inc.cpp.html">old/range-union-find-tree.inc.cpp</a>
 * :warning: <a href="library/old/rational.inc.cpp.html">old/rational.inc.cpp</a>
 * :warning: <a href="library/old/red-black-tree.inc.cpp.html">old/red-black-tree.inc.cpp</a>
-* :warning: <a href="library/old/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small></a>
+* :heavy_check_mark: <a href="library/old/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small></a>
 * :warning: <a href="library/old/rolling-hash.inc.cpp.html">a rolling hash <small>(old/rolling-hash.inc.cpp)</small></a>
 * :warning: <a href="library/old/segment-tree-2d.inc.cpp.html">old/segment-tree-2d.inc.cpp</a>
 * :warning: <a href="library/old/simplex.inc.cpp.html">old/simplex.inc.cpp</a>
@@ -318,6 +318,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/old/rollback-square-decomposition.yukicoder-1031.test.cpp.html">old/rollback-square-decomposition.yukicoder-1031.test.cpp</a>
 * :heavy_check_mark: <a href="verify/string/longest_common_prefix.yosupo.test.cpp.html">string/longest_common_prefix.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>

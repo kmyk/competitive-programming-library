@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small>
+# :heavy_check_mark: the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
@@ -36,6 +36,11 @@ layout: default
 
 * see: <a href="http://snuke.hatenablog.com/entry/2016/07/01/000000">http://snuke.hatenablog.com/entry/2016/07/01/000000</a>
 * see: <a href="http://codeforces.com/blog/entry/7383?#comment-161520">http://codeforces.com/blog/entry/7383?#comment-161520</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/old/rollback-square-decomposition.yukicoder-1031.test.cpp.html">old/rollback-square-decomposition.yukicoder-1031.test.cpp</a>
 
 
 ## Code
