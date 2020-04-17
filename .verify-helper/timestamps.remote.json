@@ -54,6 +54,7 @@
 "modulus/twelvefold_way.balls_and_boxes_8.test.cpp": "2020-03-04 12:57:27 +0900",
 "modulus/twelvefold_way.balls_and_boxes_9.test.cpp": "2020-03-04 12:57:27 +0900",
 "number/primes.aoj.test.cpp": "2019-12-29 19:02:34 +0900",
+"old/rollback-square-decomposition.yukicoder-1031.test.cpp": "2020-04-17 23:46:14 +0900",
 "string/longest_common_prefix.yosupo.test.cpp": "2020-03-04 19:51:45 +0900",
 "string/suffix_array.yosupo.test.cpp": "2020-03-04 19:51:45 +0900",
 "utils/binary_search.aoj.test.cpp": "2019-12-20 06:12:24 +0900",
