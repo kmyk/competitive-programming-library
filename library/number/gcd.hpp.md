@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/gcd.hpp
+# :heavy_check_mark: number/gcd.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,7 +38,12 @@ layout: default
 
 ## Required by
 
-* :warning: <a href="../monoids/gcd.hpp.html">monoids/gcd.hpp</a>
+* :heavy_check_mark: <a href="../monoids/gcd.hpp.html">monoids/gcd.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yukicoder-1036.test.cpp.html">data_structure/sparse_table.yukicoder-1036.test.cpp</a>
 
 
 ## Code

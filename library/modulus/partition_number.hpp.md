@@ -25,18 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small>
+# :heavy_check_mark: the partition number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/partition_number.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/bell_number.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 12:57:27+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/partition_number.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-04-24 23:33:38+09:00
 
 
-* see: <a href="http://mathworld.wolfram.com/BellNumber.html">http://mathworld.wolfram.com/BellNumber.html</a>
-* see: <a href="https://oeis.org/A110">https://oeis.org/A110</a>
-* see: <a href="https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0">https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0</a>
 
 
 ## Depends on
@@ -81,32 +78,35 @@ layout: default
 #include "modulus/stirling_number_of_the_second_kind_table.hpp"
 
 /**
- * @brief the Bell number (前処理 $O(NK)$ + $O(1)$)
- * @description the number of ways a set of n elements can be partitioned into nonempty subsets
- * @see http://mathworld.wolfram.com/BellNumber.html
- * @see https://oeis.org/A110
- * @see https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0
+ * @brief the partition number (前処理 $O(NK)$ + $O(1)$)
+ * @description the number of non-decreasing sequences with the length k which the sum is n
  */
-template <int PRIME>
-mint<PRIME> bell_number(int n, int k) {
-    static std::vector<std::vector<mint<PRIME> > > memo;
+template <int MOD>
+mint<MOD> partition_number(int n, int k) {
+    static std::vector<std::vector<mint<MOD> > > memo;
     if (memo.size() <= n) {
         memo.resize(n + 1);
     }
-    if (memo[n].empty()) {
-        memo[n].push_back(0);
-    }
     while (memo[n].size() <= k) {
-        int i = memo[n].size();
-        memo[n].push_back(memo[n].back() + stirling_number_of_the_second_kind_table<PRIME>(n, i));
+        if (n == 0) {
+            memo[0].resize(k + 1, 1);
+        } else if (memo[n].empty()) {
+            memo[n].push_back(0);
+        } else {
+            int j = memo[n].size();
+            auto a = (n - j >= 0 ? partition_number<MOD>(n - j, j) : 0);
+            auto b = (j - 1 >= 0 ? partition_number<MOD>(n, j - 1) : 0);
+            memo[n].push_back(a + b);
+        }
     }
     return memo[n][k];
 }
 
-template <int PRIME>
-mint<PRIME> unary_bell_number(int n) {
-    return bell_number<PRIME>(n, n);
+template <int MOD>
+mint<MOD> unary_partition_number(int n) {
+    return partition_number<MOD>(n, n);
 }
+
 
 ```
 {% endraw %}
@@ -254,35 +254,38 @@ mint<MOD> stirling_number_of_the_second_kind_table(int n, int k) {
         stirling_number_of_the_second_kind_table<MOD>(n - 1, k - 1) +
         stirling_number_of_the_second_kind_table<MOD>(n - 1, k) * k;
 }
-#line 5 "modulus/bell_number.hpp"
+#line 5 "modulus/partition_number.hpp"
 
 /**
- * @brief the Bell number (前処理 $O(NK)$ + $O(1)$)
- * @description the number of ways a set of n elements can be partitioned into nonempty subsets
- * @see http://mathworld.wolfram.com/BellNumber.html
- * @see https://oeis.org/A110
- * @see https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E6%95%B0
+ * @brief the partition number (前処理 $O(NK)$ + $O(1)$)
+ * @description the number of non-decreasing sequences with the length k which the sum is n
  */
-template <int PRIME>
-mint<PRIME> bell_number(int n, int k) {
-    static std::vector<std::vector<mint<PRIME> > > memo;
+template <int MOD>
+mint<MOD> partition_number(int n, int k) {
+    static std::vector<std::vector<mint<MOD> > > memo;
     if (memo.size() <= n) {
         memo.resize(n + 1);
     }
-    if (memo[n].empty()) {
-        memo[n].push_back(0);
-    }
     while (memo[n].size() <= k) {
-        int i = memo[n].size();
-        memo[n].push_back(memo[n].back() + stirling_number_of_the_second_kind_table<PRIME>(n, i));
+        if (n == 0) {
+            memo[0].resize(k + 1, 1);
+        } else if (memo[n].empty()) {
+            memo[n].push_back(0);
+        } else {
+            int j = memo[n].size();
+            auto a = (n - j >= 0 ? partition_number<MOD>(n - j, j) : 0);
+            auto b = (j - 1 >= 0 ? partition_number<MOD>(n, j - 1) : 0);
+            memo[n].push_back(a + b);
+        }
     }
     return memo[n][k];
 }
 
-template <int PRIME>
-mint<PRIME> unary_bell_number(int n) {
-    return bell_number<PRIME>(n, n);
+template <int MOD>
+mint<MOD> unary_partition_number(int n) {
+    return partition_number<MOD>(n, n);
 }
+
 
 ```
 {% endraw %}

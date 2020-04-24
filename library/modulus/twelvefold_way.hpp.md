@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 12:57:27+09:00
+    - Last commit date: 2020-04-24 23:33:38+09:00
 
 
 * see: <a href="https://en.wikipedia.org/wiki/Twelvefold_way">https://en.wikipedia.org/wiki/Twelvefold_way</a>
@@ -47,6 +47,7 @@ layout: default
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
+* :heavy_check_mark: <a href="partition_number.hpp.html">the partition number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/partition_number.hpp)</small></a>
 * :heavy_check_mark: <a href="permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
@@ -56,6 +57,7 @@ layout: default
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_10.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_10.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_3.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_3.test.cpp</a>
@@ -79,6 +81,7 @@ layout: default
 #include "modulus/multichoose.hpp"
 #include "modulus/stirling_number_of_the_second_kind_direct.hpp"
 #include "modulus/bell_number.hpp"
+#include "modulus/partition_number.hpp"
 
 /**
  * @brief twelvefold way / 写像12相
@@ -181,6 +184,15 @@ mint<MOD> twelvefold_lui(int n, int k) {
 template <int MOD>
 mint<MOD> twelvefold_lus(int n, int k) {
     return stirling_number_of_the_second_kind_direct<MOD>(n, k);
+}
+
+
+/**
+ * @brief unlabeled-N unlabeled-K any-f
+ */
+template <int MOD>
+mint<MOD> twelvefold_uua(int n, int k) {
+    return partition_number<MOD>(n, k);
 }
 
 
@@ -408,7 +420,39 @@ template <int PRIME>
 mint<PRIME> unary_bell_number(int n) {
     return bell_number<PRIME>(n, n);
 }
-#line 8 "modulus/twelvefold_way.hpp"
+#line 5 "modulus/partition_number.hpp"
+
+/**
+ * @brief the partition number (前処理 $O(NK)$ + $O(1)$)
+ * @description the number of non-decreasing sequences with the length k which the sum is n
+ */
+template <int MOD>
+mint<MOD> partition_number(int n, int k) {
+    static std::vector<std::vector<mint<MOD> > > memo;
+    if (memo.size() <= n) {
+        memo.resize(n + 1);
+    }
+    while (memo[n].size() <= k) {
+        if (n == 0) {
+            memo[0].resize(k + 1, 1);
+        } else if (memo[n].empty()) {
+            memo[n].push_back(0);
+        } else {
+            int j = memo[n].size();
+            auto a = (n - j >= 0 ? partition_number<MOD>(n - j, j) : 0);
+            auto b = (j - 1 >= 0 ? partition_number<MOD>(n, j - 1) : 0);
+            memo[n].push_back(a + b);
+        }
+    }
+    return memo[n][k];
+}
+
+template <int MOD>
+mint<MOD> unary_partition_number(int n) {
+    return partition_number<MOD>(n, n);
+}
+
+#line 9 "modulus/twelvefold_way.hpp"
 
 /**
  * @brief twelvefold way / 写像12相
@@ -511,6 +555,15 @@ mint<MOD> twelvefold_lui(int n, int k) {
 template <int MOD>
 mint<MOD> twelvefold_lus(int n, int k) {
     return stirling_number_of_the_second_kind_direct<MOD>(n, k);
+}
+
+
+/**
+ * @brief unlabeled-N unlabeled-K any-f
+ */
+template <int MOD>
+mint<MOD> twelvefold_uua(int n, int k) {
+    return partition_number<MOD>(n, k);
 }
 
 

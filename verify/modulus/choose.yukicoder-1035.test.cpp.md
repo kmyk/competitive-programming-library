@@ -25,51 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/factorial.hpp
+# :heavy_check_mark: modulus/choose.yukicoder-1035.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/factorial.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/choose.yukicoder-1035.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-04-24 23:33:38+09:00
 
 
+* see: <a href="https://yukicoder.me/problems/no/1035">https://yukicoder.me/problems/no/1035</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
-
-
-## Required by
-
-* :heavy_check_mark: <a href="bell_number.hpp.html">the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small></a>
-* :heavy_check_mark: <a href="choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
-* :heavy_check_mark: <a href="multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
-* :heavy_check_mark: <a href="partition_number.hpp.html">the partition number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/partition_number.hpp)</small></a>
-* :heavy_check_mark: <a href="permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
-* :heavy_check_mark: <a href="stirling_number_of_the_second_kind_convolution.hpp.html">the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$ in $O(N \log N)$) <small>(modulus/stirling_number_of_the_second_kind_convolution.hpp)</small></a>
-* :heavy_check_mark: <a href="stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
-* :heavy_check_mark: <a href="twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/modulus/choose.yukicoder-1035.test.cpp.html">modulus/choose.yukicoder-1035.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp.html">modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_10.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_10.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_3.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_3.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_4.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_4.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_5.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_5.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_6.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_6.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -77,31 +52,27 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#pragma once
-#include <vector>
+#define PROBLEM "https://yukicoder.me/problems/no/1035"
+#include <iostream>
+#include "utils/macros.hpp"
 #include "modulus/mint.hpp"
+#include "modulus/choose.hpp"
+using namespace std;
 
-template <int32_t MOD>
-mint<MOD> fact(int n) {
-    static std::vector<mint<MOD> > memo(1, 1);
-    while (n >= memo.size()) {
-        memo.push_back(memo.back() * mint<MOD>(memo.size()));
+constexpr int64_t MOD = 1000000007;
+mint<MOD> solve(int n, int m) {
+    mint<MOD> ans = 0;
+    REP (i, m + 1) {
+        int sign = (i % 2 == 0 ? 1 : -1);
+        ans += sign * choose<MOD>(m, m - i) * mint<MOD>(m - i).pow(n);
     }
-    return memo[n];
+    return ans;
 }
-template <int32_t MOD>
-mint<MOD> inv_fact(int n) {
-    static std::vector<mint<MOD> > memo;
-    if (memo.size() <= n) {
-        int l = memo.size();
-        int r = n * 1.3 + 100;
-        memo.resize(r);
-        memo[r - 1] = fact<MOD>(r - 1).inv();
-        for (int i = r - 2; i >= l; -- i) {
-            memo[i] = memo[i + 1] * (i + 1);
-        }
-    }
-    return memo[n];
+
+int main() {
+    int N, M; cin >> N >> M;
+    cout << solve(N, M) << endl;
+    return 0;
 }
 
 ```
@@ -110,12 +81,18 @@ mint<MOD> inv_fact(int n) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "modulus/factorial.hpp"
-#include <vector>
+#line 1 "modulus/choose.yukicoder-1035.test.cpp"
+#define PROBLEM "https://yukicoder.me/problems/no/1035"
+#include <iostream>
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
 #include <cassert>
-#include <iostream>
 #line 3 "modulus/modpow.hpp"
 
 inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
@@ -182,6 +159,8 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
+#line 2 "modulus/factorial.hpp"
+#include <vector>
 #line 4 "modulus/factorial.hpp"
 
 template <int32_t MOD>
@@ -205,6 +184,34 @@ mint<MOD> inv_fact(int n) {
         }
     }
     return memo[n];
+}
+#line 5 "modulus/choose.hpp"
+
+/**
+ * @brief combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
+ */
+template <int32_t MOD>
+mint<MOD> choose(int n, int r) {
+    assert (0 <= r and r <= n);
+    return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
+}
+#line 6 "modulus/choose.yukicoder-1035.test.cpp"
+using namespace std;
+
+constexpr int64_t MOD = 1000000007;
+mint<MOD> solve(int n, int m) {
+    mint<MOD> ans = 0;
+    REP (i, m + 1) {
+        int sign = (i % 2 == 0 ? 1 : -1);
+        ans += sign * choose<MOD>(m, m - i) * mint<MOD>(m - i).pow(n);
+    }
+    return ans;
+}
+
+int main() {
+    int N, M; cin >> N >> M;
+    cout << solve(N, M) << endl;
+    return 0;
 }
 
 ```

@@ -25,20 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: monoids/gcd.hpp
+# :heavy_check_mark: monoids/gcd.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#315142c884fa9bdd2be3b42923ffe964">monoids</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoids/gcd.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:14:44+09:00
+    - Last commit date: 2020-04-24 23:33:38+09:00
 
 
 
 
 ## Depends on
 
-* :warning: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+* :heavy_check_mark: <a href="../number/gcd.hpp.html">number/gcd.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yukicoder-1036.test.cpp.html">data_structure/sparse_table.yukicoder-1036.test.cpp</a>
 
 
 ## Code
@@ -52,10 +57,11 @@ layout: default
 /**
  * @note a semilattice
  */
+template <class Integer>
 struct gcd_monoid {
-    typedef int value_type;
-    int unit() const { return 0; }
-    int mult(int a, int b) const { return gcd(a, b); }
+    typedef Integer value_type;
+    Integer unit() const { return 0; }
+    Integer mult(Integer a, Integer b) const { return gcd(a, b); }
 };
 
 ```
@@ -88,10 +94,11 @@ T lcm(T a, T b) {
 /**
  * @note a semilattice
  */
+template <class Integer>
 struct gcd_monoid {
-    typedef int value_type;
-    int unit() const { return 0; }
-    int mult(int a, int b) const { return gcd(a, b); }
+    typedef Integer value_type;
+    Integer unit() const { return 0; }
+    Integer mult(Integer a, Integer b) const { return gcd(a, b); }
 };
 
 ```

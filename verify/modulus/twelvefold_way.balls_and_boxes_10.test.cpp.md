@@ -25,16 +25,16 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+# :heavy_check_mark: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_5.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/twelvefold_way.balls_and_boxes_10.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-04-24 23:33:38+09:00
 
 
-* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J</a>
 
 
 ## Depends on
@@ -59,7 +59,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J"
 #include <iostream>
 #include "modulus/twelvefold_way.hpp"
 using namespace std;
@@ -67,7 +67,7 @@ using namespace std;
 constexpr int MOD = 1e9 + 7;
 int main() {
     int n, k; cin >> n >> k;
-    cout << twelvefold_uli<MOD>(n, k) << endl;
+    cout << twelvefold_uua<MOD>(n, k) << endl;
     return 0;
 }
 
@@ -77,8 +77,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "modulus/twelvefold_way.balls_and_boxes_5.test.cpp"
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E"
+#line 1 "modulus/twelvefold_way.balls_and_boxes_10.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J"
 #include <iostream>
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
@@ -443,13 +443,13 @@ mint<MOD> twelvefold_uui(int n, int k) {
     if (n > k) return 0;
     return 1;
 }
-#line 4 "modulus/twelvefold_way.balls_and_boxes_5.test.cpp"
+#line 4 "modulus/twelvefold_way.balls_and_boxes_10.test.cpp"
 using namespace std;
 
 constexpr int MOD = 1e9 + 7;
 int main() {
     int n, k; cin >> n >> k;
-    cout << twelvefold_uli<MOD>(n, k) << endl;
+    cout << twelvefold_uua<MOD>(n, k) << endl;
     return 0;
 }
 
