@@ -5,6 +5,7 @@
 #include "modulus/multichoose.hpp"
 #include "modulus/stirling_number_of_the_second_kind_direct.hpp"
 #include "modulus/bell_number.hpp"
+#include "modulus/partition_number.hpp"
 
 /**
  * @brief twelvefold way / 写像12相
@@ -107,6 +108,15 @@ mint<MOD> twelvefold_lui(int n, int k) {
 template <int MOD>
 mint<MOD> twelvefold_lus(int n, int k) {
     return stirling_number_of_the_second_kind_direct<MOD>(n, k);
+}
+
+
+/**
+ * @brief unlabeled-N unlabeled-K any-f
+ */
+template <int MOD>
+mint<MOD> twelvefold_uua(int n, int k) {
+    return partition_number<MOD>(n, k);
 }
 
 

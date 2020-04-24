@@ -4,8 +4,9 @@
 /**
  * @note a semilattice
  */
+template <class Integer>
 struct gcd_monoid {
-    typedef int value_type;
-    int unit() const { return 0; }
-    int mult(int a, int b) const { return gcd(a, b); }
+    typedef Integer value_type;
+    Integer unit() const { return 0; }
+    Integer mult(Integer a, Integer b) const { return gcd(a, b); }
 };
