@@ -237,7 +237,6 @@ layout: default
 * :warning: <a href="library/old/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(old/two-edge-connected-components.inc.cpp)</small></a>
 * :warning: <a href="library/old/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(old/two-node-connected-components.inc.cpp)</small></a>
 * :warning: <a href="library/old/twosat.inc.cpp.html">old/twosat.inc.cpp</a>
-* :warning: <a href="library/old/utils.inc.cpp.html">reverse a digraph <small>(old/utils.inc.cpp)</small></a>
 * :warning: <a href="library/old/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(old/warshall-floyd.inc.cpp)</small></a>
 * :warning: <a href="library/old/xorshift.inc.cpp.html">old/xorshift.inc.cpp</a>
 
