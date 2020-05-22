@@ -25,44 +25,24 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small>
+# :warning: 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (愚直 $O(r)$) <small>(modulus/multichoose_simple.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modulus/multichoose.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-23 00:48:03+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modulus/multichoose_simple.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-23 00:48:26+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
-* :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
+* :warning: <a href="choose_simple.hpp.html">combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small></a>
 * :question: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :question: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :question: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
-
-
-## Required by
-
-* :heavy_check_mark: <a href="twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_10.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_10.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_3.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_3.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_4.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_4.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_5.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_5.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_6.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_6.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
+* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -73,16 +53,16 @@ layout: default
 #pragma once
 #include <cassert>
 #include "modulus/mint.hpp"
-#include "modulus/choose.hpp"
+#include "modulus/choose_simple.hpp"
 
 /**
- * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (愚直 $O(r)$)
  */
 template <int32_t MOD>
-mint<MOD> multichoose(int n, int r) {
+mint<MOD> multichoose_simple(int64_t n, int32_t r) {
     assert (0 <= n and 0 <= r);
     if (n == 0 and r == 0) return 1;
-    return choose<MOD>(n + r - 1, r);
+    return choose_simple<MOD>(n + r - 1, r);
 }
 
 ```
@@ -91,7 +71,7 @@ mint<MOD> multichoose(int n, int r) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "modulus/multichoose.hpp"
+#line 2 "modulus/multichoose_simple.hpp"
 #include <cassert>
 #line 2 "modulus/mint.hpp"
 #include <algorithm>
@@ -163,52 +143,38 @@ struct mint {
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
-#line 2 "modulus/factorial.hpp"
-#include <vector>
-#line 4 "modulus/factorial.hpp"
-
-template <int32_t MOD>
-mint<MOD> fact(int n) {
-    static std::vector<mint<MOD> > memo(1, 1);
-    while (n >= memo.size()) {
-        memo.push_back(memo.back() * mint<MOD>(memo.size()));
-    }
-    return memo[n];
-}
-template <int32_t MOD>
-mint<MOD> inv_fact(int n) {
-    static std::vector<mint<MOD> > memo;
-    if (memo.size() <= n) {
-        int l = memo.size();
-        int r = n * 1.3 + 100;
-        memo.resize(r);
-        memo[r - 1] = fact<MOD>(r - 1).inv();
-        for (int i = r - 2; i >= l; -- i) {
-            memo[i] = memo[i + 1] * (i + 1);
-        }
-    }
-    return memo[n];
-}
-#line 5 "modulus/choose.hpp"
+#line 2 "utils/macros.hpp"
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
+#define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
+#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
+#define ALL(x) std::begin(x), std::end(x)
+#line 5 "modulus/choose_simple.hpp"
 
 /**
- * @brief combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$)
  */
 template <int32_t MOD>
-mint<MOD> choose(int n, int r) {
+mint<MOD> choose_simple(int64_t n, int32_t r) {
     assert (0 <= r and r <= n);
-    return fact<MOD>(n) * inv_fact<MOD>(n - r) * inv_fact<MOD>(r);
+    mint<MOD> num = 1;
+    mint<MOD> den = 1;
+    REP (i, r) {
+        num *= n - i;
+        den *= i + 1;
+    }
+    return num / den;
 }
-#line 5 "modulus/multichoose.hpp"
+#line 5 "modulus/multichoose_simple.hpp"
 
 /**
- * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$)
+ * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (愚直 $O(r)$)
  */
 template <int32_t MOD>
-mint<MOD> multichoose(int n, int r) {
+mint<MOD> multichoose_simple(int64_t n, int32_t r) {
     assert (0 <= n and 0 <= r);
     if (n == 0 and r == 0) return 1;
-    return choose<MOD>(n + r - 1, r);
+    return choose_simple<MOD>(n + r - 1, r);
 }
 
 ```

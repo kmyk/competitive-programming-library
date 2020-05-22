@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-08 03:43:59+09:00
+    - Last commit date: 2020-05-23 00:48:03+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/range_affine_range_sum">https://judge.yosupo.jp/problem/range_affine_range_sum</a>
@@ -40,13 +40,13 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :question: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :question: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :question: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -264,14 +264,14 @@ struct linear_function_plus_count_action {
 #include <iostream>
 #line 3 "modulus/modpow.hpp"
 
-inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
-    assert (0 <= x and x < MOD);
+inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
+    assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);
     uint_fast64_t y = 1;
     for (; k; k >>= 1) {
         if (k & 1) (y *= x) %= MOD;
         (x *= x) %= MOD;
     }
-    assert (0 <= y and y < MOD);
+    assert (/* 0 <= y and */ y < (uint_fast64_t)MOD);
     return y;
 }
 #line 4 "modulus/modinv.hpp"
@@ -311,19 +311,19 @@ struct mint {
     mint(int64_t value_) : value(value_ < 0 ? value_ % MOD + MOD : value_ >= MOD ? value_ % MOD : value_) {}
     mint(int32_t value_, std::nullptr_t) : value(value_) {}
     explicit operator bool() const { return value; }
-    inline constexpr mint<MOD> operator + (mint<MOD> other) const { return mint<MOD>(*this) += other; }
-    inline constexpr mint<MOD> operator - (mint<MOD> other) const { return mint<MOD>(*this) -= other; }
-    inline constexpr mint<MOD> operator * (mint<MOD> other) const { return mint<MOD>(*this) *= other; }
-    inline constexpr mint<MOD> & operator += (mint<MOD> other) { this->value += other.value; if (this->value >= MOD) this->value -= MOD; return *this; }
-    inline constexpr mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
-    inline constexpr mint<MOD> & operator *= (mint<MOD> other) { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this; }
-    inline constexpr mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0, nullptr); }
-    inline constexpr mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
+    inline mint<MOD> operator + (mint<MOD> other) const { return mint<MOD>(*this) += other; }
+    inline mint<MOD> operator - (mint<MOD> other) const { return mint<MOD>(*this) -= other; }
+    inline mint<MOD> operator * (mint<MOD> other) const { return mint<MOD>(*this) *= other; }
+    inline mint<MOD> & operator += (mint<MOD> other) { this->value += other.value; if (this->value >= MOD) this->value -= MOD; return *this; }
+    inline mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
+    inline mint<MOD> & operator *= (mint<MOD> other) { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this; }
+    inline mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0, nullptr); }
+    inline mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
     inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }
-    inline constexpr mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
-    inline constexpr mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
-    inline constexpr bool operator == (mint<MOD> other) const { return value == other.value; }
-    inline constexpr bool operator != (mint<MOD> other) const { return value != other.value; }
+    inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
+    inline mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
+    inline bool operator == (mint<MOD> other) const { return value == other.value; }
+    inline bool operator != (mint<MOD> other) const { return value != other.value; }
 };
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }

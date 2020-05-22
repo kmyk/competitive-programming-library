@@ -46,7 +46,7 @@ monoid $M = (M, \cdot, 1)$ の要素の列 $a = (a_0, a_1, \dots, a _ {n - 1}) \
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by

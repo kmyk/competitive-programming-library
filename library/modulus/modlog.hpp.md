@@ -31,16 +31,16 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/modlog.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 23:03:03+09:00
+    - Last commit date: 2020-05-23 00:48:03+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
+* :question: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with
@@ -144,14 +144,14 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
 }
 #line 3 "modulus/modpow.hpp"
 
-inline constexpr int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
-    assert (0 <= x and x < MOD);
+inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
+    assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);
     uint_fast64_t y = 1;
     for (; k; k >>= 1) {
         if (k & 1) (y *= x) %= MOD;
         (x *= x) %= MOD;
     }
-    assert (0 <= y and y < MOD);
+    assert (/* 0 <= y and */ y < (uint_fast64_t)MOD);
     return y;
 }
 #line 2 "utils/macros.hpp"
