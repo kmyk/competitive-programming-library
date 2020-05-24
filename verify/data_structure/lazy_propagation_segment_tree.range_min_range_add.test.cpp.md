@@ -43,7 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

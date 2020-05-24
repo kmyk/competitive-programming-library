@@ -25,31 +25,31 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :question: formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small>
+# :heavy_check_mark: formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/formal_power_series.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-23 00:48:03+09:00
+    - Last commit date: 2020-05-23 02:22:38+09:00
 
 
 
 
 ## Depends on
 
-* :question: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :question: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
-* :question: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
-* :question: <a href="number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
-* :x: <a href="../../verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
 
 
 ## Code
@@ -154,6 +154,7 @@ struct formal_power_series {
     }
     inline formal_power_series<T> log(int n) const {
         assert (at(0) == 1);
+        if (size() == 1) return formal_power_series();
         return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
     inline formal_power_series<T> pow(int k, int n) const {
@@ -440,6 +441,7 @@ struct formal_power_series {
     }
     inline formal_power_series<T> log(int n) const {
         assert (at(0) == 1);
+        if (size() == 1) return formal_power_series();
         return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
     inline formal_power_series<T> pow(int k, int n) const {

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/formal_power_series.exp.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-23 00:48:03+09:00
+    - Last commit date: 2020-05-23 02:22:38+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/exp_of_formal_power_series">https://judge.yosupo.jp/problem/exp_of_formal_power_series</a>
@@ -39,12 +39,12 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../../library/modulus/formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
-* :question: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :question: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :question: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :question: <a href="../../library/modulus/number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -360,6 +360,7 @@ struct formal_power_series {
     }
     inline formal_power_series<T> log(int n) const {
         assert (at(0) == 1);
+        if (size() == 1) return formal_power_series();
         return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
     inline formal_power_series<T> pow(int k, int n) const {

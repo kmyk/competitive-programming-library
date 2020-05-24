@@ -40,13 +40,13 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/data_structure/lazy_propagation_red_black_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_red_black_tree.hpp)</small></a>
-* :question: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :question: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :question: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

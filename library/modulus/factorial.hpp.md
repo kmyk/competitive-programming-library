@@ -38,9 +38,9 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :question: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
-* :question: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 
 
 ## Required by

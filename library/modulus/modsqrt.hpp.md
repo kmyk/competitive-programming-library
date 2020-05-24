@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 
 
 ## Verified with

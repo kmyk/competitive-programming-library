@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modsqrt.hpp.html">find the sqrt $b$ of $a$ modulo $p$ <small>(modulus/modsqrt.hpp)</small></a>
 
 

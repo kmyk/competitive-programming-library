@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :question: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

@@ -39,10 +39,10 @@ layout: default
 ## Depends on
 
 * :warning: <a href="choose_simple.hpp.html">combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small></a>
-* :question: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :question: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
-* :question: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
+* :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
