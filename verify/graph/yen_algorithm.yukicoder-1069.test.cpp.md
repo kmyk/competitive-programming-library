@@ -25,21 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: graph/yen_algorithm.yukicoder-1069.test.cpp
+# :heavy_check_mark: graph/yen_algorithm.yukicoder-1069.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/yen_algorithm.yukicoder-1069.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-30 02:50:25+09:00
+    - Last commit date: 2020-05-30 03:02:40+09:00
 
 
+* see: <a href="https://yukicoder.me/problems/no/1069">https://yukicoder.me/problems/no/1069</a>
 
 
 ## Depends on
 
-* :x: <a href="../../library/graph/yen_algorithm.hpp.html">K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small></a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/graph/yen_algorithm.hpp.html">K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -47,7 +48,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBELM "https://yukicoder.me/problems/no/1069"
+#define PROBLEM "https://yukicoder.me/problems/no/1069"
 #define ERROR 1e-4
 #include <bits/stdc++.h>
 #include "utils/macros.hpp"
@@ -104,7 +105,7 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "graph/yen_algorithm.yukicoder-1069.test.cpp"
-#define PROBELM "https://yukicoder.me/problems/no/1069"
+#define PROBLEM "https://yukicoder.me/problems/no/1069"
 #define ERROR 1e-4
 #include <bits/stdc++.h>
 #line 2 "utils/macros.hpp"

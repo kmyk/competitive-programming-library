@@ -68,7 +68,7 @@ a nice tree decomposition があるとその構成に沿って動的計画法が
 
 ## Depends on
 
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

@@ -40,7 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

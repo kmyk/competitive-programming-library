@@ -42,7 +42,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/monoids/gcd.hpp.html">monoids/gcd.hpp</a>
 * :heavy_check_mark: <a href="../../library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

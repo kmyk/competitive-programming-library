@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small>
+# :heavy_check_mark: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :x: <a href="../../verify/graph/yen_algorithm.yukicoder-1069.test.cpp.html">graph/yen_algorithm.yukicoder-1069.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/yen_algorithm.yukicoder-1069.test.cpp.html">graph/yen_algorithm.yukicoder-1069.test.cpp</a>
 
 
 ## Code
