@@ -43,7 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/reversible.hpp.html">monoids/reversible.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

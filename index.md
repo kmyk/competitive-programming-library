@@ -82,6 +82,7 @@ layout: default
 * :heavy_check_mark: <a href="library/graph/topological_sort.hpp.html">topological sort <small>(graph/topological_sort.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
 * :heavy_check_mark: <a href="library/graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
+* :x: <a href="library/graph/yen_algorithm.hpp.html">K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small></a>
 
 
 <div id="d78b6f30225cdc811adfe8d4e7c9fd34"></div>
@@ -260,7 +261,7 @@ layout: default
 * :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
 
 
@@ -302,6 +303,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/tree_decomposition.aoj_2405.test.cpp.html">graph/tree_decomposition.aoj_2405.test.cpp</a>
+* :x: <a href="verify/graph/yen_algorithm.yukicoder-1069.test.cpp.html">graph/yen_algorithm.yukicoder-1069.test.cpp</a>
 * :heavy_check_mark: <a href="verify/hack/fastio.yosupo.test.cpp.html">hack/fastio.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/hack/fastio_scanner_and_printer.yosupo.test.cpp.html">hack/fastio_scanner_and_printer.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/choose.yukicoder-1035.test.cpp.html">modulus/choose.yukicoder-1035.test.cpp</a>

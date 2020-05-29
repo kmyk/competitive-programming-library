@@ -41,7 +41,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/union_find_tree.hpp.html">Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

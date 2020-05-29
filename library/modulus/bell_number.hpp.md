@@ -47,7 +47,7 @@ layout: default
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by

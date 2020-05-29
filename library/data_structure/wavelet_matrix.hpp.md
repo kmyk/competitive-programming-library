@@ -56,7 +56,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

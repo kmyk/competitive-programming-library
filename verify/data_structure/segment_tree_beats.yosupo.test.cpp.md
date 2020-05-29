@@ -41,7 +41,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

@@ -41,7 +41,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

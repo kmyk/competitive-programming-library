@@ -41,7 +41,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
 * :heavy_check_mark: <a href="../../library/string/suffix_array.hpp.html">Suffix Array / 接尾辞配列 ($O(N (\log N)^2)$, Manber & Myers) <small>(string/suffix_array.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

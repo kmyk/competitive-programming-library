@@ -47,7 +47,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/monoids/dual.hpp.html">monoids/dual.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/reversible.hpp.html">monoids/reversible.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
