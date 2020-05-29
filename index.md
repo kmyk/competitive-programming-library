@@ -71,6 +71,7 @@ layout: default
 
 * :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
 * :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/dijkstra.hpp.html">Dijkstra ($O((E + V) \log V)$) <small>(graph/dijkstra.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
@@ -295,6 +296,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.range_kth_smallest.test.cpp.html">data_structure/wavelet_matrix.range_kth_smallest.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :heavy_check_mark: <a href="verify/graph/dijkstra.yukicoder-1065.test.cpp.html">graph/dijkstra.yukicoder-1065.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/kruskal.aoj.test.cpp.html">graph/kruskal.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
