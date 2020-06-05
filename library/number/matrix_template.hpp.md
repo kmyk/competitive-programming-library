@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number/matrix_template.hpp
+# :heavy_check_mark: number/matrix_template.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -44,6 +44,11 @@ layout: default
 ## Required by
 
 * :warning: <a href="../monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/number/matrix_template.yukicoder-1073.test.cpp.html">number/matrix_template.yukicoder-1073.test.cpp</a>
 
 
 ## Code
