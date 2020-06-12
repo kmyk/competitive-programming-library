@@ -264,7 +264,7 @@ layout: default
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
-* :warning: <a href="library/utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
+* :heavy_check_mark: <a href="library/utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verify Files
@@ -335,5 +335,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/utils/two_satisfiability.yosupo.test.cpp.html">utils/two_satisfiability.yosupo.test.cpp</a>
 
 

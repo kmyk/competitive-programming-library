@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-08 04:11:51+09:00
+    - Last commit date: 2020-06-13 00:00:25+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum">https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum</a>
@@ -434,7 +434,7 @@ inline std::string in() {
     do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
-template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer> and not std::is_same_v<Integer, char>, int> = 0>
 inline Integer in() {
     char c; do { c = getchar_unlocked(); } while (isspace(c));
     if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();

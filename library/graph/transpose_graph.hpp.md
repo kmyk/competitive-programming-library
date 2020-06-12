@@ -46,12 +46,13 @@ layout: default
 
 * :heavy_check_mark: <a href="quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :heavy_check_mark: <a href="strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
-* :warning: <a href="../utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
+* :heavy_check_mark: <a href="../utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/two_satisfiability.yosupo.test.cpp.html">utils/two_satisfiability.yosupo.test.cpp</a>
 
 
 ## Code

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
 * <a href="{{ site.github.repository_url }}/blob/master/string/longest_common_prefix.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-04 19:51:45+09:00
+    - Last commit date: 2020-06-13 00:00:25+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/zalgorithm">https://judge.yosupo.jp/problem/zalgorithm</a>
@@ -230,7 +230,7 @@ inline std::string in() {
     do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
-template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer> and not std::is_same_v<Integer, char>, int> = 0>
 inline Integer in() {
     char c; do { c = getchar_unlocked(); } while (isspace(c));
     if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();

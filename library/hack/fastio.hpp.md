@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#d78b6f30225cdc811adfe8d4e7c9fd34">hack</a>
 * <a href="{{ site.github.repository_url }}/blob/master/hack/fastio.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-02-26 19:41:19+09:00
+    - Last commit date: 2020-06-13 00:00:25+09:00
 
 
 
@@ -56,6 +56,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp.html">modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/string/longest_common_prefix.yosupo.test.cpp.html">string/longest_common_prefix.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/two_satisfiability.yosupo.test.cpp.html">utils/two_satisfiability.yosupo.test.cpp</a>
 
 
 ## Code
@@ -78,7 +79,7 @@ inline std::string in() {
     do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
-template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer> and not std::is_same_v<Integer, char>, int> = 0>
 inline Integer in() {
     char c; do { c = getchar_unlocked(); } while (isspace(c));
     if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
@@ -121,7 +122,7 @@ inline std::string in() {
     do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
-template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer> and not std::is_same_v<Integer, char>, int> = 0>
 inline Integer in() {
     char c; do { c = getchar_unlocked(); } while (isspace(c));
     if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();

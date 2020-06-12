@@ -44,12 +44,13 @@ layout: default
 
 ## Required by
 
-* :warning: <a href="../utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
+* :heavy_check_mark: <a href="../utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/two_satisfiability.yosupo.test.cpp.html">utils/two_satisfiability.yosupo.test.cpp</a>
 
 
 ## Code

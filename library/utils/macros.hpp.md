@@ -85,7 +85,7 @@ layout: default
 * :heavy_check_mark: <a href="coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
-* :warning: <a href="two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
+* :heavy_check_mark: <a href="two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verified with
@@ -150,6 +150,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/utils/two_satisfiability.yosupo.test.cpp.html">utils/two_satisfiability.yosupo.test.cpp</a>
 
 
 ## Code

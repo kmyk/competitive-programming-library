@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-23 00:48:03+09:00
+    - Last commit date: 2020-06-13 00:00:25+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/convolution_mod_1000000007">https://judge.yosupo.jp/problem/convolution_mod_1000000007</a>
@@ -342,7 +342,7 @@ inline std::string in() {
     do { s.push_back(c); } while (not isspace(c = getchar_unlocked()));
     return s;
 }
-template <class Integer, std::enable_if_t<std::is_integral_v<Integer>, int> = 0>
+template <class Integer, std::enable_if_t<std::is_integral_v<Integer> and not std::is_same_v<Integer, char>, int> = 0>
 inline Integer in() {
     char c; do { c = getchar_unlocked(); } while (isspace(c));
     if (std::is_signed<Integer>::value and c == '-') return -in<Integer>();
