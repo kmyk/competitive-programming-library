@@ -43,7 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/monoids/max.hpp.html">monoids/max.hpp</a>
 * :heavy_check_mark: <a href="../../library/old/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small></a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

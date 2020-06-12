@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: 2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small>
+# :warning: 2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,14 +38,9 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
-* :question: <a href="../graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :question: <a href="macros.hpp.html">utils/macros.hpp</a>
-
-
-## Verified with
-
-* :x: <a href="../../verify/utils/two_satisfiability.yukicoder-1078.test.cpp.html">utils/two_satisfiability.yukicoder-1078.test.cpp</a>
+* :heavy_check_mark: <a href="../graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
+* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

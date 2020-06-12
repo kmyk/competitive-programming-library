@@ -51,7 +51,7 @@ layout: default
 * :heavy_check_mark: <a href="permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

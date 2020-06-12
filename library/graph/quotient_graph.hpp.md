@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

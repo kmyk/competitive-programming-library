@@ -39,7 +39,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../number/matrix_template.hpp.html">number/matrix_template.hpp</a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

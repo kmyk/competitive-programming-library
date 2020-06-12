@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :question: utils/macros.hpp
+# :heavy_check_mark: utils/macros.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -57,9 +57,9 @@ layout: default
 * :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :warning: <a href="../graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
-* :question: <a href="../graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/topological_sort.hpp.html">topological sort <small>(graph/topological_sort.hpp)</small></a>
-* :question: <a href="../graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
+* :heavy_check_mark: <a href="../graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
 * :heavy_check_mark: <a href="../graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/bell_number.hpp.html">the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small></a>
 * :warning: <a href="../modulus/choose_simple.hpp.html">combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small></a>
@@ -85,7 +85,7 @@ layout: default
 * :heavy_check_mark: <a href="coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
-* :x: <a href="two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
+* :warning: <a href="two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verified with
@@ -150,7 +150,6 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
-* :x: <a href="../../verify/utils/two_satisfiability.yukicoder-1078.test.cpp.html">utils/two_satisfiability.yukicoder-1078.test.cpp</a>
 
 
 ## Code

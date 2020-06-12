@@ -40,10 +40,10 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
-* :question: <a href="../../library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/topological_sort.hpp.html">topological sort <small>(graph/topological_sort.hpp)</small></a>
-* :question: <a href="../../library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

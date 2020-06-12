@@ -57,7 +57,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

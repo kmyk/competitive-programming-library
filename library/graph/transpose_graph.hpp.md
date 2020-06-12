@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :question: graph/transpose_graph.hpp
+# :heavy_check_mark: graph/transpose_graph.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -39,20 +39,19 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Required by
 
 * :heavy_check_mark: <a href="quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
-* :question: <a href="strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
-* :x: <a href="../utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
+* :heavy_check_mark: <a href="strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
+* :warning: <a href="../utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
-* :x: <a href="../../verify/utils/two_satisfiability.yukicoder-1078.test.cpp.html">utils/two_satisfiability.yukicoder-1078.test.cpp</a>
 
 
 ## Code

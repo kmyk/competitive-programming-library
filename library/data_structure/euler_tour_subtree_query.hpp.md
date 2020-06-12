@@ -49,7 +49,7 @@ layout: default
 
 * :heavy_check_mark: <a href="segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
-* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

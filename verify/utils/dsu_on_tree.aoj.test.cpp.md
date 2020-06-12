@@ -44,7 +44,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus.hpp.html">monoids/plus.hpp</a>
 * :heavy_check_mark: <a href="../../library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

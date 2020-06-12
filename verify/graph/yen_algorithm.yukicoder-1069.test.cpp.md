@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/graph/yen_algorithm.hpp.html">K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small></a>
-* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
