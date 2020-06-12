@@ -47,7 +47,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/modulus/number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/number_theoretic_transformation_with_garner.hpp.html">multiprecation on $\mathbb{Z}/n\mathbb{Z}\[x\]$ <small>(modulus/number_theoretic_transformation_with_garner.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/stirling_number_of_the_second_kind_convolution.hpp.html">the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$ in $O(N \log N)$) <small>(modulus/stirling_number_of_the_second_kind_convolution.hpp)</small></a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

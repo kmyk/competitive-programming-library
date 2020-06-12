@@ -46,7 +46,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code

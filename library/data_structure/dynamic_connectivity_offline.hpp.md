@@ -53,7 +53,7 @@ layout: default
 
 * :heavy_check_mark: <a href="reporting_segment_tree.hpp.html">Dual Segment Tree / 双対セグメント木 (列挙クエリ, 完全二分木) <small>(data_structure/reporting_segment_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="union_find_tree_foldable_undoable.hpp.html">Union-Find Tree (foldable with commutative monoids, undoable) <small>(data_structure/union_find_tree_foldable_undoable.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="../utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Verified with

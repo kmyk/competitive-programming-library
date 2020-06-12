@@ -73,16 +73,16 @@ layout: default
 * :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small></a>
 * :warning: <a href="library/graph/connected_components.hpp.html">graph/connected_components.hpp</a>
 * :heavy_check_mark: <a href="library/graph/dijkstra.hpp.html">Dijkstra ($O((E + V) \log V)$) <small>(graph/dijkstra.hpp)</small></a>
-* :warning: <a href="library/graph/euler_graph.hpp.html">Euler cycle (+ 復元) <small>(graph/euler_graph.hpp)</small></a>
+* :warning: <a href="library/graph/euler_graph.hpp.html">Eulerian cycle (無向, 復元) <small>(graph/euler_graph.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
 * :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
+* :question: <a href="library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/topological_sort.hpp.html">topological sort <small>(graph/topological_sort.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
+* :question: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
 * :heavy_check_mark: <a href="library/graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/yen_algorithm.hpp.html">K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small></a>
 
@@ -241,7 +241,6 @@ layout: default
 * :warning: <a href="library/old/trie-tree.inc.cpp.html">old/trie-tree.inc.cpp</a>
 * :warning: <a href="library/old/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(old/two-edge-connected-components.inc.cpp)</small></a>
 * :warning: <a href="library/old/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(old/two-node-connected-components.inc.cpp)</small></a>
-* :warning: <a href="library/old/twosat.inc.cpp.html">old/twosat.inc.cpp</a>
 * :warning: <a href="library/old/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(old/warshall-floyd.inc.cpp)</small></a>
 * :warning: <a href="library/old/xorshift.inc.cpp.html">old/xorshift.inc.cpp</a>
 
@@ -263,8 +262,9 @@ layout: default
 * :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :question: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
+* :x: <a href="library/utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
 ## Verify Files
@@ -335,5 +335,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
+* :x: <a href="verify/utils/two_satisfiability.yukicoder-1078.test.cpp.html">utils/two_satisfiability.yukicoder-1078.test.cpp</a>
 
 
