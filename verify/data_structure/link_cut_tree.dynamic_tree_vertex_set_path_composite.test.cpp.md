@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-06-13 00:00:25+09:00
+    - Last commit date: 2020-06-16 07:51:56+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite">https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite</a>
@@ -41,7 +41,8 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="../../library/modulus/mint_core.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint_core.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/dual.hpp.html">monoids/dual.hpp</a>
@@ -465,9 +466,8 @@ public:
         return oss.str();
     }
 };
-#line 4 "modulus/mint.hpp"
-#include <iostream>
 #line 3 "modulus/modpow.hpp"
+#include <cstdint>
 
 inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);
@@ -479,7 +479,7 @@ inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= y and */ y < (uint_fast64_t)MOD);
     return y;
 }
-#line 4 "modulus/modinv.hpp"
+#line 5 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -503,8 +503,8 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
     assert (y != -1);
     return y;
 }
-#line 7 "modulus/mint.hpp"
-
+#line 3 "modulus/mint_core.hpp"
+#include <iostream>
 
 /**
  * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
@@ -523,14 +523,15 @@ struct mint {
     inline mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
     inline mint<MOD> & operator *= (mint<MOD> other) { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this; }
     inline mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0, nullptr); }
-    inline mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
-    inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }
-    inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
-    inline mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
     inline bool operator == (mint<MOD> other) const { return value == other.value; }
     inline bool operator != (mint<MOD> other) const { return value != other.value; }
+    inline mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
+    inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }
+    inline mint<MOD> operator / (mint<MOD> other) const { return *this * other.inv(); }
+    inline mint<MOD> & operator /= (mint<MOD> other) { return *this *= other.inv(); }
 };
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
+template <int32_t MOD> mint<MOD> operator / (int64_t value, mint<MOD> n) { return mint<MOD>(value) / n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
 #line 3 "monoids/linear_function.hpp"
@@ -560,8 +561,7 @@ struct dual_monoid {
     value_type unit() const { return base.unit(); }
     value_type mult(const value_type & a, const value_type & b) const { return base.mult(b, a); }
 };
-#line 2 "hack/fastio.hpp"
-#include <cstdint>
+#line 3 "hack/fastio.hpp"
 #include <cstdio>
 #include <string>
 #include <type_traits>

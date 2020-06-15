@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/modinv.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 01:41:19+09:00
+    - Last commit date: 2020-06-16 07:51:56+09:00
 
 
 
@@ -44,7 +44,7 @@ layout: default
 * :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
 * :warning: <a href="garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
-* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
 * :heavy_check_mark: <a href="modlog.hpp.html">discrete log / 離散対数 (the baby-step giant-step, $O(\sqrt{m})$) <small>(modulus/modlog.hpp)</small></a>
 * :heavy_check_mark: <a href="multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
 * :warning: <a href="multichoose_simple.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (愚直 $O(r)$) <small>(modulus/multichoose_simple.hpp)</small></a>
@@ -97,6 +97,7 @@ layout: default
 #pragma once
 #include <algorithm>
 #include <cassert>
+#include <cstdint>
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -130,6 +131,7 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
 #line 2 "modulus/modinv.hpp"
 #include <algorithm>
 #include <cassert>
+#include <cstdint>
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);

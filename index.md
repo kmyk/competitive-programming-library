@@ -107,7 +107,8 @@ layout: default
 * :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
 * :warning: <a href="library/modulus/garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="library/modulus/mint_core.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint_core.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/modlog.hpp.html">discrete log / 離散対数 (the baby-step giant-step, $O(\sqrt{m})$) <small>(modulus/modlog.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>

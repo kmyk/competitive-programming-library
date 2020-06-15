@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/modsqrt.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-23 00:48:03+09:00
+    - Last commit date: 2020-06-16 07:51:56+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/sqrt_mod">https://judge.yosupo.jp/problem/sqrt_mod</a>
@@ -76,7 +76,7 @@ int main() {
 #line 2 "modulus/modsqrt.hpp"
 #include <cassert>
 #include <cstdint>
-#line 3 "modulus/modpow.hpp"
+#line 4 "modulus/modpow.hpp"
 
 inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);

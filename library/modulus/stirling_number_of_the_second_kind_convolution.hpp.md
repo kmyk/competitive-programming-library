@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/stirling_number_of_the_second_kind_convolution.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-23 00:48:03+09:00
+    - Last commit date: 2020-06-16 07:51:56+09:00
 
 
 * see: <a href="https://min-25.hatenablog.com/entry/2015/04/07/160154">https://min-25.hatenablog.com/entry/2015/04/07/160154</a>
@@ -40,7 +40,8 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
+* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
+* :heavy_check_mark: <a href="mint_core.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint_core.hpp)</small></a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
@@ -92,11 +93,8 @@ std::vector<mint<MOD> > stirling_number_of_the_second_kind_convolution(int n) {
 #line 2 "modulus/stirling_number_of_the_second_kind_convolution.hpp"
 #include <cassert>
 #include <vector>
-#line 2 "modulus/mint.hpp"
-#include <algorithm>
-#line 4 "modulus/mint.hpp"
-#include <iostream>
 #line 3 "modulus/modpow.hpp"
+#include <cstdint>
 
 inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);
@@ -108,7 +106,9 @@ inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= y and */ y < (uint_fast64_t)MOD);
     return y;
 }
-#line 4 "modulus/modinv.hpp"
+#line 2 "modulus/modinv.hpp"
+#include <algorithm>
+#line 5 "modulus/modinv.hpp"
 
 inline int32_t modinv_nocheck(int32_t value, int32_t MOD) {
     assert (0 <= value and value < MOD);
@@ -132,8 +132,8 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
     assert (y != -1);
     return y;
 }
-#line 7 "modulus/mint.hpp"
-
+#line 3 "modulus/mint_core.hpp"
+#include <iostream>
 
 /**
  * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
@@ -152,14 +152,15 @@ struct mint {
     inline mint<MOD> & operator -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
     inline mint<MOD> & operator *= (mint<MOD> other) { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this; }
     inline mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value : 0, nullptr); }
-    inline mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
-    inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }
-    inline mint<MOD> operator /  (mint<MOD> other) const { return *this *  other.inv(); }
-    inline mint<MOD> operator /= (mint<MOD> other)       { return *this *= other.inv(); }
     inline bool operator == (mint<MOD> other) const { return value == other.value; }
     inline bool operator != (mint<MOD> other) const { return value != other.value; }
+    inline mint<MOD> pow(uint64_t k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }
+    inline mint<MOD> inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }
+    inline mint<MOD> operator / (mint<MOD> other) const { return *this * other.inv(); }
+    inline mint<MOD> & operator /= (mint<MOD> other) { return *this *= other.inv(); }
 };
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
+template <int32_t MOD> mint<MOD> operator / (int64_t value, mint<MOD> n) { return mint<MOD>(value) / n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
 template <int32_t MOD> std::ostream & operator << (std::ostream & out, mint<MOD> n) { return out << n.value; }
 #line 4 "modulus/factorial.hpp"
@@ -186,8 +187,7 @@ mint<MOD> inv_fact(int n) {
     }
     return memo[n];
 }
-#line 4 "modulus/number_theoretic_transformation_with_garner.hpp"
-#include <cstdint>
+#line 5 "modulus/number_theoretic_transformation_with_garner.hpp"
 #include <tuple>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
