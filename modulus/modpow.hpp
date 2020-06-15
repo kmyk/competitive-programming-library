@@ -1,5 +1,6 @@
 #pragma once
 #include <cassert>
+#include <cstdint>
 
 inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);
