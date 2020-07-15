@@ -45,12 +45,14 @@ layout: default
 
 * :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="../string/longest_common_prefix.hpp.html">Longest Common Prefix / 最長共通接頭辞 (接尾辞配列, 前処理 $O(N (\log N)^2)$ + $O(1)$) <small>(string/longest_common_prefix.hpp)</small></a>
+* :heavy_check_mark: <a href="../utils/greedily_increasing_subsequence.hpp.html">Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/greedily_increasing_subsequence.hpp)</small></a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/sparse_table.yukicoder-1036.test.cpp.html">data_structure/sparse_table.yukicoder-1036.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/cartesian_tree.yukicoder-1031.test.cpp.html">graph/cartesian_tree.yukicoder-1031.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/old/rollback-square-decomposition.yukicoder-1031.test.cpp.html">old/rollback-square-decomposition.yukicoder-1031.test.cpp</a>

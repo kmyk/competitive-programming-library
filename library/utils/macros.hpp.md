@@ -51,8 +51,10 @@ layout: default
 * :heavy_check_mark: <a href="../data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/cartesian_tree.hpp.html">Cartesian tree ($O(n)$) <small>(graph/cartesian_tree.hpp)</small></a>
 * :warning: <a href="../graph/connected_components.hpp.html">graph/connected_components.hpp</a>
 * :warning: <a href="../graph/euler_graph.hpp.html">Eulerian cycle (無向, 復元) <small>(graph/euler_graph.hpp)</small></a>
+* :heavy_check_mark: <a href="../graph/format.hpp.html">graph/format.hpp</a>
 * :heavy_check_mark: <a href="../graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="../graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
@@ -85,6 +87,7 @@ layout: default
 * :heavy_check_mark: <a href="coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
+* :heavy_check_mark: <a href="greedily_increasing_subsequence.hpp.html">Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/greedily_increasing_subsequence.hpp)</small></a>
 * :heavy_check_mark: <a href="two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
 
@@ -117,6 +120,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.range_kth_smallest.test.cpp.html">data_structure/wavelet_matrix.range_kth_smallest.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/graph/cartesian_tree.yukicoder-1031.test.cpp.html">graph/cartesian_tree.yukicoder-1031.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/dijkstra.yukicoder-1065.test.cpp.html">graph/dijkstra.yukicoder-1065.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/kruskal.aoj.test.cpp.html">graph/kruskal.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>

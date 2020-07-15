@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-06-16 07:51:56+09:00
+    - Last commit date: 2020-07-16 00:35:25+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/convolution_mod_1000000007">https://judge.yosupo.jp/problem/convolution_mod_1000000007</a>
@@ -40,8 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="../../library/modulus/mint_core.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint_core.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="../../library/modulus/number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
@@ -99,6 +98,8 @@ int main() {
 #include <cstdint>
 #include <tuple>
 #include <vector>
+#line 3 "modulus/mint.hpp"
+#include <iostream>
 #line 4 "modulus/modpow.hpp"
 
 inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
@@ -135,8 +136,7 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
     assert (y != -1);
     return y;
 }
-#line 3 "modulus/mint_core.hpp"
-#include <iostream>
+#line 6 "modulus/mint.hpp"
 
 /**
  * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
@@ -162,6 +162,8 @@ struct mint {
     inline mint<MOD> operator / (mint<MOD> other) const { return *this * other.inv(); }
     inline mint<MOD> & operator /= (mint<MOD> other) { return *this *= other.inv(); }
 };
+template <int32_t MOD> mint<MOD> operator + (int64_t value, mint<MOD> n) { return mint<MOD>(value) + n; }
+template <int32_t MOD> mint<MOD> operator - (int64_t value, mint<MOD> n) { return mint<MOD>(value) - n; }
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> mint<MOD> operator / (int64_t value, mint<MOD> n) { return mint<MOD>(value) / n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }

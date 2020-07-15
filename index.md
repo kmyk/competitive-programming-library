@@ -70,11 +70,13 @@ layout: default
 ### graph
 
 * :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/cartesian_tree.hpp.html">Cartesian tree ($O(n)$) <small>(graph/cartesian_tree.hpp)</small></a>
 * :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small></a>
 * :warning: <a href="library/graph/connected_components.hpp.html">graph/connected_components.hpp</a>
 * :heavy_check_mark: <a href="library/graph/dijkstra.hpp.html">Dijkstra ($O((E + V) \log V)$) <small>(graph/dijkstra.hpp)</small></a>
 * :warning: <a href="library/graph/euler_graph.hpp.html">Eulerian cycle (無向, 復元) <small>(graph/euler_graph.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
+* :heavy_check_mark: <a href="library/graph/format.hpp.html">graph/format.hpp</a>
 * :heavy_check_mark: <a href="library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
 * :heavy_check_mark: <a href="library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
@@ -107,8 +109,7 @@ layout: default
 * :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
 * :warning: <a href="library/modulus/garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="library/modulus/mint_core.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint_core.hpp)</small></a>
+* :heavy_check_mark: <a href="library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="library/modulus/modlog.hpp.html">discrete log / 離散対数 (the baby-step giant-step, $O(\sqrt{m})$) <small>(modulus/modlog.hpp)</small></a>
 * :heavy_check_mark: <a href="library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
@@ -263,6 +264,7 @@ layout: default
 * :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
+* :heavy_check_mark: <a href="library/utils/greedily_increasing_subsequence.hpp.html">Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/greedily_increasing_subsequence.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
 * :heavy_check_mark: <a href="library/utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
@@ -300,6 +302,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.range_kth_smallest.test.cpp.html">data_structure/wavelet_matrix.range_kth_smallest.test.cpp</a>
 * :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
+* :heavy_check_mark: <a href="verify/graph/cartesian_tree.yukicoder-1031.test.cpp.html">graph/cartesian_tree.yukicoder-1031.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/dijkstra.yukicoder-1065.test.cpp.html">graph/dijkstra.yukicoder-1065.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/kruskal.aoj.test.cpp.html">graph/kruskal.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>

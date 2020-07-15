@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/bell_number.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-06-16 07:51:56+09:00
+    - Last commit date: 2020-07-16 00:35:25+09:00
 
 
 * see: <a href="http://mathworld.wolfram.com/BellNumber.html">http://mathworld.wolfram.com/BellNumber.html</a>
@@ -43,8 +43,7 @@ layout: default
 
 * :heavy_check_mark: <a href="choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
 * :heavy_check_mark: <a href="factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="mint.hpp.html">modulus/mint.hpp</a>
-* :heavy_check_mark: <a href="mint_core.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint_core.hpp)</small></a>
+* :heavy_check_mark: <a href="mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
 * :heavy_check_mark: <a href="modinv.hpp.html">modulus/modinv.hpp</a>
 * :heavy_check_mark: <a href="modpow.hpp.html">modulus/modpow.hpp</a>
 * :heavy_check_mark: <a href="stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
@@ -115,9 +114,12 @@ mint<PRIME> unary_bell_number(int n) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 2 "modulus/mint.hpp"
+#include <cstdint>
+#include <iostream>
 #line 2 "modulus/modpow.hpp"
 #include <cassert>
-#include <cstdint>
+#line 4 "modulus/modpow.hpp"
 
 inline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {
     assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);
@@ -155,8 +157,7 @@ inline int32_t modinv(int32_t x, int32_t MOD) {
     assert (y != -1);
     return y;
 }
-#line 3 "modulus/mint_core.hpp"
-#include <iostream>
+#line 6 "modulus/mint.hpp"
 
 /**
  * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$
@@ -182,6 +183,8 @@ struct mint {
     inline mint<MOD> operator / (mint<MOD> other) const { return *this * other.inv(); }
     inline mint<MOD> & operator /= (mint<MOD> other) { return *this *= other.inv(); }
 };
+template <int32_t MOD> mint<MOD> operator + (int64_t value, mint<MOD> n) { return mint<MOD>(value) + n; }
+template <int32_t MOD> mint<MOD> operator - (int64_t value, mint<MOD> n) { return mint<MOD>(value) - n; }
 template <int32_t MOD> mint<MOD> operator * (int64_t value, mint<MOD> n) { return mint<MOD>(value) * n; }
 template <int32_t MOD> mint<MOD> operator / (int64_t value, mint<MOD> n) { return mint<MOD>(value) / n; }
 template <int32_t MOD> std::istream & operator >> (std::istream & in, mint<MOD> & n) { int64_t value; in >> value; n = value; return in; }
