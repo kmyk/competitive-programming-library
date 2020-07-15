@@ -2,42 +2,30 @@
 #include "utils/macros.hpp"
 #include "graph/cartesian_tree.hpp"
 #include "graph/format.hpp"
-#include "graph/subtree.hpp"
-#include "data_structure/sparse_table.hpp"
-#include "monoids/min.hpp"
+#include "utils/greedily_increasing_subsequence.hpp"
 #include <cstdio>
 #include <functional>
 #include <utility>
 #include <vector>
+
+#include <iostream>
 using namespace std;
 
 int64_t solve1(int n, const vector<int> & p) {
-    // prepare a data structure for LIS
-    vector<int> depth(n);
-    {
-        vector<int> parent = construct_cartesian_tree<int, greater<int> >(p);
-        vector<vector<int> > children; int root; tie(children, root) = children_from_parent(parent);
-        auto g = adjacent_list_from_children(children);
-        auto info = prepare_subtree_info(g, root);
-        REP (x, n) {
-            depth[x] = info[x].depth;
-        }
-    }
-    sparse_table<min_monoid<int> > table(ALL(depth));
-    auto lis = [&](int l, int r) {
-        if (l == r) return 0;
-        return depth[l] - table.range_get(l, r) + 1;
-    };
+    // prepare a data structure for the sequence
+    auto f = greedily_increasing_subsequence::construct<int>(ALL(p));
 
-    // fold the Cartesian tree
+    // construct the Cartesian tree
     vector<int> parent = construct_cartesian_tree(p);
     vector<vector<int> > children; int root; tie(children, root) = children_from_parent(parent);
+
+    // fold the Cartesian tree
     int64_t ans = 0;
     auto go = [&](auto && go, int l, int m, int r) -> void {
         if (l == r) {
             return;
         }
-        ans += lis(m + 1, r);
+        ans += f(m + 1, r);
         for (int x : children[m]) {
             if (x < m) {
                 go(go, l, x, m);
