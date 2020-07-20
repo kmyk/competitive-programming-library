@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/cartesian_tree.yukicoder-1031.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-07-21 05:29:34+09:00
+    - Last commit date: 2020-07-21 05:31:24+09:00
 
 
 * see: <a href="https://yukicoder.me/problems/no/1031">https://yukicoder.me/problems/no/1031</a>
@@ -43,7 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/graph/cartesian_tree.hpp.html">Cartesian tree ($O(n)$) <small>(graph/cartesian_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/format.hpp.html">graph/format.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/left-to-right-maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left-to-right-maxima.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/left_to_right_maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left_to_right_maxima.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -56,7 +56,7 @@ layout: default
 #include "utils/macros.hpp"
 #include "graph/cartesian_tree.hpp"
 #include "graph/format.hpp"
-#include "utils/left-to-right-maxima.hpp"
+#include "utils/left_to_right_maxima.hpp"
 #include <cstdio>
 #include <functional>
 #include <utility>
@@ -186,7 +186,7 @@ std::vector<std::vector<int> > adjacent_list_from_children(const std::vector<std
     }
     return g;
 }
-#line 2 "utils/left-to-right-maxima.hpp"
+#line 2 "utils/left_to_right_maxima.hpp"
 #include <stack>
 #include <tuple>
 #line 5 "data_structure/sparse_table.hpp"
@@ -242,7 +242,7 @@ struct min_monoid {
     value_type unit() const { return std::numeric_limits<T>::max(); }
     value_type mult(value_type a, value_type b) const { return std::min(a, b); }
 };
-#line 9 "utils/left-to-right-maxima.hpp"
+#line 9 "utils/left_to_right_maxima.hpp"
 
 /**
  * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)

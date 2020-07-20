@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left-to-right-maxima.hpp)</small>
+# :heavy_check_mark: Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left_to_right_maxima.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
-* <a href="{{ site.github.repository_url }}/blob/master/utils/left-to-right-maxima.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-07-21 05:29:34+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/utils/left_to_right_maxima.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-07-21 05:31:24+09:00
 
 
 
@@ -122,7 +122,7 @@ public:
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "utils/left-to-right-maxima.hpp"
+#line 2 "utils/left_to_right_maxima.hpp"
 #include <stack>
 #include <tuple>
 #include <utility>
@@ -188,7 +188,7 @@ struct min_monoid {
     value_type unit() const { return std::numeric_limits<T>::max(); }
     value_type mult(value_type a, value_type b) const { return std::min(a, b); }
 };
-#line 9 "utils/left-to-right-maxima.hpp"
+#line 9 "utils/left_to_right_maxima.hpp"
 
 /**
  * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)

@@ -40,7 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
 * :heavy_check_mark: <a href="../string/longest_common_prefix.hpp.html">Longest Common Prefix / 最長共通接頭辞 (接尾辞配列, 前処理 $O(N (\log N)^2)$ + $O(1)$) <small>(string/longest_common_prefix.hpp)</small></a>
-* :heavy_check_mark: <a href="../utils/left-to-right-maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left-to-right-maxima.hpp)</small></a>
+* :heavy_check_mark: <a href="../utils/left_to_right_maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left_to_right_maxima.hpp)</small></a>
 
 
 ## Verified with
