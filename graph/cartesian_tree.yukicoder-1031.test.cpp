@@ -2,7 +2,7 @@
 #include "utils/macros.hpp"
 #include "graph/cartesian_tree.hpp"
 #include "graph/format.hpp"
-#include "utils/greedily_increasing_subsequence.hpp"
+#include "utils/left-to-right-maxima.hpp"
 #include <cstdio>
 #include <functional>
 #include <utility>
@@ -13,7 +13,7 @@ using namespace std;
 
 int64_t solve1(int n, const vector<int> & p) {
     // prepare a data structure for the sequence
-    auto f = greedily_increasing_subsequence::construct<int>(ALL(p));
+    auto f = left_to_right_maxima::construct<int>(ALL(p));
 
     // construct the Cartesian tree
     vector<int> parent = construct_cartesian_tree(p);

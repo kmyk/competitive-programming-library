@@ -8,16 +8,16 @@
 #include "monoids/min.hpp"
 
 /**
- * @brief Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$)
- * @description computes the lengths of the greedily increasing subsubsequence for the given interval
- * @note the greedily increasing subsubsequence for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
+ * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)
+ * @description computes the lengths of the left-to-right maxima for the given interval
+ * @note the left-to-right maxima for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
  */
-class greedily_increasing_subsequence {
+class left_to_right_maxima {
     std::vector<int> depth;
     sparse_table<min_monoid<int> > table;
 
 public:
-    greedily_increasing_subsequence() = default;
+    left_to_right_maxima() = default;
 
     int operator () (int l, int r) const {
         assert (0 <= l and l <= r and r <= (int)depth.size());
@@ -26,7 +26,7 @@ public:
     }
 
 private:
-    greedily_increasing_subsequence(const std::vector<int> & depth_)
+    left_to_right_maxima(const std::vector<int> & depth_)
             : depth(depth_), table(ALL(depth_)) {
     }
 
@@ -35,7 +35,7 @@ public:
      * @note this is just a constructor, but is needed to specify template arguments.
      */
     template <class T, class Comparator = std::less<T>, class RandomAccessIterator>
-    static greedily_increasing_subsequence construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
+    static left_to_right_maxima construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
         int n = std::distance(first, last);
 
         // make a forest
@@ -57,6 +57,6 @@ public:
             }
         }
 
-        return greedily_increasing_subsequence(depth);
+        return left_to_right_maxima(depth);
     }
 };
