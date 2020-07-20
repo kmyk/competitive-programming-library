@@ -2,7 +2,7 @@
 #include "utils/macros.hpp"
 #include "graph/cartesian_tree.hpp"
 #include "graph/format.hpp"
-#include "utils/left-to-right-maxima.hpp"
+#include "utils/left_to_right_maxima.hpp"
 #include <cstdio>
 #include <functional>
 #include <utility>
