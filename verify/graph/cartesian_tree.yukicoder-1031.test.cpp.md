@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/cartesian_tree.yukicoder-1031.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-07-16 03:08:35+09:00
+    - Last commit date: 2020-07-21 05:29:34+09:00
 
 
 * see: <a href="https://yukicoder.me/problems/no/1031">https://yukicoder.me/problems/no/1031</a>
@@ -43,7 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="../../library/graph/cartesian_tree.hpp.html">Cartesian tree ($O(n)$) <small>(graph/cartesian_tree.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/graph/format.hpp.html">graph/format.hpp</a>
 * :heavy_check_mark: <a href="../../library/monoids/min.hpp.html">monoids/min.hpp</a>
-* :heavy_check_mark: <a href="../../library/utils/greedily_increasing_subsequence.hpp.html">Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/greedily_increasing_subsequence.hpp)</small></a>
+* :heavy_check_mark: <a href="../../library/utils/left-to-right-maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left-to-right-maxima.hpp)</small></a>
 * :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
@@ -56,7 +56,7 @@ layout: default
 #include "utils/macros.hpp"
 #include "graph/cartesian_tree.hpp"
 #include "graph/format.hpp"
-#include "utils/greedily_increasing_subsequence.hpp"
+#include "utils/left-to-right-maxima.hpp"
 #include <cstdio>
 #include <functional>
 #include <utility>
@@ -67,7 +67,7 @@ using namespace std;
 
 int64_t solve1(int n, const vector<int> & p) {
     // prepare a data structure for the sequence
-    auto f = greedily_increasing_subsequence::construct<int>(ALL(p));
+    auto f = left_to_right_maxima::construct<int>(ALL(p));
 
     // construct the Cartesian tree
     vector<int> parent = construct_cartesian_tree(p);
@@ -186,7 +186,7 @@ std::vector<std::vector<int> > adjacent_list_from_children(const std::vector<std
     }
     return g;
 }
-#line 2 "utils/greedily_increasing_subsequence.hpp"
+#line 2 "utils/left-to-right-maxima.hpp"
 #include <stack>
 #include <tuple>
 #line 5 "data_structure/sparse_table.hpp"
@@ -242,19 +242,19 @@ struct min_monoid {
     value_type unit() const { return std::numeric_limits<T>::max(); }
     value_type mult(value_type a, value_type b) const { return std::min(a, b); }
 };
-#line 9 "utils/greedily_increasing_subsequence.hpp"
+#line 9 "utils/left-to-right-maxima.hpp"
 
 /**
- * @brief Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$)
- * @description computes the lengths of the greedily increasing subsubsequence for the given interval
- * @note the greedily increasing subsubsequence for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
+ * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)
+ * @description computes the lengths of the left-to-right maxima for the given interval
+ * @note the left-to-right maxima for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
  */
-class greedily_increasing_subsequence {
+class left_to_right_maxima {
     std::vector<int> depth;
     sparse_table<min_monoid<int> > table;
 
 public:
-    greedily_increasing_subsequence() = default;
+    left_to_right_maxima() = default;
 
     int operator () (int l, int r) const {
         assert (0 <= l and l <= r and r <= (int)depth.size());
@@ -263,7 +263,7 @@ public:
     }
 
 private:
-    greedily_increasing_subsequence(const std::vector<int> & depth_)
+    left_to_right_maxima(const std::vector<int> & depth_)
             : depth(depth_), table(ALL(depth_)) {
     }
 
@@ -272,7 +272,7 @@ public:
      * @note this is just a constructor, but is needed to specify template arguments.
      */
     template <class T, class Comparator = std::less<T>, class RandomAccessIterator>
-    static greedily_increasing_subsequence construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
+    static left_to_right_maxima construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
         int n = std::distance(first, last);
 
         // make a forest
@@ -294,7 +294,7 @@ public:
             }
         }
 
-        return greedily_increasing_subsequence(depth);
+        return left_to_right_maxima(depth);
     }
 };
 #line 6 "graph/cartesian_tree.yukicoder-1031.test.cpp"
@@ -306,7 +306,7 @@ using namespace std;
 
 int64_t solve1(int n, const vector<int> & p) {
     // prepare a data structure for the sequence
-    auto f = greedily_increasing_subsequence::construct<int>(ALL(p));
+    auto f = left_to_right_maxima::construct<int>(ALL(p));
 
     // construct the Cartesian tree
     vector<int> parent = construct_cartesian_tree(p);

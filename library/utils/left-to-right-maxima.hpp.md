@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/greedily_increasing_subsequence.hpp)</small>
+# :heavy_check_mark: Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left-to-right-maxima.hpp)</small>
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
-* <a href="{{ site.github.repository_url }}/blob/master/utils/greedily_increasing_subsequence.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-07-16 03:08:35+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/utils/left-to-right-maxima.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-07-21 05:29:34+09:00
 
 
 
@@ -63,16 +63,16 @@ layout: default
 #include "monoids/min.hpp"
 
 /**
- * @brief Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$)
- * @description computes the lengths of the greedily increasing subsubsequence for the given interval
- * @note the greedily increasing subsubsequence for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
+ * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)
+ * @description computes the lengths of the left-to-right maxima for the given interval
+ * @note the left-to-right maxima for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
  */
-class greedily_increasing_subsequence {
+class left_to_right_maxima {
     std::vector<int> depth;
     sparse_table<min_monoid<int> > table;
 
 public:
-    greedily_increasing_subsequence() = default;
+    left_to_right_maxima() = default;
 
     int operator () (int l, int r) const {
         assert (0 <= l and l <= r and r <= (int)depth.size());
@@ -81,7 +81,7 @@ public:
     }
 
 private:
-    greedily_increasing_subsequence(const std::vector<int> & depth_)
+    left_to_right_maxima(const std::vector<int> & depth_)
             : depth(depth_), table(ALL(depth_)) {
     }
 
@@ -90,7 +90,7 @@ public:
      * @note this is just a constructor, but is needed to specify template arguments.
      */
     template <class T, class Comparator = std::less<T>, class RandomAccessIterator>
-    static greedily_increasing_subsequence construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
+    static left_to_right_maxima construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
         int n = std::distance(first, last);
 
         // make a forest
@@ -112,7 +112,7 @@ public:
             }
         }
 
-        return greedily_increasing_subsequence(depth);
+        return left_to_right_maxima(depth);
     }
 };
 
@@ -122,7 +122,7 @@ public:
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "utils/greedily_increasing_subsequence.hpp"
+#line 2 "utils/left-to-right-maxima.hpp"
 #include <stack>
 #include <tuple>
 #include <utility>
@@ -188,19 +188,19 @@ struct min_monoid {
     value_type unit() const { return std::numeric_limits<T>::max(); }
     value_type mult(value_type a, value_type b) const { return std::min(a, b); }
 };
-#line 9 "utils/greedily_increasing_subsequence.hpp"
+#line 9 "utils/left-to-right-maxima.hpp"
 
 /**
- * @brief Length of Greedily Increasing Subsequences (前処理 $O(n \log n)$ + $O(1)$)
- * @description computes the lengths of the greedily increasing subsubsequence for the given interval
- * @note the greedily increasing subsubsequence for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
+ * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)
+ * @description computes the lengths of the left-to-right maxima for the given interval
+ * @note the left-to-right maxima for a sequence $a$ means the subsubsequence of the elements $a_i$ which satisfy $\forall j \lt i. a_j \lt a_i$.
  */
-class greedily_increasing_subsequence {
+class left_to_right_maxima {
     std::vector<int> depth;
     sparse_table<min_monoid<int> > table;
 
 public:
-    greedily_increasing_subsequence() = default;
+    left_to_right_maxima() = default;
 
     int operator () (int l, int r) const {
         assert (0 <= l and l <= r and r <= (int)depth.size());
@@ -209,7 +209,7 @@ public:
     }
 
 private:
-    greedily_increasing_subsequence(const std::vector<int> & depth_)
+    left_to_right_maxima(const std::vector<int> & depth_)
             : depth(depth_), table(ALL(depth_)) {
     }
 
@@ -218,7 +218,7 @@ public:
      * @note this is just a constructor, but is needed to specify template arguments.
      */
     template <class T, class Comparator = std::less<T>, class RandomAccessIterator>
-    static greedily_increasing_subsequence construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
+    static left_to_right_maxima construct(RandomAccessIterator first, RandomAccessIterator last, const Comparator & cmp = Comparator()) {
         int n = std::distance(first, last);
 
         // make a forest
@@ -240,7 +240,7 @@ public:
             }
         }
 
-        return greedily_increasing_subsequence(depth);
+        return left_to_right_maxima(depth);
     }
 };
 
