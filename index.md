@@ -212,7 +212,6 @@ layout: default
 * :warning: <a href="library/old/marathon.inc.cpp.html">old/marathon.inc.cpp</a>
 * :warning: <a href="library/old/matrix.inc.cpp.html">old/matrix.inc.cpp</a>
 * :warning: <a href="library/old/maximum-independent-set.inc.cpp.html">old/maximum-independent-set.inc.cpp</a>
-* :warning: <a href="library/old/mex.inc.cpp.html">minimum excluded value <small>(old/mex.inc.cpp)</small></a>
 * :warning: <a href="library/old/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(old/midpoint.inc.cpp)</small></a>
 * :warning: <a href="library/old/miller-rabin.inc.cpp.html">old/miller-rabin.inc.cpp</a>
 * :warning: <a href="library/old/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(old/minimum-cost-flow.inc.cpp)</small></a>
@@ -266,6 +265,8 @@ layout: default
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/left_to_right_maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left_to_right_maxima.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
+* :warning: <a href="library/utils/mex.hpp.html">Minimum Excluded Value ($O(n)$ for a given sorted container) <small>(utils/mex.hpp)</small></a>
+* :warning: <a href="library/utils/mex_calculator.hpp.html">utils/mex_calculator.hpp</a>
 * :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
 * :heavy_check_mark: <a href="library/utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
 
