@@ -59,8 +59,23 @@ struct prepared_primes {
         return result;
     }
 
+    /**
+     * @note O(1) if n < size; O(sqrt n) if size <= n < size^2
+     */
     bool is_prime(int64_t n) {
-        return list_prime_factors(n).size() == 1;
+        assert (1 <= n and n < (int64_t)size * size);
+        if (n < size) {
+            return sieve[n] == n;
+        }
+        for (int p : primes) {
+            if (n < (int64_t)p * p) {
+                break;
+            }
+            if (n % p == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     std::vector<int64_t> list_all_factors(int64_t n) {
