@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#06efba23b1f3a9b846a25c6b49f30348">modulus</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modulus/formal_power_series.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-07-16 00:35:25+09:00
+    - Last commit date: 2020-08-01 00:51:48+09:00
 
 
 
@@ -50,6 +50,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/modulus/formal_power_series.yukicoder-1145.test.cpp.html">modulus/formal_power_series.yukicoder-1145.test.cpp</a>
 
 
 ## Code
@@ -113,6 +114,13 @@ struct formal_power_series {
         REP (i, size()) a[i] *= b;
         return *this;
     }
+    inline formal_power_series<T> operator / (T b) {
+        return formal_power_series<T>(a) /= b;
+    }
+    inline formal_power_series<T> & operator /= (T b) {
+        REP (i, size()) a[i] /= b;
+        return *this;
+    }
 
     inline formal_power_series<T> integral() const {
         std::vector<T> b(size() + 1);
@@ -153,7 +161,8 @@ struct formal_power_series {
         return f.modulo_x_to(n);
     }
     inline formal_power_series<T> log(int n) const {
-        assert (at(0) == 1);
+        assert (at(0) != 0);
+        if (at(0) != 1) return (formal_power_series<T>(a) / at(0)).log(n) * at(0);
         if (size() == 1) return formal_power_series();
         return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
@@ -161,6 +170,28 @@ struct formal_power_series {
         return (this->log(n) * k).exp(n);
     }
 };
+
+template <class T>
+inline formal_power_series<T> operator - (const formal_power_series<T> & f) {
+    return formal_power_series<T>(f) *= -1;
+}
+
+template <class T>
+std::ostream & operator << (std::ostream & out, const formal_power_series<T> & f) {
+    bool is_zero = true;
+    REP (i, f.size()) {
+        if (f.at(i)) {
+            if (not is_zero) out << '+';
+            out << f.at(i);
+            if (i) out << "x^" << i;
+            is_zero = false;
+        }
+    }
+    if (is_zero) {
+        out << "0";
+    }
+    return out;
+}
 
 ```
 {% endraw %}
@@ -402,6 +433,13 @@ struct formal_power_series {
         REP (i, size()) a[i] *= b;
         return *this;
     }
+    inline formal_power_series<T> operator / (T b) {
+        return formal_power_series<T>(a) /= b;
+    }
+    inline formal_power_series<T> & operator /= (T b) {
+        REP (i, size()) a[i] /= b;
+        return *this;
+    }
 
     inline formal_power_series<T> integral() const {
         std::vector<T> b(size() + 1);
@@ -442,7 +480,8 @@ struct formal_power_series {
         return f.modulo_x_to(n);
     }
     inline formal_power_series<T> log(int n) const {
-        assert (at(0) == 1);
+        assert (at(0) != 0);
+        if (at(0) != 1) return (formal_power_series<T>(a) / at(0)).log(n) * at(0);
         if (size() == 1) return formal_power_series();
         return (this->differential() * this->inv(n - 1)).modulo_x_to(n - 1).integral();
     }
@@ -450,6 +489,28 @@ struct formal_power_series {
         return (this->log(n) * k).exp(n);
     }
 };
+
+template <class T>
+inline formal_power_series<T> operator - (const formal_power_series<T> & f) {
+    return formal_power_series<T>(f) *= -1;
+}
+
+template <class T>
+std::ostream & operator << (std::ostream & out, const formal_power_series<T> & f) {
+    bool is_zero = true;
+    REP (i, f.size()) {
+        if (f.at(i)) {
+            if (not is_zero) out << '+';
+            out << f.at(i);
+            if (i) out << "x^" << i;
+            is_zero = false;
+        }
+    }
+    if (is_zero) {
+        out << "0";
+    }
+    return out;
+}
 
 ```
 {% endraw %}

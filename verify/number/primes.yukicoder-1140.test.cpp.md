@@ -25,21 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small>
+# :heavy_check_mark: number/primes.yukicoder-1140.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#2b3583e6e17721c54496bd04e57a0c15">utils</a>
-* <a href="{{ site.github.repository_url }}/blob/master/utils/fast_zeta_transform.hpp">View this file on GitHub</a>
+* category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
+* <a href="{{ site.github.repository_url }}/blob/master/number/primes.yukicoder-1140.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-08-01 00:51:48+09:00
 
 
+* see: <a href="https://yukicoder.me/problems/no/1140">https://yukicoder.me/problems/no/1140</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../number/primes.hpp.html">number/primes.hpp</a>
-* :heavy_check_mark: <a href="macros.hpp.html">utils/macros.hpp</a>
+* :heavy_check_mark: <a href="../../library/number/primes.hpp.html">number/primes.hpp</a>
+* :heavy_check_mark: <a href="../../library/utils/macros.hpp.html">utils/macros.hpp</a>
 
 
 ## Code
@@ -47,31 +48,27 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#pragma once
-#include <cassert>
-#include <vector>
-#include "number/primes.hpp"
+#define PROBLEM "https://yukicoder.me/problems/no/1140"
+#include <cstdio>
 #include "utils/macros.hpp"
+#include "number/primes.hpp"
 
-/**
- * @brief upward fast zeta transform on primes
- * @note $O(n \log n)$ (or, $O(n \log \log n)$ ???)
- * @return $b_i = \sum _ {i \mid j} a_j$
- * @note $a_0, b_0$ means the greatest element
- */
-template <class CommutativeSemiring>
-std::vector<typename CommutativeSemiring::value_type> upward_fast_zeta_transform_on_primes(std::vector<typename CommutativeSemiring::value_type> a, const prepared_primes & primes, const CommutativeSemiring & mon = CommutativeSemiring()) {
-    assert (a.size() <= primes.size);
-    if (a.empty()) return a;
-    for (int64_t p : primes.primes) {
-        REP3R (x, 1, (a.size() - 1) / p + 1) {
-            a[x] = mon.mult(a[x], a[p * x]);
-        }
+prepared_primes primes(1e6 + 100);
+
+int solve(long long a, int p) {
+    if (not primes.is_prime(p)) return -1;
+    if (a % p == 0) return 0;
+    return 1;
+}
+
+int main() {
+    int t; scanf("%d", &t);
+    while (t --) {
+        long long a; int p; scanf("%lld%d", &a, &p);
+        auto ans = solve(a, p);
+        printf("%d\n", ans);
     }
-    REP3 (x, 1, a.size()) {
-        a[x] = mon.mult(a[x], a[0]);
-    }
-    return a;
+    return 0;
 }
 
 ```
@@ -80,20 +77,21 @@ std::vector<typename CommutativeSemiring::value_type> upward_fast_zeta_transform
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "utils/fast_zeta_transform.hpp"
-#include <cassert>
-#include <vector>
-#line 2 "number/primes.hpp"
-#include <algorithm>
-#line 4 "number/primes.hpp"
-#include <cstdint>
-#include <map>
+#line 1 "number/primes.yukicoder-1140.test.cpp"
+#define PROBLEM "https://yukicoder.me/problems/no/1140"
+#include <cstdio>
 #line 2 "utils/macros.hpp"
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
 #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))
 #define REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))
 #define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))
 #define ALL(x) std::begin(x), std::end(x)
+#line 2 "number/primes.hpp"
+#include <algorithm>
+#include <cassert>
+#include <cstdint>
+#include <map>
+#include <vector>
 #line 8 "number/primes.hpp"
 
 /**
@@ -208,27 +206,24 @@ struct prepared_primes {
         return phi;
     }
 };
-#line 6 "utils/fast_zeta_transform.hpp"
+#line 5 "number/primes.yukicoder-1140.test.cpp"
 
-/**
- * @brief upward fast zeta transform on primes
- * @note $O(n \log n)$ (or, $O(n \log \log n)$ ???)
- * @return $b_i = \sum _ {i \mid j} a_j$
- * @note $a_0, b_0$ means the greatest element
- */
-template <class CommutativeSemiring>
-std::vector<typename CommutativeSemiring::value_type> upward_fast_zeta_transform_on_primes(std::vector<typename CommutativeSemiring::value_type> a, const prepared_primes & primes, const CommutativeSemiring & mon = CommutativeSemiring()) {
-    assert (a.size() <= primes.size);
-    if (a.empty()) return a;
-    for (int64_t p : primes.primes) {
-        REP3R (x, 1, (a.size() - 1) / p + 1) {
-            a[x] = mon.mult(a[x], a[p * x]);
-        }
+prepared_primes primes(1e6 + 100);
+
+int solve(long long a, int p) {
+    if (not primes.is_prime(p)) return -1;
+    if (a % p == 0) return 0;
+    return 1;
+}
+
+int main() {
+    int t; scanf("%d", &t);
+    while (t --) {
+        long long a; int p; scanf("%lld%d", &a, &p);
+        auto ans = solve(a, p);
+        printf("%d\n", ans);
     }
-    REP3 (x, 1, a.size()) {
-        a[x] = mon.mult(a[x], a[0]);
-    }
-    return a;
+    return 0;
 }
 
 ```

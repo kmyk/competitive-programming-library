@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#b1bc248a7ff2b2e95569f56de68615df">number</a>
 * <a href="{{ site.github.repository_url }}/blob/master/number/primes.aoj.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 19:02:34+09:00
+    - Last commit date: 2020-08-01 00:51:48+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C</a>
@@ -140,8 +140,23 @@ struct prepared_primes {
         return result;
     }
 
+    /**
+     * @note O(1) if n < size; O(sqrt n) if size <= n < size^2
+     */
     bool is_prime(int64_t n) {
-        return list_prime_factors(n).size() == 1;
+        assert (1 <= n and n < (int64_t)size * size);
+        if (n < size) {
+            return sieve[n] == n;
+        }
+        for (int p : primes) {
+            if (n < (int64_t)p * p) {
+                break;
+            }
+            if (n % p == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     std::vector<int64_t> list_all_factors(int64_t n) {

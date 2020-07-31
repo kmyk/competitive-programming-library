@@ -317,6 +317,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
+* :heavy_check_mark: <a href="verify/modulus/formal_power_series.yukicoder-1145.test.cpp.html">modulus/formal_power_series.yukicoder-1145.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/modlog.yosupo.test.cpp.html">modulus/modlog.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/modsqrt.yosupo.test.cpp.html">modulus/modsqrt.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/number_theoretic_transformation.yosupo.test.cpp.html">modulus/number_theoretic_transformation.yosupo.test.cpp</a>
@@ -335,6 +336,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/matrix_template.yukicoder-1073.test.cpp.html">number/matrix_template.yukicoder-1073.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
+* :heavy_check_mark: <a href="verify/number/primes.yukicoder-1140.test.cpp.html">number/primes.yukicoder-1140.test.cpp</a>
 * :heavy_check_mark: <a href="verify/old/rollback-square-decomposition.yukicoder-1031.test.cpp.html">old/rollback-square-decomposition.yukicoder-1031.test.cpp</a>
 * :heavy_check_mark: <a href="verify/string/longest_common_prefix.yosupo.test.cpp.html">string/longest_common_prefix.yosupo.test.cpp</a>
 * :heavy_check_mark: <a href="verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
