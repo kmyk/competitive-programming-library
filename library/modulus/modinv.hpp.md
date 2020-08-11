@@ -87,6 +87,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/fast_fourier_transformation.yukicoder-856.test.cpp.html">number/fast_fourier_transformation.yukicoder-856.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/matrix_template.yukicoder-1073.test.cpp.html">number/matrix_template.yukicoder-1073.test.cpp</a>
 
 

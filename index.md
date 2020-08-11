@@ -160,8 +160,9 @@ layout: default
 
 ### number
 
-* :warning: <a href="library/number/fast_fourier_transformation.hpp.html">the convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="library/number/fast_fourier_transformation.hpp.html">FFT convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
 * :heavy_check_mark: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
+* :warning: <a href="library/number/karatsuba.hpp.html">Karatsuba method ($O(n^{\log_2 3})$) <small>(number/karatsuba.hpp)</small></a>
 * :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
 * :heavy_check_mark: <a href="library/number/matrix_template.hpp.html">number/matrix_template.hpp</a>
 * :heavy_check_mark: <a href="library/number/primes.hpp.html">number/primes.hpp</a>
@@ -244,6 +245,19 @@ layout: default
 * :warning: <a href="library/old/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(old/two-node-connected-components.inc.cpp)</small></a>
 * :warning: <a href="library/old/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(old/warshall-floyd.inc.cpp)</small></a>
 * :warning: <a href="library/old/xorshift.inc.cpp.html">old/xorshift.inc.cpp</a>
+
+
+<div id="23eeeb4347bdd26bfc6b7ee9a3b755dd"></div>
+
+### python
+
+* :warning: <a href="library/python/binary_search.py.html">python/binary_search.py</a>
+* :warning: <a href="library/python/chinese_remainder_theorem.py.html">python/chinese_remainder_theorem.py</a>
+* :warning: <a href="library/python/choose.py.html">python/choose.py</a>
+* :warning: <a href="library/python/extgcd.py.html">python/extgcd.py</a>
+* :warning: <a href="library/python/matrix-modinv.py.html">python/matrix-modinv.py</a>
+* :warning: <a href="library/python/miller_rabin.py.html">python/miller_rabin.py</a>
+* :warning: <a href="library/python/rational-gcd.py.html">python/rational-gcd.py</a>
 
 
 <div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
@@ -335,6 +349,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
 * :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
+* :heavy_check_mark: <a href="verify/number/fast_fourier_transformation.yukicoder-856.test.cpp.html">number/fast_fourier_transformation.yukicoder-856.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/matrix_template.yukicoder-1073.test.cpp.html">number/matrix_template.yukicoder-1073.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="verify/number/primes.yukicoder-1140.test.cpp.html">number/primes.yukicoder-1140.test.cpp</a>

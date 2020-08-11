@@ -77,7 +77,8 @@ layout: default
 * :heavy_check_mark: <a href="../modulus/stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
 * :heavy_check_mark: <a href="../modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
 * :warning: <a href="../monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
-* :warning: <a href="../number/fast_fourier_transformation.hpp.html">the convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
+* :heavy_check_mark: <a href="../number/fast_fourier_transformation.hpp.html">FFT convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
+* :warning: <a href="../number/karatsuba.hpp.html">Karatsuba method ($O(n^{\log_2 3})$) <small>(number/karatsuba.hpp)</small></a>
 * :warning: <a href="../number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
 * :heavy_check_mark: <a href="../number/matrix_template.hpp.html">number/matrix_template.hpp</a>
 * :heavy_check_mark: <a href="../number/primes.hpp.html">number/primes.hpp</a>
@@ -149,6 +150,7 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/number/fast_fourier_transformation.yukicoder-856.test.cpp.html">number/fast_fourier_transformation.yukicoder-856.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/matrix_template.yukicoder-1073.test.cpp.html">number/matrix_template.yukicoder-1073.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/number/primes.yukicoder-1140.test.cpp.html">number/primes.yukicoder-1140.test.cpp</a>
