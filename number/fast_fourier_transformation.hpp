@@ -63,12 +63,12 @@ std::vector<std::complex<R> > ifft(std::vector<std::complex<R> > f) {
 }
 
 /**
- * @brief the convolution
+ * @brief FFT convolution
  * @note O(N log N)
  * @note (f \ast g)(i) = \sum_{0 \le j \lt i + 1} f(j) g(i - j)
  */
 template <typename T, typename R = double>
-std::vector<T> convolution(std::vector<T> const & a, std::vector<T> const & b) {
+std::vector<T> fft_convolution(std::vector<T> const & a, std::vector<T> const & b) {
     assert (not a.empty() and not b.empty());
     int m = a.size() + b.size() - 1;
     int n = pow(2, ceil(log2(m)));
