@@ -277,6 +277,8 @@ layout: default
 * :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
 * :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
 * :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
+* :warning: <a href="library/utils/interval_map.hpp.html">map from disjoint intervals <small>(utils/interval_map.hpp)</small></a>
+* :warning: <a href="library/utils/interval_set.hpp.html">set of disjoint intervals <small>(utils/interval_set.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/left_to_right_maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left_to_right_maxima.hpp)</small></a>
 * :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
 * :warning: <a href="library/utils/mex.hpp.html">Minimum Excluded Value ($O(n)$ for a given sorted container) <small>(utils/mex.hpp)</small></a>
