@@ -1,365 +1,848 @@
 ---
-layout: default
+data:
+  libraryCategories:
+  - name: data_structure
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: data_structure/convex_hull_trick.hpp
+      title: "Convex Hull Trick (\u975E\u5358\u8ABF, online)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/dual_segment_tree.hpp
+      title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
+        \ (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/dynamic_connectivity_offline.hpp
+      title: Dynamic Connectivity (offline, commutative monoids)
+    - icon: ':heavy_check_mark:'
+      path: data_structure/euler_tour_subtree_query.hpp
+      title: Euler Tour (subtree queries, with commutative monoids)
+    - icon: ':heavy_check_mark:'
+      path: data_structure/fully_indexable_dictionary.hpp
+      title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/lazy_propagation_red_black_tree.hpp
+      title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\
+        \u30E1\u30F3\u30C8\u6728 (monoids, \u8D64\u9ED2\u6728)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/lazy_propagation_segment_tree.hpp
+      title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\
+        \u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/li_chao_tree.hpp
+      title: Li-Chao tree
+    - icon: ':heavy_check_mark:'
+      path: data_structure/link_cut_tree.hpp
+      title: Link-Cut tree (monoids without commutativity, vertex set + path get)
+    - icon: ':heavy_check_mark:'
+      path: data_structure/reporting_segment_tree.hpp
+      title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
+        \ (\u5217\u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree.hpp
+      title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\
+        \u5168\u4E8C\u5206\u6728)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree_beats.hpp
+      title: "Segment Tree Beats (range {chmin, chmax, add, update} + range {min,\
+        \ max, sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/sliding_window_aggregation.hpp
+      title: "Sliding Window Aggregation / \u542B\u307E\u308C\u308B\u8981\u7D20\u306E\
+        \u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\u3068\
+        \u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/sparse_table.hpp
+      title: Sparse Table (idempotent monoid)
+    - icon: ':heavy_check_mark:'
+      path: data_structure/union_find_tree.hpp
+      title: Union-Find Tree
+    - icon: ':heavy_check_mark:'
+      path: data_structure/union_find_tree_foldable_undoable.hpp
+      title: Union-Find Tree (foldable with commutative monoids, undoable)
+    - icon: ':heavy_check_mark:'
+      path: data_structure/union_find_tree_with_monoid.hpp
+      title: a disjoint set structure with monoid
+    - icon: ':heavy_check_mark:'
+      path: data_structure/wavelet_matrix.hpp
+      title: Wavelet Matrix
+  - name: graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: graph/bellman_ford.hpp
+      title: Bellman-Ford algorithm
+    - icon: ':heavy_check_mark:'
+      path: graph/cartesian_tree.hpp
+      title: Cartesian tree ($O(n)$)
+    - icon: ':warning:'
+      path: graph/catapillar_graph.hpp
+      title: get a central path of a catapillar graph
+    - icon: ':warning:'
+      path: graph/connected_components.hpp
+      title: graph/connected_components.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/dijkstra.hpp
+      title: Dijkstra ($O((E + V) \log V)$)
+    - icon: ':warning:'
+      path: graph/euler_graph.hpp
+      title: "Eulerian cycle (\u7121\u5411, \u5FA9\u5143)"
+    - icon: ':heavy_check_mark:'
+      path: graph/euler_tour_preorder.hpp
+      title: Euler Tour (preorder)
+    - icon: ':heavy_check_mark:'
+      path: graph/format.hpp
+      title: graph/format.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/kruskal.hpp
+      title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
+    - icon: ':heavy_check_mark:'
+      path: graph/lowest_common_ancestor.hpp
+      title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\
+        \u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+    - icon: ':heavy_check_mark:'
+      path: graph/quotient_graph.hpp
+      title: graph/quotient_graph.hpp
+    - icon: ':warning:'
+      path: graph/shortest_path_faster_algorithm.hpp
+      title: Shortest Path Faster Algorithm
+    - icon: ':heavy_check_mark:'
+      path: graph/strongly_connected_components.hpp
+      title: "strongly connected components decomposition, Kosaraju's algorithm /\
+        \ \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    - icon: ':heavy_check_mark:'
+      path: graph/subtree.hpp
+      title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
+        \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\
+        \u3081\u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
+    - icon: ':heavy_check_mark:'
+      path: graph/topological_sort.hpp
+      title: topological sort
+    - icon: ':heavy_check_mark:'
+      path: graph/transpose_graph.hpp
+      title: graph/transpose_graph.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/tree_decomposition.hpp
+      title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
+    - icon: ':heavy_check_mark:'
+      path: graph/yen_algorithm.hpp
+      title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log
+        V)$)
+  - name: hack
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: hack/fastio.hpp
+      title: hack/fastio.hpp
+    - icon: ':heavy_check_mark:'
+      path: hack/fastio_printer.hpp
+      title: hack/fastio_printer.hpp
+    - icon: ':heavy_check_mark:'
+      path: hack/fastio_scanner.hpp
+      title: hack/fastio_scanner.hpp
+    - icon: ':heavy_check_mark:'
+      path: hack/stack_pivot.hpp
+      title: hack/stack_pivot.hpp
+  - name: modulus
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: modulus/bell_number.hpp
+      title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/choose.hpp
+      title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406\
+        \ $O(n)$ + $O(1)$)"
+    - icon: ':warning:'
+      path: modulus/choose_simple.hpp
+      title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/factorial.hpp
+      title: modulus/factorial.hpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/formal_power_series.hpp
+      title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\\
+        mathbb{Z}/n\\mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
+    - icon: ':warning:'
+      path: modulus/garner.hpp
+      title: Garner's algorithm
+    - icon: ':heavy_check_mark:'
+      path: modulus/mint.hpp
+      title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+    - icon: ':heavy_check_mark:'
+      path: modulus/modinv.hpp
+      title: modulus/modinv.hpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/modlog.hpp
+      title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
+        sqrt{m})$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/modpow.hpp
+      title: modulus/modpow.hpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/modsqrt.hpp
+      title: find the sqrt $b$ of $a$ modulo $p$
+    - icon: ':heavy_check_mark:'
+      path: modulus/multichoose.hpp
+      title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _\
+        \ r$ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
+    - icon: ':warning:'
+      path: modulus/multichoose_simple.hpp
+      title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _\
+        \ r$ (\u611A\u76F4 $O(r)$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/number_theoretic_transformation.hpp
+      title: Number Theoretic Transformation (NTT) for Proth primes
+    - icon: ':heavy_check_mark:'
+      path: modulus/number_theoretic_transformation_with_garner.hpp
+      title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
+    - icon: ':heavy_check_mark:'
+      path: modulus/partition_number.hpp
+      title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/permute.hpp
+      title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$\
+        \ + $O(1)$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/stirling_number_of_the_second_kind_convolution.hpp
+      title: the Stirling number of the second kind (for given $N$, compute $S(N,
+        \ast)$ in $O(N \log N)$)
+    - icon: ':heavy_check_mark:'
+      path: modulus/stirling_number_of_the_second_kind_direct.hpp
+      title: the Stirling number of the second kind ($O(K \log N)$)
+    - icon: ':heavy_check_mark:'
+      path: modulus/stirling_number_of_the_second_kind_table.hpp
+      title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ +\
+        \ $O(1)$)"
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.hpp
+      title: "twelvefold way / \u5199\u50CF12\u76F8"
+  - name: monoids
+    pages:
+    - icon: ':warning:'
+      path: monoids/chmin_chmax_add.hpp
+      title: monoids/chmin_chmax_add.hpp
+    - icon: ':warning:'
+      path: monoids/chmin_chmax_add_min_max_action.hpp
+      title: monoids/chmin_chmax_add_min_max_action.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/dual.hpp
+      title: monoids/dual.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/gcd.hpp
+      title: monoids/gcd.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/left.hpp
+      title: monoids/left.hpp
+    - icon: ':warning:'
+      path: monoids/left_action.hpp
+      title: monoids/left_action.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/linear_function.hpp
+      title: monoids/linear_function.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/linear_function_plus_count_action.hpp
+      title: monoids/linear_function_plus_count_action.hpp
+    - icon: ':warning:'
+      path: monoids/matrix_template.hpp
+      title: monoids/matrix_template.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/max.hpp
+      title: monoids/max.hpp
+    - icon: ':warning:'
+      path: monoids/max_index.hpp
+      title: monoids/max_index.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/min.hpp
+      title: monoids/min.hpp
+    - icon: ':warning:'
+      path: monoids/min_count.hpp
+      title: monoids/min_count.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/min_index.hpp
+      title: monoids/min_index.hpp
+    - icon: ':warning:'
+      path: monoids/min_max.hpp
+      title: monoids/min_max.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/plus.hpp
+      title: monoids/plus.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/plus_count.hpp
+      title: monoids/plus_count.hpp
+    - icon: ':warning:'
+      path: monoids/plus_max_action.hpp
+      title: monoids/plus_max_action.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/plus_min_action.hpp
+      title: monoids/plus_min_action.hpp
+    - icon: ':warning:'
+      path: monoids/plus_min_count_action.hpp
+      title: monoids/plus_min_count_action.hpp
+    - icon: ':warning:'
+      path: monoids/product.hpp
+      title: monoids/product.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/reversible.hpp
+      title: monoids/reversible.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoids/trivial.hpp
+      title: monoids/trivial.hpp
+    - icon: ':warning:'
+      path: monoids/trivial_action.hpp
+      title: monoids/trivial_action.hpp
+  - name: number
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: number/fast_fourier_transformation.hpp
+      title: FFT convolution
+    - icon: ':heavy_check_mark:'
+      path: number/gcd.hpp
+      title: number/gcd.hpp
+    - icon: ':warning:'
+      path: number/karatsuba.hpp
+      title: Karatsuba method ($O(n^{\log_2 3})$)
+    - icon: ':warning:'
+      path: number/lagrange_interpolation.hpp
+      title: Lagrange interpolation
+    - icon: ':heavy_check_mark:'
+      path: number/matrix_template.hpp
+      title: number/matrix_template.hpp
+    - icon: ':heavy_check_mark:'
+      path: number/primes.hpp
+      title: number/primes.hpp
+  - name: old
+    pages:
+    - icon: ':warning:'
+      path: old/a.inc.cpp
+      title: Andrew's Monotone Chain
+    - icon: ':warning:'
+      path: old/aho-corasick.inc.cpp
+      title: old/aho-corasick.inc.cpp
+    - icon: ':warning:'
+      path: old/bernoulli-number.inc.cpp
+      title: the Bernoulli number
+    - icon: ':warning:'
+      path: old/binary-indexed-tree.inc.cpp
+      title: old/binary-indexed-tree.inc.cpp
+    - icon: ':warning:'
+      path: old/bipartite-graph.inc.cpp
+      title: old/bipartite-graph.inc.cpp
+    - icon: ':warning:'
+      path: old/boyer-moore.inc.cpp
+      title: old/boyer-moore.inc.cpp
+    - icon: ':warning:'
+      path: old/breadth-first-search.inc.cpp
+      title: compute the distances from root
+    - icon: ':warning:'
+      path: old/centers.inc.cpp
+      title: "get centers of a tree / \u6728\u306E\u4E2D\u5FC3"
+    - icon: ':warning:'
+      path: old/centroid-decomposition.inc.cpp
+      title: "get centroids of a graph / \u91CD\u5FC3\u5206\u89E3"
+    - icon: ':warning:'
+      path: old/comparable-view.inc.cpp
+      title: compare substrings of a string with O(1) using suffix arrays
+    - icon: ':warning:'
+      path: old/convex-hull-trick-with-monotonicity.inc.cpp
+      title: old/convex-hull-trick-with-monotonicity.inc.cpp
+    - icon: ':warning:'
+      path: old/convex-hull.inc.cpp
+      title: old/convex-hull.inc.cpp
+    - icon: ':warning:'
+      path: old/cumulative-sum.inc.cpp
+      title: cumulative sum
+    - icon: ':warning:'
+      path: old/diameter.inc.cpp
+      title: "get the diameter of a tree / \u6728\u306E\u76F4\u5F84"
+    - icon: ':warning:'
+      path: old/dice.inc.cpp
+      title: old/dice.inc.cpp
+    - icon: ':warning:'
+      path: old/digit-dp.inc.cpp
+      title: old/digit-dp.inc.cpp
+    - icon: ':warning:'
+      path: old/dijkstra.inc.cpp
+      title: old/dijkstra.inc.cpp
+    - icon: ':warning:'
+      path: old/dinic.inc.cpp
+      title: Dinic
+    - icon: ':warning:'
+      path: old/distributed-code-jam.inc.cpp
+      title: old/distributed-code-jam.inc.cpp
+    - icon: ':warning:'
+      path: old/dlopen.inc.cpp
+      title: old/dlopen.inc.cpp
+    - icon: ':warning:'
+      path: old/dominator-tree.inc.cpp
+      title: old/dominator-tree.inc.cpp
+    - icon: ':warning:'
+      path: old/double-ended-priority-queue.inc.cpp
+      title: a double-ended priority queue
+    - icon: ':warning:'
+      path: old/doubling.inc.cpp
+      title: the doubling technique
+    - icon: ':warning:'
+      path: old/dynamic-segment-tree.inc.cpp
+      title: old/dynamic-segment-tree.inc.cpp
+    - icon: ':warning:'
+      path: old/euler-tour.inc.cpp
+      title: euler tour
+    - icon: ':warning:'
+      path: old/extgcd.inc.cpp
+      title: extended gcd
+    - icon: ':warning:'
+      path: old/factoradic.inc.cpp
+      title: old/factoradic.inc.cpp
+    - icon: ':warning:'
+      path: old/factorial-embed.inc.cpp
+      title: a program to make the table
+    - icon: ':warning:'
+      path: old/fast-mobius-transformation.inc.cpp
+      title: (upward) fast zeta transformation
+    - icon: ':warning:'
+      path: old/ford-fulkerson.inc.cpp
+      title: old/ford-fulkerson.inc.cpp
+    - icon: ':warning:'
+      path: old/graphviz.inc.cpp
+      title: old/graphviz.inc.cpp
+    - icon: ':warning:'
+      path: old/heavy_light_decomposition.inc.cpp
+      title: "heavy light decomposition / \u91CD\u8EFD\u5206\u89E3"
+    - icon: ':warning:'
+      path: old/inversion-number.inc.cpp
+      title: old/inversion-number.inc.cpp
+    - icon: ':warning:'
+      path: old/iterate.inc.cpp
+      title: old/iterate.inc.cpp
+    - icon: ':warning:'
+      path: old/knapsack-problem-branch-and-bound.inc.cpp
+      title: old/knapsack-problem-branch-and-bound.inc.cpp
+    - icon: ':warning:'
+      path: old/knuth-morris-pratt.inc.cpp
+      title: Morris-Pratt algorithm
+    - icon: ':warning:'
+      path: old/linear-weighted-sum.inc.cpp
+      title: old/linear-weighted-sum.inc.cpp
+    - icon: ':warning:'
+      path: old/longest-increasing-subsequence.inc.cpp
+      title: old/longest-increasing-subsequence.inc.cpp
+    - icon: ':warning:'
+      path: old/marathon.inc.cpp
+      title: old/marathon.inc.cpp
+    - icon: ':warning:'
+      path: old/matrix.inc.cpp
+      title: old/matrix.inc.cpp
+    - icon: ':warning:'
+      path: old/maximum-independent-set.inc.cpp
+      title: old/maximum-independent-set.inc.cpp
+    - icon: ':warning:'
+      path: old/midpoint.inc.cpp
+      title: a structure to make a midpoint for given two points
+    - icon: ':warning:'
+      path: old/miller-rabin.inc.cpp
+      title: old/miller-rabin.inc.cpp
+    - icon: ':warning:'
+      path: old/minimum-cost-flow.inc.cpp
+      title: minimum-cost flow with primal-dual method
+    - icon: ':warning:'
+      path: old/namori-graph.inc.cpp
+      title: "get the namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
+    - icon: ':warning:'
+      path: old/palindrome.inc.cpp
+      title: old/palindrome.inc.cpp
+    - icon: ':warning:'
+      path: old/periodic-function-power.inc.cpp
+      title: old/periodic-function-power.inc.cpp
+    - icon: ':warning:'
+      path: old/persistent-array.inc.cpp
+      title: "persistent array / \u6C38\u7D9A\u914D\u5217"
+    - icon: ':warning:'
+      path: old/persistent-randomized-binary-search-tree.inc.cpp
+      title: old/persistent-randomized-binary-search-tree.inc.cpp
+    - icon: ':warning:'
+      path: old/point-int.inc.cpp
+      title: old/point-int.inc.cpp
+    - icon: ':warning:'
+      path: old/polya-enumeration.inc.cpp
+      title: old/polya-enumeration.inc.cpp
+    - icon: ':warning:'
+      path: old/popen2.inc.cpp
+      title: old/popen2.inc.cpp
+    - icon: ':warning:'
+      path: old/primes-small.inc.cpp
+      title: enumerate primes in [2, n) with O(n log log n)
+    - icon: ':warning:'
+      path: old/range-union-find-tree.inc.cpp
+      title: old/range-union-find-tree.inc.cpp
+    - icon: ':warning:'
+      path: old/rational.inc.cpp
+      title: old/rational.inc.cpp
+    - icon: ':warning:'
+      path: old/red-black-tree.inc.cpp
+      title: old/red-black-tree.inc.cpp
+    - icon: ':heavy_check_mark:'
+      path: old/rollback-square-decomposition.inc.cpp
+      title: the extended Mo's algorithm
+    - icon: ':warning:'
+      path: old/rolling-hash.inc.cpp
+      title: a rolling hash
+    - icon: ':warning:'
+      path: old/segment-tree-2d.inc.cpp
+      title: old/segment-tree-2d.inc.cpp
+    - icon: ':warning:'
+      path: old/simplex.inc.cpp
+      title: old/simplex.inc.cpp
+    - icon: ':warning:'
+      path: old/skew-heap.inc.cpp
+      title: old/skew-heap.inc.cpp
+    - icon: ':warning:'
+      path: old/sliding-window.inc.cpp
+      title: the sliding window minimum algorithm
+    - icon: ':warning:'
+      path: old/string-skip-list.inc.cpp
+      title: old/string-skip-list.inc.cpp
+    - icon: ':warning:'
+      path: old/subset.inc.cpp
+      title: old/subset.inc.cpp
+    - icon: ':warning:'
+      path: old/suffix-array.inc.cpp
+      title: old/suffix-array.inc.cpp
+    - icon: ':warning:'
+      path: old/ternary-search.inc.cpp
+      title: old/ternary-search.inc.cpp
+    - icon: ':warning:'
+      path: old/treap.inc.cpp
+      title: old/treap.inc.cpp
+    - icon: ':warning:'
+      path: old/tree-dp.inc.cpp
+      title: "fold a rooted tree / \u6728DP"
+    - icon: ':warning:'
+      path: old/trie-tree.inc.cpp
+      title: old/trie-tree.inc.cpp
+    - icon: ':warning:'
+      path: old/two-edge-connected-components.inc.cpp
+      title: "2-edge-connected components decomposition / 2-\u8FBA\u9023\u7D50\u6210\
+        \u5206\u5206\u89E3"
+    - icon: ':warning:'
+      path: old/two-node-connected-components.inc.cpp
+      title: "2-node-connected components decomposition / 2-\u9802\u70B9\u9023\u7D50\
+        \u6210\u5206\u5206\u89E3"
+    - icon: ':warning:'
+      path: old/warshall-floyd.inc.cpp
+      title: Warshall-Floyd algorithm
+    - icon: ':warning:'
+      path: old/xorshift.inc.cpp
+      title: old/xorshift.inc.cpp
+  - name: python
+    pages:
+    - icon: ':warning:'
+      path: python/binary_search.py
+      title: python/binary_search.py
+    - icon: ':warning:'
+      path: python/chinese_remainder_theorem.py
+      title: python/chinese_remainder_theorem.py
+    - icon: ':warning:'
+      path: python/choose.py
+      title: python/choose.py
+    - icon: ':warning:'
+      path: python/extgcd.py
+      title: python/extgcd.py
+    - icon: ':warning:'
+      path: python/matrix-modinv.py
+      title: python/matrix-modinv.py
+    - icon: ':warning:'
+      path: python/miller_rabin.py
+      title: python/miller_rabin.py
+    - icon: ':warning:'
+      path: python/rational-gcd.py
+      title: python/rational-gcd.py
+  - name: string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: string/longest_common_prefix.hpp
+      title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
+        \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
+    - icon: ':heavy_check_mark:'
+      path: string/suffix_array.hpp
+      title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
+        \ & Myers)"
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: template.cpp
+      title: template.cpp
+  - name: utils
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: utils/binary_search.hpp
+      title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
+    - icon: ':warning:'
+      path: utils/binary_search_float.hpp
+      title: "a binary search on floating point numbers / \u4E8C\u5206\u63A2\u7D22\
+        \ (\u6D6E\u52D5\u5C0F\u6570\u70B9\u6570)"
+    - icon: ':heavy_check_mark:'
+      path: utils/coordinate_compression.hpp
+      title: utils/coordinate_compression.hpp
+    - icon: ':heavy_check_mark:'
+      path: utils/dsu_on_tree.hpp
+      title: DSU on tree (sack)
+    - icon: ':warning:'
+      path: utils/fast_zeta_transform.hpp
+      title: upward fast zeta transform on primes
+    - icon: ':warning:'
+      path: utils/interval_map.hpp
+      title: map from disjoint intervals
+    - icon: ':warning:'
+      path: utils/interval_set.hpp
+      title: set of disjoint intervals
+    - icon: ':heavy_check_mark:'
+      path: utils/left_to_right_maxima.hpp
+      title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ +\
+        \ $O(1)$)"
+    - icon: ':heavy_check_mark:'
+      path: utils/macros.hpp
+      title: utils/macros.hpp
+    - icon: ':warning:'
+      path: utils/mex.hpp
+      title: Minimum Excluded Value ($O(n)$ for a given sorted container)
+    - icon: ':warning:'
+      path: utils/mex_calculator.hpp
+      title: utils/mex_calculator.hpp
+    - icon: ':warning:'
+      path: utils/next_combination.hpp
+      title: utils/next_combination.hpp
+    - icon: ':heavy_check_mark:'
+      path: utils/two_satisfiability.hpp
+      title: 2-SAT ($O(N)$)
+  verificationCategories:
+  - name: data_structure
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: data_structure/convex_hull_trick.line_add_get_min.test.cpp
+      title: data_structure/convex_hull_trick.line_add_get_min.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/dual_segment_tree.range_update_query.test.cpp
+      title: data_structure/dual_segment_tree.range_update_query.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+      title: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+      title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+      title: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+      title: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+      title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
+      title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+      title: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+      title: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/link_cut_tree.marked_ancestor.test.cpp
+      title: data_structure/link_cut_tree.marked_ancestor.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+      title: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
+      title: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree.point_add_range_sum.test.cpp
+      title: data_structure/segment_tree.point_add_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree.point_set_range_composite.test.cpp
+      title: data_structure/segment_tree.point_set_range_composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree.range_sum_query.test.cpp
+      title: data_structure/segment_tree.range_sum_query.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree_beats.DSL_2_F.test.cpp
+      title: data_structure/segment_tree_beats.DSL_2_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree_beats.DSL_2_G.test.cpp
+      title: data_structure/segment_tree_beats.DSL_2_G.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree_beats.DSL_2_H.test.cpp
+      title: data_structure/segment_tree_beats.DSL_2_H.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree_beats.DSL_2_I.test.cpp
+      title: data_structure/segment_tree_beats.DSL_2_I.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segment_tree_beats.yosupo.test.cpp
+      title: data_structure/segment_tree_beats.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/sliding_window_aggregation.yosupo.test.cpp
+      title: data_structure/sliding_window_aggregation.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/sparse_table.yosupo.test.cpp
+      title: data_structure/sparse_table.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/sparse_table.yukicoder-1036.test.cpp
+      title: data_structure/sparse_table.yukicoder-1036.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/union_find_tree.aoj.test.cpp
+      title: data_structure/union_find_tree.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/union_find_tree.yosupo.test.cpp
+      title: data_structure/union_find_tree.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/wavelet_matrix.aoj2674.test.cpp
+      title: data_structure/wavelet_matrix.aoj2674.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
+      title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
+      title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
+  - name: graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: graph/bellman_ford.test.cpp
+      title: graph/bellman_ford.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/cartesian_tree.yosupo.test.cpp
+      title: graph/cartesian_tree.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/cartesian_tree.yukicoder-1031.test.cpp
+      title: graph/cartesian_tree.yukicoder-1031.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/dijkstra.yukicoder-1065.test.cpp
+      title: graph/dijkstra.yukicoder-1065.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/kruskal.aoj.test.cpp
+      title: graph/kruskal.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/lowest_common_ancestor.aoj.test.cpp
+      title: graph/lowest_common_ancestor.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/lowest_common_ancestor.yosupo.test.cpp
+      title: graph/lowest_common_ancestor.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/strongly_connected_components.yosupo.test.cpp
+      title: graph/strongly_connected_components.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/tree_decomposition.aoj_2405.test.cpp
+      title: graph/tree_decomposition.aoj_2405.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/yen_algorithm.yukicoder-1069.test.cpp
+      title: graph/yen_algorithm.yukicoder-1069.test.cpp
+  - name: hack
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: hack/fastio.yosupo.test.cpp
+      title: hack/fastio.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: hack/fastio_scanner_and_printer.yosupo.test.cpp
+      title: hack/fastio_scanner_and_printer.yosupo.test.cpp
+  - name: modulus
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: modulus/choose.yukicoder-1035.test.cpp
+      title: modulus/choose.yukicoder-1035.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/formal_power_series.exp.test.cpp
+      title: modulus/formal_power_series.exp.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/formal_power_series.inv.test.cpp
+      title: modulus/formal_power_series.inv.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/formal_power_series.log.test.cpp
+      title: modulus/formal_power_series.log.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/formal_power_series.yukicoder-1145.test.cpp
+      title: modulus/formal_power_series.yukicoder-1145.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/modlog.yosupo.test.cpp
+      title: modulus/modlog.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/modsqrt.yosupo.test.cpp
+      title: modulus/modsqrt.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/number_theoretic_transformation.yosupo.test.cpp
+      title: modulus/number_theoretic_transformation.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+      title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+      title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+      title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+  - name: number
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: number/fast_fourier_transformation.yukicoder-856.test.cpp
+      title: number/fast_fourier_transformation.yukicoder-856.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: number/matrix_template.yukicoder-1073.test.cpp
+      title: number/matrix_template.yukicoder-1073.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: number/primes.aoj.test.cpp
+      title: number/primes.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: number/primes.yukicoder-1140.test.cpp
+      title: number/primes.yukicoder-1140.test.cpp
+  - name: old
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+      title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+  - name: string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: string/longest_common_prefix.yosupo.test.cpp
+      title: string/longest_common_prefix.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: string/suffix_array.yosupo.test.cpp
+      title: string/suffix_array.yosupo.test.cpp
+  - name: utils
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: utils/binary_search.aoj.test.cpp
+      title: utils/binary_search.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: utils/dsu_on_tree.aoj.test.cpp
+      title: utils/dsu_on_tree.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: utils/two_satisfiability.yosupo.test.cpp
+      title: utils/two_satisfiability.yosupo.test.cpp
+layout: toppage
 ---
-
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" }},
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { matchFontHeight: false },
-    displayAlign: "left",
-    displayIndent: "2em"
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="assets/css/copy-button.css" />
-
-
-# {{ site.title }}
-
-[![Actions Status]({{ site.github.repository_url }}/workflows/verify/badge.svg)]({{ site.github.repository_url }}/actions)
-<a href="{{ site.github.repository_url }}"><img src="https://img.shields.io/github/last-commit/{{ site.github.owner_name }}/{{ site.github.repository_name }}" /></a>
-
-{% if site.github.project_tagline %}{{ site.github.project_tagline }}{% else %}This documentation is automatically generated by <a href="https://github.com/online-judge-tools/verification-helper">online-judge-tools/verification-helper</a>.{% endif %}
-
-## Library Files
-
-<div id="5058f1af8388633f609cadb75a75dc9d"></div>
-
-### .
-
-* :warning: <a href="library/template.cpp.html">template.cpp</a>
-
-
-<div id="c8f6850ec2ec3fb32f203c1f4e3c2fd2"></div>
-
-### data_structure
-
-* :heavy_check_mark: <a href="library/data_structure/convex_hull_trick.hpp.html">Convex Hull Trick (非単調, online) <small>(data_structure/convex_hull_trick.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/dual_segment_tree.hpp.html">Dual Segment Tree / 双対セグメント木 (monoids, 完全二分木) <small>(data_structure/dual_segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/dynamic_connectivity_offline.hpp.html">Dynamic Connectivity (offline, commutative monoids) <small>(data_structure/dynamic_connectivity_offline.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/euler_tour_subtree_query.hpp.html">Euler Tour (subtree queries, with commutative monoids) <small>(data_structure/euler_tour_subtree_query.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/fully_indexable_dictionary.hpp.html">Fully Indexable Dictionary / 完備辞書 <small>(data_structure/fully_indexable_dictionary.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_red_black_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 赤黒木) <small>(data_structure/lazy_propagation_red_black_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/lazy_propagation_segment_tree.hpp.html">Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木) <small>(data_structure/lazy_propagation_segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/li_chao_tree.hpp.html">Li-Chao tree <small>(data_structure/li_chao_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/link_cut_tree.hpp.html">Link-Cut tree (monoids without commutativity, vertex set + path get) <small>(data_structure/link_cut_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/reporting_segment_tree.hpp.html">Dual Segment Tree / 双対セグメント木 (列挙クエリ, 完全二分木) <small>(data_structure/reporting_segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/segment_tree.hpp.html">Segment Tree / セグメント木 (monoids, 完全二分木) <small>(data_structure/segment_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/segment_tree_beats.hpp.html">Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木) <small>(data_structure/segment_tree_beats.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/sliding_window_aggregation.hpp.html">Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る) <small>(data_structure/sliding_window_aggregation.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/sparse_table.hpp.html">Sparse Table (idempotent monoid) <small>(data_structure/sparse_table.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/union_find_tree.hpp.html">Union-Find Tree <small>(data_structure/union_find_tree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/union_find_tree_foldable_undoable.hpp.html">Union-Find Tree (foldable with commutative monoids, undoable) <small>(data_structure/union_find_tree_foldable_undoable.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/union_find_tree_with_monoid.hpp.html">a disjoint set structure with monoid <small>(data_structure/union_find_tree_with_monoid.hpp)</small></a>
-* :heavy_check_mark: <a href="library/data_structure/wavelet_matrix.hpp.html">Wavelet Matrix <small>(data_structure/wavelet_matrix.hpp)</small></a>
-
-
-<div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>
-
-### graph
-
-* :heavy_check_mark: <a href="library/graph/bellman_ford.hpp.html">Bellman-Ford algorithm <small>(graph/bellman_ford.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/cartesian_tree.hpp.html">Cartesian tree ($O(n)$) <small>(graph/cartesian_tree.hpp)</small></a>
-* :warning: <a href="library/graph/catapillar_graph.hpp.html">get a central path of a catapillar graph <small>(graph/catapillar_graph.hpp)</small></a>
-* :warning: <a href="library/graph/connected_components.hpp.html">graph/connected_components.hpp</a>
-* :heavy_check_mark: <a href="library/graph/dijkstra.hpp.html">Dijkstra ($O((E + V) \log V)$) <small>(graph/dijkstra.hpp)</small></a>
-* :warning: <a href="library/graph/euler_graph.hpp.html">Eulerian cycle (無向, 復元) <small>(graph/euler_graph.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/euler_tour_preorder.hpp.html">Euler Tour (preorder) <small>(graph/euler_tour_preorder.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/format.hpp.html">graph/format.hpp</a>
-* :heavy_check_mark: <a href="library/graph/kruskal.hpp.html">minimum spanning tree / 最小全域木 (Kruskal's method) <small>(graph/kruskal.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/lowest_common_ancestor.hpp.html">lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table) <small>(graph/lowest_common_ancestor.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/quotient_graph.hpp.html">graph/quotient_graph.hpp</a>
-* :warning: <a href="library/graph/shortest_path_faster_algorithm.hpp.html">Shortest Path Faster Algorithm <small>(graph/shortest_path_faster_algorithm.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/strongly_connected_components.hpp.html">strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解 <small>(graph/strongly_connected_components.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/subtree.hpp.html">subtree info / それぞれの部分木の size とか height とかをまとめて求めておいてくれるやつ <small>(graph/subtree.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/topological_sort.hpp.html">topological sort <small>(graph/topological_sort.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/transpose_graph.hpp.html">graph/transpose_graph.hpp</a>
-* :heavy_check_mark: <a href="library/graph/tree_decomposition.hpp.html">木分解 (木幅 $t \le 2$) <small>(graph/tree_decomposition.hpp)</small></a>
-* :heavy_check_mark: <a href="library/graph/yen_algorithm.hpp.html">K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log V)$) <small>(graph/yen_algorithm.hpp)</small></a>
-
-
-<div id="d78b6f30225cdc811adfe8d4e7c9fd34"></div>
-
-### hack
-
-* :heavy_check_mark: <a href="library/hack/fastio.hpp.html">hack/fastio.hpp</a>
-* :heavy_check_mark: <a href="library/hack/fastio_printer.hpp.html">hack/fastio_printer.hpp</a>
-* :heavy_check_mark: <a href="library/hack/fastio_scanner.hpp.html">hack/fastio_scanner.hpp</a>
-* :heavy_check_mark: <a href="library/hack/stack_pivot.hpp.html">hack/stack_pivot.hpp</a>
-
-
-<div id="06efba23b1f3a9b846a25c6b49f30348"></div>
-
-### modulus
-
-* :heavy_check_mark: <a href="library/modulus/bell_number.hpp.html">the Bell number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/bell_number.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/choose.hpp.html">combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/choose.hpp)</small></a>
-* :warning: <a href="library/modulus/choose_simple.hpp.html">combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$) <small>(modulus/choose_simple.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/factorial.hpp.html">modulus/factorial.hpp</a>
-* :heavy_check_mark: <a href="library/modulus/formal_power_series.hpp.html">formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$ <small>(modulus/formal_power_series.hpp)</small></a>
-* :warning: <a href="library/modulus/garner.hpp.html">Garner's algorithm <small>(modulus/garner.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/mint.hpp.html">quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$ <small>(modulus/mint.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/modinv.hpp.html">modulus/modinv.hpp</a>
-* :heavy_check_mark: <a href="library/modulus/modlog.hpp.html">discrete log / 離散対数 (the baby-step giant-step, $O(\sqrt{m})$) <small>(modulus/modlog.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/modpow.hpp.html">modulus/modpow.hpp</a>
-* :heavy_check_mark: <a href="library/modulus/modsqrt.hpp.html">find the sqrt $b$ of $a$ modulo $p$ <small>(modulus/modsqrt.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/multichoose.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/multichoose.hpp)</small></a>
-* :warning: <a href="library/modulus/multichoose_simple.hpp.html">重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (愚直 $O(r)$) <small>(modulus/multichoose_simple.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/number_theoretic_transformation.hpp.html">Number Theoretic Transformation (NTT) for Proth primes <small>(modulus/number_theoretic_transformation.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/number_theoretic_transformation_with_garner.hpp.html">multiprecation on $\mathbb{Z}/n\mathbb{Z}\[x\]$ <small>(modulus/number_theoretic_transformation_with_garner.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/partition_number.hpp.html">the partition number (前処理 $O(NK)$ + $O(1)$) <small>(modulus/partition_number.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/permute.hpp.html">permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$) <small>(modulus/permute.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/stirling_number_of_the_second_kind_convolution.hpp.html">the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$ in $O(N \log N)$) <small>(modulus/stirling_number_of_the_second_kind_convolution.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/stirling_number_of_the_second_kind_direct.hpp.html">the Stirling number of the second kind ($O(K \log N)$) <small>(modulus/stirling_number_of_the_second_kind_direct.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/stirling_number_of_the_second_kind_table.hpp.html">the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$) <small>(modulus/stirling_number_of_the_second_kind_table.hpp)</small></a>
-* :heavy_check_mark: <a href="library/modulus/twelvefold_way.hpp.html">twelvefold way / 写像12相 <small>(modulus/twelvefold_way.hpp)</small></a>
-
-
-<div id="315142c884fa9bdd2be3b42923ffe964"></div>
-
-### monoids
-
-* :warning: <a href="library/monoids/chmin_chmax_add.hpp.html">monoids/chmin_chmax_add.hpp</a>
-* :warning: <a href="library/monoids/chmin_chmax_add_min_max_action.hpp.html">monoids/chmin_chmax_add_min_max_action.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/dual.hpp.html">monoids/dual.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/gcd.hpp.html">monoids/gcd.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/left.hpp.html">monoids/left.hpp</a>
-* :warning: <a href="library/monoids/left_action.hpp.html">monoids/left_action.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/linear_function.hpp.html">monoids/linear_function.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/linear_function_plus_count_action.hpp.html">monoids/linear_function_plus_count_action.hpp</a>
-* :warning: <a href="library/monoids/matrix_template.hpp.html">monoids/matrix_template.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/max.hpp.html">monoids/max.hpp</a>
-* :warning: <a href="library/monoids/max_index.hpp.html">monoids/max_index.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/min.hpp.html">monoids/min.hpp</a>
-* :warning: <a href="library/monoids/min_count.hpp.html">monoids/min_count.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/min_index.hpp.html">monoids/min_index.hpp</a>
-* :warning: <a href="library/monoids/min_max.hpp.html">monoids/min_max.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/plus.hpp.html">monoids/plus.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/plus_count.hpp.html">monoids/plus_count.hpp</a>
-* :warning: <a href="library/monoids/plus_max_action.hpp.html">monoids/plus_max_action.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/plus_min_action.hpp.html">monoids/plus_min_action.hpp</a>
-* :warning: <a href="library/monoids/plus_min_count_action.hpp.html">monoids/plus_min_count_action.hpp</a>
-* :warning: <a href="library/monoids/product.hpp.html">monoids/product.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/reversible.hpp.html">monoids/reversible.hpp</a>
-* :heavy_check_mark: <a href="library/monoids/trivial.hpp.html">monoids/trivial.hpp</a>
-* :warning: <a href="library/monoids/trivial_action.hpp.html">monoids/trivial_action.hpp</a>
-
-
-<div id="b1bc248a7ff2b2e95569f56de68615df"></div>
-
-### number
-
-* :heavy_check_mark: <a href="library/number/fast_fourier_transformation.hpp.html">FFT convolution <small>(number/fast_fourier_transformation.hpp)</small></a>
-* :heavy_check_mark: <a href="library/number/gcd.hpp.html">number/gcd.hpp</a>
-* :warning: <a href="library/number/karatsuba.hpp.html">Karatsuba method ($O(n^{\log_2 3})$) <small>(number/karatsuba.hpp)</small></a>
-* :warning: <a href="library/number/lagrange_interpolation.hpp.html">Lagrange interpolation <small>(number/lagrange_interpolation.hpp)</small></a>
-* :heavy_check_mark: <a href="library/number/matrix_template.hpp.html">number/matrix_template.hpp</a>
-* :heavy_check_mark: <a href="library/number/primes.hpp.html">number/primes.hpp</a>
-
-
-<div id="149603e6c03516362a8da23f624db945"></div>
-
-### old
-
-* :warning: <a href="library/old/a.inc.cpp.html">Andrew's Monotone Chain <small>(old/a.inc.cpp)</small></a>
-* :warning: <a href="library/old/aho-corasick.inc.cpp.html">old/aho-corasick.inc.cpp</a>
-* :warning: <a href="library/old/bernoulli-number.inc.cpp.html">the Bernoulli number <small>(old/bernoulli-number.inc.cpp)</small></a>
-* :warning: <a href="library/old/binary-indexed-tree.inc.cpp.html">old/binary-indexed-tree.inc.cpp</a>
-* :warning: <a href="library/old/bipartite-graph.inc.cpp.html">old/bipartite-graph.inc.cpp</a>
-* :warning: <a href="library/old/boyer-moore.inc.cpp.html">old/boyer-moore.inc.cpp</a>
-* :warning: <a href="library/old/breadth-first-search.inc.cpp.html">compute the distances from root <small>(old/breadth-first-search.inc.cpp)</small></a>
-* :warning: <a href="library/old/centers.inc.cpp.html">get centers of a tree / 木の中心 <small>(old/centers.inc.cpp)</small></a>
-* :warning: <a href="library/old/centroid-decomposition.inc.cpp.html">get centroids of a graph / 重心分解 <small>(old/centroid-decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/old/comparable-view.inc.cpp.html">compare substrings of a string with O(1) using suffix arrays <small>(old/comparable-view.inc.cpp)</small></a>
-* :warning: <a href="library/old/convex-hull-trick-with-monotonicity.inc.cpp.html">old/convex-hull-trick-with-monotonicity.inc.cpp</a>
-* :warning: <a href="library/old/convex-hull.inc.cpp.html">old/convex-hull.inc.cpp</a>
-* :warning: <a href="library/old/cumulative-sum.inc.cpp.html">cumulative sum <small>(old/cumulative-sum.inc.cpp)</small></a>
-* :warning: <a href="library/old/diameter.inc.cpp.html">get the diameter of a tree / 木の直径 <small>(old/diameter.inc.cpp)</small></a>
-* :warning: <a href="library/old/dice.inc.cpp.html">old/dice.inc.cpp</a>
-* :warning: <a href="library/old/digit-dp.inc.cpp.html">old/digit-dp.inc.cpp</a>
-* :warning: <a href="library/old/dijkstra.inc.cpp.html">old/dijkstra.inc.cpp</a>
-* :warning: <a href="library/old/dinic.inc.cpp.html">Dinic <small>(old/dinic.inc.cpp)</small></a>
-* :warning: <a href="library/old/distributed-code-jam.inc.cpp.html">old/distributed-code-jam.inc.cpp</a>
-* :warning: <a href="library/old/dlopen.inc.cpp.html">old/dlopen.inc.cpp</a>
-* :warning: <a href="library/old/dominator-tree.inc.cpp.html">old/dominator-tree.inc.cpp</a>
-* :warning: <a href="library/old/double-ended-priority-queue.inc.cpp.html">a double-ended priority queue <small>(old/double-ended-priority-queue.inc.cpp)</small></a>
-* :warning: <a href="library/old/doubling.inc.cpp.html">the doubling technique <small>(old/doubling.inc.cpp)</small></a>
-* :warning: <a href="library/old/dynamic-segment-tree.inc.cpp.html">old/dynamic-segment-tree.inc.cpp</a>
-* :warning: <a href="library/old/euler-tour.inc.cpp.html">euler tour <small>(old/euler-tour.inc.cpp)</small></a>
-* :warning: <a href="library/old/extgcd.inc.cpp.html">extended gcd <small>(old/extgcd.inc.cpp)</small></a>
-* :warning: <a href="library/old/factoradic.inc.cpp.html">old/factoradic.inc.cpp</a>
-* :warning: <a href="library/old/factorial-embed.inc.cpp.html">a program to make the table <small>(old/factorial-embed.inc.cpp)</small></a>
-* :warning: <a href="library/old/fast-mobius-transformation.inc.cpp.html">(upward) fast zeta transformation <small>(old/fast-mobius-transformation.inc.cpp)</small></a>
-* :warning: <a href="library/old/ford-fulkerson.inc.cpp.html">old/ford-fulkerson.inc.cpp</a>
-* :warning: <a href="library/old/graphviz.inc.cpp.html">old/graphviz.inc.cpp</a>
-* :warning: <a href="library/old/heavy_light_decomposition.inc.cpp.html">heavy light decomposition / 重軽分解 <small>(old/heavy_light_decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/old/inversion-number.inc.cpp.html">old/inversion-number.inc.cpp</a>
-* :warning: <a href="library/old/iterate.inc.cpp.html">old/iterate.inc.cpp</a>
-* :warning: <a href="library/old/knapsack-problem-branch-and-bound.inc.cpp.html">old/knapsack-problem-branch-and-bound.inc.cpp</a>
-* :warning: <a href="library/old/knuth-morris-pratt.inc.cpp.html">Morris-Pratt algorithm <small>(old/knuth-morris-pratt.inc.cpp)</small></a>
-* :warning: <a href="library/old/linear-weighted-sum.inc.cpp.html">old/linear-weighted-sum.inc.cpp</a>
-* :warning: <a href="library/old/longest-increasing-subsequence.inc.cpp.html">old/longest-increasing-subsequence.inc.cpp</a>
-* :warning: <a href="library/old/marathon.inc.cpp.html">old/marathon.inc.cpp</a>
-* :warning: <a href="library/old/matrix.inc.cpp.html">old/matrix.inc.cpp</a>
-* :warning: <a href="library/old/maximum-independent-set.inc.cpp.html">old/maximum-independent-set.inc.cpp</a>
-* :warning: <a href="library/old/midpoint.inc.cpp.html">a structure to make a midpoint for given two points <small>(old/midpoint.inc.cpp)</small></a>
-* :warning: <a href="library/old/miller-rabin.inc.cpp.html">old/miller-rabin.inc.cpp</a>
-* :warning: <a href="library/old/minimum-cost-flow.inc.cpp.html">minimum-cost flow with primal-dual method <small>(old/minimum-cost-flow.inc.cpp)</small></a>
-* :warning: <a href="library/old/namori-graph.inc.cpp.html">get the namori cycle / なもり閉路 <small>(old/namori-graph.inc.cpp)</small></a>
-* :warning: <a href="library/old/palindrome.inc.cpp.html">old/palindrome.inc.cpp</a>
-* :warning: <a href="library/old/periodic-function-power.inc.cpp.html">old/periodic-function-power.inc.cpp</a>
-* :warning: <a href="library/old/persistent-array.inc.cpp.html">persistent array / 永続配列 <small>(old/persistent-array.inc.cpp)</small></a>
-* :warning: <a href="library/old/persistent-randomized-binary-search-tree.inc.cpp.html">old/persistent-randomized-binary-search-tree.inc.cpp</a>
-* :warning: <a href="library/old/point-int.inc.cpp.html">old/point-int.inc.cpp</a>
-* :warning: <a href="library/old/polya-enumeration.inc.cpp.html">old/polya-enumeration.inc.cpp</a>
-* :warning: <a href="library/old/popen2.inc.cpp.html">old/popen2.inc.cpp</a>
-* :warning: <a href="library/old/primes-small.inc.cpp.html">enumerate primes in \[2, n) with O(n log log n) <small>(old/primes-small.inc.cpp)</small></a>
-* :warning: <a href="library/old/range-union-find-tree.inc.cpp.html">old/range-union-find-tree.inc.cpp</a>
-* :warning: <a href="library/old/rational.inc.cpp.html">old/rational.inc.cpp</a>
-* :warning: <a href="library/old/red-black-tree.inc.cpp.html">old/red-black-tree.inc.cpp</a>
-* :heavy_check_mark: <a href="library/old/rollback-square-decomposition.inc.cpp.html">the extended Mo's algorithm <small>(old/rollback-square-decomposition.inc.cpp)</small></a>
-* :warning: <a href="library/old/rolling-hash.inc.cpp.html">a rolling hash <small>(old/rolling-hash.inc.cpp)</small></a>
-* :warning: <a href="library/old/segment-tree-2d.inc.cpp.html">old/segment-tree-2d.inc.cpp</a>
-* :warning: <a href="library/old/simplex.inc.cpp.html">old/simplex.inc.cpp</a>
-* :warning: <a href="library/old/skew-heap.inc.cpp.html">old/skew-heap.inc.cpp</a>
-* :warning: <a href="library/old/sliding-window.inc.cpp.html">the sliding window minimum algorithm <small>(old/sliding-window.inc.cpp)</small></a>
-* :warning: <a href="library/old/string-skip-list.inc.cpp.html">old/string-skip-list.inc.cpp</a>
-* :warning: <a href="library/old/subset.inc.cpp.html">old/subset.inc.cpp</a>
-* :warning: <a href="library/old/suffix-array.inc.cpp.html">old/suffix-array.inc.cpp</a>
-* :warning: <a href="library/old/ternary-search.inc.cpp.html">old/ternary-search.inc.cpp</a>
-* :warning: <a href="library/old/treap.inc.cpp.html">old/treap.inc.cpp</a>
-* :warning: <a href="library/old/tree-dp.inc.cpp.html">fold a rooted tree / 木DP <small>(old/tree-dp.inc.cpp)</small></a>
-* :warning: <a href="library/old/trie-tree.inc.cpp.html">old/trie-tree.inc.cpp</a>
-* :warning: <a href="library/old/two-edge-connected-components.inc.cpp.html">2-edge-connected components decomposition / 2-辺連結成分分解 <small>(old/two-edge-connected-components.inc.cpp)</small></a>
-* :warning: <a href="library/old/two-node-connected-components.inc.cpp.html">2-node-connected components decomposition / 2-頂点連結成分分解 <small>(old/two-node-connected-components.inc.cpp)</small></a>
-* :warning: <a href="library/old/warshall-floyd.inc.cpp.html">Warshall-Floyd algorithm <small>(old/warshall-floyd.inc.cpp)</small></a>
-* :warning: <a href="library/old/xorshift.inc.cpp.html">old/xorshift.inc.cpp</a>
-
-
-<div id="23eeeb4347bdd26bfc6b7ee9a3b755dd"></div>
-
-### python
-
-* :warning: <a href="library/python/binary_search.py.html">python/binary_search.py</a>
-* :warning: <a href="library/python/chinese_remainder_theorem.py.html">python/chinese_remainder_theorem.py</a>
-* :warning: <a href="library/python/choose.py.html">python/choose.py</a>
-* :warning: <a href="library/python/extgcd.py.html">python/extgcd.py</a>
-* :warning: <a href="library/python/matrix-modinv.py.html">python/matrix-modinv.py</a>
-* :warning: <a href="library/python/miller_rabin.py.html">python/miller_rabin.py</a>
-* :warning: <a href="library/python/rational-gcd.py.html">python/rational-gcd.py</a>
-
-
-<div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
-
-### string
-
-* :heavy_check_mark: <a href="library/string/longest_common_prefix.hpp.html">Longest Common Prefix / 最長共通接頭辞 (接尾辞配列, 前処理 $O(N (\log N)^2)$ + $O(1)$) <small>(string/longest_common_prefix.hpp)</small></a>
-* :heavy_check_mark: <a href="library/string/suffix_array.hpp.html">Suffix Array / 接尾辞配列 ($O(N (\log N)^2)$, Manber & Myers) <small>(string/suffix_array.hpp)</small></a>
-
-
-<div id="2b3583e6e17721c54496bd04e57a0c15"></div>
-
-### utils
-
-* :heavy_check_mark: <a href="library/utils/binary_search.hpp.html">a binary search / 二分探索 <small>(utils/binary_search.hpp)</small></a>
-* :warning: <a href="library/utils/binary_search_float.hpp.html">a binary search on floating point numbers / 二分探索 (浮動小数点数) <small>(utils/binary_search_float.hpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/coordinate_compression.hpp.html">utils/coordinate_compression.hpp</a>
-* :heavy_check_mark: <a href="library/utils/dsu_on_tree.hpp.html">DSU on tree (sack) <small>(utils/dsu_on_tree.hpp)</small></a>
-* :warning: <a href="library/utils/fast_zeta_transform.hpp.html">upward fast zeta transform on primes <small>(utils/fast_zeta_transform.hpp)</small></a>
-* :warning: <a href="library/utils/interval_map.hpp.html">map from disjoint intervals <small>(utils/interval_map.hpp)</small></a>
-* :warning: <a href="library/utils/interval_set.hpp.html">set of disjoint intervals <small>(utils/interval_set.hpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/left_to_right_maxima.hpp.html">Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$) <small>(utils/left_to_right_maxima.hpp)</small></a>
-* :heavy_check_mark: <a href="library/utils/macros.hpp.html">utils/macros.hpp</a>
-* :warning: <a href="library/utils/mex.hpp.html">Minimum Excluded Value ($O(n)$ for a given sorted container) <small>(utils/mex.hpp)</small></a>
-* :warning: <a href="library/utils/mex_calculator.hpp.html">utils/mex_calculator.hpp</a>
-* :warning: <a href="library/utils/next_combination.hpp.html">utils/next_combination.hpp</a>
-* :heavy_check_mark: <a href="library/utils/two_satisfiability.hpp.html">2-SAT ($O(N)$) <small>(utils/two_satisfiability.hpp)</small></a>
-
-
-## Verify Files
-
-* :heavy_check_mark: <a href="verify/data_structure/convex_hull_trick.line_add_get_min.test.cpp.html">data_structure/convex_hull_trick.line_add_get_min.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/dual_segment_tree.range_update_query.test.cpp.html">data_structure/dual_segment_tree.range_update_query.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp.html">data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp.html">data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp.html">data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/li_chao_tree.segment_add_get_min.test.cpp.html">data_structure/li_chao_tree.segment_add_get_min.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp.html">data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp.html">data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.marked_ancestor.test.cpp.html">data_structure/link_cut_tree.marked_ancestor.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.vertex_add_path_sum.test.cpp.html">data_structure/link_cut_tree.vertex_add_path_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/link_cut_tree.vertex_set_path_composite.test.cpp.html">data_structure/link_cut_tree.vertex_set_path_composite.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_add_range_sum.test.cpp.html">data_structure/segment_tree.point_add_range_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree.point_set_range_composite.test.cpp.html">data_structure/segment_tree.point_set_range_composite.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree.range_sum_query.test.cpp.html">data_structure/segment_tree.range_sum_query.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree_beats.DSL_2_F.test.cpp.html">data_structure/segment_tree_beats.DSL_2_F.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree_beats.DSL_2_G.test.cpp.html">data_structure/segment_tree_beats.DSL_2_G.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree_beats.DSL_2_H.test.cpp.html">data_structure/segment_tree_beats.DSL_2_H.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree_beats.DSL_2_I.test.cpp.html">data_structure/segment_tree_beats.DSL_2_I.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/segment_tree_beats.yosupo.test.cpp.html">data_structure/segment_tree_beats.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/sliding_window_aggregation.yosupo.test.cpp.html">data_structure/sliding_window_aggregation.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/sparse_table.yosupo.test.cpp.html">data_structure/sparse_table.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/sparse_table.yukicoder-1036.test.cpp.html">data_structure/sparse_table.yukicoder-1036.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/union_find_tree.aoj.test.cpp.html">data_structure/union_find_tree.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/union_find_tree.yosupo.test.cpp.html">data_structure/union_find_tree.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.aoj2674.test.cpp.html">data_structure/wavelet_matrix.aoj2674.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.range_kth_smallest.test.cpp.html">data_structure/wavelet_matrix.range_kth_smallest.test.cpp</a>
-* :heavy_check_mark: <a href="verify/data_structure/wavelet_matrix.rectangle_sum.test.cpp.html">data_structure/wavelet_matrix.rectangle_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/bellman_ford.test.cpp.html">graph/bellman_ford.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/cartesian_tree.yosupo.test.cpp.html">graph/cartesian_tree.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/cartesian_tree.yukicoder-1031.test.cpp.html">graph/cartesian_tree.yukicoder-1031.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/dijkstra.yukicoder-1065.test.cpp.html">graph/dijkstra.yukicoder-1065.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/kruskal.aoj.test.cpp.html">graph/kruskal.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.aoj.test.cpp.html">graph/lowest_common_ancestor.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/lowest_common_ancestor.yosupo.test.cpp.html">graph/lowest_common_ancestor.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/strongly_connected_components.yosupo.test.cpp.html">graph/strongly_connected_components.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/tree_decomposition.aoj_2405.test.cpp.html">graph/tree_decomposition.aoj_2405.test.cpp</a>
-* :heavy_check_mark: <a href="verify/graph/yen_algorithm.yukicoder-1069.test.cpp.html">graph/yen_algorithm.yukicoder-1069.test.cpp</a>
-* :heavy_check_mark: <a href="verify/hack/fastio.yosupo.test.cpp.html">hack/fastio.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/hack/fastio_scanner_and_printer.yosupo.test.cpp.html">hack/fastio_scanner_and_printer.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/choose.yukicoder-1035.test.cpp.html">modulus/choose.yukicoder-1035.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/formal_power_series.exp.test.cpp.html">modulus/formal_power_series.exp.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/formal_power_series.inv.test.cpp.html">modulus/formal_power_series.inv.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/formal_power_series.log.test.cpp.html">modulus/formal_power_series.log.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/formal_power_series.yukicoder-1145.test.cpp.html">modulus/formal_power_series.yukicoder-1145.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/modlog.yosupo.test.cpp.html">modulus/modlog.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/modsqrt.yosupo.test.cpp.html">modulus/modsqrt.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/number_theoretic_transformation.yosupo.test.cpp.html">modulus/number_theoretic_transformation.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp.html">modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp.html">modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_1.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_1.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_10.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_10.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_11.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_11.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_2.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_2.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_3.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_3.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_4.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_4.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_5.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_5.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_6.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_6.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_7.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_7.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_8.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_8.test.cpp</a>
-* :heavy_check_mark: <a href="verify/modulus/twelvefold_way.balls_and_boxes_9.test.cpp.html">modulus/twelvefold_way.balls_and_boxes_9.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/fast_fourier_transformation.yukicoder-856.test.cpp.html">number/fast_fourier_transformation.yukicoder-856.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/matrix_template.yukicoder-1073.test.cpp.html">number/matrix_template.yukicoder-1073.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/primes.aoj.test.cpp.html">number/primes.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/number/primes.yukicoder-1140.test.cpp.html">number/primes.yukicoder-1140.test.cpp</a>
-* :heavy_check_mark: <a href="verify/old/rollback-square-decomposition.yukicoder-1031.test.cpp.html">old/rollback-square-decomposition.yukicoder-1031.test.cpp</a>
-* :heavy_check_mark: <a href="verify/string/longest_common_prefix.yosupo.test.cpp.html">string/longest_common_prefix.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/string/suffix_array.yosupo.test.cpp.html">string/suffix_array.yosupo.test.cpp</a>
-* :heavy_check_mark: <a href="verify/utils/binary_search.aoj.test.cpp.html">utils/binary_search.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/utils/dsu_on_tree.aoj.test.cpp.html">utils/dsu_on_tree.aoj.test.cpp</a>
-* :heavy_check_mark: <a href="verify/utils/two_satisfiability.yosupo.test.cpp.html">utils/two_satisfiability.yosupo.test.cpp</a>
-
-
