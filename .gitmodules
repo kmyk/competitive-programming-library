@@ -4,3 +4,6 @@
 [submodule "tinydfa"]
 	path = tinydfa
 	url = https://github.com/kmyk/tinydfa
+[submodule "ac-library"]
+	path = ac-library
+	url = https://github.com/atcoder/ac-library
