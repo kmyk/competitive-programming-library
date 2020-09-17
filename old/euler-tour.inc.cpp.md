@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: euler tour
+    links:
+    - https://yukicoder.me/problems/no/899
   bundledCode: "#line 1 \"old/euler-tour.inc.cpp\"\n/**\n * @brief euler tour\n *\
     \ @arg g must be a tree, directed or undirected\n * @note for constraints, see\
     \ the unittest\n */\nvoid do_euler_tour(vector<vector<int> > const & g, int root,\
@@ -90,15 +97,11 @@ data:
     \ : g[x]) if (y != parent[x]) {\n            parent[y] = x;\n            que.push(y);\n\
     \        }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/euler-tour.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/euler-tour.inc.cpp
 layout: document

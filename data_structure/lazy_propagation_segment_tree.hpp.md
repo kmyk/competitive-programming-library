@@ -1,10 +1,25 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+    title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+    title: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/lazy_propagation_segment_tree.md
     document_title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\
       \u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    links: []
   bundledCode: "#line 2 \"data_structure/lazy_propagation_segment_tree.hpp\"\n#include\
     \ <algorithm>\n#include <cassert>\n#include <type_traits>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -130,27 +145,14 @@ data:
     \    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
-    title: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-    title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   isVerificationFile: false
   path: data_structure/lazy_propagation_segment_tree.hpp
   requiredBy: []
   timestamp: '2020-03-08 03:43:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
 documentation_of: data_structure/lazy_propagation_segment_tree.hpp
 layout: document
 redirect_from:

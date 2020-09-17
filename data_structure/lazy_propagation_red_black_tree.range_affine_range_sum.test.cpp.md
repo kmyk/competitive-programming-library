@@ -1,8 +1,40 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_red_black_tree.hpp
+    title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
+      \u30F3\u30C8\u6728 (monoids, \u8D64\u9ED2\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus_count.hpp
+    title: monoids/plus_count.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function.hpp
+    title: monoids/linear_function.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function_plus_count_action.hpp
+    title: monoids/linear_function_plus_count_action.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/range_affine_range_sum
+    links:
+    - https://judge.yosupo.jp/problem/range_affine_range_sum
   bundledCode: "#line 1 \"data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_affine_range_sum\"\n\
     #line 2 \"data_structure/lazy_propagation_red_black_tree.hpp\"\n#include <algorithm>\n\
@@ -269,40 +301,11 @@ data:
   - modulus/modpow.hpp
   - modulus/modinv.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_red_black_tree.hpp
-    title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
-      \u30F3\u30C8\u6728 (monoids, \u8D64\u9ED2\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus_count.hpp
-    title: monoids/plus_count.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function.hpp
-    title: monoids/linear_function.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function_plus_count_action.hpp
-    title: monoids/linear_function_plus_count_action.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
   requiredBy: []
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
 layout: document

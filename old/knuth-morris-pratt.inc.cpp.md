@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Morris-Pratt algorithm
+    links: []
   bundledCode: "#line 1 \"old/knuth-morris-pratt.inc.cpp\"\n/**\n * @brief Morris-Pratt\
     \ algorithm\n * @description compute the list of the lengthes of the longest borders\n\
     \ * @note O(N)\n */\ntemplate <class Iterator>\nvector<int> morris_pratt(Iterator\
@@ -40,15 +46,11 @@ data:
     \ const & target, string const & pattern) {\n    return kmp_match(target, pattern,\
     \ kmp_build_fail(pattern));\n}\n*/\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/knuth-morris-pratt.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/knuth-morris-pratt.inc.cpp
 layout: document

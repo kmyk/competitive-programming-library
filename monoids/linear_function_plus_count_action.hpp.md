@@ -1,7 +1,22 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function.hpp
+    title: monoids/linear_function.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+    title: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+    title: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"monoids/linear_function_plus_count_action.hpp\"\n#include\
     \ <utility>\n#line 3 \"monoids/linear_function.hpp\"\n\ntemplate <class CommutativeRing>\n\
     struct linear_function_monoid {\n    typedef std::pair<CommutativeRing, CommutativeRing>\
@@ -23,27 +38,14 @@ data:
     \ * x.first + f.second * x.second, x.second);\n    }\n};\n"
   dependsOn:
   - monoids/linear_function.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function.hpp
-    title: monoids/linear_function.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
-    title: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
-    title: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
   isVerificationFile: false
   path: monoids/linear_function_plus_count_action.hpp
   requiredBy: []
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
   - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
 documentation_of: monoids/linear_function_plus_count_action.hpp
 layout: document
 redirect_from:

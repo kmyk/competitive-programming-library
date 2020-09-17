@@ -1,10 +1,22 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: utils/dsu_on_tree.hpp
+    title: DSU on tree (sack)
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: utils/dsu_on_tree.aoj.test.cpp
+    title: utils/dsu_on_tree.aoj.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\
       \u306E size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\
       \u3081\u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
+    links: []
   bundledCode: "#line 2 \"graph/subtree.hpp\"\n#include <algorithm>\n#include <vector>\n\
     \nstruct subtree_info_t {\n    int parent;  // in the entire tree\n    int depth;\
     \  // in the entire tree\n    int size;  // of the subtree\n    int height;  //\
@@ -44,22 +56,12 @@ data:
     \            info[i].height = std::max(info[i].height, info[j].height + 1);\n\
     \        }\n    }\n    info[root].parent = -1;\n    return info;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: utils/dsu_on_tree.hpp
-    title: DSU on tree (sack)
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: utils/dsu_on_tree.aoj.test.cpp
-    title: utils/dsu_on_tree.aoj.test.cpp
   isVerificationFile: false
   path: graph/subtree.hpp
   requiredBy:
   - utils/dsu_on_tree.hpp
   timestamp: '2019-12-15 04:15:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
 documentation_of: graph/subtree.hpp

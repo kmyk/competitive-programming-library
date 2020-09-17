@@ -1,7 +1,16 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio_scanner_and_printer.yosupo.test.cpp
+    title: hack/fastio_scanner_and_printer.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"hack/fastio_scanner.hpp\"\n#include <algorithm>\n#include\
     \ <cassert>\n#include <cstdlib>\n#include <cstring>\n#include <string>\n#include\
     \ <type_traits>\n#include <unistd.h>\n\nclass scanner {\n    static constexpr\
@@ -51,18 +60,11 @@ data:
     \ and is_negative) {\n            x *= -1;\n        }\n        return x;\n   \
     \ }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio_scanner_and_printer.yosupo.test.cpp
-    title: hack/fastio_scanner_and_printer.yosupo.test.cpp
   isVerificationFile: false
   path: hack/fastio_scanner.hpp
   requiredBy: []
   timestamp: '2020-03-04 16:58:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - hack/fastio_scanner_and_printer.yosupo.test.cpp
 documentation_of: hack/fastio_scanner.hpp

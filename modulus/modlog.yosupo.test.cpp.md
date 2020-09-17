@@ -1,8 +1,28 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: modulus/modlog.hpp
+    title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
+      sqrt{m})$)"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/discrete_logarithm_mod
+    links:
+    - https://judge.yosupo.jp/problem/discrete_logarithm_mod
   bundledCode: "#line 1 \"modulus/modlog.yosupo.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/discrete_logarithm_mod\"\
     \n#line 2 \"modulus/modlog.hpp\"\n#include <algorithm>\n#include <climits>\n#include\
     \ <cmath>\n#include <cstdint>\n#include <unordered_map>\n#line 3 \"modulus/modinv.hpp\"\
@@ -57,28 +77,11 @@ data:
   - modulus/modinv.hpp
   - modulus/modpow.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: modulus/modlog.hpp
-    title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
-      sqrt{m})$)"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: modulus/modlog.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-06-16 07:51:56+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: modulus/modlog.yosupo.test.cpp
 layout: document

@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/graphviz.inc.cpp\"\nvoid graphviz(vector<vector<int>\
     \ > const & g, bool is_digraph = false, string const & name = \"graph\") {\n \
     \   ofstream ofs(name + \".dot\");\n    ofs << (is_digraph ? \"di\" : \"\") <<\
@@ -21,15 +27,11 @@ data:
     }\" << endl;\n    ofs.close();\n    system((\"dot -T png \" + name + \".dot >\
     \ \" + name + \".png\").c_str());\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/graphviz.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/graphviz.inc.cpp
 layout: document

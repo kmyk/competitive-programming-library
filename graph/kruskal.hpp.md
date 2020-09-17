@@ -1,9 +1,24 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/union_find_tree.hpp
+    title: Union-Find Tree
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/kruskal.aoj.test.cpp
+    title: graph/kruskal.aoj.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's\
       \ method)"
+    links: []
   bundledCode: "#line 2 \"data_structure/union_find_tree.hpp\"\n#include <vector>\n\
     \n/**\n * @brief Union-Find Tree\n * @docs data_structure/union_find_tree.md\n\
     \ * @note union-by-size + path-compression\n */\nstruct union_find_tree {\n  \
@@ -48,24 +63,11 @@ data:
   dependsOn:
   - data_structure/union_find_tree.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/union_find_tree.hpp
-    title: Union-Find Tree
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/kruskal.aoj.test.cpp
-    title: graph/kruskal.aoj.test.cpp
   isVerificationFile: false
   path: graph/kruskal.hpp
   requiredBy: []
   timestamp: '2020-02-28 14:33:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/kruskal.aoj.test.cpp
 documentation_of: graph/kruskal.hpp

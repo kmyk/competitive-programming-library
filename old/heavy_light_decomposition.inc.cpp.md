@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "heavy light decomposition / \u91CD\u8EFD\u5206\u89E3"
+    links:
+    - http://math314.hateblo.jp/entry/2014/06/24/220107
   bundledCode: "#line 1 \"old/heavy_light_decomposition.inc.cpp\"\n/**\n * @brief\
     \ heavy light decomposition / \u91CD\u8EFD\u5206\u89E3\n * @description for given\
     \ rooted tree $G = (V, E)$, decompose the vertices to disjoint paths, and construct\
@@ -156,15 +163,11 @@ data:
     \ r) {\n            segtree.range_apply(l, r, f);\n        }, [&](type & value)\
     \ {\n            value = endo.apply(f, value);\n        });\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/heavy_light_decomposition.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/heavy_light_decomposition.inc.cpp
 layout: document

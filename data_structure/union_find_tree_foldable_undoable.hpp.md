@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dynamic_connectivity_offline.hpp
+    title: Dynamic Connectivity (offline, commutative monoids)
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+    title: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Union-Find Tree (foldable with commutative monoids, undoable)
+    links: []
   bundledCode: "#line 2 \"data_structure/union_find_tree_foldable_undoable.hpp\"\n\
     #include <cassert>\n#include <tuple>\n#include <utility>\n#include <vector>\n\n\
     /**\n * @brief Union-Find Tree (foldable with commutative monoids, undoable)\n\
@@ -65,22 +77,12 @@ data:
     \            history.pop_back();\n            if (i == -1) break;\n          \
     \  value[i] = value_i;\n            data[i] = data_i;\n        }\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_connectivity_offline.hpp
-    title: Dynamic Connectivity (offline, commutative monoids)
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
-    title: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   isVerificationFile: false
   path: data_structure/union_find_tree_foldable_undoable.hpp
   requiredBy:
   - data_structure/dynamic_connectivity_offline.hpp
   timestamp: '2020-03-08 03:44:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
 documentation_of: data_structure/union_find_tree_foldable_undoable.hpp

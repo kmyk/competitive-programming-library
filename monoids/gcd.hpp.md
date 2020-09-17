@@ -1,7 +1,19 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: number/gcd.hpp
+    title: number/gcd.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.yukicoder-1036.test.cpp
+    title: data_structure/sparse_table.yukicoder-1036.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"number/gcd.hpp\"\n#include <algorithm>\n\n/**\n * @note\
     \ if arguments are negative, the result may be negative\n */\ntemplate <typename\
     \ T>\nT gcd(T a, T b) {\n    while (a) {\n        b %= a;\n        std::swap(a,\
@@ -16,21 +28,11 @@ data:
     \ const { return gcd(a, b); }\n};\n"
   dependsOn:
   - number/gcd.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: number/gcd.hpp
-    title: number/gcd.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.yukicoder-1036.test.cpp
-    title: data_structure/sparse_table.yukicoder-1036.test.cpp
   isVerificationFile: false
   path: monoids/gcd.hpp
   requiredBy: []
   timestamp: '2020-04-24 23:33:38+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/sparse_table.yukicoder-1036.test.cpp
 documentation_of: monoids/gcd.hpp

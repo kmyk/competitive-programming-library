@@ -1,8 +1,35 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: string/longest_common_prefix.hpp
+    title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
+      \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
+  - icon: ':heavy_check_mark:'
+    path: string/suffix_array.hpp
+    title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
+      \ & Myers)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: monoids/min.hpp
+    title: monoids/min.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/zalgorithm
+    links:
+    - https://judge.yosupo.jp/problem/zalgorithm
   bundledCode: "#line 1 \"string/longest_common_prefix.yosupo.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/zalgorithm\"\n#line 2 \"string/longest_common_prefix.hpp\"\
     \n#include <algorithm>\n#include <string>\n#include <vector>\n#line 5 \"string/suffix_array.hpp\"\
@@ -98,35 +125,11 @@ data:
   - data_structure/sparse_table.hpp
   - monoids/min.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: string/longest_common_prefix.hpp
-    title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
-      \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
-    path: string/suffix_array.hpp
-    title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
-      \ & Myers)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: monoids/min.hpp
-    title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: string/longest_common_prefix.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: string/longest_common_prefix.yosupo.test.cpp
 layout: document

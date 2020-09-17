@@ -1,8 +1,38 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sliding_window_aggregation.hpp
+    title: "Sliding Window Aggregation / \u542B\u307E\u308C\u308B\u8981\u7D20\u306E\
+      \u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\u3068\
+      \u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function.hpp
+    title: monoids/linear_function.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/dual.hpp
+    title: monoids/dual.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/queue_operate_all_composite
+    links:
+    - https://judge.yosupo.jp/problem/queue_operate_all_composite
   bundledCode: "#line 1 \"data_structure/sliding_window_aggregation.yosupo.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/queue_operate_all_composite\"\
     \n#line 2 \"data_structure/sliding_window_aggregation.hpp\"\n#include <cassert>\n\
@@ -113,38 +143,11 @@ data:
   - modulus/mint.hpp
   - modulus/modpow.hpp
   - modulus/modinv.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sliding_window_aggregation.hpp
-    title: "Sliding Window Aggregation / \u542B\u307E\u308C\u308B\u8981\u7D20\u306E\
-      \u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\u3068\
-      \u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function.hpp
-    title: monoids/linear_function.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/dual.hpp
-    title: monoids/dual.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/sliding_window_aggregation.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/sliding_window_aggregation.yosupo.test.cpp
 layout: document

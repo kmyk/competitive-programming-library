@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - https://beta.atcoder.jp/contests/yahoo-procon2018-final/submissions/2126707
   bundledCode: "#line 1 \"old/range-union-find-tree.inc.cpp\"\n/**\n * @note \u8A08\
     \u7B97\u91CF\u306F\u78BA\u304B\u306B\u843D\u3061\u308B\u306E\u3060\u3051\u3069\
     \u3053\u308C\u3092\u4F7F\u3063\u3066\u901F\u304F\u306A\u308B\u30B1\u30FC\u30B9\
@@ -46,15 +53,11 @@ data:
     \ k), root + (1 << k));\n            }\n        }\n        return data[0];\n \
     \   }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/range-union-find-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/range-union-find-tree.inc.cpp
 layout: document

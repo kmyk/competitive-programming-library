@@ -1,7 +1,19 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.yukicoder-1031.test.cpp
+    title: graph/cartesian_tree.yukicoder-1031.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"graph/format.hpp\"\n#include <cassert>\n#include <utility>\n\
     #include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i\
     \ = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i = (m); (i) <\
@@ -32,21 +44,11 @@ data:
     \        }\n    }\n    return g;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.yukicoder-1031.test.cpp
-    title: graph/cartesian_tree.yukicoder-1031.test.cpp
   isVerificationFile: false
   path: graph/format.hpp
   requiredBy: []
   timestamp: '2020-07-15 05:21:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: graph/format.hpp

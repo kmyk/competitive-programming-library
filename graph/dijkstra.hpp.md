@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/dijkstra.yukicoder-1065.test.cpp
+    title: graph/dijkstra.yukicoder-1065.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Dijkstra ($O((E + V) \log V)$)
+    links: []
   bundledCode: "#line 2 \"graph/dijkstra.hpp\"\n#include <cstdint>\n#include <numeric>\n\
     #include <queue>\n#include <utility>\n#include <vector>\n\n/**\n * @brief Dijkstra\
     \ ($O((E + V) \\log V)$)\n */\ntemplate <class T = int64_t>\nstd::vector<T> dijkstra(std::vector<std::vector<std::pair<int,\
@@ -26,18 +35,11 @@ data:
     \ = - dist_x + cost;\n                que.emplace(dist_x - cost, y);\n       \
     \     }\n        }\n    }\n    return dist;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/dijkstra.yukicoder-1065.test.cpp
-    title: graph/dijkstra.yukicoder-1065.test.cpp
   isVerificationFile: false
   path: graph/dijkstra.hpp
   requiredBy: []
   timestamp: '2020-05-29 23:50:33+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/dijkstra.yukicoder-1065.test.cpp
 documentation_of: graph/dijkstra.hpp

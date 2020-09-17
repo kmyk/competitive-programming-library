@@ -1,9 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
+    title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/li_chao_tree.md
     document_title: Li-Chao tree
+    links: []
   bundledCode: "#line 2 \"data_structure/li_chao_tree.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -125,21 +137,11 @@ data:
     \ * i + 2, (il + ir) / 2, ir, l, r, a, b);\n        }\n    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
-    title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   isVerificationFile: false
   path: data_structure/li_chao_tree.hpp
   requiredBy: []
   timestamp: '2020-01-08 19:38:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/li_chao_tree.segment_add_get_min.test.cpp
 documentation_of: data_structure/li_chao_tree.hpp

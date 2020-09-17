@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/persistent-randomized-binary-search-tree.inc.cpp\"\n\
     template <typename T>\nstruct prbst { // persistent randomized binary search tree\n\
     \    typedef T value_type;\n    value_type v;\n    shared_ptr<prbst> l, r;\n \
@@ -58,15 +64,11 @@ data:
     \ engine(device());\n        bernoulli_distribution dist(b /(double) (a + b));\n\
     \        return dist(engine);\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/persistent-randomized-binary-search-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/persistent-randomized-binary-search-tree.inc.cpp
 layout: document

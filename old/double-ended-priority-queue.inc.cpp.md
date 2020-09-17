@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a double-ended priority queue
+    links:
+    - https://topcoder.g.hatena.ne.jp/spaghetti_source/20121006#c1349522933
   bundledCode: "#line 1 \"old/double-ended-priority-queue.inc.cpp\"\n/**\n * @brief\
     \ a double-ended priority queue\n * @note the feature is the same to std::multiset,\
     \ but this is 7x faster for 10^7 operations\n * @note interval heap is more faster\n\
@@ -63,15 +70,11 @@ data:
     \                    depq.pop_max();\n                }\n            }\n     \
     \   }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/double-ended-priority-queue.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/double-ended-priority-queue.inc.cpp
 layout: document

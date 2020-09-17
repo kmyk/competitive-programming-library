@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/dice.inc.cpp\"\nstruct dice_t { // regular hexahedron\
     \ group\n    //       ______\n    //      \\      \\      4\n    //     / \\ \
     \  C  \\    2156\n    //    / A \\______\\    3 ^\n    //    \\ A /    B /   ^^\
@@ -31,15 +37,11 @@ data:
     \ (dice_t) { dice.c(), dice.b }; }\nbool operator == (dice_t x, dice_t y) { return\
     \ x.a == y.a and x.b == y.b; }\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/dice.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/dice.inc.cpp
 layout: document

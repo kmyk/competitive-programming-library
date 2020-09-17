@@ -1,12 +1,25 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/bellman_ford.hpp
+    title: Bellman-Ford algorithm
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 64, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    , line 70, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    , line 191, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 398, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ graph/bellman_ford.test.cpp: line 3: unable to process #include in #if / #ifdef\
@@ -27,21 +40,11 @@ data:
   dependsOn:
   - graph/bellman_ford.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/bellman_ford.hpp
-    title: Bellman-Ford algorithm
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/bellman_ford.test.cpp
   requiredBy: []
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/bellman_ford.test.cpp
 layout: document

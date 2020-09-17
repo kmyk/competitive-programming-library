@@ -1,8 +1,30 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: number/fast_fourier_transformation.hpp
+    title: FFT convolution
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/856
+    links:
+    - https://yukicoder.me/problems/no/856
   bundledCode: "#line 1 \"number/fast_fourier_transformation.yukicoder-856.test.cpp\"\
     \n#define PROBLEM \"https://yukicoder.me/problems/no/856\"\n#include <algorithm>\n\
     #include <iostream>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define\
@@ -138,30 +160,11 @@ data:
   - modulus/modpow.hpp
   - modulus/modinv.hpp
   - number/fast_fourier_transformation.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: number/fast_fourier_transformation.hpp
-    title: FFT convolution
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: number/fast_fourier_transformation.yukicoder-856.test.cpp
   requiredBy: []
   timestamp: '2020-08-11 20:59:07+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: number/fast_fourier_transformation.yukicoder-856.test.cpp
 layout: document

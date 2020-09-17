@@ -1,8 +1,32 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree.hpp
+    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
+      \u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: monoids/max.hpp
+    title: monoids/max.hpp
+  - icon: ':heavy_check_mark:'
+    path: old/rollback-square-decomposition.inc.cpp
+    title: the extended Mo's algorithm
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1031
+    links:
+    - https://github.com/kmyk/online-judge-template-generator)
+    - https://yukicoder.me/problems/no/1031
   bundledCode: "#line 1 \"old/rollback-square-decomposition.yukicoder-1031.test.cpp\"\
     \n#define PROBLEM \"https://yukicoder.me/problems/no/1031\"\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -201,31 +225,11 @@ data:
   - data_structure/segment_tree.hpp
   - monoids/max.hpp
   - old/rollback-square-decomposition.inc.cpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree.hpp
-    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
-      \u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: monoids/max.hpp
-    title: monoids/max.hpp
-  - icon: ':heavy_check_mark:'
-    path: old/rollback-square-decomposition.inc.cpp
-    title: the extended Mo's algorithm
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
   requiredBy: []
   timestamp: '2020-04-17 23:46:14+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: old/rollback-square-decomposition.yukicoder-1031.test.cpp
 layout: document

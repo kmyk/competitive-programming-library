@@ -1,10 +1,19 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+    title: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/lazy_propagation_red_black_tree.md
     document_title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\
       \u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u8D64\u9ED2\u6728)"
+    links: []
   bundledCode: "#line 2 \"data_structure/lazy_propagation_red_black_tree.hpp\"\n#include\
     \ <algorithm>\n#include <cassert>\n#include <memory>\n#include <type_traits>\n\
     #include <vector>\n\n/**\n * @brief Lazy Propagation Segment Tree / \u9045\u5EF6\
@@ -323,18 +332,11 @@ data:
     \ empty() const {\n        return not root;\n    }\n    void clear() {\n     \
     \   root = nullptr;\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
-    title: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
   isVerificationFile: false
   path: data_structure/lazy_propagation_red_black_tree.hpp
   requiredBy: []
   timestamp: '2020-03-04 20:56:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
 documentation_of: data_structure/lazy_propagation_red_black_tree.hpp

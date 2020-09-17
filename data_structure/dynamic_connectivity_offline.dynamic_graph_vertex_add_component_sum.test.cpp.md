@@ -1,8 +1,34 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dynamic_connectivity_offline.hpp
+    title: Dynamic Connectivity (offline, commutative monoids)
+  - icon: ':heavy_check_mark:'
+    path: data_structure/union_find_tree_foldable_undoable.hpp
+    title: Union-Find Tree (foldable with commutative monoids, undoable)
+  - icon: ':heavy_check_mark:'
+    path: data_structure/reporting_segment_tree.hpp
+    title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u5217\
+      \u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum
+    links:
+    - https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum
   bundledCode: "#line 1 \"data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum\"\
     \n#line 2 \"data_structure/dynamic_connectivity_offline.hpp\"\n#include <algorithm>\n\
@@ -185,34 +211,11 @@ data:
   - utils/macros.hpp
   - monoids/plus.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_connectivity_offline.hpp
-    title: Dynamic Connectivity (offline, commutative monoids)
-  - icon: ':heavy_check_mark:'
-    path: data_structure/union_find_tree_foldable_undoable.hpp
-    title: Union-Find Tree (foldable with commutative monoids, undoable)
-  - icon: ':heavy_check_mark:'
-    path: data_structure/reporting_segment_tree.hpp
-    title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u5217\
-      \u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
 layout: document

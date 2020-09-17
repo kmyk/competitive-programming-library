@@ -1,9 +1,31 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/fully_indexable_dictionary.hpp
+    title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/wavelet_matrix.aoj2674.test.cpp
+    title: data_structure/wavelet_matrix.aoj2674.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
+    title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
+    title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/wavelet_matrix.md
     document_title: Wavelet Matrix
+    links:
+    - https://www.slideshare.net/pfi/ss-15916040
   bundledCode: "#line 2 \"data_structure/wavelet_matrix.hpp\"\n#include <array>\n\
     #include <cassert>\n#include <climits>\n#include <cstdint>\n#include <vector>\n\
     #line 2 \"data_structure/fully_indexable_dictionary.hpp\"\n#include <algorithm>\n\
@@ -219,34 +241,15 @@ data:
   dependsOn:
   - data_structure/fully_indexable_dictionary.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/fully_indexable_dictionary.hpp
-    title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-    title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/wavelet_matrix.aoj2674.test.cpp
-    title: data_structure/wavelet_matrix.aoj2674.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-    title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
   isVerificationFile: false
   path: data_structure/wavelet_matrix.hpp
   requiredBy: []
   timestamp: '2020-02-28 15:08:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - data_structure/wavelet_matrix.rectangle_sum.test.cpp
   - data_structure/wavelet_matrix.aoj2674.test.cpp
   - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
+  - data_structure/wavelet_matrix.rectangle_sum.test.cpp
 documentation_of: data_structure/wavelet_matrix.hpp
 layout: document
 redirect_from:

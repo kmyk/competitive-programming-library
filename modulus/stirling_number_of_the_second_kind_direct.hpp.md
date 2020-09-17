@@ -1,8 +1,69 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/factorial.hpp
+    title: modulus/factorial.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/choose.hpp
+    title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
+      \ + $O(1)$)"
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.hpp
+    title: "twelvefold way / \u5199\u50CF12\u76F8"
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+    title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the Stirling number of the second kind ($O(K \log N)$)
+    links: []
   bundledCode: "#line 2 \"modulus/stirling_number_of_the_second_kind_direct.hpp\"\n\
     #include <cassert>\n#include <vector>\n#include <map>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -88,83 +149,24 @@ data:
   - modulus/modinv.hpp
   - modulus/factorial.hpp
   - modulus/choose.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/factorial.hpp
-    title: modulus/factorial.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/choose.hpp
-    title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
-      \ + $O(1)$)"
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.hpp
-    title: "twelvefold way / \u5199\u50CF12\u76F8"
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-    title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
   isVerificationFile: false
   path: modulus/stirling_number_of_the_second_kind_direct.hpp
   requiredBy:
   - modulus/twelvefold_way.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
 documentation_of: modulus/stirling_number_of_the_second_kind_direct.hpp
 layout: document
 redirect_from:

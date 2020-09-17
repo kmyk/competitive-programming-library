@@ -1,10 +1,22 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sliding_window_aggregation.yosupo.test.cpp
+    title: data_structure/sliding_window_aggregation.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Sliding Window Aggregation / \u542B\u307E\u308C\u308B\u8981\u7D20\
       \u306E\u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\
       \u3068\u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"
+    links: []
   bundledCode: "#line 2 \"data_structure/sliding_window_aggregation.hpp\"\n#include\
     \ <cassert>\n#include <cstddef>\n#include <deque>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -52,21 +64,11 @@ data:
     \ data.size();\n    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sliding_window_aggregation.yosupo.test.cpp
-    title: data_structure/sliding_window_aggregation.yosupo.test.cpp
   isVerificationFile: false
   path: data_structure/sliding_window_aggregation.hpp
   requiredBy: []
   timestamp: '2020-01-08 19:38:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/sliding_window_aggregation.yosupo.test.cpp
 documentation_of: data_structure/sliding_window_aggregation.hpp

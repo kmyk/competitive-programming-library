@@ -1,8 +1,30 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.hpp
+    title: Link-Cut tree (monoids without commutativity, vertex set + path get)
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/reversible.hpp
+    title: monoids/reversible.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum
+    links:
+    - https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum
   bundledCode: "#line 1 \"data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum\"\
     \n#line 2 \"data_structure/link_cut_tree.hpp\"\n#include <algorithm>\n#include\
@@ -235,30 +257,11 @@ data:
   - monoids/reversible.hpp
   - monoids/plus.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.hpp
-    title: Link-Cut tree (monoids without commutativity, vertex set + path get)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/reversible.hpp
-    title: monoids/reversible.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
 layout: document

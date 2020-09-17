@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/xorshift.inc.cpp\"\nclass xor_shift_128 {\npublic:\n\
     \    typedef uint32_t result_type;\n    xor_shift_128(uint32_t seed = 42) {\n\
     \        set_seed(seed);\n    }\n    void set_seed(uint32_t seed) {\n        a\
@@ -24,15 +30,11 @@ data:
     \ }\n    static constexpr uint32_t min() { return numeric_limits<result_type>::min();\
     \ }\nprivate:\n    uint32_t a, b, c, d;\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/xorshift.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/xorshift.inc.cpp
 layout: document

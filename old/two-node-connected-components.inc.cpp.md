@@ -1,9 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "2-node-connected components decomposition / 2-\u9802\u70B9\u9023\
       \u7D50\u6210\u5206\u5206\u89E3"
+    links: []
   bundledCode: "#line 1 \"old/two-node-connected-components.inc.cpp\"\n/**\n * @brief\
     \ 2-node-connected components decomposition / 2-\u9802\u70B9\u9023\u7D50\u6210\
     \u5206\u5206\u89E3\n * @param g an adjacent list of the simple undirected graph\n\
@@ -46,15 +52,11 @@ data:
     \ REP (i, n) if (not used[i]) {\n        go(i, -1);\n    }\n    return components;\n\
     }\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/two-node-connected-components.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/two-node-connected-components.inc.cpp
 layout: document

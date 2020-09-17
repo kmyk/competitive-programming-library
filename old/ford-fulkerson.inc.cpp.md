@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/ford-fulkerson.inc.cpp\"\nstruct edge_t { int to, cap,\
     \ rev; };\nint maximum_flow_destructive(int s, int t, vector<vector<edge_t> >\
     \ & g) { // ford fulkerson, O(EF)\n    int n = g.size();\n    vector<bool> used(n);\n\
@@ -62,15 +68,11 @@ data:
     \  for (edge_t e : h[from]) if (b.count(e.to) and e.cap == 0) {\n            ans.emplace_back(from,\
     \ e.to);\n        }\n    }\n    return ans;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/ford-fulkerson.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/ford-fulkerson.inc.cpp
 layout: document

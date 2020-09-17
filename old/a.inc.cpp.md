@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Andrew's Monotone Chain
+    links: []
   bundledCode: "#line 1 \"old/a.inc.cpp\"\ntypedef complex<double> point;\ndouble\
     \ cross(point a, point b) { return a.real() * b.imag() - a.imag() * b.real();\
     \ }\nint ccw(point a, point b, point c) { double z = cross(b - a, c - a); return\
@@ -172,15 +178,11 @@ data:
     \       }\n        }\n        if (not ignored) return true;\n    }\n    return\
     \ false;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/a.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/a.inc.cpp
 layout: document

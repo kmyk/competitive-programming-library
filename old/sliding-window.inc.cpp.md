@@ -1,8 +1,16 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the sliding window minimum algorithm
+    links:
+    - http://cf16-tournament-round3-open.contest.atcoder.jp/tasks/asaporo_d
+    - http://poj.org/problem?id=2823
   bundledCode: "#line 1 \"old/sliding-window.inc.cpp\"\n/**\n * @brief the sliding\
     \ window minimum algorithm\n * @note to get maximums, use greater<T>\n * @note\
     \ verified http://poj.org/problem?id=2823\n * @note verified http://cf16-tournament-round3-open.contest.atcoder.jp/tasks/asaporo_d\n\
@@ -30,15 +38,11 @@ data:
     \ i, T a) {\n        if (data.empty() or not compare(data.front().second, a))\
     \ {\n            data.emplace_front(i, a);\n        }\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/sliding-window.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/sliding-window.inc.cpp
 layout: document

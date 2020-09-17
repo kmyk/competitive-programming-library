@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Lagrange interpolation
+    links: []
   bundledCode: "#line 1 \"number/lagrange_interpolation.hpp\"\n#include <cassert>\n\
     #include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i,\
     \ n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i\
@@ -59,18 +68,11 @@ data:
     \ f;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: number/lagrange_interpolation.hpp
   requiredBy: []
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: number/lagrange_interpolation.hpp
 layout: document

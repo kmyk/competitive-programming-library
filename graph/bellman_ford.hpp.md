@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/bellman_ford.test.cpp
+    title: graph/bellman_ford.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Bellman-Ford algorithm
+    links: []
   bundledCode: "#line 2 \"graph/bellman_ford.hpp\"\n#include <cassert>\n#include <climits>\n\
     #include <cstdint>\n#include <stack>\n#include <tuple>\n#include <utility>\n#include\
     \ <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i)\
@@ -49,21 +61,11 @@ data:
     \    return dist;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/bellman_ford.test.cpp
-    title: graph/bellman_ford.test.cpp
   isVerificationFile: false
   path: graph/bellman_ford.hpp
   requiredBy: []
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/bellman_ford.test.cpp
 documentation_of: graph/bellman_ford.hpp

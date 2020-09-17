@@ -1,8 +1,34 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/formal_power_series.hpp
+    title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
+      mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/number_theoretic_transformation.hpp
+    title: Number Theoretic Transformation (NTT) for Proth primes
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1145
+    links:
+    - https://yukicoder.me/problems/no/1145
   bundledCode: "#line 1 \"modulus/formal_power_series.yukicoder-1145.test.cpp\"\n\
     #define PROBLEM \"https://yukicoder.me/problems/no/1145\"\n#include <cstdio>\n\
     #include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i\
@@ -208,34 +234,11 @@ data:
   - modulus/modinv.hpp
   - modulus/formal_power_series.hpp
   - modulus/number_theoretic_transformation.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/formal_power_series.hpp
-    title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
-      mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation.hpp
-    title: Number Theoretic Transformation (NTT) for Proth primes
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: modulus/formal_power_series.yukicoder-1145.test.cpp
   requiredBy: []
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: modulus/formal_power_series.yukicoder-1145.test.cpp
 layout: document

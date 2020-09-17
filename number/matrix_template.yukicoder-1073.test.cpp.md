@@ -1,8 +1,30 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: number/matrix_template.hpp
+    title: number/matrix_template.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1073
+    links:
+    - https://yukicoder.me/problems/no/1073
   bundledCode: "#line 1 \"number/matrix_template.yukicoder-1073.test.cpp\"\n#define\
     \ PROBLEM \"https://yukicoder.me/problems/no/1073\"\n#line 2 \"number/matrix_template.hpp\"\
     \n#include <array>\n#include <cstdint>\n#line 2 \"utils/macros.hpp\"\n#define\
@@ -102,30 +124,11 @@ data:
   - modulus/mint.hpp
   - modulus/modpow.hpp
   - modulus/modinv.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: number/matrix_template.hpp
-    title: number/matrix_template.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: number/matrix_template.yukicoder-1073.test.cpp
   requiredBy: []
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: number/matrix_template.yukicoder-1073.test.cpp
 layout: document

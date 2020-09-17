@@ -1,8 +1,39 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/number_theoretic_transformation.hpp
+    title: Number Theoretic Transformation (NTT) for Proth primes
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: modulus/stirling_number_of_the_second_kind_convolution.hpp
+    title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
+      in $O(N \log N)$)
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+    title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+    title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
+    links: []
   bundledCode: "#line 2 \"modulus/number_theoretic_transformation_with_garner.hpp\"\
     \n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n#include <tuple>\n\
     #include <vector>\n#line 3 \"modulus/mint.hpp\"\n#include <iostream>\n#line 4\
@@ -172,44 +203,15 @@ data:
   - modulus/modinv.hpp
   - utils/macros.hpp
   - modulus/number_theoretic_transformation.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation.hpp
-    title: Number Theoretic Transformation (NTT) for Proth primes
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: modulus/stirling_number_of_the_second_kind_convolution.hpp
-    title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
-      in $O(N \log N)$)
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-    title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-    title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
   isVerificationFile: false
   path: modulus/number_theoretic_transformation_with_garner.hpp
   requiredBy:
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 documentation_of: modulus/number_theoretic_transformation_with_garner.hpp
 layout: document
 redirect_from:

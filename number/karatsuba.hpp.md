@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Karatsuba method ($O(n^{\log_2 3})$)
+    links: []
   bundledCode: "#line 2 \"number/karatsuba.hpp\"\n#include <cassert>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
     \ ++ (i))\n#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define\
@@ -53,18 +62,11 @@ data:
     \ z[2 * half + i] += z2[i];\n    }\n    return z;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: number/karatsuba.hpp
   requiredBy: []
   timestamp: '2020-08-11 20:59:07+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: number/karatsuba.hpp
 layout: document

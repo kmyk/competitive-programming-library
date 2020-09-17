@@ -1,8 +1,26 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/subtree.hpp
+    title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
+      \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
+      \u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: utils/dsu_on_tree.aoj.test.cpp
+    title: utils/dsu_on_tree.aoj.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: DSU on tree (sack)
+    links:
+    - https://codeforces.com/blog/entry/44351
   bundledCode: "#line 2 \"utils/dsu_on_tree.hpp\"\n#include <functional>\n#include\
     \ <stack>\n#include <vector>\n#line 2 \"graph/subtree.hpp\"\n#include <algorithm>\n\
     #line 4 \"graph/subtree.hpp\"\n\nstruct subtree_info_t {\n    int parent;  //\
@@ -87,26 +105,11 @@ data:
   dependsOn:
   - graph/subtree.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/subtree.hpp
-    title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
-      \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
-      \u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: utils/dsu_on_tree.aoj.test.cpp
-    title: utils/dsu_on_tree.aoj.test.cpp
   isVerificationFile: false
   path: utils/dsu_on_tree.hpp
   requiredBy: []
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
 documentation_of: utils/dsu_on_tree.hpp

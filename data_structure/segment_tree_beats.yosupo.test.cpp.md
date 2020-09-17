@@ -1,8 +1,25 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.hpp
+    title: "Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max,\
+      \ sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum
+    links:
+    - https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum
   bundledCode: "#line 1 \"data_structure/segment_tree_beats.yosupo.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum\"\n\
     #line 2 \"data_structure/segment_tree_beats.hpp\"\n#include <algorithm>\n#include\
@@ -176,25 +193,11 @@ data:
   - data_structure/segment_tree_beats.hpp
   - utils/macros.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.hpp
-    title: "Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max,\
-      \ sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/segment_tree_beats.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/segment_tree_beats.yosupo.test.cpp
 layout: document

@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2639.pdf
   bundledCode: "#line 2 \"utils/next_combination.hpp\"\n#include <algorithm>\n\n/**\n\
     \ * @note copied from the reference implementation of N2639\n * @see http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2639.pdf\n\
     \ */\ntemplate <class BidirectionalIterator>\nbool next_combination(BidirectionalIterator\
@@ -45,15 +52,11 @@ data:
     \ first, BidirectionalIterator middle, BidirectionalIterator last) {\n    return\
     \ next_combination(middle, last, first, middle);\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: utils/next_combination.hpp
   requiredBy: []
   timestamp: '2020-01-01 19:13:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: utils/next_combination.hpp
 layout: document

@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: compare substrings of a string with O(1) using suffix arrays
+    links: []
   bundledCode: "#line 1 \"old/comparable-view.inc.cpp\"\n/**\n * @brief compare substrings\
     \ of a string with O(1) using suffix arrays\n * @note O(1)\n */\nint string_view_strcmp(int\
     \ l1, int r1, int l2, int r2, vector<int> const & rank, sparse_table<min_semilattice>\
@@ -124,15 +130,11 @@ data:
     \ = s.substr(l2, r2 - l2);\n            assert ((view1 < view2) == (sub1 < sub2));\n\
     \        }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/comparable-view.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/comparable-view.inc.cpp
 layout: document

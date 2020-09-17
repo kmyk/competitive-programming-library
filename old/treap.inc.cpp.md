@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - https://www.hackerrank.com/contests/zalando-codesprint/challenges/give-me-the-order/submissions/code/6004391
   bundledCode: "#line 1 \"old/treap.inc.cpp\"\n#include <random>\n#include <memory>\n\
     \n// https://www.hackerrank.com/contests/zalando-codesprint/challenges/give-me-the-order/submissions/code/6004391\n\
     template <typename T>\nstruct treap {\n    typedef T value_type;\n    typedef\
@@ -64,15 +71,11 @@ data:
     \        static uniform_real_distribution<double> dist;\n        return dist(engine);\n\
     \    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/treap.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/treap.inc.cpp
 layout: document

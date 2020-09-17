@@ -1,8 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/li_chao_tree.hpp
+    title: Li-Chao tree
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/segment_add_get_min
+    links:
+    - https://judge.yosupo.jp/problem/segment_add_get_min
   bundledCode: "#line 1 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\n#line\
     \ 2 \"data_structure/li_chao_tree.hpp\"\n#include <algorithm>\n#include <cassert>\n\
@@ -114,21 +127,11 @@ data:
   dependsOn:
   - data_structure/li_chao_tree.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/li_chao_tree.hpp
-    title: Li-Chao tree
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   requiredBy: []
   timestamp: '2020-01-08 19:38:32+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/li_chao_tree.segment_add_get_min.test.cpp
 layout: document

@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/marathon.inc.cpp\"\nconstexpr double ticks_per_sec =\
     \ 2800000000;\nconstexpr double ticks_per_sec_inv = 1.0 / ticks_per_sec;\ninline\
     \ double rdtsc() {  // in seconds\n    uint32_t lo, hi;\n    asm volatile (\"\
@@ -72,15 +78,11 @@ data:
     \            }\n        } else {\n        }\n    }\n\n    cerr << \"[*] highscore\
     \ = \" << highscore << endl;\n    return result;\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/marathon.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/marathon.inc.cpp
 layout: document

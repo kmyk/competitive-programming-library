@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: map from disjoint intervals
+    links: []
   bundledCode: "#line 2 \"utils/interval_map.hpp\"\n#include <map>\n#include <optional>\n\
     #include <tuple>\n#include <vector>\n\n/**\n * @brief map from disjoint intervals\n\
     \ */\ntemplate <class T>\nclass interval_map {\n    std::map<int64_t, std::pair<int64_t,\
@@ -94,15 +100,11 @@ data:
     \ it->second.second);\n            l = it->first;\n        }\n        return result;\n\
     \    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: utils/interval_map.hpp
   requiredBy: []
   timestamp: '2020-08-16 05:36:03+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: utils/interval_map.hpp
 layout: document

@@ -1,9 +1,32 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/min_index.hpp
+    title: monoids/min_index.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/lowest_common_ancestor.aoj.test.cpp
+    title: graph/lowest_common_ancestor.aoj.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/lowest_common_ancestor.yosupo.test.cpp
+    title: graph/lowest_common_ancestor.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148\
       \ (\u524D\u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+    links:
+    - http://www.utpc.jp/2011/problems/travel.html
+    - https://www.slideshare.net/yumainoue965/lca-and-rmq
   bundledCode: "#line 2 \"graph/lowest_common_ancestor.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <functional>\n#include <utility>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -89,33 +112,14 @@ data:
   - data_structure/sparse_table.hpp
   - utils/macros.hpp
   - monoids/min_index.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/min_index.hpp
-    title: monoids/min_index.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/lowest_common_ancestor.yosupo.test.cpp
-    title: graph/lowest_common_ancestor.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: graph/lowest_common_ancestor.aoj.test.cpp
-    title: graph/lowest_common_ancestor.aoj.test.cpp
   isVerificationFile: false
   path: graph/lowest_common_ancestor.hpp
   requiredBy: []
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - graph/lowest_common_ancestor.yosupo.test.cpp
   - graph/lowest_common_ancestor.aoj.test.cpp
+  - graph/lowest_common_ancestor.yosupo.test.cpp
 documentation_of: graph/lowest_common_ancestor.hpp
 layout: document
 redirect_from:

@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/strongly_connected_components.yosupo.test.cpp
+    title: graph/strongly_connected_components.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: topological sort
+    links: []
   bundledCode: "#line 2 \"graph/topological_sort.hpp\"\n#include <algorithm>\n#include\
     \ <functional>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i,\
     \ n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i\
@@ -34,21 +46,11 @@ data:
     \    }\n    std::reverse(ALL(order));\n    return order;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/strongly_connected_components.yosupo.test.cpp
-    title: graph/strongly_connected_components.yosupo.test.cpp
   isVerificationFile: false
   path: graph/topological_sort.hpp
   requiredBy: []
   timestamp: '2020-02-22 23:03:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
 documentation_of: graph/topological_sort.hpp

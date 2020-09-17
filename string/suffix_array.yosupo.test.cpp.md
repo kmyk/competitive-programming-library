@@ -1,8 +1,25 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: string/suffix_array.hpp
+    title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
+      \ & Myers)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/suffixarray
+    links:
+    - https://judge.yosupo.jp/problem/suffixarray
   bundledCode: "#line 1 \"string/suffix_array.yosupo.test.cpp\"\n#define PROBLEM \"\
     https://judge.yosupo.jp/problem/suffixarray\"\n#include <cassert>\n#include <string>\n\
     #include <vector>\n#line 2 \"string/suffix_array.hpp\"\n#include <algorithm>\n\
@@ -60,25 +77,11 @@ data:
   - string/suffix_array.hpp
   - utils/macros.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: string/suffix_array.hpp
-    title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
-      \ & Myers)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: string/suffix_array.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: string/suffix_array.yosupo.test.cpp
 layout: document

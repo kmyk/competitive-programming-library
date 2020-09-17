@@ -1,8 +1,24 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/min.hpp
+    title: monoids/min.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
+    links:
+    - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"data_structure/sparse_table.yosupo.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/staticrmq\"\n#line 2 \"data_structure/sparse_table.hpp\"\
     \n#include <cassert>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define\
@@ -52,24 +68,11 @@ data:
   - data_structure/sparse_table.hpp
   - utils/macros.hpp
   - monoids/min.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/min.hpp
-    title: monoids/min.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/sparse_table.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/sparse_table.yosupo.test.cpp
 layout: document

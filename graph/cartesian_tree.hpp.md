@@ -1,8 +1,23 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.yukicoder-1031.test.cpp
+    title: graph/cartesian_tree.yukicoder-1031.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.yosupo.test.cpp
+    title: graph/cartesian_tree.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Cartesian tree ($O(n)$)
+    links: []
   bundledCode: "#line 2 \"graph/cartesian_tree.hpp\"\n#include <functional>\n#include\
     \ <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i)\
     \ < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i = (m); (i) < (int)(n);\
@@ -34,24 +49,11 @@ data:
     \ = pp;\n        }\n        parent[i] = p;\n    }\n    return parent;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.yukicoder-1031.test.cpp
-    title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.yosupo.test.cpp
-    title: graph/cartesian_tree.yosupo.test.cpp
   isVerificationFile: false
   path: graph/cartesian_tree.hpp
   requiredBy: []
   timestamp: '2020-07-16 00:31:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/cartesian_tree.yukicoder-1031.test.cpp
   - graph/cartesian_tree.yosupo.test.cpp

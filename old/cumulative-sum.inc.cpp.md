@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: cumulative sum
+    links:
+    - https://beta.atcoder.jp/contests/abc106/submissions/3361728
   bundledCode: "#line 1 \"old/cumulative-sum.inc.cpp\"\n/**\n * @brief cumulative\
     \ sum\n * @see std::partial_sum\n */\ntemplate <class T, class F>\nvector<T> cumulative_sum(size_t\
     \ n, F f) {\n    vector<T> acc(n + 1);\n    REP (i, n) {\n        acc[i + 1] =\
@@ -69,15 +76,11 @@ data:
     \           acc += get(ly1, lx1, ry1, rx1);\n            }\n        }\n      \
     \  return acc;\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/cumulative-sum.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/cumulative-sum.inc.cpp
 layout: document

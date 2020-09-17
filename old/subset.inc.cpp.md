@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/
   bundledCode: "#line 1 \"old/subset.inc.cpp\"\n/**\n * @sa https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/\n\
     \ */\n\n// for a set z, list y \\subseteq z, ascending order\nfor (int y = 0;\
     \ ; y = (y - z) & z) {\n    ...\n    if (y == z) break;\n}\n\n// for a set z,\
@@ -23,15 +30,11 @@ data:
     \ t = x | (x - 1);\n    x = (t + 1) | (((~ t & - ~ t) - 1) >> (__builtin_ctz(x)\
     \ + 1));\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/subset.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/subset.inc.cpp
 layout: document

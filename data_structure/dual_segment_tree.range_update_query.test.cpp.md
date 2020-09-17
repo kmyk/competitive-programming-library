@@ -1,8 +1,22 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dual_segment_tree.hpp
+    title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids,\
+      \ \u5B8C\u5168\u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: monoids/left.hpp
+    title: monoids/left.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
   bundledCode: "#line 1 \"data_structure/dual_segment_tree.range_update_query.test.cpp\"\
     \n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
     \n#line 2 \"data_structure/dual_segment_tree.hpp\"\n#include <algorithm>\n#include\
@@ -53,22 +67,11 @@ data:
   dependsOn:
   - data_structure/dual_segment_tree.hpp
   - monoids/left.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dual_segment_tree.hpp
-    title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids,\
-      \ \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: monoids/left.hpp
-    title: monoids/left.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/dual_segment_tree.range_update_query.test.cpp
   requiredBy: []
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/dual_segment_tree.range_update_query.test.cpp
 layout: document

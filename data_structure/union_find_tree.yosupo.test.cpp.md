@@ -1,8 +1,18 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/union_find_tree.hpp
+    title: Union-Find Tree
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
+    links:
+    - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"data_structure/union_find_tree.yosupo.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#line 2 \"data_structure/union_find_tree.hpp\"\
     \n#include <vector>\n\n/**\n * @brief Union-Find Tree\n * @docs data_structure/union_find_tree.md\n\
@@ -30,18 +40,11 @@ data:
     \        }\n    }\n    return 0;\n}\n"
   dependsOn:
   - data_structure/union_find_tree.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/union_find_tree.hpp
-    title: Union-Find Tree
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/union_find_tree.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-02-28 14:33:39+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/union_find_tree.yosupo.test.cpp
 layout: document

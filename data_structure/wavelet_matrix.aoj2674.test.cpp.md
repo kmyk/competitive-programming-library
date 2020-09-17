@@ -1,8 +1,24 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/wavelet_matrix.hpp
+    title: Wavelet Matrix
+  - icon: ':heavy_check_mark:'
+    path: data_structure/fully_indexable_dictionary.hpp
+    title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674
   bundledCode: "#line 1 \"data_structure/wavelet_matrix.aoj2674.test.cpp\"\n#define\
     \ PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674\"\n\
     #line 2 \"data_structure/wavelet_matrix.hpp\"\n#include <array>\n#include <cassert>\n\
@@ -160,24 +176,11 @@ data:
   - data_structure/wavelet_matrix.hpp
   - data_structure/fully_indexable_dictionary.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/wavelet_matrix.hpp
-    title: Wavelet Matrix
-  - icon: ':heavy_check_mark:'
-    path: data_structure/fully_indexable_dictionary.hpp
-    title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/wavelet_matrix.aoj2674.test.cpp
   requiredBy: []
   timestamp: '2020-02-28 15:08:46+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.aoj2674.test.cpp
 layout: document

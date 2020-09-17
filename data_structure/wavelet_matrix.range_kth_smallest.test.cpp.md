@@ -1,8 +1,27 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/wavelet_matrix.hpp
+    title: Wavelet Matrix
+  - icon: ':heavy_check_mark:'
+    path: data_structure/fully_indexable_dictionary.hpp
+    title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/range_kth_smallest
+    links:
+    - https://judge.yosupo.jp/problem/range_kth_smallest
   bundledCode: "#line 1 \"data_structure/wavelet_matrix.range_kth_smallest.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_kth_smallest\"\n#line\
     \ 2 \"data_structure/wavelet_matrix.hpp\"\n#include <array>\n#include <cassert>\n\
@@ -171,27 +190,11 @@ data:
   - data_structure/fully_indexable_dictionary.hpp
   - utils/macros.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/wavelet_matrix.hpp
-    title: Wavelet Matrix
-  - icon: ':heavy_check_mark:'
-    path: data_structure/fully_indexable_dictionary.hpp
-    title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
 layout: document

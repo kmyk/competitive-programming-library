@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a rolling hash
+    links:
+    - http://hos.ac/blog/#blog0003
   bundledCode: "#line 1 \"old/rolling-hash.inc.cpp\"\n/**\n * @brief a rolling hash\n\
     \ * @note 4 primes for modulo and and random bases\n * @see http://hos.ac/blog/#blog0003\n\
     \ */\nstruct rolling_hash {\n    static constexpr int size = 4;\n    static const\
@@ -143,15 +150,11 @@ data:
     \    uint64_t hash = 0;\n    for (int c : s) {\n        hash = rolling_hash_push(hash,\
     \ c);\n    }\n    return hash;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/rolling-hash.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/rolling-hash.inc.cpp
 layout: document

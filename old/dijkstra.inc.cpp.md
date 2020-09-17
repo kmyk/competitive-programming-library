@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/dijkstra.inc.cpp\"\n/**\n * @note O((E + V) log V)\n\
     \ */\nvector<ll> dijkstra(vector<vector<pair<int, ll> > > const & g, int root)\
     \ {\n    vector<ll> dist(g.size(), LLONG_MAX);\n    priority_queue<pair<ll, int>\
@@ -72,15 +78,11 @@ data:
     \ != -1);\n        i = next;\n        edges.push_back(next_edge);\n    }\n   \
     \ reverse(ALL(edges));\n    return edges;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/dijkstra.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/dijkstra.inc.cpp
 layout: document

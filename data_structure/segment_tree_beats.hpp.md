@@ -1,10 +1,35 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.yosupo.test.cpp
+    title: data_structure/segment_tree_beats.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.DSL_2_H.test.cpp
+    title: data_structure/segment_tree_beats.DSL_2_H.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.DSL_2_F.test.cpp
+    title: data_structure/segment_tree_beats.DSL_2_F.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.DSL_2_G.test.cpp
+    title: data_structure/segment_tree_beats.DSL_2_G.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.DSL_2_I.test.cpp
+    title: data_structure/segment_tree_beats.DSL_2_I.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/segment_tree_beats.md
     document_title: "Segment Tree Beats (range {chmin, chmax, add, update} + range\
       \ {min, max, sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    links:
+    - https://codeforces.com/blog/entry/57319
   bundledCode: "#line 2 \"data_structure/segment_tree_beats.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <climits>\n#include <cstdint>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -250,39 +275,17 @@ data:
     \                default: assert (false);\n            }\n        }\n    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.DSL_2_I.test.cpp
-    title: data_structure/segment_tree_beats.DSL_2_I.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.DSL_2_G.test.cpp
-    title: data_structure/segment_tree_beats.DSL_2_G.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.DSL_2_F.test.cpp
-    title: data_structure/segment_tree_beats.DSL_2_F.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.yosupo.test.cpp
-    title: data_structure/segment_tree_beats.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.DSL_2_H.test.cpp
-    title: data_structure/segment_tree_beats.DSL_2_H.test.cpp
   isVerificationFile: false
   path: data_structure/segment_tree_beats.hpp
   requiredBy: []
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - data_structure/segment_tree_beats.DSL_2_I.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_F.test.cpp
   - data_structure/segment_tree_beats.yosupo.test.cpp
   - data_structure/segment_tree_beats.DSL_2_H.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_F.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_I.test.cpp
 documentation_of: data_structure/segment_tree_beats.hpp
 layout: document
 redirect_from:

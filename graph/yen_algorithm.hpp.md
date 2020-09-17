@@ -1,9 +1,18 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/yen_algorithm.yukicoder-1069.test.cpp
+    title: graph/yen_algorithm.yukicoder-1069.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E
       + V) \log V)$)
+    links: []
   bundledCode: "#line 2 \"graph/yen_algorithm.hpp\"\n#include <cassert>\n#include\
     \ <map>\n#include <numeric>\n#include <queue>\n#include <set>\n#include <utility>\n\
     #include <vector>\n\n/**\n * @brief K shortest simple paths (Yen's algorithm +\
@@ -113,18 +122,11 @@ data:
     \    }\n        result.push_back(que.begin()->second);\n        que.erase(que.begin());\n\
     \    }\n    return result;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/yen_algorithm.yukicoder-1069.test.cpp
-    title: graph/yen_algorithm.yukicoder-1069.test.cpp
   isVerificationFile: false
   path: graph/yen_algorithm.hpp
   requiredBy: []
   timestamp: '2020-05-30 02:50:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/yen_algorithm.yukicoder-1069.test.cpp
 documentation_of: graph/yen_algorithm.hpp

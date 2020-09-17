@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - https://www.slideshare.net/wata_orz/ss-12131479
   bundledCode: "#line 1 \"old/maximum-independent-set.inc.cpp\"\n/**\n * @see https://www.slideshare.net/wata_orz/ss-12131479\n\
     \ * @note O(1.466^n n)\n * @param g is an adjacency matrix\n */\nint maximum_independent_set(vector<vector<bool>\
     \ > const & g) {\n    int n = g.size();\n    function<int (int, vector<bool> const\
@@ -25,15 +32,11 @@ data:
     \        }\n        setmax(result, 1 + go(i + 1, used));  // use i\n        return\
     \ result;\n    };\n    return go(0, vector<bool>(n));\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/maximum-independent-set.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/maximum-independent-set.inc.cpp
 layout: document

@@ -1,9 +1,27 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: modulus/modlog.yosupo.test.cpp
+    title: modulus/modlog.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step,\
       \ $O(\\sqrt{m})$)"
+    links: []
   bundledCode: "#line 2 \"modulus/modlog.hpp\"\n#include <algorithm>\n#include <climits>\n\
     #include <cmath>\n#include <cstdint>\n#include <unordered_map>\n#line 3 \"modulus/modinv.hpp\"\
     \n#include <cassert>\n#line 5 \"modulus/modinv.hpp\"\n\ninline int32_t modinv_nocheck(int32_t\
@@ -67,27 +85,11 @@ data:
   - modulus/modinv.hpp
   - modulus/modpow.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: modulus/modlog.yosupo.test.cpp
-    title: modulus/modlog.yosupo.test.cpp
   isVerificationFile: false
   path: modulus/modlog.hpp
   requiredBy: []
   timestamp: '2020-06-16 07:51:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - modulus/modlog.yosupo.test.cpp
 documentation_of: modulus/modlog.hpp

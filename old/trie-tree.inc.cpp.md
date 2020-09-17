@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/trie-tree.inc.cpp\"\ntemplate <typename T>\nstruct trie_t\
     \ {\n    T data;\n    array<shared_ptr<trie_t>, 26> children;\n};\ntemplate <typename\
     \ T>\nshared_ptr<trie_t<T> > trie_insert(shared_ptr<trie_t<T> > original_t, string\
@@ -26,15 +32,11 @@ data:
     \ if (i == s.length()) return t;\n    char c = s[i];\n    int j = toupper(c) -\
     \ 'A';\n    return trie_find(t->children[j], s, i + 1);\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/trie-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/trie-tree.inc.cpp
 layout: document

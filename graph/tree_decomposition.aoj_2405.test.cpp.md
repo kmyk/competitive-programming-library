@@ -1,8 +1,30 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree_decomposition.hpp
+    title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405
   bundledCode: "#line 1 \"graph/tree_decomposition.aoj_2405.test.cpp\"\n#define PROBLEM\
     \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405\"\n#include\
     \ <cstdio>\n#line 2 \"graph/tree_decomposition.hpp\"\n#include <algorithm>\n#include\
@@ -224,30 +246,11 @@ data:
   - modulus/mint.hpp
   - modulus/modpow.hpp
   - modulus/modinv.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/tree_decomposition.hpp
-    title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/tree_decomposition.aoj_2405.test.cpp
   requiredBy: []
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/tree_decomposition.aoj_2405.test.cpp
 layout: document

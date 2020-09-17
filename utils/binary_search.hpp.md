@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: utils/binary_search.aoj.test.cpp
+    title: utils/binary_search.aoj.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
+    links: []
   bundledCode: "#line 2 \"utils/binary_search.hpp\"\n#include <cassert>\n#include\
     \ <cstdint>\n\n/**\n * @brief a binary search / \u4E8C\u5206\u63A2\u7D22\n * @param[in]\
     \ p  a monotone predicate defined on $[l, r)$\n * @return $\\min \\lbrace x \\\
@@ -28,18 +37,11 @@ data:
     \ {\n        int64_t m = l + (r - l) / 2;\n        (p(m) ? l : r) = m;\n    }\n\
     \    return l;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: utils/binary_search.aoj.test.cpp
-    title: utils/binary_search.aoj.test.cpp
   isVerificationFile: false
   path: utils/binary_search.hpp
   requiredBy: []
   timestamp: '2019-12-15 04:15:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - utils/binary_search.aoj.test.cpp
 documentation_of: utils/binary_search.hpp

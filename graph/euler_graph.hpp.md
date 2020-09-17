@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Eulerian cycle (\u7121\u5411, \u5FA9\u5143)"
+    links: []
   bundledCode: "#line 2 \"graph/euler_graph.hpp\"\n#include <algorithm>\n#include\
     \ <tuple>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -59,18 +68,11 @@ data:
     \    }\n    return order;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: graph/euler_graph.hpp
   requiredBy: []
   timestamp: '2020-06-06 18:18:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: graph/euler_graph.hpp
 layout: document

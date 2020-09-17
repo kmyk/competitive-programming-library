@@ -1,10 +1,37 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/reversible.hpp
+    title: monoids/reversible.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.marked_ancestor.test.cpp
+    title: data_structure/link_cut_tree.marked_ancestor.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+    title: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
+    title: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+    title: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+    title: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/link_cut_tree.md
     document_title: Link-Cut tree (monoids without commutativity, vertex set + path
       get)
+    links: []
   bundledCode: "#line 2 \"data_structure/link_cut_tree.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <functional>\n#include <sstream>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -316,42 +343,17 @@ data:
   dependsOn:
   - utils/macros.hpp
   - monoids/reversible.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/reversible.hpp
-    title: monoids/reversible.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-    title: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
-    title: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.marked_ancestor.test.cpp
-    title: data_structure/link_cut_tree.marked_ancestor.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
-    title: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
-    title: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
   isVerificationFile: false
   path: data_structure/link_cut_tree.hpp
   requiredBy: []
   timestamp: '2020-02-27 11:49:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-  - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   - data_structure/link_cut_tree.marked_ancestor.test.cpp
-  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
   - data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+  - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
+  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+  - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
 documentation_of: data_structure/link_cut_tree.hpp
 layout: document
 redirect_from:

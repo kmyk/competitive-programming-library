@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "get the diameter of a tree / \u6728\u306E\u76F4\u5F84"
+    links:
+    - http://techtipshoge.blogspot.jp/2016/09/blog-post.html
   bundledCode: "#line 1 \"old/diameter.inc.cpp\"\n/**\n * @brief get the diameter\
     \ of a tree / \u6728\u306E\u76F4\u5F84\n */\n\n/**\n * @sa http://techtipshoge.blogspot.jp/2016/09/blog-post.html\n\
     \ */\npair<int, int> get_eccentricity(int k, vector<vector<int> > const & tree)\
@@ -22,15 +29,11 @@ data:
     int get_diameter(vector<vector<int> > const & tree) {\n    return get_eccentricity(get_eccentricity(0,\
     \ tree).second, tree).first;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/diameter.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/diameter.inc.cpp
 layout: document

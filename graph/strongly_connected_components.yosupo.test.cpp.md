@@ -1,8 +1,31 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/strongly_connected_components.hpp
+    title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
+      \u9023\u7D50\u6210\u5206\u5206\u89E3"
+  - icon: ':heavy_check_mark:'
+    path: graph/transpose_graph.hpp
+    title: graph/transpose_graph.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/quotient_graph.hpp
+    title: graph/quotient_graph.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/topological_sort.hpp
+    title: topological sort
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/scc
+    links:
+    - https://judge.yosupo.jp/problem/scc
   bundledCode: "#line 1 \"graph/strongly_connected_components.yosupo.test.cpp\"\n\
     #define PROBLEM \"https://judge.yosupo.jp/problem/scc\"\n#line 2 \"graph/strongly_connected_components.hpp\"\
     \n#include <functional>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
@@ -89,31 +112,11 @@ data:
   - utils/macros.hpp
   - graph/quotient_graph.hpp
   - graph/topological_sort.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/strongly_connected_components.hpp
-    title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
-      \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
-    path: graph/transpose_graph.hpp
-    title: graph/transpose_graph.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/quotient_graph.hpp
-    title: graph/quotient_graph.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/topological_sort.hpp
-    title: topological sort
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/strongly_connected_components.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-02-22 23:03:03+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/strongly_connected_components.yosupo.test.cpp
 layout: document

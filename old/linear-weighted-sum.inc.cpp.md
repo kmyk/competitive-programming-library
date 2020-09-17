@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/linear-weighted-sum.inc.cpp\"\n/**\n * @description\
     \ a structure to compute sum_{i \\in [l, r)} (i - l) a_i\n * @note a_l is ignored\
     \ since i - l = 0\n */\nclass linear_weighted_sum {\n    vector<ll> b;\n    vector<ll>\
@@ -77,15 +83,11 @@ data:
     \ r));\n            assert (acc_r == lws.inversed_range_sum(l, r));\n        }\n\
     \    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/linear-weighted-sum.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/linear-weighted-sum.inc.cpp
 layout: document

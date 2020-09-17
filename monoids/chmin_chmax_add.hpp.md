@@ -1,7 +1,16 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: monoids/chmin_chmax_add_min_max_action.hpp
+    title: monoids/chmin_chmax_add_min_max_action.hpp
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"monoids/chmin_chmax_add.hpp\"\n#include <algorithm>\n#include\
     \ <numeric>\n#include <utility>\n\n/**\n * @note represents the monoid $M = (\\\
     lbrace \\lambda x. \\min(a, \\max(b, c + x)) \\mid a, b, c \\rbrace, \\circ, \\\
@@ -39,19 +48,12 @@ data:
     \ chmin(T value) {\n        return (value_type) { MAX, MIN, value };\n    }\n\
     };\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy:
-  - icon: ':warning:'
-    path: monoids/chmin_chmax_add_min_max_action.hpp
-    title: monoids/chmin_chmax_add_min_max_action.hpp
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: monoids/chmin_chmax_add.hpp
   requiredBy:
   - monoids/chmin_chmax_add_min_max_action.hpp
   timestamp: '2020-01-08 14:04:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: monoids/chmin_chmax_add.hpp
 layout: document

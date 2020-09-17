@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/suffix-array.inc.cpp\"\nint sa_lower_bound(string const\
     \ & s, vector<int> const & sa, string const & t) { // returns an index on suffix\
     \ array\n    int n = s.size();\n    int l = 0, r = n+1; // (l, r]\n    while (l\
@@ -28,15 +34,11 @@ data:
     \   int l = sa_lower_bound(target, sa, pattern);\n    int r = sa_prefix_upper_bound(target,\
     \ sa, pattern);\n    return r - l;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/suffix-array.inc.cpp
   requiredBy: []
   timestamp: '2020-03-04 13:12:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/suffix-array.inc.cpp
 layout: document

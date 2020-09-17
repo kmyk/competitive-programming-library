@@ -1,8 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: number/primes.hpp
+    title: number/primes.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
   bundledCode: "#line 1 \"number/primes.aoj.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C\"\
     \n#line 2 \"number/primes.hpp\"\n#include <algorithm>\n#include <cassert>\n#include\
     \ <cstdint>\n#include <map>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n\
@@ -60,21 +73,11 @@ data:
   dependsOn:
   - number/primes.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: number/primes.hpp
-    title: number/primes.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: number/primes.aoj.test.cpp
   requiredBy: []
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: number/primes.aoj.test.cpp
 layout: document

@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://hos.ac/blog/#blog0001
   bundledCode: "#line 1 \"old/skew-heap.inc.cpp\"\n/**\n * @sa http://hos.ac/blog/#blog0001\n\
     \ */\ntemplate <class T>\nclass skew_heap {\n    struct node_t {\n        node_t\
     \ *left, *right;\n        T value;\n    };\n    static node_t *merge(node_t *a,\
@@ -56,15 +63,11 @@ data:
     \            assert (a == b);\n            skew.pop();\n            que.pop();\n\
     \        }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/skew-heap.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/skew-heap.inc.cpp
 layout: document

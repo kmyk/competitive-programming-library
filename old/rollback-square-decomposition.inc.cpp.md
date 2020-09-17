@@ -1,8 +1,19 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+    title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the extended Mo's algorithm
+    links:
+    - http://codeforces.com/blog/entry/7383?#comment-161520
+    - http://snuke.hatenablog.com/entry/2016/07/01/000000
   bundledCode: "#line 1 \"old/rollback-square-decomposition.inc.cpp\"\n/**\n * @brief\
     \ the extended Mo's algorithm\n * @arg stupid is called O(Q) times, each length\
     \ is O(\\sqrt{N})\n * @arg mo si the following:\n *     struct rollback_mo_interface\
@@ -49,18 +60,11 @@ data:
     \  mo.snapshot();\n            mo.extend_left(l_i, l);\n            mo.query();\n\
     \            mo.rollback();\n            r = r_i;\n        }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-    title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
   isVerificationFile: false
   path: old/rollback-square-decomposition.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
 documentation_of: old/rollback-square-decomposition.inc.cpp

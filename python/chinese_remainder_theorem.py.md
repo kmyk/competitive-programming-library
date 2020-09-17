@@ -1,8 +1,14 @@
 ---
 data:
-  attributes: {}
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: py
+  _verificationStatusIcon: ':warning:'
+  attributes:
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 64, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    , line 70, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 84, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "#!/usr/bin/env python3\nimport gmpy2\n\ndef chinese_remainder_theorem(eqn):\n\
@@ -14,15 +20,11 @@ data:
     \ d) * (x2 - x1) * int(gmpy2.invert(m1 // d, m2 // d))\n    m = int(gmpy2.lcm(m1,\
     \ m2))\n    return x % m, m\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: python/chinese_remainder_theorem.py
   requiredBy: []
   timestamp: '2018-07-06 01:52:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: python/chinese_remainder_theorem.py
 layout: document

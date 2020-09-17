@@ -1,8 +1,37 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree.hpp
+    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
+      \u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function.hpp
+    title: monoids/linear_function.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/dual.hpp
+    title: monoids/dual.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_set_range_composite
+    links:
+    - https://judge.yosupo.jp/problem/point_set_range_composite
   bundledCode: "#line 1 \"data_structure/segment_tree.point_set_range_composite.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
     \n#line 2 \"data_structure/segment_tree.hpp\"\n#include <algorithm>\n#include\
@@ -126,37 +155,11 @@ data:
   - modulus/mint.hpp
   - modulus/modpow.hpp
   - modulus/modinv.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree.hpp
-    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
-      \u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function.hpp
-    title: monoids/linear_function.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/dual.hpp
-    title: monoids/dual.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/segment_tree.point_set_range_composite.test.cpp
   requiredBy: []
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/segment_tree.point_set_range_composite.test.cpp
 layout: document

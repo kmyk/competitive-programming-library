@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a program to make the table
+    links: []
   bundledCode: "#line 1 \"old/factorial-embed.inc.cpp\"\nint fact_unpack(const char\
     \ *s) {\n    int n = 0;\n    REP_R (i, 5) {\n        n *= 64;\n        n +=\n\
     \            'a' <= s[i] ? s[i] - 'a' + 26 :\n            'A' <= s[i] ? s[i] -\
@@ -63,15 +69,11 @@ data:
     \ mint<MOD>(fact(n % MOD)) * mint<MOD>(fact((n - r) % MOD)).inv() * mint<MOD>(fact(r\
     \ % MOD)).inv();\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/factorial-embed.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/factorial-embed.inc.cpp
 layout: document

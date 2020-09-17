@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: compute the distances from root
+    links: []
   bundledCode: "#line 1 \"old/breadth-first-search.inc.cpp\"\n/**\n * @brief compute\
     \ the distances from root\n * @note O(n)\n * @arg g is a digraph\n * @note loops\
     \ and double edges are allowed\n */\nvector<int> breadth_first_search(int root,\
@@ -43,15 +49,11 @@ data:
     \  } else {\n                    que.emplace_front(j, dist[j]);\n            \
     \    }\n            }\n        }\n    }\n    return dist;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/breadth-first-search.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/breadth-first-search.inc.cpp
 layout: document

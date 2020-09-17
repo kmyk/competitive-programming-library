@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/factoradic.inc.cpp\"\ntemplate <class RandomAccessIterator>\n\
     uint64_t encode_factoradic(RandomAccessIterator first, RandomAccessIterator last)\
     \ { // O(N^2)\n    static vector<int> fact(1, 1);\n    while (fact.size() < n)\
@@ -28,15 +34,11 @@ data:
     \        xs[i] = *it;\n        zs.erase(it);\n        y %= fact[i];\n    }\n \
     \   return xs;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/factoradic.inc.cpp
   requiredBy: []
   timestamp: '2020-05-23 00:47:48+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/factoradic.inc.cpp
 layout: document

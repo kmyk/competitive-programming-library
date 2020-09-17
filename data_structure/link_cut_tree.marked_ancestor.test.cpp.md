@@ -1,8 +1,27 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.hpp
+    title: Link-Cut tree (monoids without commutativity, vertex set + path get)
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/reversible.hpp
+    title: monoids/reversible.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/trivial.hpp
+    title: monoids/trivial.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp
   bundledCode: "#line 1 \"data_structure/link_cut_tree.marked_ancestor.test.cpp\"\n\
     #define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp\"\
     \n#include <iostream>\n#line 2 \"data_structure/link_cut_tree.hpp\"\n#include\
@@ -199,27 +218,11 @@ data:
   - utils/macros.hpp
   - monoids/reversible.hpp
   - monoids/trivial.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.hpp
-    title: Link-Cut tree (monoids without commutativity, vertex set + path get)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/reversible.hpp
-    title: monoids/reversible.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/trivial.hpp
-    title: monoids/trivial.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/link_cut_tree.marked_ancestor.test.cpp
   requiredBy: []
   timestamp: '2020-02-27 11:49:55+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/link_cut_tree.marked_ancestor.test.cpp
 layout: document

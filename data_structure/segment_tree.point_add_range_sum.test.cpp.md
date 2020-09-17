@@ -1,8 +1,25 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree.hpp
+    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
+      \u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
+    links:
+    - https://judge.yosupo.jp/problem/point_add_range_sum
   bundledCode: "#line 1 \"data_structure/segment_tree.point_add_range_sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n#line\
     \ 2 \"data_structure/segment_tree.hpp\"\n#include <algorithm>\n#include <cassert>\n\
@@ -67,25 +84,11 @@ data:
   - data_structure/segment_tree.hpp
   - utils/macros.hpp
   - monoids/plus.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree.hpp
-    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
-      \u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/segment_tree.point_add_range_sum.test.cpp
   requiredBy: []
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/segment_tree.point_add_range_sum.test.cpp
 layout: document

@@ -1,8 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: number/primes.hpp
+    title: number/primes.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1140
+    links:
+    - https://yukicoder.me/problems/no/1140
   bundledCode: "#line 1 \"number/primes.yukicoder-1140.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/1140\"\n#include <cstdio>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -63,21 +76,11 @@ data:
   dependsOn:
   - utils/macros.hpp
   - number/primes.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: number/primes.hpp
-    title: number/primes.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: number/primes.yukicoder-1140.test.cpp
   requiredBy: []
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: number/primes.yukicoder-1140.test.cpp
 layout: document

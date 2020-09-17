@@ -1,8 +1,31 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_segment_tree.hpp
+    title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
+      \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/min.hpp
+    title: monoids/min.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus_min_action.hpp
+    title: monoids/plus_min_action.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
   bundledCode: "#line 1 \"data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp\"\
     \n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
     \n#line 2 \"data_structure/lazy_propagation_segment_tree.hpp\"\n#include <algorithm>\n\
@@ -102,31 +125,11 @@ data:
   - monoids/min.hpp
   - monoids/plus.hpp
   - monoids/plus_min_action.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_segment_tree.hpp
-    title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
-      \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/min.hpp
-    title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus_min_action.hpp
-    title: monoids/plus_min_action.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   requiredBy: []
   timestamp: '2020-03-08 03:43:59+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
 layout: document

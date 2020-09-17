@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: utils/dsu_on_tree.aoj.test.cpp
+    title: utils/dsu_on_tree.aoj.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a disjoint set structure with monoid
+    links: []
   bundledCode: "#line 2 \"data_structure/union_find_tree_with_monoid.hpp\"\n#include\
     \ <vector>\n\n/**\n * @brief a disjoint set structure with monoid\n * @note union-by-size\
     \ + path-compression\n */\ntemplate <class Monoid>\nstruct union_find_tree_with_monoid\
@@ -36,18 +45,11 @@ data:
     \ { return value[find_root(i)]; }\n    void set_value(int i, value_type z) { value[find_root(i)]\
     \ = z; }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: utils/dsu_on_tree.aoj.test.cpp
-    title: utils/dsu_on_tree.aoj.test.cpp
   isVerificationFile: false
   path: data_structure/union_find_tree_with_monoid.hpp
   requiredBy: []
   timestamp: '2019-12-14 05:03:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
 documentation_of: data_structure/union_find_tree_with_monoid.hpp

@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: modulus/modsqrt.yosupo.test.cpp
+    title: modulus/modsqrt.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: find the sqrt $b$ of $a$ modulo $p$
+    links: []
   bundledCode: "#line 2 \"modulus/modsqrt.hpp\"\n#include <cassert>\n#include <cstdint>\n\
     #line 4 \"modulus/modpow.hpp\"\n\ninline int32_t modpow(uint_fast64_t x, uint64_t\
     \ k, int32_t MOD) {\n    assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);\n \
@@ -40,21 +52,11 @@ data:
     \    assert (x * x % p == a);\n    return x;\n}\n"
   dependsOn:
   - modulus/modpow.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: modulus/modsqrt.yosupo.test.cpp
-    title: modulus/modsqrt.yosupo.test.cpp
   isVerificationFile: false
   path: modulus/modsqrt.hpp
   requiredBy: []
   timestamp: '2020-06-16 07:51:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - modulus/modsqrt.yosupo.test.cpp
 documentation_of: modulus/modsqrt.hpp

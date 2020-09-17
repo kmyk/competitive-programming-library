@@ -1,9 +1,18 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "a binary search on floating point numbers / \u4E8C\u5206\u63A2\
       \u7D22 (\u6D6E\u52D5\u5C0F\u6570\u70B9\u6570)"
+    links: []
   bundledCode: "#line 2 \"utils/binary_search_float.hpp\"\n#include <cassert>\n#line\
     \ 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++\
     \ (i))\n#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define\
@@ -23,18 +32,11 @@ data:
     \ / 2;\n        (p(m) ? r : l) = m;\n    }\n    return r;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: utils/binary_search_float.hpp
   requiredBy: []
   timestamp: '2020-05-23 03:04:39+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: utils/binary_search_float.hpp
 layout: document

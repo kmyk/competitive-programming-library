@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: set of disjoint intervals
+    links: []
   bundledCode: "#line 2 \"utils/interval_set.hpp\"\n#include <map>\n#include <optional>\n\
     #include <utility>\n#include <vector>\n\n/**\n * @brief set of disjoint intervals\n\
     \ */\nclass interval_set {\n    std::map<int64_t, int64_t> data;  // the function\
@@ -55,15 +61,11 @@ data:
     \        l = it->first;\n        }\n        return result;\n    }\n\n    size_t\
     \ size() const {\n        return data.size();\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: utils/interval_set.hpp
   requiredBy: []
   timestamp: '2020-08-16 05:36:03+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: utils/interval_set.hpp
 layout: document

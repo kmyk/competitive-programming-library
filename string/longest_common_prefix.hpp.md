@@ -1,9 +1,31 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: string/suffix_array.hpp
+    title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
+      \ & Myers)"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: monoids/min.hpp
+    title: monoids/min.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: string/longest_common_prefix.yosupo.test.cpp
+    title: string/longest_common_prefix.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E\
       \ (\u63A5\u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
+    links: []
   bundledCode: "#line 2 \"string/longest_common_prefix.hpp\"\n#include <algorithm>\n\
     #include <string>\n#include <vector>\n#line 5 \"string/suffix_array.hpp\"\n#include\
     \ <utility>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i)\
@@ -90,31 +112,11 @@ data:
   - utils/macros.hpp
   - data_structure/sparse_table.hpp
   - monoids/min.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: string/suffix_array.hpp
-    title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
-      \ & Myers)"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: monoids/min.hpp
-    title: monoids/min.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: string/longest_common_prefix.yosupo.test.cpp
-    title: string/longest_common_prefix.yosupo.test.cpp
   isVerificationFile: false
   path: string/longest_common_prefix.hpp
   requiredBy: []
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - string/longest_common_prefix.yosupo.test.cpp
 documentation_of: string/longest_common_prefix.hpp

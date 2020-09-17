@@ -1,7 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://arc054.contest.atcoder.jp/submissions/1335245
+    - https://csacademy.com/contest/ceoi-2018-day-2/task/fibonacci-representations-small/
   bundledCode: "#line 1 \"old/dynamic-segment-tree.inc.cpp\"\n/**\n * @note verified\
     \ http://arc054.contest.atcoder.jp/submissions/1335245\n * @note verified https://csacademy.com/contest/ceoi-2018-day-2/task/fibonacci-representations-small/\n\
     \ * @note you can implement this with unordered_map, but the constructor requires\
@@ -125,15 +133,11 @@ data:
     \ traverse_leaves(pool[i].right, (il + ir) / 2, ir, func);\n        }\n    }\n\
     };\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/dynamic-segment-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/dynamic-segment-tree.inc.cpp
 layout: document

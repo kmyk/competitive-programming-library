@@ -1,8 +1,31 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/lowest_common_ancestor.hpp
+    title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
+      \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/min_index.hpp
+    title: monoids/min_index.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/stack_pivot.hpp
+    title: hack/stack_pivot.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
+    links:
+    - https://judge.yosupo.jp/problem/lca
   bundledCode: "#line 1 \"graph/lowest_common_ancestor.yosupo.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n#line 2 \"graph/lowest_common_ancestor.hpp\"\
     \n#include <algorithm>\n#include <cassert>\n#include <functional>\n#include <utility>\n\
@@ -93,31 +116,11 @@ data:
   - utils/macros.hpp
   - monoids/min_index.hpp
   - hack/stack_pivot.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/lowest_common_ancestor.hpp
-    title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
-      \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/min_index.hpp
-    title: monoids/min_index.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/stack_pivot.hpp
-    title: hack/stack_pivot.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/lowest_common_ancestor.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/lowest_common_ancestor.yosupo.test.cpp
 layout: document

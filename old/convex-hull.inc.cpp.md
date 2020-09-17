@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://www.prefield.com/algorithm/geometry/convex_hull.html
   bundledCode: "#line 1 \"old/convex-hull.inc.cpp\"\ndouble dot(complex<double> a,\
     \ complex<double> b) { return real(a * conj(b)); }\ndouble cross(complex<double>\
     \ a, complex<double> b) { return imag(conj(a) * b); }\nint ccw(complex<double>\
@@ -36,15 +43,11 @@ data:
     \        while (k >= t and ccw(ch[k - 2], ch[k - 1], ps[i]) <= 0) -- k;\n    }\n\
     \    ch.resize(k - 1);\n    return ch;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/convex-hull.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/convex-hull.inc.cpp
 layout: document

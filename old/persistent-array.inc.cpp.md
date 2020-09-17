@@ -1,8 +1,16 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "persistent array / \u6C38\u7D9A\u914D\u5217"
+    links:
+    - http://qiita.com/imos/items/c4c5e19289a79e598b93
+    - http://web.mit.edu/andersk/Public/6.851-presentation.pdf
   bundledCode: "#line 1 \"old/persistent-array.inc.cpp\"\n/**\n * @brief persistent\
     \ array / \u6C38\u7D9A\u914D\u5217\n * @see http://qiita.com/imos/items/c4c5e19289a79e598b93\n\
     \ * @see http://web.mit.edu/andersk/Public/6.851-presentation.pdf\n */\ntemplate\
@@ -73,15 +81,11 @@ data:
     \        out << p << ' ' << a.size << endl;\n        for (auto it : a.children)\
     \ if (it) out << *it;\n    }\n    return out;\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/persistent-array.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/persistent-array.inc.cpp
 layout: document

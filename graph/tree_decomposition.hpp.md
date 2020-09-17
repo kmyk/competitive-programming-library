@@ -1,9 +1,22 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree_decomposition.aoj_2405.test.cpp
+    title: graph/tree_decomposition.aoj_2405.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: graph/tree_decomposition.md
     document_title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
+    links:
+    - https://ei1333.hateblo.jp/entry/2020/02/12/150319
   bundledCode: "#line 2 \"graph/tree_decomposition.hpp\"\n#include <algorithm>\n#include\
     \ <cassert>\n#include <cstdio>\n#include <cstdint>\n#include <functional>\n#include\
     \ <set>\n#include <stack>\n#include <tuple>\n#include <unordered_set>\n#include\
@@ -172,21 +185,11 @@ data:
     \ nice;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/tree_decomposition.aoj_2405.test.cpp
-    title: graph/tree_decomposition.aoj_2405.test.cpp
   isVerificationFile: false
   path: graph/tree_decomposition.hpp
   requiredBy: []
   timestamp: '2020-02-21 10:52:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/tree_decomposition.aoj_2405.test.cpp
 documentation_of: graph/tree_decomposition.hpp

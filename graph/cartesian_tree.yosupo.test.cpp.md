@@ -1,8 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.hpp
+    title: Cartesian tree ($O(n)$)
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/cartesian_tree
+    links:
+    - https://judge.yosupo.jp/problem/cartesian_tree
   bundledCode: "#line 1 \"graph/cartesian_tree.yosupo.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/cartesian_tree\"\n#include <cstdio>\n#include\
     \ <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i)\
@@ -37,21 +50,11 @@ data:
   dependsOn:
   - utils/macros.hpp
   - graph/cartesian_tree.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.hpp
-    title: Cartesian tree ($O(n)$)
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/cartesian_tree.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-08-01 15:41:36+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/cartesian_tree.yosupo.test.cpp
 layout: document

@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://yukicoder.me/submissions/142657
   bundledCode: "#line 1 \"old/iterate.inc.cpp\"\n// http://yukicoder.me/submissions/142657\n\
     struct sequence {\n    vector<int> data;\n    int offset, cycle;\n};\nsequence\
     \ iterate(int a, function<int (int)> f) {\n    sequence xs;\n    map<int, int>\
@@ -18,15 +25,11 @@ data:
     \ - xs.offset;\n    return xs;\n}\nint at(sequence const & xs, int i) {\n    return\
     \ xs.data[i < xs.offset ? i : (i - xs.offset) % xs.cycle + xs.offset];\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/iterate.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/iterate.inc.cpp
 layout: document

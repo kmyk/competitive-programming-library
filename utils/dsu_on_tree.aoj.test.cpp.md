@@ -1,8 +1,35 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/dsu_on_tree.hpp
+    title: DSU on tree (sack)
+  - icon: ':heavy_check_mark:'
+    path: graph/subtree.hpp
+    title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
+      \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
+      \u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/union_find_tree_with_monoid.hpp
+    title: a disjoint set structure with monoid
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/stack_pivot.hpp
+    title: hack/stack_pivot.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995
   bundledCode: "#line 1 \"utils/dsu_on_tree.aoj.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995\"\
     \n#line 2 \"utils/dsu_on_tree.hpp\"\n#include <functional>\n#include <stack>\n\
     #include <vector>\n#line 2 \"graph/subtree.hpp\"\n#include <algorithm>\n#line\
@@ -147,35 +174,11 @@ data:
   - data_structure/union_find_tree_with_monoid.hpp
   - monoids/plus.hpp
   - hack/stack_pivot.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/dsu_on_tree.hpp
-    title: DSU on tree (sack)
-  - icon: ':heavy_check_mark:'
-    path: graph/subtree.hpp
-    title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
-      \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
-      \u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/union_find_tree_with_monoid.hpp
-    title: a disjoint set structure with monoid
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/stack_pivot.hpp
-    title: hack/stack_pivot.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: utils/dsu_on_tree.aoj.test.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: utils/dsu_on_tree.aoj.test.cpp
 layout: document

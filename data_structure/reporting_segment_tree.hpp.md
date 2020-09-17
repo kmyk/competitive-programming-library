@@ -1,9 +1,24 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dynamic_connectivity_offline.hpp
+    title: Dynamic Connectivity (offline, commutative monoids)
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+    title: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\
       \u6728 (\u5217\u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    links: []
   bundledCode: "#line 2 \"data_structure/reporting_segment_tree.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <functional>\n#include <type_traits>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -77,25 +92,12 @@ data:
     \ 0, size);\n    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_connectivity_offline.hpp
-    title: Dynamic Connectivity (offline, commutative monoids)
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
-    title: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   isVerificationFile: false
   path: data_structure/reporting_segment_tree.hpp
   requiredBy:
   - data_structure/dynamic_connectivity_offline.hpp
   timestamp: '2020-03-08 03:44:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
 documentation_of: data_structure/reporting_segment_tree.hpp

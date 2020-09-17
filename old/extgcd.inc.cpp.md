@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: extended gcd
+    links:
+    - https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466
   bundledCode: "#line 1 \"old/extgcd.inc.cpp\"\n/**\n * @brief extended gcd\n * @description\
     \ for given a and b, find x, y and gcd(a, b) such that ax + by = 1\n * @note O(log\
     \ n)\n * @see https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466\n\
@@ -69,15 +76,11 @@ data:
     \ / d, x2 - x1, m), m1_inv, m);\n    return make_pair((x % m + m) % m, m);\n}\n\
     \n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/extgcd.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/extgcd.inc.cpp
 layout: document

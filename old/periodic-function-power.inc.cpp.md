@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/periodic-function-power.inc.cpp\"\ntemplate <class F,\
     \ class T>\nT periodic_function_power(F f, ll k, T x) {\n    assert (k >= 1);\n\
     \    if (k == 1) return x;\n    vector<T> history;\n    unordered_map<T, int>\
@@ -20,15 +26,11 @@ data:
     \ int base = lookup[y];\n    int cycle = lookup[x] + 1 - lookup[y];\n    return\
     \ history[(k - base) % cycle + base];\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/periodic-function-power.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/periodic-function-power.inc.cpp
 layout: document

@@ -1,7 +1,16 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: monoids/plus_min_count_action.hpp
+    title: monoids/plus_min_count_action.hpp
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"monoids/min_count.hpp\"\n#include <limits>\n#include <utility>\n\
     \ntemplate <class T>\nstruct min_count_monoid {\n    typedef std::pair<T, int>\
     \ value_type;\n    value_type unit() const {\n        return std::make_pair(std::numeric_limits<T>::max(),\
@@ -17,19 +26,12 @@ data:
     \        return std::make_pair(a.first, a.second + b.second);\n    }\n    static\
     \ value_type make(T a) {\n        return std::make_pair(a, 1);\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy:
-  - icon: ':warning:'
-    path: monoids/plus_min_count_action.hpp
-    title: monoids/plus_min_count_action.hpp
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: monoids/min_count.hpp
   requiredBy:
   - monoids/plus_min_count_action.hpp
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: monoids/min_count.hpp
 layout: document

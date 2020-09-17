@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "get centers of a tree / \u6728\u306E\u4E2D\u5FC3"
+    links: []
   bundledCode: "#line 1 \"old/centers.inc.cpp\"\n/**\n * @brief get centers of a tree\
     \ / \u6728\u306E\u4E2D\u5FC3\n */\nvector<int> get_centers(vector<vector<int>\
     \ > const & tree) {\n    int n = tree.size();\n    vector<bool> used(n);\n   \
@@ -21,15 +27,11 @@ data:
     \ if (not used[j]) {\n                cur.push_back(j);\n                used[j]\
     \ = true;\n            }\n        }\n    }\n    return prv;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/centers.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/centers.inc.cpp
 layout: document

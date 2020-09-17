@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/distributed-code-jam.inc.cpp\"\ntemplate <class T> void\
     \ PutGeneric(int target, T value);\ntemplate <> void PutGeneric(int target, char\
     \ value) { PutChar(target, value); }\ntemplate <> void PutGeneric(int target,\
@@ -30,15 +36,11 @@ data:
     \    repeat (i, size) values[i] = GetGeneric<typename Container::value_type>(source);\n\
     \    return values;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/distributed-code-jam.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/distributed-code-jam.inc.cpp
 layout: document

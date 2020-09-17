@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"template.cpp\"\n#include <bits/stdc++.h>\n#define REP(i,\
     \ n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i\
     \ = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i = (int)(n) -\
@@ -44,15 +50,11 @@ data:
     \ { return { std::forward<Functor>(functor) }; }\n\nint main() {\n    ios::sync_with_stdio(false);\n\
     \    cin.tie(nullptr);\n    constexpr char endl = '\\n';\n    return 0;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: template.cpp
   requiredBy: []
   timestamp: '2019-12-12 02:11:05+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: template.cpp
 layout: document

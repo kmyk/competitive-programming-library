@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/ternary-search.inc.cpp\"\n/**\n * @arg f must be a downward-convex\
     \ function\n * @retrun argmin f\n * @note f is called (iteration + 1) times\n\
     \ */\ntemplate <class Function>\ndouble golden_section_search(double l, double\
@@ -27,15 +33,11 @@ data:
     \ f2;\n            m2 = l + (r - l) / GOLDEN_RATIO;\n            f2 = f(m2);\n\
     \        }\n    }\n    return (l + r) / 2;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/ternary-search.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/ternary-search.inc.cpp
 layout: document

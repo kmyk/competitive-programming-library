@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "fold a rooted tree / \u6728DP"
+    links:
+    - https://twitter.com/tmaehara/status/980787099472297985
   bundledCode: "#line 1 \"old/tree-dp.inc.cpp\"\n/**\n * @brief fold a rooted tree\
     \ / \u6728DP\n * @note O(N op) time\n * @note O(N) space, not recursive\n * @note\n\
     \ *     struct tree_operation {\n *         typedef int type;\n *         type\
@@ -185,15 +192,11 @@ data:
     \        }\n        for (int j : g[i]) if (j != parent) {\n            go(j, i);\n\
     \        }\n    };\n    go(root, -1);\n    return data;\n}\n\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/tree-dp.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/tree-dp.inc.cpp
 layout: document

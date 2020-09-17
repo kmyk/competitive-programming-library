@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "get the namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
+    links: []
   bundledCode: "#line 1 \"old/namori-graph.inc.cpp\"\n/**\n * @brief get the namori\
     \ cycle / \u306A\u3082\u308A\u9589\u8DEF\n * @param g a simple connected undirected\
     \ graph with |E| = |V|\n */\ndeque<int> get_namori_cycle(vector<vector<int> >\
@@ -49,15 +55,11 @@ data:
     \ 6);\n    add_edge(6, 2);\n    add_edge(6, 7);\n    add_edge(7, 8);\n    add_edge(8,\
     \ 9);\n    assert (get_namori_cycle(g) == deque<int>({ 2, 4, 6 }));\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/namori-graph.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/namori-graph.inc.cpp
 layout: document

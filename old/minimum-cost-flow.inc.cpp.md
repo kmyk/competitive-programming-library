@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: minimum-cost flow with primal-dual method
+    links: []
   bundledCode: "#line 1 \"old/minimum-cost-flow.inc.cpp\"\ntemplate <class T>\nstruct\
     \ edge { int to; T cap, cost; int rev; };\ntemplate <class T>\nvoid add_edge(vector<vector<edge<T>\
     \ > > & graph, int from, int to, T cap, T cost) {\n    graph[from].push_back((edge<T>)\
@@ -98,15 +104,11 @@ data:
     \ // reference\n            e.cap -= delta;\n            graph[v][e.rev].cap +=\
     \ delta;\n        }\n    }\n    return result;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/minimum-cost-flow.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/minimum-cost-flow.inc.cpp
 layout: document

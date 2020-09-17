@@ -1,7 +1,25 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: utils/fast_zeta_transform.hpp
+    title: upward fast zeta transform on primes
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: number/primes.yukicoder-1140.test.cpp
+    title: number/primes.yukicoder-1140.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: number/primes.aoj.test.cpp
+    title: number/primes.aoj.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"number/primes.hpp\"\n#include <algorithm>\n#include <cassert>\n\
     #include <cstdint>\n#include <map>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -86,28 +104,12 @@ data:
     \ phi;\n    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy:
-  - icon: ':warning:'
-    path: utils/fast_zeta_transform.hpp
-    title: upward fast zeta transform on primes
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: number/primes.yukicoder-1140.test.cpp
-    title: number/primes.yukicoder-1140.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: number/primes.aoj.test.cpp
-    title: number/primes.aoj.test.cpp
   isVerificationFile: false
   path: number/primes.hpp
   requiredBy:
   - utils/fast_zeta_transform.hpp
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - number/primes.yukicoder-1140.test.cpp
   - number/primes.aoj.test.cpp

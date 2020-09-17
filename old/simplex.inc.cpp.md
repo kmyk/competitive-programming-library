@@ -1,7 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf
+    - http://zeus.mech.kyushu-u.ac.jp/~tsuji/java_edu/Simplex_st.html
   bundledCode: "#line 1 \"old/simplex.inc.cpp\"\n\n\nvector<double> debug_c;\nvoid\
     \ linsolve_tableau(vector<double> & z, vector<vector<double> > & tableau, vector<double>\
     \ & k, vector<int> & ix) {\n    constexpr double eps = 1e-8;\n    vector<vector<double\
@@ -181,15 +189,11 @@ data:
     \    glp_delete_prob(lp);\n    glp_free_env();\n    glp_term_out(preserved_term_out);\n\
     \    return result;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/simplex.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/simplex.inc.cpp
 layout: document

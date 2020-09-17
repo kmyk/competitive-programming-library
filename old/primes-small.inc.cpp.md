@@ -1,8 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: enumerate primes in [2, n) with O(n log log n)
+    links: []
   bundledCode: "#line 1 \"old/primes-small.inc.cpp\"\n/**\n * @brief enumerate primes\
     \ in [2, n) with O(n log log n)\n */\nvector<int> list_primes(int n) {\n    vector<bool>\
     \ is_prime(n, true);\n    is_prime[0] = is_prime[1] = false;\n    for (int i =\
@@ -70,15 +76,11 @@ data:
     \   ++ factors[q];\n            }\n        }\n    }\n    if (n) {\n        ++\
     \ factors[n];\n    }\n    return factors;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/primes-small.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/primes-small.inc.cpp
 layout: document

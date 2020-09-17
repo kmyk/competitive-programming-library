@@ -1,7 +1,19 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':warning:'
+    path: monoids/min_count.hpp
+    title: monoids/min_count.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"monoids/plus_min_count_action.hpp\"\n#include <utility>\n\
     #line 2 \"monoids/plus.hpp\"\n\ntemplate <class T>\nstruct plus_monoid {\n   \
     \ typedef T value_type;\n    value_type unit() const { return value_type(); }\n\
@@ -31,21 +43,11 @@ data:
   dependsOn:
   - monoids/plus.hpp
   - monoids/min_count.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  - icon: ':warning:'
-    path: monoids/min_count.hpp
-    title: monoids/min_count.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: monoids/plus_min_count_action.hpp
   requiredBy: []
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: monoids/plus_min_count_action.hpp
 layout: document

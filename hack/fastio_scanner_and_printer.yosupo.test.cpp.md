@@ -1,8 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio_scanner.hpp
+    title: hack/fastio_scanner.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio_printer.hpp
+    title: hack/fastio_printer.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/many_aplusb
+    links:
+    - https://judge.yosupo.jp/problem/many_aplusb
   bundledCode: "#line 1 \"hack/fastio_scanner_and_printer.yosupo.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/many_aplusb\"\n#line 2 \"hack/fastio_scanner.hpp\"\
     \n#include <algorithm>\n#include <cassert>\n#include <cstdlib>\n#include <cstring>\n\
@@ -61,21 +74,11 @@ data:
   dependsOn:
   - hack/fastio_scanner.hpp
   - hack/fastio_printer.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio_scanner.hpp
-    title: hack/fastio_scanner.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio_printer.hpp
-    title: hack/fastio_printer.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: hack/fastio_scanner_and_printer.yosupo.test.cpp
   requiredBy: []
   timestamp: '2020-03-04 16:58:19+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: hack/fastio_scanner_and_printer.yosupo.test.cpp
 layout: document

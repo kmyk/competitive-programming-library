@@ -1,9 +1,28 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/euler_tour_preorder.hpp
+    title: Euler Tour (preorder)
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree.hpp
+    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
+      \u4E8C\u5206\u6728)"
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+    title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/euler_tour_subtree_query.md
     document_title: Euler Tour (subtree queries, with commutative monoids)
+    links: []
   bundledCode: "#line 2 \"data_structure/euler_tour_subtree_query.hpp\"\n#include\
     \ <cassert>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n)\
     \ for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i =\
@@ -94,28 +113,11 @@ data:
   - utils/macros.hpp
   - graph/euler_tour_preorder.hpp
   - data_structure/segment_tree.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/euler_tour_preorder.hpp
-    title: Euler Tour (preorder)
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree.hpp
-    title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
-      \u4E8C\u5206\u6728)"
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
-    title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
   isVerificationFile: false
   path: data_structure/euler_tour_subtree_query.hpp
   requiredBy: []
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
 documentation_of: data_structure/euler_tour_subtree_query.hpp

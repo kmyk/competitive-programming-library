@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: number/primes.hpp
+    title: number/primes.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: upward fast zeta transform on primes
+    links: []
   bundledCode: "#line 2 \"utils/fast_zeta_transform.hpp\"\n#include <cassert>\n#include\
     \ <vector>\n#line 2 \"number/primes.hpp\"\n#include <algorithm>\n#line 4 \"number/primes.hpp\"\
     \n#include <cstdint>\n#include <map>\n#line 2 \"utils/macros.hpp\"\n#define REP(i,\
@@ -72,21 +84,11 @@ data:
   dependsOn:
   - number/primes.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: number/primes.hpp
-    title: number/primes.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: utils/fast_zeta_transform.hpp
   requiredBy: []
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: utils/fast_zeta_transform.hpp
 layout: document

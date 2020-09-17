@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://yukicoder.me/problems/no/260
   bundledCode: "#line 1 \"old/digit-dp.inc.cpp\"\n// http://yukicoder.me/problems/no/260\n\
     // strmodin(s, a, b, m)[i][j] = the number of digits t in mod m  for  t \\le s,\
     \ i = t \\bmod \\prod a and t contains digits j \\subset b\nvector<vector<ll>\
@@ -33,15 +40,11 @@ data:
     \  }\n    cur[bound_i][bound_j] += 1;\n    cur[bound_i][bound_j] %= m;\n    return\
     \ cur;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/digit-dp.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/digit-dp.inc.cpp
 layout: document

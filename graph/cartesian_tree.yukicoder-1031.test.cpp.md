@@ -1,8 +1,33 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.hpp
+    title: Cartesian tree ($O(n)$)
+  - icon: ':heavy_check_mark:'
+    path: graph/format.hpp
+    title: graph/format.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/left_to_right_maxima.hpp
+    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: monoids/min.hpp
+    title: monoids/min.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1031
+    links:
+    - https://yukicoder.me/problems/no/1031
   bundledCode: "#line 1 \"graph/cartesian_tree.yukicoder-1031.test.cpp\"\n#define\
     \ PROBLEM \"https://yukicoder.me/problems/no/1031\"\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -118,33 +143,11 @@ data:
   - utils/left_to_right_maxima.hpp
   - data_structure/sparse_table.hpp
   - monoids/min.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.hpp
-    title: Cartesian tree ($O(n)$)
-  - icon: ':heavy_check_mark:'
-    path: graph/format.hpp
-    title: graph/format.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/left_to_right_maxima.hpp
-    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: monoids/min.hpp
-    title: monoids/min.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/cartesian_tree.yukicoder-1031.test.cpp
   requiredBy: []
   timestamp: '2020-07-21 05:31:24+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/cartesian_tree.yukicoder-1031.test.cpp
 layout: document

@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://snuke.hatenablog.com/entry/2014/12/02/235837
   bundledCode: "#line 1 \"old/palindrome.inc.cpp\"\n/**\n * @return radiuses of odd\
     \ palindromes\n * @note O(N)\n * @sa http://snuke.hatenablog.com/entry/2014/12/02/235837\n\
     \ */\ntemplate <class RandomAccessIterator>\nvector<int> manacher(RandomAccessIterator\
@@ -62,15 +69,11 @@ data:
     \         int m = (l + r) / 2;\n            return r - m <= odd[m];\n        }\n\
     \    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/palindrome.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/palindrome.inc.cpp
 layout: document

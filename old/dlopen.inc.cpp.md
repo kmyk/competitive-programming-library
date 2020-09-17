@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/dlopen.inc.cpp\"\nextern \"C\" {\n#if defined(_WIN32)\n\
     void *__libc_dlopen_mode(const char *, int);\nvoid *__libc_dlsym(void *, const\
     \ char *);\n#else\nvoid* __stdcall LoadLibraryA(const char *);\nvoid* __stdcall\
@@ -64,15 +70,11 @@ data:
     mpir.dll\");\n#define D(name) const auto my_##name = (decltype(::name) *)libgmp(EXPAND_MACRO_TO_STR(name))\n\
     D(mpz_init_set_str)\nD(mpz_probab_prime_p)\n#undef D\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/dlopen.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/dlopen.inc.cpp
 layout: document

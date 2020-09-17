@@ -1,7 +1,19 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/max.hpp
+    title: monoids/max.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"monoids/plus.hpp\"\n\ntemplate <class T>\nstruct plus_monoid\
     \ {\n    typedef T value_type;\n    value_type unit() const { return value_type();\
     \ }\n    value_type mult(value_type a, value_type b) const { return a + b; }\n\
@@ -23,21 +35,11 @@ data:
   dependsOn:
   - monoids/plus.hpp
   - monoids/max.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/max.hpp
-    title: monoids/max.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: monoids/plus_max_action.hpp
   requiredBy: []
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: monoids/plus_max_action.hpp
 layout: document

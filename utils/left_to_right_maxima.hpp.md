@@ -1,9 +1,27 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: monoids/min.hpp
+    title: monoids/min.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.yukicoder-1031.test.cpp
+    title: graph/cartesian_tree.yukicoder-1031.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log\
       \ n)$ + $O(1)$)"
+    links: []
   bundledCode: "#line 2 \"utils/left_to_right_maxima.hpp\"\n#include <stack>\n#include\
     \ <tuple>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
@@ -84,27 +102,11 @@ data:
   - utils/macros.hpp
   - data_structure/sparse_table.hpp
   - monoids/min.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: monoids/min.hpp
-    title: monoids/min.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.yukicoder-1031.test.cpp
-    title: graph/cartesian_tree.yukicoder-1031.test.cpp
   isVerificationFile: false
   path: utils/left_to_right_maxima.hpp
   requiredBy: []
   timestamp: '2020-07-21 05:31:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: utils/left_to_right_maxima.hpp

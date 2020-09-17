@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/convex-hull-trick-with-monotonicity.inc.cpp\"\nclass\
     \ convex_hull_trick_with_monotonicity {\n    typedef pair<ll, ll> line_t;\n  \
     \  deque<line_t> lines;\n    ll inc_x, dec_x;  // only for assertions\npublic:\n\
@@ -98,15 +104,11 @@ data:
     \            assert (cht.get_max_decreasing(x) == y);\n                x -= uniform_int_distribution<int>(0,\
     \ 5)(gen);\n            }\n        }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/convex-hull-trick-with-monotonicity.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/convex-hull-trick-with-monotonicity.inc.cpp
 layout: document

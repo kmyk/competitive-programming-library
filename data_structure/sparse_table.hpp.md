@@ -1,8 +1,49 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: utils/left_to_right_maxima.hpp
+    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
+  - icon: ':heavy_check_mark:'
+    path: string/longest_common_prefix.hpp
+    title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
+      \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
+  - icon: ':heavy_check_mark:'
+    path: graph/lowest_common_ancestor.hpp
+    title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
+      \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+    title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: string/longest_common_prefix.yosupo.test.cpp
+    title: string/longest_common_prefix.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/lowest_common_ancestor.aoj.test.cpp
+    title: graph/lowest_common_ancestor.aoj.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/lowest_common_ancestor.yosupo.test.cpp
+    title: graph/lowest_common_ancestor.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.yukicoder-1031.test.cpp
+    title: graph/cartesian_tree.yukicoder-1031.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.yukicoder-1036.test.cpp
+    title: data_structure/sparse_table.yukicoder-1036.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.yosupo.test.cpp
+    title: data_structure/sparse_table.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Sparse Table (idempotent monoid)
+    links: []
   bundledCode: "#line 2 \"data_structure/sparse_table.hpp\"\n#include <cassert>\n\
     #include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i\
     \ = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i = (m); (i) <\
@@ -48,61 +89,22 @@ data:
     \ - (1ll << k)]);\n    }\n};\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: string/longest_common_prefix.hpp
-    title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
-      \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
-    path: graph/lowest_common_ancestor.hpp
-    title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
-      \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
-  - icon: ':heavy_check_mark:'
-    path: utils/left_to_right_maxima.hpp
-    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: string/longest_common_prefix.yosupo.test.cpp
-    title: string/longest_common_prefix.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-    title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.yukicoder-1036.test.cpp
-    title: data_structure/sparse_table.yukicoder-1036.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.yosupo.test.cpp
-    title: data_structure/sparse_table.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: graph/lowest_common_ancestor.yosupo.test.cpp
-    title: graph/lowest_common_ancestor.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.yukicoder-1031.test.cpp
-    title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: graph/lowest_common_ancestor.aoj.test.cpp
-    title: graph/lowest_common_ancestor.aoj.test.cpp
   isVerificationFile: false
   path: data_structure/sparse_table.hpp
   requiredBy:
+  - utils/left_to_right_maxima.hpp
   - string/longest_common_prefix.hpp
   - graph/lowest_common_ancestor.hpp
-  - utils/left_to_right_maxima.hpp
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
-  - string/longest_common_prefix.yosupo.test.cpp
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - data_structure/sparse_table.yukicoder-1036.test.cpp
-  - data_structure/sparse_table.yosupo.test.cpp
+  - string/longest_common_prefix.yosupo.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
   - graph/lowest_common_ancestor.yosupo.test.cpp
   - graph/cartesian_tree.yukicoder-1031.test.cpp
-  - graph/lowest_common_ancestor.aoj.test.cpp
+  - data_structure/sparse_table.yukicoder-1036.test.cpp
+  - data_structure/sparse_table.yosupo.test.cpp
 documentation_of: data_structure/sparse_table.hpp
 layout: document
 redirect_from:

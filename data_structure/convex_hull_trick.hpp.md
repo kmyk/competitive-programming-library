@@ -1,9 +1,18 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/convex_hull_trick.line_add_get_min.test.cpp
+    title: data_structure/convex_hull_trick.line_add_get_min.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/convex_hull_trick.md
     document_title: "Convex Hull Trick (\u975E\u5358\u8ABF, online)"
+    links: []
   bundledCode: "#line 2 \"data_structure/convex_hull_trick.hpp\"\n#include <cassert>\n\
     #include <climits>\n#include <cstdint>\n#include <map>\n#include <set>\n#include\
     \ <utility>\n\n\nnamespace convex_hull_trick_details {\n    /**\n     * @note\
@@ -100,18 +109,11 @@ data:
     \ add_line(int64_t a, int64_t b) { data.add_line(- a, - b); }\n    int64_t get_max(int64_t\
     \ x) { return - data.get_min(x); }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/convex_hull_trick.line_add_get_min.test.cpp
-    title: data_structure/convex_hull_trick.line_add_get_min.test.cpp
   isVerificationFile: false
   path: data_structure/convex_hull_trick.hpp
   requiredBy: []
   timestamp: '2020-02-28 14:33:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/convex_hull_trick.line_add_get_min.test.cpp
 documentation_of: data_structure/convex_hull_trick.hpp

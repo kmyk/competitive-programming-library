@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/aho-corasick.inc.cpp\"\nstruct pma_t { // Aho-Corasick\n\
     \    pma_t* next[26];\n    pma_t* fail;\n    int accept;\n};\npma_t *ac_new()\
     \ {\n    pma_t *pma = new pma_t;\n    *pma = {};\n    return pma;\n}\nvoid ac_add_pattern(pma_t\
@@ -48,15 +54,11 @@ data:
     \ deleted);\n    }\n    delete pma;\n}\nvoid ac_delete(pma_t *pma) {\n    unordered_set<pma_t\
     \ *> deleted;\n    ac_delete(pma, deleted);\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/aho-corasick.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/aho-corasick.inc.cpp
 layout: document

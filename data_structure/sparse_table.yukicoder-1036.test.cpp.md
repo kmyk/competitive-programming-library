@@ -1,8 +1,27 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
+  - icon: ':heavy_check_mark:'
+    path: monoids/gcd.hpp
+    title: monoids/gcd.hpp
+  - icon: ':heavy_check_mark:'
+    path: number/gcd.hpp
+    title: number/gcd.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1036
+    links:
+    - https://yukicoder.me/problems/no/1036
   bundledCode: "#line 1 \"data_structure/sparse_table.yukicoder-1036.test.cpp\"\n\
     #define PROBLEM \"https://yukicoder.me/problems/no/1036\"\n#include <cstdio>\n\
     #include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i\
@@ -59,27 +78,11 @@ data:
   - data_structure/sparse_table.hpp
   - monoids/gcd.hpp
   - number/gcd.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
-    path: monoids/gcd.hpp
-    title: monoids/gcd.hpp
-  - icon: ':heavy_check_mark:'
-    path: number/gcd.hpp
-    title: number/gcd.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/sparse_table.yukicoder-1036.test.cpp
   requiredBy: []
   timestamp: '2020-04-24 23:33:38+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/sparse_table.yukicoder-1036.test.cpp
 layout: document

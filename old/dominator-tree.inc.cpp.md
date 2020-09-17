@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - http://sigma425.hatenablog.com/entry/2015/12/25/224053
   bundledCode: "#line 1 \"old/dominator-tree.inc.cpp\"\n// http://sigma425.hatenablog.com/entry/2015/12/25/224053\n\
     vector<int> dominator_tree(vector<vector<int> > const & g, int root_g) { // G\
     \ is a digraph which any vertex can be reached from the root\n    int n = g.size();\n\
@@ -75,15 +82,11 @@ data:
     \ (i,n) if (i != root_g) {\n        result[i] = from_rank[idom[i]];\n    }\n \
     \   result[root_g] = -1;\n    return result;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/dominator-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/dominator-tree.inc.cpp
 layout: document

@@ -1,7 +1,16 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: monoids/left.hpp
+    title: monoids/left.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 2 \"monoids/left_action.hpp\"\n#include <utility>\n#line 3 \"\
     monoids/left.hpp\"\n\ntemplate <class T>\nstruct left_monoid {\n    // typedef\
     \ std::optional<T> value_type;\n    typedef std::pair<bool, T> value_type;\n \
@@ -24,18 +33,11 @@ data:
     \    }\n};\n"
   dependsOn:
   - monoids/left.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: monoids/left.hpp
-    title: monoids/left.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: monoids/left_action.hpp
   requiredBy: []
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: monoids/left_action.hpp
 layout: document

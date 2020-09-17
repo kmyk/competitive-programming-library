@@ -1,9 +1,23 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/yen_algorithm.hpp
+    title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log
+      V)$)
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     ERROR: 1e-4
     PROBLEM: https://yukicoder.me/problems/no/1069
+    links:
+    - https://yukicoder.me/problems/no/1069
   bundledCode: "#line 1 \"graph/yen_algorithm.yukicoder-1069.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/1069\"\n#define ERROR 1e-4\n#include <bits/stdc++.h>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -98,22 +112,11 @@ data:
   dependsOn:
   - utils/macros.hpp
   - graph/yen_algorithm.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/yen_algorithm.hpp
-    title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log
-      V)$)
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/yen_algorithm.yukicoder-1069.test.cpp
   requiredBy: []
   timestamp: '2020-05-30 03:02:40+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/yen_algorithm.yukicoder-1069.test.cpp
 layout: document

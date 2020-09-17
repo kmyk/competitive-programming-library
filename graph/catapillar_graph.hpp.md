@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: get a central path of a catapillar graph
+    links:
+    - https://atcoder.jp/contests/arc095/tasks/arc095_d
+    - https://en.wikipedia.org/wiki/Caterpillar_tree
+    - https://upload.wikimedia.org/wikipedia/commons/b/b7/Caterpillar_tree.svg)
   bundledCode: "#line 1 \"graph/catapillar_graph.hpp\"\n/**\n * @brief get a central\
     \ path of a catapillar graph\n * @arg g is a tree\n * @return a central path;\
     \ i.e. a longest path\n * @note $O(n)$\n * @note an empty vector if g is not a\
@@ -57,15 +66,11 @@ data:
     \ {\n            path.push_back(j);\n            break;\n        }\n        return\
     \ path;\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: graph/catapillar_graph.hpp
   requiredBy: []
   timestamp: '2019-12-15 03:57:55+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: graph/catapillar_graph.hpp
 layout: document

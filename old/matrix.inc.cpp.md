@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/matrix.inc.cpp\"\ntemplate <typename T>\nvector<vector<T>\
     \ > operator * (vector<vector<T> > const & a, vector<vector<T> > const & b) {\n\
     \    int n = a.size();\n    vector<vector<T> > c = vectors(n, n, T());\n    REP\
@@ -104,15 +110,11 @@ data:
     \        copy(whole(f[y]), fx[y].begin());\n        fx[y][w] = x[y];\n    }\n\
     \    return fx;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/matrix.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/matrix.inc.cpp
 layout: document

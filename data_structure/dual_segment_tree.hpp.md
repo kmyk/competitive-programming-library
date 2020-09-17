@@ -1,10 +1,19 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/dual_segment_tree.range_update_query.test.cpp
+    title: data_structure/dual_segment_tree.range_update_query.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/dual_segment_tree.md
     document_title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\
       \u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
+    links: []
   bundledCode: "#line 2 \"data_structure/dual_segment_tree.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <vector>\n\n/**\n * @brief Dual Segment Tree / \u53CC\
     \u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728\
@@ -49,18 +58,11 @@ data:
     \  range_apply(2 * i + 1, il, (il + ir) / 2, l, r, g);\n            range_apply(2\
     \ * i + 2, (il + ir) / 2, ir, l, r, g);\n        }\n    }\n};\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/dual_segment_tree.range_update_query.test.cpp
-    title: data_structure/dual_segment_tree.range_update_query.test.cpp
   isVerificationFile: false
   path: data_structure/dual_segment_tree.hpp
   requiredBy: []
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/dual_segment_tree.range_update_query.test.cpp
 documentation_of: data_structure/dual_segment_tree.hpp

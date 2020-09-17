@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/binary-indexed-tree.inc.cpp\"\ntemplate <typename Monoid>\n\
     struct binary_indexed_tree {  // on monoid\n    typedef typename Monoid::value_type\
     \ value_type;\n    vector<value_type> data;\n    Monoid mon;\n    binary_indexed_tree(size_t\
@@ -36,15 +42,11 @@ data:
     \ 2);\n    assert (bit.initial_range_concat(3) == 0);\n    assert (bit.initial_range_concat(5)\
     \ == 9);\n    assert (bit.initial_range_concat(8) == 10);\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/binary-indexed-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/binary-indexed-tree.inc.cpp
 layout: document

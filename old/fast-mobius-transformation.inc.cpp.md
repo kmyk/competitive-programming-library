@@ -1,8 +1,15 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: (upward) fast zeta transformation
+    links:
+    - http://pekempey.hatenablog.com/entry/2016/10/30/205852
   bundledCode: "#line 1 \"old/fast-mobius-transformation.inc.cpp\"\n/**\n * @brief\
     \ (upward) fast zeta transformation\n * @note for f : 2^n \\to R; \\zeta f(X)\
     \ = \\sum\\_{X \\subseteq Y} f(Y)\n * @note not verified\n */\ntemplate <typename\
@@ -57,15 +64,11 @@ data:
     \        REP (s, pow_n) {\n            if (s & i) {\n                f[s] -= f[s\
     \ ^ i];\n            }\n        }\n    }\n    return f;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/fast-mobius-transformation.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/fast-mobius-transformation.inc.cpp
 layout: document

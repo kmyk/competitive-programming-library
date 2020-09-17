@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/boyer-moore.inc.cpp\"\narray<int,26> bm_build_skip(string\
     \ const & pattern) { // O(m)\n    int m = pattern.length();\n    array<int,26>\
     \ skip = {};\n    repeat (i,m) skip[pattern[i]-'a'] = m-i-1;\n    return skip;\n\
@@ -40,15 +46,11 @@ data:
     \ & target, string const & pattern) { // Boyer-Moore\n    return bm_match(target,\
     \ pattern, bm_build_skip(pattern), bm_build_next(pattern));\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/boyer-moore.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/boyer-moore.inc.cpp
 layout: document

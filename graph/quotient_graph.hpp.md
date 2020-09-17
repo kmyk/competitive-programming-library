@@ -1,7 +1,23 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/transpose_graph.hpp
+    title: graph/transpose_graph.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: graph/strongly_connected_components.yosupo.test.cpp
+    title: graph/strongly_connected_components.yosupo.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - https://en.wikipedia.org/wiki/Quotient_graph
   bundledCode: "#line 2 \"graph/quotient_graph.hpp\"\n#include <vector>\n#line 2 \"\
     utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n\
     #define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i,\
@@ -36,24 +52,11 @@ data:
   dependsOn:
   - graph/transpose_graph.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/transpose_graph.hpp
-    title: graph/transpose_graph.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: graph/strongly_connected_components.yosupo.test.cpp
-    title: graph/strongly_connected_components.yosupo.test.cpp
   isVerificationFile: false
   path: graph/quotient_graph.hpp
   requiredBy: []
   timestamp: '2019-12-30 23:14:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
 documentation_of: graph/quotient_graph.hpp

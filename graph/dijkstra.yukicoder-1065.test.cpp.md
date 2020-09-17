@@ -1,9 +1,22 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/dijkstra.hpp
+    title: Dijkstra ($O((E + V) \log V)$)
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     ERROR: 1e-4
     PROBLEM: https://yukicoder.me/problems/no/1065
+    links:
+    - https://yukicoder.me/problems/no/1065
   bundledCode: "#line 1 \"graph/dijkstra.yukicoder-1065.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/1065\"\n#define ERROR 1e-4\n#include <bits/stdc++.h>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -43,21 +56,11 @@ data:
   dependsOn:
   - utils/macros.hpp
   - graph/dijkstra.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/dijkstra.hpp
-    title: Dijkstra ($O((E + V) \log V)$)
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: graph/dijkstra.yukicoder-1065.test.cpp
   requiredBy: []
   timestamp: '2020-05-29 23:50:33+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: graph/dijkstra.yukicoder-1065.test.cpp
 layout: document

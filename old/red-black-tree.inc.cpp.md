@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/red-black-tree.inc.cpp\"\n/**\n * @note almost all operations\
     \ are O(log N)\n */\ntemplate <class T>\nclass red_black_tree {\n\n    enum color_t\
     \ { BLACK, RED };\n    struct node_t {\n        bool is_leaf;\n        union {\n\
@@ -277,15 +283,11 @@ data:
     \ (false);\n            }\n            REP (i, rbtree.size()) {\n            \
     \    assert (rbtree.get(i) == dec[i]);\n            }\n        }\n    }\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/red-black-tree.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/red-black-tree.inc.cpp
 layout: document

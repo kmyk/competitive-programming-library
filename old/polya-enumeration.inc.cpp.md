@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/polya-enumeration.inc.cpp\"\n/**\n * @note using Polya\
     \ enumeration theorem\n * @note factorization + O(d(n)^2 + sqrt n)\n */\ntemplate\
     \ <int MOD>\nmint<MOD> count_cycle_coloring(int n, int k) {\n    auto primes =\
@@ -29,15 +35,11 @@ data:
     \    assert (count_cycle_coloring<MOD>(1000000000, 1000000000).value == 898487047);\n\
     }\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/polya-enumeration.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/polya-enumeration.inc.cpp
 layout: document

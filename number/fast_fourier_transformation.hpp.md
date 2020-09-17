@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: number/fast_fourier_transformation.yukicoder-856.test.cpp
+    title: number/fast_fourier_transformation.yukicoder-856.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: FFT convolution
+    links: []
   bundledCode: "#line 2 \"number/fast_fourier_transformation.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <cmath>\n#include <complex>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
@@ -74,21 +86,11 @@ data:
     \ : z[i].real() / n;\n    }\n    return c;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: number/fast_fourier_transformation.yukicoder-856.test.cpp
-    title: number/fast_fourier_transformation.yukicoder-856.test.cpp
   isVerificationFile: false
   path: number/fast_fourier_transformation.hpp
   requiredBy: []
   timestamp: '2020-08-11 20:59:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - number/fast_fourier_transformation.yukicoder-856.test.cpp
 documentation_of: number/fast_fourier_transformation.hpp

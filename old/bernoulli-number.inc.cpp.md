@@ -1,8 +1,16 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the Bernoulli number
+    links:
+    - https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0
+    - https://yukicoder.me/problems/no/665
   bundledCode: "#line 1 \"old/bernoulli-number.inc.cpp\"\n/**\n * @brief the Bernoulli\
     \ number\n * @tparam MOD must be a prime\n * @note $O(n^2)$\n * @see https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0\n\
     \ */\ntemplate <int MOD>\nint bernoulli_number(int i) {\n    static vector<int>\
@@ -42,15 +50,11 @@ data:
     \ % MOD;\n    }\n    acc %= MOD;\n    (acc *= modinv(k + 1, MOD)) %= MOD;\n  \
     \  return acc;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/bernoulli-number.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/bernoulli-number.inc.cpp
 layout: document

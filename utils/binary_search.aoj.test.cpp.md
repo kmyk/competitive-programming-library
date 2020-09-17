@@ -1,8 +1,21 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/binary_search.hpp
+    title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B
+    links:
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B
   bundledCode: "#line 1 \"utils/binary_search.aoj.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B\"\
     \n#line 2 \"utils/binary_search.hpp\"\n#include <cassert>\n#include <cstdint>\n\
     \n/**\n * @brief a binary search / \u4E8C\u5206\u63A2\u7D22\n * @param[in] p \
@@ -43,21 +56,11 @@ data:
   dependsOn:
   - utils/binary_search.hpp
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/binary_search.hpp
-    title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: utils/binary_search.aoj.test.cpp
   requiredBy: []
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: utils/binary_search.aoj.test.cpp
 layout: document

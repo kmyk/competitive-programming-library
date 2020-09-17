@@ -1,7 +1,14 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links:
+    - https://kimiyuki.net/blog/2016/02/01/cf-gym-100753/
   bundledCode: "#line 1 \"old/miller-rabin.inc.cpp\"\n// https://kimiyuki.net/blog/2016/02/01/cf-gym-100753/\n\
     template <class Generator>\nbool is_prime(ll n, int iteration, Generator & gen)\
     \ { // miller-rabin primality test, O(k log n)\n    assert (0 <= n);\n    if (n\
@@ -25,15 +32,11 @@ data:
     }\nbool is_prime(ll n) {\n    static default_random_engine engine = default_random_engine(random_device()());\n\
     \    return is_prime(n, 20, engine);\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/miller-rabin.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/miller-rabin.inc.cpp
 layout: document

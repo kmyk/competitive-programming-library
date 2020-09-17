@@ -1,8 +1,17 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Shortest Path Faster Algorithm
+    links: []
   bundledCode: "#line 2 \"graph/shortest_path_faster_algorithm.hpp\"\n#include <cassert>\n\
     #include <climits>\n#include <cstdint>\n#include <deque>\n#include <tuple>\n#include\
     \ <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n)\
@@ -52,18 +61,11 @@ data:
     \    }\n\n    return dist;\n}\n"
   dependsOn:
   - utils/macros.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: graph/shortest_path_faster_algorithm.hpp
   requiredBy: []
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: graph/shortest_path_faster_algorithm.hpp
 layout: document

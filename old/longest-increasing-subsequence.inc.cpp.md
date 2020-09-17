@@ -1,7 +1,13 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
   bundledCode: "#line 1 \"old/longest-increasing-subsequence.inc.cpp\"\ntemplate <typename\
     \ T>\nvector<T> longest_strict_increasing_subsequence(vector<T> const & xs) {\n\
     \    vector<T> l;  // l[i] is the last element of the increasing subsequence whose\
@@ -24,15 +30,11 @@ data:
     \ x);\n        if (it == l.end()) {\n            l.push_back(x);\n        } else\
     \ {\n            *it = x;\n        }\n    }\n    return l;\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: false
   path: old/longest-increasing-subsequence.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verificationStatusIcon: ':warning:'
   verifiedWith: []
 documentation_of: old/longest-increasing-subsequence.inc.cpp
 layout: document

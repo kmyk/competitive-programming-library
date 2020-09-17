@@ -1,8 +1,20 @@
 ---
 data:
+  _extendedDependsOn: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/euler_tour_subtree_query.hpp
+    title: Euler Tour (subtree queries, with commutative monoids)
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+    title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Euler Tour (preorder)
+    links: []
   bundledCode: "#line 2 \"graph/euler_tour_preorder.hpp\"\n#include <functional>\n\
     #include <vector>\n\n/**\n * @brief Euler Tour (preorder)\n * @arg g must be a\
     \ rooted tree, directed or undirected\n */\nvoid do_euler_tour_preorder(std::vector<std::vector<int>\
@@ -22,22 +34,12 @@ data:
     \ g[x]) if (y != parent) {\n            go(y, x);\n        }\n        right[x]\
     \ = tour.size();\n    };\n    go(root, -1);\n}\n"
   dependsOn: []
-  extendedDependsOn: []
-  extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/euler_tour_subtree_query.hpp
-    title: Euler Tour (subtree queries, with commutative monoids)
-  extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
-    title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
   isVerificationFile: false
   path: graph/euler_tour_preorder.hpp
   requiredBy:
   - data_structure/euler_tour_subtree_query.hpp
   timestamp: '2020-02-26 19:51:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith:
   - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
 documentation_of: graph/euler_tour_preorder.hpp

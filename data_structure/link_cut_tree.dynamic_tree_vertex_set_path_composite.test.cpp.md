@@ -1,8 +1,42 @@
 ---
 data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/link_cut_tree.hpp
+    title: Link-Cut tree (monoids without commutativity, vertex set + path get)
+  - icon: ':heavy_check_mark:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/reversible.hpp
+    title: monoids/reversible.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function.hpp
+    title: monoids/linear_function.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/dual.hpp
+    title: monoids/dual.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite
+    links:
+    - https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite
   bundledCode: "#line 1 \"data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite\"\
     \n#line 2 \"data_structure/link_cut_tree.hpp\"\n#include <algorithm>\n#include\
@@ -296,42 +330,11 @@ data:
   - monoids/linear_function.hpp
   - monoids/dual.hpp
   - hack/fastio.hpp
-  extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.hpp
-    title: Link-Cut tree (monoids without commutativity, vertex set + path get)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/reversible.hpp
-    title: monoids/reversible.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function.hpp
-    title: monoids/linear_function.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/dual.hpp
-    title: monoids/dual.hpp
-  - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
-  extendedRequiredBy: []
-  extendedVerifiedWith: []
   isVerificationFile: true
   path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   requiredBy: []
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: TEST_ACCEPTED
-  verificationStatusIcon: ':heavy_check_mark:'
   verifiedWith: []
 documentation_of: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
 layout: document
