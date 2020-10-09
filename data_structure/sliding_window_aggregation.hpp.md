@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Sliding Window Aggregation / \u542B\u307E\u308C\u308B\u8981\u7D20\
       \u306E\u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\
       \u3068\u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"

@@ -2,17 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: modulus/twelvefold_way.hpp
-    title: "twelvefold way / \u5199\u50CF12\u76F8"
-  - icon: ':heavy_check_mark:'
-    path: modulus/mint.hpp
-    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
+    path: modulus/bell_number.hpp
+    title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':heavy_check_mark:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
@@ -21,28 +12,37 @@ data:
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':heavy_check_mark:'
-    path: modulus/permute.hpp
-    title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ +\
-      \ $O(1)$)"
+    path: modulus/mint.hpp
+    title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
   - icon: ':heavy_check_mark:'
     path: modulus/multichoose.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
   - icon: ':heavy_check_mark:'
+    path: modulus/partition_number.hpp
+    title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
+  - icon: ':heavy_check_mark:'
+    path: modulus/permute.hpp
+    title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ +\
+      \ $O(1)$)"
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/bell_number.hpp
-    title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':heavy_check_mark:'
-    path: modulus/partition_number.hpp
-    title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
+    path: modulus/twelvefold_way.hpp
+    title: "twelvefold way / \u5199\u50CF12\u76F8"
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

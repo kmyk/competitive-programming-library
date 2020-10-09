@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Shortest Path Faster Algorithm
     links: []
   bundledCode: "#line 2 \"graph/shortest_path_faster_algorithm.hpp\"\n#include <cassert>\n\

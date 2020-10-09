@@ -5,52 +5,51 @@ data:
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
   - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
   - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation_with_garner.hpp
-    title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/number_theoretic_transformation_with_garner.hpp
+    title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
   - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation.yosupo.test.cpp
-    title: modulus/number_theoretic_transformation.yosupo.test.cpp
+    path: modulus/formal_power_series.exp.test.cpp
+    title: modulus/formal_power_series.exp.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/formal_power_series.inv.test.cpp
+    title: modulus/formal_power_series.inv.test.cpp
   - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
   - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-    title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: modulus/formal_power_series.exp.test.cpp
-    title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
   - icon: ':heavy_check_mark:'
-    path: modulus/formal_power_series.inv.test.cpp
-    title: modulus/formal_power_series.inv.test.cpp
+    path: modulus/number_theoretic_transformation.yosupo.test.cpp
+    title: modulus/number_theoretic_transformation.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+    title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Number Theoretic Transformation (NTT) for Proth primes
     links: []
   bundledCode: "#line 2 \"modulus/number_theoretic_transformation.hpp\"\n#include\
@@ -231,19 +230,19 @@ data:
   isVerificationFile: false
   path: modulus/number_theoretic_transformation.hpp
   requiredBy:
+  - modulus/stirling_number_of_the_second_kind_convolution.hpp
   - modulus/number_theoretic_transformation_with_garner.hpp
   - modulus/formal_power_series.hpp
-  - modulus/stirling_number_of_the_second_kind_convolution.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/number_theoretic_transformation.yosupo.test.cpp
-  - modulus/formal_power_series.log.test.cpp
   - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - modulus/formal_power_series.exp.test.cpp
-  - modulus/formal_power_series.yukicoder-1145.test.cpp
-  - modulus/formal_power_series.inv.test.cpp
   - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+  - modulus/formal_power_series.exp.test.cpp
+  - modulus/formal_power_series.log.test.cpp
+  - modulus/formal_power_series.yukicoder-1145.test.cpp
+  - modulus/number_theoretic_transformation.yosupo.test.cpp
+  - modulus/formal_power_series.inv.test.cpp
 documentation_of: modulus/number_theoretic_transformation.hpp
 layout: document
 redirect_from:

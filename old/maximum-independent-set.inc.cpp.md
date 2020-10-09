@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://www.slideshare.net/wata_orz/ss-12131479
   bundledCode: "#line 1 \"old/maximum-independent-set.inc.cpp\"\n/**\n * @see https://www.slideshare.net/wata_orz/ss-12131479\n\

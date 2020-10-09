@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -15,7 +15,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://en.wikipedia.org/wiki/Quotient_graph
   bundledCode: "#line 2 \"graph/quotient_graph.hpp\"\n#include <vector>\n#line 2 \"\

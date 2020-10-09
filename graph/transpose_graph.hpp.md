@@ -1,31 +1,30 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
-    path: utils/two_satisfiability.hpp
-    title: 2-SAT ($O(N)$)
+    path: graph/quotient_graph.hpp
+    title: graph/quotient_graph.hpp
   - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
-    path: graph/quotient_graph.hpp
-    title: graph/quotient_graph.hpp
+    path: utils/two_satisfiability.hpp
+    title: 2-SAT ($O(N)$)
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: utils/two_satisfiability.yosupo.test.cpp
-    title: utils/two_satisfiability.yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: utils/two_satisfiability.yosupo.test.cpp
+    title: utils/two_satisfiability.yosupo.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://en.wikipedia.org/wiki/Transpose_graph
   bundledCode: "#line 2 \"graph/transpose_graph.hpp\"\n#include <vector>\n#line 2\
@@ -50,14 +49,14 @@ data:
   isVerificationFile: false
   path: graph/transpose_graph.hpp
   requiredBy:
-  - utils/two_satisfiability.hpp
-  - graph/strongly_connected_components.hpp
   - graph/quotient_graph.hpp
+  - graph/strongly_connected_components.hpp
+  - utils/two_satisfiability.hpp
   timestamp: '2019-12-30 23:14:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - utils/two_satisfiability.yosupo.test.cpp
   - graph/strongly_connected_components.yosupo.test.cpp
+  - utils/two_satisfiability.yosupo.test.cpp
 documentation_of: graph/transpose_graph.hpp
 layout: document
 redirect_from:

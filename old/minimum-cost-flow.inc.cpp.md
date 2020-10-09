@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: minimum-cost flow with primal-dual method
     links: []
   bundledCode: "#line 1 \"old/minimum-cost-flow.inc.cpp\"\ntemplate <class T>\nstruct\

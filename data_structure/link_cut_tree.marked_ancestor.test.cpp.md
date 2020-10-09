@@ -5,14 +5,14 @@ data:
     path: data_structure/link_cut_tree.hpp
     title: Link-Cut tree (monoids without commutativity, vertex set + path get)
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
     path: monoids/reversible.hpp
     title: monoids/reversible.hpp
   - icon: ':heavy_check_mark:'
     path: monoids/trivial.hpp
     title: monoids/trivial.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Euler Tour (preorder)
     links: []
   bundledCode: "#line 2 \"graph/euler_tour_preorder.hpp\"\n#include <functional>\n\

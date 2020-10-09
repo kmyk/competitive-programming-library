@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "persistent array / \u6C38\u7D9A\u914D\u5217"
     links:
     - http://qiita.com/imos/items/c4c5e19289a79e598b93

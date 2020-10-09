@@ -2,21 +2,21 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
     path: monoids/max.hpp
     title: monoids/max.hpp
   - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.inc.cpp
     title: the extended Mo's algorithm
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

@@ -1,17 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.yosupo.test.cpp
-    title: data_structure/segment_tree_beats.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree_beats.DSL_2_H.test.cpp
-    title: data_structure/segment_tree_beats.DSL_2_H.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree_beats.DSL_2_F.test.cpp
     title: data_structure/segment_tree_beats.DSL_2_F.test.cpp
@@ -19,12 +13,17 @@ data:
     path: data_structure/segment_tree_beats.DSL_2_G.test.cpp
     title: data_structure/segment_tree_beats.DSL_2_G.test.cpp
   - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.DSL_2_H.test.cpp
+    title: data_structure/segment_tree_beats.DSL_2_H.test.cpp
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree_beats.DSL_2_I.test.cpp
     title: data_structure/segment_tree_beats.DSL_2_I.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segment_tree_beats.yosupo.test.cpp
+    title: data_structure/segment_tree_beats.yosupo.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/segment_tree_beats.md
     document_title: "Segment Tree Beats (range {chmin, chmax, add, update} + range\
       \ {min, max, sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
@@ -281,11 +280,11 @@ data:
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data_structure/segment_tree_beats.yosupo.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_H.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_F.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
   - data_structure/segment_tree_beats.DSL_2_I.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_F.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_H.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
+  - data_structure/segment_tree_beats.yosupo.test.cpp
 documentation_of: data_structure/segment_tree_beats.hpp
 layout: document
 redirect_from:

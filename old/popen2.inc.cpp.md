@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/popen2.inc.cpp\"\npid_t popen2(const char *command,\
     \ int *fd_r, int *fd_w) {\n    constexpr int READ = 0;\n    constexpr int WRITE\

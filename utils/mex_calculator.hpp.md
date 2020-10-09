@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"utils/mex_calculator.hpp\"\n#include <cassert>\n\nclass\
     \ mex_calculator {\n    uint64_t used;\npublic:\n    mex_calculator()\n      \

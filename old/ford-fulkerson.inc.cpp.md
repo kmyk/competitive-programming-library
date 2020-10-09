@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/ford-fulkerson.inc.cpp\"\nstruct edge_t { int to, cap,\
     \ rev; };\nint maximum_flow_destructive(int s, int t, vector<vector<edge_t> >\

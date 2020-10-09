@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: hack/fastio_scanner.hpp
-    title: hack/fastio_scanner.hpp
-  - icon: ':heavy_check_mark:'
     path: hack/fastio_printer.hpp
     title: hack/fastio_printer.hpp
+  - icon: ':heavy_check_mark:'
+    path: hack/fastio_scanner.hpp
+    title: hack/fastio_scanner.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

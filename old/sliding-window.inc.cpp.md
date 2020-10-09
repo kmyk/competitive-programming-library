@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the sliding window minimum algorithm
     links:
     - http://cf16-tournament-round3-open.contest.atcoder.jp/tasks/asaporo_d

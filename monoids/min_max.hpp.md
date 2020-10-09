@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/min_max.hpp\"\n#include <algorithm>\n#include <numeric>\n\
     #include <utility>\n\ntemplate <class T>\nstruct min_max_monoid {\n    typedef\

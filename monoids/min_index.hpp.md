@@ -16,7 +16,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/min_index.hpp\"\n#include <algorithm>\n#include\
     \ <climits>\n#include <limits>\n#include <utility>\n\n/**\n * @note a semilattice\n\
@@ -38,8 +37,8 @@ data:
   timestamp: '2019-12-30 22:14:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/lowest_common_ancestor.aoj.test.cpp
   - graph/lowest_common_ancestor.yosupo.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
 documentation_of: monoids/min_index.hpp
 layout: document
 redirect_from:

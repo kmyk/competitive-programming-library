@@ -15,7 +15,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/linear_function_plus_count_action.hpp\"\n#include\
     \ <utility>\n#line 3 \"monoids/linear_function.hpp\"\n\ntemplate <class CommutativeRing>\n\
@@ -44,8 +43,8 @@ data:
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
 documentation_of: monoids/linear_function_plus_count_action.hpp
 layout: document
 redirect_from:

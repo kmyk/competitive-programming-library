@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a structure to make a midpoint for given two points
     links: []
   bundledCode: "#line 1 \"old/midpoint.inc.cpp\"\n/**\n * @brief a structure to make\

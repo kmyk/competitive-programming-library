@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://hos.ac/blog/#blog0001
   bundledCode: "#line 1 \"old/skew-heap.inc.cpp\"\n/**\n * @sa http://hos.ac/blog/#blog0001\n\

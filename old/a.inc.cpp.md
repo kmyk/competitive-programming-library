@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Andrew's Monotone Chain
     links: []
   bundledCode: "#line 1 \"old/a.inc.cpp\"\ntypedef complex<double> point;\ndouble\

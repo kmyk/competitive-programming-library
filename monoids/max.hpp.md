@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/max.hpp\"\n#include <algorithm>\n#include <limits>\n\
     \ntemplate <class T>\nstruct max_monoid {\n    typedef T value_type;\n    value_type\

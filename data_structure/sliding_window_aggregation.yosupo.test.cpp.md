@@ -7,23 +7,23 @@ data:
       \u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\u3068\
       \u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/linear_function.hpp
-    title: monoids/linear_function.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/dual.hpp
-    title: monoids/dual.hpp
-  - icon: ':heavy_check_mark:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':heavy_check_mark:'
+    path: modulus/modinv.hpp
+    title: modulus/modinv.hpp
   - icon: ':heavy_check_mark:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
   - icon: ':heavy_check_mark:'
-    path: modulus/modinv.hpp
-    title: modulus/modinv.hpp
+    path: monoids/dual.hpp
+    title: monoids/dual.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/linear_function.hpp
+    title: monoids/linear_function.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

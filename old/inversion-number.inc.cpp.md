@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/inversion-number.inc.cpp\"\nll inversion_number(vector<int>\
     \ const & a) {\n    int n = a.size();\n    binary_indexed_tree<plus_monoid> bit(n\

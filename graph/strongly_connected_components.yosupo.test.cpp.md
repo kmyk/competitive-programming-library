@@ -2,21 +2,21 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: graph/quotient_graph.hpp
+    title: graph/quotient_graph.hpp
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
-    path: graph/transpose_graph.hpp
-    title: graph/transpose_graph.hpp
-  - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/quotient_graph.hpp
-    title: graph/quotient_graph.hpp
-  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.hpp
     title: topological sort
+  - icon: ':heavy_check_mark:'
+    path: graph/transpose_graph.hpp
+    title: graph/transpose_graph.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

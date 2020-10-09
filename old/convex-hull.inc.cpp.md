@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://www.prefield.com/algorithm/geometry/convex_hull.html
   bundledCode: "#line 1 \"old/convex-hull.inc.cpp\"\ndouble dot(complex<double> a,\

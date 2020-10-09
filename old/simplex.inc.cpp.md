@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf
     - http://zeus.mech.kyushu-u.ac.jp/~tsuji/java_edu/Simplex_st.html

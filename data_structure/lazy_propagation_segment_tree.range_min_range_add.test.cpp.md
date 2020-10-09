@@ -6,9 +6,6 @@ data:
     title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
       \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
     path: monoids/min.hpp
     title: monoids/min.hpp
   - icon: ':heavy_check_mark:'
@@ -17,6 +14,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/plus_min_action.hpp
     title: monoids/plus_min_action.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

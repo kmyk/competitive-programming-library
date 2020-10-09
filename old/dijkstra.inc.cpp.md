@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/dijkstra.inc.cpp\"\n/**\n * @note O((E + V) log V)\n\
     \ */\nvector<ll> dijkstra(vector<vector<pair<int, ll> > > const & g, int root)\

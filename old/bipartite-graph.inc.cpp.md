@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/bipartite-graph.inc.cpp\"\n/**\n * @note g must be connected\n\
     \ * @return is the size of a part\n */\nint check_bipartite_graph(vector<vector<int>\

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -10,15 +10,14 @@ data:
     title: upward fast zeta transform on primes
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: number/primes.yukicoder-1140.test.cpp
-    title: number/primes.yukicoder-1140.test.cpp
-  - icon: ':heavy_check_mark:'
     path: number/primes.aoj.test.cpp
     title: number/primes.aoj.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: number/primes.yukicoder-1140.test.cpp
+    title: number/primes.yukicoder-1140.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"number/primes.hpp\"\n#include <algorithm>\n#include <cassert>\n\
     #include <cstdint>\n#include <map>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\

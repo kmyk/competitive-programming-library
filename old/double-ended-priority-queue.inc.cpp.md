@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a double-ended priority queue
     links:
     - https://topcoder.g.hatena.ne.jp/spaghetti_source/20121006#c1349522933

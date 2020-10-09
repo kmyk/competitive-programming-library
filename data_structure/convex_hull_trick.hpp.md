@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/convex_hull_trick.md
     document_title: "Convex Hull Trick (\u975E\u5358\u8ABF, online)"
     links: []

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/matrix_template.hpp
     title: number/matrix_template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"number/matrix_template.hpp\"\n#include <array>\n#include\
     \ <cstdint>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i)\

@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/distributed-code-jam.inc.cpp\"\ntemplate <class T> void\
     \ PutGeneric(int target, T value);\ntemplate <> void PutGeneric(int target, char\

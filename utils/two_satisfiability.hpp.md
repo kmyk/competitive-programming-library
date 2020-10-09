@@ -8,7 +8,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -19,7 +19,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: 2-SAT ($O(N)$)
     links: []
   bundledCode: "#line 2 \"utils/two_satisfiability.hpp\"\n#include <cassert>\n#include\

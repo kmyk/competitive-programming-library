@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
     links: []
   bundledCode: "#line 2 \"utils/binary_search.hpp\"\n#include <cassert>\n#include\

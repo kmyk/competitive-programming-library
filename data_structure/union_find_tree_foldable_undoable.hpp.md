@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Union-Find Tree (foldable with commutative monoids, undoable)
     links: []
   bundledCode: "#line 2 \"data_structure/union_find_tree_foldable_undoable.hpp\"\n\

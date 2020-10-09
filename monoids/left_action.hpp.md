@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/left_action.hpp\"\n#include <utility>\n#line 3 \"\
     monoids/left.hpp\"\n\ntemplate <class T>\nstruct left_monoid {\n    // typedef\

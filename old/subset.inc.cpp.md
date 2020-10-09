@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/
   bundledCode: "#line 1 \"old/subset.inc.cpp\"\n/**\n * @sa https://kimiyuki.net/blog/2017/07/16/enumerate-sets-with-bit-manipulation/\n\

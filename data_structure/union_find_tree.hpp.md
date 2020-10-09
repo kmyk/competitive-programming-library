@@ -7,18 +7,17 @@ data:
     title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: graph/kruskal.aoj.test.cpp
-    title: graph/kruskal.aoj.test.cpp
-  - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree.aoj.test.cpp
     title: data_structure/union_find_tree.aoj.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree.yosupo.test.cpp
     title: data_structure/union_find_tree.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/kruskal.aoj.test.cpp
+    title: graph/kruskal.aoj.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/union_find_tree.md
     document_title: Union-Find Tree
     links: []
@@ -54,8 +53,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/kruskal.aoj.test.cpp
-  - data_structure/union_find_tree.aoj.test.cpp
   - data_structure/union_find_tree.yosupo.test.cpp
+  - data_structure/union_find_tree.aoj.test.cpp
 documentation_of: data_structure/union_find_tree.hpp
 layout: document
 redirect_from:

@@ -6,11 +6,11 @@ data:
     title: "Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max,\
       \ sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

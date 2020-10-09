@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/boyer-moore.inc.cpp\"\narray<int,26> bm_build_skip(string\
     \ const & pattern) { // O(m)\n    int m = pattern.length();\n    array<int,26>\

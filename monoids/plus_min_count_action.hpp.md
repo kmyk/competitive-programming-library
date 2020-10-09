@@ -1,18 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
   - icon: ':warning:'
     path: monoids/min_count.hpp
     title: monoids/min_count.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/plus_min_count_action.hpp\"\n#include <utility>\n\
     #line 2 \"monoids/plus.hpp\"\n\ntemplate <class T>\nstruct plus_monoid {\n   \

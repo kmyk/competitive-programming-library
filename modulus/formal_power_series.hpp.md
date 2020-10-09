@@ -5,35 +5,34 @@ data:
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
   - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
   - icon: ':heavy_check_mark:'
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: modulus/formal_power_series.log.test.cpp
-    title: modulus/formal_power_series.log.test.cpp
-  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
   - icon: ':heavy_check_mark:'
-    path: modulus/formal_power_series.yukicoder-1145.test.cpp
-    title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/formal_power_series.log.test.cpp
+    title: modulus/formal_power_series.log.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/formal_power_series.yukicoder-1145.test.cpp
+    title: modulus/formal_power_series.yukicoder-1145.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0\
       \ $\\mathbb{Z}/n\\mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
     links: []
@@ -280,8 +279,8 @@ data:
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/formal_power_series.log.test.cpp
   - modulus/formal_power_series.exp.test.cpp
+  - modulus/formal_power_series.log.test.cpp
   - modulus/formal_power_series.yukicoder-1145.test.cpp
   - modulus/formal_power_series.inv.test.cpp
 documentation_of: modulus/formal_power_series.hpp

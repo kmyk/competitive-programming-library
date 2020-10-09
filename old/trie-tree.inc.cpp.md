@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/trie-tree.inc.cpp\"\ntemplate <typename T>\nstruct trie_t\
     \ {\n    T data;\n    array<shared_ptr<trie_t>, 26> children;\n};\ntemplate <typename\

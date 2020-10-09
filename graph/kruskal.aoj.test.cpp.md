@@ -2,12 +2,12 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: graph/kruskal.hpp
-    title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
-  - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
   - icon: ':heavy_check_mark:'
+    path: graph/kruskal.hpp
+    title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

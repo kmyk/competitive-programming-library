@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/longest-increasing-subsequence.inc.cpp\"\ntemplate <typename\
     \ T>\nvector<T> longest_strict_increasing_subsequence(vector<T> const & xs) {\n\

@@ -5,11 +5,11 @@ data:
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -21,7 +21,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148\
       \ (\u524D\u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
     links:
@@ -118,8 +117,8 @@ data:
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/lowest_common_ancestor.aoj.test.cpp
   - graph/lowest_common_ancestor.yosupo.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
 documentation_of: graph/lowest_common_ancestor.hpp
 layout: document
 redirect_from:

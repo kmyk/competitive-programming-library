@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
@@ -13,6 +10,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/gcd.hpp
     title: number/gcd.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

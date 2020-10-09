@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/red-black-tree.inc.cpp\"\n/**\n * @note almost all operations\
     \ are O(log N)\n */\ntemplate <class T>\nclass red_black_tree {\n\n    enum color_t\

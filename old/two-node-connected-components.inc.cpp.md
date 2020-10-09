@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "2-node-connected components decomposition / 2-\u9802\u70B9\u9023\
       \u7D50\u6210\u5206\u5206\u89E3"
     links: []

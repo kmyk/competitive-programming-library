@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/aho-corasick.inc.cpp\"\nstruct pma_t { // Aho-Corasick\n\
     \    pma_t* next[26];\n    pma_t* fail;\n    int accept;\n};\npma_t *ac_new()\

@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: cumulative sum
     links:
     - https://beta.atcoder.jp/contests/abc106/submissions/3361728

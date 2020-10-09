@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/ternary-search.inc.cpp\"\n/**\n * @arg f must be a downward-convex\
     \ function\n * @retrun argmin f\n * @note f is called (iteration + 1) times\n\

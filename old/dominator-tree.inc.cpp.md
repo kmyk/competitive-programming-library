@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://sigma425.hatenablog.com/entry/2015/12/25/224053
   bundledCode: "#line 1 \"old/dominator-tree.inc.cpp\"\n// http://sigma425.hatenablog.com/entry/2015/12/25/224053\n\

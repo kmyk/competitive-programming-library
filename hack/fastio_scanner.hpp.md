@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"hack/fastio_scanner.hpp\"\n#include <algorithm>\n#include\
     \ <cassert>\n#include <cstdlib>\n#include <cstring>\n#include <string>\n#include\

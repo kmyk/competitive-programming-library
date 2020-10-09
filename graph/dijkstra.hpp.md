@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Dijkstra ($O((E + V) \log V)$)
     links: []
   bundledCode: "#line 2 \"graph/dijkstra.hpp\"\n#include <cstdint>\n#include <numeric>\n\

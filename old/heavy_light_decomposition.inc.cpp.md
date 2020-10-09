@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "heavy light decomposition / \u91CD\u8EFD\u5206\u89E3"
     links:
     - http://math314.hateblo.jp/entry/2014/06/24/220107

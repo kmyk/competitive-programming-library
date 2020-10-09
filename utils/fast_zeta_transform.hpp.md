@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/primes.hpp
     title: number/primes.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: upward fast zeta transform on primes
     links: []
   bundledCode: "#line 2 \"utils/fast_zeta_transform.hpp\"\n#include <cassert>\n#include\

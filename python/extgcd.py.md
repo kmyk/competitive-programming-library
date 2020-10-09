@@ -7,10 +7,10 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 70, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py\"\
-    , line 84, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 85, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "def extgcd(a, b):\n    if b == 0:\n        return 1, 0\n    else:\n     \
     \   na, nb = extgcd(b, a % b)\n        return nb, na - a//b * nb\ndef modinv(a,\
     \ n):\n    return extgcd(a, n)[0] % n\n"

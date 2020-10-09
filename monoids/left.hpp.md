@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/left.hpp\"\n#include <utility>\n\ntemplate <class\
     \ T>\nstruct left_monoid {\n    // typedef std::optional<T> value_type;\n    typedef\

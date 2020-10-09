@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://beta.atcoder.jp/contests/yahoo-procon2018-final/submissions/2126707
   bundledCode: "#line 1 \"old/range-union-find-tree.inc.cpp\"\n/**\n * @note \u8A08\

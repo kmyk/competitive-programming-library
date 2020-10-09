@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: get a central path of a catapillar graph
     links:
     - https://atcoder.jp/contests/arc095/tasks/arc095_d

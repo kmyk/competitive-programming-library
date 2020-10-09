@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/dice.inc.cpp\"\nstruct dice_t { // regular hexahedron\
     \ group\n    //       ______\n    //      \\      \\      4\n    //     / \\ \

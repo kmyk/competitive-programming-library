@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/periodic-function-power.inc.cpp\"\ntemplate <class F,\
     \ class T>\nT periodic_function_power(F f, ll k, T x) {\n    assert (k >= 1);\n\

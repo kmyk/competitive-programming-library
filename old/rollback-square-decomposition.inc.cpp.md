@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the extended Mo's algorithm
     links:
     - http://codeforces.com/blog/entry/7383?#comment-161520

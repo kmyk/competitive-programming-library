@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://arc054.contest.atcoder.jp/submissions/1335245
     - https://csacademy.com/contest/ceoi-2018-day-2/task/fibonacci-representations-small/

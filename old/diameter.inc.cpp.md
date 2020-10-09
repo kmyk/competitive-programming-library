@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "get the diameter of a tree / \u6728\u306E\u76F4\u5F84"
     links:
     - http://techtipshoge.blogspot.jp/2016/09/blog-post.html

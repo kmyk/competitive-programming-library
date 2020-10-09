@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E
       + V) \log V)$)
     links: []

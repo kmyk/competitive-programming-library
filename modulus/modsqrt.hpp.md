@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: find the sqrt $b$ of $a$ modulo $p$
     links: []
   bundledCode: "#line 2 \"modulus/modsqrt.hpp\"\n#include <cassert>\n#include <cstdint>\n\

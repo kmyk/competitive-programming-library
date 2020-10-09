@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: data_structure/sliding_window_aggregation.yosupo.test.cpp
-    title: data_structure/sliding_window_aggregation.yosupo.test.cpp
+    path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+    title: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
     title: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
@@ -13,12 +13,11 @@ data:
     path: data_structure/segment_tree.point_set_range_composite.test.cpp
     title: data_structure/segment_tree.point_set_range_composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
-    title: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+    path: data_structure/sliding_window_aggregation.yosupo.test.cpp
+    title: data_structure/sliding_window_aggregation.yosupo.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual
   bundledCode: "#line 2 \"monoids/dual.hpp\"\n\n/**\n * @see http://hackage.haskell.org/package/base/docs/Data-Monoid.html#t:Dual\n\
@@ -39,9 +38,9 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/sliding_window_aggregation.yosupo.test.cpp
+  - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
   - data_structure/segment_tree.point_set_range_composite.test.cpp
-  - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
 documentation_of: monoids/dual.hpp
 layout: document
 redirect_from:

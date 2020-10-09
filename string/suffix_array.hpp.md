@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -19,7 +19,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$,\
       \ Manber & Myers)"
     links: []
@@ -67,8 +66,8 @@ data:
   timestamp: '2020-03-04 13:12:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - string/longest_common_prefix.yosupo.test.cpp
   - string/suffix_array.yosupo.test.cpp
+  - string/longest_common_prefix.yosupo.test.cpp
 documentation_of: string/suffix_array.hpp
 layout: document
 redirect_from:

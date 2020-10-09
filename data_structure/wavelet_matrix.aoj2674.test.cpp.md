@@ -2,12 +2,12 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: data_structure/wavelet_matrix.hpp
-    title: Wavelet Matrix
-  - icon: ':heavy_check_mark:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
   - icon: ':heavy_check_mark:'
+    path: data_structure/wavelet_matrix.hpp
+    title: Wavelet Matrix
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

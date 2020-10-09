@@ -91,6 +91,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/format.hpp
       title: graph/format.hpp
+    - icon: ':x:'
+      path: graph/functional_graph.hpp
+      title: "Namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
     - icon: ':heavy_check_mark:'
       path: graph/kruskal.hpp
       title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
@@ -442,9 +445,6 @@ data:
       path: old/minimum-cost-flow.inc.cpp
       title: minimum-cost flow with primal-dual method
     - icon: ':warning:'
-      path: old/namori-graph.inc.cpp
-      title: "get the namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
-    - icon: ':warning:'
       path: old/palindrome.inc.cpp
       title: old/palindrome.inc.cpp
     - icon: ':warning:'
@@ -596,7 +596,7 @@ data:
       path: utils/left_to_right_maxima.hpp
       title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ +\
         \ $O(1)$)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utils/macros.hpp
       title: utils/macros.hpp
     - icon: ':warning:'
@@ -715,6 +715,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.yukicoder-1065.test.cpp
       title: graph/dijkstra.yukicoder-1065.test.cpp
+    - icon: ':x:'
+      path: graph/functional_graph.yuki1254.test.cpp
+      title: graph/functional_graph.yuki1254.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/kruskal.aoj.test.cpp
       title: graph/kruskal.aoj.test.cpp
@@ -761,6 +764,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: modulus/modlog.yosupo.test.cpp
       title: modulus/modlog.yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/modlog.yuki1255.test.cpp
+      title: modulus/modlog.yuki1255.test.cpp
     - icon: ':heavy_check_mark:'
       path: modulus/modsqrt.yosupo.test.cpp
       title: modulus/modsqrt.yosupo.test.cpp

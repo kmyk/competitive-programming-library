@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: compute the distances from root
     links: []
   bundledCode: "#line 1 \"old/breadth-first-search.inc.cpp\"\n/**\n * @brief compute\

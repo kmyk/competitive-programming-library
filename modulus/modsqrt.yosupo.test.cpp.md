@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: modulus/modsqrt.hpp
-    title: find the sqrt $b$ of $a$ modulo $p$
-  - icon: ':heavy_check_mark:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
+  - icon: ':heavy_check_mark:'
+    path: modulus/modsqrt.hpp
+    title: find the sqrt $b$ of $a$ modulo $p$
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

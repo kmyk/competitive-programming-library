@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/convex-hull-trick-with-monotonicity.inc.cpp\"\nclass\
     \ convex_hull_trick_with_monotonicity {\n    typedef pair<ll, ll> line_t;\n  \

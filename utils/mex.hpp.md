@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Minimum Excluded Value ($O(n)$ for a given sorted container)
     links:
     - https://en.wikipedia.org/wiki/Mex_(mathematics)

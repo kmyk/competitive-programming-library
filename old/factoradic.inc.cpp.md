@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/factoradic.inc.cpp\"\ntemplate <class RandomAccessIterator>\n\
     uint64_t encode_factoradic(RandomAccessIterator first, RandomAccessIterator last)\

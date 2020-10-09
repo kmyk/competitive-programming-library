@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/chmin_chmax_add_min_max_action.hpp\"\n#include <algorithm>\n\
     #include <cassert>\n#include <numeric>\n#include <utility>\n#line 5 \"monoids/chmin_chmax_add.hpp\"\

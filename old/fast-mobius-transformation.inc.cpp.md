@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: (upward) fast zeta transformation
     links:
     - http://pekempey.hatenablog.com/entry/2016/10/30/205852

@@ -3,32 +3,31 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
-    path: utils/left_to_right_maxima.hpp
-    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
     path: monoids/plus_min_action.hpp
     title: monoids/plus_min_action.hpp
   - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.hpp
     title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
       \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
+  - icon: ':heavy_check_mark:'
+    path: utils/left_to_right_maxima.hpp
+    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: string/longest_common_prefix.yosupo.test.cpp
-    title: string/longest_common_prefix.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: graph/cartesian_tree.yukicoder-1031.test.cpp
-    title: graph/cartesian_tree.yukicoder-1031.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
     title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/sparse_table.yosupo.test.cpp
     title: data_structure/sparse_table.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/cartesian_tree.yukicoder-1031.test.cpp
+    title: graph/cartesian_tree.yukicoder-1031.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: string/longest_common_prefix.yosupo.test.cpp
+    title: string/longest_common_prefix.yosupo.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/min.hpp\"\n#include <algorithm>\n#include <limits>\n\
     \ntemplate <class T>\nstruct min_monoid {\n    typedef T value_type;\n    value_type\
@@ -42,9 +41,9 @@ data:
   isVerificationFile: false
   path: monoids/min.hpp
   requiredBy:
-  - utils/left_to_right_maxima.hpp
-  - monoids/plus_min_action.hpp
   - string/longest_common_prefix.hpp
+  - monoids/plus_min_action.hpp
+  - utils/left_to_right_maxima.hpp
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

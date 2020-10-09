@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a disjoint set structure with monoid
     links: []
   bundledCode: "#line 2 \"data_structure/union_find_tree_with_monoid.hpp\"\n#include\

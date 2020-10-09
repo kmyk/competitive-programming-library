@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/max_index.hpp\"\n#include <algorithm>\n#include\
     \ <climits>\n#include <limits>\n#include <utility>\n\n/**\n * @note a semilattice\n\

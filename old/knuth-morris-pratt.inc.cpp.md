@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Morris-Pratt algorithm
     links: []
   bundledCode: "#line 1 \"old/knuth-morris-pratt.inc.cpp\"\n/**\n * @brief Morris-Pratt\

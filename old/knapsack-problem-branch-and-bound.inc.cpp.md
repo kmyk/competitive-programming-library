@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/knapsack-problem-branch-and-bound.inc.cpp\"\nll knapsack_problem_branch_and_bound(int\
     \ n, ll max_w, vector<ll> const & a_v, vector<ll> const & a_w) {\n    vector<ll>\

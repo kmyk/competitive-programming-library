@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2639.pdf
   bundledCode: "#line 2 \"utils/next_combination.hpp\"\n#include <algorithm>\n\n/**\n\

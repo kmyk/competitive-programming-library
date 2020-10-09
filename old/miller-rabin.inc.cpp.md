@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://kimiyuki.net/blog/2016/02/01/cf-gym-100753/
   bundledCode: "#line 1 \"old/miller-rabin.inc.cpp\"\n// https://kimiyuki.net/blog/2016/02/01/cf-gym-100753/\n\

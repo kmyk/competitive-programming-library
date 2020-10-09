@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://snuke.hatenablog.com/entry/2014/12/02/235837
   bundledCode: "#line 1 \"old/palindrome.inc.cpp\"\n/**\n * @return radiuses of odd\

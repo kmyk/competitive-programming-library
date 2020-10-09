@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"hack/fastio_printer.hpp\"\n#include <algorithm>\n#include\
     \ <cstdlib>\n#include <cstring>\n#include <string>\n#include <type_traits>\n#include\

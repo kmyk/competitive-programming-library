@@ -2,14 +2,14 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
     path: monoids/min.hpp
     title: monoids/min.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -18,7 +18,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log\
       \ n)$ + $O(1)$)"
     links: []

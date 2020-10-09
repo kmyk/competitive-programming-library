@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/string-skip-list.inc.cpp\"\ntemplate <typename Iterator>\n\
     vector<array<int, 26> > get_next_index(Iterator first, Iterator last) {\n    int\

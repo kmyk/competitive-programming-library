@@ -2,26 +2,26 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: modulus/number_theoretic_transformation_with_garner.hpp
-    title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
+    path: hack/fastio.hpp
+    title: hack/fastio.hpp
   - icon: ':heavy_check_mark:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
   - icon: ':heavy_check_mark:'
-    path: modulus/modpow.hpp
-    title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
+    path: modulus/modpow.hpp
+    title: modulus/modpow.hpp
   - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':heavy_check_mark:'
-    path: hack/fastio.hpp
-    title: hack/fastio.hpp
+    path: modulus/number_theoretic_transformation_with_garner.hpp
+    title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

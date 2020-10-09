@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/marathon.inc.cpp\"\nconstexpr double ticks_per_sec =\
     \ 2800000000;\nconstexpr double ticks_per_sec_inv = 1.0 / ticks_per_sec;\ninline\

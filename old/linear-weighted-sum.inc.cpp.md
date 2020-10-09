@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/linear-weighted-sum.inc.cpp\"\n/**\n * @description\
     \ a structure to compute sum_{i \\in [l, r)} (i - l) a_i\n * @note a_l is ignored\

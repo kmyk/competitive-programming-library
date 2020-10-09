@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -10,11 +10,8 @@ data:
     title: Euler Tour (subtree queries, with commutative monoids)
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-    title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree.range_sum_query.test.cpp
-    title: data_structure/segment_tree.range_sum_query.test.cpp
+    path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+    title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.point_add_range_sum.test.cpp
     title: data_structure/segment_tree.point_add_range_sum.test.cpp
@@ -22,12 +19,14 @@ data:
     path: data_structure/segment_tree.point_set_range_composite.test.cpp
     title: data_structure/segment_tree.point_set_range_composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
-    title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+    path: data_structure/segment_tree.range_sum_query.test.cpp
+    title: data_structure/segment_tree.range_sum_query.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
+    title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/segment_tree.md
     document_title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids,\
       \ \u5B8C\u5168\u4E8C\u5206\u6728)"
@@ -109,10 +108,10 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
+  - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+  - data_structure/segment_tree.point_set_range_composite.test.cpp
   - data_structure/segment_tree.range_sum_query.test.cpp
   - data_structure/segment_tree.point_add_range_sum.test.cpp
-  - data_structure/segment_tree.point_set_range_composite.test.cpp
-  - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
 documentation_of: data_structure/segment_tree.hpp
 layout: document
 redirect_from:

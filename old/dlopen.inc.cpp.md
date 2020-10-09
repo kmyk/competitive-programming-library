@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/dlopen.inc.cpp\"\nextern \"C\" {\n#if defined(_WIN32)\n\
     void *__libc_dlopen_mode(const char *, int);\nvoid *__libc_dlsym(void *, const\

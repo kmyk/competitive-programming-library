@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/lazy_propagation_red_black_tree.md
     document_title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\
       \u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u8D64\u9ED2\u6728)"

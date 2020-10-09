@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "get centers of a tree / \u6728\u306E\u4E2D\u5FC3"
     links: []
   bundledCode: "#line 1 \"old/centers.inc.cpp\"\n/**\n * @brief get centers of a tree\

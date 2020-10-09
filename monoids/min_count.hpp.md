@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/min_count.hpp\"\n#include <limits>\n#include <utility>\n\
     \ntemplate <class T>\nstruct min_count_monoid {\n    typedef std::pair<T, int>\

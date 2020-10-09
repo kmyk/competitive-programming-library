@@ -5,21 +5,21 @@ data:
     path: data_structure/dynamic_connectivity_offline.hpp
     title: Dynamic Connectivity (offline, commutative monoids)
   - icon: ':heavy_check_mark:'
-    path: data_structure/union_find_tree_foldable_undoable.hpp
-    title: Union-Find Tree (foldable with commutative monoids, undoable)
-  - icon: ':heavy_check_mark:'
     path: data_structure/reporting_segment_tree.hpp
     title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u5217\
       \u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: monoids/plus.hpp
-    title: monoids/plus.hpp
+    path: data_structure/union_find_tree_foldable_undoable.hpp
+    title: Union-Find Tree (foldable with commutative monoids, undoable)
   - icon: ':heavy_check_mark:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
+  - icon: ':heavy_check_mark:'
+    path: monoids/plus.hpp
+    title: monoids/plus.hpp
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

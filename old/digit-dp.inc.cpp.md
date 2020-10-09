@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://yukicoder.me/problems/no/260
   bundledCode: "#line 1 \"old/digit-dp.inc.cpp\"\n// http://yukicoder.me/problems/no/260\n\

@@ -1,21 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-    title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-  - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
     title: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+    title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/lazy_propagation_segment_tree.md
     document_title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\
       \u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"

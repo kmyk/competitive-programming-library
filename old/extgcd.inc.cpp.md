@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: extended gcd
     links:
     - https://topcoder.g.hatena.ne.jp/spaghetti_source/20130126/1359171466

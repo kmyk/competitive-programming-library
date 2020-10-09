@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: set of disjoint intervals
     links: []
   bundledCode: "#line 2 \"utils/interval_set.hpp\"\n#include <map>\n#include <optional>\n\

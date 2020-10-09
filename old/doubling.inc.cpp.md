@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: the doubling technique
     links: []
   bundledCode: "#line 1 \"old/doubling.inc.cpp\"\n/**\n * @brief the doubling technique\n\

@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: utils/macros.hpp
-    title: utils/macros.hpp
+    path: data_structure/sparse_table.hpp
+    title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.hpp
     title: Cartesian tree ($O(n)$)
@@ -11,14 +11,14 @@ data:
     path: graph/format.hpp
     title: graph/format.hpp
   - icon: ':heavy_check_mark:'
-    path: utils/left_to_right_maxima.hpp
-    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
-    path: data_structure/sparse_table.hpp
-    title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
     path: monoids/min.hpp
     title: monoids/min.hpp
+  - icon: ':heavy_check_mark:'
+    path: utils/left_to_right_maxima.hpp
+    title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
+  - icon: ':question:'
+    path: utils/macros.hpp
+    title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

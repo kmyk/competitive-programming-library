@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: compare substrings of a string with O(1) using suffix arrays
     links: []
   bundledCode: "#line 1 \"old/comparable-view.inc.cpp\"\n/**\n * @brief compare substrings\

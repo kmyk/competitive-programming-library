@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: enumerate primes in [2, n) with O(n log log n)
     links: []
   bundledCode: "#line 1 \"old/primes-small.inc.cpp\"\n/**\n * @brief enumerate primes\

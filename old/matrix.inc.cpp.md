@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/matrix.inc.cpp\"\ntemplate <typename T>\nvector<vector<T>\
     \ > operator * (vector<vector<T> > const & a, vector<vector<T> > const & b) {\n\

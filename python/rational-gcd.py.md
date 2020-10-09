@@ -8,10 +8,10 @@ data:
   attributes:
     links:
     - https://kimiyuki.net/blog/2016/06/08/yuki-356/
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 70, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py\"\
-    , line 84, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 85, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from fractions import Fraction\nimport math\ndef lcm(a, b):\n    return a\
     \ * b // math.gcd(a, b)\n\n# https://kimiyuki.net/blog/2016/06/08/yuki-356/\n\
     def qlcm(p, q):\n    a = p.numerator * q.denominator\n    b = p.denominator *\

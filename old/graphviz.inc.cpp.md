@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/graphviz.inc.cpp\"\nvoid graphviz(vector<vector<int>\
     \ > const & g, bool is_digraph = false, string const & name = \"graph\") {\n \

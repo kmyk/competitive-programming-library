@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/product.hpp\"\n#include <utility>\n\ntemplate <class\
     \ Monoid1, class Monoid2>\nstruct product_monoid {\n    typedef std::pair<typename\

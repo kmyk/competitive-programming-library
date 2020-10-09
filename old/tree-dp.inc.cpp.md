@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "fold a rooted tree / \u6728DP"
     links:
     - https://twitter.com/tmaehara/status/980787099472297985

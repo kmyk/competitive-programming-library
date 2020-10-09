@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -21,7 +21,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: data_structure/wavelet_matrix.md
     document_title: Wavelet Matrix
     links:
@@ -248,8 +247,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/wavelet_matrix.aoj2674.test.cpp
-  - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
   - data_structure/wavelet_matrix.rectangle_sum.test.cpp
+  - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
 documentation_of: data_structure/wavelet_matrix.hpp
 layout: document
 redirect_from:

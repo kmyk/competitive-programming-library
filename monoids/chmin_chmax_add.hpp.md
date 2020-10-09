@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/chmin_chmax_add.hpp\"\n#include <algorithm>\n#include\
     \ <numeric>\n#include <utility>\n\n/**\n * @note represents the monoid $M = (\\\

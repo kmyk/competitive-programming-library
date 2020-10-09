@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: a program to make the table
     links: []
   bundledCode: "#line 1 \"old/factorial-embed.inc.cpp\"\nint fact_unpack(const char\

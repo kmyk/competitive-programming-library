@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/binary-indexed-tree.inc.cpp\"\ntemplate <typename Monoid>\n\
     struct binary_indexed_tree {  // on monoid\n    typedef typename Monoid::value_type\

@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoids/trivial.hpp\"\n\nstruct trivial_monoid {\n    typedef\
     \ struct {} value_type;\n    value_type unit() const { return (value_type) {};\

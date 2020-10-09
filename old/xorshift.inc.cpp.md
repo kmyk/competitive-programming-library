@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"old/xorshift.inc.cpp\"\nclass xor_shift_128 {\npublic:\n\
     \    typedef uint32_t result_type;\n    xor_shift_128(uint32_t seed = 42) {\n\
