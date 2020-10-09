@@ -1,4 +1,5 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1254"
+#include <algorithm>
 #include <cstdio>
 #include <map>
 #include <utility>
@@ -25,6 +26,7 @@ vector<int> solve(int n, const vector<pair<int, int> >& edges) {
         int b = cycle[(i + 1) % cycle.size()];
         ans.push_back(lookup[make_pair(a, b)]);
     }
+    sort(ALL(ans));
     return ans;
 }
 
