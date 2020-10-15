@@ -91,7 +91,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/format.hpp
       title: graph/format.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/functional_graph.hpp
       title: "Namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
     - icon: ':heavy_check_mark:'
@@ -596,7 +596,7 @@ data:
       path: utils/left_to_right_maxima.hpp
       title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ +\
         \ $O(1)$)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: utils/macros.hpp
       title: utils/macros.hpp
     - icon: ':warning:'
@@ -715,7 +715,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.yukicoder-1065.test.cpp
       title: graph/dijkstra.yukicoder-1065.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/functional_graph.yuki1254.test.cpp
       title: graph/functional_graph.yuki1254.test.cpp
     - icon: ':heavy_check_mark:'

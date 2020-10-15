@@ -20,7 +20,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/linear_function.hpp
     title: monoids/linear_function.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

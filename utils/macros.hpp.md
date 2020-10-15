@@ -264,7 +264,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.yukicoder-1065.test.cpp
     title: graph/dijkstra.yukicoder-1065.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/functional_graph.yuki1254.test.cpp
     title: graph/functional_graph.yuki1254.test.cpp
   - icon: ':heavy_check_mark:'
@@ -379,7 +379,7 @@ data:
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "utils/macros.hpp"
@@ -465,7 +465,7 @@ data:
   - data_structure/segment_tree_beats.hpp
   - data_structure/lazy_propagation_segment_tree.hpp
   timestamp: '2019-12-20 06:12:24+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - string/suffix_array.yosupo.test.cpp
   - string/longest_common_prefix.yosupo.test.cpp

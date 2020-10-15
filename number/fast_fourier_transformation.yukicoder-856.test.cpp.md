@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/fast_fourier_transformation.hpp
     title: FFT convolution
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
