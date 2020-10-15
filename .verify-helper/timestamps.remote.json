@@ -32,6 +32,7 @@
 "graph/cartesian_tree.yosupo.test.cpp": "2020-08-01 15:41:36 +0900",
 "graph/cartesian_tree.yukicoder-1031.test.cpp": "2020-07-21 05:31:24 +0900",
 "graph/dijkstra.yukicoder-1065.test.cpp": "2020-05-29 23:50:33 +0900",
+"graph/functional_graph.yuki1254.test.cpp": "2020-10-10 00:34:03 +0900",
 "graph/kruskal.aoj.test.cpp": "2020-02-28 14:33:39 +0900",
 "graph/lowest_common_ancestor.aoj.test.cpp": "2020-03-04 19:51:45 +0900",
 "graph/lowest_common_ancestor.yosupo.test.cpp": "2020-03-04 19:51:45 +0900",
