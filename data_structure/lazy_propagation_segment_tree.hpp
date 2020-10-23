@@ -17,9 +17,9 @@ struct lazy_propagation_segment_tree {
     static_assert (std::is_invocable_r<typename MonoidX::value_type, Action, typename MonoidF::value_type, typename MonoidX::value_type>::value, "");
     typedef typename MonoidX::value_type value_type;
     typedef typename MonoidF::value_type operator_type;
-    const MonoidX mon_x;
-    const MonoidF mon_f;
-    const Action act;
+    MonoidX mon_x;
+    MonoidF mon_f;
+    Action act;
     int n;
     std::vector<value_type> a;
     std::vector<operator_type> f;

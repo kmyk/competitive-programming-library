@@ -12,7 +12,7 @@
 template <class Monoid>
 struct segment_tree {
     typedef typename Monoid::value_type value_type;
-    const Monoid mon;
+    Monoid mon;
     int n;
     std::vector<value_type> a;
     segment_tree() = default;
@@ -40,6 +40,25 @@ struct segment_tree {
     value_type point_get(int i) {  // 0-based
         assert (0 <= i and i < n);
         return a[i + n - 1];
+    }
+
+    /**
+     * @note O(min(n, (r - l) log n))
+     */
+    void range_set(int l, int r, value_type b) {
+        assert (0 <= l and l <= r and r <= n);
+        range_set(0, 0, n, l, r, b);
+    }
+    void range_set(int i, int il, int ir, int l, int r, value_type b) {
+        if (l <= il and ir <= r and ir - il == 1) {  // 0-based
+            a[i] = b;
+        } else if (ir <= l or r <= il) {
+            // nop
+        } else {
+            range_set(2 * i + 1, il, (il + ir) / 2, l, r, b);
+            range_set(2 * i + 2, (il + ir) / 2, ir, l, r, b);
+            a[i] = mon.mult(a[2 * i + 1], a[2 * i + 2]);
+        }
     }
 
     /**
