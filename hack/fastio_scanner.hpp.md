@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: hack/fastio_scanner_and_printer.yosupo.test.cpp
     title: hack/fastio_scanner_and_printer.yosupo.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -12,17 +12,18 @@ data:
   - icon: ':heavy_check_mark:'
     path: hack/stack_pivot.hpp
     title: hack/stack_pivot.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

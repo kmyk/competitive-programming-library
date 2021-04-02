@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/modsqrt.yosupo.test.cpp
     title: modulus/modsqrt.yosupo.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

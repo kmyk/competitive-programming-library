@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.yukicoder-1065.test.cpp
     title: graph/dijkstra.yukicoder-1065.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

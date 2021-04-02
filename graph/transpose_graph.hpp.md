@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -22,6 +22,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -49,14 +50,14 @@ data:
   isVerificationFile: false
   path: graph/transpose_graph.hpp
   requiredBy:
-  - graph/quotient_graph.hpp
-  - graph/strongly_connected_components.hpp
   - utils/two_satisfiability.hpp
+  - graph/strongly_connected_components.hpp
+  - graph/quotient_graph.hpp
   timestamp: '2019-12-30 23:14:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/strongly_connected_components.yosupo.test.cpp
   - utils/two_satisfiability.yosupo.test.cpp
+  - graph/strongly_connected_components.yosupo.test.cpp
 documentation_of: graph/transpose_graph.hpp
 layout: document
 redirect_from:

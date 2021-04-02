@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/binary_search.aoj.test.cpp
     title: utils/binary_search.aoj.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

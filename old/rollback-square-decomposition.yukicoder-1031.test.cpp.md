@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
@@ -14,11 +14,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.inc.cpp
     title: the extended Mo's algorithm
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -56,36 +57,45 @@ data:
     \ @brief Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
     \u4E8C\u5206\u6728)\n * @docs data_structure/segment_tree.md\n * @tparam Monoid\
     \ (commutativity is not required)\n */\ntemplate <class Monoid>\nstruct segment_tree\
-    \ {\n    typedef typename Monoid::value_type value_type;\n    const Monoid mon;\n\
-    \    int n;\n    std::vector<value_type> a;\n    segment_tree() = default;\n \
-    \   segment_tree(int n_, const Monoid & mon_ = Monoid()) : mon(mon_) {\n     \
-    \   n = 1; while (n < n_) n *= 2;\n        a.resize(2 * n - 1, mon.unit());\n\
-    \    }\n    void point_set(int i, value_type b) {  // 0-based\n        assert\
-    \ (0 <= i and i < n);\n        a[i + n - 1] = b;\n        for (i = (i + n) / 2;\
-    \ i > 0; i /= 2) {  // 1-based\n            a[i - 1] = mon.mult(a[2 * i - 1],\
-    \ a[2 * i]);\n        }\n    }\n    value_type range_get(int l, int r) {  // 0-based,\
+    \ {\n    typedef typename Monoid::value_type value_type;\n    Monoid mon;\n  \
+    \  int n;\n    std::vector<value_type> a;\n    segment_tree() = default;\n   \
+    \ segment_tree(int n_, const Monoid & mon_ = Monoid()) : mon(mon_) {\n       \
+    \ n = 1; while (n < n_) n *= 2;\n        a.resize(2 * n - 1, mon.unit());\n  \
+    \  }\n    void point_set(int i, value_type b) {  // 0-based\n        assert (0\
+    \ <= i and i < n);\n        a[i + n - 1] = b;\n        for (i = (i + n) / 2; i\
+    \ > 0; i /= 2) {  // 1-based\n            a[i - 1] = mon.mult(a[2 * i - 1], a[2\
+    \ * i]);\n        }\n    }\n    value_type range_get(int l, int r) {  // 0-based,\
     \ [l, r)\n        assert (0 <= l and l <= r and r <= n);\n        value_type lacc\
     \ = mon.unit(), racc = mon.unit();\n        for (l += n, r += n; l < r; l /= 2,\
     \ r /= 2) {  // 1-based loop, 2x faster than recursion\n            if (l % 2\
     \ == 1) lacc = mon.mult(lacc, a[(l ++) - 1]);\n            if (r % 2 == 1) racc\
     \ = mon.mult(a[(-- r) - 1], racc);\n        }\n        return mon.mult(lacc, racc);\n\
     \    }\n\n    value_type point_get(int i) {  // 0-based\n        assert (0 <=\
-    \ i and i < n);\n        return a[i + n - 1];\n    }\n\n    /**\n     * @brief\
-    \ a fast & semigroup-friendly version constructor\n     * @note $O(n)$\n     */\n\
-    \    template <class InputIterator>\n    segment_tree(InputIterator first, InputIterator\
-    \ last, const Monoid & mon_ = Monoid()) : mon(mon_) {\n        int size = std::distance(first,\
-    \ last);\n        n = 1; while (n < size) n *= 2;\n        a.resize(2 * n - 1,\
-    \ mon.unit());\n        std::copy(first, last, a.begin() + (n - 1));\n       \
-    \ unsafe_rebuild();\n    }\n    /**\n     * @brief update a leaf node without\
-    \ updating ancestors\n     * @note $O(1)$\n     */\n    void unsafe_point_set(int\
-    \ i, value_type b) {  // 0-based\n        assert (0 <= i and i < n);\n       \
-    \ a[i + n - 1] = b;\n    }\n    /**\n     * @brief re-build non-leaf nodes from\
-    \ leaf nodes\n     * @note $O(n)$\n     */\n    void unsafe_rebuild() {\n    \
-    \    REP_R (i, n - 1) {\n            a[i] = mon.mult(a[2 * i + 1], a[2 * i + 2]);\n\
-    \        }\n    }\n};\n#line 3 \"monoids/max.hpp\"\n#include <limits>\n\ntemplate\
-    \ <class T>\nstruct max_monoid {\n    typedef T value_type;\n    value_type unit()\
-    \ const { return std::numeric_limits<T>::lowest(); }\n    value_type mult(value_type\
-    \ a, value_type b) const { return std::max(a, b); }\n};\n#line 6 \"old/rollback-square-decomposition.yukicoder-1031.test.cpp\"\
+    \ i and i < n);\n        return a[i + n - 1];\n    }\n\n    /**\n     * @note\
+    \ O(min(n, (r - l) log n))\n     */\n    void range_set(int l, int r, value_type\
+    \ b) {\n        assert (0 <= l and l <= r and r <= n);\n        range_set(0, 0,\
+    \ n, l, r, b);\n    }\n    void range_set(int i, int il, int ir, int l, int r,\
+    \ value_type b) {\n        if (l <= il and ir <= r and ir - il == 1) {  // 0-based\n\
+    \            a[i] = b;\n        } else if (ir <= l or r <= il) {\n           \
+    \ // nop\n        } else {\n            range_set(2 * i + 1, il, (il + ir) / 2,\
+    \ l, r, b);\n            range_set(2 * i + 2, (il + ir) / 2, ir, l, r, b);\n \
+    \           a[i] = mon.mult(a[2 * i + 1], a[2 * i + 2]);\n        }\n    }\n\n\
+    \    /**\n     * @brief a fast & semigroup-friendly version constructor\n    \
+    \ * @note $O(n)$\n     */\n    template <class InputIterator>\n    segment_tree(InputIterator\
+    \ first, InputIterator last, const Monoid & mon_ = Monoid()) : mon(mon_) {\n \
+    \       int size = std::distance(first, last);\n        n = 1; while (n < size)\
+    \ n *= 2;\n        a.resize(2 * n - 1, mon.unit());\n        std::copy(first,\
+    \ last, a.begin() + (n - 1));\n        unsafe_rebuild();\n    }\n    /**\n   \
+    \  * @brief update a leaf node without updating ancestors\n     * @note $O(1)$\n\
+    \     */\n    void unsafe_point_set(int i, value_type b) {  // 0-based\n     \
+    \   assert (0 <= i and i < n);\n        a[i + n - 1] = b;\n    }\n    /**\n  \
+    \   * @brief re-build non-leaf nodes from leaf nodes\n     * @note $O(n)$\n  \
+    \   */\n    void unsafe_rebuild() {\n        REP_R (i, n - 1) {\n            a[i]\
+    \ = mon.mult(a[2 * i + 1], a[2 * i + 2]);\n        }\n    }\n};\n#line 3 \"monoids/max.hpp\"\
+    \n#include <limits>\n\ntemplate <class T>\nstruct max_monoid {\n    typedef T\
+    \ value_type;\n    value_type unit() const { return std::numeric_limits<T>::lowest();\
+    \ }\n    value_type mult(value_type a, value_type b) const { return std::max(a,\
+    \ b); }\n};\n#line 6 \"old/rollback-square-decomposition.yukicoder-1031.test.cpp\"\
     \n#include <climits>\n#include <cmath>\n#include <deque>\n#include <functional>\n\
     #include <iostream>\n#include <optional>\n#include <tuple>\n#include <utility>\n\
     #line 15 \"old/rollback-square-decomposition.yukicoder-1031.test.cpp\"\nusing\
@@ -228,7 +238,7 @@ data:
   isVerificationFile: true
   path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
   requiredBy: []
-  timestamp: '2020-04-17 23:46:14+09:00'
+  timestamp: '2020-10-23 23:22:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: old/rollback-square-decomposition.yukicoder-1031.test.cpp

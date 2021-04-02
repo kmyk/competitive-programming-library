@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
     title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

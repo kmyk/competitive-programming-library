@@ -25,6 +25,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.yosupo.test.cpp
     title: string/longest_common_prefix.yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: utils/mo_algorithm.yuki1270.test.cpp
+    title: utils/mo_algorithm.yuki1270.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -41,16 +45,17 @@ data:
   isVerificationFile: false
   path: monoids/min.hpp
   requiredBy:
-  - string/longest_common_prefix.hpp
-  - monoids/plus_min_action.hpp
   - utils/left_to_right_maxima.hpp
+  - monoids/plus_min_action.hpp
+  - string/longest_common_prefix.hpp
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - string/longest_common_prefix.yosupo.test.cpp
-  - graph/cartesian_tree.yukicoder-1031.test.cpp
+  - utils/mo_algorithm.yuki1270.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   - data_structure/sparse_table.yosupo.test.cpp
+  - string/longest_common_prefix.yosupo.test.cpp
+  - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: monoids/min.hpp
 layout: document
 redirect_from:

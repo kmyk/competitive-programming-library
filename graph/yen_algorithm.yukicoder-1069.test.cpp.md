@@ -5,11 +5,12 @@ data:
     path: graph/yen_algorithm.hpp
     title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log
       V)$)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

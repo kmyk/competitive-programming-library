@@ -9,6 +9,7 @@ data:
     title: find the sqrt $b$ of $a$ modulo $p$
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

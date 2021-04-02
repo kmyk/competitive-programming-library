@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/yen_algorithm.yukicoder-1069.test.cpp
     title: graph/yen_algorithm.yukicoder-1069.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -4,11 +4,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/binary_search.hpp
     title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

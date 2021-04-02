@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/sparse_table.yukicoder-1036.test.cpp
     title: data_structure/sparse_table.yukicoder-1036.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

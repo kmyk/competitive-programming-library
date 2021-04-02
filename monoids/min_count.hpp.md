@@ -6,6 +6,7 @@ data:
     path: monoids/plus_min_count_action.hpp
     title: monoids/plus_min_count_action.hpp
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:

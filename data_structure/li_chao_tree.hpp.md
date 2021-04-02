@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
     title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -4,11 +4,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/convex_hull_trick.hpp
     title: "Convex Hull Trick (\u975E\u5358\u8ABF, online)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/dual_segment_tree.range_update_query.test.cpp
     title: data_structure/dual_segment_tree.range_update_query.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

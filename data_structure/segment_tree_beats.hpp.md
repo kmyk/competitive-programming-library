@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -21,6 +21,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree_beats.yosupo.test.cpp
     title: data_structure/segment_tree_beats.yosupo.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -280,11 +281,11 @@ data:
   timestamp: '2020-03-04 20:34:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
+  - data_structure/segment_tree_beats.yosupo.test.cpp
   - data_structure/segment_tree_beats.DSL_2_I.test.cpp
   - data_structure/segment_tree_beats.DSL_2_F.test.cpp
   - data_structure/segment_tree_beats.DSL_2_H.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
-  - data_structure/segment_tree_beats.yosupo.test.cpp
 documentation_of: data_structure/segment_tree_beats.hpp
 layout: document
 redirect_from:

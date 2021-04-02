@@ -6,6 +6,7 @@ data:
     path: monoids/chmin_chmax_add_min_max_action.hpp
     title: monoids/chmin_chmax_add_min_max_action.hpp
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:

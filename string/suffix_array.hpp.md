@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -16,6 +16,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: string/suffix_array.yosupo.test.cpp
     title: string/suffix_array.yosupo.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -66,8 +67,8 @@ data:
   timestamp: '2020-03-04 13:12:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - string/suffix_array.yosupo.test.cpp
   - string/longest_common_prefix.yosupo.test.cpp
+  - string/suffix_array.yosupo.test.cpp
 documentation_of: string/suffix_array.hpp
 layout: document
 redirect_from:

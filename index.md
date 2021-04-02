@@ -37,7 +37,7 @@ data:
       path: data_structure/reporting_segment_tree.hpp
       title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
         \ (\u5217\u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segment_tree.hpp
       title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\
         \u5168\u4E8C\u5206\u6728)"
@@ -101,6 +101,9 @@ data:
       path: graph/lowest_common_ancestor.hpp
       title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\
         \u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+    - icon: ':warning:'
+      path: graph/minimum-cost-flow.hpp
+      title: "minimum cost flow / \u6700\u5C0F\u8CBB\u7528\u6D41 (primal-dual)"
     - icon: ':heavy_check_mark:'
       path: graph/quotient_graph.hpp
       title: graph/quotient_graph.hpp
@@ -263,7 +266,7 @@ data:
     - icon: ':warning:'
       path: monoids/min_max.hpp
       title: monoids/min_max.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: monoids/plus.hpp
       title: monoids/plus.hpp
     - icon: ':heavy_check_mark:'
@@ -307,6 +310,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number/matrix_template.hpp
       title: number/matrix_template.hpp
+    - icon: ':warning:'
+      path: number/miller-rabin.hpp
+      title: miller-rabin primality test
     - icon: ':heavy_check_mark:'
       path: number/primes.hpp
       title: number/primes.hpp
@@ -438,12 +444,6 @@ data:
     - icon: ':warning:'
       path: old/midpoint.inc.cpp
       title: a structure to make a midpoint for given two points
-    - icon: ':warning:'
-      path: old/miller-rabin.inc.cpp
-      title: old/miller-rabin.inc.cpp
-    - icon: ':warning:'
-      path: old/minimum-cost-flow.inc.cpp
-      title: minimum-cost flow with primal-dual method
     - icon: ':warning:'
       path: old/palindrome.inc.cpp
       title: old/palindrome.inc.cpp
@@ -596,7 +596,7 @@ data:
       path: utils/left_to_right_maxima.hpp
       title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ +\
         \ $O(1)$)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utils/macros.hpp
       title: utils/macros.hpp
     - icon: ':warning:'
@@ -605,6 +605,9 @@ data:
     - icon: ':warning:'
       path: utils/mex_calculator.hpp
       title: utils/mex_calculator.hpp
+    - icon: ':heavy_check_mark:'
+      path: utils/mo_algorithm.hpp
+      title: utils/mo_algorithm.hpp
     - icon: ':warning:'
       path: utils/next_combination.hpp
       title: utils/next_combination.hpp
@@ -653,7 +656,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
       title: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/segment_tree.point_add_range_sum.test.cpp
       title: data_structure/segment_tree.point_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -847,6 +850,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: utils/dsu_on_tree.aoj.test.cpp
       title: utils/dsu_on_tree.aoj.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: utils/mo_algorithm.yuki1270.test.cpp
+      title: utils/mo_algorithm.yuki1270.test.cpp
     - icon: ':heavy_check_mark:'
       path: utils/two_satisfiability.yosupo.test.cpp
       title: utils/two_satisfiability.yosupo.test.cpp

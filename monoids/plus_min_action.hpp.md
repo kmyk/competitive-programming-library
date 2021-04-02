@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/min.hpp
     title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   _extendedRequiredBy: []
@@ -12,6 +12,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
     title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: utils/mo_algorithm.yuki1270.test.cpp
+    title: utils/mo_algorithm.yuki1270.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -41,6 +45,7 @@ data:
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - utils/mo_algorithm.yuki1270.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
 documentation_of: monoids/plus_min_action.hpp
 layout: document

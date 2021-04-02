@@ -15,6 +15,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/kruskal.aoj.test.cpp
     title: graph/kruskal.aoj.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -52,9 +53,9 @@ data:
   timestamp: '2020-02-28 14:33:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/kruskal.aoj.test.cpp
   - data_structure/union_find_tree.yosupo.test.cpp
   - data_structure/union_find_tree.aoj.test.cpp
+  - graph/kruskal.aoj.test.cpp
 documentation_of: data_structure/union_find_tree.hpp
 layout: document
 redirect_from:

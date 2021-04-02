@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -47,6 +47,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -231,17 +232,17 @@ data:
   path: modulus/number_theoretic_transformation.hpp
   requiredBy:
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
-  - modulus/number_theoretic_transformation_with_garner.hpp
   - modulus/formal_power_series.hpp
+  - modulus/number_theoretic_transformation_with_garner.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - modulus/number_theoretic_transformation.yosupo.test.cpp
+  - modulus/formal_power_series.yukicoder-1145.test.cpp
+  - modulus/formal_power_series.exp.test.cpp
   - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
   - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - modulus/formal_power_series.exp.test.cpp
   - modulus/formal_power_series.log.test.cpp
-  - modulus/formal_power_series.yukicoder-1145.test.cpp
-  - modulus/number_theoretic_transformation.yosupo.test.cpp
   - modulus/formal_power_series.inv.test.cpp
 documentation_of: modulus/number_theoretic_transformation.hpp
 layout: document

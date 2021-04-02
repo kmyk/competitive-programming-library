@@ -23,11 +23,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/plus_count.hpp
     title: monoids/plus_count.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -52,21 +53,21 @@ data:
     struct lazy_propagation_segment_tree {\n    static_assert (std::is_invocable_r<typename\
     \ MonoidX::value_type, Action, typename MonoidF::value_type, typename MonoidX::value_type>::value,\
     \ \"\");\n    typedef typename MonoidX::value_type value_type;\n    typedef typename\
-    \ MonoidF::value_type operator_type;\n    const MonoidX mon_x;\n    const MonoidF\
-    \ mon_f;\n    const Action act;\n    int n;\n    std::vector<value_type> a;\n\
-    \    std::vector<operator_type> f;\n\n    lazy_propagation_segment_tree() = default;\n\
-    \    lazy_propagation_segment_tree(int n_, const MonoidX & mon_x_ = MonoidX(),\
-    \ const MonoidF & mon_f_ = MonoidF(), const Action & act_ = Action())\n      \
-    \      : mon_x(mon_x_), mon_f(mon_f_), act(act_) {\n        n = 1; while (n <\
-    \ n_) n *= 2;\n        a.resize(2 * n - 1, mon_x.unit());\n        f.resize(n\
-    \ - 1, mon_f.unit());\n    }\n    template <class InputIterator>\n    lazy_propagation_segment_tree(InputIterator\
-    \ first, InputIterator last, const MonoidX & mon_x_ = MonoidX(), const MonoidF\
-    \ & mon_f_ = MonoidF(), const Action & act_ = Action())\n            : mon_x(mon_x_),\
-    \ mon_f(mon_f_), act(act_) {\n        int size = std::distance(first, last);\n\
-    \        n = 1; while (n < size) n *= 2;\n        a.resize(2 * n - 1, mon_x.unit());\n\
-    \        f.resize(n - 1, mon_f.unit());\n        std::copy(first, last, a.begin()\
-    \ + (n - 1));\n        REP_R (i, n - 1) {\n            a[i] = mon_x.mult(a[2 *\
-    \ i + 1], a[2 * i + 2]);\n        }\n    }\n\n    void point_set(int i, value_type\
+    \ MonoidF::value_type operator_type;\n    MonoidX mon_x;\n    MonoidF mon_f;\n\
+    \    Action act;\n    int n;\n    std::vector<value_type> a;\n    std::vector<operator_type>\
+    \ f;\n\n    lazy_propagation_segment_tree() = default;\n    lazy_propagation_segment_tree(int\
+    \ n_, const MonoidX & mon_x_ = MonoidX(), const MonoidF & mon_f_ = MonoidF(),\
+    \ const Action & act_ = Action())\n            : mon_x(mon_x_), mon_f(mon_f_),\
+    \ act(act_) {\n        n = 1; while (n < n_) n *= 2;\n        a.resize(2 * n -\
+    \ 1, mon_x.unit());\n        f.resize(n - 1, mon_f.unit());\n    }\n    template\
+    \ <class InputIterator>\n    lazy_propagation_segment_tree(InputIterator first,\
+    \ InputIterator last, const MonoidX & mon_x_ = MonoidX(), const MonoidF & mon_f_\
+    \ = MonoidF(), const Action & act_ = Action())\n            : mon_x(mon_x_), mon_f(mon_f_),\
+    \ act(act_) {\n        int size = std::distance(first, last);\n        n = 1;\
+    \ while (n < size) n *= 2;\n        a.resize(2 * n - 1, mon_x.unit());\n     \
+    \   f.resize(n - 1, mon_f.unit());\n        std::copy(first, last, a.begin() +\
+    \ (n - 1));\n        REP_R (i, n - 1) {\n            a[i] = mon_x.mult(a[2 * i\
+    \ + 1], a[2 * i + 2]);\n        }\n    }\n\n    void point_set(int i, value_type\
     \ b) {\n        range_set(i, i + 1, b);\n    }\n    /**\n     * @note O(min(n,\
     \ (r - l) log n))\n     */\n    void range_set(int l, int r, value_type b) {\n\
     \        assert (0 <= l and l <= r and r <= n);\n        range_set(0, 0, n, l,\
@@ -204,7 +205,7 @@ data:
   isVerificationFile: true
   path: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
+  timestamp: '2020-10-23 23:22:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
