@@ -3,6 +3,7 @@
 #include "monoids/plus.hpp"
 #include "utils/macros.hpp"
 #include <cstdint>
+#include <cstdio>
 #include <tuple>
 #include <vector>
 using namespace std;
