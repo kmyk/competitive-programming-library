@@ -83,6 +83,9 @@ data:
       path: graph/dijkstra.hpp
       title: Dijkstra ($O((E + V) \log V)$)
     - icon: ':warning:'
+      path: graph/dinic.hpp
+      title: "maximum flow / \u6700\u5927\u6D41 (Dinic)"
+    - icon: ':warning:'
       path: graph/euler_graph.hpp
       title: "Eulerian cycle (\u7121\u5411, \u5FA9\u5143)"
     - icon: ':heavy_check_mark:'
@@ -373,9 +376,6 @@ data:
     - icon: ':warning:'
       path: old/dijkstra.inc.cpp
       title: old/dijkstra.inc.cpp
-    - icon: ':warning:'
-      path: old/dinic.inc.cpp
-      title: Dinic
     - icon: ':warning:'
       path: old/distributed-code-jam.inc.cpp
       title: old/distributed-code-jam.inc.cpp
