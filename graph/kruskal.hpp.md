@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

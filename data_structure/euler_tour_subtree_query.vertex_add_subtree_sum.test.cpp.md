@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.hpp
     title: Euler Tour (subtree queries, with commutative monoids)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
@@ -14,10 +14,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

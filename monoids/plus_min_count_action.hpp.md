@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: monoids/min_count.hpp
     title: monoids/min_count.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   _extendedRequiredBy: []

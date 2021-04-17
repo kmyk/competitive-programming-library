@@ -23,7 +23,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/plus_count.hpp
     title: monoids/plus_count.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

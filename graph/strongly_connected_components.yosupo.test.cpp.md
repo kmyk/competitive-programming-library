@@ -14,7 +14,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

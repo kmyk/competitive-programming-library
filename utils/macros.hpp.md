@@ -25,7 +25,7 @@ data:
     path: data_structure/reporting_segment_tree.hpp
     title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u5217\
       \u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
@@ -216,7 +216,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
     title: data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.point_add_range_sum.test.cpp
     title: data_structure/segment_tree.point_add_range_sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -387,9 +387,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "utils/macros.hpp"
@@ -477,7 +477,7 @@ data:
   - number/primes.hpp
   - number/karatsuba.hpp
   timestamp: '2019-12-20 06:12:24+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - utils/mo_algorithm.yuki1270.test.cpp
   - utils/binary_search.aoj.test.cpp

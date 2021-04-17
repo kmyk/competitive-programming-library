@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/matrix_template.hpp
     title: number/matrix_template.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

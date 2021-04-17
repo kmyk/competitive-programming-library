@@ -27,7 +27,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
     title: data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.point_add_range_sum.test.cpp
     title: data_structure/segment_tree.point_add_range_sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -39,9 +39,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"monoids/plus.hpp\"\n\ntemplate <class T>\nstruct plus_monoid\
@@ -59,7 +59,7 @@ data:
   - monoids/plus_max_action.hpp
   - monoids/plus_min_action.hpp
   timestamp: '2019-12-27 19:16:13+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - utils/mo_algorithm.yuki1270.test.cpp
   - utils/dsu_on_tree.aoj.test.cpp

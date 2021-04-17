@@ -12,13 +12,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: hack/stack_pivot.hpp
     title: hack/stack_pivot.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

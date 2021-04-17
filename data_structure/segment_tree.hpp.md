@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -12,7 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
     title: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.point_add_range_sum.test.cpp
     title: data_structure/segment_tree.point_add_range_sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -27,9 +27,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: data_structure/segment_tree.md
     document_title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids,\
@@ -125,7 +125,7 @@ data:
   requiredBy:
   - data_structure/euler_tour_subtree_query.hpp
   timestamp: '2020-10-23 23:22:52+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - utils/mo_algorithm.yuki1270.test.cpp
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp

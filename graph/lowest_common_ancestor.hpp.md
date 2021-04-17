@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

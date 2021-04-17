@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

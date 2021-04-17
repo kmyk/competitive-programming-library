@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
     title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
