@@ -102,6 +102,10 @@ data:
       title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\
         \u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
     - icon: ':warning:'
+      path: graph/matrix_tree_theorem.hpp
+      title: "\u5168\u57DF\u6728\u306E\u500B\u6570\u3092\u6570\u3048\u308B (\u884C\
+        \u5217\u6728\u5B9A\u7406)"
+    - icon: ':warning:'
       path: graph/minimum-cost-flow.hpp
       title: "minimum cost flow / \u6700\u5C0F\u8CBB\u7528\u6D41 (primal-dual)"
     - icon: ':heavy_check_mark:'
