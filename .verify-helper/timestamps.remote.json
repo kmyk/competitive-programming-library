@@ -12,6 +12,7 @@
 "data_structure/link_cut_tree.marked_ancestor.test.cpp": "2020-02-27 11:49:55 +0900",
 "data_structure/link_cut_tree.vertex_add_path_sum.test.cpp": "2020-06-13 00:00:25 +0900",
 "data_structure/link_cut_tree.vertex_set_path_composite.test.cpp": "2020-07-16 00:35:25 +0900",
+"data_structure/segment_tree.point_add_range_sum.test.cpp": "2021-04-18 02:39:39 +0900",
 "data_structure/segment_tree.point_set_range_composite.test.cpp": "2020-10-23 23:22:52 +0900",
 "data_structure/segment_tree.range_sum_query.test.cpp": "2020-10-23 23:22:52 +0900",
 "data_structure/segment_tree_beats.DSL_2_F.test.cpp": "2020-06-13 00:00:25 +0900",
