@@ -25,6 +25,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+  - icon: ':warning:'
+    path: modulus/mint_with_zero.hpp
+    title: "\u96F6\u306E\u500B\u6570\u4ED8\u304D\u5270\u4F59\u6F14\u7B97\u306E\u4E57\
+      \u6CD5\u7FA4 $\\mathbb{Z}/n\\mathbb{Z} \\times \\mathbb{Z}$"
   - icon: ':heavy_check_mark:'
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
@@ -188,6 +192,7 @@ data:
   - modulus/stirling_number_of_the_second_kind_table.hpp
   - modulus/partition_number.hpp
   - modulus/garner.hpp
+  - modulus/mint_with_zero.hpp
   - modulus/choose.hpp
   - modulus/factorial.hpp
   - modulus/multichoose_simple.hpp

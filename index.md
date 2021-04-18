@@ -79,6 +79,9 @@ data:
     - icon: ':warning:'
       path: graph/connected_components.hpp
       title: graph/connected_components.hpp
+    - icon: ':warning:'
+      path: graph/diameter_of_tree.hpp
+      title: "get the diameter of a tree / \u6728\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.hpp
       title: Dijkstra ($O((E + V) \log V)$)
@@ -178,6 +181,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: modulus/mint.hpp
       title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
+    - icon: ':warning:'
+      path: modulus/mint_with_zero.hpp
+      title: "\u96F6\u306E\u500B\u6570\u4ED8\u304D\u5270\u4F59\u6F14\u7B97\u306E\u4E57\
+        \u6CD5\u7FA4 $\\mathbb{Z}/n\\mathbb{Z} \\times \\mathbb{Z}$"
     - icon: ':heavy_check_mark:'
       path: modulus/modinv.hpp
       title: modulus/modinv.hpp
@@ -364,9 +371,6 @@ data:
     - icon: ':warning:'
       path: old/cumulative-sum.inc.cpp
       title: cumulative sum
-    - icon: ':warning:'
-      path: old/diameter.inc.cpp
-      title: "get the diameter of a tree / \u6728\u306E\u76F4\u5F84"
     - icon: ':warning:'
       path: old/dice.inc.cpp
       title: old/dice.inc.cpp
