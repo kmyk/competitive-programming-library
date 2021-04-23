@@ -46,6 +46,7 @@
 "modulus/formal_power_series.inv.test.cpp": "2020-08-01 00:51:48 +0900",
 "modulus/formal_power_series.log.test.cpp": "2020-08-01 00:51:48 +0900",
 "modulus/formal_power_series.yukicoder-1145.test.cpp": "2020-08-01 00:51:48 +0900",
+"modulus/mint_with_zero.test.cpp": "2021-04-23 11:00:27 +0900",
 "modulus/modlog.yosupo.test.cpp": "2020-06-16 07:51:56 +0900",
 "modulus/modlog.yuki1255.test.cpp": "2020-10-09 23:24:24 +0900",
 "modulus/modsqrt.yosupo.test.cpp": "2020-06-16 07:51:56 +0900",
