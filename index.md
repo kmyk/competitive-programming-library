@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: data_structure
     pages:
+    - icon: ':warning:'
+      path: data_structure/binary_indexed_tree.hpp
+      title: binary indexed tree
     - icon: ':heavy_check_mark:'
       path: data_structure/convex_hull_trick.hpp
       title: "Convex Hull Trick (\u975E\u5358\u8ABF, online)"
@@ -341,9 +344,6 @@ data:
     - icon: ':warning:'
       path: old/bernoulli-number.inc.cpp
       title: the Bernoulli number
-    - icon: ':warning:'
-      path: old/binary-indexed-tree.inc.cpp
-      title: old/binary-indexed-tree.inc.cpp
     - icon: ':warning:'
       path: old/bipartite-graph.inc.cpp
       title: old/bipartite-graph.inc.cpp
