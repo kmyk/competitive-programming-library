@@ -99,12 +99,12 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
+  - string/longest_common_prefix.yosupo.test.cpp
   - data_structure/sparse_table.yukicoder-1036.test.cpp
   - data_structure/sparse_table.yosupo.test.cpp
-  - string/longest_common_prefix.yosupo.test.cpp
   - graph/cartesian_tree.yukicoder-1031.test.cpp
-  - graph/lowest_common_ancestor.aoj.test.cpp
   - graph/lowest_common_ancestor.yosupo.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
 documentation_of: data_structure/sparse_table.hpp
 layout: document
 redirect_from:

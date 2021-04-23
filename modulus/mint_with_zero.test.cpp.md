@@ -5,26 +5,35 @@ data:
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
   - icon: ':heavy_check_mark:'
+    path: modulus/mint_with_zero.hpp
+    title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
+      \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
+  - icon: ':heavy_check_mark:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
   - icon: ':heavy_check_mark:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  _extendedRequiredBy: []
-  _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: modulus/mint_with_zero.test.cpp
-    title: modulus/mint_with_zero.test.cpp
+    path: utils/macros.hpp
+    title: utils/macros.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
+  _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\\
-      mathbb{Z}$ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://atcoder.jp/contests/arc117/tasks/arc117_c
     links:
-    - https://kimiyuki.net/blog/2021/04/23/modulo-with-zero/
-  bundledCode: "#line 2 \"modulus/mint_with_zero.hpp\"\n#include <cstdint>\n#include\
-    \ <iostream>\n#line 2 \"modulus/modpow.hpp\"\n#include <cassert>\n#line 4 \"modulus/modpow.hpp\"\
+    - https://atcoder.jp/contests/arc117/tasks/arc117_c
+  bundledCode: "#line 1 \"modulus/mint_with_zero.test.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/arc117/tasks/arc117_c\"\
+    \n#include <array>\n#include <cassert>\n#include <iostream>\n#include <vector>\n\
+    #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
+    \ ++ (i))\n#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define\
+    \ REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))\n#define REP3R(i, m,\
+    \ n) for (int i = (int)(n) - 1; (i) >= (int)(m); -- (i))\n#define ALL(x) std::begin(x),\
+    \ std::end(x)\n#line 2 \"modulus/mint.hpp\"\n#include <cstdint>\n#line 4 \"modulus/modpow.hpp\"\
     \n\ninline int32_t modpow(uint_fast64_t x, uint64_t k, int32_t MOD) {\n    assert\
     \ (/* 0 <= x and */ x < (uint_fast64_t)MOD);\n    uint_fast64_t y = 1;\n    for\
     \ (; k; k >>= 1) {\n        if (k & 1) (y *= x) %= MOD;\n        (x *= x) %= MOD;\n\
@@ -95,50 +104,50 @@ data:
     \ : nonzero; }\n};\ntemplate <int32_t MOD> zmint<MOD> operator * (int64_t nonzero,\
     \ zmint<MOD> n) { return zmint<MOD>(nonzero) * n; }\ntemplate <int32_t MOD> zmint<MOD>\
     \ operator / (int64_t nonzero, zmint<MOD> n) { return zmint<MOD>(nonzero) / n;\
-    \ }\n"
-  code: "#pragma once\n#include <cstdint>\n#include <iostream>\n#include \"modulus/modpow.hpp\"\
-    \n#include \"modulus/modinv.hpp\"\n#include \"modulus/mint.hpp\"\n\n/**\n * @brief\
-    \ $\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$ \u306E\
-    \u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020\n * @sa https://kimiyuki.net/blog/2021/04/23/modulo-with-zero/\n\
-    \ */\ntemplate <int32_t MOD>\nstruct zmint {\n    int32_t nonzero;\n    int32_t\
-    \ zero;\n    zmint() : nonzero(1) {}\n    zmint(int64_t nonzero_, int32_t zero_\
-    \ = 0) : nonzero(nonzero_), zero(zero_) { assert (nonzero != 0); while (nonzero\
-    \ % MOD == 0) { nonzero /= MOD; zero += 1; } if (nonzero < 0) nonzero = nonzero\
-    \ % MOD + MOD; }\n    zmint(int32_t nonzero_, int32_t zero_, std::nullptr_t) :\
-    \ nonzero(nonzero_), zero(zero_) {}\n    explicit operator bool() const { return\
-    \ nonzero; }\n    inline zmint<MOD> operator * (zmint<MOD> other) const { return\
-    \ zmint<MOD>(*this) *= other; }\n    inline zmint<MOD> & operator *= (zmint<MOD>\
-    \ other) { nonzero = static_cast<uint_fast64_t>(this->nonzero) * other.nonzero\
-    \ % MOD; zero += other.zero; return *this; }\n    inline zmint<MOD> operator /\
-    \ (zmint<MOD> other) const { return *this * other.inv(); }\n    inline zmint<MOD>\
-    \ & operator /= (zmint<MOD> other) { return *this *= other.inv(); }\n    inline\
-    \ zmint<MOD> operator - () const { return zmint<MOD>(nonzero ? MOD - nonzero :\
-    \ 0, zero, nullptr); }\n    inline bool operator == (zmint<MOD> other) const {\
-    \ return nonzero == other.nonzero and zero == other.zero; }\n    inline bool operator\
-    \ != (zmint<MOD> other) const { return nonzero != other.nonzero or zero != other.zero;\
-    \ }\n    inline zmint<MOD> pow(uint64_t k) const { return zmint<MOD>(modpow(nonzero,\
-    \ k, MOD), k * zero, nullptr); }\n    inline zmint<MOD> inv() const { return zmint<MOD>(modinv(nonzero,\
-    \ MOD), - zero, nullptr); }\n    inline mint<MOD> to_mint() const { assert (nonzero\
-    \ >= 0); return zero ? 0 : nonzero; }\n};\ntemplate <int32_t MOD> zmint<MOD> operator\
-    \ * (int64_t nonzero, zmint<MOD> n) { return zmint<MOD>(nonzero) * n; }\ntemplate\
-    \ <int32_t MOD> zmint<MOD> operator / (int64_t nonzero, zmint<MOD> n) { return\
-    \ zmint<MOD>(nonzero) / n; }\n"
+    \ }\n#line 9 \"modulus/mint_with_zero.test.cpp\"\nusing namespace std;\n\nint\
+    \ solve(int n, const std::vector<int>& a) {\n    std::vector<zmint<3> > fact(n\
+    \ + 1);\n    fact[0] = 1;\n    REP (i, n) {\n        fact[i + 1] = (i + 1) * fact[i];\n\
+    \    }\n    auto choose = [&](int n, int r) {\n        return (fact[n] * fact[n\
+    \ - r].inv() * fact[r].inv()).to_mint();\n    };\n\n    mint<3> b = 0;\n    REP\
+    \ (i, n) {\n        b += choose(n - 1, i) * a[i];\n    }\n    if (n % 2 == 0)\
+    \ {\n        b *= -1;\n    }\n    return b.value;\n}\n\nint main() {\n    int\
+    \ n; std::cin >> n;\n    std::string s; std::cin >> s;\n    assert (s.length()\
+    \ == n);\n    std::vector<int> a(n);\n    REP (i, n) {\n        a[i] = (s[i] ==\
+    \ 'W' ? 0 : s[i] == 'R' ? 1 : s[i] == 'B' ? 2 : -1);\n        assert (a[i] !=\
+    \ -1);\n    }\n    int ans = solve(n, a);\n    assert (0 <= ans and ans < 3);\n\
+    \    std::array<char, 3> table = {{ 'W', 'R', 'B' }};\n    std::cout << table[ans]\
+    \ << std::endl;\n    return 0;\n}\n\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/arc117/tasks/arc117_c\"\n#include\
+    \ <array>\n#include <cassert>\n#include <iostream>\n#include <vector>\n#include\
+    \ \"utils/macros.hpp\"\n#include \"modulus/mint.hpp\"\n#include \"modulus/mint_with_zero.hpp\"\
+    \nusing namespace std;\n\nint solve(int n, const std::vector<int>& a) {\n    std::vector<zmint<3>\
+    \ > fact(n + 1);\n    fact[0] = 1;\n    REP (i, n) {\n        fact[i + 1] = (i\
+    \ + 1) * fact[i];\n    }\n    auto choose = [&](int n, int r) {\n        return\
+    \ (fact[n] * fact[n - r].inv() * fact[r].inv()).to_mint();\n    };\n\n    mint<3>\
+    \ b = 0;\n    REP (i, n) {\n        b += choose(n - 1, i) * a[i];\n    }\n   \
+    \ if (n % 2 == 0) {\n        b *= -1;\n    }\n    return b.value;\n}\n\nint main()\
+    \ {\n    int n; std::cin >> n;\n    std::string s; std::cin >> s;\n    assert\
+    \ (s.length() == n);\n    std::vector<int> a(n);\n    REP (i, n) {\n        a[i]\
+    \ = (s[i] == 'W' ? 0 : s[i] == 'R' ? 1 : s[i] == 'B' ? 2 : -1);\n        assert\
+    \ (a[i] != -1);\n    }\n    int ans = solve(n, a);\n    assert (0 <= ans and ans\
+    \ < 3);\n    std::array<char, 3> table = {{ 'W', 'R', 'B' }};\n    std::cout <<\
+    \ table[ans] << std::endl;\n    return 0;\n}\n\n"
   dependsOn:
+  - utils/macros.hpp
+  - modulus/mint.hpp
   - modulus/modpow.hpp
   - modulus/modinv.hpp
-  - modulus/mint.hpp
-  isVerificationFile: false
-  path: modulus/mint_with_zero.hpp
+  - modulus/mint_with_zero.hpp
+  isVerificationFile: true
+  path: modulus/mint_with_zero.test.cpp
   requiredBy: []
   timestamp: '2021-04-23 11:00:27+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - modulus/mint_with_zero.test.cpp
-documentation_of: modulus/mint_with_zero.hpp
+  verificationStatus: TEST_ACCEPTED
+  verifiedWith: []
+documentation_of: modulus/mint_with_zero.test.cpp
 layout: document
 redirect_from:
-- /library/modulus/mint_with_zero.hpp
-- /library/modulus/mint_with_zero.hpp.html
-title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$ \u306E\
-  \u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
+- /verify/modulus/mint_with_zero.test.cpp
+- /verify/modulus/mint_with_zero.test.cpp.html
+title: modulus/mint_with_zero.test.cpp
 ---

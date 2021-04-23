@@ -280,10 +280,10 @@ data:
   timestamp: '2020-08-01 00:51:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/formal_power_series.yukicoder-1145.test.cpp
-  - modulus/formal_power_series.exp.test.cpp
-  - modulus/formal_power_series.log.test.cpp
   - modulus/formal_power_series.inv.test.cpp
+  - modulus/formal_power_series.yukicoder-1145.test.cpp
+  - modulus/formal_power_series.log.test.cpp
+  - modulus/formal_power_series.exp.test.cpp
 documentation_of: modulus/formal_power_series.hpp
 layout: document
 redirect_from:

@@ -247,9 +247,9 @@ data:
   timestamp: '2020-02-28 15:08:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - data_structure/wavelet_matrix.rectangle_sum.test.cpp
   - data_structure/wavelet_matrix.aoj2674.test.cpp
+  - data_structure/wavelet_matrix.rectangle_sum.test.cpp
+  - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
 documentation_of: data_structure/wavelet_matrix.hpp
 layout: document
 redirect_from:

@@ -181,10 +181,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: modulus/mint.hpp
       title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: modulus/mint_with_zero.hpp
-      title: "\u96F6\u306E\u500B\u6570\u4ED8\u304D\u5270\u4F59\u6F14\u7B97\u306E\u4E57\
-        \u6CD5\u7FA4 $\\mathbb{Z}/n\\mathbb{Z} \\times \\mathbb{Z}$"
+      title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
+        \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
     - icon: ':heavy_check_mark:'
       path: modulus/modinv.hpp
       title: modulus/modinv.hpp
@@ -772,6 +772,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: modulus/formal_power_series.yukicoder-1145.test.cpp
       title: modulus/formal_power_series.yukicoder-1145.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: modulus/mint_with_zero.test.cpp
+      title: modulus/mint_with_zero.test.cpp
     - icon: ':heavy_check_mark:'
       path: modulus/modlog.yosupo.test.cpp
       title: modulus/modlog.yosupo.test.cpp

@@ -283,9 +283,9 @@ data:
   verifiedWith:
   - data_structure/segment_tree_beats.DSL_2_G.test.cpp
   - data_structure/segment_tree_beats.yosupo.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_H.test.cpp
   - data_structure/segment_tree_beats.DSL_2_I.test.cpp
   - data_structure/segment_tree_beats.DSL_2_F.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_H.test.cpp
 documentation_of: data_structure/segment_tree_beats.hpp
 layout: document
 redirect_from:

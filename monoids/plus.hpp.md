@@ -61,15 +61,15 @@ data:
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - utils/mo_algorithm.yuki1270.test.cpp
   - utils/dsu_on_tree.aoj.test.cpp
+  - utils/mo_algorithm.yuki1270.test.cpp
+  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+  - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+  - data_structure/segment_tree.range_sum_query.test.cpp
+  - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   - data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
-  - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   - data_structure/segment_tree.point_add_range_sum.test.cpp
-  - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
-  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
-  - data_structure/segment_tree.range_sum_query.test.cpp
 documentation_of: monoids/plus.hpp
 layout: document
 redirect_from:
