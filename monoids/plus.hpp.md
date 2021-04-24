@@ -13,6 +13,9 @@ data:
     title: monoids/plus_min_count_action.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: data_structure/binary_indexed_tree.test.cpp
+    title: data_structure/binary_indexed_tree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
     title: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -63,6 +66,7 @@ data:
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
   - utils/mo_algorithm.yuki1270.test.cpp
+  - data_structure/binary_indexed_tree.test.cpp
   - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
   - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   - data_structure/segment_tree.range_sum_query.test.cpp

@@ -3,9 +3,9 @@ data:
   libraryCategories:
   - name: data_structure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/binary_indexed_tree.hpp
-      title: binary indexed tree
+      title: Binary Indexed Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/convex_hull_trick.hpp
       title: "Convex Hull Trick (\u975E\u5358\u8ABF, online)"
@@ -625,6 +625,9 @@ data:
   verificationCategories:
   - name: data_structure
     pages:
+    - icon: ':heavy_check_mark:'
+      path: data_structure/binary_indexed_tree.test.cpp
+      title: data_structure/binary_indexed_tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/convex_hull_trick.line_add_get_min.test.cpp
       title: data_structure/convex_hull_trick.line_add_get_min.test.cpp

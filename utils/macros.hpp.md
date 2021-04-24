@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: data_structure/binary_indexed_tree.hpp
+    title: Binary Indexed Tree
+  - icon: ':heavy_check_mark:'
     path: data_structure/dynamic_connectivity_offline.hpp
     title: Dynamic Connectivity (offline, commutative monoids)
   - icon: ':heavy_check_mark:'
@@ -180,6 +183,9 @@ data:
     path: utils/two_satisfiability.hpp
     title: 2-SAT ($O(N)$)
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/binary_indexed_tree.test.cpp
+    title: data_structure/binary_indexed_tree.test.cpp
   - icon: ':heavy_check_mark:'
     path: data_structure/convex_hull_trick.line_add_get_min.test.cpp
     title: data_structure/convex_hull_trick.line_add_get_min.test.cpp
@@ -457,6 +463,7 @@ data:
   - data_structure/fully_indexable_dictionary.hpp
   - data_structure/lazy_propagation_segment_tree.hpp
   - data_structure/wavelet_matrix.hpp
+  - data_structure/binary_indexed_tree.hpp
   - data_structure/segment_tree.hpp
   - data_structure/sparse_table.hpp
   - data_structure/dynamic_connectivity_offline.hpp
@@ -516,6 +523,7 @@ data:
   - number/fast_fourier_transformation.yukicoder-856.test.cpp
   - number/primes.aoj.test.cpp
   - data_structure/convex_hull_trick.line_add_get_min.test.cpp
+  - data_structure/binary_indexed_tree.test.cpp
   - data_structure/wavelet_matrix.aoj2674.test.cpp
   - data_structure/sparse_table.yukicoder-1036.test.cpp
   - data_structure/segment_tree_beats.DSL_2_G.test.cpp
