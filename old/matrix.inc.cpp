@@ -1,30 +1,4 @@
 template <typename T>
-vector<vector<T> > operator * (vector<vector<T> > const & a, vector<vector<T> > const & b) {
-    int n = a.size();
-    vector<vector<T> > c = vectors(n, n, T());
-    REP (y, n) REP (z, n) REP (x, n) c[y][x] += a[y][z] * b[z][x];
-    return c;
-}
-template <typename T>
-vector<T> operator * (vector<vector<T> > const & a, vector<T> const & b) {
-    int n = a.size();
-    vector<T> c(n);
-    REP (y, n) REP (z, n) c[y] += a[y][z] * b[z];
-    return c;
-}
-template <typename T>
-vector<vector<T> > unit_matrix(int n) {
-    vector<vector<T> > e = vectors(n, n, T());
-    REP (i, n) e[i][i] = 1;
-    return e;
-}
-template <typename T>
-vector<vector<T> > zero_matrix(int n) {
-    vector<vector<T> > o = vectors(n, n, T());
-    return o;
-}
-
-template <typename T>
 T determinant(vector<vector<T> > a) {
     int n = a.size();
     REP (z, n) { // make A upper trianglar
@@ -111,17 +85,6 @@ unittest {
     assert (abs(g[0][1]    ) < eps);
     assert (abs(g[1][0]    ) < eps);
     assert (abs(g[1][1] - 1) < eps);
-}
-
-template <typename T>
-vector<vector<T> > powmat(vector<vector<T> > x, ll y) {
-    int n = x.size();
-    auto z = unit_matrix<T>(n);
-    for (ll i = 1; i <= y; i <<= 1) {
-        if (y & i) z = z * x;
-        x = x * x;
-    }
-    return z;
 }
 
 template <typename T>

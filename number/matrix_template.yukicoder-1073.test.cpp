@@ -23,7 +23,7 @@ mint<MOD> solve(int64_t n) {
         0,
         1,
     }};
-    return (powmat(f, n) * x)[5];
+    return (matpow(f, n) * x)[5];
 }
 
 int main() {

@@ -46,7 +46,7 @@ matrix<T, N, N> unit_matrix() {
 }
 
 template <typename T, size_t N>
-matrix<T, N, N> powmat(matrix<T, N, N> x, int64_t k) {
+matrix<T, N, N> matpow(matrix<T, N, N> x, int64_t k) {
     matrix<T, N, N> y = unit_matrix<T, N>();
     for (; k; k >>= 1) {
         if (k & 1) y = y * x;
