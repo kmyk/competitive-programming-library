@@ -1,32 +1,51 @@
 #pragma once
+#include <cassert>
 #include <vector>
+#include "utils/macros.hpp"
 
 /**
- * @brief binary indexed tree
+ * @brief Binary Indexed Tree
  */
-template <typename Monoid>
+template <typename CommutativeMonoid>
 struct binary_indexed_tree {
-    typedef typename Monoid::value_type value_type;
+    typedef typename CommutativeMonoid::value_type value_type;
+    CommutativeMonoid mon;
     std::vector<value_type> data;
-    Monoid mon;
-    binary_indexed_tree(size_t n, Monoid const & a_mon = Monoid())
-            : mon(a_mon) {
-        data.resize(n, mon.unit());
+    binary_indexed_tree(int n, CommutativeMonoid const & mon_ = CommutativeMonoid())
+            : mon(mon_),
+              data(n, mon.unit()) {
+    }
+    template <class InputIterator>
+    binary_indexed_tree(InputIterator first, InputIterator last, CommutativeMonoid const & mon_ = CommutativeMonoid())
+            : mon(mon_),
+              data(first, last) {
+        REP3 (j, 1, data.size() + 1) {
+            int k = j + (j & -j);
+            if (k - 1 < static_cast<int>(data.size())) {
+                data[k - 1] = mon.mult(data[k - 1], data[j - 1]);
+            }
+        }
     }
     /**
-     * @note a_i \gets z
+     * @note $a_i \gets a_i + z$
+     * @note $O(\log N)$
      */
-    void point_mult(size_t i, value_type z) {
-        for (size_t j = i + 1; j <= data.size(); j += j & -j) {
+    void point_mult(int i, value_type z) {
+        assert (0 <= i and i < static_cast<int>(data.size()));
+        for (int j = i + 1; j <= static_cast<int>(data.size()); j += j & -j) {
             data[j - 1] = mon.mult(data[j - 1], z);
         }
     }
     /**
-     * @note \sum _ {j \lt i} a_j
+     * @note $\sum _ {i \lt r} a_i$
+     * @note $O(\log N)$
      */
-    value_type initial_range_get(size_t i) {
+    value_type initial_range_get(int r) {
+        assert (0 <= r and r <= static_cast<int>(data.size()));
         value_type acc = mon.unit();
-        for (size_t j = i; 0 < j; j -= j & -j) acc = mon.mult(data[j - 1], acc);
+        for (int i = r; 0 < i; i -= i & -i) {
+            acc = mon.mult(data[i - 1], acc);
+        }
         return acc;
     }
 };
