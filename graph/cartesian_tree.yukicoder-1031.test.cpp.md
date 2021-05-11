@@ -16,7 +16,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/left_to_right_maxima.hpp
     title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

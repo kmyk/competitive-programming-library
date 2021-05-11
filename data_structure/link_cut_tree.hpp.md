@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/reversible.hpp
     title: monoids/reversible.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -349,11 +349,11 @@ data:
   timestamp: '2020-02-27 11:49:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
   - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
   - data_structure/link_cut_tree.marked_ancestor.test.cpp
   - data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
 documentation_of: data_structure/link_cut_tree.hpp
 layout: document
 redirect_from:

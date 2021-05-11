@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/matrix_template.hpp
     title: number/matrix_template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
@@ -36,7 +36,7 @@ data:
     \ H, size_t W>\nmatrix<T, H, W> zero_matrix() {\n    return {};\n}\n\ntemplate\
     \ <typename T, size_t N>\nmatrix<T, N, N> unit_matrix() {\n    matrix<T, N, N>\
     \ a = {};\n    REP (i, N) a[i][i] = 1;\n    return a;\n}\n\ntemplate <typename\
-    \ T, size_t N>\nmatrix<T, N, N> powmat(matrix<T, N, N> x, int64_t k) {\n    matrix<T,\
+    \ T, size_t N>\nmatrix<T, N, N> matpow(matrix<T, N, N> x, int64_t k) {\n    matrix<T,\
     \ N, N> y = unit_matrix<T, N>();\n    for (; k; k >>= 1) {\n        if (k & 1)\
     \ y = y * x;\n        x = x * x;\n    }\n    return y;\n}\n#line 3 \"monoids/matrix_template.hpp\"\
     \n\ntemplate <class T, int N>\nstruct matrix_monoid {\n    typedef matrix<T, N,\
@@ -54,7 +54,7 @@ data:
   isVerificationFile: false
   path: monoids/matrix_template.hpp
   requiredBy: []
-  timestamp: '2019-12-20 06:12:24+09:00'
+  timestamp: '2021-04-24 22:00:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: monoids/matrix_template.hpp

@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/trivial.hpp
     title: monoids/trivial.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

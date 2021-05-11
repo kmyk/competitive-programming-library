@@ -10,24 +10,20 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://yukicoder.me/problems/no/1140
-    links:
-    - https://yukicoder.me/problems/no/1140
-  bundledCode: "#line 1 \"number/primes.yukicoder-1140.test.cpp\"\n#define PROBLEM\
-    \ \"https://yukicoder.me/problems/no/1140\"\n#include <cstdio>\n#line 2 \"utils/macros.hpp\"\
-    \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
-    \ n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i\
-    \ = (int)(n) - 1; (i) >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n)\
-    \ - 1; (i) >= (int)(m); -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line\
-    \ 2 \"number/primes.hpp\"\n#include <algorithm>\n#include <cassert>\n#include\
-    \ <cstdint>\n#include <vector>\n#line 7 \"number/primes.hpp\"\n\nstruct prepared_primes\
-    \ {\n    int size;\n    std::vector<int> sieve;\n    std::vector<int> primes;\n\
-    \n    /**\n     * @note O(size)\n     */\n    prepared_primes(int size_)\n   \
-    \     : size(size_) {\n\n        sieve.resize(size);\n        REP3 (p, 2, size)\
+    links: []
+  bundledCode: "#line 2 \"number/primes_extra.hpp\"\n#include <cstdint>\n#include\
+    \ <map>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i, n) for\
+    \ (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i = (m);\
+    \ (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i = (int)(n) - 1; (i)\
+    \ >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i) >= (int)(m);\
+    \ -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line 2 \"number/primes.hpp\"\
+    \n#include <algorithm>\n#include <cassert>\n#line 7 \"number/primes.hpp\"\n\n\
+    struct prepared_primes {\n    int size;\n    std::vector<int> sieve;\n    std::vector<int>\
+    \ primes;\n\n    /**\n     * @note O(size)\n     */\n    prepared_primes(int size_)\n\
+    \        : size(size_) {\n\n        sieve.resize(size);\n        REP3 (p, 2, size)\
     \ if (sieve[p] == 0) {\n            primes.push_back(p);\n            for (int\
     \ k = p; k < size; k += p) {\n                if (sieve[k] == 0) {\n         \
     \           sieve[k] = p;\n                }\n            }\n        }\n    }\n\
@@ -55,32 +51,36 @@ data:
     \ sieve[n] == n;\n        }\n        for (int p : primes) {\n            if (n\
     \ < (int64_t)p * p) {\n                break;\n            }\n            if (n\
     \ % p == 0) {\n                return false;\n            }\n        }\n     \
-    \   return true;\n    }\n};\n#line 5 \"number/primes.yukicoder-1140.test.cpp\"\
-    \n\nprepared_primes primes(1e6 + 100);\n\nint solve(long long a, int p) {\n  \
-    \  if (not primes.is_prime(p)) return -1;\n    if (a % p == 0) return 0;\n   \
-    \ return 1;\n}\n\nint main() {\n    int t; scanf(\"%d\", &t);\n    while (t --)\
-    \ {\n        long long a; int p; scanf(\"%lld%d\", &a, &p);\n        auto ans\
-    \ = solve(a, p);\n        printf(\"%d\\n\", ans);\n    }\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1140\"\n#include <cstdio>\n\
-    #include \"utils/macros.hpp\"\n#include \"number/primes.hpp\"\n\nprepared_primes\
-    \ primes(1e6 + 100);\n\nint solve(long long a, int p) {\n    if (not primes.is_prime(p))\
-    \ return -1;\n    if (a % p == 0) return 0;\n    return 1;\n}\n\nint main() {\n\
-    \    int t; scanf(\"%d\", &t);\n    while (t --) {\n        long long a; int p;\
-    \ scanf(\"%lld%d\", &a, &p);\n        auto ans = solve(a, p);\n        printf(\"\
-    %d\\n\", ans);\n    }\n    return 0;\n}\n"
+    \   return true;\n    }\n};\n#line 7 \"number/primes_extra.hpp\"\n\nstd::map<int64_t,\
+    \ int> list_prime_factors_as_map(const prepared_primes& primes, int64_t n) {\n\
+    \    std::map<int64_t, int> cnt;\n    for (int64_t p : primes.list_prime_factors(n))\
+    \ {\n        ++ cnt[p];\n    }\n    return cnt;\n}\n\nint64_t euler_totient(const\
+    \ prepared_primes& primes, int64_t n) {\n    int64_t phi = 1;\n    int64_t last\
+    \ = -1;\n    for (int64_t p : primes.list_prime_factors(n)) {\n        if (last\
+    \ != p) {\n            last = p;\n            phi *= p - 1;\n        } else {\n\
+    \            phi *= p;\n        }\n    }\n    return phi;\n}\n"
+  code: "#pragma once\n#include <cstdint>\n#include <map>\n#include <vector>\n#include\
+    \ \"utils/macros.hpp\"\n#include \"number/primes.hpp\"\n\nstd::map<int64_t, int>\
+    \ list_prime_factors_as_map(const prepared_primes& primes, int64_t n) {\n    std::map<int64_t,\
+    \ int> cnt;\n    for (int64_t p : primes.list_prime_factors(n)) {\n        ++\
+    \ cnt[p];\n    }\n    return cnt;\n}\n\nint64_t euler_totient(const prepared_primes&\
+    \ primes, int64_t n) {\n    int64_t phi = 1;\n    int64_t last = -1;\n    for\
+    \ (int64_t p : primes.list_prime_factors(n)) {\n        if (last != p) {\n   \
+    \         last = p;\n            phi *= p - 1;\n        } else {\n           \
+    \ phi *= p;\n        }\n    }\n    return phi;\n}\n"
   dependsOn:
   - utils/macros.hpp
   - number/primes.hpp
-  isVerificationFile: true
-  path: number/primes.yukicoder-1140.test.cpp
+  isVerificationFile: false
+  path: number/primes_extra.hpp
   requiredBy: []
   timestamp: '2021-05-11 20:48:56+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: number/primes.yukicoder-1140.test.cpp
+documentation_of: number/primes_extra.hpp
 layout: document
 redirect_from:
-- /verify/number/primes.yukicoder-1140.test.cpp
-- /verify/number/primes.yukicoder-1140.test.cpp.html
-title: number/primes.yukicoder-1140.test.cpp
+- /library/number/primes_extra.hpp
+- /library/number/primes_extra.hpp.html
+title: number/primes_extra.hpp
 ---

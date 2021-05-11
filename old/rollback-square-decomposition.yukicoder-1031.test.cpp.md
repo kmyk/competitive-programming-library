@@ -14,7 +14,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.inc.cpp
     title: the extended Mo's algorithm
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

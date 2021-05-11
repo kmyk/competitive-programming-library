@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
@@ -51,8 +51,8 @@ data:
   path: graph/transpose_graph.hpp
   requiredBy:
   - utils/two_satisfiability.hpp
-  - graph/quotient_graph.hpp
   - graph/strongly_connected_components.hpp
+  - graph/quotient_graph.hpp
   timestamp: '2019-12-30 23:14:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

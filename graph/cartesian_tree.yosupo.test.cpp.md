@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.hpp
     title: Cartesian tree ($O(n)$)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

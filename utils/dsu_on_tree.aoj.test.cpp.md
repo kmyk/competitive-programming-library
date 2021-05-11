@@ -18,7 +18,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

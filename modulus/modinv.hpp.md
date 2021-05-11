@@ -22,7 +22,7 @@ data:
   - icon: ':warning:'
     path: modulus/garner.hpp
     title: Garner's algorithm
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
   - icon: ':heavy_check_mark:'
@@ -159,11 +159,14 @@ data:
     path: number/fast_fourier_transformation.yukicoder-856.test.cpp
     title: number/fast_fourier_transformation.yukicoder-856.test.cpp
   - icon: ':heavy_check_mark:'
+    path: number/matrix.yukicoder-1073.test.cpp
+    title: number/matrix.yukicoder-1073.test.cpp
+  - icon: ':x:'
     path: number/matrix_template.yukicoder-1073.test.cpp
     title: number/matrix_template.yukicoder-1073.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"modulus/modinv.hpp\"\n#include <algorithm>\n#include <cassert>\n\
@@ -190,59 +193,60 @@ data:
   isVerificationFile: false
   path: modulus/modinv.hpp
   requiredBy:
-  - modulus/number_theoretic_transformation_with_garner.hpp
-  - modulus/number_theoretic_transformation.hpp
-  - modulus/mint.hpp
-  - modulus/choose_simple.hpp
-  - modulus/multichoose.hpp
-  - modulus/formal_power_series.hpp
-  - modulus/garner.hpp
-  - modulus/choose.hpp
-  - modulus/partition_number.hpp
-  - modulus/twelvefold_way.hpp
-  - modulus/permute.hpp
-  - modulus/modlog.hpp
-  - modulus/multichoose_simple.hpp
-  - modulus/mint_with_zero.hpp
-  - modulus/stirling_number_of_the_second_kind_table.hpp
   - modulus/stirling_number_of_the_second_kind_direct.hpp
-  - modulus/stirling_number_of_the_second_kind_convolution.hpp
-  - modulus/factorial.hpp
+  - modulus/mint.hpp
+  - modulus/mint_with_zero.hpp
+  - modulus/permute.hpp
+  - modulus/multichoose_simple.hpp
+  - modulus/twelvefold_way.hpp
+  - modulus/multichoose.hpp
+  - modulus/garner.hpp
   - modulus/bell_number.hpp
+  - modulus/modlog.hpp
+  - modulus/number_theoretic_transformation.hpp
+  - modulus/choose.hpp
+  - modulus/formal_power_series.hpp
+  - modulus/factorial.hpp
+  - modulus/choose_simple.hpp
+  - modulus/number_theoretic_transformation_with_garner.hpp
+  - modulus/stirling_number_of_the_second_kind_table.hpp
+  - modulus/partition_number.hpp
+  - modulus/stirling_number_of_the_second_kind_convolution.hpp
   timestamp: '2020-06-16 07:51:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - modulus/choose.yukicoder-1035.test.cpp
-  - modulus/modlog.yuki1255.test.cpp
-  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - modulus/formal_power_series.inv.test.cpp
-  - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - modulus/number_theoretic_transformation.yosupo.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - modulus/mint_with_zero.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - modulus/formal_power_series.yukicoder-1145.test.cpp
-  - modulus/formal_power_series.log.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - modulus/formal_power_series.exp.test.cpp
-  - modulus/modlog.yosupo.test.cpp
-  - number/matrix_template.yukicoder-1073.test.cpp
   - number/fast_fourier_transformation.yukicoder-856.test.cpp
-  - data_structure/segment_tree.point_set_range_composite.test.cpp
+  - number/matrix_template.yukicoder-1073.test.cpp
+  - number/matrix.yukicoder-1073.test.cpp
+  - graph/tree_decomposition.aoj_2405.test.cpp
   - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-  - data_structure/sliding_window_aggregation.yosupo.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  - data_structure/sliding_window_aggregation.yosupo.test.cpp
   - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
-  - graph/tree_decomposition.aoj_2405.test.cpp
+  - data_structure/segment_tree.point_set_range_composite.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+  - modulus/formal_power_series.inv.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+  - modulus/number_theoretic_transformation.yosupo.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - modulus/mint_with_zero.test.cpp
+  - modulus/formal_power_series.exp.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+  - modulus/choose.yukicoder-1035.test.cpp
+  - modulus/formal_power_series.log.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+  - modulus/modlog.yuki1255.test.cpp
+  - modulus/formal_power_series.yukicoder-1145.test.cpp
+  - modulus/modlog.yosupo.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+  - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 documentation_of: modulus/modinv.hpp
 layout: document
 redirect_from:

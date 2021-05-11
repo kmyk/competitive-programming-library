@@ -51,12 +51,12 @@ data:
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data_structure/segment_tree.point_set_range_composite.test.cpp
   - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-  - data_structure/sliding_window_aggregation.yosupo.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  - data_structure/sliding_window_aggregation.yosupo.test.cpp
   - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+  - data_structure/segment_tree.point_set_range_composite.test.cpp
 documentation_of: monoids/linear_function.hpp
 layout: document
 redirect_from:

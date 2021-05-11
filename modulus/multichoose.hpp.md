@@ -8,13 +8,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
   _extendedRequiredBy:
@@ -145,17 +145,17 @@ data:
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
 documentation_of: modulus/multichoose.hpp
 layout: document
 redirect_from:

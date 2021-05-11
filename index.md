@@ -181,21 +181,21 @@ data:
     - icon: ':warning:'
       path: modulus/garner.hpp
       title: Garner's algorithm
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: modulus/mint.hpp
       title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
     - icon: ':heavy_check_mark:'
       path: modulus/mint_with_zero.hpp
       title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
         \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: modulus/modinv.hpp
       title: modulus/modinv.hpp
     - icon: ':heavy_check_mark:'
       path: modulus/modlog.hpp
       title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
         sqrt{m})$)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: modulus/modpow.hpp
       title: modulus/modpow.hpp
     - icon: ':heavy_check_mark:'
@@ -325,6 +325,9 @@ data:
       path: number/lagrange_interpolation.hpp
       title: Lagrange interpolation
     - icon: ':heavy_check_mark:'
+      path: number/matrix.hpp
+      title: number/matrix.hpp
+    - icon: ':x:'
       path: number/matrix_template.hpp
       title: number/matrix_template.hpp
     - icon: ':warning:'
@@ -333,6 +336,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number/primes.hpp
       title: number/primes.hpp
+    - icon: ':warning:'
+      path: number/primes_extra.hpp
+      title: number/primes_extra.hpp
   - name: old
     pages:
     - icon: ':warning:'
@@ -604,7 +610,7 @@ data:
       path: utils/left_to_right_maxima.hpp
       title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ +\
         \ $O(1)$)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utils/macros.hpp
       title: utils/macros.hpp
     - icon: ':warning:'
@@ -835,6 +841,9 @@ data:
       path: number/fast_fourier_transformation.yukicoder-856.test.cpp
       title: number/fast_fourier_transformation.yukicoder-856.test.cpp
     - icon: ':heavy_check_mark:'
+      path: number/matrix.yukicoder-1073.test.cpp
+      title: number/matrix.yukicoder-1073.test.cpp
+    - icon: ':x:'
       path: number/matrix_template.yukicoder-1073.test.cpp
       title: number/matrix_template.yukicoder-1073.test.cpp
     - icon: ':heavy_check_mark:'

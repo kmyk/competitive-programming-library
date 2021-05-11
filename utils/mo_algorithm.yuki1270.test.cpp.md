@@ -18,7 +18,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: monoids/plus_min_action.hpp
     title: monoids/plus_min_action.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   - icon: ':heavy_check_mark:'
