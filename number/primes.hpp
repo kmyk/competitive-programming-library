@@ -2,18 +2,17 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
-#include <map>
 #include <vector>
 #include "utils/macros.hpp"
 
-/**
- * @note O(\sqrt{n})
- */
 struct prepared_primes {
     int size;
     std::vector<int> sieve;
     std::vector<int> primes;
 
+    /**
+     * @note O(size)
+     */
     prepared_primes(int size_)
         : size(size_) {
 
@@ -28,7 +27,10 @@ struct prepared_primes {
         }
     }
 
-    std::vector<int64_t> list_prime_factors(int64_t n) {
+    /**
+     * @note let k be the length of the result, O(k) if n < size; O(\sqrt{n} + k) if size <= n < size^2
+     */
+    std::vector<int64_t> list_prime_factors(int64_t n) const {
         assert (1 <= n and n < (int64_t)size * size);
         std::vector<int64_t> result;
 
@@ -59,26 +61,7 @@ struct prepared_primes {
         return result;
     }
 
-    /**
-     * @note O(1) if n < size; O(sqrt n) if size <= n < size^2
-     */
-    bool is_prime(int64_t n) {
-        assert (1 <= n and n < (int64_t)size * size);
-        if (n < size) {
-            return sieve[n] == n;
-        }
-        for (int p : primes) {
-            if (n < (int64_t)p * p) {
-                break;
-            }
-            if (n % p == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    std::vector<int64_t> list_all_factors(int64_t n) {
+    std::vector<int64_t> list_all_factors(int64_t n) const {
         auto p = list_prime_factors(n);
         std::vector<int64_t> d;
         d.push_back(1);
@@ -96,25 +79,22 @@ struct prepared_primes {
         return d;
     }
 
-    std::map<int64_t, int> list_prime_factors_as_map(int64_t n) {
-        std::map<int64_t, int> cnt;
-        for (int64_t p : list_prime_factors(n)) {
-            ++ cnt[p];
+    /**
+     * @note O(1) if n < size; O(sqrt n) if size <= n < size^2
+     */
+    bool is_prime(int64_t n) const {
+        assert (1 <= n and n < (int64_t)size * size);
+        if (n < size) {
+            return sieve[n] == n;
         }
-        return cnt;
-    }
-
-    int64_t euler_totient(int64_t n) {
-        int64_t phi = 1;
-        int64_t last = -1;
-        for (int64_t p : list_prime_factors(n)) {
-            if (last != p) {
-                last = p;
-                phi *= p - 1;
-            } else {
-                phi *= p;
+        for (int p : primes) {
+            if (n < (int64_t)p * p) {
+                break;
+            }
+            if (n % p == 0) {
+                return false;
             }
         }
-        return phi;
+        return true;
     }
 };
