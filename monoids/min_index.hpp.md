@@ -6,6 +6,9 @@ data:
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+  - icon: ':warning:'
+    path: graph/virtual_trees.hpp
+    title: "\u865A\u6A39 / virtual trees"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.aoj.test.cpp
@@ -35,11 +38,12 @@ data:
   path: monoids/min_index.hpp
   requiredBy:
   - graph/lowest_common_ancestor.hpp
+  - graph/virtual_trees.hpp
   timestamp: '2019-12-30 22:14:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/lowest_common_ancestor.yosupo.test.cpp
   - graph/lowest_common_ancestor.aoj.test.cpp
+  - graph/lowest_common_ancestor.yosupo.test.cpp
 documentation_of: monoids/min_index.hpp
 layout: document
 redirect_from:

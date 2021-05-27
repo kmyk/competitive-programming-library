@@ -5,6 +5,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.hpp
     title: Euler Tour (subtree queries, with commutative monoids)
+  - icon: ':warning:'
+    path: graph/virtual_trees.hpp
+    title: "\u865A\u6A39 / virtual trees"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
@@ -38,6 +41,7 @@ data:
   path: graph/euler_tour_preorder.hpp
   requiredBy:
   - data_structure/euler_tour_subtree_query.hpp
+  - graph/virtual_trees.hpp
   timestamp: '2020-02-26 19:51:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

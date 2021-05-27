@@ -141,6 +141,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree_decomposition.hpp
       title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
+    - icon: ':warning:'
+      path: graph/virtual_trees.hpp
+      title: "\u865A\u6A39 / virtual trees"
     - icon: ':heavy_check_mark:'
       path: graph/yen_algorithm.hpp
       title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log

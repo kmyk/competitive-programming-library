@@ -10,7 +10,10 @@ data:
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: graph/virtual_trees.hpp
+    title: "\u865A\u6A39 / virtual trees"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.aoj.test.cpp
@@ -114,12 +117,13 @@ data:
   - monoids/min_index.hpp
   isVerificationFile: false
   path: graph/lowest_common_ancestor.hpp
-  requiredBy: []
+  requiredBy:
+  - graph/virtual_trees.hpp
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/lowest_common_ancestor.yosupo.test.cpp
   - graph/lowest_common_ancestor.aoj.test.cpp
+  - graph/lowest_common_ancestor.yosupo.test.cpp
 documentation_of: graph/lowest_common_ancestor.hpp
 layout: document
 redirect_from:

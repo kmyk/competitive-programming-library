@@ -53,9 +53,9 @@ data:
   verifiedWith:
   - string/longest_common_prefix.yosupo.test.cpp
   - utils/mo_algorithm.yuki1270.test.cpp
-  - graph/cartesian_tree.yukicoder-1031.test.cpp
-  - data_structure/sparse_table.yosupo.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - data_structure/sparse_table.yosupo.test.cpp
+  - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: monoids/min.hpp
 layout: document
 redirect_from:

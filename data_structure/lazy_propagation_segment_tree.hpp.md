@@ -155,8 +155,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - utils/mo_algorithm.yuki1270.test.cpp
-  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
 documentation_of: data_structure/lazy_propagation_segment_tree.hpp
 layout: document
 redirect_from:

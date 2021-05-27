@@ -94,8 +94,8 @@ data:
   timestamp: '2020-06-16 07:51:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/modlog.yuki1255.test.cpp
   - modulus/modlog.yosupo.test.cpp
+  - modulus/modlog.yuki1255.test.cpp
 documentation_of: modulus/modlog.hpp
 layout: document
 redirect_from:

@@ -98,8 +98,8 @@ data:
   isVerificationFile: false
   path: number/primes.hpp
   requiredBy:
-  - number/primes_extra.hpp
   - utils/fast_zeta_transform.hpp
+  - number/primes_extra.hpp
   timestamp: '2021-05-11 20:48:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

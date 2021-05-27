@@ -9,6 +9,9 @@ data:
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
+  - icon: ':warning:'
+    path: graph/virtual_trees.hpp
+    title: "\u865A\u6A39 / virtual trees"
   - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.hpp
     title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
@@ -95,16 +98,17 @@ data:
   - string/longest_common_prefix.hpp
   - utils/left_to_right_maxima.hpp
   - graph/lowest_common_ancestor.hpp
+  - graph/virtual_trees.hpp
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - string/longest_common_prefix.yosupo.test.cpp
-  - graph/lowest_common_ancestor.yosupo.test.cpp
-  - graph/lowest_common_ancestor.aoj.test.cpp
-  - graph/cartesian_tree.yukicoder-1031.test.cpp
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - data_structure/sparse_table.yosupo.test.cpp
   - data_structure/sparse_table.yukicoder-1036.test.cpp
+  - data_structure/sparse_table.yosupo.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
+  - graph/lowest_common_ancestor.yosupo.test.cpp
+  - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: data_structure/sparse_table.hpp
 layout: document
 redirect_from:
