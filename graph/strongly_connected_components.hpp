@@ -14,7 +14,7 @@
  */
 std::pair<int, std::vector<int> > decompose_to_strongly_connected_components(const std::vector<std::vector<int> > & g, const std::vector<std::vector<int> > & g_rev) {
     int n = g.size();
-    std::vector<int> acc(n); {
+    std::vector<int> acc; {
         std::vector<bool> used(n);
         std::function<void (int)> dfs = [&](int i) {
             used[i] = true;
