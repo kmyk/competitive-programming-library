@@ -40,8 +40,8 @@ data:
   isVerificationFile: false
   path: graph/euler_tour_preorder.hpp
   requiredBy:
-  - data_structure/euler_tour_subtree_query.hpp
   - graph/virtual_trees.hpp
+  - data_structure/euler_tour_subtree_query.hpp
   timestamp: '2020-02-26 19:51:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

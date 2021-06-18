@@ -210,8 +210,8 @@ data:
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 documentation_of: modulus/number_theoretic_transformation_with_garner.hpp
 layout: document
 redirect_from:

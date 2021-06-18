@@ -103,8 +103,8 @@ data:
   timestamp: '2021-05-11 20:48:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - number/primes.yukicoder-1140.test.cpp
   - number/primes.aoj.test.cpp
+  - number/primes.yukicoder-1140.test.cpp
 documentation_of: number/primes.hpp
 layout: document
 redirect_from:

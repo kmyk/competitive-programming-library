@@ -46,7 +46,7 @@ data:
     \ is an adjacent list of a digraph\n * @param g_rev is the transpose graph of\
     \ g\n * @note $O(V + E)$\n */\nstd::pair<int, std::vector<int> > decompose_to_strongly_connected_components(const\
     \ std::vector<std::vector<int> > & g, const std::vector<std::vector<int> > & g_rev)\
-    \ {\n    int n = g.size();\n    std::vector<int> acc(n); {\n        std::vector<bool>\
+    \ {\n    int n = g.size();\n    std::vector<int> acc; {\n        std::vector<bool>\
     \ used(n);\n        std::function<void (int)> dfs = [&](int i) {\n           \
     \ used[i] = true;\n            for (int j : g[i]) if (not used[j]) dfs(j);\n \
     \           acc.push_back(i);\n        };\n        REP (i,n) if (not used[i])\
@@ -116,7 +116,7 @@ data:
   isVerificationFile: true
   path: graph/strongly_connected_components.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-02-22 23:03:03+09:00'
+  timestamp: '2021-06-19 02:41:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/strongly_connected_components.yosupo.test.cpp

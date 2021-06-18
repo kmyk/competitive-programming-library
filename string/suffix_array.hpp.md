@@ -67,8 +67,8 @@ data:
   timestamp: '2020-03-04 13:12:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - string/longest_common_prefix.yosupo.test.cpp
   - string/suffix_array.yosupo.test.cpp
+  - string/longest_common_prefix.yosupo.test.cpp
 documentation_of: string/suffix_array.hpp
 layout: document
 redirect_from:

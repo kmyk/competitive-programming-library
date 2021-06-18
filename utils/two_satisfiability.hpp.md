@@ -41,7 +41,7 @@ data:
     \ is an adjacent list of a digraph\n * @param g_rev is the transpose graph of\
     \ g\n * @note $O(V + E)$\n */\nstd::pair<int, std::vector<int> > decompose_to_strongly_connected_components(const\
     \ std::vector<std::vector<int> > & g, const std::vector<std::vector<int> > & g_rev)\
-    \ {\n    int n = g.size();\n    std::vector<int> acc(n); {\n        std::vector<bool>\
+    \ {\n    int n = g.size();\n    std::vector<int> acc; {\n        std::vector<bool>\
     \ used(n);\n        std::function<void (int)> dfs = [&](int i) {\n           \
     \ used[i] = true;\n            for (int j : g[i]) if (not used[j]) dfs(j);\n \
     \           acc.push_back(i);\n        };\n        REP (i,n) if (not used[i])\
@@ -94,7 +94,7 @@ data:
   isVerificationFile: false
   path: utils/two_satisfiability.hpp
   requiredBy: []
-  timestamp: '2020-06-12 22:07:41+09:00'
+  timestamp: '2021-06-19 02:41:52+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - utils/two_satisfiability.yosupo.test.cpp
