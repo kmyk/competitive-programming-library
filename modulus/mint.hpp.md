@@ -154,7 +154,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/matrix.yukicoder-1073.test.cpp
     title: number/matrix.yukicoder-1073.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/matrix_template.yukicoder-1073.test.cpp
     title: number/matrix_template.yukicoder-1073.test.cpp
   - icon: ':heavy_check_mark:'

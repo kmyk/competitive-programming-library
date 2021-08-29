@@ -10,7 +10,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/matrix_template.hpp
     title: number/matrix_template.hpp
   - icon: ':question:'
@@ -18,9 +18,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1073
@@ -33,59 +33,60 @@ data:
     \ (int i = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i = (int)(n)\
     \ - 1; (i) >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i)\
     \ >= (int)(m); -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line 5 \"\
-    number/matrix_template.hpp\"\n\ntemplate <typename T, int H, int W>\nusing matrix\
-    \ = std::array<std::array<T, W>, H>;\n\ntemplate <typename T, int A, int B, int\
-    \ C>\nmatrix<T, A, C> operator * (matrix<T, A, B> const & a, matrix<T, B, C> const\
-    \ & b) {\n    matrix<T, A, C> c = {};\n    REP (y, A) REP (z, B) REP (x, C) c[y][x]\
-    \ += a[y][z] * b[z][x];\n    return c;\n}\ntemplate <typename T, int H, int W>\n\
-    std::array<T, H> operator * (matrix<T, H, W> const & a, std::array<T, W> const\
-    \ & b) {\n    std::array<T, H> c = {};\n    REP (y, H) REP (z, W) c[y] += a[y][z]\
-    \ * b[z];\n    return c;\n}\n\ntemplate <typename T, int H, int W>\nmatrix<T,\
-    \ H, W> operator + (matrix<T, H, W> const & a, matrix<T, H, W> const & b) {\n\
-    \    matrix<T, H, W> c;\n    REP (y, H) REP (x, W) c[y][x] = a[y][x] + b[y][x];\n\
-    \    return c;\n}\n\ntemplate <typename T, int N>\nstd::array<T, N> operator +\
-    \ (std::array<T, N> const & a, std::array<T, N> const & b) {\n    std::array<T,\
-    \ N> c;\n    REP (i, N) c[i] = a[i] + b[i];\n    return c;\n}\n\ntemplate <typename\
-    \ T, int H, int W>\nmatrix<T, H, W> zero_matrix() {\n    return {};\n}\n\ntemplate\
-    \ <typename T, int N>\nmatrix<T, N, N> unit_matrix() {\n    matrix<T, N, N> a\
-    \ = {};\n    REP (i, N) a[i][i] = 1;\n    return a;\n}\n\ntemplate <typename T,\
-    \ int N>\nmatrix<T, N, N> matpow(matrix<T, N, N> x, int64_t k) {\n    matrix<T,\
-    \ N, N> y = unit_matrix<T, N>();\n    for (; k; k >>= 1) {\n        if (k & 1)\
-    \ y = y * x;\n        x = x * x;\n    }\n    return y;\n}\n#line 3 \"modulus/mint.hpp\"\
-    \n#include <iostream>\n#line 2 \"modulus/modpow.hpp\"\n#include <cassert>\n#line\
-    \ 4 \"modulus/modpow.hpp\"\n\ninline int32_t modpow(uint_fast64_t x, uint64_t\
-    \ k, int32_t MOD) {\n    assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);\n \
-    \   uint_fast64_t y = 1;\n    for (; k; k >>= 1) {\n        if (k & 1) (y *= x)\
-    \ %= MOD;\n        (x *= x) %= MOD;\n    }\n    assert (/* 0 <= y and */ y < (uint_fast64_t)MOD);\n\
-    \    return y;\n}\n#line 2 \"modulus/modinv.hpp\"\n#include <algorithm>\n#line\
-    \ 5 \"modulus/modinv.hpp\"\n\ninline int32_t modinv_nocheck(int32_t value, int32_t\
-    \ MOD) {\n    assert (0 <= value and value < MOD);\n    if (value == 0) return\
-    \ -1;\n    int64_t a = value, b = MOD;\n    int64_t x = 0, y = 1;\n    for (int64_t\
-    \ u = 1, v = 0; a; ) {\n        int64_t q = b / a;\n        x -= q * u; std::swap(x,\
-    \ u);\n        y -= q * v; std::swap(y, v);\n        b -= q * a; std::swap(b,\
-    \ a);\n    }\n    if (not (value * x + MOD * y == b and b == 1)) return -1;\n\
-    \    if (x < 0) x += MOD;\n    assert (0 <= x and x < MOD);\n    return x;\n}\n\
-    \ninline int32_t modinv(int32_t x, int32_t MOD) {\n    int32_t y = modinv_nocheck(x,\
-    \ MOD);\n    assert (y != -1);\n    return y;\n}\n#line 6 \"modulus/mint.hpp\"\
-    \n\n/**\n * @brief quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$\n\
-    \ */\ntemplate <int32_t MOD>\nstruct mint {\n    int32_t value;\n    mint() :\
-    \ value() {}\n    mint(int64_t value_) : value(value_ < 0 ? value_ % MOD + MOD\
-    \ : value_ >= MOD ? value_ % MOD : value_) {}\n    mint(int32_t value_, std::nullptr_t)\
-    \ : value(value_) {}\n    explicit operator bool() const { return value; }\n \
-    \   inline mint<MOD> operator + (mint<MOD> other) const { return mint<MOD>(*this)\
-    \ += other; }\n    inline mint<MOD> operator - (mint<MOD> other) const { return\
-    \ mint<MOD>(*this) -= other; }\n    inline mint<MOD> operator * (mint<MOD> other)\
-    \ const { return mint<MOD>(*this) *= other; }\n    inline mint<MOD> & operator\
-    \ += (mint<MOD> other) { this->value += other.value; if (this->value >= MOD) this->value\
-    \ -= MOD; return *this; }\n    inline mint<MOD> & operator -= (mint<MOD> other)\
-    \ { this->value -= other.value; if (this->value <    0) this->value += MOD; return\
-    \ *this; }\n    inline mint<MOD> & operator *= (mint<MOD> other) { this->value\
-    \ = (uint_fast64_t)this->value * other.value % MOD; return *this; }\n    inline\
-    \ mint<MOD> operator - () const { return mint<MOD>(this->value ? MOD - this->value\
-    \ : 0, nullptr); }\n    inline bool operator == (mint<MOD> other) const { return\
-    \ value == other.value; }\n    inline bool operator != (mint<MOD> other) const\
-    \ { return value != other.value; }\n    inline mint<MOD> pow(uint64_t k) const\
-    \ { return mint<MOD>(modpow(value, k, MOD), nullptr); }\n    inline mint<MOD>\
+    number/matrix_template.hpp\"\n\ntemplate <typename T, std::size_t H, std::size_t\
+    \ W>\nusing matrix = std::array<std::array<T, W>, H>;\n\ntemplate <typename T,\
+    \ std::size_t A, std::size_t B, std::size_t C>\nmatrix<T, A, C> operator * (matrix<T,\
+    \ A, B> const & a, matrix<T, B, C> const & b) {\n    matrix<T, A, C> c = {};\n\
+    \    REP (y, A) REP (z, B) REP (x, C) c[y][x] += a[y][z] * b[z][x];\n    return\
+    \ c;\n}\ntemplate <typename T, std::size_t H, std::size_t W>\nstd::array<T, H>\
+    \ operator * (matrix<T, H, W> const & a, std::array<T, W> const & b) {\n    std::array<T,\
+    \ H> c = {};\n    REP (y, H) REP (z, W) c[y] += a[y][z] * b[z];\n    return c;\n\
+    }\n\ntemplate <typename T, std::size_t H, std::size_t W>\nmatrix<T, H, W> operator\
+    \ + (matrix<T, H, W> const & a, matrix<T, H, W> const & b) {\n    matrix<T, H,\
+    \ W> c;\n    REP (y, H) REP (x, W) c[y][x] = a[y][x] + b[y][x];\n    return c;\n\
+    }\n\ntemplate <typename T, std::size_t N>\nstd::array<T, N> operator + (std::array<T,\
+    \ N> const & a, std::array<T, N> const & b) {\n    std::array<T, N> c;\n    REP\
+    \ (i, N) c[i] = a[i] + b[i];\n    return c;\n}\n\ntemplate <typename T, std::size_t\
+    \ H, std::size_t W>\nmatrix<T, H, W> zero_matrix() {\n    return {};\n}\n\ntemplate\
+    \ <typename T, std::size_t N>\nmatrix<T, N, N> unit_matrix() {\n    matrix<T,\
+    \ N, N> a = {};\n    REP (i, N) a[i][i] = 1;\n    return a;\n}\n\ntemplate <typename\
+    \ T, std::size_t N>\nmatrix<T, N, N> matpow(matrix<T, N, N> x, int64_t k) {\n\
+    \    matrix<T, N, N> y = unit_matrix<T, N>();\n    for (; k; k >>= 1) {\n    \
+    \    if (k & 1) y = y * x;\n        x = x * x;\n    }\n    return y;\n}\n#line\
+    \ 3 \"modulus/mint.hpp\"\n#include <iostream>\n#line 2 \"modulus/modpow.hpp\"\n\
+    #include <cassert>\n#line 4 \"modulus/modpow.hpp\"\n\ninline int32_t modpow(uint_fast64_t\
+    \ x, uint64_t k, int32_t MOD) {\n    assert (/* 0 <= x and */ x < (uint_fast64_t)MOD);\n\
+    \    uint_fast64_t y = 1;\n    for (; k; k >>= 1) {\n        if (k & 1) (y *=\
+    \ x) %= MOD;\n        (x *= x) %= MOD;\n    }\n    assert (/* 0 <= y and */ y\
+    \ < (uint_fast64_t)MOD);\n    return y;\n}\n#line 2 \"modulus/modinv.hpp\"\n#include\
+    \ <algorithm>\n#line 5 \"modulus/modinv.hpp\"\n\ninline int32_t modinv_nocheck(int32_t\
+    \ value, int32_t MOD) {\n    assert (0 <= value and value < MOD);\n    if (value\
+    \ == 0) return -1;\n    int64_t a = value, b = MOD;\n    int64_t x = 0, y = 1;\n\
+    \    for (int64_t u = 1, v = 0; a; ) {\n        int64_t q = b / a;\n        x\
+    \ -= q * u; std::swap(x, u);\n        y -= q * v; std::swap(y, v);\n        b\
+    \ -= q * a; std::swap(b, a);\n    }\n    if (not (value * x + MOD * y == b and\
+    \ b == 1)) return -1;\n    if (x < 0) x += MOD;\n    assert (0 <= x and x < MOD);\n\
+    \    return x;\n}\n\ninline int32_t modinv(int32_t x, int32_t MOD) {\n    int32_t\
+    \ y = modinv_nocheck(x, MOD);\n    assert (y != -1);\n    return y;\n}\n#line\
+    \ 6 \"modulus/mint.hpp\"\n\n/**\n * @brief quotient ring / \u5270\u4F59\u74B0\
+    \ $\\mathbb{Z}/n\\mathbb{Z}$\n */\ntemplate <int32_t MOD>\nstruct mint {\n   \
+    \ int32_t value;\n    mint() : value() {}\n    mint(int64_t value_) : value(value_\
+    \ < 0 ? value_ % MOD + MOD : value_ >= MOD ? value_ % MOD : value_) {}\n    mint(int32_t\
+    \ value_, std::nullptr_t) : value(value_) {}\n    explicit operator bool() const\
+    \ { return value; }\n    inline mint<MOD> operator + (mint<MOD> other) const {\
+    \ return mint<MOD>(*this) += other; }\n    inline mint<MOD> operator - (mint<MOD>\
+    \ other) const { return mint<MOD>(*this) -= other; }\n    inline mint<MOD> operator\
+    \ * (mint<MOD> other) const { return mint<MOD>(*this) *= other; }\n    inline\
+    \ mint<MOD> & operator += (mint<MOD> other) { this->value += other.value; if (this->value\
+    \ >= MOD) this->value -= MOD; return *this; }\n    inline mint<MOD> & operator\
+    \ -= (mint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value\
+    \ += MOD; return *this; }\n    inline mint<MOD> & operator *= (mint<MOD> other)\
+    \ { this->value = (uint_fast64_t)this->value * other.value % MOD; return *this;\
+    \ }\n    inline mint<MOD> operator - () const { return mint<MOD>(this->value ?\
+    \ MOD - this->value : 0, nullptr); }\n    inline bool operator == (mint<MOD> other)\
+    \ const { return value == other.value; }\n    inline bool operator != (mint<MOD>\
+    \ other) const { return value != other.value; }\n    inline mint<MOD> pow(uint64_t\
+    \ k) const { return mint<MOD>(modpow(value, k, MOD), nullptr); }\n    inline mint<MOD>\
     \ inv() const { return mint<MOD>(modinv(value, MOD), nullptr); }\n    inline mint<MOD>\
     \ operator / (mint<MOD> other) const { return *this * other.inv(); }\n    inline\
     \ mint<MOD> & operator /= (mint<MOD> other) { return *this *= other.inv(); }\n\
@@ -127,8 +128,8 @@ data:
   isVerificationFile: true
   path: number/matrix_template.yukicoder-1073.test.cpp
   requiredBy: []
-  timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-08-30 05:56:51+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: number/matrix_template.yukicoder-1073.test.cpp
 layout: document

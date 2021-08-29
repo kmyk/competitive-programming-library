@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/li_chao_tree.hpp
     title: Li-Chao tree
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/segment_add_get_min
@@ -20,7 +20,7 @@ data:
   bundledCode: "#line 1 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\n#line\
     \ 2 \"data_structure/li_chao_tree.hpp\"\n#include <algorithm>\n#include <cassert>\n\
-    #include <climits>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
+    #include <cstdint>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
     \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
     \ n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i\
     \ = (int)(n) - 1; (i) >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n)\
@@ -81,8 +81,7 @@ data:
     \ <= l or r <= il) {\n            // nop\n        } else {\n            add_segment_compressed(2\
     \ * i + 1, il, (il + ir) / 2, l, r, a, b);\n            add_segment_compressed(2\
     \ * i + 2, (il + ir) / 2, ir, l, r, a, b);\n        }\n    }\n};\n#line 4 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
-    \n#include <cstdio>\n#line 6 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
-    \n#include <tuple>\n#line 8 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
+    \n#include <cstdio>\n#include <climits>\n#include <tuple>\n#line 8 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
     \nusing namespace std;\n\nint main() {\n    // input\n    int n, q; scanf(\"%d%d\"\
     , &n, &q);\n    vector<int64_t> xs;\n    vector<tuple<int64_t, int64_t, int64_t,\
     \ int64_t> > segments;\n    REP (i, n) {\n        int64_t l, r, a, b; scanf(\"\
@@ -134,8 +133,8 @@ data:
   isVerificationFile: true
   path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2021-08-30 05:20:44+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-08-30 05:53:23+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/li_chao_tree.segment_add_get_min.test.cpp
 layout: document

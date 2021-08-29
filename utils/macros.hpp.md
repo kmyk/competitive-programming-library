@@ -18,7 +18,7 @@ data:
     path: data_structure/lazy_propagation_segment_tree.hpp
     title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
       \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/li_chao_tree.hpp
     title: Li-Chao tree
   - icon: ':heavy_check_mark:'
@@ -158,7 +158,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/matrix.hpp
     title: number/matrix.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/matrix_template.hpp
     title: number/matrix_template.hpp
   - icon: ':warning:'
@@ -219,7 +219,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
     title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
     title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   - icon: ':heavy_check_mark:'
@@ -384,7 +384,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/matrix.yukicoder-1073.test.cpp
     title: number/matrix.yukicoder-1073.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/matrix_template.yukicoder-1073.test.cpp
     title: number/matrix_template.yukicoder-1073.test.cpp
   - icon: ':heavy_check_mark:'

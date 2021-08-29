@@ -6,18 +6,18 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
     title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: data_structure/li_chao_tree.md
     document_title: Li-Chao tree
     links: []
   bundledCode: "#line 2 \"data_structure/li_chao_tree.hpp\"\n#include <algorithm>\n\
-    #include <cassert>\n#include <climits>\n#include <utility>\n#include <vector>\n\
+    #include <cassert>\n#include <cstdint>\n#include <utility>\n#include <vector>\n\
     #line 2 \"utils/macros.hpp\"\n#define REP(i, n) for (int i = 0; (i) < (int)(n);\
     \ ++ (i))\n#define REP3(i, m, n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define\
     \ REP_R(i, n) for (int i = (int)(n) - 1; (i) >= 0; -- (i))\n#define REP3R(i, m,\
@@ -78,7 +78,7 @@ data:
     \ <= l or r <= il) {\n            // nop\n        } else {\n            add_segment_compressed(2\
     \ * i + 1, il, (il + ir) / 2, l, r, a, b);\n            add_segment_compressed(2\
     \ * i + 2, (il + ir) / 2, ir, l, r, a, b);\n        }\n    }\n};\n"
-  code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <climits>\n\
+  code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n\
     #include <utility>\n#include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n\
     \ * @brief Li-Chao tree\n * @docs data_structure/li_chao_tree.md\n */\nstruct\
     \ li_chao_tree {\n    int k;\n    std::vector<std::pair<int64_t, int64_t> > f;\n\
@@ -140,8 +140,8 @@ data:
   isVerificationFile: false
   path: data_structure/li_chao_tree.hpp
   requiredBy: []
-  timestamp: '2021-08-30 04:53:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-08-30 05:53:23+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/li_chao_tree.segment_add_get_min.test.cpp
 documentation_of: data_structure/li_chao_tree.hpp
