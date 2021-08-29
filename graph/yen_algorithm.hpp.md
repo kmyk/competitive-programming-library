@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/yen_algorithm.yukicoder-1069.test.cpp
     title: graph/yen_algorithm.yukicoder-1069.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E
       + V) \log V)$)
@@ -126,7 +126,7 @@ data:
   path: graph/yen_algorithm.hpp
   requiredBy: []
   timestamp: '2020-05-30 02:50:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/yen_algorithm.yukicoder-1069.test.cpp
 documentation_of: graph/yen_algorithm.hpp

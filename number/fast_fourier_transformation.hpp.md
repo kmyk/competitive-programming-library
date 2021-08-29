@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/fast_fourier_transformation.yukicoder-856.test.cpp
     title: number/fast_fourier_transformation.yukicoder-856.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: FFT convolution
     links: []
@@ -53,7 +53,7 @@ data:
     \ (i, m) {\n        c[i] = std::is_integral<T>::value ? round(z[i].real() / n)\
     \ : z[i].real() / n;\n    }\n    return c;\n}\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cmath>\n\
-    #include <complex>\n#include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n\
+    #include <complex>\n#include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n\
     \ * @note O(N log N)\n * @note radix-2, decimation-in-frequency, Cooley-Tukey\n\
     \ * @note cache std::polar (~ 2x faster)\n */\ntemplate <typename R>\nvoid fft_inplace(std::vector<std::complex<R>\
     \ > & f, bool inverse) {\n    const int n = f.size();\n    assert (n == pow(2,\
@@ -89,8 +89,8 @@ data:
   isVerificationFile: false
   path: number/fast_fourier_transformation.hpp
   requiredBy: []
-  timestamp: '2020-08-11 20:59:07+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - number/fast_fourier_transformation.yukicoder-856.test.cpp
 documentation_of: number/fast_fourier_transformation.hpp

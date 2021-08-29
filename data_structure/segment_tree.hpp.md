@@ -21,15 +21,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.range_sum_query.test.cpp
     title: data_structure/segment_tree.range_sum_query.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: data_structure/segment_tree.md
     document_title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids,\
@@ -80,8 +80,8 @@ data:
     \   */\n    void unsafe_rebuild() {\n        REP_R (i, n - 1) {\n            a[i]\
     \ = mon.mult(a[2 * i + 1], a[2 * i + 2]);\n        }\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <vector>\n\
-    #include \"utils/macros.hpp\"\n\n/**\n * @brief Segment Tree / \u30BB\u30B0\u30E1\
-    \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)\n * @docs data_structure/segment_tree.md\n\
+    #include \"../utils/macros.hpp\"\n\n/**\n * @brief Segment Tree / \u30BB\u30B0\
+    \u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)\n * @docs data_structure/segment_tree.md\n\
     \ * @tparam Monoid (commutativity is not required)\n */\ntemplate <class Monoid>\n\
     struct segment_tree {\n    typedef typename Monoid::value_type value_type;\n \
     \   Monoid mon;\n    int n;\n    std::vector<value_type> a;\n    segment_tree()\
@@ -124,8 +124,8 @@ data:
   path: data_structure/segment_tree.hpp
   requiredBy:
   - data_structure/euler_tour_subtree_query.hpp
-  timestamp: '2020-10-23 23:22:52+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
   - data_structure/segment_tree.range_sum_query.test.cpp

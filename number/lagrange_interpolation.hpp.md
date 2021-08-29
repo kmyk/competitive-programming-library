@@ -42,7 +42,7 @@ data:
     \ n + 1) {\n            f[j] += c_i * g[j];\n        }\n        mul_monomial(g,\
     \ point.first);\n    }\n    assert (f.back() == 0);\n    f.pop_back();\n    return\
     \ f;\n}\n"
-  code: "#include <cassert>\n#include <utility>\n#include <vector>\n#include \"utils/macros.hpp\"\
+  code: "#include <cassert>\n#include <utility>\n#include <vector>\n#include \"../utils/macros.hpp\"\
     \n\n/**\n * @brief Lagrange interpolation\n * @note O(n^2)\n * @note works on\
     \ any field\n * @note the error is very big\n */\nstd::vector<long double> lagrange_interpolate(const\
     \ std::vector<std::pair<long double, long double> > & points) {\n    // given\
@@ -71,7 +71,7 @@ data:
   isVerificationFile: false
   path: number/lagrange_interpolation.hpp
   requiredBy: []
-  timestamp: '2019-12-20 06:12:24+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: number/lagrange_interpolation.hpp

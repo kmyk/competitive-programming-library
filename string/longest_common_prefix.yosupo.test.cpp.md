@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: string/longest_common_prefix.hpp
     title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
       \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: string/suffix_array.hpp
     title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
       \ & Myers)"
@@ -23,9 +23,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/zalgorithm
@@ -115,10 +115,10 @@ data:
     \    longest_common_prefix lcp(s);\n    REP (i, n) {\n        out<int>(lcp.get(0,\
     \ i));\n        out<char>(i < n - 1 ? ' ' : '\\n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/zalgorithm\"\n#include\
-    \ \"string/longest_common_prefix.hpp\"\n#include \"hack/fastio.hpp\"\n\nint main()\
-    \ {\n    std::string s = in<std::string>();\n    int n = s.length();\n    longest_common_prefix\
-    \ lcp(s);\n    REP (i, n) {\n        out<int>(lcp.get(0, i));\n        out<char>(i\
-    \ < n - 1 ? ' ' : '\\n');\n    }\n    return 0;\n}\n"
+    \ \"../string/longest_common_prefix.hpp\"\n#include \"../hack/fastio.hpp\"\n\n\
+    int main() {\n    std::string s = in<std::string>();\n    int n = s.length();\n\
+    \    longest_common_prefix lcp(s);\n    REP (i, n) {\n        out<int>(lcp.get(0,\
+    \ i));\n        out<char>(i < n - 1 ? ' ' : '\\n');\n    }\n    return 0;\n}\n"
   dependsOn:
   - string/longest_common_prefix.hpp
   - string/suffix_array.hpp
@@ -129,8 +129,8 @@ data:
   isVerificationFile: true
   path: string/longest_common_prefix.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: string/longest_common_prefix.yosupo.test.cpp
 layout: document

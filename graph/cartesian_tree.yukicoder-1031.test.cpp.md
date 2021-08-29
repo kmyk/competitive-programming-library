@@ -1,19 +1,19 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/cartesian_tree.hpp
     title: Cartesian tree ($O(n)$)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/format.hpp
     title: graph/format.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/left_to_right_maxima.hpp
     title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
   - icon: ':question:'
@@ -21,9 +21,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1031
@@ -119,9 +119,9 @@ data:
     \ + solve1(n, p);\n}\n\nint main() {\n    int n; scanf(\"%d\", &n);\n    vector<int>\
     \ p(n);\n    REP (i, n) {\n        scanf(\"%d\", &p[i]);\n    }\n    long long\
     \ ans = solve(n, p);\n    printf(\"%lld\\n\", ans);\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1031\"\n#include \"utils/macros.hpp\"\
-    \n#include \"graph/cartesian_tree.hpp\"\n#include \"graph/format.hpp\"\n#include\
-    \ \"utils/left_to_right_maxima.hpp\"\n#include <cstdio>\n#include <functional>\n\
+  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1031\"\n#include \"../utils/macros.hpp\"\
+    \n#include \"../graph/cartesian_tree.hpp\"\n#include \"../graph/format.hpp\"\n\
+    #include \"../utils/left_to_right_maxima.hpp\"\n#include <cstdio>\n#include <functional>\n\
     #include <utility>\n#include <vector>\n\n#include <iostream>\nusing namespace\
     \ std;\n\nint64_t solve1(int n, const vector<int> & p) {\n    // prepare a data\
     \ structure for the sequence\n    auto f = left_to_right_maxima::construct<int>(ALL(p));\n\
@@ -147,8 +147,8 @@ data:
   isVerificationFile: true
   path: graph/cartesian_tree.yukicoder-1031.test.cpp
   requiredBy: []
-  timestamp: '2020-07-21 05:31:24+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/cartesian_tree.yukicoder-1031.test.cpp
 layout: document

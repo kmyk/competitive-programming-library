@@ -126,10 +126,10 @@ data:
     \ a, b; tie(a, b) = swag.accumulate();\n            printf(\"%d\\n\", (a * x +\
     \ b).value);\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/queue_operate_all_composite\"\
-    \n#include \"data_structure/sliding_window_aggregation.hpp\"\n#include \"monoids/linear_function.hpp\"\
-    \n#include \"monoids/dual.hpp\"\n#include \"modulus/mint.hpp\"\n#include <cstdio>\n\
-    #include <tuple>\nusing namespace std;\n\nconstexpr int MOD = 998244353;\nint\
-    \ main() {\n    int q; scanf(\"%d\", &q);\n    sliding_window_aggregation<dual_monoid<linear_function_monoid<mint<MOD>\
+    \n#include \"../data_structure/sliding_window_aggregation.hpp\"\n#include \"../monoids/linear_function.hpp\"\
+    \n#include \"../monoids/dual.hpp\"\n#include \"../modulus/mint.hpp\"\n#include\
+    \ <cstdio>\n#include <tuple>\nusing namespace std;\n\nconstexpr int MOD = 998244353;\n\
+    int main() {\n    int q; scanf(\"%d\", &q);\n    sliding_window_aggregation<dual_monoid<linear_function_monoid<mint<MOD>\
     \ > > > swag;\n    while (q --) {\n        int t; scanf(\"%d\", &t);\n       \
     \ if (t == 0) {\n            int a, b; scanf(\"%d%d\", &a, &b);\n            swag.push(make_pair(a,\
     \ b));\n        } else if (t == 1) {\n            swag.pop();\n        } else\
@@ -147,7 +147,7 @@ data:
   isVerificationFile: true
   path: data_structure/sliding_window_aggregation.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/sliding_window_aggregation.yosupo.test.cpp

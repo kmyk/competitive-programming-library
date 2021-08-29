@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.hpp
     title: number/primes.hpp
   - icon: ':question:'
@@ -63,10 +63,10 @@ data:
     \ (x, 1, (a.size() - 1) / p + 1) {\n            a[x] = mon.mult(a[x], a[p * x]);\n\
     \        }\n    }\n    REP3 (x, 1, a.size()) {\n        a[x] = mon.mult(a[x],\
     \ a[0]);\n    }\n    return a;\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"number/primes.hpp\"\
-    \n#include \"utils/macros.hpp\"\n\n/**\n * @brief upward fast zeta transform on\
-    \ primes\n * @note $O(n \\log n)$ (or, $O(n \\log \\log n)$ ???)\n * @return $b_i\
-    \ = \\sum _ {i \\mid j} a_j$\n * @note $a_0, b_0$ means the greatest element\n\
+  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"../number/primes.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n\n/**\n * @brief upward fast zeta transform\
+    \ on primes\n * @note $O(n \\log n)$ (or, $O(n \\log \\log n)$ ???)\n * @return\
+    \ $b_i = \\sum _ {i \\mid j} a_j$\n * @note $a_0, b_0$ means the greatest element\n\
     \ */\ntemplate <class CommutativeSemiring>\nstd::vector<typename CommutativeSemiring::value_type>\
     \ upward_fast_zeta_transform_on_primes(std::vector<typename CommutativeSemiring::value_type>\
     \ a, const prepared_primes & primes, const CommutativeSemiring & mon = CommutativeSemiring())\
@@ -81,7 +81,7 @@ data:
   isVerificationFile: false
   path: utils/fast_zeta_transform.hpp
   requiredBy: []
-  timestamp: '2021-05-11 20:48:56+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utils/fast_zeta_transform.hpp

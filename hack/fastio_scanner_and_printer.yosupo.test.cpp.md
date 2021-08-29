@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: hack/fastio_printer.hpp
     title: hack/fastio_printer.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: hack/fastio_scanner.hpp
     title: hack/fastio_scanner.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/many_aplusb
@@ -67,9 +67,9 @@ data:
     \ = sc.get<uint64_t>();\n        pr.put<uint64_t>(a + b);\n        pr.put<char>('\\\
     n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/many_aplusb\"\n#include\
-    \ \"hack/fastio_scanner.hpp\"\n#include \"hack/fastio_printer.hpp\"\n\nscanner\
-    \ sc;\nprinter pr;\n\nint main() {\n    int t = sc.get<int>();\n    while (t --)\
-    \ {\n        uint64_t a = sc.get<uint64_t>();\n        uint64_t b = sc.get<uint64_t>();\n\
+    \ \"../hack/fastio_scanner.hpp\"\n#include \"../hack/fastio_printer.hpp\"\n\n\
+    scanner sc;\nprinter pr;\n\nint main() {\n    int t = sc.get<int>();\n    while\
+    \ (t --) {\n        uint64_t a = sc.get<uint64_t>();\n        uint64_t b = sc.get<uint64_t>();\n\
     \        pr.put<uint64_t>(a + b);\n        pr.put<char>('\\n');\n    }\n    return\
     \ 0;\n}\n"
   dependsOn:
@@ -78,8 +78,8 @@ data:
   isVerificationFile: true
   path: hack/fastio_scanner_and_printer.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-03-04 16:58:19+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: hack/fastio_scanner_and_printer.yosupo.test.cpp
 layout: document

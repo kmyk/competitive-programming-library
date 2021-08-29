@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
   - icon: ':question:'
@@ -15,15 +15,15 @@ data:
     path: graph/virtual_trees.hpp
     title: "\u865A\u6A39 / virtual trees"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/lowest_common_ancestor.aoj.test.cpp
     title: graph/lowest_common_ancestor.aoj.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/lowest_common_ancestor.yosupo.test.cpp
     title: graph/lowest_common_ancestor.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148\
       \ (\u524D\u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
@@ -85,8 +85,8 @@ data:
     \        assert (0 <= y and y < index.size());\n        int z = (*this)(x, y);\n\
     \        return get_depth(x) + get_depth(y) - 2 * get_depth(z);\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <functional>\n\
-    #include <utility>\n#include <vector>\n#include \"data_structure/sparse_table.hpp\"\
-    \n#include \"monoids/min_index.hpp\"\n\n/**\n * @brief lowest common ancestor\
+    #include <utility>\n#include <vector>\n#include \"../data_structure/sparse_table.hpp\"\
+    \n#include \"../monoids/min_index.hpp\"\n\n/**\n * @brief lowest common ancestor\
     \ / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\u7406 $O(N)$ + $O(1)$,\
     \ $\\pm 1$ RMQ and sparse table)\n * @see https://www.slideshare.net/yumainoue965/lca-and-rmq\n\
     \ * @note verified http://www.utpc.jp/2011/problems/travel.html\n */\nstruct lowest_common_ancestor\
@@ -119,8 +119,8 @@ data:
   path: graph/lowest_common_ancestor.hpp
   requiredBy:
   - graph/virtual_trees.hpp
-  timestamp: '2020-03-04 19:51:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/lowest_common_ancestor.yosupo.test.cpp
   - graph/lowest_common_ancestor.aoj.test.cpp

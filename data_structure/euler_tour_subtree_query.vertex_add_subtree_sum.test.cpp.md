@@ -4,17 +4,17 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.hpp
     title: Euler Tour (subtree queries, with commutative monoids)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
   - icon: ':heavy_check_mark:'
     path: graph/euler_tour_preorder.hpp
     title: Euler Tour (preorder)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':question:'
@@ -139,13 +139,13 @@ data:
     \      out<int64_t>(euler.subtree_get(u));\n            out<char>('\\n');\n  \
     \      }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_add_subtree_sum\"\
-    \n#include \"data_structure/euler_tour_subtree_query.hpp\"\n#include \"monoids/plus.hpp\"\
-    \n#include \"utils/macros.hpp\"\n#include \"hack/fastio.hpp\"\n#include <vector>\n\
-    using namespace std;\n\nint main() {\n    int n = in<int>();\n    int q = in<int>();\n\
-    \n    // initialize\n    vector<int64_t> a(n);\n    REP (i, n) {\n        a[i]\
-    \ = in<int64_t>();\n    }\n    vector<vector<int> > g(n);\n    REP3 (i, 1, n)\
-    \ {\n        int p_i = in<int>();\n        g[i].push_back(p_i);\n        g[p_i].push_back(i);\n\
-    \    }\n    constexpr int root = 0;\n    euler_tour_subtree_query<plus_monoid<int64_t>\
+    \n#include \"../data_structure/euler_tour_subtree_query.hpp\"\n#include \"../monoids/plus.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include \"../hack/fastio.hpp\"\n#include\
+    \ <vector>\nusing namespace std;\n\nint main() {\n    int n = in<int>();\n   \
+    \ int q = in<int>();\n\n    // initialize\n    vector<int64_t> a(n);\n    REP\
+    \ (i, n) {\n        a[i] = in<int64_t>();\n    }\n    vector<vector<int> > g(n);\n\
+    \    REP3 (i, 1, n) {\n        int p_i = in<int>();\n        g[i].push_back(p_i);\n\
+    \        g[p_i].push_back(i);\n    }\n    constexpr int root = 0;\n    euler_tour_subtree_query<plus_monoid<int64_t>\
     \ > euler(g, root, ALL(a));\n\n    // answer to queries\n    while (q --) {\n\
     \        int t = in<int>();\n        if (t == 0) {\n            int u = in<int>();\n\
     \            int64_t x = in<int64_t>();\n            euler.vertex_set(u, euler.vertex_get(u)\
@@ -162,7 +162,7 @@ data:
   isVerificationFile: true
   path: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 23:22:52+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp

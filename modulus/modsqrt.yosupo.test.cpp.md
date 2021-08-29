@@ -4,14 +4,14 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/modsqrt.hpp
     title: find the sqrt $b$ of $a$ modulo $p$
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/sqrt_mod
@@ -43,7 +43,7 @@ data:
     %d%d\", &y, &p);\n        int x = modsqrt(y, p);\n        printf(\"%d\\n\", x);\n\
     \    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/sqrt_mod\"\n#include \"\
-    modulus/modsqrt.hpp\"\n#include <cassert>\n#include <cstdio>\n#include <vector>\n\
+    ../modulus/modsqrt.hpp\"\n#include <cassert>\n#include <cstdio>\n#include <vector>\n\
     using namespace std;\n\nint main() {\n    int t; scanf(\"%d\", &t);\n    while\
     \ (t --) {\n        int y, p; scanf(\"%d%d\", &y, &p);\n        int x = modsqrt(y,\
     \ p);\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n"
@@ -53,8 +53,8 @@ data:
   isVerificationFile: true
   path: modulus/modsqrt.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-06-16 07:51:56+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/modsqrt.yosupo.test.cpp
 layout: document

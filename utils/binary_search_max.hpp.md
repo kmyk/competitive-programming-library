@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: utils/binary_search.aoj.test.cpp
+    title: utils/binary_search.aoj.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utils/binary_search_max.hpp\"\n#include <cassert>\n#include\
@@ -25,8 +28,9 @@ data:
   path: utils/binary_search_max.hpp
   requiredBy: []
   timestamp: '2021-08-29 20:28:15+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - utils/binary_search.aoj.test.cpp
 documentation_of: utils/binary_search_max.hpp
 layout: document
 redirect_from:

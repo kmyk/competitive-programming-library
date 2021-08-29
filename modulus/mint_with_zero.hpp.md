@@ -12,12 +12,12 @@ data:
     title: modulus/modpow.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/mint_with_zero.test.cpp
     title: modulus/mint_with_zero.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\\
       mathbb{Z}$ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
@@ -96,10 +96,10 @@ data:
     \ zmint<MOD> n) { return zmint<MOD>(nonzero) * n; }\ntemplate <int32_t MOD> zmint<MOD>\
     \ operator / (int64_t nonzero, zmint<MOD> n) { return zmint<MOD>(nonzero) / n;\
     \ }\n"
-  code: "#pragma once\n#include <cstdint>\n#include <iostream>\n#include \"modulus/modpow.hpp\"\
-    \n#include \"modulus/modinv.hpp\"\n#include \"modulus/mint.hpp\"\n\n/**\n * @brief\
-    \ $\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$ \u306E\
-    \u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020\n * @sa https://kimiyuki.net/blog/2021/04/23/modulo-with-zero/\n\
+  code: "#pragma once\n#include <cstdint>\n#include <iostream>\n#include \"../modulus/modpow.hpp\"\
+    \n#include \"../modulus/modinv.hpp\"\n#include \"../modulus/mint.hpp\"\n\n/**\n\
+    \ * @brief $\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
+    \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020\n * @sa https://kimiyuki.net/blog/2021/04/23/modulo-with-zero/\n\
     \ */\ntemplate <int32_t MOD>\nstruct zmint {\n    int32_t nonzero;\n    int32_t\
     \ zero;\n    zmint() : nonzero(1) {}\n    zmint(int64_t nonzero_, int32_t zero_\
     \ = 0) : nonzero(nonzero_), zero(zero_) { assert (nonzero != 0); while (nonzero\
@@ -130,8 +130,8 @@ data:
   isVerificationFile: false
   path: modulus/mint_with_zero.hpp
   requiredBy: []
-  timestamp: '2021-04-23 11:00:27+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/mint_with_zero.test.cpp
 documentation_of: modulus/mint_with_zero.hpp

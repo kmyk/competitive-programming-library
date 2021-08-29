@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
     path: graph/euler_tour_preorder.hpp
     title: Euler Tour (preorder)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
   - icon: ':question:'
@@ -124,8 +124,8 @@ data:
     \ {\n    lowest_common_ancestor lca(root, g);\n    std::vector<int> tour, left,\
     \ right;\n    do_euler_tour_preorder(g, root, tour, left, right);\n    return\
     \ construct_virtual_tree(g, root, lca, left, marked);\n}\n"
-  code: "#pragma once\n#include <vector>\n#include \"utils/macros.hpp\"\n#include\
-    \ \"graph/euler_tour_preorder.hpp\"\n#include \"graph/lowest_common_ancestor.hpp\"\
+  code: "#pragma once\n#include <vector>\n#include \"../utils/macros.hpp\"\n#include\
+    \ \"../graph/euler_tour_preorder.hpp\"\n#include \"../graph/lowest_common_ancestor.hpp\"\
     \n\n/**\n * @brief \u865A\u6A39 / virtual trees\n * @note O(\\lvert X \\rvert\
     \ \\log \\lvert X \\rvert)\n * @return the list of vertices in the virtual tree,\
     \ and the adjacent list using indices on the returned list of vertices\n * @note\
@@ -170,7 +170,7 @@ data:
   isVerificationFile: false
   path: graph/virtual_trees.hpp
   requiredBy: []
-  timestamp: '2021-05-28 06:48:04+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/virtual_trees.hpp

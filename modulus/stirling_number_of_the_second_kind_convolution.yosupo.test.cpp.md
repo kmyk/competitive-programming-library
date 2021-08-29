@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -16,13 +16,13 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
@@ -31,9 +31,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/stirling_number_of_the_second_kind
@@ -215,9 +215,9 @@ data:
     \ n + 1) {\n        out<int>(f[k].value);\n        out<char>(k < n ? ' ' : '\\\
     n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/stirling_number_of_the_second_kind\"\
-    \n#include \"modulus/stirling_number_of_the_second_kind_convolution.hpp\"\n#include\
-    \ \"hack/fastio.hpp\"\n#include \"utils/macros.hpp\"\n\nconstexpr int MOD = 998244353;\n\
-    int main() {\n    int n = in<int>();\n    auto f = stirling_number_of_the_second_kind_convolution<MOD>(n);\n\
+    \n#include \"../modulus/stirling_number_of_the_second_kind_convolution.hpp\"\n\
+    #include \"../hack/fastio.hpp\"\n#include \"../utils/macros.hpp\"\n\nconstexpr\
+    \ int MOD = 998244353;\nint main() {\n    int n = in<int>();\n    auto f = stirling_number_of_the_second_kind_convolution<MOD>(n);\n\
     \    REP (k, n + 1) {\n        out<int>(f[k].value);\n        out<char>(k < n\
     \ ? ' ' : '\\n');\n    }\n    return 0;\n}\n"
   dependsOn:
@@ -233,8 +233,8 @@ data:
   isVerificationFile: true
   path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 layout: document

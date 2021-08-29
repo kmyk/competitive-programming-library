@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
   - icon: ':question:'
@@ -16,9 +16,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C
@@ -90,7 +90,7 @@ data:
     \      int u, v; scanf(\"%d%d\", &u, &v);\n        printf(\"%d\\n\", lca(u, v));\n\
     \    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C\"\
-    \n\n#include \"graph/lowest_common_ancestor.hpp\"\n#include <cstdio>\n#include\
+    \n\n#include \"../graph/lowest_common_ancestor.hpp\"\n#include <cstdio>\n#include\
     \ <vector>\nusing namespace std;\n\nint main() {\n    // read a tree\n    int\
     \ n; scanf(\"%d\", &n);\n    vector<vector<int> > g(n);\n    REP (i, n) {\n  \
     \      int k; scanf(\"%d\", &k);\n        REP (j, k) {\n            int c; scanf(\"\
@@ -107,8 +107,8 @@ data:
   isVerificationFile: true
   path: graph/lowest_common_ancestor.aoj.test.cpp
   requiredBy: []
-  timestamp: '2020-03-04 19:51:45+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/lowest_common_ancestor.aoj.test.cpp
 layout: document

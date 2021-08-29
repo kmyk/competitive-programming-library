@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
   - icon: ':question:'
@@ -161,7 +161,7 @@ data:
     \   cnt += wm.range_frequency(l, r, min(MAX_X - MIN_X + 1, b + e + 1), MAX_X -\
     \ MIN_X + 1);\n        printf(\"%d\\n\", cnt);\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674\"\
-    \n#include \"data_structure/wavelet_matrix.hpp\"\n#include \"utils/macros.hpp\"\
+    \n#include \"../data_structure/wavelet_matrix.hpp\"\n#include \"../utils/macros.hpp\"\
     \n#include <cstdio>\n#include <numeric>\nusing namespace std;\n\nint main() {\n\
     \    constexpr int BITS = 30;\n    constexpr int MIN_X = -1e8;\n    constexpr\
     \ int MAX_X = 1e8;\n\n    // read a sequence\n    int d; scanf(\"%d\", &d);\n\
@@ -180,7 +180,7 @@ data:
   isVerificationFile: true
   path: data_structure/wavelet_matrix.aoj2674.test.cpp
   requiredBy: []
-  timestamp: '2020-02-28 15:08:46+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.aoj2674.test.cpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/functional_graph.hpp
     title: "Namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1254
@@ -54,7 +54,7 @@ data:
     , ans[i] + 1, i + 1 < ans.size() ? ' ' : '\\n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1254\"\n#include <algorithm>\n\
     #include <cstdio>\n#include <map>\n#include <utility>\n#include <vector>\n#include\
-    \ \"utils/macros.hpp\"\n#include \"graph/functional_graph.hpp\"\nusing namespace\
+    \ \"../utils/macros.hpp\"\n#include \"../graph/functional_graph.hpp\"\nusing namespace\
     \ std;\n\nvector<int> solve(int n, const vector<pair<int, int> >& edges) {\n \
     \   vector<vector<int> > g(n);\n    map<pair<int, int>, int> lookup;\n    REP\
     \ (i, edges.size()) {\n        auto [a, b] = edges[i];\n        g[a].push_back(b);\n\
@@ -74,8 +74,8 @@ data:
   isVerificationFile: true
   path: graph/functional_graph.yuki1254.test.cpp
   requiredBy: []
-  timestamp: '2020-10-10 00:34:03+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/functional_graph.yuki1254.test.cpp
 layout: document

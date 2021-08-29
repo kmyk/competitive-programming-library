@@ -43,12 +43,12 @@ data:
     \      return data.empty();\n    }\n    std::size_t size() const {\n        return\
     \ data.size();\n    }\n};\n"
   code: "#pragma once\n#include <cassert>\n#include <cstddef>\n#include <deque>\n\
-    #include \"utils/macros.hpp\"\n\n/**\n * @brief Sliding Window Aggregation / \u542B\
-    \u307E\u308C\u308B\u8981\u7D20\u306E\u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\
-    \u308B queue (\u53EF\u63DB\u3068\u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\
-    \u308B)\n */\ntemplate <class Monoid>\nstruct sliding_window_aggregation {\n \
-    \   typedef typename Monoid::value_type value_type;\n    Monoid mon;\n    std::deque<value_type>\
-    \ data;\n    int front;\n    value_type back;\n    sliding_window_aggregation(const\
+    #include \"../utils/macros.hpp\"\n\n/**\n * @brief Sliding Window Aggregation\
+    \ / \u542B\u307E\u308C\u308B\u8981\u7D20\u306E\u7DCF\u548C\u304C $O(1)$ \u3067\
+    \u53D6\u308C\u308B queue (\u53EF\u63DB\u3068\u306F\u9650\u3089\u306A\u3044 monoid\
+    \ \u304C\u4E57\u308B)\n */\ntemplate <class Monoid>\nstruct sliding_window_aggregation\
+    \ {\n    typedef typename Monoid::value_type value_type;\n    Monoid mon;\n  \
+    \  std::deque<value_type> data;\n    int front;\n    value_type back;\n    sliding_window_aggregation(const\
     \ Monoid & mon_ = Monoid()) : mon(mon_) {\n        front = 0;\n        back =\
     \ mon.unit();\n    }\n    /**\n     * @note O(1)\n     */\n    void push(value_type\
     \ x) {\n        data.push_back(x);\n        back = mon.mult(back, x);\n    }\n\
@@ -67,7 +67,7 @@ data:
   isVerificationFile: false
   path: data_structure/sliding_window_aggregation.hpp
   requiredBy: []
-  timestamp: '2020-01-08 19:38:32+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/sliding_window_aggregation.yosupo.test.cpp

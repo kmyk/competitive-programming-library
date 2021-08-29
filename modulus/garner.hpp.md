@@ -84,9 +84,9 @@ data:
     \ = eqns[j];\n            (c[j] += k[j] * x) %= m_j;\n            (k[j] *= m_i)\
     \ %= m_j;\n        }\n    }\n    return c.back();\n}\n"
   code: "#pragma once\n#include <cassert>\n#include <cstdint>\n#include <tuple>\n\
-    #include <utility>\n#include <vector>\n#include \"modulus/mint.hpp\"\n#include\
-    \ \"utils/macros.hpp\"\n\n/**\n * @brief Garner's algorithm\n * @arg eqns is equations\
-    \ like x = a_i (mod m_i)\n * @return the minimal solution of given equations\n\
+    #include <utility>\n#include <vector>\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../utils/macros.hpp\"\n\n/**\n * @brief Garner's algorithm\n * @arg eqns is\
+    \ equations like x = a_i (mod m_i)\n * @return the minimal solution of given equations\n\
     \ */\nint32_t garner_algorithm(std::vector<std::pair<int32_t, int32_t> > eqns,\
     \ int32_t MOD) {\n    eqns.emplace_back(0, MOD);\n    std::vector<int64_t> k(eqns.size(),\
     \ 1);\n    std::vector<int64_t> c(eqns.size(), 0);\n    REP (i, eqns.size() -\
@@ -104,7 +104,7 @@ data:
   isVerificationFile: false
   path: modulus/garner.hpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: modulus/garner.hpp

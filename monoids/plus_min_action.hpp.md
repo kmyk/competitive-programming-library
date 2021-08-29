@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   _extendedRequiredBy: []
@@ -12,12 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
     title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"monoids/plus.hpp\"\n\ntemplate <class T>\nstruct plus_monoid\
@@ -31,7 +31,7 @@ data:
     \ operator () (typename plus_monoid<T>::value_type f, typename min_monoid<T>::value_type\
     \ x) const {\n        return (x == min_monoid<T>().unit() ? x : f + x);\n    }\n\
     };\n"
-  code: "#pragma once\n#include \"monoids/plus.hpp\"\n#include \"monoids/min.hpp\"\
+  code: "#pragma once\n#include \"../monoids/plus.hpp\"\n#include \"../monoids/min.hpp\"\
     \n\ntemplate <class T>\nstruct plus_min_action {\n    typename min_monoid<T>::value_type\
     \ operator () (typename plus_monoid<T>::value_type f, typename min_monoid<T>::value_type\
     \ x) const {\n        return (x == min_monoid<T>().unit() ? x : f + x);\n    }\n\
@@ -42,8 +42,8 @@ data:
   isVerificationFile: false
   path: monoids/plus_min_action.hpp
   requiredBy: []
-  timestamp: '2019-12-27 19:16:13+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   - utils/mo_algorithm.yuki1270.test.cpp

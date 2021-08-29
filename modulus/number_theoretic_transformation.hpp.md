@@ -14,42 +14,42 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.yosupo.test.cpp
     title: modulus/number_theoretic_transformation.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
     title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: Number Theoretic Transformation (NTT) for Proth primes
     links: []
@@ -164,11 +164,11 @@ data:
     \  ntt_inplace(b, false);\n    REP (i, n) {\n        a[i] *= b[i];\n    }\n  \
     \  ntt_inplace(a, true);\n    a.resize(m);\n    return a;\n}\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n\
-    #include <tuple>\n#include <vector>\n#include \"modulus/mint.hpp\"\n#include \"\
-    utils/macros.hpp\"\n\ntemplate <int32_t PRIME> struct proth_prime {};\ntemplate\
-    \ <> struct proth_prime<1224736769> { static constexpr int a =             73,\
-    \ b = 24, g =  3; };\ntemplate <> struct proth_prime<1053818881> { static constexpr\
-    \ int a =     3 * 5 * 67, b = 20, g =  7; };\ntemplate <> struct proth_prime<1051721729>\
+    #include <tuple>\n#include <vector>\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../utils/macros.hpp\"\n\ntemplate <int32_t PRIME> struct proth_prime {};\n\
+    template <> struct proth_prime<1224736769> { static constexpr int a =        \
+    \     73, b = 24, g =  3; };\ntemplate <> struct proth_prime<1053818881> { static\
+    \ constexpr int a =     3 * 5 * 67, b = 20, g =  7; };\ntemplate <> struct proth_prime<1051721729>\
     \ { static constexpr int a =        17 * 59, b = 20, g =  6; };\ntemplate <> struct\
     \ proth_prime<1045430273> { static constexpr int a =            997, b = 20, g\
     \ =  3; };\ntemplate <> struct proth_prime<1012924417> { static constexpr int\
@@ -234,8 +234,8 @@ data:
   - modulus/formal_power_series.hpp
   - modulus/number_theoretic_transformation_with_garner.hpp
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/formal_power_series.inv.test.cpp
   - modulus/formal_power_series.exp.test.cpp

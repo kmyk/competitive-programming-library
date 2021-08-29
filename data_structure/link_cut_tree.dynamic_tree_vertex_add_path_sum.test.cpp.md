@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/link_cut_tree.hpp
     title: Link-Cut tree (monoids without commutativity, vertex set + path get)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':heavy_check_mark:'
@@ -231,10 +231,10 @@ data:
     \       out<int64_t>(lct.path_get(u, v));\n            out<char>('\\n');\n   \
     \     }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum\"\
-    \n#include \"data_structure/link_cut_tree.hpp\"\n#include \"monoids/plus.hpp\"\
-    \n#include \"utils/macros.hpp\"\n#include \"hack/fastio.hpp\"\n#include <stack>\n\
-    #include <vector>\nusing namespace std;\n\nint main() {\n    int n = in<int>();\n\
-    \    int q = in<int>();\n\n    // initialize\n    link_cut_tree<plus_monoid<int64_t>\
+    \n#include \"../data_structure/link_cut_tree.hpp\"\n#include \"../monoids/plus.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include \"../hack/fastio.hpp\"\n#include\
+    \ <stack>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n\
+    \ = in<int>();\n    int q = in<int>();\n\n    // initialize\n    link_cut_tree<plus_monoid<int64_t>\
     \ > lct(n);\n    REP (i, n) {\n        int64_t a_i = in<int64_t>();\n        lct.vertex_set(i,\
     \ a_i);\n    }\n    vector<vector<int> > g(n);\n    REP (i, n - 1) {\n       \
     \ int u = in<int>();\n        int v = in<int>();\n        g[u].push_back(v);\n\
@@ -261,7 +261,7 @@ data:
   isVerificationFile: true
   path: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/dsu_on_tree.aoj.test.cpp
     title: utils/dsu_on_tree.aoj.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: a disjoint set structure with monoid
     links: []
@@ -49,7 +49,7 @@ data:
   path: data_structure/union_find_tree_with_monoid.hpp
   requiredBy: []
   timestamp: '2019-12-14 05:03:01+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
 documentation_of: data_structure/union_find_tree_with_monoid.hpp

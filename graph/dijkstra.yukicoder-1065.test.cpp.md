@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/dijkstra.hpp
     title: Dijkstra ($O((E + V) \log V)$)
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     ERROR: 1e-4
@@ -44,11 +44,11 @@ data:
     \ cost);\n    }\n\n    // solve\n    auto dist = dijkstra(g, start);\n\n    //\
     \ output\n    printf(\"%.12lf\\n\", dist[goal]);\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1065\"\n#define ERROR\
-    \ 1e-4\n#include <bits/stdc++.h>\n#include \"utils/macros.hpp\"\n#include \"graph/dijkstra.hpp\"\
-    \nusing namespace std;\n\n\nint main() {\n    // input\n    int n, m; scanf(\"\
-    %d%d\", &n, &m);\n    int start, goal; scanf(\"%d%d\", &start, &goal);\n    --\
-    \ start;\n    -- goal;\n    vector<long long> x(n), y(n);\n    REP (i, n) {\n\
-    \        scanf(\"%lld%lld\", &x[i], &y[i]);\n    }\n    vector<vector<pair<int,\
+    \ 1e-4\n#include <bits/stdc++.h>\n#include \"../utils/macros.hpp\"\n#include \"\
+    ../graph/dijkstra.hpp\"\nusing namespace std;\n\n\nint main() {\n    // input\n\
+    \    int n, m; scanf(\"%d%d\", &n, &m);\n    int start, goal; scanf(\"%d%d\",\
+    \ &start, &goal);\n    -- start;\n    -- goal;\n    vector<long long> x(n), y(n);\n\
+    \    REP (i, n) {\n        scanf(\"%lld%lld\", &x[i], &y[i]);\n    }\n    vector<vector<pair<int,\
     \ double> > > g(n);\n    REP (i, m) {\n        int p, q; cin >> p >> q;\n    \
     \    -- p;\n        -- q;\n        double cost = sqrt(pow(x[p] - x[q], 2) + pow(y[p]\
     \ - y[q], 2));\n        g[p].emplace_back(q, cost);\n        g[q].emplace_back(p,\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: true
   path: graph/dijkstra.yukicoder-1065.test.cpp
   requiredBy: []
-  timestamp: '2020-05-29 23:50:33+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/dijkstra.yukicoder-1065.test.cpp
 layout: document

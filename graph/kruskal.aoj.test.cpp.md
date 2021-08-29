@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/kruskal.hpp
     title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A
@@ -59,12 +59,12 @@ data:
     \ += get<2>(edges[i]);\n    }\n\n    // output\n    printf(\"%lld\\n\", answer);\n\
     \    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A\"\
-    \n#include \"graph/kruskal.hpp\"\n\n#include \"utils/macros.hpp\"\n#include <cstdio>\n\
-    #include <vector>\nusing namespace std;\n\nint main() {\n    // input\n    int\
-    \ n; scanf(\"%d\", &n);\n    vector<tuple<int, int, long long> > edges;\n    REP\
-    \ (x, n) {\n        REP (y, n) {\n            long long a; scanf(\"%lld\", &a);\n\
-    \            if (a != -1) {\n                edges.emplace_back(x, y, a);\n  \
-    \          }\n        }\n    }\n\n    // solve\n    vector<int> mst = compute_minimum_spanning_tree(n,\
+    \n#include \"../graph/kruskal.hpp\"\n\n#include \"../utils/macros.hpp\"\n#include\
+    \ <cstdio>\n#include <vector>\nusing namespace std;\n\nint main() {\n    // input\n\
+    \    int n; scanf(\"%d\", &n);\n    vector<tuple<int, int, long long> > edges;\n\
+    \    REP (x, n) {\n        REP (y, n) {\n            long long a; scanf(\"%lld\"\
+    , &a);\n            if (a != -1) {\n                edges.emplace_back(x, y, a);\n\
+    \            }\n        }\n    }\n\n    // solve\n    vector<int> mst = compute_minimum_spanning_tree(n,\
     \ edges);\n    long long answer = 0;\n    for (int i : mst) {\n        answer\
     \ += get<2>(edges[i]);\n    }\n\n    // output\n    printf(\"%lld\\n\", answer);\n\
     \    return 0;\n}\n"
@@ -75,8 +75,8 @@ data:
   isVerificationFile: true
   path: graph/kruskal.aoj.test.cpp
   requiredBy: []
-  timestamp: '2020-02-28 14:33:39+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/kruskal.aoj.test.cpp
 layout: document

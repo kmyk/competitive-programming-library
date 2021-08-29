@@ -27,7 +27,7 @@ data:
     \    }\n    return cnt;\n}\n\n/**\n * @param g is an undirected graph\n */\nbool\
     \ is_connected_graph(const std::vector<std::vector<int> > & g) {\n    return count_connected_components(g)\
     \ == 1;\n}\n"
-  code: "#pragma once\n#include <stack>\n#include <vector>\n#include \"utils/macros.hpp\"\
+  code: "#pragma once\n#include <stack>\n#include <vector>\n#include \"../utils/macros.hpp\"\
     \n\n/**\n * @param g is an undirected graph\n */\nint count_connected_components(const\
     \ std::vector<std::vector<int> > & g) {\n    int n = g.size();\n    int cnt =\
     \ 0;\n    std::vector<bool> used(n);\n    std::stack<int> stk;\n    REP (z, n)\
@@ -43,7 +43,7 @@ data:
   isVerificationFile: false
   path: graph/connected_components.hpp
   requiredBy: []
-  timestamp: '2020-06-05 02:57:09+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/connected_components.hpp

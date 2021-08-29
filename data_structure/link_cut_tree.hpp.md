@@ -194,8 +194,8 @@ data:
     \            go(a);\n        }\n        oss << \"}\";\n        return oss.str();\n\
     \    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <functional>\n\
-    #include <sstream>\n#include <vector>\n#include \"utils/macros.hpp\"\n#include\
-    \ \"monoids/reversible.hpp\"\n\n\n/**\n * @brief Link-Cut tree (monoids without\
+    #include <sstream>\n#include <vector>\n#include \"../utils/macros.hpp\"\n#include\
+    \ \"../monoids/reversible.hpp\"\n\n\n/**\n * @brief Link-Cut tree (monoids without\
     \ commutativity, vertex set + path get)\n * @docs data_structure/link_cut_tree.md\n\
     \ * @description manages a dynamic forest of rooted trees\n * @note in each splay\
     \ tree, nodes are sorted from bottom to top. the rightmost node of the root splay\
@@ -346,7 +346,7 @@ data:
   isVerificationFile: false
   path: data_structure/link_cut_tree.hpp
   requiredBy: []
-  timestamp: '2020-02-27 11:49:55+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp

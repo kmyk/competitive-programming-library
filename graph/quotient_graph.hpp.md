@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'
@@ -9,12 +9,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Quotient_graph
@@ -38,10 +38,10 @@ data:
     \ {\n        if (component_of[i] != component_of[j]) {\n            h[component_of[i]].push_back(component_of[j]);\n\
     \        }\n    }\n    REP (k, size) {\n        std::sort(ALL(h[k]));\n      \
     \  h[k].erase(std::unique(ALL(h[k])), h[k].end());\n    }\n    return h;\n}\n"
-  code: "#pragma once\n#include <vector>\n#include \"graph/transpose_graph.hpp\"\n\
-    #include \"utils/macros.hpp\"\n\n/**\n * @param g is an adjacent list of a digraph\n\
-    \ * @param size is the size of equivalence classes\n * @param component_of is\
-    \ the map from original vertices to equivalence classes\n * @note $O(V + E)$\n\
+  code: "#pragma once\n#include <vector>\n#include \"../graph/transpose_graph.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n\n/**\n * @param g is an adjacent list of\
+    \ a digraph\n * @param size is the size of equivalence classes\n * @param component_of\
+    \ is the map from original vertices to equivalence classes\n * @note $O(V + E)$\n\
     \ * @see https://en.wikipedia.org/wiki/Quotient_graph\n */\nstd::vector<std::vector<int>\
     \ > make_quotient_graph(const std::vector<std::vector<int> > & g, int size, const\
     \ std::vector<int> & component_of) {\n    int n = g.size();\n    std::vector<std::vector<int>\
@@ -55,8 +55,8 @@ data:
   isVerificationFile: false
   path: graph/quotient_graph.hpp
   requiredBy: []
-  timestamp: '2019-12-30 23:14:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
 documentation_of: graph/quotient_graph.hpp

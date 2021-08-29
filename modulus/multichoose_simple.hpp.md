@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose_simple.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
   - icon: ':question:'
@@ -18,12 +18,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r -\
       \ 1} C _ r$ (\u611A\u76F4 $O(r)$)"
@@ -88,8 +88,8 @@ data:
     \ - 1} C _ r$ (\u611A\u76F4 $O(r)$)\n */\ntemplate <int32_t MOD>\nmint<MOD> multichoose_simple(int64_t\
     \ n, int32_t r) {\n    assert (0 <= n and 0 <= r);\n    if (n == 0 and r == 0)\
     \ return 1;\n    return choose_simple<MOD>(n + r - 1, r);\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include \"modulus/mint.hpp\"\n#include\
-    \ \"modulus/choose_simple.hpp\"\n\n/**\n * @brief \u91CD\u8907\u7D44\u5408\u305B\
+  code: "#pragma once\n#include <cassert>\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../modulus/choose_simple.hpp\"\n\n/**\n * @brief \u91CD\u8907\u7D44\u5408\u305B\
     \ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (\u611A\u76F4 $O(r)$)\n */\ntemplate\
     \ <int32_t MOD>\nmint<MOD> multichoose_simple(int64_t n, int32_t r) {\n    assert\
     \ (0 <= n and 0 <= r);\n    if (n == 0 and r == 0) return 1;\n    return choose_simple<MOD>(n\
@@ -103,8 +103,8 @@ data:
   isVerificationFile: false
   path: modulus/multichoose_simple.hpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - number/primes_extra.yukicoder-1659.test.cpp
 documentation_of: modulus/multichoose_simple.hpp

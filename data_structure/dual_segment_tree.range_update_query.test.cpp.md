@@ -56,7 +56,7 @@ data:
     \     cout << segtree.point_get(i).second << endl;\n        }\n    }\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
-    \n#include \"data_structure/dual_segment_tree.hpp\"\n#include \"monoids/left.hpp\"\
+    \n#include \"../data_structure/dual_segment_tree.hpp\"\n#include \"../monoids/left.hpp\"\
     \n\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int n, q; cin\
     \ >> n >> q;\n    dual_segment_tree<left_monoid<uint32_t> > segtree(n);\n    segtree.range_apply(0,\
     \ n, make_pair(true, (1u << 31) - 1));\n    while (q --) {\n        int com; cin\
@@ -71,7 +71,7 @@ data:
   isVerificationFile: true
   path: data_structure/dual_segment_tree.range_update_query.test.cpp
   requiredBy: []
-  timestamp: '2020-03-04 20:34:24+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/dual_segment_tree.range_update_query.test.cpp

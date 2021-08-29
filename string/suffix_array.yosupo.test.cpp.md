@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: string/suffix_array.hpp
     title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
       \ & Myers)"
@@ -13,9 +13,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/suffixarray
@@ -67,13 +67,13 @@ data:
     \n    // output\n    REP (i, n) {\n        out<int>(sa[i + 1]);\n        out<char>(i\
     \ < n - 1 ? ' ' : '\\n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/suffixarray\"\n#include\
-    \ <cassert>\n#include <string>\n#include <vector>\n#include \"string/suffix_array.hpp\"\
-    \n#include \"hack/fastio.hpp\"\nusing namespace std;\n\nint main() {\n    // input\n\
-    \    string s = in<string>();\n    int n = s.length();\n\n    // solve\n    vector<int>\
-    \ sa, rank;\n    compute_suffix_array(s, sa, rank);\n    assert ((int)sa.size()\
-    \ == n + 1);\n    assert (sa[0] == n);\n\n    // output\n    REP (i, n) {\n  \
-    \      out<int>(sa[i + 1]);\n        out<char>(i < n - 1 ? ' ' : '\\n');\n   \
-    \ }\n    return 0;\n}\n"
+    \ <cassert>\n#include <string>\n#include <vector>\n#include \"../string/suffix_array.hpp\"\
+    \n#include \"../hack/fastio.hpp\"\nusing namespace std;\n\nint main() {\n    //\
+    \ input\n    string s = in<string>();\n    int n = s.length();\n\n    // solve\n\
+    \    vector<int> sa, rank;\n    compute_suffix_array(s, sa, rank);\n    assert\
+    \ ((int)sa.size() == n + 1);\n    assert (sa[0] == n);\n\n    // output\n    REP\
+    \ (i, n) {\n        out<int>(sa[i + 1]);\n        out<char>(i < n - 1 ? ' ' :\
+    \ '\\n');\n    }\n    return 0;\n}\n"
   dependsOn:
   - string/suffix_array.hpp
   - utils/macros.hpp
@@ -81,8 +81,8 @@ data:
   isVerificationFile: true
   path: string/suffix_array.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: string/suffix_array.yosupo.test.cpp
 layout: document

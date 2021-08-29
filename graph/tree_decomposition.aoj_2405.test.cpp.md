@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/tree_decomposition.hpp
     title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
   - icon: ':question:'
@@ -18,9 +18,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405
@@ -199,21 +199,21 @@ data:
     \        }\n        mint<MOD> cnt = solve(n, m, g);\n        printf(\"%d\\n\"\
     , cnt.value);\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405\"\
-    \n#include <cstdio>\n#include \"graph/tree_decomposition.hpp\"\n#include \"modulus/mint.hpp\"\
-    \n#include \"utils/macros.hpp\"\nusing namespace std;\n\n\nconstexpr int MOD =\
-    \ 1000003;\nmint<MOD> solve(int n, int m, vector<vector<int> > & g) {\n    //\
-    \ add the implicitly given edges to g\n    REP (x, n) {\n        g[x].push_back((x\
-    \ + 1) % n);\n        g[(x + 1) % n].push_back(x);\n    }\n    REP (x, n) {\n\
-    \        sort(ALL(g[x]));\n        g[x].erase(unique(ALL(g[x])), g[x].end());\n\
-    \    }\n\n    // get a tree decomposition\n    auto [parent, bags_] = get_tree_decomposition(g);\n\
-    \    auto nice = get_nice_tree_decomposition(parent, bags_);\n\n    // dp on a\
-    \ nice tree decomposition\n    vector<set<int> > bags(nice.size());\n    auto\
-    \ index = [&](int a, int x) {\n        assert (bags[a].count(x));\n        return\
-    \ distance(bags[a].begin(), bags[a].find(x));\n    };\n    auto translate = [&](int\
-    \ a, int s, int b) {\n        int t = 0;\n        for (int x : bags[a]) {\n  \
-    \          if (bags[b].count(x) and (s & (1 << index(a, x)))) {\n            \
-    \    t |= 1 << index(b, x);\n            }\n        }\n        return t;\n   \
-    \ };\n    vector<vector<mint<MOD> > > dp(nice.size());\n    REP (a, nice.size())\
+    \n#include <cstdio>\n#include \"../graph/tree_decomposition.hpp\"\n#include \"\
+    ../modulus/mint.hpp\"\n#include \"../utils/macros.hpp\"\nusing namespace std;\n\
+    \n\nconstexpr int MOD = 1000003;\nmint<MOD> solve(int n, int m, vector<vector<int>\
+    \ > & g) {\n    // add the implicitly given edges to g\n    REP (x, n) {\n   \
+    \     g[x].push_back((x + 1) % n);\n        g[(x + 1) % n].push_back(x);\n   \
+    \ }\n    REP (x, n) {\n        sort(ALL(g[x]));\n        g[x].erase(unique(ALL(g[x])),\
+    \ g[x].end());\n    }\n\n    // get a tree decomposition\n    auto [parent, bags_]\
+    \ = get_tree_decomposition(g);\n    auto nice = get_nice_tree_decomposition(parent,\
+    \ bags_);\n\n    // dp on a nice tree decomposition\n    vector<set<int> > bags(nice.size());\n\
+    \    auto index = [&](int a, int x) {\n        assert (bags[a].count(x));\n  \
+    \      return distance(bags[a].begin(), bags[a].find(x));\n    };\n    auto translate\
+    \ = [&](int a, int s, int b) {\n        int t = 0;\n        for (int x : bags[a])\
+    \ {\n            if (bags[b].count(x) and (s & (1 << index(a, x)))) {\n      \
+    \          t |= 1 << index(b, x);\n            }\n        }\n        return t;\n\
+    \    };\n    vector<vector<mint<MOD> > > dp(nice.size());\n    REP (a, nice.size())\
     \ {\n        auto [tag, x, b] = nice[a];\n\n        if (tag == LEAF) {\n     \
     \       bags[a].insert(x);\n            dp[a].resize(1 << bags[a].size());\n \
     \           dp[a][0] += 1;\n\n        } else if (tag == INTRODUCE) {\n       \
@@ -250,8 +250,8 @@ data:
   isVerificationFile: true
   path: graph/tree_decomposition.aoj_2405.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/tree_decomposition.aoj_2405.test.cpp
 layout: document

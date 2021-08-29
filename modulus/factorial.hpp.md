@@ -11,77 +11,77 @@ data:
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/multichoose.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/permute.hpp
     title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ +\
       \ $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose.yukicoder-1035.test.cpp
     title: modulus/choose.yukicoder-1035.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"modulus/factorial.hpp\"\n#include <vector>\n#line 2 \"modulus/mint.hpp\"\
@@ -139,7 +139,7 @@ data:
     \ * 1.3 + 100;\n        memo.resize(r);\n        memo[r - 1] = fact<MOD>(r - 1).inv();\n\
     \        for (int i = r - 2; i >= l; -- i) {\n            memo[i] = memo[i + 1]\
     \ * (i + 1);\n        }\n    }\n    return memo[n];\n}\n"
-  code: "#pragma once\n#include <vector>\n#include \"modulus/mint.hpp\"\n\ntemplate\
+  code: "#pragma once\n#include <vector>\n#include \"../modulus/mint.hpp\"\n\ntemplate\
     \ <int32_t MOD>\nmint<MOD> fact(int n) {\n    static std::vector<mint<MOD> > memo(1,\
     \ 1);\n    while (n >= memo.size()) {\n        memo.push_back(memo.back() * mint<MOD>(memo.size()));\n\
     \    }\n    return memo[n];\n}\ntemplate <int32_t MOD>\nmint<MOD> inv_fact(int\
@@ -163,8 +163,8 @@ data:
   - modulus/stirling_number_of_the_second_kind_direct.hpp
   - modulus/choose.hpp
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

@@ -5,7 +5,7 @@ data:
   - icon: ':warning:'
     path: monoids/plus_max_action.hpp
     title: monoids/plus_max_action.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus_min_action.hpp
     title: monoids/plus_min_action.hpp
   - icon: ':warning:'
@@ -39,15 +39,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.range_sum_query.test.cpp
     title: data_structure/segment_tree.range_sum_query.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/dsu_on_tree.aoj.test.cpp
     title: utils/dsu_on_tree.aoj.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"monoids/plus.hpp\"\n\ntemplate <class T>\nstruct plus_monoid\
@@ -66,7 +66,7 @@ data:
   - monoids/plus_max_action.hpp
   - monoids/plus_min_action.hpp
   timestamp: '2019-12-27 19:16:13+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data_structure/segment_tree.range_sum_query.test.cpp
   - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp

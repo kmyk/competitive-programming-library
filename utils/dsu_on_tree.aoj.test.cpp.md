@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/union_find_tree_with_monoid.hpp
     title: a disjoint set structure with monoid
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/subtree.hpp
     title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
       \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
       \u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: hack/stack_pivot.hpp
     title: hack/stack_pivot.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
   - icon: ':question:'
@@ -23,9 +23,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995
@@ -140,12 +140,12 @@ data:
     \  // output\n    REP (i, n) {\n        cout << answer[i] << endl;\n    }\n  \
     \  return 0;\n}\n\nSTACK_PIVOT_MAIN(moin)\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995\"\
-    \n#include \"utils/dsu_on_tree.hpp\"\n#include \"data_structure/union_find_tree_with_monoid.hpp\"\
-    \n#include \"monoids/plus.hpp\"\n#include \"hack/stack_pivot.hpp\"\n\n#include\
+    \n#include \"../utils/dsu_on_tree.hpp\"\n#include \"../data_structure/union_find_tree_with_monoid.hpp\"\
+    \n#include \"../monoids/plus.hpp\"\n#include \"../hack/stack_pivot.hpp\"\n\n#include\
     \ <iostream>\n#include <unordered_map>\n#include <unordered_set>\n#include \"\
-    utils/macros.hpp\"\nusing namespace std;\n\nvector<int> solve(int n, int k, const\
-    \ vector<vector<int> > & g, const vector<int> & c, const vector<int> & d) {\n\
-    \    union_find_tree_with_monoid<plus_monoid<int> > uft(k);\n    unordered_set<int>\
+    ../utils/macros.hpp\"\nusing namespace std;\n\nvector<int> solve(int n, int k,\
+    \ const vector<vector<int> > & g, const vector<int> & c, const vector<int> & d)\
+    \ {\n    union_find_tree_with_monoid<plus_monoid<int> > uft(k);\n    unordered_set<int>\
     \ used;\n    int value = 0;\n    auto func = [&](int e) {\n        return min(uft.tree_size(e),\
     \ uft.get_value(e));\n    };\n\n    auto add = [&](int i) {\n        int c_i =\
     \ uft.find_root(c[i]);\n        int d_i = uft.find_root(d[i]);\n        if (c_i\
@@ -178,8 +178,8 @@ data:
   isVerificationFile: true
   path: utils/dsu_on_tree.aoj.test.cpp
   requiredBy: []
-  timestamp: '2020-01-08 18:35:19+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: utils/dsu_on_tree.aoj.test.cpp
 layout: document

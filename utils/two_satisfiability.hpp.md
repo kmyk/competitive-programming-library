@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'
@@ -13,12 +13,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: 2-SAT ($O(N)$)
     links: []
@@ -71,17 +71,18 @@ data:
     \ x)];  // use components which indices are large\n    }\n    return valuation;\n\
     }\n"
   code: "#pragma once\n#include <cassert>\n#include <utility>\n#include <vector>\n\
-    #include \"graph/strongly_connected_components.hpp\"\n\n/**\n * @brief 2-SAT ($O(N)$)\n\
-    \ * @param n is the number of variables\n * @param cnf is a proposition in a conjunctive\
-    \ normal form. Each literal is expressed as number $x$ s.t. $1 \\le \\vert x \\\
-    vert \\le n$\n * @return a vector with the length $n$ if SAT. It's empty if UNSAT.\n\
-    \ */\nstd::vector<bool> compute_two_satisfiability(int n, const std::vector<std::pair<int,\
-    \ int> > & cnf) {\n    // make digraph\n    std::vector<std::vector<int> > g(2\
-    \ * n);\n    auto index = [&](int x) {\n        assert (x != 0 and abs(x) <= n);\n\
-    \        return x > 0 ? x - 1 : n - x - 1;\n    };\n    for (auto it : cnf) {\n\
-    \        int x, y; std::tie(x, y) = it;  // x or y\n        g[index(- x)].push_back(index(y));\
-    \  // not x implies y\n        g[index(- y)].push_back(index(x));  // not y implies\
-    \ x\n    }\n\n    // do SCC\n    std::vector<int> component = decompose_to_strongly_connected_components(g).second;\n\
+    #include \"../graph/strongly_connected_components.hpp\"\n\n/**\n * @brief 2-SAT\
+    \ ($O(N)$)\n * @param n is the number of variables\n * @param cnf is a proposition\
+    \ in a conjunctive normal form. Each literal is expressed as number $x$ s.t. $1\
+    \ \\le \\vert x \\vert \\le n$\n * @return a vector with the length $n$ if SAT.\
+    \ It's empty if UNSAT.\n */\nstd::vector<bool> compute_two_satisfiability(int\
+    \ n, const std::vector<std::pair<int, int> > & cnf) {\n    // make digraph\n \
+    \   std::vector<std::vector<int> > g(2 * n);\n    auto index = [&](int x) {\n\
+    \        assert (x != 0 and abs(x) <= n);\n        return x > 0 ? x - 1 : n -\
+    \ x - 1;\n    };\n    for (auto it : cnf) {\n        int x, y; std::tie(x, y)\
+    \ = it;  // x or y\n        g[index(- x)].push_back(index(y));  // not x implies\
+    \ y\n        g[index(- y)].push_back(index(x));  // not y implies x\n    }\n\n\
+    \    // do SCC\n    std::vector<int> component = decompose_to_strongly_connected_components(g).second;\n\
     \    std::vector<bool> valuation(n);\n    REP3 (x, 1, n + 1) {\n        if (component[index(x)]\
     \ == component[index(- x)]) {  // x iff not x\n            return std::vector<bool>();\
     \  // unsat\n        }\n        valuation[x - 1] = component[index(x)] > component[index(-\
@@ -94,8 +95,8 @@ data:
   isVerificationFile: false
   path: utils/two_satisfiability.hpp
   requiredBy: []
-  timestamp: '2021-06-19 02:41:52+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - utils/two_satisfiability.yosupo.test.cpp
 documentation_of: utils/two_satisfiability.hpp

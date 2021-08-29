@@ -30,7 +30,7 @@ data:
     \ {\n    typename plus_count_monoid<T>::value_type operator () (typename linear_function_monoid<T>::value_type\
     \ f, typename plus_count_monoid<T>::value_type x) const {\n        return std::make_pair(f.first\
     \ * x.first + f.second * x.second, x.second);\n    }\n};\n"
-  code: "#pragma once\n#include <utility>\n#include \"monoids/linear_function.hpp\"\
+  code: "#pragma once\n#include <utility>\n#include \"../monoids/linear_function.hpp\"\
     \n\n/**\n * @note lazy_propagation_segment_tree<plus_count_monoid<T>, linear_function_monoid<T>,\
     \ linear_function_plus_count_action<T> >\n */\ntemplate <class T>\nstruct linear_function_plus_count_action\
     \ {\n    typename plus_count_monoid<T>::value_type operator () (typename linear_function_monoid<T>::value_type\
@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: monoids/linear_function_plus_count_action.hpp
   requiredBy: []
-  timestamp: '2019-12-27 19:16:13+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp

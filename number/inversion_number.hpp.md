@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/binary_indexed_tree.hpp
     title: Binary Indexed Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':question:'
@@ -50,9 +50,9 @@ data:
     \    binary_indexed_tree<plus_monoid<int64_t>> bit(n + 1);\n    int64_t cnt =\
     \ 0;\n    REP (i, n) {\n        cnt += i - bit.initial_range_get(a[i] + 1);\n\
     \        bit.point_mult(a[i], 1);\n    }\n    return cnt;\n}\n"
-  code: "#pragma once\n#include <cstdint>\n#include <vector>\n#include \"data_structure/binary_indexed_tree.hpp\"\
-    \n#include \"utils/macros.hpp\"\n#include \"monoids/plus.hpp\"\n\nint64_t inversion_number(const\
-    \ std::vector<int> &a) {\n    int n = a.size();\n    binary_indexed_tree<plus_monoid<int64_t>>\
+  code: "#pragma once\n#include <cstdint>\n#include <vector>\n#include \"../data_structure/binary_indexed_tree.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include \"../monoids/plus.hpp\"\n\nint64_t\
+    \ inversion_number(const std::vector<int> &a) {\n    int n = a.size();\n    binary_indexed_tree<plus_monoid<int64_t>>\
     \ bit(n + 1);\n    int64_t cnt = 0;\n    REP (i, n) {\n        cnt += i - bit.initial_range_get(a[i]\
     \ + 1);\n        bit.point_mult(a[i], 1);\n    }\n    return cnt;\n}\n"
   dependsOn:
@@ -62,7 +62,7 @@ data:
   isVerificationFile: false
   path: number/inversion_number.hpp
   requiredBy: []
-  timestamp: '2021-08-30 02:09:39+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: number/inversion_number.hpp

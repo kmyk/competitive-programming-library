@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
   - icon: ':question:'
@@ -15,12 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
     title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
     title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: data_structure/wavelet_matrix.md
     document_title: Wavelet Matrix
@@ -154,28 +154,28 @@ data:
     \ - 1,             l - lc,             r - rc,  v, a, b, callback);\n        range_frequency_callback(k\
     \ - 1, lc + zero_count[k], rc + zero_count[k], nv, a, b, callback);\n    }\n};\n"
   code: "#pragma once\n#include <array>\n#include <cassert>\n#include <climits>\n\
-    #include <cstdint>\n#include <vector>\n#include \"data_structure/fully_indexable_dictionary.hpp\"\
-    \n#include \"utils/macros.hpp\"\n\n\n/**\n * @brief Wavelet Matrix\n * @docs data_structure/wavelet_matrix.md\n\
-    \ * @tparam BITS express the range [0, 2^BITS) of values. You can assume BITS\
-    \ \\le \\log N, using coordinate compression\n * @see https://www.slideshare.net/pfi/ss-15916040\n\
-    \ */\ntemplate <int BITS>\nstruct wavelet_matrix {\n    static_assert (BITS <\
-    \ CHAR_BIT * sizeof(uint64_t), \"\");\n    std::array<fully_indexable_dictionary,\
-    \ BITS> fid;\n    std::array<int, BITS> zero_count;\n\n    wavelet_matrix() =\
-    \ default;\n    /**\n     * @note O(N BITS)\n     */\n    template <typename T>\n\
-    \    wavelet_matrix(std::vector<T> data) {\n        int size = data.size();\n\
-    \        REP (i, size) {\n            assert (0 <= data[i] and data[i] < (1ull\
-    \ << BITS));\n        }\n        // bit-inversed radix sort\n        std::vector<char>\
-    \ bits(size);\n        std::vector<T> next(size);\n        REP_R (k, BITS) {\n\
-    \            auto low  = next.begin();\n            auto high = next.rbegin();\n\
-    \            REP (i, size) {\n                bits[i] = bool(data[i] & (1ull <<\
-    \ k));\n                (bits[i] ? *(high ++) : *(low ++)) = data[i];\n      \
-    \      }\n            fid[k] = fully_indexable_dictionary(bits);\n           \
-    \ zero_count[k] = low - next.begin();\n            reverse(next.rbegin(), high);\n\
-    \            data.swap(next);\n        }\n    }\n\n    /**\n     * @brief count\
-    \ the occurrences of value in [l, r)\n     * @note O(BITS)\n     * @note even\
-    \ if l = 0, of course the final [l, r) is not always [0, r)\n     */\n    int\
-    \ rank(uint64_t value, int l, int r) const {\n        assert (0 <= value and value\
-    \ < (1ull << BITS));\n        assert (0 <= l and l <= r and r <= fid[0].size);\n\
+    #include <cstdint>\n#include <vector>\n#include \"../data_structure/fully_indexable_dictionary.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n\n\n/**\n * @brief Wavelet Matrix\n * @docs\
+    \ data_structure/wavelet_matrix.md\n * @tparam BITS express the range [0, 2^BITS)\
+    \ of values. You can assume BITS \\le \\log N, using coordinate compression\n\
+    \ * @see https://www.slideshare.net/pfi/ss-15916040\n */\ntemplate <int BITS>\n\
+    struct wavelet_matrix {\n    static_assert (BITS < CHAR_BIT * sizeof(uint64_t),\
+    \ \"\");\n    std::array<fully_indexable_dictionary, BITS> fid;\n    std::array<int,\
+    \ BITS> zero_count;\n\n    wavelet_matrix() = default;\n    /**\n     * @note\
+    \ O(N BITS)\n     */\n    template <typename T>\n    wavelet_matrix(std::vector<T>\
+    \ data) {\n        int size = data.size();\n        REP (i, size) {\n        \
+    \    assert (0 <= data[i] and data[i] < (1ull << BITS));\n        }\n        //\
+    \ bit-inversed radix sort\n        std::vector<char> bits(size);\n        std::vector<T>\
+    \ next(size);\n        REP_R (k, BITS) {\n            auto low  = next.begin();\n\
+    \            auto high = next.rbegin();\n            REP (i, size) {\n       \
+    \         bits[i] = bool(data[i] & (1ull << k));\n                (bits[i] ? *(high\
+    \ ++) : *(low ++)) = data[i];\n            }\n            fid[k] = fully_indexable_dictionary(bits);\n\
+    \            zero_count[k] = low - next.begin();\n            reverse(next.rbegin(),\
+    \ high);\n            data.swap(next);\n        }\n    }\n\n    /**\n     * @brief\
+    \ count the occurrences of value in [l, r)\n     * @note O(BITS)\n     * @note\
+    \ even if l = 0, of course the final [l, r) is not always [0, r)\n     */\n  \
+    \  int rank(uint64_t value, int l, int r) const {\n        assert (0 <= value\
+    \ and value < (1ull << BITS));\n        assert (0 <= l and l <= r and r <= fid[0].size);\n\
     \        REP_R (k, BITS) {\n            bool p = value & (1ull << k);\n      \
     \      l = fid[k].rank(p, l) + p * zero_count[k];\n            r = fid[k].rank(p,\
     \ r) + p * zero_count[k];\n        }\n        return r - l;\n    }\n    int rank(uint64_t\
@@ -244,8 +244,8 @@ data:
   isVerificationFile: false
   path: data_structure/wavelet_matrix.hpp
   requiredBy: []
-  timestamp: '2020-02-28 15:08:46+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data_structure/wavelet_matrix.aoj2674.test.cpp
   - data_structure/wavelet_matrix.rectangle_sum.test.cpp

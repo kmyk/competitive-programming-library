@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/quotient_graph.hpp
     title: graph/quotient_graph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/topological_sort.hpp
     title: topological sort
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'
@@ -19,9 +19,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/scc
@@ -92,9 +92,9 @@ data:
     \     printf(\"%d\", (int)component[a].size());\n        for (int i : component[a])\
     \ {\n            printf(\" %d\", i);\n        }\n        printf(\"\\n\");\n  \
     \  }\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/scc\"\n#include \"graph/strongly_connected_components.hpp\"\
-    \n#include \"graph/quotient_graph.hpp\"\n#include \"graph/topological_sort.hpp\"\
-    \n#include \"utils/macros.hpp\"\n#include <cassert>\n#include <cstdio>\n#include\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/scc\"\n#include \"../graph/strongly_connected_components.hpp\"\
+    \n#include \"../graph/quotient_graph.hpp\"\n#include \"../graph/topological_sort.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include <cassert>\n#include <cstdio>\n#include\
     \ <vector>\nusing namespace std;\n\nint main() {\n    // input\n    int n, m;\
     \ scanf(\"%d%d\", &n, &m);\n    vector<vector<int> > g(n);\n    REP (i, m) {\n\
     \        int a, b; scanf(\"%d%d\", &a, &b);\n        g[a].push_back(b);\n    }\n\
@@ -116,8 +116,8 @@ data:
   isVerificationFile: true
   path: graph/strongly_connected_components.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2021-06-19 02:41:52+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/strongly_connected_components.yosupo.test.cpp
 layout: document

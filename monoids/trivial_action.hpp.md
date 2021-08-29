@@ -19,7 +19,7 @@ data:
     \ segment_tree<Monoid>\n */\ntemplate <class T>\nstruct trivial_action {\n   \
     \ T operator () (typename trivial_monoid::value_type f, T x) const { return x;\
     \ }\n};\n"
-  code: "#pragma once\n#include \"monoids/trivial.hpp\"\n\n/**\n * @note lazy_propagation_segment_tree<Monoid,\
+  code: "#pragma once\n#include \"../monoids/trivial.hpp\"\n\n/**\n * @note lazy_propagation_segment_tree<Monoid,\
     \ trivial_monoid, trivial_action<typename Monoid::value_type> > is the same to\
     \ segment_tree<Monoid>\n */\ntemplate <class T>\nstruct trivial_action {\n   \
     \ T operator () (typename trivial_monoid::value_type f, T x) const { return x;\
@@ -29,7 +29,7 @@ data:
   isVerificationFile: false
   path: monoids/trivial_action.hpp
   requiredBy: []
-  timestamp: '2020-01-27 07:18:51+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: monoids/trivial_action.hpp

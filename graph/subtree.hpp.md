@@ -2,16 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/dsu_on_tree.aoj.test.cpp
     title: utils/dsu_on_tree.aoj.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\
       \u306E size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\
@@ -61,7 +61,7 @@ data:
   requiredBy:
   - utils/dsu_on_tree.hpp
   timestamp: '2019-12-15 04:15:59+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
 documentation_of: graph/subtree.hpp

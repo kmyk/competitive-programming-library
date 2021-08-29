@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose_simple.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
   - icon: ':question:'
@@ -13,14 +13,14 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.hpp
     title: number/primes.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes_extra.hpp
     title: number/primes_extra.hpp
   - icon: ':question:'
@@ -28,9 +28,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1659
@@ -149,8 +149,8 @@ data:
     \ N, K;\n    std::cin >> N >> K;\n    auto ans = solve(N, K);\n    std::cout <<\
     \ ans << '\\n';\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1659\"\n#include <iostream>\n\
-    #include \"utils/macros.hpp\"\n#include \"modulus/mint.hpp\"\n#include \"number/primes.hpp\"\
-    \n#include \"number/primes_extra.hpp\"\n#include \"modulus/multichoose_simple.hpp\"\
+    #include \"../utils/macros.hpp\"\n#include \"../modulus/mint.hpp\"\n#include \"\
+    ../number/primes.hpp\"\n#include \"../number/primes_extra.hpp\"\n#include \"../modulus/multichoose_simple.hpp\"\
     \nusing namespace std;\n\nprepared_primes primes(1e6 + 100);\n\nconstexpr int64_t\
     \ MOD = 1000000007;\nmint<MOD> solve(int64_t n, int64_t k) {\n    mint<MOD> ans\
     \ = 1;\n    for (auto [p, e] : list_prime_factors_as_map(primes, n)) {\n     \
@@ -173,8 +173,8 @@ data:
   isVerificationFile: true
   path: number/primes_extra.yukicoder-1659.test.cpp
   requiredBy: []
-  timestamp: '2021-08-29 20:27:34+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number/primes_extra.yukicoder-1659.test.cpp
 layout: document

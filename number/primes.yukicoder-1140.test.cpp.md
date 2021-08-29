@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.hpp
     title: number/primes.hpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1140
@@ -62,7 +62,7 @@ data:
     \ {\n        long long a; int p; scanf(\"%lld%d\", &a, &p);\n        auto ans\
     \ = solve(a, p);\n        printf(\"%d\\n\", ans);\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1140\"\n#include <cstdio>\n\
-    #include \"utils/macros.hpp\"\n#include \"number/primes.hpp\"\n\nprepared_primes\
+    #include \"../utils/macros.hpp\"\n#include \"../number/primes.hpp\"\n\nprepared_primes\
     \ primes(1e6 + 100);\n\nint solve(long long a, int p) {\n    if (not primes.is_prime(p))\
     \ return -1;\n    if (a % p == 0) return 0;\n    return 1;\n}\n\nint main() {\n\
     \    int t; scanf(\"%d\", &t);\n    while (t --) {\n        long long a; int p;\
@@ -74,8 +74,8 @@ data:
   isVerificationFile: true
   path: number/primes.yukicoder-1140.test.cpp
   requiredBy: []
-  timestamp: '2021-05-11 20:48:56+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number/primes.yukicoder-1140.test.cpp
 layout: document

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: hack/fastio_scanner_and_printer.yosupo.test.cpp
     title: hack/fastio_scanner_and_printer.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"hack/fastio_printer.hpp\"\n#include <algorithm>\n#include\
@@ -59,7 +59,7 @@ data:
   path: hack/fastio_printer.hpp
   requiredBy: []
   timestamp: '2020-03-04 16:58:19+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - hack/fastio_scanner_and_printer.yosupo.test.cpp
 documentation_of: hack/fastio_printer.hpp

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -20,24 +20,24 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/multichoose.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/permute.hpp
     title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ +\
       \ $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   - icon: ':question:'
@@ -45,9 +45,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E
@@ -212,7 +212,7 @@ data:
     \ n, k; cin >> n >> k;\n    cout << twelvefold_uli<MOD>(n, k) << endl;\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E\"\
-    \n#include <iostream>\n#include \"modulus/twelvefold_way.hpp\"\nusing namespace\
+    \n#include <iostream>\n#include \"../modulus/twelvefold_way.hpp\"\nusing namespace\
     \ std;\n\nconstexpr int MOD = 1e9 + 7;\nint main() {\n    int n, k; cin >> n >>\
     \ k;\n    cout << twelvefold_uli<MOD>(n, k) << endl;\n    return 0;\n}\n"
   dependsOn:
@@ -232,8 +232,8 @@ data:
   isVerificationFile: true
   path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
 layout: document

@@ -22,7 +22,7 @@ data:
     \ a semilattice\n */\ntemplate <class Integer>\nstruct gcd_monoid {\n    typedef\
     \ Integer value_type;\n    Integer unit() const { return 0; }\n    Integer mult(Integer\
     \ a, Integer b) const { return gcd(a, b); }\n};\n"
-  code: "#pragma once\n#include \"number/gcd.hpp\"\n\n/**\n * @note a semilattice\n\
+  code: "#pragma once\n#include \"../number/gcd.hpp\"\n\n/**\n * @note a semilattice\n\
     \ */\ntemplate <class Integer>\nstruct gcd_monoid {\n    typedef Integer value_type;\n\
     \    Integer unit() const { return 0; }\n    Integer mult(Integer a, Integer b)\
     \ const { return gcd(a, b); }\n};\n"
@@ -31,7 +31,7 @@ data:
   isVerificationFile: false
   path: monoids/gcd.hpp
   requiredBy: []
-  timestamp: '2020-04-24 23:33:38+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/sparse_table.yukicoder-1036.test.cpp

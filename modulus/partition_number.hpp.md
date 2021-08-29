@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -17,53 +17,53 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
     links: []
@@ -156,9 +156,9 @@ data:
     \ b);\n        }\n    }\n    return memo[n][k];\n}\n\ntemplate <int MOD>\nmint<MOD>\
     \ unary_partition_number(int n) {\n    return partition_number<MOD>(n, n);\n}\n\
     \n"
-  code: "#pragma once\n#include \"modulus/mint.hpp\"\n#include \"modulus/choose.hpp\"\
-    \n#include \"modulus/stirling_number_of_the_second_kind_table.hpp\"\n\n/**\n *\
-    \ @brief the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)\n * @description\
+  code: "#pragma once\n#include \"../modulus/mint.hpp\"\n#include \"../modulus/choose.hpp\"\
+    \n#include \"../modulus/stirling_number_of_the_second_kind_table.hpp\"\n\n/**\n\
+    \ * @brief the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)\n * @description\
     \ the number of non-decreasing sequences with the length k which the sum is n\n\
     \ */\ntemplate <int MOD>\nmint<MOD> partition_number(int n, int k) {\n    static\
     \ std::vector<std::vector<mint<MOD> > > memo;\n    if (memo.size() <= n) {\n \
@@ -182,8 +182,8 @@ data:
   path: modulus/partition_number.hpp
   requiredBy:
   - modulus/twelvefold_way.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

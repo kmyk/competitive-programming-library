@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
@@ -16,9 +16,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/discrete_logarithm_mod
@@ -68,10 +68,10 @@ data:
     \ (t --) {\n        int x, y, m; scanf(\"%d%d%d\", &x, &y, &m);\n        int k\
     \ = modlog(x, y, m);\n        printf(\"%d\\n\", k);\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/discrete_logarithm_mod\"\
-    \n#include \"modulus/modlog.hpp\"\n#include <cassert>\n#include <cstdio>\n#include\
-    \ <vector>\nusing namespace std;\n\nint main() {\n    int t; scanf(\"%d\", &t);\n\
-    \    while (t --) {\n        int x, y, m; scanf(\"%d%d%d\", &x, &y, &m);\n   \
-    \     int k = modlog(x, y, m);\n        printf(\"%d\\n\", k);\n    }\n    return\
+    \n#include \"../modulus/modlog.hpp\"\n#include <cassert>\n#include <cstdio>\n\
+    #include <vector>\nusing namespace std;\n\nint main() {\n    int t; scanf(\"%d\"\
+    , &t);\n    while (t --) {\n        int x, y, m; scanf(\"%d%d%d\", &x, &y, &m);\n\
+    \        int k = modlog(x, y, m);\n        printf(\"%d\\n\", k);\n    }\n    return\
     \ 0;\n}\n"
   dependsOn:
   - modulus/modlog.hpp
@@ -81,8 +81,8 @@ data:
   isVerificationFile: true
   path: modulus/modlog.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-06-16 07:51:56+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/modlog.yosupo.test.cpp
 layout: document

@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
   - icon: ':question:'
@@ -12,12 +12,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/cartesian_tree.yukicoder-1031.test.cpp
     title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log\
       \ n)$ + $O(1)$)"
@@ -74,8 +74,8 @@ data:
     \ = depth[parent[i]] + 1;\n            }\n        }\n\n        return left_to_right_maxima(depth);\n\
     \    }\n};\n"
   code: "#pragma once\n#include <stack>\n#include <tuple>\n#include <utility>\n#include\
-    \ <vector>\n#include \"utils/macros.hpp\"\n#include \"data_structure/sparse_table.hpp\"\
-    \n#include \"monoids/min.hpp\"\n\n/**\n * @brief Length of Left-to-right Maxima\
+    \ <vector>\n#include \"../utils/macros.hpp\"\n#include \"../data_structure/sparse_table.hpp\"\
+    \n#include \"../monoids/min.hpp\"\n\n/**\n * @brief Length of Left-to-right Maxima\
     \ (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)\n * @description computes the lengths\
     \ of the left-to-right maxima for the given interval\n * @note the left-to-right\
     \ maxima for a sequence $a$ means the subsubsequence of the elements $a_i$ which\
@@ -105,8 +105,8 @@ data:
   isVerificationFile: false
   path: utils/left_to_right_maxima.hpp
   requiredBy: []
-  timestamp: '2020-07-21 05:31:24+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: utils/left_to_right_maxima.hpp

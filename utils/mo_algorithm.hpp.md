@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utils/mo_algorithm.hpp\"\n#include <algorithm>\n#include\
@@ -58,7 +58,7 @@ data:
   path: utils/mo_algorithm.hpp
   requiredBy: []
   timestamp: '2020-10-23 23:22:52+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - utils/mo_algorithm.yuki1270.test.cpp
 documentation_of: utils/mo_algorithm.hpp

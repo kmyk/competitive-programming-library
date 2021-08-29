@@ -6,12 +6,12 @@ data:
     title: modulus/modpow.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/modsqrt.yosupo.test.cpp
     title: modulus/modsqrt.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: find the sqrt $b$ of $a$ modulo $p$
     links: []
@@ -35,7 +35,7 @@ data:
     \        z = modpow(z, 1ll << (e - j - 1), p);\n        x = x * z % p;\n     \
     \   z = z * z % p;\n        y = y * z % p;\n        e = j;\n    }\n    assert\
     \ (x * x % p == a);\n    return x;\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include <cstdint>\n#include \"modulus/modpow.hpp\"\
+  code: "#pragma once\n#include <cassert>\n#include <cstdint>\n#include \"../modulus/modpow.hpp\"\
     \n\n/**\n * @brief find the sqrt $b$ of $a$ modulo $p$\n * @param p must be a\
     \ prime\n * @note i.e. $b^2 \\equiv a \\pmod{p}$\n * @note -1 if not found\n */\n\
     int modsqrt(int a, int p) {\n    auto legendre_symbol = [&](int a) {\n       \
@@ -55,8 +55,8 @@ data:
   isVerificationFile: false
   path: modulus/modsqrt.hpp
   requiredBy: []
-  timestamp: '2020-06-16 07:51:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/modsqrt.yosupo.test.cpp
 documentation_of: modulus/modsqrt.hpp

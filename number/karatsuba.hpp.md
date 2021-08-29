@@ -38,7 +38,7 @@ data:
     \ {\n        if (half + i < (int)z.size()) z[half + i] -= dz[i];\n    }\n    REP\
     \ (i, z2.size()) {\n        z[half + i] += z2[i];\n        if (2 * half + i <\
     \ (int)z.size()) z[2 * half + i] += z2[i];\n    }\n    return z;\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"utils/macros.hpp\"\
+  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"../utils/macros.hpp\"\
     \n\n/**\n * @brief Karatsuba method ($O(n^{\\log_2 3})$)\n */\ntemplate <class\
     \ CommutativeRing>\nstd::vector<CommutativeRing> karatsuba_convolution(const std::vector<CommutativeRing>\
     \ & x, const std::vector<CommutativeRing> & y) {\n    int n = x.size();\n    int\
@@ -65,7 +65,7 @@ data:
   isVerificationFile: false
   path: number/karatsuba.hpp
   requiredBy: []
-  timestamp: '2020-08-11 20:59:07+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: number/karatsuba.hpp

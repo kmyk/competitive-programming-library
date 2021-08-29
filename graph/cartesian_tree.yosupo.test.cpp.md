@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/cartesian_tree.hpp
     title: Cartesian tree ($O(n)$)
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/cartesian_tree
@@ -42,7 +42,7 @@ data:
     \ (i, n) {\n        printf(\"%d%c\", p[i] == -1 ? i : p[i], i + 1 < n ? ' ' :\
     \ '\\n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/cartesian_tree\"\n#include\
-    \ <cstdio>\n#include <vector>\n#include \"utils/macros.hpp\"\n#include \"graph/cartesian_tree.hpp\"\
+    \ <cstdio>\n#include <vector>\n#include \"../utils/macros.hpp\"\n#include \"../graph/cartesian_tree.hpp\"\
     \n\nint main(){\n    // input\n    int n; scanf(\"%d\", &n);\n    std::vector<int>\
     \ a(n);\n    REP (i, n) {\n        scanf(\"%d\", &a[i]);\n    }\n\n    // solve\n\
     \    std::vector<int> p = construct_cartesian_tree(a);\n\n    // output\n    REP\
@@ -54,8 +54,8 @@ data:
   isVerificationFile: true
   path: graph/cartesian_tree.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-08-01 15:41:36+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/cartesian_tree.yosupo.test.cpp
 layout: document

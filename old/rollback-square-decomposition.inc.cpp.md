@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: the extended Mo's algorithm
     links:
@@ -64,7 +64,7 @@ data:
   path: old/rollback-square-decomposition.inc.cpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
 documentation_of: old/rollback-square-decomposition.inc.cpp

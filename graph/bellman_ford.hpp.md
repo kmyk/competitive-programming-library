@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/bellman_ford.test.cpp
     title: graph/bellman_ford.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: Bellman-Ford algorithm
     links: []
@@ -41,7 +41,7 @@ data:
     \    }\n\n    return dist;\n}\n"
   code: "#pragma once\n#include <cassert>\n#include <climits>\n#include <cstdint>\n\
     #include <stack>\n#include <tuple>\n#include <utility>\n#include <vector>\n#include\
-    \ \"utils/macros.hpp\"\n\n/**\n * @brief Bellman-Ford algorithm\n * @note O(V\
+    \ \"../utils/macros.hpp\"\n\n/**\n * @brief Bellman-Ford algorithm\n * @note O(V\
     \ E)\n * @arg g is a digraph with possibly negative cost edges\n * @note INT64_MIN\
     \ for negative loops\n * @note INT64_MAX for unreachable nodes\n */\nstd::vector<int64_t>\
     \ bellman_ford_shortest_path(int root, std::vector<std::vector<std::pair<int,\
@@ -64,8 +64,8 @@ data:
   isVerificationFile: false
   path: graph/bellman_ford.hpp
   requiredBy: []
-  timestamp: '2019-12-20 06:12:24+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/bellman_ford.test.cpp
 documentation_of: graph/bellman_ford.hpp

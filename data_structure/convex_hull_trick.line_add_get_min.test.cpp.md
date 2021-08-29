@@ -80,22 +80,22 @@ data:
     \        } else {\n            assert (false);\n        }\n    }\n    return 0;\n\
     }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/line_add_get_min\"\n#include\
-    \ \"data_structure/convex_hull_trick.hpp\"\n#include \"utils/macros.hpp\"\n#include\
-    \ <cstdio>\n\nint main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n    convex_hull_trick\
-    \ cht;\n    REP (i, n) {\n        int64_t a, b; scanf(\"%lld%lld\", &a, &b);\n\
-    \        cht.add_line(a, b);\n    }\n    while (q --) {\n        int t; scanf(\"\
-    %d\", &t);\n        if (t == 0) {\n            int64_t a, b; scanf(\"%lld%lld\"\
-    , &a, &b);\n            cht.add_line(a, b);\n        } else if (t == 1) {\n  \
-    \          int64_t p; scanf(\"%lld\", &p);\n            printf(\"%lld\\n\", cht.get_min(p));\n\
-    \        } else {\n            assert (false);\n        }\n    }\n    return 0;\n\
-    }\n"
+    \ \"../data_structure/convex_hull_trick.hpp\"\n#include \"../utils/macros.hpp\"\
+    \n#include <cstdio>\n\nint main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n\
+    \    convex_hull_trick cht;\n    REP (i, n) {\n        int64_t a, b; scanf(\"\
+    %lld%lld\", &a, &b);\n        cht.add_line(a, b);\n    }\n    while (q --) {\n\
+    \        int t; scanf(\"%d\", &t);\n        if (t == 0) {\n            int64_t\
+    \ a, b; scanf(\"%lld%lld\", &a, &b);\n            cht.add_line(a, b);\n      \
+    \  } else if (t == 1) {\n            int64_t p; scanf(\"%lld\", &p);\n       \
+    \     printf(\"%lld\\n\", cht.get_min(p));\n        } else {\n            assert\
+    \ (false);\n        }\n    }\n    return 0;\n}\n"
   dependsOn:
   - data_structure/convex_hull_trick.hpp
   - utils/macros.hpp
   isVerificationFile: true
   path: data_structure/convex_hull_trick.line_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2020-02-28 14:33:39+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/convex_hull_trick.line_add_get_min.test.cpp

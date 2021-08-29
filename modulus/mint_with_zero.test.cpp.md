@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/mint_with_zero.hpp
     title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
       \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
@@ -19,9 +19,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/arc117/tasks/arc117_c
@@ -119,7 +119,7 @@ data:
     \ << std::endl;\n    return 0;\n}\n\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/arc117/tasks/arc117_c\"\n#include\
     \ <array>\n#include <cassert>\n#include <iostream>\n#include <vector>\n#include\
-    \ \"utils/macros.hpp\"\n#include \"modulus/mint.hpp\"\n#include \"modulus/mint_with_zero.hpp\"\
+    \ \"../utils/macros.hpp\"\n#include \"../modulus/mint.hpp\"\n#include \"../modulus/mint_with_zero.hpp\"\
     \nusing namespace std;\n\nint solve(int n, const std::vector<int>& a) {\n    std::vector<zmint<3>\
     \ > fact(n + 1);\n    fact[0] = 1;\n    REP (i, n) {\n        fact[i + 1] = (i\
     \ + 1) * fact[i];\n    }\n    auto choose = [&](int n, int r) {\n        return\
@@ -141,8 +141,8 @@ data:
   isVerificationFile: true
   path: modulus/mint_with_zero.test.cpp
   requiredBy: []
-  timestamp: '2021-04-23 11:00:27+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/mint_with_zero.test.cpp
 layout: document

@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: topological sort
     links: []
@@ -33,8 +33,8 @@ data:
     \    };\n    REP (i, n) if (not used[i]) {\n        if (go(i)) return std::vector<int>();\n\
     \    }\n    std::reverse(ALL(order));\n    return order;\n}\n"
   code: "#pragma once\n#include <algorithm>\n#include <functional>\n#include <vector>\n\
-    #include \"utils/macros.hpp\"\n\n/**\n * @brief topological sort\n * @return a\
-    \ list of vertices which sorted topologically\n * @note the empty list is returned\
+    #include \"../utils/macros.hpp\"\n\n/**\n * @brief topological sort\n * @return\
+    \ a list of vertices which sorted topologically\n * @note the empty list is returned\
     \ if cycles exist\n * @note $O(V + E)$\n */\nstd::vector<int> topological_sort(const\
     \ std::vector<std::vector<int> > & g) {\n    int n = g.size();\n    std::vector<int>\
     \ order;\n    std::vector<char> used(n);\n    std::function<bool (int)> go = [&](int\
@@ -49,8 +49,8 @@ data:
   isVerificationFile: false
   path: graph/topological_sort.hpp
   requiredBy: []
-  timestamp: '2020-02-22 23:03:03+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
 documentation_of: graph/topological_sort.hpp

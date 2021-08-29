@@ -10,7 +10,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':question:'
@@ -18,21 +18,21 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0\
       \ $\\mathbb{Z}/n\\mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
@@ -208,15 +208,15 @@ data:
     }\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n\
     #include <initializer_list>\n#include <tuple>\n#include <vector>\n#include \"\
-    modulus/mint.hpp\"\n#include \"modulus/number_theoretic_transformation.hpp\"\n\
-    #include \"utils/macros.hpp\"\n\n/**\n * @brief formal power series / \u5F62\u5F0F\
-    \u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\mathbb{Z}\\lbrack\\lbrack x\\rbrack\\\
-    rbrack$\n */\ntemplate <class T>\nstruct formal_power_series {\n    std::vector<T>\
-    \ a;\n\n    inline size_t size() const { return a.size(); }\n    inline bool empty()\
-    \ const { return a.empty(); }\n    inline T at(int i) const { return (i < size()\
-    \ ? a[i] : T(0)); }\n    inline const std::vector<T> & data() const { return a;\
-    \ }\n\n    formal_power_series() = default;\n    formal_power_series(const std::vector<T>\
-    \ & a_) : a(a_) { shrink(); }\n    formal_power_series(const std::initializer_list<T>\
+    ../modulus/mint.hpp\"\n#include \"../modulus/number_theoretic_transformation.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n\n/**\n * @brief formal power series / \u5F62\
+    \u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\mathbb{Z}\\lbrack\\lbrack\
+    \ x\\rbrack\\rbrack$\n */\ntemplate <class T>\nstruct formal_power_series {\n\
+    \    std::vector<T> a;\n\n    inline size_t size() const { return a.size(); }\n\
+    \    inline bool empty() const { return a.empty(); }\n    inline T at(int i) const\
+    \ { return (i < size() ? a[i] : T(0)); }\n    inline const std::vector<T> & data()\
+    \ const { return a; }\n\n    formal_power_series() = default;\n    formal_power_series(const\
+    \ std::vector<T> & a_) : a(a_) { shrink(); }\n    formal_power_series(const std::initializer_list<T>\
     \ & init) : a(init) { shrink(); }\n    template <class Iterator>\n    formal_power_series(Iterator\
     \ first, Iterator last) : a(first, last) { shrink(); }\n    void shrink() { while\
     \ (not a.empty() and a.back().value == 0) a.pop_back(); }\n\n    inline formal_power_series<T>\
@@ -277,8 +277,8 @@ data:
   isVerificationFile: false
   path: modulus/formal_power_series.hpp
   requiredBy: []
-  timestamp: '2020-08-01 00:51:48+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/formal_power_series.inv.test.cpp
   - modulus/formal_power_series.exp.test.cpp

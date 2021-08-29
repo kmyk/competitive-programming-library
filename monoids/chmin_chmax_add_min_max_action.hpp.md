@@ -46,7 +46,7 @@ data:
     \ + x.first));\n        T b = std::min(f.chmin, std::max(f.chmax, f.add + x.second));\n\
     \        return std::make_pair(a, b);\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <numeric>\n\
-    #include <utility>\n#include \"monoids/chmin_chmax_add.hpp\"\n#include \"monoids/min_max.hpp\"\
+    #include <utility>\n#include \"../monoids/chmin_chmax_add.hpp\"\n#include \"../monoids/min_max.hpp\"\
     \n\ntemplate <class T>\nstruct chmin_chmax_add_min_max_action {\n    typedef typename\
     \ chmin_chmax_add_monoid<T>::value_type F;\n    typedef typename min_max_monoid<T>::value_type\
     \ X;\n    X operator () (F f, X x) const {\n        if (x.first == std::numeric_limits<T>::max())\
@@ -60,7 +60,7 @@ data:
   isVerificationFile: false
   path: monoids/chmin_chmax_add_min_max_action.hpp
   requiredBy: []
-  timestamp: '2020-01-08 14:04:37+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: monoids/chmin_chmax_add_min_max_action.hpp

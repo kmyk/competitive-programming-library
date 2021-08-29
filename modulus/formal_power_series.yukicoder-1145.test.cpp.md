@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
@@ -14,7 +14,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':question:'
@@ -22,9 +22,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1145
@@ -214,8 +214,8 @@ data:
     \ m) {\n        printf(\"%d%c\", ans[i + 1].value, i + 1 < m ? ' ' : '\\n');\n\
     \    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1145\"\n#include <cstdio>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n#include \"modulus/mint.hpp\"\
-    \n#include \"modulus/formal_power_series.hpp\"\nusing namespace std;\n\nconstexpr\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n#include \"../modulus/mint.hpp\"\
+    \n#include \"../modulus/formal_power_series.hpp\"\nusing namespace std;\n\nconstexpr\
     \ int MOD = 998244353;\nvector<mint<MOD> > solve(int n, int m, const vector<mint<MOD>\
     \ > & a) {\n    auto go = [&](auto && go, int l, int r) {\n        if (r - l ==\
     \ 0) return formal_power_series<mint<MOD> >{ 1 };\n        if (r - l == 1) return\
@@ -238,8 +238,8 @@ data:
   isVerificationFile: true
   path: modulus/formal_power_series.yukicoder-1145.test.cpp
   requiredBy: []
-  timestamp: '2020-08-01 00:51:48+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/formal_power_series.yukicoder-1145.test.cpp
 layout: document

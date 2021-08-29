@@ -10,7 +10,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/fast_fourier_transformation.hpp
     title: FFT convolution
   - icon: ':question:'
@@ -18,9 +18,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/856
@@ -132,9 +132,9 @@ data:
     \ REP (i, n) {\n        cin >> a[i];\n    }\n    auto ans = solve(n, a);\n   \
     \ cout << ans << endl;\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/856\"\n#include <algorithm>\n\
-    #include <iostream>\n#include <vector>\n#include \"utils/macros.hpp\"\n#include\
-    \ \"modulus/mint.hpp\"\n#include \"number/fast_fourier_transformation.hpp\"\n\
-    using namespace std;\n\nconstexpr int64_t MOD = 1000000007;\n\nmint<MOD> solve(int\
+    #include <iostream>\n#include <vector>\n#include \"../utils/macros.hpp\"\n#include\
+    \ \"../modulus/mint.hpp\"\n#include \"../number/fast_fourier_transformation.hpp\"\
+    \nusing namespace std;\n\nconstexpr int64_t MOD = 1000000007;\n\nmint<MOD> solve(int\
     \ n, const vector<int> &a) {\n    // \\prod_i \\prod_{j > i} (A_i + A_j)\n   \
     \ mint<MOD> x = 1;\n    {\n        int max_a = *max_element(ALL(a));\n       \
     \ vector<long double> cnt(max_a + 1);\n        for (int a_i : a) {\n         \
@@ -164,8 +164,8 @@ data:
   isVerificationFile: true
   path: number/fast_fourier_transformation.yukicoder-856.test.cpp
   requiredBy: []
-  timestamp: '2020-08-11 20:59:07+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number/fast_fourier_transformation.yukicoder-856.test.cpp
 layout: document

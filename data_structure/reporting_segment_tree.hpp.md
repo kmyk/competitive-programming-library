@@ -58,8 +58,8 @@ data:
     \ ++ it) {\n                remove(*it);\n            }\n        };\n        dfs(0,\
     \ 0, size);\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <functional>\n\
-    #include <type_traits>\n#include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n\
-    \ * @brief Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
+    #include <type_traits>\n#include <vector>\n#include \"../utils/macros.hpp\"\n\n\
+    /**\n * @brief Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
     \ (\u5217\u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)\n * @note This\
     \ tree is very similar to the Bentley's original segment tree.\n */\ntemplate\
     \ <class Key>\nstruct reporting_segment_tree {\n    int size;\n    std::vector<std::vector<Key>\
@@ -96,7 +96,7 @@ data:
   path: data_structure/reporting_segment_tree.hpp
   requiredBy:
   - data_structure/dynamic_connectivity_offline.hpp
-  timestamp: '2020-03-08 03:44:30+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp

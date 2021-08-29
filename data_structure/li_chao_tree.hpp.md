@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
     title: data_structure/li_chao_tree.segment_add_get_min.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: data_structure/li_chao_tree.md
     document_title: Li-Chao tree
@@ -79,9 +79,9 @@ data:
     \ * i + 1, il, (il + ir) / 2, l, r, a, b);\n            add_segment_compressed(2\
     \ * i + 2, (il + ir) / 2, ir, l, r, a, b);\n        }\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <utility>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n * @brief Li-Chao tree\n\
-    \ * @docs data_structure/li_chao_tree.md\n */\nstruct li_chao_tree {\n    int\
-    \ k;\n    std::vector<std::pair<int64_t, int64_t> > f;\n    std::vector<int64_t>\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n * @brief Li-Chao\
+    \ tree\n * @docs data_structure/li_chao_tree.md\n */\nstruct li_chao_tree {\n\
+    \    int k;\n    std::vector<std::pair<int64_t, int64_t> > f;\n    std::vector<int64_t>\
     \ x;\n    std::vector<int64_t> y;\n    li_chao_tree() = default;\n    li_chao_tree(const\
     \ std::vector<int64_t> & x_) : x(x_) {\n        assert (std::is_sorted(ALL(x)));\n\
     \        k = 0; while ((1 << k) < x.size()) ++ k;\n        f.resize((1 << k) -\
@@ -140,8 +140,8 @@ data:
   isVerificationFile: false
   path: data_structure/li_chao_tree.hpp
   requiredBy: []
-  timestamp: '2020-01-08 19:38:32+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - data_structure/li_chao_tree.segment_add_get_min.test.cpp
 documentation_of: data_structure/li_chao_tree.hpp

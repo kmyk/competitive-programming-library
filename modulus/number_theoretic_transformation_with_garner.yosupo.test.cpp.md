@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   - icon: ':question:'
@@ -13,10 +13,10 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
   - icon: ':question:'
@@ -24,9 +24,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/convolution_mod_1000000007
@@ -194,10 +194,10 @@ data:
     \ // solve\n    std::vector<mint<MOD> > c = ntt_convolution(a, b);\n\n    // output\n\
     \    REP (i, n + m - 1) {\n        out<uint32_t>(c[i].value);\n        out<char>('\
     \ ');\n    }\n    out<char>('\\n');\n    return 0;\n}\n"
-  code: "#include \"modulus/number_theoretic_transformation_with_garner.hpp\"\n#define\
-    \ PROBLEM \"https://judge.yosupo.jp/problem/convolution_mod_1000000007\"\n\n#include\
-    \ <vector>\n#include \"utils/macros.hpp\"\n#include \"hack/fastio.hpp\"\n\nconstexpr\
-    \ int MOD = 1000000007;\nint main() {\n    // input\n    int n = in<uint32_t>();\n\
+  code: "#include \"../modulus/number_theoretic_transformation_with_garner.hpp\"\n\
+    #define PROBLEM \"https://judge.yosupo.jp/problem/convolution_mod_1000000007\"\
+    \n\n#include <vector>\n#include \"../utils/macros.hpp\"\n#include \"../hack/fastio.hpp\"\
+    \n\nconstexpr int MOD = 1000000007;\nint main() {\n    // input\n    int n = in<uint32_t>();\n\
     \    int m = in<uint32_t>();\n    std::vector<mint<MOD> > a(n);\n    REP (i, n)\
     \ {\n        a[i].value = in<uint32_t>();\n    }\n    std::vector<mint<MOD> >\
     \ b(m);\n    REP (j, m) {\n        b[j].value = in<uint32_t>();\n    }\n\n   \
@@ -215,8 +215,8 @@ data:
   isVerificationFile: true
   path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
 layout: document

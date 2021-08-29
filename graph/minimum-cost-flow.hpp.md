@@ -69,12 +69,12 @@ data:
     \  // reference\n            e.cap -= delta;\n            graph[v][e.rev].cap\
     \ += delta;\n        }\n    }\n    return result;\n}\n\n}\n"
   code: "#pragma once\n#include <numeric>\n#include <queue>\n#include <utility>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n\nnamespace min_cost_flow {\n\
-    \ntemplate <class T>\nstruct edge { int to; T cap, cost; int rev; };\n\ntemplate\
-    \ <class T>\nvoid add_edge(std::vector<std::vector<edge<T> > > & graph, int from,\
-    \ int to, T cap, T cost) {\n    graph[from].push_back((edge<T>) {   to, cap, \
-    \ cost, int(graph[  to].size())     });\n    graph[  to].push_back((edge<T>) {\
-    \ from,  0, - cost, int(graph[from].size()) - 1 });\n}\n\ntemplate <class T>\n\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n\nnamespace min_cost_flow\
+    \ {\n\ntemplate <class T>\nstruct edge { int to; T cap, cost; int rev; };\n\n\
+    template <class T>\nvoid add_edge(std::vector<std::vector<edge<T> > > & graph,\
+    \ int from, int to, T cap, T cost) {\n    graph[from].push_back((edge<T>) {  \
+    \ to, cap,  cost, int(graph[  to].size())     });\n    graph[  to].push_back((edge<T>)\
+    \ { from,  0, - cost, int(graph[from].size()) - 1 });\n}\n\ntemplate <class T>\n\
     using reversed_priority_queue = std::priority_queue<T, std::vector<T>, std::greater<T>\
     \ >;\n\n/**\n * @brief minimum cost flow / \u6700\u5C0F\u8CBB\u7528\u6D41 (primal-dual)\n\
     \ * @note mainly $O(V^2 U C)$ for U is the sum of capacities and $C$ is the sum\
@@ -125,7 +125,7 @@ data:
   isVerificationFile: false
   path: graph/minimum-cost-flow.hpp
   requiredBy: []
-  timestamp: '2021-04-02 23:57:54+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/minimum-cost-flow.hpp

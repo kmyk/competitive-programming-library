@@ -14,52 +14,52 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$\
       \ + $O(1)$)"
@@ -131,10 +131,10 @@ data:
     \        }\n    }\n    if (memo[n][k]) return memo[n][k];\n    return memo[n][k]\
     \ =\n        stirling_number_of_the_second_kind_table<MOD>(n - 1, k - 1) +\n \
     \       stirling_number_of_the_second_kind_table<MOD>(n - 1, k) * k;\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"utils/macros.hpp\"\
-    \n#include \"modulus/mint.hpp\"\n\n/**\n * @brief the Stirling number of the second\
-    \ kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)\n * @description the number of ways\
-    \ of partitioning a set of n elements into k nonempty sets\n * @see http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html\n\
+  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"../utils/macros.hpp\"\
+    \n#include \"../modulus/mint.hpp\"\n\n/**\n * @brief the Stirling number of the\
+    \ second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)\n * @description the number\
+    \ of ways of partitioning a set of n elements into k nonempty sets\n * @see http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html\n\
     \ * @see http://oeis.org/A008277\n * @see https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%95%B0#.E7.AC.AC2.E7.A8.AE.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.AA.E3.83.B3.E3.82.B0.E6.95.B0\n\
     \ */\ntemplate <int MOD>\nmint<MOD> stirling_number_of_the_second_kind_table(int\
     \ n, int k) {\n    assert (0 <= n and 0 <= k);\n    if (n  < k) return 0;\n  \
@@ -155,8 +155,8 @@ data:
   - modulus/bell_number.hpp
   - modulus/partition_number.hpp
   - modulus/twelvefold_way.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

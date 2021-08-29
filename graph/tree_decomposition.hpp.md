@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/tree_decomposition.aoj_2405.test.cpp
     title: graph/tree_decomposition.aoj_2405.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: graph/tree_decomposition.md
     document_title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
@@ -105,7 +105,7 @@ data:
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdio>\n\
     #include <cstdint>\n#include <functional>\n#include <set>\n#include <stack>\n\
     #include <tuple>\n#include <unordered_set>\n#include <utility>\n#include <vector>\n\
-    #include \"utils/macros.hpp\"\n\n/**\n * @brief \u6728\u5206\u89E3 (\u6728\u5E45\
+    #include \"../utils/macros.hpp\"\n\n/**\n * @brief \u6728\u5206\u89E3 (\u6728\u5E45\
     \ $t \\le 2$)\n * @docs graph/tree_decomposition.md\n * @note $O(N)$ ?\n * @see\
     \ https://ei1333.hateblo.jp/entry/2020/02/12/150319\n * @arg g is a simple connected\
     \ graph $G = (V, E)$ whose treewidth $t \\le 2$\n * @return a decomposed tree\
@@ -188,8 +188,8 @@ data:
   isVerificationFile: false
   path: graph/tree_decomposition.hpp
   requiredBy: []
-  timestamp: '2020-02-21 10:52:58+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/tree_decomposition.aoj_2405.test.cpp
 documentation_of: graph/tree_decomposition.hpp

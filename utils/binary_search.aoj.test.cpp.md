@@ -4,6 +4,9 @@ data:
   - icon: ':x:'
     path: utils/binary_search.hpp
     title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
+  - icon: ':x:'
+    path: utils/binary_search_max.hpp
+    title: utils/binary_search_max.hpp
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
@@ -25,12 +28,17 @@ data:
     \ UnaryPredicate>\nint64_t binsearch(int64_t l, int64_t r, UnaryPredicate p) {\n\
     \    assert (l <= r);\n    -- l;\n    while (r - l > 1) {\n        int64_t m =\
     \ l + (r - l) / 2;\n        (p(m) ? r : l) = m;\n    }\n    return r;\n}\n#line\
-    \ 3 \"utils/binary_search.aoj.test.cpp\"\n\n#line 6 \"utils/binary_search.aoj.test.cpp\"\
+    \ 4 \"utils/binary_search_max.hpp\"\n\n/**\n * @return $\\max \\lbrace x \\in\
+    \ (l, r] \\mid p(x) \\rbrace$, or l if it doesn't exist\n */\ntemplate <typename\
+    \ UnaryPredicate>\nint64_t binsearch_max(int64_t l, int64_t r, UnaryPredicate\
+    \ p) {\n    assert (l <= r);\n    ++ r;\n    while (r - l > 1) {\n        int64_t\
+    \ m = l + (r - l) / 2;\n        (p(m) ? l : r) = m;\n    }\n    return l;\n}\n\
+    #line 4 \"utils/binary_search.aoj.test.cpp\"\n\n#line 7 \"utils/binary_search.aoj.test.cpp\"\
     \n#include <iostream>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define\
     \ REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for\
     \ (int i = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i = (int)(n)\
     \ - 1; (i) >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i)\
-    \ >= (int)(m); -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line 9 \"\
+    \ >= (int)(m); -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line 10 \"\
     utils/binary_search.aoj.test.cpp\"\nusing namespace std;\n\nint main() {\n   \
     \ int n; cin >> n;\n    vector<int> s(n);\n    REP (i, n) {\n        cin >> s[i];\n\
     \    }\n\n    int q; cin >> q;\n    int64_t cnt = 0;\n    while (q --) {\n   \
@@ -40,22 +48,24 @@ data:
     \ s[i] <= t_i;\n        });\n        assert ((l < n and s[l] == t_i) == (l <=\
     \ r));\n    }\n\n    cout << cnt << endl;\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B\"\
-    \n#include \"utils/binary_search.hpp\"\n\n#include <cassert>\n#include <cstdint>\n\
-    #include <iostream>\n#include <vector>\n#include \"utils/macros.hpp\"\nusing namespace\
-    \ std;\n\nint main() {\n    int n; cin >> n;\n    vector<int> s(n);\n    REP (i,\
-    \ n) {\n        cin >> s[i];\n    }\n\n    int q; cin >> q;\n    int64_t cnt =\
-    \ 0;\n    while (q --) {\n        int t_i; cin >> t_i;\n        int l = binsearch(0,\
-    \ n, [&](int i) {\n            return s[i] >= t_i;\n        });\n        cnt +=\
-    \ (l < n and s[l] == t_i);\n\n        int r = binsearch_max(0, n, [&](int i) {\n\
-    \            return s[i] <= t_i;\n        });\n        assert ((l < n and s[l]\
-    \ == t_i) == (l <= r));\n    }\n\n    cout << cnt << endl;\n    return 0;\n}\n"
+    \n#include \"../utils/binary_search.hpp\"\n#include \"../utils/binary_search_max.hpp\"\
+    \n\n#include <cassert>\n#include <cstdint>\n#include <iostream>\n#include <vector>\n\
+    #include \"../utils/macros.hpp\"\nusing namespace std;\n\nint main() {\n    int\
+    \ n; cin >> n;\n    vector<int> s(n);\n    REP (i, n) {\n        cin >> s[i];\n\
+    \    }\n\n    int q; cin >> q;\n    int64_t cnt = 0;\n    while (q --) {\n   \
+    \     int t_i; cin >> t_i;\n        int l = binsearch(0, n, [&](int i) {\n   \
+    \         return s[i] >= t_i;\n        });\n        cnt += (l < n and s[l] ==\
+    \ t_i);\n\n        int r = binsearch_max(0, n, [&](int i) {\n            return\
+    \ s[i] <= t_i;\n        });\n        assert ((l < n and s[l] == t_i) == (l <=\
+    \ r));\n    }\n\n    cout << cnt << endl;\n    return 0;\n}\n"
   dependsOn:
   - utils/binary_search.hpp
+  - utils/binary_search_max.hpp
   - utils/macros.hpp
   isVerificationFile: true
   path: utils/binary_search.aoj.test.cpp
   requiredBy: []
-  timestamp: '2021-08-29 20:28:15+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: utils/binary_search.aoj.test.cpp

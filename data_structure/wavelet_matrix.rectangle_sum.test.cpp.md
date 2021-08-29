@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/coordinate_compression.hpp
     title: utils/coordinate_compression.hpp
   - icon: ':question:'
@@ -15,9 +15,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/rectangle_sum
@@ -190,10 +190,10 @@ data:
     \    REP (i, q) {\n        printf(\"%lld\\n\", answer[i]);\n    }\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/rectangle_sum\"\n#include\
-    \ \"data_structure/wavelet_matrix.hpp\"\n#include \"utils/macros.hpp\"\n#include\
-    \ \"utils/coordinate_compression.hpp\"\n#include <cstdint>\n#include <cstdio>\n\
-    #include <numeric>\nusing namespace std;\n\nint main() {\n    // read points\n\
-    \    int n, q; scanf(\"%d%d\", &n, &q);\n    vector<int> x(n);\n    vector<int>\
+    \ \"../data_structure/wavelet_matrix.hpp\"\n#include \"../utils/macros.hpp\"\n\
+    #include \"../utils/coordinate_compression.hpp\"\n#include <cstdint>\n#include\
+    \ <cstdio>\n#include <numeric>\nusing namespace std;\n\nint main() {\n    // read\
+    \ points\n    int n, q; scanf(\"%d%d\", &n, &q);\n    vector<int> x(n);\n    vector<int>\
     \ y(n);\n    vector<long long> w(n);\n    REP (i, n) {\n        scanf(\"%d%d%lld\"\
     , &x[i], &y[i], &w[i]);\n    }\n\n    // coordinate compression (not so important,\
     \ 0.5 sec faster)\n    coordinate_compression<int> compress_x(ALL(x));\n    coordinate_compression<int>\
@@ -228,8 +228,8 @@ data:
   isVerificationFile: true
   path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-02-28 15:08:46+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.rectangle_sum.test.cpp
 layout: document

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
@@ -145,17 +145,18 @@ data:
     \            printf(\"%d\\n\", (a * z + b).value);\n        }\n    }\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
-    \n#include \"data_structure/segment_tree.hpp\"\n#include \"monoids/linear_function.hpp\"\
-    \n#include \"monoids/dual.hpp\"\n#include \"modulus/mint.hpp\"\n#include \"utils/macros.hpp\"\
-    \n#include <cstdint>\n#include <tuple>\nusing namespace std;\n\nconstexpr int\
-    \ MOD = 998244353;\nint main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n   \
-    \ segment_tree<dual_monoid<linear_function_monoid<mint<MOD> > > > segtree(n);\n\
-    \    REP (i, n) {\n        int a, b; scanf(\"%d%d\", &a, &b);\n        segtree.point_set(i,\
-    \ make_pair(a, b));\n    }\n    while (q --) {\n        int f, x, y, z; scanf(\"\
-    %d%d%d%d\", &f, &x, &y, &z);\n        if (f == 0) {\n            segtree.point_set(x,\
-    \ make_pair(y, z));\n        } else if (f == 1) {\n            mint<MOD> a, b;\
-    \ tie(a, b) = segtree.range_get(x, y);\n            printf(\"%d\\n\", (a * z +\
-    \ b).value);\n        }\n    }\n    return 0;\n}\n"
+    \n#include \"../data_structure/segment_tree.hpp\"\n#include \"../monoids/linear_function.hpp\"\
+    \n#include \"../monoids/dual.hpp\"\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../utils/macros.hpp\"\n#include <cstdint>\n#include <tuple>\nusing namespace\
+    \ std;\n\nconstexpr int MOD = 998244353;\nint main() {\n    int n, q; scanf(\"\
+    %d%d\", &n, &q);\n    segment_tree<dual_monoid<linear_function_monoid<mint<MOD>\
+    \ > > > segtree(n);\n    REP (i, n) {\n        int a, b; scanf(\"%d%d\", &a, &b);\n\
+    \        segtree.point_set(i, make_pair(a, b));\n    }\n    while (q --) {\n \
+    \       int f, x, y, z; scanf(\"%d%d%d%d\", &f, &x, &y, &z);\n        if (f ==\
+    \ 0) {\n            segtree.point_set(x, make_pair(y, z));\n        } else if\
+    \ (f == 1) {\n            mint<MOD> a, b; tie(a, b) = segtree.range_get(x, y);\n\
+    \            printf(\"%d\\n\", (a * z + b).value);\n        }\n    }\n    return\
+    \ 0;\n}\n"
   dependsOn:
   - data_structure/segment_tree.hpp
   - utils/macros.hpp
@@ -167,7 +168,7 @@ data:
   isVerificationFile: true
   path: data_structure/segment_tree.point_set_range_composite.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 23:22:52+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/segment_tree.point_set_range_composite.test.cpp

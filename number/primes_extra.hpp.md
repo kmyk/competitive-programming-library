@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.hpp
     title: number/primes.hpp
   - icon: ':question:'
@@ -9,12 +9,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"number/primes_extra.hpp\"\n#include <cstdint>\n#include\
@@ -63,22 +63,22 @@ data:
     \ != p) {\n            last = p;\n            phi *= p - 1;\n        } else {\n\
     \            phi *= p;\n        }\n    }\n    return phi;\n}\n"
   code: "#pragma once\n#include <cstdint>\n#include <map>\n#include <vector>\n#include\
-    \ \"utils/macros.hpp\"\n#include \"number/primes.hpp\"\n\nstd::map<int64_t, int>\
-    \ list_prime_factors_as_map(const prepared_primes& primes, int64_t n) {\n    std::map<int64_t,\
-    \ int> cnt;\n    for (int64_t p : primes.list_prime_factors(n)) {\n        ++\
-    \ cnt[p];\n    }\n    return cnt;\n}\n\nint64_t euler_totient(const prepared_primes&\
-    \ primes, int64_t n) {\n    int64_t phi = 1;\n    int64_t last = -1;\n    for\
-    \ (int64_t p : primes.list_prime_factors(n)) {\n        if (last != p) {\n   \
-    \         last = p;\n            phi *= p - 1;\n        } else {\n           \
-    \ phi *= p;\n        }\n    }\n    return phi;\n}\n"
+    \ \"../utils/macros.hpp\"\n#include \"../number/primes.hpp\"\n\nstd::map<int64_t,\
+    \ int> list_prime_factors_as_map(const prepared_primes& primes, int64_t n) {\n\
+    \    std::map<int64_t, int> cnt;\n    for (int64_t p : primes.list_prime_factors(n))\
+    \ {\n        ++ cnt[p];\n    }\n    return cnt;\n}\n\nint64_t euler_totient(const\
+    \ prepared_primes& primes, int64_t n) {\n    int64_t phi = 1;\n    int64_t last\
+    \ = -1;\n    for (int64_t p : primes.list_prime_factors(n)) {\n        if (last\
+    \ != p) {\n            last = p;\n            phi *= p - 1;\n        } else {\n\
+    \            phi *= p;\n        }\n    }\n    return phi;\n}\n"
   dependsOn:
   - utils/macros.hpp
   - number/primes.hpp
   isVerificationFile: false
   path: number/primes_extra.hpp
   requiredBy: []
-  timestamp: '2021-05-11 20:48:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - number/primes_extra.yukicoder-1659.test.cpp
 documentation_of: number/primes_extra.hpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
   _extendedRequiredBy: []
@@ -34,10 +34,10 @@ data:
     \ (com == 1) {\n            bool answer = uft.is_same(x, y);\n            printf(\"\
     %d\\n\", (int)answer);\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A\"\
-    \n#include \"data_structure/union_find_tree.hpp\"\n#include <cstdio>\n\nint main()\
-    \ {\n    int n, q; scanf(\"%d%d\", &n, &q);\n    union_find_tree uft(n);\n   \
-    \ while (q --) {\n        int com, x, y; scanf(\"%d%d%d\", &com, &x, &y);\n  \
-    \      if (com == 0) {\n            uft.unite_trees(x, y);\n        } else if\
+    \n#include \"../data_structure/union_find_tree.hpp\"\n#include <cstdio>\n\nint\
+    \ main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n    union_find_tree uft(n);\n\
+    \    while (q --) {\n        int com, x, y; scanf(\"%d%d%d\", &com, &x, &y);\n\
+    \        if (com == 0) {\n            uft.unite_trees(x, y);\n        } else if\
     \ (com == 1) {\n            bool answer = uft.is_same(x, y);\n            printf(\"\
     %d\\n\", (int)answer);\n        }\n    }\n    return 0;\n}\n"
   dependsOn:
@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: data_structure/union_find_tree.aoj.test.cpp
   requiredBy: []
-  timestamp: '2020-02-28 14:33:39+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/union_find_tree.aoj.test.cpp

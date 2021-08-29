@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -13,10 +13,10 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
   - icon: ':question:'
@@ -24,12 +24,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: the Stirling number of the second kind (for given $N$, compute
       $S(N, \ast)$ in $O(N \log N)$)
@@ -186,8 +186,8 @@ data:
     \ > b(n + 1);\n    REP (i, n + 1) {\n        a[i] = mint<MOD>(i).pow(n) * inv_fact<MOD>(i);\n\
     \        b[i] = (i % 2 == 0 ? 1 : -1) * inv_fact<MOD>(i);\n    }\n    auto c =\
     \ ntt_convolution(a, b);\n    c.resize(n + 1);\n    return c;\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"modulus/mint.hpp\"\
-    \n#include \"modulus/factorial.hpp\"\n#include \"modulus/number_theoretic_transformation_with_garner.hpp\"\
+  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"../modulus/mint.hpp\"\
+    \n#include \"../modulus/factorial.hpp\"\n#include \"../modulus/number_theoretic_transformation_with_garner.hpp\"\
     \n\n/**\n * @brief the Stirling number of the second kind (for given $N$, compute\
     \ $S(N, \\ast)$ in $O(N \\log N)$)\n * @see https://min-25.hatenablog.com/entry/2015/04/07/160154\n\
     \ */\ntemplate <int MOD>\nstd::vector<mint<MOD> > stirling_number_of_the_second_kind_convolution(int\
@@ -206,8 +206,8 @@ data:
   isVerificationFile: false
   path: modulus/stirling_number_of_the_second_kind_convolution.hpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 documentation_of: modulus/stirling_number_of_the_second_kind_convolution.hpp

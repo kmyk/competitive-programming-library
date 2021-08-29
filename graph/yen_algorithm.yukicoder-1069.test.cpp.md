@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/yen_algorithm.hpp
     title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log
       V)$)
@@ -10,9 +10,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     ERROR: 1e-4
@@ -94,15 +94,15 @@ data:
     \    }\n\n    // output\n    REP (i, k) {\n        printf(\"%.12lf\\n\", cost[i]);\n\
     \    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1069\"\n#define ERROR\
-    \ 1e-4\n#include <bits/stdc++.h>\n#include \"utils/macros.hpp\"\n#include \"graph/yen_algorithm.hpp\"\
-    \nusing namespace std;\n\nint main() {\n    // input\n    int n, m, k; scanf(\"\
-    %d%d%d\", &n, &m, &k);\n    int start, goal; scanf(\"%d%d\", &start, &goal);\n\
-    \    -- start;\n    -- goal;\n    vector<long long> x(n), y(n);\n    REP (i, n)\
-    \ {\n        scanf(\"%lld%lld\", &x[i], &y[i]);\n    }\n    vector<vector<pair<int,\
-    \ double> > > g(n);\n    REP (i, m) {\n        int p, q; cin >> p >> q;\n    \
-    \    -- p;\n        -- q;\n        double cost = sqrt(pow(x[p] - x[q], 2) + pow(y[p]\
-    \ - y[q], 2));\n        g[p].emplace_back(q, cost);\n        g[q].emplace_back(p,\
-    \ cost);\n    }\n\n    // solve\n    auto path = yen_algorithm_with_dijkstra(g,\
+    \ 1e-4\n#include <bits/stdc++.h>\n#include \"../utils/macros.hpp\"\n#include \"\
+    ../graph/yen_algorithm.hpp\"\nusing namespace std;\n\nint main() {\n    // input\n\
+    \    int n, m, k; scanf(\"%d%d%d\", &n, &m, &k);\n    int start, goal; scanf(\"\
+    %d%d\", &start, &goal);\n    -- start;\n    -- goal;\n    vector<long long> x(n),\
+    \ y(n);\n    REP (i, n) {\n        scanf(\"%lld%lld\", &x[i], &y[i]);\n    }\n\
+    \    vector<vector<pair<int, double> > > g(n);\n    REP (i, m) {\n        int\
+    \ p, q; cin >> p >> q;\n        -- p;\n        -- q;\n        double cost = sqrt(pow(x[p]\
+    \ - x[q], 2) + pow(y[p] - y[q], 2));\n        g[p].emplace_back(q, cost);\n  \
+    \      g[q].emplace_back(p, cost);\n    }\n\n    // solve\n    auto path = yen_algorithm_with_dijkstra(g,\
     \ start, goal, k);\n    vector<double> cost(k, -1);\n    map<pair<int, int>, double>\
     \ lookup;\n    REP (i, n) {\n        for (auto [j, cost] : g[i]) {\n         \
     \   lookup[make_pair(i, j)] = cost;\n        }\n    }\n    REP (i, path.size())\
@@ -116,8 +116,8 @@ data:
   isVerificationFile: true
   path: graph/yen_algorithm.yukicoder-1069.test.cpp
   requiredBy: []
-  timestamp: '2020-05-30 03:02:40+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/yen_algorithm.yukicoder-1069.test.cpp
 layout: document

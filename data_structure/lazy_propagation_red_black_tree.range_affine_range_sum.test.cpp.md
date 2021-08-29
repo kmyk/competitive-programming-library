@@ -277,10 +277,10 @@ data:
     \          printf(\"%d\\n\", answer.value);\n        }\n    }\n    return 0;\n\
     }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/range_affine_range_sum\"\
-    \n#include \"data_structure/lazy_propagation_red_black_tree.hpp\"\n#include \"\
-    monoids/plus_count.hpp\"\n#include \"monoids/linear_function.hpp\"\n#include \"\
-    monoids/linear_function_plus_count_action.hpp\"\n#include \"modulus/mint.hpp\"\
-    \n#include \"utils/macros.hpp\"\n#include <cstdio>\n#include <utility>\n#include\
+    \n#include \"../data_structure/lazy_propagation_red_black_tree.hpp\"\n#include\
+    \ \"../monoids/plus_count.hpp\"\n#include \"../monoids/linear_function.hpp\"\n\
+    #include \"../monoids/linear_function_plus_count_action.hpp\"\n#include \"../modulus/mint.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include <cstdio>\n#include <utility>\n#include\
     \ <vector>\nusing namespace std;\n\nconstexpr int MOD = 998244353;\n\nint main()\
     \ {\n    int n, q; scanf(\"%d%d\", &n, &q);\n    vector<pair<mint<MOD>, int> >\
     \ a(n);\n    REP (i, n) {\n        int a_i; scanf(\"%d\", &a_i);\n        a[i].first\
@@ -305,7 +305,7 @@ data:
   isVerificationFile: true
   path: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp

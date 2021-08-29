@@ -23,7 +23,7 @@ data:
     \ typename left_monoid<typename Monoid::value_type>::value_type x) const {\n \
     \       return x.first ? std::make_pair(true, Monoid().mult(f, x.second)) : x;\n\
     \    }\n};\n"
-  code: "#pragma once\n#include <utility>\n#include \"monoids/left.hpp\"\n\n/**\n\
+  code: "#pragma once\n#include <utility>\n#include \"../monoids/left.hpp\"\n\n/**\n\
     \ * @note lazy_propagation_segment_tree<left_monoid<typename Monoid::value_type>,\
     \ Monoid, left_action<Monoid> > is the same to dual_segment_tree<Monoid>\n */\n\
     template <class Monoid>\nstruct left_action {\n    typename left_monoid<typename\
@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: monoids/left_action.hpp
   requiredBy: []
-  timestamp: '2019-12-27 19:16:13+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: monoids/left_action.hpp

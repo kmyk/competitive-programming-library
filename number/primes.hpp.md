@@ -5,25 +5,25 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes_extra.hpp
     title: number/primes_extra.hpp
   - icon: ':warning:'
     path: utils/fast_zeta_transform.hpp
     title: upward fast zeta transform on primes
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.aoj.test.cpp
     title: number/primes.aoj.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.yukicoder-1140.test.cpp
     title: number/primes.yukicoder-1140.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"number/primes.hpp\"\n#include <algorithm>\n#include <cassert>\n\
@@ -64,10 +64,10 @@ data:
     \            }\n            if (n % p == 0) {\n                return false;\n\
     \            }\n        }\n        return true;\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n\nstruct prepared_primes {\n\
-    \    int size;\n    std::vector<int> sieve;\n    std::vector<int> primes;\n\n\
-    \    /**\n     * @note O(size)\n     */\n    prepared_primes(int size_)\n    \
-    \    : size(size_) {\n\n        sieve.resize(size);\n        REP3 (p, 2, size)\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n\nstruct prepared_primes\
+    \ {\n    int size;\n    std::vector<int> sieve;\n    std::vector<int> primes;\n\
+    \n    /**\n     * @note O(size)\n     */\n    prepared_primes(int size_)\n   \
+    \     : size(size_) {\n\n        sieve.resize(size);\n        REP3 (p, 2, size)\
     \ if (sieve[p] == 0) {\n            primes.push_back(p);\n            for (int\
     \ k = p; k < size; k += p) {\n                if (sieve[k] == 0) {\n         \
     \           sieve[k] = p;\n                }\n            }\n        }\n    }\n\
@@ -103,8 +103,8 @@ data:
   requiredBy:
   - number/primes_extra.hpp
   - utils/fast_zeta_transform.hpp
-  timestamp: '2021-05-11 20:48:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - number/primes.aoj.test.cpp
   - number/primes.yukicoder-1140.test.cpp

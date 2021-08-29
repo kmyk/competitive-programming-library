@@ -5,26 +5,26 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/quotient_graph.hpp
     title: graph/quotient_graph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/two_satisfiability.hpp
     title: 2-SAT ($O(N)$)
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Transpose_graph
@@ -39,8 +39,8 @@ data:
     \ > const & g) {\n    int n = g.size();\n    std::vector<std::vector<int> > h(n);\n\
     \    REP (i, n) {\n        for (int j : g[i]) {\n            h[j].push_back(i);\n\
     \        }\n    }\n    return h;\n}\n"
-  code: "#pragma once\n#include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n *\
-    \ @param g is an adjacent list of a digraph\n * @note $O(V + E)$\n * @see https://en.wikipedia.org/wiki/Transpose_graph\n\
+  code: "#pragma once\n#include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n\
+    \ * @param g is an adjacent list of a digraph\n * @note $O(V + E)$\n * @see https://en.wikipedia.org/wiki/Transpose_graph\n\
     \ */\nstd::vector<std::vector<int> > make_transpose_graph(std::vector<std::vector<int>\
     \ > const & g) {\n    int n = g.size();\n    std::vector<std::vector<int> > h(n);\n\
     \    REP (i, n) {\n        for (int j : g[i]) {\n            h[j].push_back(i);\n\
@@ -53,8 +53,8 @@ data:
   - graph/strongly_connected_components.hpp
   - graph/quotient_graph.hpp
   - utils/two_satisfiability.hpp
-  timestamp: '2019-12-30 23:14:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
   - utils/two_satisfiability.yosupo.test.cpp

@@ -12,15 +12,15 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/modlog.yosupo.test.cpp
     title: modulus/modlog.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/modlog.yuki1255.test.cpp
     title: modulus/modlog.yuki1255.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step,\
       \ $O(\\sqrt{m})$)"
@@ -64,17 +64,17 @@ data:
     \ = (int64_t)a * sqrt_m - b;\n            assert (x >= 0);\n            return\
     \ (modpow(g, x, m) == y ? x : -1);\n        }\n    }\n    return -1;\n}\n"
   code: "#pragma once\n#include <algorithm>\n#include <climits>\n#include <cmath>\n\
-    #include <cstdint>\n#include <unordered_map>\n#include \"modulus/modinv.hpp\"\n\
-    #include \"modulus/modpow.hpp\"\n#include \"utils/macros.hpp\"\n#include <iostream>\n\
-    \n/**\n * @brief discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step,\
-    \ $O(\\sqrt{m})$)\n * @description find the smallest $x \\ge 0$ s.t. $g^x \\equiv\
-    \ y \\pmod{m}$\n * @param m is a positive integer\n * @note -1 if not found\n\
-    \ */\ninline int modlog(int g, int y, int m) {\n    assert (0 <= g and g < m);\n\
-    \    assert (0 <= y and y < m);\n    if (m == 1) return 0;\n    if (y == 1) return\
-    \ 0;\n    if (g == 0 and y == 0) return 1;\n\n    // meet-in-the-middle; let x\
-    \ = a \\sqrt{m} + b\n    int sqrt_m = sqrt(m) + 100;  // + 100 is required to\
-    \ bruteforce g^b for b < 100; this avoids problems with g != 0 and y = 0\n   \
-    \ assert (sqrt_m >= 0);\n\n    // baby-step: list (y, gy, g^2 y, ...) = (g^x,\
+    #include <cstdint>\n#include <unordered_map>\n#include \"../modulus/modinv.hpp\"\
+    \n#include \"../modulus/modpow.hpp\"\n#include \"../utils/macros.hpp\"\n#include\
+    \ <iostream>\n\n/**\n * @brief discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step\
+    \ giant-step, $O(\\sqrt{m})$)\n * @description find the smallest $x \\ge 0$ s.t.\
+    \ $g^x \\equiv y \\pmod{m}$\n * @param m is a positive integer\n * @note -1 if\
+    \ not found\n */\ninline int modlog(int g, int y, int m) {\n    assert (0 <= g\
+    \ and g < m);\n    assert (0 <= y and y < m);\n    if (m == 1) return 0;\n   \
+    \ if (y == 1) return 0;\n    if (g == 0 and y == 0) return 1;\n\n    // meet-in-the-middle;\
+    \ let x = a \\sqrt{m} + b\n    int sqrt_m = sqrt(m) + 100;  // + 100 is required\
+    \ to bruteforce g^b for b < 100; this avoids problems with g != 0 and y = 0\n\
+    \    assert (sqrt_m >= 0);\n\n    // baby-step: list (y, gy, g^2 y, ...) = (g^x,\
     \ g^{x + 1}, g^{x + 2}, ...)\n    std::unordered_map<int, int> table;\n    int\
     \ baby = 1;\n    REP (b, sqrt_m) {\n        if (baby == y) return b;\n       \
     \ table[(int64_t)baby * y % m] = b;\n        baby = (int64_t)baby * g % m;\n \
@@ -91,8 +91,8 @@ data:
   isVerificationFile: false
   path: modulus/modlog.hpp
   requiredBy: []
-  timestamp: '2020-06-16 07:51:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/modlog.yosupo.test.cpp
   - modulus/modlog.yuki1255.test.cpp

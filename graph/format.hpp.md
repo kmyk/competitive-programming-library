@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/cartesian_tree.yukicoder-1031.test.cpp
     title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/format.hpp\"\n#include <cassert>\n#include <utility>\n\
@@ -31,8 +31,8 @@ data:
     \    REP (x, n) {\n        for (int y : children[x]) {\n            g[x].push_back(y);\n\
     \            g[y].push_back(x);\n        }\n    }\n    return g;\n}\n"
   code: "#pragma once\n#include <cassert>\n#include <utility>\n#include <vector>\n\
-    #include \"utils/macros.hpp\"\n\nstd::pair<std::vector<std::vector<int> >, int>\
-    \ children_from_parent(const std::vector<int> & parent) {\n    int n = parent.size();\n\
+    #include \"../utils/macros.hpp\"\n\nstd::pair<std::vector<std::vector<int> >,\
+    \ int> children_from_parent(const std::vector<int> & parent) {\n    int n = parent.size();\n\
     \    std::vector<std::vector<int> > children(n);\n    int root = -1;\n    REP\
     \ (x, n) {\n        if (parent[x] == -1) {\n            assert (root == -1);\n\
     \            root = x;\n        } else {\n            children[parent[x]].push_back(x);\n\
@@ -47,8 +47,8 @@ data:
   isVerificationFile: false
   path: graph/format.hpp
   requiredBy: []
-  timestamp: '2020-07-15 05:21:39+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: graph/format.hpp

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/binary_indexed_tree.hpp
     title: Binary Indexed Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':question:'
@@ -59,8 +59,8 @@ data:
     \           long long answer = bit.initial_range_get(y) - bit.initial_range_get(x);\n\
     \            printf(\"%lld\\n\", answer);\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    #include <cstdio>\n#include <tuple>\n#include <vector>\n#include \"data_structure/binary_indexed_tree.hpp\"\
-    \n#include \"monoids/plus.hpp\"\n#include \"utils/macros.hpp\"\nusing namespace\
+    #include <cstdio>\n#include <tuple>\n#include <vector>\n#include \"../data_structure/binary_indexed_tree.hpp\"\
+    \n#include \"../monoids/plus.hpp\"\n#include \"../utils/macros.hpp\"\nusing namespace\
     \ std;\n\nint main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n    vector<long\
     \ long> a(n);\n    REP (i, n) {\n        scanf(\"%lld\", &a[i]);\n    }\n    binary_indexed_tree<plus_monoid<long\
     \ long> > bit(ALL(a));\n    while (q --) {\n        int t, x, y; scanf(\"%d%d%d\"\
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: data_structure/binary_indexed_tree.test.cpp
   requiredBy: []
-  timestamp: '2021-04-24 11:47:40+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/binary_indexed_tree.test.cpp

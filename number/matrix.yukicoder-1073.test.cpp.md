@@ -10,7 +10,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/matrix.hpp
     title: number/matrix.hpp
   - icon: ':question:'
@@ -18,9 +18,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1073
@@ -107,9 +107,9 @@ data:
     \    };\n    return (matpow(f, n) * x)[5];\n}\n\nint main() {\n    int64_t n;\
     \ cin >> n;\n    auto ans = solve(n);\n    cout << ans << endl;\n    return 0;\n\
     }\n"
-  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1073\"\n#include \"number/matrix.hpp\"\
-    \n#include \"modulus/mint.hpp\"\n#include <iostream>\nusing namespace std;\n\n\
-    \nconstexpr int MOD = 1000000007;\nmint<MOD> solve(int64_t n) {\n    vector<vector<mint<MOD>\
+  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1073\"\n#include \"../number/matrix.hpp\"\
+    \n#include \"../modulus/mint.hpp\"\n#include <iostream>\nusing namespace std;\n\
+    \n\nconstexpr int MOD = 1000000007;\nmint<MOD> solve(int64_t n) {\n    vector<vector<mint<MOD>\
     \ > > f = {\n        vector<mint<MOD> >{ 0, 0, 0, 0, 0, mint<MOD>(6).inv() },\n\
     \        vector<mint<MOD> >{ 1, 0, 0, 0, 0, mint<MOD>(6).inv() },\n        vector<mint<MOD>\
     \ >{ 0, 1, 0, 0, 0, mint<MOD>(6).inv() },\n        vector<mint<MOD> >{ 0, 0, 1,\
@@ -128,8 +128,8 @@ data:
   isVerificationFile: true
   path: number/matrix.yukicoder-1073.test.cpp
   requiredBy: []
-  timestamp: '2021-04-24 22:00:17+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number/matrix.yukicoder-1073.test.cpp
 layout: document

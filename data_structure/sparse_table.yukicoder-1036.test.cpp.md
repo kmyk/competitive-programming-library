@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
@@ -65,8 +65,8 @@ data:
     \    REP (i, n) {\n        scanf(\"%lld\", &a[i]);\n    }\n    printf(\"%lld\\\
     n\", solve(n, a));\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1036\"\n#include <cstdio>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n#include \"data_structure/sparse_table.hpp\"\
-    \n#include \"monoids/gcd.hpp\"\n\nlong long solve(int n, const std::vector<long\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n#include \"../data_structure/sparse_table.hpp\"\
+    \n#include \"../monoids/gcd.hpp\"\n\nlong long solve(int n, const std::vector<long\
     \ long> & a) {\n    sparse_table<gcd_monoid<long long> > table(ALL(a));\n    int\
     \ r = 0;\n    long long ans = 0;\n    REP (l, n) {\n        while (r < n and table.range_get(l,\
     \ r) != 1) {\n            ++ r;\n        }\n        if (r == n and table.range_get(l,\
@@ -82,7 +82,7 @@ data:
   isVerificationFile: true
   path: data_structure/sparse_table.yukicoder-1036.test.cpp
   requiredBy: []
-  timestamp: '2020-04-24 23:33:38+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/sparse_table.yukicoder-1036.test.cpp

@@ -1,27 +1,27 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/two_satisfiability.hpp
     title: 2-SAT ($O(N)$)
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/two_sat
@@ -107,15 +107,15 @@ data:
     \ ? 1 : -1) * (i + 1));\n        }\n        out<string>(\" 0 \\n\");\n    }\n\
     \    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/two_sat\"\n#include <cassert>\n\
-    #include <vector>\n#include <utility>\n#include \"utils/macros.hpp\"\n#include\
-    \ \"hack/fastio.hpp\"\n#include \"utils/two_satisfiability.hpp\"\nusing namespace\
-    \ std;\n\nint main() {\n    // read the header of DIMACS format\n    char const_p\
-    \ = in<char>();\n    assert (const_p == 'p');\n    string const_cnf = in<string>();\n\
-    \    assert (const_cnf == \"cnf\");\n\n    // input\n    int n = in<int>();\n\
-    \    int m = in<int>();\n    vector<pair<int, int> > cnf;\n    REP (i, m) {\n\
-    \        int a = in<int>();\n        int b = in<int>();\n        cnf.emplace_back(a,\
-    \ b);\n\n        int const_zero = in<int>();\n        assert (const_zero == 0);\n\
-    \    }\n\n    // solve\n    vector<bool> model = compute_two_satisfiability(n,\
+    #include <vector>\n#include <utility>\n#include \"../utils/macros.hpp\"\n#include\
+    \ \"../hack/fastio.hpp\"\n#include \"../utils/two_satisfiability.hpp\"\nusing\
+    \ namespace std;\n\nint main() {\n    // read the header of DIMACS format\n  \
+    \  char const_p = in<char>();\n    assert (const_p == 'p');\n    string const_cnf\
+    \ = in<string>();\n    assert (const_cnf == \"cnf\");\n\n    // input\n    int\
+    \ n = in<int>();\n    int m = in<int>();\n    vector<pair<int, int> > cnf;\n \
+    \   REP (i, m) {\n        int a = in<int>();\n        int b = in<int>();\n   \
+    \     cnf.emplace_back(a, b);\n\n        int const_zero = in<int>();\n       \
+    \ assert (const_zero == 0);\n    }\n\n    // solve\n    vector<bool> model = compute_two_satisfiability(n,\
     \ cnf);\n\n    // output\n    if (model.empty()) {\n        out<string>(\"s UNSATISFIABLE\\\
     n\");\n    } else {\n        out<string>(\"s SATISFIABLE\\n\");\n        out<char>('v');\n\
     \        REP (i, n) {\n            out<char>(' ');\n            out<int>((model[i]\
@@ -130,8 +130,8 @@ data:
   isVerificationFile: true
   path: utils/two_satisfiability.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2021-06-19 02:41:52+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: utils/two_satisfiability.yosupo.test.cpp
 layout: document

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/lazy_propagation_segment_tree.hpp
     title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
       \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus_min_action.hpp
     title: monoids/plus_min_action.hpp
   - icon: ':question:'
@@ -111,15 +111,15 @@ data:
     \ r, x);\n        } else if (com == 1) {\n            printf(\"%d\\n\", segtree.range_get(l,\
     \ r));\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
-    \n#include \"data_structure/lazy_propagation_segment_tree.hpp\"\n#include \"monoids/min.hpp\"\
-    \n#include \"monoids/plus.hpp\"\n#include \"monoids/plus_min_action.hpp\"\n#include\
-    \ <cstdio>\n\nint main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n    lazy_propagation_segment_tree<min_monoid<int>,\
-    \ plus_monoid<int>, plus_min_action<int> > segtree(n);\n    segtree.range_set(0,\
-    \ n, 0);\n    while (q --) {\n        int com, l, r; scanf(\"%d%d%d\", &com, &l,\
-    \ &r);\n        ++ r;\n        if (com == 0) {\n            int x; scanf(\"%d\"\
-    , &x);\n            segtree.range_apply(l, r, x);\n        } else if (com == 1)\
-    \ {\n            printf(\"%d\\n\", segtree.range_get(l, r));\n        }\n    }\n\
-    \    return 0;\n}\n"
+    \n#include \"../data_structure/lazy_propagation_segment_tree.hpp\"\n#include \"\
+    ../monoids/min.hpp\"\n#include \"../monoids/plus.hpp\"\n#include \"../monoids/plus_min_action.hpp\"\
+    \n#include <cstdio>\n\nint main() {\n    int n, q; scanf(\"%d%d\", &n, &q);\n\
+    \    lazy_propagation_segment_tree<min_monoid<int>, plus_monoid<int>, plus_min_action<int>\
+    \ > segtree(n);\n    segtree.range_set(0, n, 0);\n    while (q --) {\n       \
+    \ int com, l, r; scanf(\"%d%d%d\", &com, &l, &r);\n        ++ r;\n        if (com\
+    \ == 0) {\n            int x; scanf(\"%d\", &x);\n            segtree.range_apply(l,\
+    \ r, x);\n        } else if (com == 1) {\n            printf(\"%d\\n\", segtree.range_get(l,\
+    \ r));\n        }\n    }\n    return 0;\n}\n"
   dependsOn:
   - data_structure/lazy_propagation_segment_tree.hpp
   - utils/macros.hpp
@@ -129,7 +129,7 @@ data:
   isVerificationFile: true
   path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 23:22:52+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp

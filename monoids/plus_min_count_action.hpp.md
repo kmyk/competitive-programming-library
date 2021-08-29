@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: monoids/min_count.hpp
     title: monoids/min_count.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   _extendedRequiredBy: []
@@ -32,8 +32,8 @@ data:
     \ f, typename min_count_monoid<T>::value_type x) const {\n        if (x.first\
     \ == min_count_monoid<T>().unit().first) return x;\n        return std::make_pair(f\
     \ + x.first, x.second);\n    }\n};\n"
-  code: "#pragma once\n#include <utility>\n#include \"monoids/plus.hpp\"\n#include\
-    \ \"monoids/min_count.hpp\"\n\n/**\n * @note lazy_propagation_segment_tree<min_count_monoid<T>,\
+  code: "#pragma once\n#include <utility>\n#include \"../monoids/plus.hpp\"\n#include\
+    \ \"../monoids/min_count.hpp\"\n\n/**\n * @note lazy_propagation_segment_tree<min_count_monoid<T>,\
     \ plus_monoid<T>, plus_min_count_action<T> > can count a number of zeros (or,\
     \ non-zero numbers) in the array\n */\ntemplate <class T>\nstruct plus_min_count_action\
     \ {\n    typename min_count_monoid<T>::value_type operator () (typename plus_monoid<T>::value_type\
@@ -46,7 +46,7 @@ data:
   isVerificationFile: false
   path: monoids/plus_min_count_action.hpp
   requiredBy: []
-  timestamp: '2019-12-27 19:16:13+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: monoids/plus_min_count_action.hpp

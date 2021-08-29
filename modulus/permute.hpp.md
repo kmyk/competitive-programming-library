@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -14,46 +14,46 @@ data:
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406\
       \ $O(n)$ + $O(1)$)"
@@ -117,9 +117,9 @@ data:
     \ permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)\n\
     \ */\ntemplate <int32_t MOD>\nmint<MOD> permute(int n, int r) {\n    assert (0\
     \ <= r and r <= n);\n    return fact<MOD>(n) * inv_fact<MOD>(n - r);\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include \"modulus/mint.hpp\"\n#include\
-    \ \"modulus/factorial.hpp\"\n\n/**\n * @brief permutation / \u9806\u5217 ${} _\
-    \ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)\n */\ntemplate <int32_t MOD>\n\
+  code: "#pragma once\n#include <cassert>\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../modulus/factorial.hpp\"\n\n/**\n * @brief permutation / \u9806\u5217 ${}\
+    \ _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)\n */\ntemplate <int32_t MOD>\n\
     mint<MOD> permute(int n, int r) {\n    assert (0 <= r and r <= n);\n    return\
     \ fact<MOD>(n) * inv_fact<MOD>(n - r);\n}\n"
   dependsOn:
@@ -131,8 +131,8 @@ data:
   path: modulus/permute.hpp
   requiredBy:
   - modulus/twelvefold_way.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

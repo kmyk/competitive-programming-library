@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/bellman_ford.hpp
     title: Bellman-Ford algorithm
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
@@ -26,11 +26,11 @@ data:
     \ graph/bellman_ford.test.cpp: line 3: unable to process #include in #if / #ifdef\
     \ / #ifndef other than include guards\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B\"\
-    \n#ifdef USE_SPFA\n#include \"graph/shortest_path_faster_algorithm.hpp\"\nauto\
-    \ BELLMAN_FORD = shortest_path_faster_algorithm;\n#else\n#include \"graph/bellman_ford.hpp\"\
+    \n#ifdef USE_SPFA\n#include \"../graph/shortest_path_faster_algorithm.hpp\"\n\
+    auto BELLMAN_FORD = shortest_path_faster_algorithm;\n#else\n#include \"../graph/bellman_ford.hpp\"\
     \nauto BELLMAN_FORD = bellman_ford_shortest_path;\n#endif\n\n#include <algorithm>\n\
-    #include <iostream>\n#include \"utils/macros.hpp\"\nusing namespace std;\n\nint\
-    \ main() {\n    // input\n    int v, e, root; cin >> v >> e >> root;\n    vector<vector<pair<int,\
+    #include <iostream>\n#include \"../utils/macros.hpp\"\nusing namespace std;\n\n\
+    int main() {\n    // input\n    int v, e, root; cin >> v >> e >> root;\n    vector<vector<pair<int,\
     \ int64_t> > > g(v);\n    REP (j, e) {\n        int s, t, dist; cin >> s >> t\
     \ >> dist;\n        g[s].emplace_back(t, dist);\n    }\n\n    // solve\n    auto\
     \ dist = BELLMAN_FORD(root, g);\n\n    // output\n    if (count(ALL(dist), LLONG_MIN))\
@@ -44,8 +44,8 @@ data:
   isVerificationFile: true
   path: graph/bellman_ford.test.cpp
   requiredBy: []
-  timestamp: '2019-12-20 06:12:24+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/bellman_ford.test.cpp
 layout: document

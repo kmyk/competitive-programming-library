@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/many_aplusb
@@ -38,8 +38,8 @@ data:
     \        uint64_t b = in<uint64_t>();\n        out<uint64_t>(a + b);\n       \
     \ out<char>('\\n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/many_aplusb\"\n#include\
-    \ \"hack/fastio.hpp\"\n\nint main() {\n    int t = in<int>();\n    while (t --)\
-    \ {\n        uint64_t a = in<uint64_t>();\n        uint64_t b = in<uint64_t>();\n\
+    \ \"../hack/fastio.hpp\"\n\nint main() {\n    int t = in<int>();\n    while (t\
+    \ --) {\n        uint64_t a = in<uint64_t>();\n        uint64_t b = in<uint64_t>();\n\
     \        out<uint64_t>(a + b);\n        out<char>('\\n');\n    }\n    return 0;\n\
     }\n"
   dependsOn:
@@ -47,8 +47,8 @@ data:
   isVerificationFile: true
   path: hack/fastio.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: hack/fastio.yosupo.test.cpp
 layout: document

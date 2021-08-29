@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -21,46 +21,46 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: the Stirling number of the second kind ($O(K \log N)$)
     links: []
@@ -135,9 +135,9 @@ data:
     \ choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;\n    }\n    return acc * inv_fact<MOD>(k);\n\
     }\n"
   code: "#pragma once\n#include <cassert>\n#include <vector>\n#include <map>\n#include\
-    \ \"utils/macros.hpp\"\n#include \"modulus/mint.hpp\"\n#include \"modulus/factorial.hpp\"\
-    \n#include \"modulus/choose.hpp\"\n\n/**\n * @brief the Stirling number of the\
-    \ second kind ($O(K \\log N)$)\n */\ntemplate <int MOD>\nmint<MOD> stirling_number_of_the_second_kind_direct(int\
+    \ \"../utils/macros.hpp\"\n#include \"../modulus/mint.hpp\"\n#include \"../modulus/factorial.hpp\"\
+    \n#include \"../modulus/choose.hpp\"\n\n/**\n * @brief the Stirling number of\
+    \ the second kind ($O(K \\log N)$)\n */\ntemplate <int MOD>\nmint<MOD> stirling_number_of_the_second_kind_direct(int\
     \ n, int k) {\n    assert (0 <= n and 0 <= k);\n    mint<MOD> acc = 0;\n    REP\
     \ (i, k + 1) {\n        int parity = ((k - i) % 2 == 0 ? +1 : -1);\n        acc\
     \ += choose<MOD>(k, i) * mint<MOD>(i).pow(n) * parity;\n    }\n    return acc\
@@ -153,8 +153,8 @@ data:
   path: modulus/stirling_number_of_the_second_kind_direct.hpp
   requiredBy:
   - modulus/twelvefold_way.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

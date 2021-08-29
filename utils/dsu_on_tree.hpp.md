@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/subtree.hpp
     title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
       \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
@@ -11,12 +11,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/dsu_on_tree.aoj.test.cpp
     title: utils/dsu_on_tree.aoj.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: DSU on tree (sack)
     links:
@@ -74,42 +74,43 @@ data:
     \        add(x);\n        callback(x);\n        if (not keep) {\n            subtree_apply(x,\
     \ sub);\n        }\n    };\n    go(root, false);\n}\n"
   code: "#pragma once\n#include <functional>\n#include <stack>\n#include <vector>\n\
-    #include \"graph/subtree.hpp\"\n#include \"utils/macros.hpp\"\n\n/**\n * @brief\
-    \ DSU on tree (sack)\n * @arg g is a tree\n * @arg root\n * @arg add is a function\
-    \ object which takes a index of a vertex\n * @arg sub is a function object which\
-    \ takes a index of a vertex\n * @arg callback is a function object which takes\
-    \ a index of a vertex\n * @note for each x, add(x) and sub(x) are called O(log\
-    \ n) times\n * @note O(n log n) if add, sub, and callback are O(1)\n * @see https://codeforces.com/blog/entry/44351\n\
-    \ * @note sub(x) can be implemented as reset(), because sub(x) is called until\
-    \ it becomes empty after sub(x) is called once\n */\ntemplate <class Add, class\
-    \ Sub, class Callback>\nvoid dsu_on_tree(const std::vector<std::vector<int> >\
-    \ & g, int root, Add & add, Sub & sub, Callback & callback) {\n    auto info =\
-    \ prepare_subtree_info(g, root);\n    auto subtree_apply = [&](int x, auto & f)\
-    \ {\n        std::stack<int> stk;\n        stk.push(x);\n        while (not stk.empty())\
-    \ {\n            int y = stk.top();\n            stk.pop();\n            f(y);\n\
-    \            for (int z : g[y]) if (z != info[y].parent) {\n                stk.push(z);\n\
-    \            }\n        }\n    };\n    std::function<void (int, bool)> go = [&](int\
-    \ x, bool keep) {\n        // leaf\n        if (info[x].size == 1) {\n       \
-    \     add(x);\n            callback(x);\n            if (not keep) {\n       \
-    \         sub(x);\n            }\n            return;\n        }\n        // choose\
-    \ the heavy child\n        int z = *max_element(ALL(g[x]), [&](int y1, int y2)\
-    \ {\n            int size1 = (y1 == info[x].parent ? -1 : info[y1].size);\n  \
-    \          int size2 = (y2 == info[x].parent ? -1 : info[y2].size);\n        \
-    \    return size1 < size2;\n        });\n        // go light\n        for (int\
-    \ y : g[x]) if (y != info[x].parent) {\n            if (y != z) {\n          \
-    \      go(y, false);\n            }\n        }\n        // go heavy\n        go(z,\
-    \ true);\n        for (int y : g[x]) if (y != info[x].parent) {\n            if\
-    \ (y != z) {\n                subtree_apply(y, add);\n            }\n        }\n\
-    \        add(x);\n        callback(x);\n        if (not keep) {\n            subtree_apply(x,\
-    \ sub);\n        }\n    };\n    go(root, false);\n}\n"
+    #include \"../graph/subtree.hpp\"\n#include \"../utils/macros.hpp\"\n\n/**\n *\
+    \ @brief DSU on tree (sack)\n * @arg g is a tree\n * @arg root\n * @arg add is\
+    \ a function object which takes a index of a vertex\n * @arg sub is a function\
+    \ object which takes a index of a vertex\n * @arg callback is a function object\
+    \ which takes a index of a vertex\n * @note for each x, add(x) and sub(x) are\
+    \ called O(log n) times\n * @note O(n log n) if add, sub, and callback are O(1)\n\
+    \ * @see https://codeforces.com/blog/entry/44351\n * @note sub(x) can be implemented\
+    \ as reset(), because sub(x) is called until it becomes empty after sub(x) is\
+    \ called once\n */\ntemplate <class Add, class Sub, class Callback>\nvoid dsu_on_tree(const\
+    \ std::vector<std::vector<int> > & g, int root, Add & add, Sub & sub, Callback\
+    \ & callback) {\n    auto info = prepare_subtree_info(g, root);\n    auto subtree_apply\
+    \ = [&](int x, auto & f) {\n        std::stack<int> stk;\n        stk.push(x);\n\
+    \        while (not stk.empty()) {\n            int y = stk.top();\n         \
+    \   stk.pop();\n            f(y);\n            for (int z : g[y]) if (z != info[y].parent)\
+    \ {\n                stk.push(z);\n            }\n        }\n    };\n    std::function<void\
+    \ (int, bool)> go = [&](int x, bool keep) {\n        // leaf\n        if (info[x].size\
+    \ == 1) {\n            add(x);\n            callback(x);\n            if (not\
+    \ keep) {\n                sub(x);\n            }\n            return;\n     \
+    \   }\n        // choose the heavy child\n        int z = *max_element(ALL(g[x]),\
+    \ [&](int y1, int y2) {\n            int size1 = (y1 == info[x].parent ? -1 :\
+    \ info[y1].size);\n            int size2 = (y2 == info[x].parent ? -1 : info[y2].size);\n\
+    \            return size1 < size2;\n        });\n        // go light\n       \
+    \ for (int y : g[x]) if (y != info[x].parent) {\n            if (y != z) {\n \
+    \               go(y, false);\n            }\n        }\n        // go heavy\n\
+    \        go(z, true);\n        for (int y : g[x]) if (y != info[x].parent) {\n\
+    \            if (y != z) {\n                subtree_apply(y, add);\n         \
+    \   }\n        }\n        add(x);\n        callback(x);\n        if (not keep)\
+    \ {\n            subtree_apply(x, sub);\n        }\n    };\n    go(root, false);\n\
+    }\n"
   dependsOn:
   - graph/subtree.hpp
   - utils/macros.hpp
   isVerificationFile: false
   path: utils/dsu_on_tree.hpp
   requiredBy: []
-  timestamp: '2019-12-20 06:12:24+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - utils/dsu_on_tree.aoj.test.cpp
 documentation_of: utils/dsu_on_tree.hpp

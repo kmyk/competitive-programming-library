@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/link_cut_tree.hpp
     title: Link-Cut tree (monoids without commutativity, vertex set + path get)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   - icon: ':question:'
@@ -297,11 +297,11 @@ data:
     \   auto [a, b] = lct.path_get(u, v);\n            out<int32_t>((a * x + b).value);\n\
     \            out<char>('\\n');\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite\"\
-    \n#include \"data_structure/link_cut_tree.hpp\"\n#include \"modulus/mint.hpp\"\
-    \n#include \"monoids/linear_function.hpp\"\n#include \"monoids/dual.hpp\"\n#include\
-    \ \"utils/macros.hpp\"\n#include \"hack/fastio.hpp\"\n#include <stack>\n#include\
-    \ <vector>\n\nconstexpr int MOD = 998244353;\nint main() {\n    int n = in<int>();\n\
-    \    int q = in<int>();\n\n    // initialize\n    link_cut_tree<dual_monoid<linear_function_monoid<mint<MOD>\
+    \n#include \"../data_structure/link_cut_tree.hpp\"\n#include \"../modulus/mint.hpp\"\
+    \n#include \"../monoids/linear_function.hpp\"\n#include \"../monoids/dual.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include \"../hack/fastio.hpp\"\n#include\
+    \ <stack>\n#include <vector>\n\nconstexpr int MOD = 998244353;\nint main() {\n\
+    \    int n = in<int>();\n    int q = in<int>();\n\n    // initialize\n    link_cut_tree<dual_monoid<linear_function_monoid<mint<MOD>\
     \ > > > lct(n);\n    REP (i, n) {\n        mint<MOD> a_i = in<int32_t>();\n  \
     \      mint<MOD> b_i = in<int32_t>();\n        lct.vertex_set(i, std::make_pair(a_i,\
     \ b_i));\n    }\n    std::vector<std::vector<int> > g(n);\n    REP (i, n - 1)\
@@ -334,7 +334,7 @@ data:
   isVerificationFile: true
   path: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp

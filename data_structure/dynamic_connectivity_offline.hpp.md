@@ -148,8 +148,8 @@ data:
     \ closed queries\n        set_queries.resize(current_size);\n\n        assert\
     \ (it == get_queries.end());\n        return results;\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <map>\n\
-    #include <optional>\n#include <tuple>\n#include <vector>\n#include \"data_structure/union_find_tree_foldable_undoable.hpp\"\
-    \n#include \"data_structure/reporting_segment_tree.hpp\"\n#include \"utils/macros.hpp\"\
+    #include <optional>\n#include <tuple>\n#include <vector>\n#include \"../data_structure/union_find_tree_foldable_undoable.hpp\"\
+    \n#include \"../data_structure/reporting_segment_tree.hpp\"\n#include \"../utils/macros.hpp\"\
     \n\n/**\n * @brief Dynamic Connectivity (offline, commutative monoids)\n * @docs\
     \ data_structure/dynamic_connectivity_offline.md\n */\ntemplate <class CommutativeMonoid>\n\
     class dynamic_connectivity_offline {\n    typedef typename CommutativeMonoid::value_type\
@@ -212,7 +212,7 @@ data:
   isVerificationFile: false
   path: data_structure/dynamic_connectivity_offline.hpp
   requiredBy: []
-  timestamp: '2020-03-08 04:11:51+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp

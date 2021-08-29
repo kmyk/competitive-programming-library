@@ -14,17 +14,17 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4\
       \ $O(r)$)"
@@ -85,8 +85,8 @@ data:
     \ choose_simple(int64_t n, int32_t r) {\n    assert (0 <= r and r <= n);\n   \
     \ mint<MOD> num = 1;\n    mint<MOD> den = 1;\n    REP (i, r) {\n        num *=\
     \ n - i;\n        den *= i + 1;\n    }\n    return num / den;\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include \"modulus/mint.hpp\"\n#include\
-    \ \"utils/macros.hpp\"\n\n/**\n * @brief combination / \u7D44\u5408\u305B ${}\
+  code: "#pragma once\n#include <cassert>\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../utils/macros.hpp\"\n\n/**\n * @brief combination / \u7D44\u5408\u305B ${}\
     \ _ n C _ r$ (\u611A\u76F4 $O(r)$)\n */\ntemplate <int32_t MOD>\nmint<MOD> choose_simple(int64_t\
     \ n, int32_t r) {\n    assert (0 <= r and r <= n);\n    mint<MOD> num = 1;\n \
     \   mint<MOD> den = 1;\n    REP (i, r) {\n        num *= n - i;\n        den *=\
@@ -100,8 +100,8 @@ data:
   path: modulus/choose_simple.hpp
   requiredBy:
   - modulus/multichoose_simple.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - number/primes_extra.yukicoder-1659.test.cpp
 documentation_of: modulus/choose_simple.hpp

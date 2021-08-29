@@ -1,34 +1,34 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/lazy_propagation_segment_tree.hpp
     title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
       \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus_min_action.hpp
     title: monoids/plus_min_action.hpp
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/mo_algorithm.hpp
     title: utils/mo_algorithm.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1270
@@ -223,11 +223,11 @@ data:
     \ return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1270\"\n#include <algorithm>\n\
     #include <cassert>\n#include <iostream>\n#include <unordered_map>\n#include <utility>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n#include \"data_structure/segment_tree.hpp\"\
-    \n#include \"data_structure/lazy_propagation_segment_tree.hpp\"\n#include \"monoids/min.hpp\"\
-    \n#include \"monoids/plus.hpp\"\n#include \"monoids/plus_min_action.hpp\"\n#include\
-    \ \"utils/mo_algorithm.hpp\"\nusing namespace std;\n\n\nstruct mo_struct {\n \
-    \   typedef int64_t value_type;\n    typedef int64_t result_type;\n\nprivate:\n\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n#include \"../data_structure/segment_tree.hpp\"\
+    \n#include \"../data_structure/lazy_propagation_segment_tree.hpp\"\n#include \"\
+    ../monoids/min.hpp\"\n#include \"../monoids/plus.hpp\"\n#include \"../monoids/plus_min_action.hpp\"\
+    \n#include \"../utils/mo_algorithm.hpp\"\nusing namespace std;\n\n\nstruct mo_struct\
+    \ {\n    typedef int64_t value_type;\n    typedef int64_t result_type;\n\nprivate:\n\
     \    typedef segment_tree<plus_monoid<int> > plus_segtree_type;\n    typedef lazy_propagation_segment_tree<min_monoid<int64_t>,\
     \ plus_monoid<int64_t>, plus_min_action<int64_t> > plus_min_segtree_type;\n\n\
     \    // input\n    int n;\n    const vector<int64_t>& a;\n\n    // static\n  \
@@ -289,8 +289,8 @@ data:
   isVerificationFile: true
   path: utils/mo_algorithm.yuki1270.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 23:22:52+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: utils/mo_algorithm.yuki1270.test.cpp
 layout: document

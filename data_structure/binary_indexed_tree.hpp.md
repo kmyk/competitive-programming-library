@@ -44,7 +44,7 @@ data:
     \    value_type acc = mon.unit();\n        for (int i = r; 0 < i; i -= i & -i)\
     \ {\n            acc = mon.mult(data[i - 1], acc);\n        }\n        return\
     \ acc;\n    }\n};\n"
-  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"utils/macros.hpp\"\
+  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"../utils/macros.hpp\"\
     \n\n/**\n * @brief Binary Indexed Tree\n */\ntemplate <typename CommutativeMonoid>\n\
     struct binary_indexed_tree {\n    typedef typename CommutativeMonoid::value_type\
     \ value_type;\n    CommutativeMonoid mon;\n    std::vector<value_type> data;\n\
@@ -71,7 +71,7 @@ data:
   path: data_structure/binary_indexed_tree.hpp
   requiredBy:
   - number/inversion_number.hpp
-  timestamp: '2021-04-24 11:47:40+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/binary_indexed_tree.test.cpp

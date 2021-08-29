@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/li_chao_tree.hpp
     title: Li-Chao tree
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/segment_add_get_min
@@ -103,8 +103,8 @@ data:
     \        } else {\n            assert (false);\n        }\n    }\n    return 0;\n\
     }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\n\
-    #include \"data_structure/li_chao_tree.hpp\"\n#include \"utils/macros.hpp\"\n\
-    #include <cstdio>\n#include <tuple>\n#include <vector>\nusing namespace std;\n\
+    #include \"../data_structure/li_chao_tree.hpp\"\n#include \"../utils/macros.hpp\"\
+    \n#include <cstdio>\n#include <tuple>\n#include <vector>\nusing namespace std;\n\
     \nint main() {\n    // input\n    int n, q; scanf(\"%d%d\", &n, &q);\n    vector<int64_t>\
     \ xs;\n    vector<tuple<int64_t, int64_t, int64_t, int64_t> > segments;\n    REP\
     \ (i, n) {\n        int64_t l, r, a, b; scanf(\"%lld%lld%lld%lld\", &l, &r, &a,\
@@ -131,8 +131,8 @@ data:
   isVerificationFile: true
   path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2020-01-08 19:38:32+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: data_structure/li_chao_tree.segment_add_get_min.test.cpp
 layout: document

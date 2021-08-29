@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':question:'
@@ -79,8 +79,8 @@ data:
     \ else if (t == 1) {\n            int64_t answer = segtree.range_get(x, y);\n\
     \            printf(\"%lld\\n\", answer);\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    #include \"data_structure/segment_tree.hpp\"\n#include \"monoids/plus.hpp\"\n\
-    #include \"utils/macros.hpp\"\n#include <cstdint>\n#include <cstdio>\n#include\
+    #include \"../data_structure/segment_tree.hpp\"\n#include \"../monoids/plus.hpp\"\
+    \n#include \"../utils/macros.hpp\"\n#include <cstdint>\n#include <cstdio>\n#include\
     \ <tuple>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n,\
     \ q; scanf(\"%d%d\", &n, &q);\n    vector<int64_t> a(n);\n    REP (i, n) {\n \
     \       scanf(\"%lld\", &a[i]);\n    }\n    segment_tree<plus_monoid<int64_t>\
@@ -96,7 +96,7 @@ data:
   isVerificationFile: true
   path: data_structure/segment_tree.point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-04-18 02:39:39+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/segment_tree.point_add_range_sum.test.cpp

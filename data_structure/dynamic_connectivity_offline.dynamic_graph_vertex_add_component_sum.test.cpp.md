@@ -11,10 +11,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree_foldable_undoable.hpp
     title: Union-Find Tree (foldable with commutative monoids, undoable)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':question:'
@@ -191,9 +191,9 @@ data:
     \ = dycon.run();\n    for (int64_t a : answer) {\n        out<int64_t>(a);\n \
     \       out<char>('\\n');\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum\"\
-    \n#include \"data_structure/dynamic_connectivity_offline.hpp\"\n#include \"monoids/plus.hpp\"\
-    \n#include \"hack/fastio.hpp\"\n#include \"utils/macros.hpp\"\n\nint main() {\n\
-    \    int n = in<int>();\n    int q = in<int>();\n\n    dynamic_connectivity_offline<plus_monoid<int64_t>\
+    \n#include \"../data_structure/dynamic_connectivity_offline.hpp\"\n#include \"\
+    ../monoids/plus.hpp\"\n#include \"../hack/fastio.hpp\"\n#include \"../utils/macros.hpp\"\
+    \n\nint main() {\n    int n = in<int>();\n    int q = in<int>();\n\n    dynamic_connectivity_offline<plus_monoid<int64_t>\
     \ > dycon(n);\n    REP (v, n) {\n        int64_t a = in<int64_t>();\n        dycon.point_set(v,\
     \ a);\n    }\n    REP (i, q) {\n        int t = in<int>();\n        if (t == 0)\
     \ {\n            int u = in<int>();\n            int v = in<int>();\n        \
@@ -215,7 +215,7 @@ data:
   isVerificationFile: true
   path: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp

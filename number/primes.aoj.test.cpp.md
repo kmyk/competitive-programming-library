@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/primes.hpp
     title: number/primes.hpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
@@ -60,10 +60,10 @@ data:
     %d\", &a);\n        cnt += primes.is_prime(a);\n    }\n    printf(\"%d\\n\", cnt);\n\
     \    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C\"\
-    \n#include \"number/primes.hpp\"\n#include <cassert>\n#include <cstdio>\n\nint\
-    \ main() {\n    int n; scanf(\"%d\", &n);\n    prepared_primes primes(1e6 + 3);\n\
-    \    int cnt = 0;\n    REP (i, n) {\n        int a; scanf(\"%d\", &a);\n     \
-    \   cnt += primes.is_prime(a);\n    }\n    printf(\"%d\\n\", cnt);\n    return\
+    \n#include \"../number/primes.hpp\"\n#include <cassert>\n#include <cstdio>\n\n\
+    int main() {\n    int n; scanf(\"%d\", &n);\n    prepared_primes primes(1e6 +\
+    \ 3);\n    int cnt = 0;\n    REP (i, n) {\n        int a; scanf(\"%d\", &a);\n\
+    \        cnt += primes.is_prime(a);\n    }\n    printf(\"%d\\n\", cnt);\n    return\
     \ 0;\n}\n"
   dependsOn:
   - number/primes.hpp
@@ -71,8 +71,8 @@ data:
   isVerificationFile: true
   path: number/primes.aoj.test.cpp
   requiredBy: []
-  timestamp: '2021-05-11 20:48:56+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number/primes.aoj.test.cpp
 layout: document

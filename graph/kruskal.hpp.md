@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
   - icon: ':question:'
@@ -9,12 +9,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/kruskal.aoj.test.cpp
     title: graph/kruskal.aoj.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's\
       \ method)"
@@ -47,10 +47,10 @@ data:
     \ = std::get<0>(edges[i]);\n        int y = std::get<1>(edges[i]);\n        if\
     \ (not uft.is_same(x, y)) {\n            uft.unite_trees(x, y);\n            tree.push_back(i);\n\
     \        }\n    }\n    return tree;\n}\n"
-  code: "#pragma once\n#include \"data_structure/union_find_tree.hpp\"\n#include \"\
-    utils/macros.hpp\"\n#include <algorithm>\n#include <numeric>\n#include <tuple>\n\
-    #include <vector>\n\n/**\n * @brief minimum spanning tree / \u6700\u5C0F\u5168\
-    \u57DF\u6728 (Kruskal's method)\n * @note $O(E \\log E)$\n * @note it becomes\
+  code: "#pragma once\n#include \"../data_structure/union_find_tree.hpp\"\n#include\
+    \ \"../utils/macros.hpp\"\n#include <algorithm>\n#include <numeric>\n#include\
+    \ <tuple>\n#include <vector>\n\n/**\n * @brief minimum spanning tree / \u6700\u5C0F\
+    \u5168\u57DF\u6728 (Kruskal's method)\n * @note $O(E \\log E)$\n * @note it becomes\
     \ a forest if the given graph is not connected\n * @return a list of indices of\
     \ edges\n */\ntemplate <typename T>\nstd::vector<int> compute_minimum_spanning_tree(int\
     \ n, std::vector<std::tuple<int, int, T> > edges) {\n    std::vector<int> order(edges.size());\n\
@@ -66,8 +66,8 @@ data:
   isVerificationFile: false
   path: graph/kruskal.hpp
   requiredBy: []
-  timestamp: '2020-02-28 14:33:39+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/kruskal.aoj.test.cpp
 documentation_of: graph/kruskal.hpp

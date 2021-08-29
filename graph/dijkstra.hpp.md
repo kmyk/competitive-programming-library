@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/dijkstra.yukicoder-1065.test.cpp
     title: graph/dijkstra.yukicoder-1065.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: Dijkstra ($O((E + V) \log V)$)
     links: []
@@ -39,7 +39,7 @@ data:
   path: graph/dijkstra.hpp
   requiredBy: []
   timestamp: '2020-05-29 23:50:33+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/dijkstra.yukicoder-1065.test.cpp
 documentation_of: graph/dijkstra.hpp

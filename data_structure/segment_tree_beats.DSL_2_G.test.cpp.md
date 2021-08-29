@@ -5,7 +5,7 @@ data:
     path: data_structure/segment_tree_beats.hpp
     title: "Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max,\
       \ sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   - icon: ':question:'
@@ -175,9 +175,9 @@ data:
     \          out<int64_t>(sum);\n            out<char>('\\n');\n        }\n    }\n\
     \    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G\"\
-    \n#include \"data_structure/segment_tree_beats.hpp\"\n\n#include <cstdint>\n#include\
-    \ <vector>\n#include \"utils/macros.hpp\"\n#include \"hack/fastio.hpp\"\n\nint\
-    \ main() {\n    int n = in<int>();\n    int q = in<int>();\n\n    segment_tree_beats\
+    \n#include \"../data_structure/segment_tree_beats.hpp\"\n\n#include <cstdint>\n\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n#include \"../hack/fastio.hpp\"\
+    \n\nint main() {\n    int n = in<int>();\n    int q = in<int>();\n\n    segment_tree_beats\
     \ beats(n);\n\n    while (q --) {\n        int ty = in<int>();\n        int l\
     \ = in<int>();\n        int r = in<int>();\n        -- l;\n        if (ty == 0)\
     \ {\n            int64_t x = in<int64_t>();\n            beats.range_add(l, r,\
@@ -191,7 +191,7 @@ data:
   isVerificationFile: true
   path: data_structure/segment_tree_beats.DSL_2_G.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/segment_tree_beats.DSL_2_G.test.cpp

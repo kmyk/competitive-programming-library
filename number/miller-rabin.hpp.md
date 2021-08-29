@@ -38,9 +38,9 @@ data:
     \ true;\n}\n\nbool is_prime(int64_t n) {\n    static std::default_random_engine\
     \ gen = std::default_random_engine(std::random_device()());\n    return is_prime(n,\
     \ 20, gen);\n}\n"
-  code: "#pragma once\n#include <cassert>\n#include <random>\n#include \"utils/macros.hpp\"\
-    \n#include \"modulus/modpow.hpp\"\n\n/**\n * @brief miller-rabin primality test\n\
-    \ * @note $O(k \\log n)$\n */\ntemplate <class RandomEngine>\nbool is_prime(int64_t\
+  code: "#pragma once\n#include <cassert>\n#include <random>\n#include \"../utils/macros.hpp\"\
+    \n#include \"../modulus/modpow.hpp\"\n\n/**\n * @brief miller-rabin primality\
+    \ test\n * @note $O(k \\log n)$\n */\ntemplate <class RandomEngine>\nbool is_prime(int64_t\
     \ n, int iteration, RandomEngine& gen) {\n    assert (0 <= n);\n    if (n == 2)\
     \ return true;\n    if (n == 1 or n % 2 == 0) return false;\n    const int64_t\
     \ d = (n - 1) >> __builtin_ctzll(n - 1);  // remove trailing zeros\n    std::uniform_int_distribution<int64_t>\
@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: number/miller-rabin.hpp
   requiredBy: []
-  timestamp: '2021-04-03 00:01:17+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: number/miller-rabin.hpp

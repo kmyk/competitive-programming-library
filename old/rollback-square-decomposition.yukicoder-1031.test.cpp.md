@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: monoids/max.hpp
     title: monoids/max.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: old/rollback-square-decomposition.inc.cpp
     title: the extended Mo's algorithm
   - icon: ':question:'
@@ -19,9 +19,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1031
@@ -173,12 +173,12 @@ data:
     \ char endl = '\\n';\n    int N;\n    cin >> N;\n    vector<int> p(N);\n    REP\
     \ (i, N) {\n        cin >> p[i];\n        -- p[i];\n    }\n    auto ans = solve(N,\
     \ p);\n    cout << ans << endl;\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1031\"\n#include \"utils/macros.hpp\"\
-    \n#include \"data_structure/sparse_table.hpp\"\n#include \"data_structure/segment_tree.hpp\"\
-    \n#include \"monoids/max.hpp\"\n#include <climits>\n#include <cmath>\n#include\
+  code: "#define PROBLEM \"https://yukicoder.me/problems/no/1031\"\n#include \"../utils/macros.hpp\"\
+    \n#include \"../data_structure/sparse_table.hpp\"\n#include \"../data_structure/segment_tree.hpp\"\
+    \n#include \"../monoids/max.hpp\"\n#include <climits>\n#include <cmath>\n#include\
     \ <deque>\n#include <functional>\n#include <iostream>\n#include <optional>\n#include\
     \ <tuple>\n#include <utility>\n#include <vector>\nusing namespace std;\n#include\
-    \ \"old/rollback-square-decomposition.inc.cpp\"\n\ntemplate <class T>\nstruct\
+    \ \"../old/rollback-square-decomposition.inc.cpp\"\n\ntemplate <class T>\nstruct\
     \ rollbackable_deque {\n    deque<T> data;\n    vector<pair<char, optional<T>\
     \ > > history;\n    rollbackable_deque() = default;\n    bool empty() const {\
     \ return data.empty(); }\n    size_t size() const { return data.size(); }\n  \
@@ -238,8 +238,8 @@ data:
   isVerificationFile: true
   path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 23:22:52+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: old/rollback-square-decomposition.yukicoder-1031.test.cpp
 layout: document

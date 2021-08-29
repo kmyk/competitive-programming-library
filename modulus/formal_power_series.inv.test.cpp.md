@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
@@ -14,7 +14,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':question:'
@@ -22,9 +22,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/inv_of_formal_power_series
@@ -206,8 +206,8 @@ data:
     \ > b = formal_power_series<mint<MOD> >(a).inv(n).data();\n    b.resize(n);\n\n\
     \    // output\n    REP (i, n) {\n        printf(\"%d \", b[i].value);\n    }\n\
     \    printf(\"\\n\");\n    return 0;\n}\n"
-  code: "#include \"modulus/formal_power_series.hpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/inv_of_formal_power_series\"\
-    \n\n#include <cstdio>\n#include <vector>\n#include \"utils/macros.hpp\"\nusing\
+  code: "#include \"../modulus/formal_power_series.hpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/inv_of_formal_power_series\"\
+    \n\n#include <cstdio>\n#include <vector>\n#include \"../utils/macros.hpp\"\nusing\
     \ namespace std;\n\nconstexpr int MOD = 998244353;\nint main() {\n    // input\n\
     \    int n; scanf(\"%d\", &n);\n    vector<mint<MOD> > a(n);\n    REP (i, n) {\n\
     \        scanf(\"%d\", &a[i].value);\n    }\n\n    // solve\n    vector<mint<MOD>\
@@ -224,8 +224,8 @@ data:
   isVerificationFile: true
   path: modulus/formal_power_series.inv.test.cpp
   requiredBy: []
-  timestamp: '2020-08-01 00:51:48+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/formal_power_series.inv.test.cpp
 layout: document

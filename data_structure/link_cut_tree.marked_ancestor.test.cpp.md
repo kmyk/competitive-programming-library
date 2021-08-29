@@ -201,17 +201,17 @@ data:
     \ + 1;\n            }\n        }\n        cout << sum << endl;\n    }\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp\"\
-    \n#include <iostream>\n#include \"data_structure/link_cut_tree.hpp\"\n#include\
-    \ \"monoids/trivial.hpp\"\n#include \"utils/macros.hpp\"\nusing namespace std;\n\
-    \n\nint main() {\n    while (true) {\n        int n, q; cin >> n >> q;\n     \
-    \   if (n == 0 and q == 0) break;\n\n        link_cut_tree<trivial_monoid> lct(n);\n\
-    \        REP3 (i, 1, n) {\n            int parent; cin >> parent;\n          \
-    \  -- parent;\n            lct.link(i, parent);\n        }\n\n        long long\
-    \ sum = 0;\n        vector<bool> marked(n);\n        marked[0] = true;\n     \
-    \   while (q --) {\n            char c; int v; cin >> c >> v;\n            --\
-    \ v;\n            if (c == 'M') {\n                if (not marked[v]) {\n    \
-    \                marked[v] = true;\n                    lct.cut(v);\n        \
-    \        }\n            } else if (c == 'Q') {\n                sum += lct.get_root(v)\
+    \n#include <iostream>\n#include \"../data_structure/link_cut_tree.hpp\"\n#include\
+    \ \"../monoids/trivial.hpp\"\n#include \"../utils/macros.hpp\"\nusing namespace\
+    \ std;\n\n\nint main() {\n    while (true) {\n        int n, q; cin >> n >> q;\n\
+    \        if (n == 0 and q == 0) break;\n\n        link_cut_tree<trivial_monoid>\
+    \ lct(n);\n        REP3 (i, 1, n) {\n            int parent; cin >> parent;\n\
+    \            -- parent;\n            lct.link(i, parent);\n        }\n\n     \
+    \   long long sum = 0;\n        vector<bool> marked(n);\n        marked[0] = true;\n\
+    \        while (q --) {\n            char c; int v; cin >> c >> v;\n         \
+    \   -- v;\n            if (c == 'M') {\n                if (not marked[v]) {\n\
+    \                    marked[v] = true;\n                    lct.cut(v);\n    \
+    \            }\n            } else if (c == 'Q') {\n                sum += lct.get_root(v)\
     \ + 1;\n            }\n        }\n        cout << sum << endl;\n    }\n    return\
     \ 0;\n}\n"
   dependsOn:
@@ -222,7 +222,7 @@ data:
   isVerificationFile: true
   path: data_structure/link_cut_tree.marked_ancestor.test.cpp
   requiredBy: []
-  timestamp: '2020-02-27 11:49:55+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/link_cut_tree.marked_ancestor.test.cpp

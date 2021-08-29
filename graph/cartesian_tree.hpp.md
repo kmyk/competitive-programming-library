@@ -6,15 +6,15 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/cartesian_tree.yosupo.test.cpp
     title: graph/cartesian_tree.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/cartesian_tree.yukicoder-1031.test.cpp
     title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: Cartesian tree ($O(n)$)
     links: []
@@ -35,7 +35,7 @@ data:
     \      if (l != -1) {\n                parent[l] = p;\n            }\n       \
     \     parent[p] = i;\n            l = p;\n            p = pp;\n        }\n   \
     \     parent[i] = p;\n    }\n    return parent;\n}\n"
-  code: "#pragma once\n#include <functional>\n#include <vector>\n#include \"utils/macros.hpp\"\
+  code: "#pragma once\n#include <functional>\n#include <vector>\n#include \"../utils/macros.hpp\"\
     \n\n/**\n * @brief Cartesian tree ($O(n)$)\n * @note the smallest value is the\
     \ root\n * @note if a is not distinct, the way for tie-break is undefined\n *\
     \ @return the binary tree as the list of parents\n */\ntemplate <class T, class\
@@ -52,8 +52,8 @@ data:
   isVerificationFile: false
   path: graph/cartesian_tree.hpp
   requiredBy: []
-  timestamp: '2020-07-16 00:31:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - graph/cartesian_tree.yosupo.test.cpp
   - graph/cartesian_tree.yukicoder-1031.test.cpp

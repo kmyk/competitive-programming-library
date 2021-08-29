@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: monoids/min.hpp
     title: monoids/min.hpp
   - icon: ':question:'
@@ -57,14 +57,14 @@ data:
     \ r; scanf(\"%d%d\", &l, &r);\n        int answer = st.range_get(l, r);\n    \
     \    printf(\"%d\\n\", answer);\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include \"\
-    data_structure/sparse_table.hpp\"\n\n#include \"utils/macros.hpp\"\n#include \"\
-    monoids/min.hpp\"\n#include <cstdio>\n#include <vector>\nusing namespace std;\n\
-    \nint main() {\n    // input a sequence\n    int n, q; scanf(\"%d%d\", &n, &q);\n\
-    \    vector<int> a(n);\n    REP (i, n) {\n        scanf(\"%d\", &a[i]);\n    }\n\
-    \n    // construct the sparse table\n    sparse_table<min_monoid<int> > st(ALL(a));\n\
-    \n    // answer to queries\n    while (q --) {\n        int l, r; scanf(\"%d%d\"\
-    , &l, &r);\n        int answer = st.range_get(l, r);\n        printf(\"%d\\n\"\
-    , answer);\n    }\n    return 0;\n}\n"
+    ../data_structure/sparse_table.hpp\"\n\n#include \"../utils/macros.hpp\"\n#include\
+    \ \"../monoids/min.hpp\"\n#include <cstdio>\n#include <vector>\nusing namespace\
+    \ std;\n\nint main() {\n    // input a sequence\n    int n, q; scanf(\"%d%d\"\
+    , &n, &q);\n    vector<int> a(n);\n    REP (i, n) {\n        scanf(\"%d\", &a[i]);\n\
+    \    }\n\n    // construct the sparse table\n    sparse_table<min_monoid<int>\
+    \ > st(ALL(a));\n\n    // answer to queries\n    while (q --) {\n        int l,\
+    \ r; scanf(\"%d%d\", &l, &r);\n        int answer = st.range_get(l, r);\n    \
+    \    printf(\"%d\\n\", answer);\n    }\n    return 0;\n}\n"
   dependsOn:
   - data_structure/sparse_table.hpp
   - utils/macros.hpp
@@ -72,7 +72,7 @@ data:
   isVerificationFile: true
   path: data_structure/sparse_table.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-03-04 19:51:45+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/sparse_table.yosupo.test.cpp

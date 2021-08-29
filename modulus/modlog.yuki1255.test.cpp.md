@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
@@ -16,9 +16,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1255
@@ -78,19 +78,19 @@ data:
     \    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1255\"\n#include <cassert>\n\
     #include <cstdint>\n#include <iostream>\n#include <tuple>\n#include <utility>\n\
-    #include \"utils/macros.hpp\"\n#include \"modulus/modinv.hpp\"\n#include \"modulus/modlog.hpp\"\
-    \nusing namespace std;\n\nint64_t solve(int64_t n) {\n    if (n == 1) return 1;\n\
-    \    if (n == 2) return 2;\n    assert (n >= 3);\n\n    int64_t m = 2 * n - 1;\n\
-    \    auto f = [&](int64_t aq, int64_t ar, int64_t bq, int64_t br) {\n        int64_t\
-    \ cq = aq + bq;\n        int64_t cr = ar + br;\n        if (cr >= m) {\n     \
-    \       cr -= m;\n            cq += 1;\n        }\n        return make_pair(cq,\
-    \ cr);\n    };\n\n    int64_t k = modlog(2, modinv(2, m), m) + 1;\n    int64_t\
-    \ q0 = 0;\n    int64_t r0 = 0;\n    int64_t q1 = 0;\n    int64_t r1 = 1;\n   \
-    \ REP (i, 60) {\n        if (k & (1ll << i)) {\n            tie(q0, r0) = f(q0,\
-    \ r0, q1, r1);\n        }\n        tie(q1, r1) = f(q1, r1, q1, r1);\n    }\n \
-    \   return k + q0;\n}\n\nint main() {\n    int t; cin >> t;\n    while (t --)\
-    \ {\n        int64_t n; cin >> n;\n        cout << solve(n) << endl;\n    }\n\
-    \    return 0;\n}\n"
+    #include \"../utils/macros.hpp\"\n#include \"../modulus/modinv.hpp\"\n#include\
+    \ \"../modulus/modlog.hpp\"\nusing namespace std;\n\nint64_t solve(int64_t n)\
+    \ {\n    if (n == 1) return 1;\n    if (n == 2) return 2;\n    assert (n >= 3);\n\
+    \n    int64_t m = 2 * n - 1;\n    auto f = [&](int64_t aq, int64_t ar, int64_t\
+    \ bq, int64_t br) {\n        int64_t cq = aq + bq;\n        int64_t cr = ar +\
+    \ br;\n        if (cr >= m) {\n            cr -= m;\n            cq += 1;\n  \
+    \      }\n        return make_pair(cq, cr);\n    };\n\n    int64_t k = modlog(2,\
+    \ modinv(2, m), m) + 1;\n    int64_t q0 = 0;\n    int64_t r0 = 0;\n    int64_t\
+    \ q1 = 0;\n    int64_t r1 = 1;\n    REP (i, 60) {\n        if (k & (1ll << i))\
+    \ {\n            tie(q0, r0) = f(q0, r0, q1, r1);\n        }\n        tie(q1,\
+    \ r1) = f(q1, r1, q1, r1);\n    }\n    return k + q0;\n}\n\nint main() {\n   \
+    \ int t; cin >> t;\n    while (t --) {\n        int64_t n; cin >> n;\n       \
+    \ cout << solve(n) << endl;\n    }\n    return 0;\n}\n"
   dependsOn:
   - utils/macros.hpp
   - modulus/modinv.hpp
@@ -99,8 +99,8 @@ data:
   isVerificationFile: true
   path: modulus/modlog.yuki1255.test.cpp
   requiredBy: []
-  timestamp: '2020-10-09 23:24:24+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/modlog.yuki1255.test.cpp
 layout: document

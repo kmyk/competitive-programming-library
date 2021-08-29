@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   - icon: ':question:'
@@ -178,14 +178,14 @@ data:
     \ l, r);\n        out<int32_t>(b);\n        out<char>('\\n');\n    }\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/range_kth_smallest\"\n\
-    #include \"data_structure/wavelet_matrix.hpp\"\n#include \"utils/macros.hpp\"\n\
-    #include \"hack/fastio.hpp\"\n#include <cstdint>\nusing namespace std;\n\nint\
-    \ main() {\n    // input\n    int n = in<int>();\n    int q = in<int>();\n   \
-    \ vector<int32_t> a(n);\n    REP (i, n) {\n        a[i] = in<int32_t>();\n   \
-    \ }\n\n    // construct\n    wavelet_matrix<30> wm(a);\n\n    // output\n    while\
-    \ (q --) {\n        int l = in<int>();\n        int r = in<int>();\n        int\
-    \ k = in<int>();\n        int32_t b = wm.quantile(k, l, r);\n        out<int32_t>(b);\n\
-    \        out<char>('\\n');\n    }\n    return 0;\n}\n"
+    #include \"../data_structure/wavelet_matrix.hpp\"\n#include \"../utils/macros.hpp\"\
+    \n#include \"../hack/fastio.hpp\"\n#include <cstdint>\nusing namespace std;\n\n\
+    int main() {\n    // input\n    int n = in<int>();\n    int q = in<int>();\n \
+    \   vector<int32_t> a(n);\n    REP (i, n) {\n        a[i] = in<int32_t>();\n \
+    \   }\n\n    // construct\n    wavelet_matrix<30> wm(a);\n\n    // output\n  \
+    \  while (q --) {\n        int l = in<int>();\n        int r = in<int>();\n  \
+    \      int k = in<int>();\n        int32_t b = wm.quantile(k, l, r);\n       \
+    \ out<int32_t>(b);\n        out<char>('\\n');\n    }\n    return 0;\n}\n"
   dependsOn:
   - data_structure/wavelet_matrix.hpp
   - data_structure/fully_indexable_dictionary.hpp
@@ -194,7 +194,7 @@ data:
   isVerificationFile: true
   path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
   requiredBy: []
-  timestamp: '2020-06-13 00:00:25+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.range_kth_smallest.test.cpp

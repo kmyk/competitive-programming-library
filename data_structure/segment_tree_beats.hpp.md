@@ -155,7 +155,7 @@ data:
     \ std::max(value_l, value_r);\n                case SUM: return value_l + value_r;\n\
     \                default: assert (false);\n            }\n        }\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <climits>\n\
-    #include <cstdint>\n#include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n\
+    #include <cstdint>\n#include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n\
     \ * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min,\
     \ max, sum}, \u5B8C\u5168\u4E8C\u5206\u6728)\n * @docs data_structure/segment_tree_beats.md\n\
     \ * @see https://codeforces.com/blog/entry/57319\n */\nclass segment_tree_beats\
@@ -278,7 +278,7 @@ data:
   isVerificationFile: false
   path: data_structure/segment_tree_beats.hpp
   requiredBy: []
-  timestamp: '2020-03-04 20:34:24+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/segment_tree_beats.yosupo.test.cpp

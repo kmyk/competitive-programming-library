@@ -10,27 +10,27 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
     title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
     links: []
@@ -170,9 +170,9 @@ data:
     \    REP (k, z0.size()) {\n        c[k] = garner_algorithm_template<MOD>(z0[k],\
     \ z1[k], z2[k]);\n    }\n    return c;\n}\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n\
-    #include <tuple>\n#include <vector>\n#include \"modulus/mint.hpp\"\n#include \"\
-    utils/macros.hpp\"\n#include \"modulus/number_theoretic_transformation.hpp\"\n\
-    \ntemplate <int32_t MOD, int32_t MOD1, int32_t MOD2, int32_t MOD3>\nmint<MOD>\
+    #include <tuple>\n#include <vector>\n#include \"../modulus/mint.hpp\"\n#include\
+    \ \"../utils/macros.hpp\"\n#include \"../modulus/number_theoretic_transformation.hpp\"\
+    \n\ntemplate <int32_t MOD, int32_t MOD1, int32_t MOD2, int32_t MOD3>\nmint<MOD>\
     \ garner_algorithm_template(mint<MOD1> a1, mint<MOD2> a2, mint<MOD3> a3) {\n \
     \   static const auto r12 = mint<MOD2>(MOD1).inv();\n    static const auto r13\
     \ = mint<MOD3>(MOD1).inv();\n    static const auto r23 = mint<MOD3>(MOD2).inv();\n\
@@ -207,8 +207,8 @@ data:
   path: modulus/number_theoretic_transformation_with_garner.hpp
   requiredBy:
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp

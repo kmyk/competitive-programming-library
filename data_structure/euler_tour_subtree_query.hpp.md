@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
@@ -96,8 +96,8 @@ data:
     \ x) {\n        assert (0 <= x and x < (int)left.size());\n        return data.point_get(left[x]);\n\
     \    }\n    value_type subtree_get(int x) {\n        assert (0 <= x and x < (int)left.size());\n\
     \        return data.range_get(left[x], right[x]);\n    }\n};\n"
-  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"utils/macros.hpp\"\
-    \n#include \"graph/euler_tour_preorder.hpp\"\n#include \"data_structure/segment_tree.hpp\"\
+  code: "#pragma once\n#include <cassert>\n#include <vector>\n#include \"../utils/macros.hpp\"\
+    \n#include \"../graph/euler_tour_preorder.hpp\"\n#include \"../data_structure/segment_tree.hpp\"\
     \n\n/**\n * @brief Euler Tour (subtree queries, with commutative monoids)\n *\
     \ @docs data_structure/euler_tour_subtree_query.md\n */\ntemplate <class CommutativeMonoid>\n\
     class euler_tour_subtree_query {\n    typedef typename CommutativeMonoid::value_type\
@@ -124,7 +124,7 @@ data:
   isVerificationFile: false
   path: data_structure/euler_tour_subtree_query.hpp
   requiredBy: []
-  timestamp: '2020-10-23 23:22:52+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp

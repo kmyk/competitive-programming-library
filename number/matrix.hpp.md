@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number/matrix.yukicoder-1073.test.cpp
     title: number/matrix.yukicoder-1073.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"number/matrix.hpp\"\n#include <cstdint>\n#include <vector>\n\
@@ -36,7 +36,7 @@ data:
     \    auto z = unit_matrix<T>(n);\n    for (int64_t i = 1; i <= y; i <<= 1) {\n\
     \        if (y & i) {\n            z = z * x;\n        }\n        x = x * x;\n\
     \    }\n    return z;\n}\n"
-  code: "#pragma once\n#include <cstdint>\n#include <vector>\n#include \"utils/macros.hpp\"\
+  code: "#pragma once\n#include <cstdint>\n#include <vector>\n#include \"../utils/macros.hpp\"\
     \n\ntemplate <typename T>\nstd::vector<std::vector<T> > operator * (const std::vector<std::vector<T>\
     \ >& a, const std::vector<std::vector<T> >& b) {\n    int n = a.size();\n    std::vector<std::vector<T>\
     \ > c(n, std::vector<T>(n));\n    REP (y, n) {\n        REP (z, n) {\n       \
@@ -59,8 +59,8 @@ data:
   isVerificationFile: false
   path: number/matrix.hpp
   requiredBy: []
-  timestamp: '2021-04-24 22:00:17+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - number/matrix.yukicoder-1073.test.cpp
 documentation_of: number/matrix.hpp

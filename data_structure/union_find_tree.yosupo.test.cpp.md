@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
   _extendedRequiredBy: []
@@ -33,18 +33,18 @@ data:
     \ if (t == 1) {\n            bool answer = uft.is_same(u, v);\n            printf(\"\
     %d\\n\", (int)answer);\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#include \"\
-    data_structure/union_find_tree.hpp\"\n#include <cstdio>\n\nint main() {\n    int\
-    \ n, q; scanf(\"%d%d\", &n, &q);\n    union_find_tree uft(n);\n    while (q --)\
-    \ {\n        int t, u, v; scanf(\"%d%d%d\", &t, &u, &v);\n        if (t == 0)\
-    \ {\n            uft.unite_trees(u, v);\n        } else if (t == 1) {\n      \
-    \      bool answer = uft.is_same(u, v);\n            printf(\"%d\\n\", (int)answer);\n\
+    ../data_structure/union_find_tree.hpp\"\n#include <cstdio>\n\nint main() {\n \
+    \   int n, q; scanf(\"%d%d\", &n, &q);\n    union_find_tree uft(n);\n    while\
+    \ (q --) {\n        int t, u, v; scanf(\"%d%d%d\", &t, &u, &v);\n        if (t\
+    \ == 0) {\n            uft.unite_trees(u, v);\n        } else if (t == 1) {\n\
+    \            bool answer = uft.is_same(u, v);\n            printf(\"%d\\n\", (int)answer);\n\
     \        }\n    }\n    return 0;\n}\n"
   dependsOn:
   - data_structure/union_find_tree.hpp
   isVerificationFile: true
   path: data_structure/union_find_tree.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2020-02-28 14:33:39+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/union_find_tree.yosupo.test.cpp

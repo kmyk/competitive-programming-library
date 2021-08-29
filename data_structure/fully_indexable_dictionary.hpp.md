@@ -5,7 +5,7 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
   _extendedVerifiedWith:
@@ -15,12 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
     title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
     title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: data_structure/fully_indexable_dictionary.md
     document_title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
@@ -69,7 +69,7 @@ data:
     \ const {\n        assert (0 <= i and i < size);\n        return block[i / block_size]\
     \ & (1ull << (i % block_size));\n    }\n};\n"
   code: "#pragma once\n#include <algorithm>\n#include <cassert>\n#include <cstdint>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n * @brief Fully Indexable\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n * @brief Fully Indexable\
     \ Dictionary / \u5B8C\u5099\u8F9E\u66F8\n * @docs data_structure/fully_indexable_dictionary.md\n\
     \ * @note space complexity $o(N)$. $1.5N$-bit consumed\n */\nclass fully_indexable_dictionary\
     \ {\n    static constexpr std::size_t block_size = 64;\n    std::vector<uint64_t>\
@@ -112,8 +112,8 @@ data:
   path: data_structure/fully_indexable_dictionary.hpp
   requiredBy:
   - data_structure/wavelet_matrix.hpp
-  timestamp: '2020-02-28 15:08:46+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data_structure/wavelet_matrix.aoj2674.test.cpp
   - data_structure/wavelet_matrix.rectangle_sum.test.cpp

@@ -42,10 +42,10 @@ data:
     \ edges, 0);\n    if (order.size() != edges.size()) {\n        return std::vector<int>();\n\
     \    }\n    return order;\n}\n"
   code: "#pragma once\n#include <algorithm>\n#include <tuple>\n#include <utility>\n\
-    #include <vector>\n#include \"utils/macros.hpp\"\n\n/**\n * @param g must be an\
-    \ undirected graph. Loops and multiple edges are acceptable.\n * @param root specifies\
-    \ the component to find an Eulerian cycle\n * @return indices of edges. It's empty\
-    \ if g is not a Eulerian graph.\n */\nstd::vector<int> find_eulerian_cycle_with_root(int\
+    #include <vector>\n#include \"../utils/macros.hpp\"\n\n/**\n * @param g must be\
+    \ an undirected graph. Loops and multiple edges are acceptable.\n * @param root\
+    \ specifies the component to find an Eulerian cycle\n * @return indices of edges.\
+    \ It's empty if g is not a Eulerian graph.\n */\nstd::vector<int> find_eulerian_cycle_with_root(int\
     \ n, const std::vector<std::pair<int, int> > & edges, int root) {\n    int m =\
     \ edges.size();\n    std::vector<std::vector<int> > g(n);\n    std::vector<int>\
     \ degree(n);\n    REP (i, m) {\n        int x, y; std::tie(x, y) = edges[i];\n\
@@ -71,7 +71,7 @@ data:
   isVerificationFile: false
   path: graph/euler_graph.hpp
   requiredBy: []
-  timestamp: '2020-06-06 18:18:58+09:00'
+  timestamp: '2021-08-30 04:35:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/euler_graph.hpp

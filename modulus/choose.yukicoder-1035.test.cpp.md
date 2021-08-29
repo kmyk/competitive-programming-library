@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -22,9 +22,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1035
@@ -101,12 +101,13 @@ data:
     \ - i).pow(n);\n    }\n    return ans;\n}\n\nint main() {\n    int N, M; cin >>\
     \ N >> M;\n    cout << solve(N, M) << endl;\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/1035\"\n#include <iostream>\n\
-    #include \"utils/macros.hpp\"\n#include \"modulus/mint.hpp\"\n#include \"modulus/choose.hpp\"\
-    \nusing namespace std;\n\nconstexpr int64_t MOD = 1000000007;\nmint<MOD> solve(int\
-    \ n, int m) {\n    mint<MOD> ans = 0;\n    REP (i, m + 1) {\n        int sign\
-    \ = (i % 2 == 0 ? 1 : -1);\n        ans += sign * choose<MOD>(m, m - i) * mint<MOD>(m\
-    \ - i).pow(n);\n    }\n    return ans;\n}\n\nint main() {\n    int N, M; cin >>\
-    \ N >> M;\n    cout << solve(N, M) << endl;\n    return 0;\n}\n"
+    #include \"../utils/macros.hpp\"\n#include \"../modulus/mint.hpp\"\n#include \"\
+    ../modulus/choose.hpp\"\nusing namespace std;\n\nconstexpr int64_t MOD = 1000000007;\n\
+    mint<MOD> solve(int n, int m) {\n    mint<MOD> ans = 0;\n    REP (i, m + 1) {\n\
+    \        int sign = (i % 2 == 0 ? 1 : -1);\n        ans += sign * choose<MOD>(m,\
+    \ m - i) * mint<MOD>(m - i).pow(n);\n    }\n    return ans;\n}\n\nint main() {\n\
+    \    int N, M; cin >> N >> M;\n    cout << solve(N, M) << endl;\n    return 0;\n\
+    }\n"
   dependsOn:
   - utils/macros.hpp
   - modulus/mint.hpp
@@ -117,8 +118,8 @@ data:
   isVerificationFile: true
   path: modulus/choose.yukicoder-1035.test.cpp
   requiredBy: []
-  timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-08-30 04:35:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: modulus/choose.yukicoder-1035.test.cpp
 layout: document
