@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/bellman_ford.test.cpp
     title: graph/bellman_ford.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Bellman-Ford algorithm
     links: []
@@ -65,7 +65,7 @@ data:
   path: graph/bellman_ford.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/bellman_ford.test.cpp
 documentation_of: graph/bellman_ford.hpp

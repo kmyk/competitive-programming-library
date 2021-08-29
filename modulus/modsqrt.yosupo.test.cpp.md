@@ -4,14 +4,14 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modsqrt.hpp
     title: find the sqrt $b$ of $a$ modulo $p$
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/sqrt_mod
@@ -54,7 +54,7 @@ data:
   path: modulus/modsqrt.yosupo.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: modulus/modsqrt.yosupo.test.cpp
 layout: document

@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
     title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utils/coordinate_compression.hpp\"\n#include <algorithm>\n\
@@ -43,7 +43,7 @@ data:
   path: utils/coordinate_compression.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/wavelet_matrix.rectangle_sum.test.cpp
 documentation_of: utils/coordinate_compression.hpp

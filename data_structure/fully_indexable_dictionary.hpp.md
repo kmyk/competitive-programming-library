@@ -5,7 +5,7 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
   _extendedVerifiedWith:
@@ -15,12 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
     title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
     title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: data_structure/fully_indexable_dictionary.md
     document_title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
@@ -113,7 +113,7 @@ data:
   requiredBy:
   - data_structure/wavelet_matrix.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/wavelet_matrix.aoj2674.test.cpp
   - data_structure/wavelet_matrix.rectangle_sum.test.cpp

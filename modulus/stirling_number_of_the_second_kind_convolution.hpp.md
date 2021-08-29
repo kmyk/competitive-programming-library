@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -13,10 +13,10 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
   - icon: ':question:'
@@ -24,12 +24,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: the Stirling number of the second kind (for given $N$, compute
       $S(N, \ast)$ in $O(N \log N)$)
@@ -207,7 +207,7 @@ data:
   path: modulus/stirling_number_of_the_second_kind_convolution.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 documentation_of: modulus/stirling_number_of_the_second_kind_convolution.hpp

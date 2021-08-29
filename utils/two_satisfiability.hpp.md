@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'

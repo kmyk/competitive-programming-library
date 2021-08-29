@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -22,9 +22,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1035
@@ -119,7 +119,7 @@ data:
   path: modulus/choose.yukicoder-1035.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: modulus/choose.yukicoder-1035.test.cpp
 layout: document

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree.hpp
     title: Union-Find Tree
   - icon: ':question:'
@@ -9,12 +9,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/kruskal.aoj.test.cpp
     title: graph/kruskal.aoj.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's\
       \ method)"
@@ -67,7 +67,7 @@ data:
   path: graph/kruskal.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/kruskal.aoj.test.cpp
 documentation_of: graph/kruskal.hpp

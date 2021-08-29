@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/yen_algorithm.hpp
     title: K shortest simple paths (Yen's algorithm + Dijkstra, $O(K V (E + V) \log
       V)$)
@@ -10,9 +10,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     ERROR: 1e-4
@@ -117,7 +117,7 @@ data:
   path: graph/yen_algorithm.yukicoder-1069.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/yen_algorithm.yukicoder-1069.test.cpp
 layout: document

@@ -12,15 +12,15 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.yosupo.test.cpp
     title: modulus/modlog.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.yuki1255.test.cpp
     title: modulus/modlog.yuki1255.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step,\
       \ $O(\\sqrt{m})$)"
@@ -92,7 +92,7 @@ data:
   path: modulus/modlog.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/modlog.yosupo.test.cpp
   - modulus/modlog.yuki1255.test.cpp

@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: modulus/modinv.hpp
     title: modulus/modinv.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
@@ -16,9 +16,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/discrete_logarithm_mod
@@ -82,7 +82,7 @@ data:
   path: modulus/modlog.yosupo.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: modulus/modlog.yosupo.test.cpp
 layout: document

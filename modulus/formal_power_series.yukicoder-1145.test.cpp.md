@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
@@ -14,7 +14,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':question:'
@@ -22,9 +22,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1145
@@ -239,7 +239,7 @@ data:
   path: modulus/formal_power_series.yukicoder-1145.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: modulus/formal_power_series.yukicoder-1145.test.cpp
 layout: document

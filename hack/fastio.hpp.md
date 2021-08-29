@@ -39,16 +39,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
     title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: hack/fastio.yosupo.test.cpp
     title: hack/fastio.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.yosupo.test.cpp
     title: modulus/number_theoretic_transformation.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
     title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   - icon: ':x:'

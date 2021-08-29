@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -20,24 +20,24 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/multichoose.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/permute.hpp
     title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ +\
       \ $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   - icon: ':question:'

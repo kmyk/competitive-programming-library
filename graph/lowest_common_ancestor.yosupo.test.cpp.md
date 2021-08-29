@@ -4,14 +4,14 @@ data:
   - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: hack/stack_pivot.hpp
     title: hack/stack_pivot.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
   - icon: ':question:'
@@ -19,9 +19,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
@@ -121,7 +121,7 @@ data:
   path: graph/lowest_common_ancestor.yosupo.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/lowest_common_ancestor.yosupo.test.cpp
 layout: document

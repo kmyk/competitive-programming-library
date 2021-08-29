@@ -5,10 +5,10 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/quotient_graph.hpp
     title: graph/quotient_graph.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
@@ -16,7 +16,7 @@ data:
     path: utils/two_satisfiability.hpp
     title: 2-SAT ($O(N)$)
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
   - icon: ':x:'
@@ -24,7 +24,7 @@ data:
     title: utils/two_satisfiability.yosupo.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Transpose_graph
@@ -54,7 +54,7 @@ data:
   - graph/quotient_graph.hpp
   - utils/two_satisfiability.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
   - utils/two_satisfiability.yosupo.test.cpp

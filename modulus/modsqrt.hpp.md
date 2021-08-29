@@ -6,12 +6,12 @@ data:
     title: modulus/modpow.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modsqrt.yosupo.test.cpp
     title: modulus/modsqrt.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: find the sqrt $b$ of $a$ modulo $p$
     links: []
@@ -56,7 +56,7 @@ data:
   path: modulus/modsqrt.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/modsqrt.yosupo.test.cpp
 documentation_of: modulus/modsqrt.hpp

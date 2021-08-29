@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: topological sort
     links: []
@@ -50,7 +50,7 @@ data:
   path: graph/topological_sort.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
 documentation_of: graph/topological_sort.hpp

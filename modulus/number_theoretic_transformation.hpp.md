@@ -14,42 +14,42 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.yosupo.test.cpp
     title: modulus/number_theoretic_transformation.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
     title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Number Theoretic Transformation (NTT) for Proth primes
     links: []
@@ -235,7 +235,7 @@ data:
   - modulus/number_theoretic_transformation_with_garner.hpp
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/formal_power_series.inv.test.cpp
   - modulus/formal_power_series.exp.test.cpp

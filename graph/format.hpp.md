@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.yukicoder-1031.test.cpp
     title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/format.hpp\"\n#include <cassert>\n#include <utility>\n\
@@ -48,7 +48,7 @@ data:
   path: graph/format.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/cartesian_tree.yukicoder-1031.test.cpp
 documentation_of: graph/format.hpp

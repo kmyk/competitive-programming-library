@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
   - icon: ':question:'
@@ -15,15 +15,15 @@ data:
     path: graph/virtual_trees.hpp
     title: "\u865A\u6A39 / virtual trees"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.aoj.test.cpp
     title: graph/lowest_common_ancestor.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.yosupo.test.cpp
     title: graph/lowest_common_ancestor.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148\
       \ (\u524D\u51E6\u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
@@ -120,7 +120,7 @@ data:
   requiredBy:
   - graph/virtual_trees.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/lowest_common_ancestor.yosupo.test.cpp
   - graph/lowest_common_ancestor.aoj.test.cpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -14,27 +14,27 @@ data:
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/multichoose.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/choose.yukicoder-1035.test.cpp
     title: modulus/choose.yukicoder-1035.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
   - icon: ':x:'
@@ -69,7 +69,7 @@ data:
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\
       \u7406 $O(n)$ + $O(1)$)"
@@ -153,7 +153,7 @@ data:
   - modulus/multichoose.hpp
   - modulus/stirling_number_of_the_second_kind_direct.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

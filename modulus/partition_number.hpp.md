@@ -1,11 +1,11 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -17,18 +17,18 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
   - icon: ':x:'
@@ -63,7 +63,7 @@ data:
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
     links: []
@@ -183,7 +183,7 @@ data:
   requiredBy:
   - modulus/twelvefold_way.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_2.test.cpp

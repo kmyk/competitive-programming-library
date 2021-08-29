@@ -20,20 +20,21 @@ data:
   bundledCode: "#line 1 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\n#line\
     \ 2 \"data_structure/li_chao_tree.hpp\"\n#include <algorithm>\n#include <cassert>\n\
-    #include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\n#define REP(i,\
-    \ n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m, n) for (int i\
-    \ = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i = (int)(n) -\
-    \ 1; (i) >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n) - 1; (i)\
-    \ >= (int)(m); -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line 7 \"\
-    data_structure/li_chao_tree.hpp\"\n\n/**\n * @brief Li-Chao tree\n * @docs data_structure/li_chao_tree.md\n\
-    \ */\nstruct li_chao_tree {\n    int k;\n    std::vector<std::pair<int64_t, int64_t>\
-    \ > f;\n    std::vector<int64_t> x;\n    std::vector<int64_t> y;\n    li_chao_tree()\
-    \ = default;\n    li_chao_tree(const std::vector<int64_t> & x_) : x(x_) {\n  \
-    \      assert (std::is_sorted(ALL(x)));\n        k = 0; while ((1 << k) < x.size())\
-    \ ++ k;\n        f.resize((1 << k) - 1, std::make_pair(0, std::numeric_limits<int64_t>::max()));\n\
-    \        y.resize(x.size(), std::numeric_limits<int64_t>::max());\n    }\n   \
-    \ /**\n     * @note i is a point on the original space\n     */\n    int64_t get_min(int64_t\
-    \ i) {\n        i = std::lower_bound(ALL(x), i) - x.begin();\n        return get_min_compressed(i);\n\
+    #include <climits>\n#include <utility>\n#include <vector>\n#line 2 \"utils/macros.hpp\"\
+    \n#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define REP3(i, m,\
+    \ n) for (int i = (m); (i) < (int)(n); ++ (i))\n#define REP_R(i, n) for (int i\
+    \ = (int)(n) - 1; (i) >= 0; -- (i))\n#define REP3R(i, m, n) for (int i = (int)(n)\
+    \ - 1; (i) >= (int)(m); -- (i))\n#define ALL(x) std::begin(x), std::end(x)\n#line\
+    \ 8 \"data_structure/li_chao_tree.hpp\"\n\n/**\n * @brief Li-Chao tree\n * @docs\
+    \ data_structure/li_chao_tree.md\n */\nstruct li_chao_tree {\n    int k;\n   \
+    \ std::vector<std::pair<int64_t, int64_t> > f;\n    std::vector<int64_t> x;\n\
+    \    std::vector<int64_t> y;\n    li_chao_tree() = default;\n    li_chao_tree(const\
+    \ std::vector<int64_t> & x_) : x(x_) {\n        assert (std::is_sorted(ALL(x)));\n\
+    \        k = 0; while ((1 << k) < x.size()) ++ k;\n        f.resize((1 << k) -\
+    \ 1, std::make_pair(0, std::numeric_limits<int64_t>::max()));\n        y.resize(x.size(),\
+    \ std::numeric_limits<int64_t>::max());\n    }\n    /**\n     * @note i is a point\
+    \ on the original space\n     */\n    int64_t get_min(int64_t i) {\n        i\
+    \ = std::lower_bound(ALL(x), i) - x.begin();\n        return get_min_compressed(i);\n\
     \    }\n    int64_t get_min_compressed(int i) {  // 0-based\n        assert (0\
     \ <= i and i < x.size());\n        int64_t z = y[i];\n        for (int j = (i\
     \ + (1 << k)) / 2; j > 0; j /= 2) {  // 1-based\n            z = std::min(z, f[j\
@@ -131,7 +132,7 @@ data:
   isVerificationFile: true
   path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2021-08-30 04:35:37+09:00'
+  timestamp: '2021-08-30 04:53:38+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: data_structure/li_chao_tree.segment_add_get_min.test.cpp

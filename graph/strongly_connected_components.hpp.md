@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'
@@ -12,7 +12,7 @@ data:
     path: utils/two_satisfiability.hpp
     title: 2-SAT ($O(N)$)
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
   - icon: ':x:'
@@ -20,7 +20,7 @@ data:
     title: utils/two_satisfiability.yosupo.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "strongly connected components decomposition, Kosaraju's algorithm\
       \ / \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
@@ -85,7 +85,7 @@ data:
   requiredBy:
   - utils/two_satisfiability.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - graph/strongly_connected_components.yosupo.test.cpp
   - utils/two_satisfiability.yosupo.test.cpp

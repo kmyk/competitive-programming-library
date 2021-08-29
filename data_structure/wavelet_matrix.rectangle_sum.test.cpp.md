@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/coordinate_compression.hpp
     title: utils/coordinate_compression.hpp
   - icon: ':question:'
@@ -15,9 +15,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/rectangle_sum
@@ -229,7 +229,7 @@ data:
   path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.rectangle_sum.test.cpp
 layout: document

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/quotient_graph.hpp
     title: graph/quotient_graph.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.hpp
     title: topological sort
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'
@@ -19,9 +19,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/scc
@@ -117,7 +117,7 @@ data:
   path: graph/strongly_connected_components.yosupo.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/strongly_connected_components.yosupo.test.cpp
 layout: document

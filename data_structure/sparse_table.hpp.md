@@ -5,7 +5,7 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
@@ -16,7 +16,7 @@ data:
     path: string/longest_common_prefix.hpp
     title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
       \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/left_to_right_maxima.hpp
     title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
   _extendedVerifiedWith:
@@ -26,13 +26,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/sparse_table.yukicoder-1036.test.cpp
     title: data_structure/sparse_table.yukicoder-1036.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.yukicoder-1031.test.cpp
     title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.aoj.test.cpp
     title: graph/lowest_common_ancestor.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.yosupo.test.cpp
     title: graph/lowest_common_ancestor.yosupo.test.cpp
   - icon: ':x:'

@@ -2,20 +2,20 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/choose.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406 $O(n)$\
       \ + $O(1)$)"
   - icon: ':x:'
     path: modulus/choose_simple.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
@@ -29,14 +29,14 @@ data:
     path: modulus/mint_with_zero.hpp
     title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
       \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modsqrt.hpp
     title: find the sqrt $b$ of $a$ modulo $p$
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/multichoose.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
@@ -44,30 +44,30 @@ data:
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/permute.hpp
     title: "permutation / \u9806\u5217 ${} _ n P _ r$ (\u524D\u51E6\u7406 $O(n)$ +\
       \ $O(1)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   - icon: ':warning:'
@@ -92,46 +92,46 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/sliding_window_aggregation.yosupo.test.cpp
     title: data_structure/sliding_window_aggregation.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree_decomposition.aoj_2405.test.cpp
     title: graph/tree_decomposition.aoj_2405.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/choose.yukicoder-1035.test.cpp
     title: modulus/choose.yukicoder-1035.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
   - icon: ':x:'
     path: modulus/mint_with_zero.test.cpp
     title: modulus/mint_with_zero.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.yosupo.test.cpp
     title: modulus/modlog.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.yuki1255.test.cpp
     title: modulus/modlog.yuki1255.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modsqrt.yosupo.test.cpp
     title: modulus/modsqrt.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.yosupo.test.cpp
     title: modulus/number_theoretic_transformation.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
     title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
   - icon: ':x:'

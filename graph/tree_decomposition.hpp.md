@@ -6,12 +6,12 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree_decomposition.aoj_2405.test.cpp
     title: graph/tree_decomposition.aoj_2405.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: graph/tree_decomposition.md
     document_title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
@@ -189,7 +189,7 @@ data:
   path: graph/tree_decomposition.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/tree_decomposition.aoj_2405.test.cpp
 documentation_of: graph/tree_decomposition.hpp

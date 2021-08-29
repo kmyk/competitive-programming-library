@@ -11,7 +11,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/euler_tour_subtree_query.hpp
     title: Euler Tour (subtree queries, with commutative monoids)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
   - icon: ':question:'
@@ -44,13 +44,13 @@ data:
   - icon: ':question:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.hpp
     title: Wavelet Matrix
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/bellman_ford.hpp
     title: Bellman-Ford algorithm
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.hpp
     title: Cartesian tree ($O(n)$)
   - icon: ':warning:'
@@ -59,58 +59,58 @@ data:
   - icon: ':warning:'
     path: graph/euler_graph.hpp
     title: "Eulerian cycle (\u7121\u5411, \u5FA9\u5143)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/format.hpp
     title: graph/format.hpp
   - icon: ':warning:'
     path: graph/is_simple_graph.hpp
     title: graph/is_simple_graph.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
     title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
   - icon: ':warning:'
     path: graph/minimum-cost-flow.hpp
     title: "minimum cost flow / \u6700\u5C0F\u8CBB\u7528\u6D41 (primal-dual)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/quotient_graph.hpp
     title: graph/quotient_graph.hpp
   - icon: ':warning:'
     path: graph/shortest_path_faster_algorithm.hpp
     title: Shortest Path Faster Algorithm
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.hpp
     title: topological sort
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree_decomposition.hpp
     title: "\u6728\u5206\u89E3 (\u6728\u5E45 $t \\le 2$)"
   - icon: ':warning:'
     path: graph/virtual_trees.hpp
     title: "\u865A\u6A39 / virtual trees"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':x:'
     path: modulus/choose_simple.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.hpp
     title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0 $\\mathbb{Z}/n\\\
       mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
   - icon: ':warning:'
     path: modulus/garner.hpp
     title: Garner's algorithm
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
@@ -118,26 +118,26 @@ data:
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   - icon: ':warning:'
@@ -182,7 +182,7 @@ data:
     path: utils/binary_search_float.hpp
     title: "a binary search on floating point numbers / \u4E8C\u5206\u63A2\u7D22 (\u6D6E\
       \u52D5\u5C0F\u6570\u70B9\u6570)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/coordinate_compression.hpp
     title: utils/coordinate_compression.hpp
   - icon: ':x:'
@@ -191,7 +191,7 @@ data:
   - icon: ':warning:'
     path: utils/fast_zeta_transform.hpp
     title: upward fast zeta transform on primes
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/left_to_right_maxima.hpp
     title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
   - icon: ':x:'
@@ -276,76 +276,76 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
     title: data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/wavelet_matrix.rectangle_sum.test.cpp
     title: data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/bellman_ford.test.cpp
     title: graph/bellman_ford.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.yosupo.test.cpp
     title: graph/cartesian_tree.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cartesian_tree.yukicoder-1031.test.cpp
     title: graph/cartesian_tree.yukicoder-1031.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/dijkstra.yukicoder-1065.test.cpp
     title: graph/dijkstra.yukicoder-1065.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/functional_graph.yuki1254.test.cpp
     title: graph/functional_graph.yuki1254.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/kruskal.aoj.test.cpp
     title: graph/kruskal.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.aoj.test.cpp
     title: graph/lowest_common_ancestor.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.yosupo.test.cpp
     title: graph/lowest_common_ancestor.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.yosupo.test.cpp
     title: graph/strongly_connected_components.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree_decomposition.aoj_2405.test.cpp
     title: graph/tree_decomposition.aoj_2405.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/yen_algorithm.yukicoder-1069.test.cpp
     title: graph/yen_algorithm.yukicoder-1069.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/choose.yukicoder-1035.test.cpp
     title: modulus/choose.yukicoder-1035.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
   - icon: ':x:'
     path: modulus/mint_with_zero.test.cpp
     title: modulus/mint_with_zero.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.yosupo.test.cpp
     title: modulus/modlog.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/modlog.yuki1255.test.cpp
     title: modulus/modlog.yuki1255.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.yosupo.test.cpp
     title: modulus/number_theoretic_transformation.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
     title: modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
   - icon: ':x:'

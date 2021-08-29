@@ -7,11 +7,11 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/euler_tour_preorder.hpp
     title: Euler Tour (preorder)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.hpp
     title: "lowest common ancestor / \u6700\u5C0F\u5171\u901A\u7956\u5148 (\u524D\u51E6\
       \u7406 $O(N)$ + $O(1)$, $\\pm 1$ RMQ and sparse table)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: monoids/min_index.hpp
     title: monoids/min_index.hpp
   - icon: ':question:'

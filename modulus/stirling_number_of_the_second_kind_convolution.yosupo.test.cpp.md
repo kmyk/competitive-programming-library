@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
@@ -16,13 +16,13 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
@@ -31,9 +31,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/stirling_number_of_the_second_kind
@@ -234,7 +234,7 @@ data:
   path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
 layout: document

@@ -10,7 +10,7 @@ data:
   - icon: ':question:'
     path: modulus/modpow.hpp
     title: modulus/modpow.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation.hpp
     title: Number Theoretic Transformation (NTT) for Proth primes
   - icon: ':question:'
@@ -18,21 +18,21 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.exp.test.cpp
     title: modulus/formal_power_series.exp.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.inv.test.cpp
     title: modulus/formal_power_series.inv.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.log.test.cpp
     title: modulus/formal_power_series.log.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "formal power series / \u5F62\u5F0F\u7684\u7F83\u7D1A\u6570\u74B0\
       \ $\\mathbb{Z}/n\\mathbb{Z}\\lbrack\\lbrack x\\rbrack\\rbrack$"
@@ -278,7 +278,7 @@ data:
   path: modulus/formal_power_series.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/formal_power_series.inv.test.cpp
   - modulus/formal_power_series.exp.test.cpp

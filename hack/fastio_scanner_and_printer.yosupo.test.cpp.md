@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: hack/fastio_printer.hpp
     title: hack/fastio_printer.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: hack/fastio_scanner.hpp
     title: hack/fastio_scanner.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/many_aplusb
@@ -79,7 +79,7 @@ data:
   path: hack/fastio_scanner_and_printer.yosupo.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: hack/fastio_scanner_and_printer.yosupo.test.cpp
 layout: document
