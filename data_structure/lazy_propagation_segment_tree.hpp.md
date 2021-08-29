@@ -12,12 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
     title: data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: data_structure/lazy_propagation_segment_tree.md
     document_title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\
@@ -152,7 +152,7 @@ data:
   path: data_structure/lazy_propagation_segment_tree.hpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp

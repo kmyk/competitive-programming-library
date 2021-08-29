@@ -4,14 +4,14 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/quotient_graph.hpp
     title: graph/quotient_graph.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
     path: graph/topological_sort.hpp
     title: topological sort
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':question:'

@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/binary_search.hpp
     title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/binary_search_max.hpp
     title: utils/binary_search_max.hpp
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B
@@ -66,7 +66,7 @@ data:
   path: utils/binary_search.aoj.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: utils/binary_search.aoj.test.cpp
 layout: document

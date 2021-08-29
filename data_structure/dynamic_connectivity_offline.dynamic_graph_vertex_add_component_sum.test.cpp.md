@@ -11,10 +11,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree_foldable_undoable.hpp
     title: Union-Find Tree (foldable with commutative monoids, undoable)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
   - icon: ':question:'

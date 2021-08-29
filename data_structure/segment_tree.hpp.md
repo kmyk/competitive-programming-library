@@ -21,15 +21,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.range_sum_query.test.cpp
     title: data_structure/segment_tree.range_sum_query.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: data_structure/segment_tree.md
     document_title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids,\
@@ -125,7 +125,7 @@ data:
   requiredBy:
   - data_structure/euler_tour_subtree_query.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
   - data_structure/segment_tree.range_sum_query.test.cpp

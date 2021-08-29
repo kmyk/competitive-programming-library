@@ -12,7 +12,7 @@ data:
   - icon: ':warning:'
     path: graph/virtual_trees.hpp
     title: "\u865A\u6A39 / virtual trees"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.hpp
     title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
       \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
@@ -35,15 +35,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.yosupo.test.cpp
     title: graph/lowest_common_ancestor.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.yosupo.test.cpp
     title: string/longest_common_prefix.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Sparse Table (idempotent monoid)
     links: []
@@ -100,7 +100,7 @@ data:
   - graph/virtual_trees.hpp
   - utils/left_to_right_maxima.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - string/longest_common_prefix.yosupo.test.cpp
   - graph/lowest_common_ancestor.yosupo.test.cpp

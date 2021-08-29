@@ -51,18 +51,18 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
     title: modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.yosupo.test.cpp
     title: string/longest_common_prefix.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/suffix_array.yosupo.test.cpp
     title: string/suffix_array.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"hack/fastio.hpp\"\n#include <cstdint>\n#include <cstdio>\n\
@@ -108,7 +108,7 @@ data:
   path: hack/fastio.hpp
   requiredBy: []
   timestamp: '2020-06-13 00:00:25+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   - modulus/number_theoretic_transformation.yosupo.test.cpp

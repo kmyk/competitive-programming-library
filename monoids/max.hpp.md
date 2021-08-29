@@ -6,12 +6,12 @@ data:
     path: monoids/plus_max_action.hpp
     title: monoids/plus_max_action.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"monoids/max.hpp\"\n#include <algorithm>\n#include <limits>\n\
@@ -28,7 +28,7 @@ data:
   requiredBy:
   - monoids/plus_max_action.hpp
   timestamp: '2019-12-27 19:16:13+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
 documentation_of: monoids/max.hpp

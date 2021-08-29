@@ -14,7 +14,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/fully_indexable_dictionary.hpp
     title: "Fully Indexable Dictionary / \u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/lazy_propagation_segment_tree.hpp
     title: "Lazy Propagation Segment Tree / \u9045\u5EF6\u4F1D\u64AD\u30BB\u30B0\u30E1\
       \u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\u4E8C\u5206\u6728)"
@@ -28,7 +28,7 @@ data:
     path: data_structure/reporting_segment_tree.hpp
     title: "Dual Segment Tree / \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u5217\
       \u6319\u30AF\u30A8\u30EA, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree / \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (monoids, \u5B8C\u5168\
       \u4E8C\u5206\u6728)"
@@ -41,7 +41,7 @@ data:
     title: "Sliding Window Aggregation / \u542B\u307E\u308C\u308B\u8981\u7D20\u306E\
       \u7DCF\u548C\u304C $O(1)$ \u3067\u53D6\u308C\u308B queue (\u53EF\u63DB\u3068\
       \u306F\u9650\u3089\u306A\u3044 monoid \u304C\u4E57\u308B)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sparse_table.hpp
     title: Sparse Table (idempotent monoid)
   - icon: ':heavy_check_mark:'
@@ -81,14 +81,14 @@ data:
   - icon: ':warning:'
     path: graph/shortest_path_faster_algorithm.hpp
     title: Shortest Path Faster Algorithm
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/strongly_connected_components.hpp
     title: "strongly connected components decomposition, Kosaraju's algorithm / \u5F37\
       \u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
     path: graph/topological_sort.hpp
     title: topological sort
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/transpose_graph.hpp
     title: graph/transpose_graph.hpp
   - icon: ':heavy_check_mark:'
@@ -97,10 +97,10 @@ data:
   - icon: ':warning:'
     path: graph/virtual_trees.hpp
     title: "\u865A\u6A39 / virtual trees"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/choose_simple.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
   - icon: ':heavy_check_mark:'
@@ -114,7 +114,7 @@ data:
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
@@ -124,26 +124,26 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/number_theoretic_transformation_with_garner.hpp
     title: multiprecation on $\mathbb{Z}/n\mathbb{Z}[x]$
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/partition_number.hpp
     title: "the partition number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
   - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_convolution.hpp
     title: the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$
       in $O(N \log N)$)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_direct.hpp
     title: the Stirling number of the second kind ($O(K \log N)$)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/stirling_number_of_the_second_kind_table.hpp
     title: "the Stirling number of the second kind (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.hpp
     title: "twelvefold way / \u5199\u50CF12\u76F8"
   - icon: ':warning:'
     path: monoids/matrix_template.hpp
     title: monoids/matrix_template.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/fast_fourier_transformation.hpp
     title: FFT convolution
   - icon: ':warning:'
@@ -155,7 +155,7 @@ data:
   - icon: ':warning:'
     path: number/lagrange_interpolation.hpp
     title: Lagrange interpolation
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/matrix.hpp
     title: number/matrix.hpp
   - icon: ':x:'
@@ -164,17 +164,17 @@ data:
   - icon: ':warning:'
     path: number/miller-rabin.hpp
     title: miller-rabin primality test
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes.hpp
     title: number/primes.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes_extra.hpp
     title: number/primes_extra.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.hpp
     title: "Longest Common Prefix / \u6700\u9577\u5171\u901A\u63A5\u982D\u8F9E (\u63A5\
       \u5C3E\u8F9E\u914D\u5217, \u524D\u51E6\u7406 $O(N (\\log N)^2)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/suffix_array.hpp
     title: "Suffix Array / \u63A5\u5C3E\u8F9E\u914D\u5217 ($O(N (\\log N)^2)$, Manber\
       \ & Myers)"
@@ -185,7 +185,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/coordinate_compression.hpp
     title: utils/coordinate_compression.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
   - icon: ':warning:'
@@ -194,7 +194,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/left_to_right_maxima.hpp
     title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ + $O(1)$)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/two_satisfiability.hpp
     title: 2-SAT ($O(N)$)
   _extendedVerifiedWith:
@@ -348,73 +348,73 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_4.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_7.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_8.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
     title: modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/fast_fourier_transformation.yukicoder-856.test.cpp
     title: number/fast_fourier_transformation.yukicoder-856.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/matrix.yukicoder-1073.test.cpp
     title: number/matrix.yukicoder-1073.test.cpp
   - icon: ':x:'
     path: number/matrix_template.yukicoder-1073.test.cpp
     title: number/matrix_template.yukicoder-1073.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes.aoj.test.cpp
     title: number/primes.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes.yukicoder-1140.test.cpp
     title: number/primes.yukicoder-1140.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/longest_common_prefix.yosupo.test.cpp
     title: string/longest_common_prefix.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/suffix_array.yosupo.test.cpp
     title: string/suffix_array.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/binary_search.aoj.test.cpp
     title: utils/binary_search.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.aoj.test.cpp
     title: utils/dsu_on_tree.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/mo_algorithm.yuki1270.test.cpp
     title: utils/mo_algorithm.yuki1270.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
   _isVerificationFailed: true

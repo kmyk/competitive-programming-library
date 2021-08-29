@@ -5,7 +5,7 @@ data:
     path: data_structure/segment_tree_beats.hpp
     title: "Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max,\
       \ sum}, \u5B8C\u5168\u4E8C\u5206\u6728)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: hack/fastio.hpp
     title: hack/fastio.hpp
   - icon: ':question:'

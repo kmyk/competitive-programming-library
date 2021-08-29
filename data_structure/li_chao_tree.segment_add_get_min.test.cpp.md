@@ -81,7 +81,8 @@ data:
     \ <= l or r <= il) {\n            // nop\n        } else {\n            add_segment_compressed(2\
     \ * i + 1, il, (il + ir) / 2, l, r, a, b);\n            add_segment_compressed(2\
     \ * i + 2, (il + ir) / 2, ir, l, r, a, b);\n        }\n    }\n};\n#line 4 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
-    \n#include <cstdio>\n#include <tuple>\n#line 7 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
+    \n#include <cstdio>\n#line 6 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
+    \n#include <tuple>\n#line 8 \"data_structure/li_chao_tree.segment_add_get_min.test.cpp\"\
     \nusing namespace std;\n\nint main() {\n    // input\n    int n, q; scanf(\"%d%d\"\
     , &n, &q);\n    vector<int64_t> xs;\n    vector<tuple<int64_t, int64_t, int64_t,\
     \ int64_t> > segments;\n    REP (i, n) {\n        int64_t l, r, a, b; scanf(\"\
@@ -105,34 +106,35 @@ data:
     }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\n\
     #include \"../data_structure/li_chao_tree.hpp\"\n#include \"../utils/macros.hpp\"\
-    \n#include <cstdio>\n#include <tuple>\n#include <vector>\nusing namespace std;\n\
-    \nint main() {\n    // input\n    int n, q; scanf(\"%d%d\", &n, &q);\n    vector<int64_t>\
-    \ xs;\n    vector<tuple<int64_t, int64_t, int64_t, int64_t> > segments;\n    REP\
-    \ (i, n) {\n        int64_t l, r, a, b; scanf(\"%lld%lld%lld%lld\", &l, &r, &a,\
-    \ &b);\n        xs.push_back(l);\n        xs.push_back(r);\n        segments.emplace_back(l,\
-    \ r, a, b);\n    }\n    vector<tuple<int, int64_t, int64_t, int64_t, int64_t,\
-    \ int64_t> > queries;\n    REP (j, q) {\n        int t; scanf(\"%d\", &t);\n \
-    \       if (t == 0) {\n            int64_t l, r, a, b; scanf(\"%lld%lld%lld%lld\"\
-    , &l, &r, &a, &b);\n            xs.push_back(l);\n            xs.push_back(r);\n\
-    \            queries.emplace_back(t, l, r, a, b, -1);\n        } else if (t ==\
-    \ 1) {\n            int64_t p; scanf(\"%lld\", &p);\n            xs.push_back(p);\n\
-    \            queries.emplace_back(t, -1, -1, -1, -1, p);\n        } else {\n \
-    \           assert (false);\n        }\n    }\n\n    // construct\n    sort(ALL(xs));\n\
-    \    xs.erase(unique(ALL(xs)), xs.end());\n    li_chao_tree lichao(xs);\n\n  \
-    \  // output\n    for (auto [l, r, a, b] : segments) {\n        lichao.add_segment(l,\
-    \ r, a, b);\n    }\n    for (auto [t, l, r, a, b, p] : queries) {\n        if\
-    \ (t == 0) {\n            lichao.add_segment(l, r, a, b);\n        } else if (t\
-    \ == 1) {\n            int64_t q = lichao.get_min(p);\n            if (q == INT64_MAX)\
-    \ {\n                printf(\"INFINITY\\n\");\n            } else {\n        \
-    \        printf(\"%lld\\n\", q);\n            }\n        } else {\n          \
-    \  assert (false);\n        }\n    }\n    return 0;\n}\n"
+    \n#include <cstdio>\n#include <climits>\n#include <tuple>\n#include <vector>\n\
+    using namespace std;\n\nint main() {\n    // input\n    int n, q; scanf(\"%d%d\"\
+    , &n, &q);\n    vector<int64_t> xs;\n    vector<tuple<int64_t, int64_t, int64_t,\
+    \ int64_t> > segments;\n    REP (i, n) {\n        int64_t l, r, a, b; scanf(\"\
+    %lld%lld%lld%lld\", &l, &r, &a, &b);\n        xs.push_back(l);\n        xs.push_back(r);\n\
+    \        segments.emplace_back(l, r, a, b);\n    }\n    vector<tuple<int, int64_t,\
+    \ int64_t, int64_t, int64_t, int64_t> > queries;\n    REP (j, q) {\n        int\
+    \ t; scanf(\"%d\", &t);\n        if (t == 0) {\n            int64_t l, r, a, b;\
+    \ scanf(\"%lld%lld%lld%lld\", &l, &r, &a, &b);\n            xs.push_back(l);\n\
+    \            xs.push_back(r);\n            queries.emplace_back(t, l, r, a, b,\
+    \ -1);\n        } else if (t == 1) {\n            int64_t p; scanf(\"%lld\", &p);\n\
+    \            xs.push_back(p);\n            queries.emplace_back(t, -1, -1, -1,\
+    \ -1, p);\n        } else {\n            assert (false);\n        }\n    }\n\n\
+    \    // construct\n    sort(ALL(xs));\n    xs.erase(unique(ALL(xs)), xs.end());\n\
+    \    li_chao_tree lichao(xs);\n\n    // output\n    for (auto [l, r, a, b] : segments)\
+    \ {\n        lichao.add_segment(l, r, a, b);\n    }\n    for (auto [t, l, r, a,\
+    \ b, p] : queries) {\n        if (t == 0) {\n            lichao.add_segment(l,\
+    \ r, a, b);\n        } else if (t == 1) {\n            int64_t q = lichao.get_min(p);\n\
+    \            if (q == INT64_MAX) {\n                printf(\"INFINITY\\n\");\n\
+    \            } else {\n                printf(\"%lld\\n\", q);\n            }\n\
+    \        } else {\n            assert (false);\n        }\n    }\n    return 0;\n\
+    }\n"
   dependsOn:
   - data_structure/li_chao_tree.hpp
   - utils/macros.hpp
   isVerificationFile: true
   path: data_structure/li_chao_tree.segment_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2021-08-30 04:53:38+09:00'
+  timestamp: '2021-08-30 05:20:44+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: data_structure/li_chao_tree.segment_add_get_min.test.cpp

@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/lowest_common_ancestor.yosupo.test.cpp
     title: graph/lowest_common_ancestor.yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.aoj.test.cpp
     title: utils/dsu_on_tree.aoj.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"hack/stack_pivot.hpp\"\n#include <cstdlib>\n\n/**\n * @note\
@@ -41,7 +41,7 @@ data:
   path: hack/stack_pivot.hpp
   requiredBy: []
   timestamp: '2020-01-08 18:35:19+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/lowest_common_ancestor.yosupo.test.cpp
   - utils/dsu_on_tree.aoj.test.cpp

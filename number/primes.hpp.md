@@ -5,25 +5,25 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes_extra.hpp
     title: number/primes_extra.hpp
   - icon: ':warning:'
     path: utils/fast_zeta_transform.hpp
     title: upward fast zeta transform on primes
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes.aoj.test.cpp
     title: number/primes.aoj.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes.yukicoder-1140.test.cpp
     title: number/primes.yukicoder-1140.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"number/primes.hpp\"\n#include <algorithm>\n#include <cassert>\n\
@@ -104,7 +104,7 @@ data:
   - number/primes_extra.hpp
   - utils/fast_zeta_transform.hpp
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - number/primes.aoj.test.cpp
   - number/primes.yukicoder-1140.test.cpp

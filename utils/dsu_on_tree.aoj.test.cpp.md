@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/union_find_tree_with_monoid.hpp
     title: a disjoint set structure with monoid
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/subtree.hpp
     title: "subtree info / \u305D\u308C\u305E\u308C\u306E\u90E8\u5206\u6728\u306E\
       \ size \u3068\u304B height \u3068\u304B\u3092\u307E\u3068\u3081\u3066\u6C42\u3081\
       \u3066\u304A\u3044\u3066\u304F\u308C\u308B\u3084\u3064"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: hack/stack_pivot.hpp
     title: hack/stack_pivot.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: monoids/plus.hpp
     title: monoids/plus.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utils/dsu_on_tree.hpp
     title: DSU on tree (sack)
   - icon: ':question:'
@@ -23,9 +23,9 @@ data:
     title: utils/macros.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995
@@ -179,7 +179,7 @@ data:
   path: utils/dsu_on_tree.aoj.test.cpp
   requiredBy: []
   timestamp: '2021-08-30 04:35:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: utils/dsu_on_tree.aoj.test.cpp
 layout: document

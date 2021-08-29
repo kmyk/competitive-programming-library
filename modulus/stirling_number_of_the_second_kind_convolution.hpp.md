@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/factorial.hpp
     title: modulus/factorial.hpp
   - icon: ':question:'
