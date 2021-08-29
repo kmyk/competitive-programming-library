@@ -2,6 +2,7 @@
 #include "../data_structure/li_chao_tree.hpp"
 #include "../utils/macros.hpp"
 #include <cstdio>
+#include <climits>
 #include <tuple>
 #include <vector>
 using namespace std;
