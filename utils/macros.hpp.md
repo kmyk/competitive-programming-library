@@ -147,6 +147,9 @@ data:
     path: number/fast_fourier_transformation.hpp
     title: FFT convolution
   - icon: ':warning:'
+    path: number/inversion_number.hpp
+    title: number/inversion_number.hpp
+  - icon: ':warning:'
     path: number/karatsuba.hpp
     title: Karatsuba method ($O(n^{\log_2 3})$)
   - icon: ':warning:'
@@ -480,6 +483,7 @@ data:
   - graph/kruskal.hpp
   - graph/format.hpp
   - graph/virtual_trees.hpp
+  - number/inversion_number.hpp
   - number/lagrange_interpolation.hpp
   - number/primes.hpp
   - number/matrix.hpp

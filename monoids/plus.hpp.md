@@ -11,6 +11,9 @@ data:
   - icon: ':warning:'
     path: monoids/plus_min_count_action.hpp
     title: monoids/plus_min_count_action.hpp
+  - icon: ':warning:'
+    path: number/inversion_number.hpp
+    title: number/inversion_number.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: data_structure/binary_indexed_tree.test.cpp
@@ -58,6 +61,7 @@ data:
   isVerificationFile: false
   path: monoids/plus.hpp
   requiredBy:
+  - number/inversion_number.hpp
   - monoids/plus_min_count_action.hpp
   - monoids/plus_max_action.hpp
   - monoids/plus_min_action.hpp

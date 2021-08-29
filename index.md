@@ -328,6 +328,9 @@ data:
       path: number/gcd.hpp
       title: number/gcd.hpp
     - icon: ':warning:'
+      path: number/inversion_number.hpp
+      title: number/inversion_number.hpp
+    - icon: ':warning:'
       path: number/karatsuba.hpp
       title: Karatsuba method ($O(n^{\log_2 3})$)
     - icon: ':warning:'
@@ -437,9 +440,6 @@ data:
     - icon: ':warning:'
       path: old/heavy_light_decomposition.inc.cpp
       title: "heavy light decomposition / \u91CD\u8EFD\u5206\u89E3"
-    - icon: ':warning:'
-      path: old/inversion-number.inc.cpp
-      title: old/inversion-number.inc.cpp
     - icon: ':warning:'
       path: old/iterate.inc.cpp
       title: old/iterate.inc.cpp

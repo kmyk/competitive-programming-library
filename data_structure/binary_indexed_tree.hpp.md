@@ -4,7 +4,10 @@ data:
   - icon: ':question:'
     path: utils/macros.hpp
     title: utils/macros.hpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: number/inversion_number.hpp
+    title: number/inversion_number.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: data_structure/binary_indexed_tree.test.cpp
@@ -66,7 +69,8 @@ data:
   - utils/macros.hpp
   isVerificationFile: false
   path: data_structure/binary_indexed_tree.hpp
-  requiredBy: []
+  requiredBy:
+  - number/inversion_number.hpp
   timestamp: '2021-04-24 11:47:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
