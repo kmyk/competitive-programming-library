@@ -1,7 +1,7 @@
 #pragma once
 #include <algorithm>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 template <class T>
 struct coordinate_compression {

@@ -1,9 +1,9 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1036"
 #include <cstdio>
 #include <vector>
-#include "utils/macros.hpp"
-#include "data_structure/sparse_table.hpp"
-#include "monoids/gcd.hpp"
+#include "../utils/macros.hpp"
+#include "../data_structure/sparse_table.hpp"
+#include "../monoids/gcd.hpp"
 
 long long solve(int n, const std::vector<long long> & a) {
     sparse_table<gcd_monoid<long long> > table(ALL(a));

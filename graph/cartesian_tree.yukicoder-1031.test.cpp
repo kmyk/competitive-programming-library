@@ -1,8 +1,8 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1031"
-#include "utils/macros.hpp"
-#include "graph/cartesian_tree.hpp"
-#include "graph/format.hpp"
-#include "utils/left_to_right_maxima.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/cartesian_tree.hpp"
+#include "../graph/format.hpp"
+#include "../utils/left_to_right_maxima.hpp"
 #include <cstdio>
 #include <functional>
 #include <utility>

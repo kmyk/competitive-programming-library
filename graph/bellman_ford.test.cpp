@@ -1,15 +1,15 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B"
 #ifdef USE_SPFA
-#include "graph/shortest_path_faster_algorithm.hpp"
+#include "../graph/shortest_path_faster_algorithm.hpp"
 auto BELLMAN_FORD = shortest_path_faster_algorithm;
 #else
-#include "graph/bellman_ford.hpp"
+#include "../graph/bellman_ford.hpp"
 auto BELLMAN_FORD = bellman_ford_shortest_path;
 #endif
 
 #include <algorithm>
 #include <iostream>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 int main() {

@@ -1,8 +1,8 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1031"
-#include "utils/macros.hpp"
-#include "data_structure/sparse_table.hpp"
-#include "data_structure/segment_tree.hpp"
-#include "monoids/max.hpp"
+#include "../utils/macros.hpp"
+#include "../data_structure/sparse_table.hpp"
+#include "../data_structure/segment_tree.hpp"
+#include "../monoids/max.hpp"
 #include <climits>
 #include <cmath>
 #include <deque>
@@ -13,7 +13,7 @@
 #include <utility>
 #include <vector>
 using namespace std;
-#include "old/rollback-square-decomposition.inc.cpp"
+#include "../old/rollback-square-decomposition.inc.cpp"
 
 template <class T>
 struct rollbackable_deque {

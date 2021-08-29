@@ -1,9 +1,9 @@
-#include "modulus/number_theoretic_transformation_with_garner.hpp"
+#include "../modulus/number_theoretic_transformation_with_garner.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod_1000000007"
 
 #include <vector>
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 
 constexpr int MOD = 1000000007;
 int main() {

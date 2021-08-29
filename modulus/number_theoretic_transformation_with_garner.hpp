@@ -4,9 +4,9 @@
 #include <cstdint>
 #include <tuple>
 #include <vector>
-#include "modulus/mint.hpp"
-#include "utils/macros.hpp"
-#include "modulus/number_theoretic_transformation.hpp"
+#include "../modulus/mint.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/number_theoretic_transformation.hpp"
 
 template <int32_t MOD, int32_t MOD1, int32_t MOD2, int32_t MOD3>
 mint<MOD> garner_algorithm_template(mint<MOD1> a1, mint<MOD2> a2, mint<MOD3> a3) {

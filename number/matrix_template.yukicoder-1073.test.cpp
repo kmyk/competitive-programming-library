@@ -1,6 +1,6 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1073"
-#include "number/matrix_template.hpp"
-#include "modulus/mint.hpp"
+#include "../number/matrix_template.hpp"
+#include "../modulus/mint.hpp"
 #include <iostream>
 using namespace std;
 

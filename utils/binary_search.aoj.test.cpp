@@ -1,12 +1,12 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B"
-#include "utils/binary_search.hpp"
-#include "utils/binary_search_max.hpp"
+#include "../utils/binary_search.hpp"
+#include "../utils/binary_search_max.hpp"
 
 #include <cassert>
 #include <cstdint>
 #include <iostream>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 int main() {

@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/lca"
-#include "graph/lowest_common_ancestor.hpp"
+#include "../graph/lowest_common_ancestor.hpp"
 
-#include "utils/macros.hpp"
-#include "hack/stack_pivot.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/stack_pivot.hpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

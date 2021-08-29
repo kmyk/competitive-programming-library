@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/discrete_logarithm_mod"
-#include "modulus/modlog.hpp"
+#include "../modulus/modlog.hpp"
 #include <cassert>
 #include <cstdio>
 #include <vector>

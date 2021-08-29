@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @param g is an adjacent list of a digraph

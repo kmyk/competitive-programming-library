@@ -5,13 +5,13 @@
 #include <unordered_map>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
-#include "data_structure/segment_tree.hpp"
-#include "data_structure/lazy_propagation_segment_tree.hpp"
-#include "monoids/min.hpp"
-#include "monoids/plus.hpp"
-#include "monoids/plus_min_action.hpp"
-#include "utils/mo_algorithm.hpp"
+#include "../utils/macros.hpp"
+#include "../data_structure/segment_tree.hpp"
+#include "../data_structure/lazy_propagation_segment_tree.hpp"
+#include "../monoids/min.hpp"
+#include "../monoids/plus.hpp"
+#include "../monoids/plus_min_action.hpp"
+#include "../utils/mo_algorithm.hpp"
 using namespace std;
 
 

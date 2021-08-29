@@ -1,9 +1,9 @@
 #pragma once
 #include <cassert>
 #include <vector>
-#include "utils/macros.hpp"
-#include "graph/euler_tour_preorder.hpp"
-#include "data_structure/segment_tree.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/euler_tour_preorder.hpp"
+#include "../data_structure/segment_tree.hpp"
 
 /**
  * @brief Euler Tour (subtree queries, with commutative monoids)

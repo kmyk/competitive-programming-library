@@ -1,8 +1,8 @@
 #pragma once
 #include <cassert>
 #include <vector>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
 
 /**
  * @brief the Stirling number of the second kind (前処理 $O(NK)$ + $O(1)$)

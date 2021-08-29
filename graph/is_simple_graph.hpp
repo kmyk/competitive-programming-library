@@ -1,7 +1,7 @@
 #pragma once
 #include <set>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 bool is_simple_graph(const std::vector<std::vector<int>> &g) {
     int n = g.size();

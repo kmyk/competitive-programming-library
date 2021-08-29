@@ -2,9 +2,9 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-#include "string/suffix_array.hpp"
-#include "data_structure/sparse_table.hpp"
-#include "monoids/min.hpp"
+#include "../string/suffix_array.hpp"
+#include "../data_structure/sparse_table.hpp"
+#include "../monoids/min.hpp"
 
 /**
  * @brief Longest Common Prefix / 最長共通接頭辞 (接尾辞配列, 前処理 $O(N (\log N)^2)$ + $O(1)$)

@@ -2,7 +2,7 @@
 #include <cassert>
 #include <cstddef>
 #include <deque>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Sliding Window Aggregation / 含まれる要素の総和が $O(1)$ で取れる queue (可換とは限らない monoid が乗る)

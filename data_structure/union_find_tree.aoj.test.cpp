@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
-#include "data_structure/union_find_tree.hpp"
+#include "../data_structure/union_find_tree.hpp"
 #include <cstdio>
 
 int main() {

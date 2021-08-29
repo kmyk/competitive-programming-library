@@ -1,9 +1,9 @@
 #pragma once
 #include <cassert>
 #include <vector>
-#include "modulus/mint.hpp"
-#include "modulus/factorial.hpp"
-#include "modulus/number_theoretic_transformation_with_garner.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/factorial.hpp"
+#include "../modulus/number_theoretic_transformation_with_garner.hpp"
 
 /**
  * @brief the Stirling number of the second kind (for given $N$, compute $S(N, \ast)$ in $O(N \log N)$)

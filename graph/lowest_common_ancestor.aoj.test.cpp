@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C"
 
-#include "graph/lowest_common_ancestor.hpp"
+#include "../graph/lowest_common_ancestor.hpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

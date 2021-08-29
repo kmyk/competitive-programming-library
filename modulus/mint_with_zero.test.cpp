@@ -3,9 +3,9 @@
 #include <cassert>
 #include <iostream>
 #include <vector>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
-#include "modulus/mint_with_zero.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/mint_with_zero.hpp"
 using namespace std;
 
 int solve(int n, const std::vector<int>& a) {

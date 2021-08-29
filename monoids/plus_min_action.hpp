@@ -1,6 +1,6 @@
 #pragma once
-#include "monoids/plus.hpp"
-#include "monoids/min.hpp"
+#include "../monoids/plus.hpp"
+#include "../monoids/min.hpp"
 
 template <class T>
 struct plus_min_action {

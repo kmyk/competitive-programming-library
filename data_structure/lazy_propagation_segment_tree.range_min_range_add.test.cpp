@@ -1,8 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H"
-#include "data_structure/lazy_propagation_segment_tree.hpp"
-#include "monoids/min.hpp"
-#include "monoids/plus.hpp"
-#include "monoids/plus_min_action.hpp"
+#include "../data_structure/lazy_propagation_segment_tree.hpp"
+#include "../monoids/min.hpp"
+#include "../monoids/plus.hpp"
+#include "../monoids/plus_min_action.hpp"
 #include <cstdio>
 
 int main() {

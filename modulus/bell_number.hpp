@@ -1,7 +1,7 @@
 #pragma once
-#include "modulus/mint.hpp"
-#include "modulus/choose.hpp"
-#include "modulus/stirling_number_of_the_second_kind_table.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/choose.hpp"
+#include "../modulus/stirling_number_of_the_second_kind_table.hpp"
 
 /**
  * @brief the Bell number (前処理 $O(NK)$ + $O(1)$)

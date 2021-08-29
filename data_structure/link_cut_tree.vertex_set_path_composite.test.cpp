@@ -1,10 +1,10 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/vertex_set_path_composite"
-#include "data_structure/link_cut_tree.hpp"
-#include "modulus/mint.hpp"
-#include "monoids/linear_function.hpp"
-#include "monoids/dual.hpp"
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../data_structure/link_cut_tree.hpp"
+#include "../modulus/mint.hpp"
+#include "../monoids/linear_function.hpp"
+#include "../monoids/dual.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 #include <stack>
 #include <vector>
 using namespace std;

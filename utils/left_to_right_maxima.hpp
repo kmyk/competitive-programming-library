@@ -3,9 +3,9 @@
 #include <tuple>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
-#include "data_structure/sparse_table.hpp"
-#include "monoids/min.hpp"
+#include "../utils/macros.hpp"
+#include "../data_structure/sparse_table.hpp"
+#include "../monoids/min.hpp"
 
 /**
  * @brief Length of Left-to-right Maxima (前処理 $O(n \log n)$ + $O(1)$)

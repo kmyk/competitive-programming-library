@@ -1,9 +1,9 @@
 #pragma once
 #include <cstdint>
 #include <vector>
-#include "data_structure/binary_indexed_tree.hpp"
-#include "utils/macros.hpp"
-#include "monoids/plus.hpp"
+#include "../data_structure/binary_indexed_tree.hpp"
+#include "../utils/macros.hpp"
+#include "../monoids/plus.hpp"
 
 int64_t inversion_number(const std::vector<int> &a) {
     int n = a.size();

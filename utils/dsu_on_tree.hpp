@@ -2,8 +2,8 @@
 #include <functional>
 #include <stack>
 #include <vector>
-#include "graph/subtree.hpp"
-#include "utils/macros.hpp"
+#include "../graph/subtree.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief DSU on tree (sack)

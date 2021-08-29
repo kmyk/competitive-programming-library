@@ -1,7 +1,7 @@
 #pragma once
 #include <utility>
-#include "monoids/plus.hpp"
-#include "monoids/min_count.hpp"
+#include "../monoids/plus.hpp"
+#include "../monoids/min_count.hpp"
 
 /**
  * @note lazy_propagation_segment_tree<min_count_monoid<T>, plus_monoid<T>, plus_min_count_action<T> > can count a number of zeros (or, non-zero numbers) in the array

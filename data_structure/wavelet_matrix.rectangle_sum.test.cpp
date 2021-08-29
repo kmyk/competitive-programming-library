@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/rectangle_sum"
-#include "data_structure/wavelet_matrix.hpp"
-#include "utils/macros.hpp"
-#include "utils/coordinate_compression.hpp"
+#include "../data_structure/wavelet_matrix.hpp"
+#include "../utils/macros.hpp"
+#include "../utils/coordinate_compression.hpp"
 #include <cstdint>
 #include <cstdio>
 #include <numeric>

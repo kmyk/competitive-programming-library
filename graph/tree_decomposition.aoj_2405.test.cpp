@@ -1,8 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2405"
 #include <cstdio>
-#include "graph/tree_decomposition.hpp"
-#include "modulus/mint.hpp"
-#include "utils/macros.hpp"
+#include "../graph/tree_decomposition.hpp"
+#include "../modulus/mint.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 

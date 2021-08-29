@@ -1,5 +1,5 @@
 #pragma once
-#include "number/gcd.hpp"
+#include "../number/gcd.hpp"
 
 /**
  * @note a semilattice

@@ -2,7 +2,7 @@
 #include <cassert>
 #include <utility>
 #include <vector>
-#include "graph/strongly_connected_components.hpp"
+#include "../graph/strongly_connected_components.hpp"
 
 /**
  * @brief 2-SAT ($O(N)$)

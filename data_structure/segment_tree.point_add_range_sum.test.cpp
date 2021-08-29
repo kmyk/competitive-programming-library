@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
-#include "data_structure/segment_tree.hpp"
-#include "monoids/plus.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/segment_tree.hpp"
+#include "../monoids/plus.hpp"
+#include "../utils/macros.hpp"
 #include <cstdint>
 #include <cstdio>
 #include <tuple>

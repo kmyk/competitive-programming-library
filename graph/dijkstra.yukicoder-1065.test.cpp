@@ -1,8 +1,8 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1065"
 #define ERROR 1e-4
 #include <bits/stdc++.h>
-#include "utils/macros.hpp"
-#include "graph/dijkstra.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/dijkstra.hpp"
 using namespace std;
 
 

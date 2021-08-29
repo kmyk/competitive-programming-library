@@ -1,8 +1,8 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1069"
 #define ERROR 1e-4
 #include <bits/stdc++.h>
-#include "utils/macros.hpp"
-#include "graph/yen_algorithm.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/yen_algorithm.hpp"
 using namespace std;
 
 int main() {

@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
-#include "modulus/mint.hpp"
-#include "modulus/choose_simple.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/choose_simple.hpp"
 
 /**
  * @brief 重複組合せ ${} _ n H _ r = {} _ {n + r - 1} C _ r$ (愚直 $O(r)$)

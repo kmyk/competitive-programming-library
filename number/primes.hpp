@@ -3,7 +3,7 @@
 #include <cassert>
 #include <cstdint>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 struct prepared_primes {
     int size;

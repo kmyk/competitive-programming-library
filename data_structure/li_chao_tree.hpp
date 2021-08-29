@@ -3,7 +3,7 @@
 #include <cassert>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Li-Chao tree

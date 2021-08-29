@@ -3,7 +3,7 @@
 #include <cassert>
 #include <type_traits>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Lazy Propagation Segment Tree / 遅延伝播セグメント木 (monoids, 完全二分木)

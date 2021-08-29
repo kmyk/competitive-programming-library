@@ -1,9 +1,9 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
-#include "data_structure/segment_tree.hpp"
-#include "monoids/linear_function.hpp"
-#include "monoids/dual.hpp"
-#include "modulus/mint.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/segment_tree.hpp"
+#include "../monoids/linear_function.hpp"
+#include "../monoids/dual.hpp"
+#include "../modulus/mint.hpp"
+#include "../utils/macros.hpp"
 #include <cstdint>
 #include <tuple>
 using namespace std;

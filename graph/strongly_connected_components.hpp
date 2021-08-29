@@ -2,8 +2,8 @@
 #include <functional>
 #include <utility>
 #include <vector>
-#include "graph/transpose_graph.hpp"
-#include "utils/macros.hpp"
+#include "../graph/transpose_graph.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief strongly connected components decomposition, Kosaraju's algorithm / 強連結成分分解

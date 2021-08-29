@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
-#include "modulus/mint.hpp"
-#include "modulus/factorial.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/factorial.hpp"
 
 /**
  * @brief combination / 組合せ ${} _ n C _ r$ (前処理 $O(n)$ + $O(1)$)

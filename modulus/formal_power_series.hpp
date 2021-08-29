@@ -5,9 +5,9 @@
 #include <initializer_list>
 #include <tuple>
 #include <vector>
-#include "modulus/mint.hpp"
-#include "modulus/number_theoretic_transformation.hpp"
-#include "utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/number_theoretic_transformation.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief formal power series / 形式的羃級数環 $\mathbb{Z}/n\mathbb{Z}\lbrack\lbrack x\rbrack\rbrack$

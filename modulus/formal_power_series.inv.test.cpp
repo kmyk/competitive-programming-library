@@ -1,9 +1,9 @@
-#include "modulus/formal_power_series.hpp"
+#include "../modulus/formal_power_series.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/inv_of_formal_power_series"
 
 #include <cstdio>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 constexpr int MOD = 998244353;

@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
-#include "modulus/mint.hpp"
-#include "utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief combination / 組合せ ${} _ n C _ r$ (愚直 $O(r)$)

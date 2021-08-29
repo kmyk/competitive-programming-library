@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/cartesian_tree"
 #include <cstdio>
 #include <vector>
-#include "utils/macros.hpp"
-#include "graph/cartesian_tree.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/cartesian_tree.hpp"
 
 int main(){
     // input

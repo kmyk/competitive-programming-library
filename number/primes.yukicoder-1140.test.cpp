@@ -1,7 +1,7 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1140"
 #include <cstdio>
-#include "utils/macros.hpp"
-#include "number/primes.hpp"
+#include "../utils/macros.hpp"
+#include "../number/primes.hpp"
 
 prepared_primes primes(1e6 + 100);
 

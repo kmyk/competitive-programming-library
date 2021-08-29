@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
-#include "modulus/mint.hpp"
-#include "modulus/factorial.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/factorial.hpp"
 
 /**
  * @brief permutation / 順列 ${} _ n P _ r$ (前処理 $O(n)$ + $O(1)$)

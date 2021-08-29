@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/sqrt_mod"
-#include "modulus/modsqrt.hpp"
+#include "../modulus/modsqrt.hpp"
 #include <cassert>
 #include <cstdio>
 #include <vector>

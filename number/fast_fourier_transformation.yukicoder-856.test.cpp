@@ -2,9 +2,9 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
-#include "number/fast_fourier_transformation.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../number/fast_fourier_transformation.hpp"
 using namespace std;
 
 constexpr int64_t MOD = 1000000007;

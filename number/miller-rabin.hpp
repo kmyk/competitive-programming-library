@@ -1,8 +1,8 @@
 #pragma once
 #include <cassert>
 #include <random>
-#include "utils/macros.hpp"
-#include "modulus/modpow.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/modpow.hpp"
 
 /**
  * @brief miller-rabin primality test

@@ -1,10 +1,10 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum"
-#include "data_structure/segment_tree_beats.hpp"
+#include "../data_structure/segment_tree_beats.hpp"
 
 #include <cstdint>
 #include <vector>
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 
 int main() {
     int n = in<int>();

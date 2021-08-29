@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
-#include "data_structure/union_find_tree.hpp"
+#include "../data_structure/union_find_tree.hpp"
 #include <cstdio>
 
 int main() {

@@ -2,7 +2,7 @@
 #include <cassert>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 std::pair<std::vector<std::vector<int> >, int> children_from_parent(const std::vector<int> & parent) {
     int n = parent.size();

@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum"
-#include "data_structure/link_cut_tree.hpp"
-#include "monoids/plus.hpp"
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../data_structure/link_cut_tree.hpp"
+#include "../monoids/plus.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 #include <stack>
 #include <vector>
 using namespace std;

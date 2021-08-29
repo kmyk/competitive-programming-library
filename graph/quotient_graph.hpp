@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-#include "graph/transpose_graph.hpp"
-#include "utils/macros.hpp"
+#include "../graph/transpose_graph.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @param g is an adjacent list of a digraph

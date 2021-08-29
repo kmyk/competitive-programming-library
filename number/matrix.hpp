@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 template <typename T>
 std::vector<std::vector<T> > operator * (const std::vector<std::vector<T> >& a, const std::vector<std::vector<T> >& b) {

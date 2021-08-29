@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C"
-#include "number/primes.hpp"
+#include "../number/primes.hpp"
 #include <cassert>
 #include <cstdio>
 

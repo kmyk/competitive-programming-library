@@ -1,7 +1,7 @@
 #pragma once
 #include <array>
 #include <cstdint>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 template <typename T, int H, int W>
 using matrix = std::array<std::array<T, W>, H>;

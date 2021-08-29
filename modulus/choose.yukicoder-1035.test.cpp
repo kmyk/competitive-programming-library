@@ -1,8 +1,8 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1035"
 #include <iostream>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
-#include "modulus/choose.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/choose.hpp"
 using namespace std;
 
 constexpr int64_t MOD = 1000000007;

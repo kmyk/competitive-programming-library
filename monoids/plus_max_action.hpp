@@ -1,6 +1,6 @@
 #pragma once
-#include "monoids/plus.hpp"
-#include "monoids/max.hpp"
+#include "../monoids/plus.hpp"
+#include "../monoids/max.hpp"
 
 /**
  * @note lazy_propagation_segment_tree<max_monoid<T>, plus_monoid<T>, plus_max_action<T> > is a starry sky tree

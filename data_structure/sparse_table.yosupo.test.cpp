@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
-#include "data_structure/sparse_table.hpp"
+#include "../data_structure/sparse_table.hpp"
 
-#include "utils/macros.hpp"
-#include "monoids/min.hpp"
+#include "../utils/macros.hpp"
+#include "../monoids/min.hpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

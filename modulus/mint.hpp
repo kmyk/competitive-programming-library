@@ -1,8 +1,8 @@
 #pragma once
 #include <cstdint>
 #include <iostream>
-#include "modulus/modpow.hpp"
-#include "modulus/modinv.hpp"
+#include "../modulus/modpow.hpp"
+#include "../modulus/modinv.hpp"
 
 /**
  * @brief quotient ring / 剰余環 $\mathbb{Z}/n\mathbb{Z}$

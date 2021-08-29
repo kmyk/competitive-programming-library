@@ -1,13 +1,13 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2995"
-#include "utils/dsu_on_tree.hpp"
-#include "data_structure/union_find_tree_with_monoid.hpp"
-#include "monoids/plus.hpp"
-#include "hack/stack_pivot.hpp"
+#include "../utils/dsu_on_tree.hpp"
+#include "../data_structure/union_find_tree_with_monoid.hpp"
+#include "../monoids/plus.hpp"
+#include "../hack/stack_pivot.hpp"
 
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 vector<int> solve(int n, int k, const vector<vector<int> > & g, const vector<int> & c, const vector<int> & d) {

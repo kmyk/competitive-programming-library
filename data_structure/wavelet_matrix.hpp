@@ -4,8 +4,8 @@
 #include <climits>
 #include <cstdint>
 #include <vector>
-#include "data_structure/fully_indexable_dictionary.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/fully_indexable_dictionary.hpp"
+#include "../utils/macros.hpp"
 
 
 /**

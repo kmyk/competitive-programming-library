@@ -4,8 +4,8 @@
 #include <tuple>
 #include <utility>
 #include <vector>
-#include "modulus/mint.hpp"
-#include "utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Garner's algorithm

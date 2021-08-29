@@ -4,8 +4,8 @@
 #include <map>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
-#include "graph/functional_graph.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/functional_graph.hpp"
 using namespace std;
 
 vector<int> solve(int n, const vector<pair<int, int> >& edges) {

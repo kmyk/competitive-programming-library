@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/queue_operate_all_composite"
-#include "data_structure/sliding_window_aggregation.hpp"
-#include "monoids/linear_function.hpp"
-#include "monoids/dual.hpp"
-#include "modulus/mint.hpp"
+#include "../data_structure/sliding_window_aggregation.hpp"
+#include "../monoids/linear_function.hpp"
+#include "../monoids/dual.hpp"
+#include "../modulus/mint.hpp"
 #include <cstdio>
 #include <tuple>
 using namespace std;

@@ -3,8 +3,8 @@
 #include <cassert>
 #include <numeric>
 #include <utility>
-#include "monoids/chmin_chmax_add.hpp"
-#include "monoids/min_max.hpp"
+#include "../monoids/chmin_chmax_add.hpp"
+#include "../monoids/min_max.hpp"
 
 template <class T>
 struct chmin_chmax_add_min_max_action {

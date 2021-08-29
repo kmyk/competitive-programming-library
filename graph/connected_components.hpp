@@ -1,7 +1,7 @@
 #pragma once
 #include <stack>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @param g is an undirected graph

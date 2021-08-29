@@ -4,9 +4,9 @@
 #include <cmath>
 #include <cstdint>
 #include <unordered_map>
-#include "modulus/modinv.hpp"
-#include "modulus/modpow.hpp"
-#include "utils/macros.hpp"
+#include "../modulus/modinv.hpp"
+#include "../modulus/modpow.hpp"
+#include "../utils/macros.hpp"
 #include <iostream>
 
 /**

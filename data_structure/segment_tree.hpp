@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cassert>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Segment Tree / セグメント木 (monoids, 完全二分木)

@@ -1,8 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2170&lang=jp"
 #include <iostream>
-#include "data_structure/link_cut_tree.hpp"
-#include "monoids/trivial.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/link_cut_tree.hpp"
+#include "../monoids/trivial.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 

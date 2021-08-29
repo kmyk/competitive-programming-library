@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A"
-#include "graph/kruskal.hpp"
+#include "../graph/kruskal.hpp"
 
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 #include <cstdio>
 #include <vector>
 using namespace std;

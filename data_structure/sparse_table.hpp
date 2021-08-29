@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Sparse Table (idempotent monoid)

@@ -4,9 +4,9 @@
 #include <iostream>
 #include <tuple>
 #include <utility>
-#include "utils/macros.hpp"
-#include "modulus/modinv.hpp"
-#include "modulus/modlog.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/modinv.hpp"
+#include "../modulus/modlog.hpp"
 using namespace std;
 
 int64_t solve(int64_t n) {

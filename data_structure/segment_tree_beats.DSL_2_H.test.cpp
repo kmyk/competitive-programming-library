@@ -1,10 +1,10 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H"
-#include "data_structure/segment_tree_beats.hpp"
+#include "../data_structure/segment_tree_beats.hpp"
 
 #include <cstdint>
 #include <vector>
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 
 int main() {
     int n = in<int>();

@@ -4,8 +4,8 @@
 #include <functional>
 #include <utility>
 #include <vector>
-#include "data_structure/sparse_table.hpp"
-#include "monoids/min_index.hpp"
+#include "../data_structure/sparse_table.hpp"
+#include "../monoids/min_index.hpp"
 
 /**
  * @brief lowest common ancestor / 最小共通祖先 (前処理 $O(N)$ + $O(1)$, $\pm 1$ RMQ and sparse table)

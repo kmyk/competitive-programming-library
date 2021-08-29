@@ -1,9 +1,9 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1145"
 #include <cstdio>
 #include <vector>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
-#include "modulus/formal_power_series.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/formal_power_series.hpp"
 using namespace std;
 
 constexpr int MOD = 998244353;

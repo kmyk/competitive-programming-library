@@ -1,7 +1,7 @@
 #pragma once
 #include <functional>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Cartesian tree ($O(n)$)

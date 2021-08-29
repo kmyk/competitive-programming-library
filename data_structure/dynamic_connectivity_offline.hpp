@@ -5,9 +5,9 @@
 #include <optional>
 #include <tuple>
 #include <vector>
-#include "data_structure/union_find_tree_foldable_undoable.hpp"
-#include "data_structure/reporting_segment_tree.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/union_find_tree_foldable_undoable.hpp"
+#include "../data_structure/reporting_segment_tree.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Dynamic Connectivity (offline, commutative monoids)

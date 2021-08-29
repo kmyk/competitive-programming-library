@@ -3,7 +3,7 @@
 #include <cassert>
 #include <cstdint>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Fully Indexable Dictionary / 完備辞書

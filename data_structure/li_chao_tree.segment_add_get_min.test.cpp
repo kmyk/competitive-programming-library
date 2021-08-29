@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/segment_add_get_min"
-#include "data_structure/li_chao_tree.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/li_chao_tree.hpp"
+#include "../utils/macros.hpp"
 #include <cstdio>
 #include <tuple>
 #include <vector>

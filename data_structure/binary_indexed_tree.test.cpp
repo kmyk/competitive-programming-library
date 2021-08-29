@@ -2,9 +2,9 @@
 #include <cstdio>
 #include <tuple>
 #include <vector>
-#include "data_structure/binary_indexed_tree.hpp"
-#include "monoids/plus.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/binary_indexed_tree.hpp"
+#include "../monoids/plus.hpp"
+#include "../utils/macros.hpp"
 using namespace std;
 
 int main() {

@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2674"
-#include "data_structure/wavelet_matrix.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/wavelet_matrix.hpp"
+#include "../utils/macros.hpp"
 #include <cstdio>
 #include <numeric>
 using namespace std;

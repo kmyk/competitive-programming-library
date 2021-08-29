@@ -1,5 +1,5 @@
 #pragma once
-#include "number/matrix_template.hpp"
+#include "../number/matrix_template.hpp"
 
 template <class T, int N>
 struct matrix_monoid {

@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Suffix Array / 接尾辞配列 ($O(N (\log N)^2)$, Manber & Myers)

@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/many_aplusb"
-#include "hack/fastio.hpp"
+#include "../hack/fastio.hpp"
 
 int main() {
     int t = in<int>();

@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum"
-#include "data_structure/dynamic_connectivity_offline.hpp"
-#include "monoids/plus.hpp"
-#include "hack/fastio.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/dynamic_connectivity_offline.hpp"
+#include "../monoids/plus.hpp"
+#include "../hack/fastio.hpp"
+#include "../utils/macros.hpp"
 
 int main() {
     int n = in<int>();

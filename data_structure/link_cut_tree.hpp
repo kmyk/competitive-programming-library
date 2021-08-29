@@ -4,8 +4,8 @@
 #include <functional>
 #include <sstream>
 #include <vector>
-#include "utils/macros.hpp"
-#include "monoids/reversible.hpp"
+#include "../utils/macros.hpp"
+#include "../monoids/reversible.hpp"
 
 
 /**

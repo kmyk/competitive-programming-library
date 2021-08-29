@@ -1,10 +1,10 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1659"
 #include <iostream>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
-#include "number/primes.hpp"
-#include "number/primes_extra.hpp"
-#include "modulus/multichoose_simple.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../number/primes.hpp"
+#include "../number/primes_extra.hpp"
+#include "../modulus/multichoose_simple.hpp"
 using namespace std;
 
 prepared_primes primes(1e6 + 100);

@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Karatsuba method ($O(n^{\log_2 3})$)

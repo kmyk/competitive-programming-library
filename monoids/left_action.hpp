@@ -1,6 +1,6 @@
 #pragma once
 #include <utility>
-#include "monoids/left.hpp"
+#include "../monoids/left.hpp"
 
 /**
  * @note lazy_propagation_segment_tree<left_monoid<typename Monoid::value_type>, Monoid, left_action<Monoid> > is the same to dual_segment_tree<Monoid>

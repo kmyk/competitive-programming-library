@@ -1,10 +1,10 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
-#include "data_structure/lazy_propagation_red_black_tree.hpp"
-#include "monoids/plus_count.hpp"
-#include "monoids/linear_function.hpp"
-#include "monoids/linear_function_plus_count_action.hpp"
-#include "modulus/mint.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/lazy_propagation_red_black_tree.hpp"
+#include "../monoids/plus_count.hpp"
+#include "../monoids/linear_function.hpp"
+#include "../monoids/linear_function_plus_count_action.hpp"
+#include "../modulus/mint.hpp"
+#include "../utils/macros.hpp"
 #include <cstdio>
 #include <utility>
 #include <vector>

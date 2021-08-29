@@ -1,8 +1,8 @@
 #pragma once
 #include <cassert>
 #include <vector>
-#include "number/primes.hpp"
-#include "utils/macros.hpp"
+#include "../number/primes.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief upward fast zeta transform on primes

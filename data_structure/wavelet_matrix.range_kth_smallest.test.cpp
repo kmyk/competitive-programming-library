@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/range_kth_smallest"
-#include "data_structure/wavelet_matrix.hpp"
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../data_structure/wavelet_matrix.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 #include <cstdint>
 using namespace std;
 

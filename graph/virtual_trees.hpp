@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
-#include "utils/macros.hpp"
-#include "graph/euler_tour_preorder.hpp"
-#include "graph/lowest_common_ancestor.hpp"
+#include "../utils/macros.hpp"
+#include "../graph/euler_tour_preorder.hpp"
+#include "../graph/lowest_common_ancestor.hpp"
 
 /**
  * @brief 虚樹 / virtual trees

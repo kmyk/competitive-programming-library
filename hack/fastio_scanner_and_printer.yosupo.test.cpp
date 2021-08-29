@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/many_aplusb"
-#include "hack/fastio_scanner.hpp"
-#include "hack/fastio_printer.hpp"
+#include "../hack/fastio_scanner.hpp"
+#include "../hack/fastio_printer.hpp"
 
 scanner sc;
 printer pr;

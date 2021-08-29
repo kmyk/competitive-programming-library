@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/scc"
-#include "graph/strongly_connected_components.hpp"
-#include "graph/quotient_graph.hpp"
-#include "graph/topological_sort.hpp"
-#include "utils/macros.hpp"
+#include "../graph/strongly_connected_components.hpp"
+#include "../graph/quotient_graph.hpp"
+#include "../graph/topological_sort.hpp"
+#include "../utils/macros.hpp"
 #include <cassert>
 #include <cstdio>
 #include <vector>

@@ -1,5 +1,5 @@
 #pragma once
-#include "monoids/trivial.hpp"
+#include "../monoids/trivial.hpp"
 
 /**
  * @note lazy_propagation_segment_tree<Monoid, trivial_monoid, trivial_action<typename Monoid::value_type> > is the same to segment_tree<Monoid>

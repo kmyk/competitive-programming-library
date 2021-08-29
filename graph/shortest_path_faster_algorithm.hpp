@@ -6,7 +6,7 @@
 #include <tuple>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Shortest Path Faster Algorithm

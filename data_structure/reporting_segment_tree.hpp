@@ -4,7 +4,7 @@
 #include <functional>
 #include <type_traits>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Dual Segment Tree / 双対セグメント木 (列挙クエリ, 完全二分木)

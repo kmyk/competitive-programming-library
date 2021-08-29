@@ -1,6 +1,6 @@
 #pragma once
-#include "data_structure/union_find_tree.hpp"
-#include "utils/macros.hpp"
+#include "../data_structure/union_find_tree.hpp"
+#include "../utils/macros.hpp"
 #include <algorithm>
 #include <numeric>
 #include <tuple>

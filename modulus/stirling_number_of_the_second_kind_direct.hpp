@@ -2,10 +2,10 @@
 #include <cassert>
 #include <vector>
 #include <map>
-#include "utils/macros.hpp"
-#include "modulus/mint.hpp"
-#include "modulus/factorial.hpp"
-#include "modulus/choose.hpp"
+#include "../utils/macros.hpp"
+#include "../modulus/mint.hpp"
+#include "../modulus/factorial.hpp"
+#include "../modulus/choose.hpp"
 
 /**
  * @brief the Stirling number of the second kind ($O(K \log N)$)

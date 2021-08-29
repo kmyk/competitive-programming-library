@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/vertex_add_subtree_sum"
-#include "data_structure/euler_tour_subtree_query.hpp"
-#include "monoids/plus.hpp"
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
+#include "../data_structure/euler_tour_subtree_query.hpp"
+#include "../monoids/plus.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
 #include <vector>
 using namespace std;
 

@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "modulus/mint.hpp"
+#include "../modulus/mint.hpp"
 
 template <int32_t MOD>
 mint<MOD> fact(int n) {

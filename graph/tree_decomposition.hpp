@@ -10,7 +10,7 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief 木分解 (木幅 $t \le 2$)

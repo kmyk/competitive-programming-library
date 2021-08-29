@@ -2,9 +2,9 @@
 #include <cassert>
 #include <vector>
 #include <utility>
-#include "utils/macros.hpp"
-#include "hack/fastio.hpp"
-#include "utils/two_satisfiability.hpp"
+#include "../utils/macros.hpp"
+#include "../hack/fastio.hpp"
+#include "../utils/two_satisfiability.hpp"
 using namespace std;
 
 int main() {

@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/zalgorithm"
-#include "string/longest_common_prefix.hpp"
-#include "hack/fastio.hpp"
+#include "../string/longest_common_prefix.hpp"
+#include "../hack/fastio.hpp"
 
 int main() {
     std::string s = in<std::string>();

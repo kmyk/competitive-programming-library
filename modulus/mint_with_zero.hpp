@@ -1,9 +1,9 @@
 #pragma once
 #include <cstdint>
 #include <iostream>
-#include "modulus/modpow.hpp"
-#include "modulus/modinv.hpp"
-#include "modulus/mint.hpp"
+#include "../modulus/modpow.hpp"
+#include "../modulus/modinv.hpp"
+#include "../modulus/mint.hpp"
 
 /**
  * @brief $\mathbb{Z}$ の乗除算を $\mathbb{Z}/n\mathbb{Z}$ の上でやるデータ構造

@@ -3,7 +3,7 @@
 #include <tuple>
 #include <utility>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @param g must be an undirected graph. Loops and multiple edges are acceptable.

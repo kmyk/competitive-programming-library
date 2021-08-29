@@ -2,8 +2,8 @@
 #include <cstdint>
 #include <map>
 #include <vector>
-#include "utils/macros.hpp"
-#include "number/primes.hpp"
+#include "../utils/macros.hpp"
+#include "../number/primes.hpp"
 
 std::map<int64_t, int> list_prime_factors_as_map(const prepared_primes& primes, int64_t n) {
     std::map<int64_t, int> cnt;

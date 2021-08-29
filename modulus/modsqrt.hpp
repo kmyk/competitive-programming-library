@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
 #include <cstdint>
-#include "modulus/modpow.hpp"
+#include "../modulus/modpow.hpp"
 
 /**
  * @brief find the sqrt $b$ of $a$ modulo $p$

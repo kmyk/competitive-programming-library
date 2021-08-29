@@ -2,8 +2,8 @@
 #include <cassert>
 #include <string>
 #include <vector>
-#include "string/suffix_array.hpp"
-#include "hack/fastio.hpp"
+#include "../string/suffix_array.hpp"
+#include "../hack/fastio.hpp"
 using namespace std;
 
 int main() {

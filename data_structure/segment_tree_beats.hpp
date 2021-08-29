@@ -4,7 +4,7 @@
 #include <climits>
 #include <cstdint>
 #include <vector>
-#include "utils/macros.hpp"
+#include "../utils/macros.hpp"
 
 /**
  * @brief Segment Tree Beats (range {chmin, chmax, add, update} + range {min, max, sum}, 完全二分木)

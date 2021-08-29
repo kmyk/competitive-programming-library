@@ -1,6 +1,6 @@
 #pragma once
 #include <utility>
-#include "monoids/linear_function.hpp"
+#include "../monoids/linear_function.hpp"
 
 /**
  * @note lazy_propagation_segment_tree<plus_count_monoid<T>, linear_function_monoid<T>, linear_function_plus_count_action<T> >
