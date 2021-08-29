@@ -1,7 +1,7 @@
 #pragma once
 #include <algorithm>
 #include <cassert>
-#include <climits>
+#include <cstdint>
 #include <utility>
 #include <vector>
 #include "../utils/macros.hpp"
