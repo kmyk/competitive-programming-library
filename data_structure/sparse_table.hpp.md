@@ -95,20 +95,20 @@ data:
   isVerificationFile: false
   path: data_structure/sparse_table.hpp
   requiredBy:
+  - string/longest_common_prefix.hpp
   - graph/lowest_common_ancestor.hpp
   - graph/virtual_trees.hpp
-  - string/longest_common_prefix.hpp
   - utils/left_to_right_maxima.hpp
   timestamp: '2020-03-04 19:51:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/lowest_common_ancestor.aoj.test.cpp
-  - graph/lowest_common_ancestor.yosupo.test.cpp
-  - graph/cartesian_tree.yukicoder-1031.test.cpp
   - string/longest_common_prefix.yosupo.test.cpp
+  - graph/lowest_common_ancestor.yosupo.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
+  - graph/cartesian_tree.yukicoder-1031.test.cpp
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - data_structure/sparse_table.yukicoder-1036.test.cpp
   - data_structure/sparse_table.yosupo.test.cpp
+  - data_structure/sparse_table.yukicoder-1036.test.cpp
 documentation_of: data_structure/sparse_table.hpp
 layout: document
 redirect_from:

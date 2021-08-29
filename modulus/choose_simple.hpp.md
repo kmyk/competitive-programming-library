@@ -14,14 +14,17 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: number/primes_extra.yukicoder-1659.test.cpp
+    title: number/primes_extra.yukicoder-1659.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4\
       \ $O(r)$)"
@@ -98,8 +101,9 @@ data:
   requiredBy:
   - modulus/multichoose_simple.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - number/primes_extra.yukicoder-1659.test.cpp
 documentation_of: modulus/choose_simple.hpp
 layout: document
 redirect_from:

@@ -45,8 +45,8 @@ data:
   timestamp: '2019-12-27 19:16:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - utils/mo_algorithm.yuki1270.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - utils/mo_algorithm.yuki1270.test.cpp
 documentation_of: monoids/plus_min_action.hpp
 layout: document
 redirect_from:

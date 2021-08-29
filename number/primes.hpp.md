@@ -5,7 +5,7 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: number/primes_extra.hpp
     title: number/primes_extra.hpp
   - icon: ':warning:'
@@ -18,6 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/primes.yukicoder-1140.test.cpp
     title: number/primes.yukicoder-1140.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: number/primes_extra.yukicoder-1659.test.cpp
+    title: number/primes_extra.yukicoder-1659.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -98,13 +101,14 @@ data:
   isVerificationFile: false
   path: number/primes.hpp
   requiredBy:
-  - utils/fast_zeta_transform.hpp
   - number/primes_extra.hpp
+  - utils/fast_zeta_transform.hpp
   timestamp: '2021-05-11 20:48:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - number/primes.aoj.test.cpp
   - number/primes.yukicoder-1140.test.cpp
+  - number/primes_extra.yukicoder-1659.test.cpp
 documentation_of: number/primes.hpp
 layout: document
 redirect_from:

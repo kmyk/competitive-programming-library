@@ -8,10 +8,13 @@ data:
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: number/primes_extra.yukicoder-1659.test.cpp
+    title: number/primes_extra.yukicoder-1659.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"number/primes_extra.hpp\"\n#include <cstdint>\n#include\
@@ -75,8 +78,9 @@ data:
   path: number/primes_extra.hpp
   requiredBy: []
   timestamp: '2021-05-11 20:48:56+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - number/primes_extra.yukicoder-1659.test.cpp
 documentation_of: number/primes_extra.hpp
 layout: document
 redirect_from:

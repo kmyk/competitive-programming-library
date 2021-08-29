@@ -154,9 +154,9 @@ data:
   timestamp: '2020-10-23 23:22:52+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - utils/mo_algorithm.yuki1270.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
   - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - utils/mo_algorithm.yuki1270.test.cpp
 documentation_of: data_structure/lazy_propagation_segment_tree.hpp
 layout: document
 redirect_from:

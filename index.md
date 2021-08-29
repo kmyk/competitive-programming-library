@@ -103,6 +103,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/functional_graph.hpp
       title: "Namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
+    - icon: ':warning:'
+      path: graph/is_connected_graph.hpp
+      title: graph/is_connected_graph.hpp
+    - icon: ':warning:'
+      path: graph/is_simple_graph.hpp
+      title: graph/is_simple_graph.hpp
     - icon: ':heavy_check_mark:'
       path: graph/kruskal.hpp
       title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
@@ -171,7 +177,7 @@ data:
       path: modulus/choose.hpp
       title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u524D\u51E6\u7406\
         \ $O(n)$ + $O(1)$)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: modulus/choose_simple.hpp
       title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
     - icon: ':heavy_check_mark:'
@@ -208,7 +214,7 @@ data:
       path: modulus/multichoose.hpp
       title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _\
         \ r$ (\u524D\u51E6\u7406 $O(n)$ + $O(1)$)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: modulus/multichoose_simple.hpp
       title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _\
         \ r$ (\u611A\u76F4 $O(r)$)"
@@ -339,7 +345,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number/primes.hpp
       title: number/primes.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: number/primes_extra.hpp
       title: number/primes_extra.hpp
   - name: old
@@ -587,13 +593,16 @@ data:
       title: template.cpp
   - name: utils
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: utils/binary_search.hpp
       title: "a binary search / \u4E8C\u5206\u63A2\u7D22"
     - icon: ':warning:'
       path: utils/binary_search_float.hpp
       title: "a binary search on floating point numbers / \u4E8C\u5206\u63A2\u7D22\
         \ (\u6D6E\u52D5\u5C0F\u6570\u70B9\u6570)"
+    - icon: ':warning:'
+      path: utils/binary_search_max.hpp
+      title: utils/binary_search_max.hpp
     - icon: ':heavy_check_mark:'
       path: utils/coordinate_compression.hpp
       title: utils/coordinate_compression.hpp
@@ -855,6 +864,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number/primes.yukicoder-1140.test.cpp
       title: number/primes.yukicoder-1140.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: number/primes_extra.yukicoder-1659.test.cpp
+      title: number/primes_extra.yukicoder-1659.test.cpp
   - name: old
     pages:
     - icon: ':heavy_check_mark:'
@@ -870,7 +882,7 @@ data:
       title: string/suffix_array.yosupo.test.cpp
   - name: utils
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: utils/binary_search.aoj.test.cpp
       title: utils/binary_search.aoj.test.cpp
     - icon: ':heavy_check_mark:'

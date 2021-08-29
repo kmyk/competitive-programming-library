@@ -231,19 +231,19 @@ data:
   isVerificationFile: false
   path: modulus/number_theoretic_transformation.hpp
   requiredBy:
-  - modulus/stirling_number_of_the_second_kind_convolution.hpp
   - modulus/formal_power_series.hpp
   - modulus/number_theoretic_transformation_with_garner.hpp
+  - modulus/stirling_number_of_the_second_kind_convolution.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - modulus/formal_power_series.log.test.cpp
-  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
   - modulus/formal_power_series.inv.test.cpp
-  - modulus/formal_power_series.yukicoder-1145.test.cpp
-  - modulus/number_theoretic_transformation.yosupo.test.cpp
   - modulus/formal_power_series.exp.test.cpp
+  - modulus/formal_power_series.yukicoder-1145.test.cpp
+  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+  - modulus/number_theoretic_transformation.yosupo.test.cpp
+  - modulus/formal_power_series.log.test.cpp
+  - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
 documentation_of: modulus/number_theoretic_transformation.hpp
 layout: document
 redirect_from:

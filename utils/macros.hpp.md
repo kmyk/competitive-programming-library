@@ -62,6 +62,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/format.hpp
     title: graph/format.hpp
+  - icon: ':warning:'
+    path: graph/is_simple_graph.hpp
+    title: graph/is_simple_graph.hpp
   - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
     title: "minimum spanning tree / \u6700\u5C0F\u5168\u57DF\u6728 (Kruskal's method)"
@@ -97,7 +100,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/bell_number.hpp
     title: "the Bell number (\u524D\u51E6\u7406 $O(NK)$ + $O(1)$)"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: modulus/choose_simple.hpp
     title: "combination / \u7D44\u5408\u305B ${} _ n C _ r$ (\u611A\u76F4 $O(r)$)"
   - icon: ':heavy_check_mark:'
@@ -111,7 +114,7 @@ data:
     path: modulus/modlog.hpp
     title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
       sqrt{m})$)"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: modulus/multichoose_simple.hpp
     title: "\u91CD\u8907\u7D44\u5408\u305B ${} _ n H _ r = {} _ {n + r - 1} C _ r$\
       \ (\u611A\u76F4 $O(r)$)"
@@ -161,7 +164,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/primes.hpp
     title: number/primes.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: number/primes_extra.hpp
     title: number/primes_extra.hpp
   - icon: ':heavy_check_mark:'
@@ -388,6 +391,9 @@ data:
     path: number/primes.yukicoder-1140.test.cpp
     title: number/primes.yukicoder-1140.test.cpp
   - icon: ':heavy_check_mark:'
+    path: number/primes_extra.yukicoder-1659.test.cpp
+    title: number/primes_extra.yukicoder-1659.test.cpp
+  - icon: ':heavy_check_mark:'
     path: old/rollback-square-decomposition.yukicoder-1031.test.cpp
     title: old/rollback-square-decomposition.yukicoder-1031.test.cpp
   - icon: ':heavy_check_mark:'
@@ -396,7 +402,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: string/suffix_array.yosupo.test.cpp
     title: string/suffix_array.yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utils/binary_search.aoj.test.cpp
     title: utils/binary_search.aoj.test.cpp
   - icon: ':heavy_check_mark:'
@@ -443,139 +449,141 @@ data:
   isVerificationFile: false
   path: utils/macros.hpp
   requiredBy:
-  - graph/connected_components.hpp
-  - graph/euler_graph.hpp
-  - graph/kruskal.hpp
-  - graph/transpose_graph.hpp
+  - modulus/bell_number.hpp
+  - modulus/garner.hpp
+  - modulus/partition_number.hpp
+  - modulus/twelvefold_way.hpp
+  - modulus/stirling_number_of_the_second_kind_table.hpp
+  - modulus/number_theoretic_transformation.hpp
+  - modulus/formal_power_series.hpp
+  - modulus/stirling_number_of_the_second_kind_direct.hpp
+  - modulus/choose_simple.hpp
+  - modulus/multichoose_simple.hpp
+  - modulus/number_theoretic_transformation_with_garner.hpp
+  - modulus/stirling_number_of_the_second_kind_convolution.hpp
+  - modulus/modlog.hpp
+  - string/longest_common_prefix.hpp
+  - string/suffix_array.hpp
+  - graph/cartesian_tree.hpp
+  - graph/tree_decomposition.hpp
   - graph/bellman_ford.hpp
+  - graph/is_simple_graph.hpp
+  - graph/euler_graph.hpp
+  - graph/lowest_common_ancestor.hpp
   - graph/strongly_connected_components.hpp
+  - graph/minimum-cost-flow.hpp
   - graph/quotient_graph.hpp
   - graph/shortest_path_faster_algorithm.hpp
-  - graph/format.hpp
-  - graph/tree_decomposition.hpp
+  - graph/transpose_graph.hpp
   - graph/topological_sort.hpp
-  - graph/lowest_common_ancestor.hpp
-  - graph/cartesian_tree.hpp
+  - graph/connected_components.hpp
+  - graph/kruskal.hpp
+  - graph/format.hpp
   - graph/virtual_trees.hpp
-  - graph/minimum-cost-flow.hpp
-  - modulus/partition_number.hpp
-  - modulus/modlog.hpp
-  - modulus/stirling_number_of_the_second_kind_table.hpp
-  - modulus/stirling_number_of_the_second_kind_convolution.hpp
-  - modulus/formal_power_series.hpp
-  - modulus/number_theoretic_transformation.hpp
-  - modulus/bell_number.hpp
-  - modulus/number_theoretic_transformation_with_garner.hpp
-  - modulus/twelvefold_way.hpp
-  - modulus/multichoose_simple.hpp
-  - modulus/stirling_number_of_the_second_kind_direct.hpp
-  - modulus/garner.hpp
-  - modulus/choose_simple.hpp
-  - string/suffix_array.hpp
-  - string/longest_common_prefix.hpp
-  - monoids/matrix_template.hpp
-  - utils/binary_search_float.hpp
-  - utils/dsu_on_tree.hpp
-  - utils/fast_zeta_transform.hpp
-  - utils/two_satisfiability.hpp
-  - utils/coordinate_compression.hpp
-  - utils/left_to_right_maxima.hpp
-  - data_structure/dynamic_connectivity_offline.hpp
-  - data_structure/lazy_propagation_segment_tree.hpp
-  - data_structure/segment_tree_beats.hpp
+  - number/lagrange_interpolation.hpp
+  - number/primes.hpp
+  - number/matrix.hpp
+  - number/primes_extra.hpp
+  - number/fast_fourier_transformation.hpp
+  - number/matrix_template.hpp
+  - number/karatsuba.hpp
+  - number/miller-rabin.hpp
+  - data_structure/sliding_window_aggregation.hpp
+  - data_structure/sparse_table.hpp
+  - data_structure/li_chao_tree.hpp
+  - data_structure/wavelet_matrix.hpp
+  - data_structure/binary_indexed_tree.hpp
+  - data_structure/segment_tree.hpp
   - data_structure/reporting_segment_tree.hpp
   - data_structure/link_cut_tree.hpp
-  - data_structure/wavelet_matrix.hpp
-  - data_structure/sparse_table.hpp
-  - data_structure/segment_tree.hpp
-  - data_structure/sliding_window_aggregation.hpp
-  - data_structure/fully_indexable_dictionary.hpp
+  - data_structure/segment_tree_beats.hpp
   - data_structure/euler_tour_subtree_query.hpp
-  - data_structure/li_chao_tree.hpp
-  - data_structure/binary_indexed_tree.hpp
-  - number/miller-rabin.hpp
-  - number/matrix_template.hpp
-  - number/lagrange_interpolation.hpp
-  - number/fast_fourier_transformation.hpp
-  - number/primes.hpp
-  - number/karatsuba.hpp
-  - number/primes_extra.hpp
-  - number/matrix.hpp
+  - data_structure/dynamic_connectivity_offline.hpp
+  - data_structure/lazy_propagation_segment_tree.hpp
+  - data_structure/fully_indexable_dictionary.hpp
+  - utils/dsu_on_tree.hpp
+  - utils/left_to_right_maxima.hpp
+  - utils/two_satisfiability.hpp
+  - utils/binary_search_float.hpp
+  - utils/fast_zeta_transform.hpp
+  - utils/coordinate_compression.hpp
+  - monoids/matrix_template.hpp
   timestamp: '2019-12-20 06:12:24+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - graph/dijkstra.yukicoder-1065.test.cpp
-  - graph/lowest_common_ancestor.aoj.test.cpp
-  - graph/functional_graph.yuki1254.test.cpp
-  - graph/kruskal.aoj.test.cpp
-  - graph/cartesian_tree.yosupo.test.cpp
-  - graph/lowest_common_ancestor.yosupo.test.cpp
-  - graph/yen_algorithm.yukicoder-1069.test.cpp
-  - graph/cartesian_tree.yukicoder-1031.test.cpp
-  - graph/tree_decomposition.aoj_2405.test.cpp
-  - graph/strongly_connected_components.yosupo.test.cpp
-  - graph/bellman_ford.test.cpp
-  - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
-  - modulus/formal_power_series.log.test.cpp
-  - modulus/choose.yukicoder-1035.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - modulus/modlog.yuki1255.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
-  - modulus/formal_power_series.inv.test.cpp
-  - modulus/mint_with_zero.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
   - modulus/modlog.yosupo.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
-  - modulus/formal_power_series.yukicoder-1145.test.cpp
-  - modulus/number_theoretic_transformation.yosupo.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+  - modulus/choose.yukicoder-1035.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
+  - modulus/formal_power_series.inv.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
   - modulus/formal_power_series.exp.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - modulus/formal_power_series.yukicoder-1145.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+  - modulus/stirling_number_of_the_second_kind_convolution.yosupo.test.cpp
+  - modulus/mint_with_zero.test.cpp
+  - modulus/number_theoretic_transformation.yosupo.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
+  - modulus/formal_power_series.log.test.cpp
+  - modulus/number_theoretic_transformation_with_garner.yosupo.test.cpp
+  - modulus/modlog.yuki1255.test.cpp
   - string/suffix_array.yosupo.test.cpp
   - string/longest_common_prefix.yosupo.test.cpp
-  - utils/binary_search.aoj.test.cpp
-  - utils/dsu_on_tree.aoj.test.cpp
-  - utils/two_satisfiability.yosupo.test.cpp
-  - utils/mo_algorithm.yuki1270.test.cpp
+  - graph/lowest_common_ancestor.yosupo.test.cpp
+  - graph/kruskal.aoj.test.cpp
+  - graph/bellman_ford.test.cpp
+  - graph/tree_decomposition.aoj_2405.test.cpp
+  - graph/lowest_common_ancestor.aoj.test.cpp
+  - graph/cartesian_tree.yosupo.test.cpp
+  - graph/cartesian_tree.yukicoder-1031.test.cpp
+  - graph/dijkstra.yukicoder-1065.test.cpp
+  - graph/strongly_connected_components.yosupo.test.cpp
+  - graph/functional_graph.yuki1254.test.cpp
+  - graph/yen_algorithm.yukicoder-1069.test.cpp
   - old/rollback-square-decomposition.yukicoder-1031.test.cpp
-  - data_structure/segment_tree.point_set_range_composite.test.cpp
-  - data_structure/segment_tree.range_sum_query.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_I.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_H.test.cpp
-  - data_structure/binary_indexed_tree.test.cpp
-  - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
-  - data_structure/sparse_table.yukicoder-1036.test.cpp
-  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
-  - data_structure/sparse_table.yosupo.test.cpp
-  - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
-  - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
-  - data_structure/link_cut_tree.marked_ancestor.test.cpp
-  - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
-  - data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
-  - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
-  - data_structure/li_chao_tree.segment_add_get_min.test.cpp
-  - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
-  - data_structure/segment_tree.point_add_range_sum.test.cpp
-  - data_structure/segment_tree_beats.DSL_2_F.test.cpp
-  - data_structure/segment_tree_beats.yosupo.test.cpp
-  - data_structure/convex_hull_trick.line_add_get_min.test.cpp
-  - data_structure/sliding_window_aggregation.yosupo.test.cpp
-  - data_structure/wavelet_matrix.rectangle_sum.test.cpp
-  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
-  - data_structure/wavelet_matrix.aoj2674.test.cpp
-  - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
-  - number/matrix.yukicoder-1073.test.cpp
+  - number/matrix_template.yukicoder-1073.test.cpp
+  - number/fast_fourier_transformation.yukicoder-856.test.cpp
   - number/primes.aoj.test.cpp
   - number/primes.yukicoder-1140.test.cpp
-  - number/fast_fourier_transformation.yukicoder-856.test.cpp
-  - number/matrix_template.yukicoder-1073.test.cpp
+  - number/primes_extra.yukicoder-1659.test.cpp
+  - number/matrix.yukicoder-1073.test.cpp
+  - data_structure/lazy_propagation_segment_tree.range_affine_range_sum.test.cpp
+  - data_structure/segment_tree.range_sum_query.test.cpp
+  - data_structure/wavelet_matrix.aoj2674.test.cpp
+  - data_structure/link_cut_tree.vertex_set_path_composite.test.cpp
+  - data_structure/wavelet_matrix.rectangle_sum.test.cpp
+  - data_structure/link_cut_tree.marked_ancestor.test.cpp
+  - data_structure/li_chao_tree.segment_add_get_min.test.cpp
+  - data_structure/link_cut_tree.vertex_add_path_sum.test.cpp
+  - data_structure/link_cut_tree.dynamic_tree_vertex_set_path_composite.test.cpp
+  - data_structure/wavelet_matrix.range_kth_smallest.test.cpp
+  - data_structure/sliding_window_aggregation.yosupo.test.cpp
+  - data_structure/segment_tree_beats.yosupo.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_F.test.cpp
+  - data_structure/sparse_table.yosupo.test.cpp
+  - data_structure/sparse_table.yukicoder-1036.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_I.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_H.test.cpp
+  - data_structure/lazy_propagation_segment_tree.range_min_range_add.test.cpp
+  - data_structure/binary_indexed_tree.test.cpp
+  - data_structure/dynamic_connectivity_offline.dynamic_graph_vertex_add_component_sum.test.cpp
+  - data_structure/segment_tree_beats.DSL_2_G.test.cpp
+  - data_structure/segment_tree.point_set_range_composite.test.cpp
+  - data_structure/link_cut_tree.dynamic_tree_vertex_add_path_sum.test.cpp
+  - data_structure/euler_tour_subtree_query.vertex_add_subtree_sum.test.cpp
+  - data_structure/segment_tree.point_add_range_sum.test.cpp
+  - data_structure/lazy_propagation_red_black_tree.range_affine_range_sum.test.cpp
+  - data_structure/convex_hull_trick.line_add_get_min.test.cpp
+  - utils/binary_search.aoj.test.cpp
+  - utils/two_satisfiability.yosupo.test.cpp
+  - utils/dsu_on_tree.aoj.test.cpp
+  - utils/mo_algorithm.yuki1270.test.cpp
 documentation_of: utils/macros.hpp
 layout: document
 redirect_from:

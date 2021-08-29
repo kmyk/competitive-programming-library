@@ -147,26 +147,26 @@ data:
   isVerificationFile: false
   path: modulus/choose.hpp
   requiredBy:
-  - modulus/partition_number.hpp
   - modulus/bell_number.hpp
-  - modulus/multichoose.hpp
+  - modulus/partition_number.hpp
   - modulus/twelvefold_way.hpp
+  - modulus/multichoose.hpp
   - modulus/stirling_number_of_the_second_kind_direct.hpp
   timestamp: '2020-07-16 00:35:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - modulus/choose.yukicoder-1035.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp
-  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_2.test.cpp
+  - modulus/choose.yukicoder-1035.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_11.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_7.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_10.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_4.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_1.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_8.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_6.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_9.test.cpp
+  - modulus/twelvefold_way.balls_and_boxes_5.test.cpp
 documentation_of: modulus/choose.hpp
 layout: document
 redirect_from:
