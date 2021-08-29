@@ -190,21 +190,21 @@ data:
     - icon: ':warning:'
       path: modulus/garner.hpp
       title: Garner's algorithm
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: modulus/mint.hpp
       title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: modulus/mint_with_zero.hpp
       title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
         \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: modulus/modinv.hpp
       title: modulus/modinv.hpp
     - icon: ':heavy_check_mark:'
       path: modulus/modlog.hpp
       title: "discrete log / \u96E2\u6563\u5BFE\u6570 (the baby-step giant-step, $O(\\\
         sqrt{m})$)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: modulus/modpow.hpp
       title: modulus/modpow.hpp
     - icon: ':heavy_check_mark:'
@@ -622,7 +622,7 @@ data:
       path: utils/left_to_right_maxima.hpp
       title: "Length of Left-to-right Maxima (\u524D\u51E6\u7406 $O(n \\log n)$ +\
         \ $O(1)$)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: utils/macros.hpp
       title: utils/macros.hpp
     - icon: ':warning:'
@@ -793,7 +793,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: modulus/formal_power_series.yukicoder-1145.test.cpp
       title: modulus/formal_power_series.yukicoder-1145.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: modulus/mint_with_zero.test.cpp
       title: modulus/mint_with_zero.test.cpp
     - icon: ':heavy_check_mark:'

@@ -22,10 +22,10 @@ data:
   - icon: ':warning:'
     path: modulus/garner.hpp
     title: Garner's algorithm
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: modulus/mint.hpp
     title: "quotient ring / \u5270\u4F59\u74B0 $\\mathbb{Z}/n\\mathbb{Z}$"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/mint_with_zero.hpp
     title: "$\\mathbb{Z}$ \u306E\u4E57\u9664\u7B97\u3092 $\\mathbb{Z}/n\\mathbb{Z}$\
       \ \u306E\u4E0A\u3067\u3084\u308B\u30C7\u30FC\u30BF\u69CB\u9020"
@@ -104,7 +104,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/mint_with_zero.test.cpp
     title: modulus/mint_with_zero.test.cpp
   - icon: ':heavy_check_mark:'
@@ -167,9 +167,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: number/primes_extra.yukicoder-1659.test.cpp
     title: number/primes_extra.yukicoder-1659.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"modulus/modinv.hpp\"\n#include <algorithm>\n#include <cassert>\n\
@@ -216,7 +216,7 @@ data:
   - modulus/stirling_number_of_the_second_kind_convolution.hpp
   - modulus/modlog.hpp
   timestamp: '2020-06-16 07:51:56+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/modlog.yosupo.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp

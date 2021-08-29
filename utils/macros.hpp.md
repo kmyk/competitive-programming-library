@@ -327,7 +327,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: modulus/formal_power_series.yukicoder-1145.test.cpp
     title: modulus/formal_power_series.yukicoder-1145.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: modulus/mint_with_zero.test.cpp
     title: modulus/mint_with_zero.test.cpp
   - icon: ':heavy_check_mark:'
@@ -417,9 +417,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/two_satisfiability.yosupo.test.cpp
     title: utils/two_satisfiability.yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "utils/macros.hpp"
@@ -513,7 +513,7 @@ data:
   - utils/coordinate_compression.hpp
   - monoids/matrix_template.hpp
   timestamp: '2019-12-20 06:12:24+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - modulus/modlog.yosupo.test.cpp
   - modulus/twelvefold_way.balls_and_boxes_3.test.cpp

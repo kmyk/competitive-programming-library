@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utils/binary_search_max.hpp
     title: utils/binary_search_max.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []

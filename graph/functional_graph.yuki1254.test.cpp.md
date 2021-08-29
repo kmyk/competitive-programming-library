@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/functional_graph.hpp
     title: "Namori cycle / \u306A\u3082\u308A\u9589\u8DEF"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utils/macros.hpp
     title: utils/macros.hpp
   _extendedRequiredBy: []
